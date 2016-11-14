@@ -66,5 +66,9 @@ function modifyText() {
  }
 }
 var edit = document.getElementsByClassName("edit-title")[0];
+<<<<<<< HEAD
 edit.addEventListener("click", modifyText, false);
 
+=======
+edit.addEventListener("click", modifyText, false);
+>>>>>>> 87f89c71a1f147bb73bc0011dff293c01ee75b57

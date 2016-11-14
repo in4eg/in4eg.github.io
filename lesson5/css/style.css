@@ -136,6 +136,7 @@ ul li.done::before {
 .title:focus::-webkit-input-placeholder {color: transparent}
 .title:focus::-moz-placeholder          {color: transparent}
 .title:focus:-moz-placeholder           {color: transparent}
+<<<<<<< HEAD
 .title:focus:-ms-input-placeholder      {color: transparent}
 
 	.col {
@@ -155,3 +156,6 @@ ul li.done::before {
 			background: #59b;
 			border-color: #48a;
 		}
+=======
+.title:focus:-ms-input-placeholder      {color: transparent}
+>>>>>>> 87f89c71a1f147bb73bc0011dff293c01ee75b57
