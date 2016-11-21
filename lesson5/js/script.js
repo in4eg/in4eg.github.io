@@ -1,12 +1,19 @@
-// Create a "close" button and append it to each list item
-var myNodelist = document.getElementsByTagName("LI");
+
+var myNodelist = document.getElementsByTagName("li");
 var i;
 for (i = 0; i < myNodelist.length; i++) {
-  var span = document.createElement("SPAN");
-  var txt = document.createTextNode("\u00D7");
-  span.className = "close";
-  span.appendChild(txt);
-  myNodelist[i].appendChild(span);
+  var input = document.createElement("input");
+  var btn = document.createElement("button");
+  var edit = document.createElement("button");
+
+  edit.className = "waves-effect waves-circle btn-floating edit-list";
+  btn.className = "waves-effect waves-circle btn-floating red close";
+  edit.innerHTML = "<i class='material-icons'>done</i>";
+  btn.innerHTML = "<i class='material-icons'>delete_forever</i>";
+
+  myNodelist[i].appendChild(btn);
+  myNodelist[i].appendChild(edit);
+  myNodelist[i].appendChild(input);
 }
 
 var close = document.getElementsByClassName("close");
@@ -17,30 +24,37 @@ for (i = 0; i < close.length; i++) {
     div.style.display = "none";
   }
 }
-var list = document.querySelector('ul');
-list.addEventListener('click', function(ev) {
-  if (ev.target.tagName === 'li') {
-    ev.target.classList.toggle('done');
-  }
-}, false);
-
 function newElement() {
+  totalList();
   var li = document.createElement("li");
   var inputValue = document.getElementById("myInput").value;
   var t = document.createTextNode(inputValue);
-  li.appendChild(t);
+  var button = document.createElement("button");
+  var editBtn = document.createElement("button");
+  var innerInput = document.createElement("input");
+  innerInput.type = "text";
+
+  innerInput.value = inputValue;
+
   if (inputValue === '') {
     alert("Add smth!");
   } else {
-    document.getElementById("myList").appendChild(li);
+    document.getElementById("myList").appendChild(li).classList.add("collection-item");
   }
   document.getElementById("myInput").value = "";
+  
+  editBtn.className = "waves-effect waves-circle btn-floating edit-list";
+  button.className = "waves-effect waves-circle btn-floating red close";
+  button.innerHTML = "<i class='material-icons'>delete_forever</i>";
+  editBtn.innerHTML = "<i class='material-icons'>done</i>";
 
-  var span = document.createElement("span");
-  var txt = document.createTextNode("\u00D7");
-  span.className = "close";
-  span.appendChild(txt);
-  li.appendChild(span);
+  li.appendChild(button);
+  li.appendChild(editBtn);
+  li.appendChild(innerInput);
+
+  myNodelist[i].appendChild(button);
+  myNodelist[i].appendChild(editBtn);
+  myNodelist[i].appendChild(innerInput);
 
   for (i = 0; i < close.length; i++) {
     close[i].onclick = function() {
@@ -49,7 +63,6 @@ function newElement() {
     }
   }
 }
-
 function modifyText() {
   var title = document.getElementsByClassName("title")[0];
   var edit = document.getElementsByClassName("edit-title")[0];
@@ -58,17 +71,20 @@ function modifyText() {
     title.removeAttribute("disabled");
     title.classList.add("title-edit");
     title.focus();
-    edit.innerHTML = "Done!";
+    edit.classList.remove("red");
+    edit.innerHTML = "<i class='material-icons'>done</i>";
   } else {
    title.setAttribute("disabled", '');
    title.classList.remove("title-edit");
-   edit.innerHTML = "Edit";
+   edit.innerHTML = "<i class='large material-icons'>mode_edit</i>";
+   edit.classList.add("red");
  }
 }
 var edit = document.getElementsByClassName("edit-title")[0];
-<<<<<<< HEAD
+
 edit.addEventListener("click", modifyText, false);
 
-=======
-edit.addEventListener("click", modifyText, false);
->>>>>>> 87f89c71a1f147bb73bc0011dff293c01ee75b57
+function totalList() {
+  var total = document.getElementById('myList').childNodes.length;
+  document.getElementById('total').innerHTML = total;
+}
