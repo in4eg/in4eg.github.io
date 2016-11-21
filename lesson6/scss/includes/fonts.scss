@@ -1,0 +1,28 @@
+/* font-family: "MyriadProRegular"; */
+@font-face {
+    font-family: "MyriadProRegular";
+    src: url("../fonts/MyriadProRegular/MyriadProRegular.eot");
+    src: url("../fonts/MyriadProRegular/MyriadProRegular.eot?#iefix")format("embedded-opentype"),
+    url("../fonts/MyriadProRegular/MyriadProRegular.woff") format("woff"),
+    url("../fonts/MyriadProRegular/MyriadProRegular.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+@font-face {
+	font-family: 'HelveticaNeueCyrThin';
+	src: url('../fonts/Helvetica/HelveticaNeueCyrThin.eot');
+	src: url('../fonts/Helvetica/HelveticaNeueCyrThin.eot') format('embedded-opentype'),
+	url('../fonts/Helvetica/HelveticaNeueCyrThin.woff2') format('woff2'),
+	url('../fonts/Helvetica/HelveticaNeueCyrThin.woff') format('woff'),
+	url('../fonts/Helvetica/HelveticaNeueCyrThin.ttf') format('truetype'),
+	url('../fonts/Helvetica/HelveticaNeueCyrThin.svg#HelveticaNeueCyrThin') format('svg');
+}
+@font-face {
+	font-family: 'HelveticaNeueCyrBold';
+	src: url('../fonts/Helvetica/HelveticaNeueCyrBold.eot');
+	src: url('../fonts/Helvetica/HelveticaNeueCyrBold.eot') format('embedded-opentype'),
+	url('../fonts/Helvetica/HelveticaNeueCyrBold.woff2') format('woff2'),
+	url('../fonts/Helvetica/HelveticaNeueCyrBold.woff') format('woff'),
+	url('../fonts/Helvetica/HelveticaNeueCyrBold.ttf') format('truetype'),
+	url('../fonts/Helvetica/HelveticaNeueCyrBold.svg#HelveticaNeueCyrBold') format('svg');
+}
