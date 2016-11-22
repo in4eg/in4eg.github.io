@@ -14,6 +14,7 @@ for (i = 0; i < myNodelist.length; i++) {
   myNodelist[i].appendChild(btn);
   myNodelist[i].appendChild(edit);
   myNodelist[i].appendChild(input);
+
 }
 
 var close = document.getElementsByClassName("close");
@@ -21,11 +22,13 @@ var i;
 for (i = 0; i < close.length; i++) {
   close[i].onclick = function() {
     var div = this.parentElement;
-    div.style.display = "none";
+    div.remove();
   }
 }
+//создание элементов листа
 function newElement() {
   totalList();
+
   var li = document.createElement("li");
   var inputValue = document.getElementById("myInput").value;
   var t = document.createTextNode(inputValue);
@@ -59,10 +62,12 @@ function newElement() {
   for (i = 0; i < close.length; i++) {
     close[i].onclick = function() {
       var div = this.parentElement;
-      div.style.display = "none";
+      div.remove();
     }
   }
+
 }
+// изменить заголовок листа
 function modifyText() {
   var title = document.getElementsByClassName("title")[0];
   var edit = document.getElementsByClassName("edit-title")[0];
@@ -81,10 +86,12 @@ function modifyText() {
  }
 }
 var edit = document.getElementsByClassName("edit-title")[0];
-
 edit.addEventListener("click", modifyText, false);
 
-function totalList() {
-  var total = document.getElementById('myList').childNodes.length;
+// посчитать общее кол-во задач
+function totalList(total) {
+  var total = document.getElementById('myList').children.length;
+  total++;
   document.getElementById('total').innerHTML = total;
 }
+// отметить как исполненый
