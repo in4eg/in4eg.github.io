@@ -10,35 +10,43 @@
 	<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+	
+
 	<section class="list-section">
 		<div class="container">
-			<div class="row">
-				<div class="section-group">
-					<div class="input-field">
-						<input type="text" class="title validate header" disabled id="title" value="Your List Title">
-						<label for="title">Your List Title</label>
-					</div>
-					<button class="waves-effect waves-circle btn-floating btn-large edit-title red">
-						<i class="large material-icons">mode_edit</i>
-					</button>
+		<div class="row">
+
+			<div class="input-field">
+				<input type="text" class="title validate header" disabled id="title" value="Your List Title">
+				<label for="title">Your List Title</label>
+			</div>
+			<button class="waves-effect waves-circle btn-floating btn-large edit-title red">
+				<i class="large material-icons">mode_edit</i>
+			</button>
+		</div>
+		</div>
+		
+
+	</section>
+	<div class="container">
+		<div class="row">
+			<div class="col s6 section-group">
+				<div class="input-field">
+					<input type="text" class="adding" id="myInput">
+					<label for="myInput">Add smth to your list...</label>
 				</div>
-				<div class="col s6 section-group">
-					<div class="input-field">
-						<input type="text" class="adding" id="myInput">
-						<label for="myInput">Add smth to your list...</label>
-					</div>
-					<button onclick="newElement()" class="waves-effect waves-circle btn-floating btn-large"><i class="material-icons">add</i></button>
-				</div>
-				<div class="col s6">
-					<div class="total-task">
+				<button onclick="newElement()" class="waves-effect waves-circle btn-floating btn-large"><i class="material-icons">add</i></button>
+			</div>
+			<div class="col s6">
+				<div class="total-task">
 					Total task: <div id="total" class="total">0</div>
-					</div>
-					<ul id="myList" class="collection">
-					</ul>
 				</div>
+				<ul id="myList" class="collection">
+				</ul>
 			</div>
 		</div>
-	</section>
+	</div>
+	
 
 	<!-- script -->
 
