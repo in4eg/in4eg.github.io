@@ -15,10 +15,17 @@
 		}
 		.btn-holder {
 			margin: 0.5rem 0 1rem 0;
-
+			display: none;
+		}
+		.btn-holder.active {
+			display: block;
 		}
 		.collection-item {
 			text-align: right;
+			cursor: pointer;
+		}
+		.collection-item.choosen {
+			background-color: #ececec;
 		}
 		.collection-item.done {
 			text-decoration: line-through;
@@ -81,22 +88,24 @@
 					<div class="col s2">
 						<button class="btn waves-effect waves-light submit-btn red" type="button">
 							send
-							<i class="material-icons right">send</i>
 						</button>
 					</div>
 				</form>
-				<div class="col s10">
+				<div class="col s12">
 					<div class="card-panel">
 						<span class="red-text text-darken-2">There is nothing in your to do list</span>
 					</div>
+				</div>
+				<div class="col s10">
+					
 					<ul class="collection">
-						<li class="collection-item">
+					<!-- 	<li class="collection-item">
 							<input type="text" value="Alvin" disabled class="input">
 							<input type="checkbox" id="done1">
 							<label for="done1">Done</label>
-							<button class="btn btn-edit waves-effect" type="button"><i class="material-icons">edit</i></button>
-							<button class="btn btn-trash waves-effect red" type="button"><i class="material-icons">delete_forever</i></button>
-						</li>
+							<button class="btn btn-edit waves-effect" type="button">edit</button>
+							<button class="btn btn-trash waves-effect red" type="button">delete</button>
+						</li> -->
 					</ul>
 				</div>
 				<div class="col s2">
@@ -112,14 +121,11 @@
 	</main>
 	<footer class="main-footer"></footer>
 
-	<script>
-
-	</script>
-
-
 	<!--Import jQuery before materialize.js-->
 	<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
 	<script type="text/javascript" src="js/materialize.min.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
+
 
 
 </body>
