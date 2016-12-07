@@ -37,9 +37,6 @@
 			height: 300px;
 			background: #e0e0e0;
 		}
-		.submit-btn {
-			margin-top: 1rem;
-		}
 		.main-page {
 			min-height: calc(100vh - 476px);
 		}
@@ -94,21 +91,14 @@
 						<button class="btn waves-effect waves-light submit-btn red" type="button">
 							send
 						</button>
+						  <button class="btn waves-effect waves-light" id="clear">clear list</button>
 					</div>
 				</form>
 				<div class="col s8">
 					<div class="card-panel">
 						<span class="red-text text-darken-2">There is nothing in your to do list</span>
 					</div>
-					
-					<ul class="collection" id="sortable">
-					<!-- 	<li class="collection-item">
-							<input type="text" value="Alvin" disabled class="input">
-							<button class="btn btn-edit waves-effect" type="button">edit</button>
-							<button class="btn btn-trash waves-effect red" type="button">delete</button>
-						</li> -->
-					</ul>
-
+					<ul class="collection" id="sortable"></ul>
 				</div>
 			</div>
 		</div>
