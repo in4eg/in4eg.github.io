@@ -1,6 +1,9 @@
 
 .container {
-    margin: 200px auto;
+    margin: 100px auto;
+}
+.mark {
+    text-align: center;
 }
 #board {
     display: block;
