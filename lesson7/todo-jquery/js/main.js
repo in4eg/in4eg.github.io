@@ -92,7 +92,6 @@ $('#clear').click( function() {
 });
 
 
-
 function makeid(){
 	var text = "";
 	var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
