@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Geolocation</title>
+	<meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="css/style.min.css">
+</head>
+<body>
+	<div class="container">
+		<section class="map-section">
+			<h2 class="section-title">Geolocation Map</h2>
+			<div class="note">
+				Note: This example requires that you consent to location sharing when prompted by your browser. If you see the error "The Geolocation service failed.", it means you probably did not give permission for the browser to locate you.
+			</div>
+			<div id="map"></div>
+		</section>
+		<section class="weather-section">
+					<h2 class="section-title">Geolocation Map</h2>
+		</section>
+	</div>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+	<script src="js/main.js"></script>
+	<script src="https://maps.googleapis.com/maps/api/js?key&callback=initMap"></script>
+</body>
+</html>
