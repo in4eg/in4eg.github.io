@@ -67,3 +67,6 @@ body {
   margin-top: 7px;
   background-color: #f2f2f2;
   padding: 10px 0; }
+
+#forecast {
+  display: none; }

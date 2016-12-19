@@ -68,7 +68,7 @@ function initMap() {
         html='<table class="table">'+html+'</table>';
 
         $("#forecastIntro").hide();
-        $("#forecast").html(html);
+        $("#forecast").html(html).show();
 
       }
 // Подготовка текста для поиска (удаление пробелов, приведения текста к нижнему регистру и первой буквы к первому)

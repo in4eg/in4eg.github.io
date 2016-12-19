@@ -407,3 +407,7 @@ v8 -v      5.0.71.52
 [14:59:24] ./dist/index.html
 [14:59:37] ./scss/style.scss
 [14:59:37] ./dist/css/style.min.css
+[15:10:52] ./scss/style.scss
+[15:10:52] ./dist/css/style.min.css
+[15:11:08] ./dist/js/main.js
+[15:16:07] ./dist/index.html
