@@ -5,9 +5,11 @@
   "dist/todo-jquery.html",
   "dist/todo.html",
   "dist/example.json",
+  "dist/css/api.css",
   "dist/css/materialize.css",
   "dist/css/materialize.min.css",
   "dist/css/style.css",
+  "dist/js/api.js",
   "dist/js/jquery.js",
   "dist/js/materialize.js",
   "dist/js/materialize.min.js"
