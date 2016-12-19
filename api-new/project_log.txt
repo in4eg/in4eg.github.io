@@ -1,0 +1,68 @@
+
+
+################################################################# 
+Gulp.js started at 01.12.2016 :: 19:59:12 
+----------------------------------------------------------------- 
+USER       mmojoy 
+OS         xubuntu 
+PLATFORM   linux 
+node -v    6.2.2 
+v8 -v      5.0.71.52 
+#################################################################
+[19:59:12] ./dist/15.html
+[19:59:12] ./dist/css/materialize.css
+[19:59:12] ./dist/js/jquery.js
+[19:59:12] ./html/15.html
+[19:59:12] ./dist/15.html
+           ./dist/15_.html
+[19:59:12] ./dist/css/materialize.css
+           ./dist/css/materialize.min.css
+[19:59:12] ./dist/js/jquery.js
+           ./dist/js/materialize.js
+[19:59:12] ./html/15.html
+           ./html/15_.html
+[19:59:12] ./dist/15.html
+           ./dist/15_.html
+           ./dist/api.html
+[19:59:12] ./dist/css/materialize.css
+           ./dist/css/materialize.min.css
+           ./dist/css/style.css
+[19:59:12] ./dist/js/jquery.js
+           ./dist/js/materialize.js
+           ./dist/js/materialize.min.js
+[19:59:12] ./html/15.html
+           ./html/15_.html
+           ./html/api.html
+[19:59:12] ./dist/15.html
+           ./dist/15_.html
+           ./dist/api.html
+           ./dist/todo-jquery.html
+[19:59:12] ./html/15.html
+           ./html/15_.html
+           ./html/api.html
+           ./html/todo-jquery.html
+[19:59:12] ./dist/15.html
+           ./dist/15_.html
+           ./dist/api.html
+           ./dist/todo-jquery.html
+           ./dist/todo.html
+[19:59:12] ./html/15.html
+           ./html/15_.html
+           ./html/api.html
+           ./html/todo-jquery.html
+           ./html/todo.html
+[19:59:12] ./dist/15.html
+[19:59:12] ./dist/15.html
+           ./dist/15_.html
+[19:59:12] ./dist/15.html
+           ./dist/15_.html
+           ./dist/api.html
+[19:59:12] ./dist/15.html
+           ./dist/15_.html
+           ./dist/api.html
+           ./dist/todo-jquery.html
+[19:59:12] ./dist/15.html
+           ./dist/15_.html
+           ./dist/api.html
+           ./dist/todo-jquery.html
+           ./dist/todo.html
