@@ -1,52 +1,53 @@
 <!DOCTYPE html>
 <html>
-	<head>
+<head>
+	
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
-		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	<style>
 
-		<style>
+		* {
+			padding: 0;
+			margin: 0;
+		}
+		html, body {
+			background: #eee;
+		}
+		.canvas-outer {
+			margin: 50px auto;
+			width: 100%;
+			max-width: 300px;
+			background: #000;
+			box-shadow: 0 0 0 10px #ddd;
+		}
+		.inner {
+			padding-top: 100%;
+			position: relative;
+		}
+		canvas {
+			background: #ddd;
+			position: absolute;
+			top: 0; left: 0;
+			width: 100%; height: 100%;
+			display: block;
+		}
 
-			* {
-				padding: 0;
-				margin: 0;
-			}
-			html, body {
-				background: #eee;
-			}
-			.canvas-outer {
-				margin: 50px auto;
-				width: 100%;
-				max-width: 300px;
-				background: #000;
-				box-shadow: 0 0 0 10px #ddd;
-			}
-			.inner {
-				padding-top: 100%;
-				position: relative;
-			}
-			canvas {
-				background: #ddd;
-				position: absolute;
-				top: 0; left: 0;
-				width: 100%; height: 100%;
-				display: block;
-			}
+	</style>
 
-		</style>
+</head>
 
-	</head>
-
-	<body>
+<body>
 
 
-		<div class="canvas-outer">
-			<div class="inner">
-				<canvas id="canvas"></canvas>
-			</div>
+	<div class="canvas-outer">
+		<div class="inner">
+			<canvas id="canvas"></canvas>
 		</div>
+	</div>
 
 
-		<script>
+	<script>
 
 			// requestAnimationFrame - это глобальная функция, которая
 			// вызывается на каждом кадре анимации в браузере
@@ -56,32 +57,32 @@
 				window.mozRequestAnimationFrame ||
 				window.webkitRequestAnimationFrame ||
 				window.msRequestAnimationFrame
-			)
+				)
 
 			var parent = document.getElementsByClassName('inner')[0];
 			var canvas = document.getElementById('canvas');
 			var ctx = canvas.getContext('2d');
 			var width, height, w, h,
-					cursor = {x: 0, y: 0},
-					currentCell = null;
+			cursor = {x: 0, y: 0},
+			currentCell = null;
 
 			cells = [
-				{value: 1, isActive: false, isHover: false, position: {x: 0, y:0}},
-				{value: 2, isActive: false, isHover: false, position: {x: 1, y:0}},
-				{value: 3, isActive: false, isHover: false, position: {x: 2, y:0}},
-				{value: 4, isActive: false, isHover: false, position: {x: 3, y:0}},
-				{value: 5, isActive: false, isHover: false, position: {x: 0, y:1}},
-				{value: 6, isActive: false, isHover: false, position: {x: 1, y:1}},
-				{value: 7, isActive: false, isHover: false, position: {x: 2, y:1}},
-				{value: 8, isActive: false, isHover: false, position: {x: 3, y:1}},
-				{value: 9, isActive: false, isHover: false, position: {x: 0, y:2}},
-				{value: 10, isActive: false, isHover: false, position: {x: 1, y:2}},
-				{value: 11, isActive: false, isHover: false, position: {x: 2, y:2}},
-				{value: 12, isActive: false, isHover: false, position: {x: 3, y:2}},
-				{value: 13, isActive: false, isHover: false, position: {x: 0, y:3}},
-				{value: 14, isActive: false, isHover: false, position: {x: 1, y:3}},
-				{value: 15, isActive: false, isHover: false, position: {x: 2, y:3}},
-				{value: null, isActive: false, isHover: false, position: {x: 3, y:3}}
+			{value: 1, isActive: false, isHover: false, position: {x: 0, y:0}},
+			{value: 2, isActive: false, isHover: false, position: {x: 1, y:0}},
+			{value: 3, isActive: false, isHover: false, position: {x: 2, y:0}},
+			{value: 4, isActive: false, isHover: false, position: {x: 3, y:0}},
+			{value: 5, isActive: false, isHover: false, position: {x: 0, y:1}},
+			{value: 6, isActive: false, isHover: false, position: {x: 1, y:1}},
+			{value: 7, isActive: false, isHover: false, position: {x: 2, y:1}},
+			{value: 8, isActive: false, isHover: false, position: {x: 3, y:1}},
+			{value: 9, isActive: false, isHover: false, position: {x: 0, y:2}},
+			{value: 10, isActive: false, isHover: false, position: {x: 1, y:2}},
+			{value: 11, isActive: false, isHover: false, position: {x: 2, y:2}},
+			{value: 12, isActive: false, isHover: false, position: {x: 3, y:2}},
+			{value: 13, isActive: false, isHover: false, position: {x: 0, y:3}},
+			{value: 14, isActive: false, isHover: false, position: {x: 1, y:3}},
+			{value: 15, isActive: false, isHover: false, position: {x: 2, y:3}},
+			{value: null, isActive: false, isHover: false, position: {x: 3, y:3}}
 			];
 
 			function getParentRect(){
@@ -129,20 +130,20 @@
 
 			function isEmpty(origin){
 				var current = getCurrent(),
-						compared;
+				compared;
 				switch (origin){
 					case 'top':
-						compared = getIndex({x: cursor.x, y: cursor.y-1});
-						break;
+					compared = getIndex({x: cursor.x, y: cursor.y-1});
+					break;
 					case 'left':
-						compared = getIndex({x: cursor.x-1, y: cursor.y});
-						break;
+					compared = getIndex({x: cursor.x-1, y: cursor.y});
+					break;
 					case 'right':
-						compared = getIndex({x: cursor.x+1, y: cursor.y});
-						break;
+					compared = getIndex({x: cursor.x+1, y: cursor.y});
+					break;
 					case 'bottom':
-						compared = getIndex({x: cursor.x, y: cursor.y+1});
-						break;
+					compared = getIndex({x: cursor.x, y: cursor.y+1});
+					break;
 				};
 				if (cells[compared] && !cells[compared].value) {
 					return true;
@@ -180,7 +181,7 @@
 					39 - right
 					38 - top
 					40 - bottom
-				*/
+					*/
 				// left
 				if (e.keyCode === 37){
 					if (cursor.x > 0){ cursor.x--; }
@@ -230,4 +231,4 @@
 
 
 	</body>
-</html>
+	</html>

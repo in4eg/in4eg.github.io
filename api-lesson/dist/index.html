@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+
+	<title>Api Lesson</title>
+	
+	<link rel="stylesheet" href="css/style.min.css">
+</head>
+<body>
+	<div class="container">
+			<div class="inner-wrap">
+				<section class="weather-section half-part">
+					<div class="part-inner">
+						<h2 class="section-title">Current Weather</h2>
+						<div class="note">
+							Put the city's name or its part (Example - Lon or Lond or London)
+						</div>
+						<form class="form" onsubmit="FindCity(); return false" id="searchform" action="#" method="get">
+							<div class="input-group">
+								<input id="search_str" class="input" name="search_str" value="Cherkasy, UA" onfocus="this.value = (this.value=='Cherkasy, UA')? '' : this.value;">
+								<button type="submit" class="submit-btn">Search</button>
+							</div>
+						</form>
+						<div id="forecastIntro" class="list-in">
+							<ul class="list-simple">
+								<li>Get the list of the most proper cities in the world. The more precise city name you put the more precise list you will get.</li>
+								<li>To make it more precise put the city's name or its part, comma, the name of the county or 2-letter country code. You will get all proper cities in chosen county. The order is important - the first is city name then comma then county. Example - Lon, UK or Lon, GB or London, GB or Lon, England.</li>
+							</ul>
+						</div>
+						<div id="forecast" class="list-in"></div>
+					</div>
+				</section>
+				<section class="map-section half-part">
+					<div class="part-inner">
+						<h2 class="section-title">Geolocation Map</h2>
+						<div class="note">
+							Note: This example requires that you consent to location sharing when prompted by your browser. If you see the error "The Geolocation service failed.", it means you probably did not give permission for the browser to locate you.
+						</div>
+						<div id="map"></div>
+					</div>
+				</section>
+		</div>
+	</div>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+	<script src="js/main.js"></script>
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyANUXWBTUPMAQM8wEtL8OeVRWoykRGs7r0&callback=initMap"></script>
+
+</body>
+</html>

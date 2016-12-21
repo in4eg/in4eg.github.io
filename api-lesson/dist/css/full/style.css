@@ -1,0 +1,78 @@
+@import 'https://necolas.github.io/normalize.css/3.0.2/normalize.css';
+body {
+  color: #333; }
+
+.container {
+  width: 100%;
+  max-width: 960px;
+  margin: 0 auto; }
+
+#map {
+  height: 250px; }
+
+.note {
+  margin-bottom: 30px; }
+
+.inner-wrap {
+  font-size: 0; }
+  .inner-wrap .half-part {
+    display: inline-block;
+    vertical-align: top;
+    width: 50%;
+    font-size: 14px; }
+    .inner-wrap .half-part .part-inner {
+      padding: 0 10px; }
+
+.form {
+  background-color: red;
+  font-size: 0; }
+  .form .input {
+    display: inline-block;
+    font-size: 16px;
+    height: 40px;
+    width: 80%;
+    padding: 0;
+    text-align: center;
+    vertical-align: top;
+    line-height: 40px;
+    border: none;
+    background-color: #e6f2f7;
+    outline: none;
+    transition: .3s; }
+    .form .input:focus {
+      background-color: #ececec; }
+  .form .submit-btn {
+    display: inline-block;
+    font-size: 16px;
+    height: 40px;
+    width: 20%;
+    padding: 0;
+    vertical-align: top;
+    line-height: 40px;
+    border: none;
+    background-color: #9cd;
+    outline: none;
+    transition: .3s; }
+    .form .submit-btn:hover {
+      background-color: #335;
+      color: #fff; }
+    .form .submit-btn:focus, .form .submit-btn:active {
+      background-color: #333;
+      color: #fff; }
+
+.list-in {
+  margin-top: 7px;
+  background-color: #f2f2f2;
+  padding: 10px 0; }
+
+#forecast {
+  display: none; }
+
+@media screen and (max-width: 768px) {
+  .inner-wrap {
+    font-size: 0; }
+    .inner-wrap .half-part {
+      width: 100%;
+      font-size: 12px; }
+      .inner-wrap .half-part .part-inner {
+        padding: 0 10px; } }
