@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html>
+	<head>
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+		<style>
+
+			* {
+				padding: 0;
+				margin: 0;
+			}
+			html, body {
+				background: #eee;
+			}
+			.canvas-outer {
+				margin: 50px auto;
+				width: 100%;
+				max-width: 300px;
+				background: #000;
+				box-shadow: 0 0 0 10px #ddd;
+			}
+			.inner {
+				padding-top: 100%;
+				position: relative;
+			}
+			canvas {
+				background: #ddd;
+				position: absolute;
+				top: 0; left: 0;
+				width: 100%; height: 100%;
+				display: block;
+			}
+
+		</style>
+
+	</head>
+
+	<body>
+
+
+		<div class="canvas-outer">
+			<div class="inner">
+				<canvas id="canvas"></canvas>
+			</div>
+		</div>
+
+
+		<script>
+
+			// requestAnimationFrame - это глобальная функция, которая
+			// вызывается на каждом кадре анимации в браузере
+			// -->> https://developer.mozilla.org/ru/docs/DOM/window.requestAnimationFrame
+			var requestAnimationFrame = (
+				window.requestAnimationFrame ||
+				window.mozRequestAnimationFrame ||
+				window.webkitRequestAnimationFrame ||
+				window.msRequestAnimationFrame
+			)
+
+			var parent = document.getElementsByClassName('inner')[0];
+			var canvas = document.getElementById('canvas');
+			var ctx = canvas.getContext('2d');
+			var width, height, w, h,
+					cursor = {x: 0, y: 0},
+					currentCell = null;
+
+			cells = [
+				{value: 1, isActive: false, isHover: false, position: {x: 0, y:0}},
+				{value: 2, isActive: false, isHover: false, position: {x: 1, y:0}},
+				{value: 3, isActive: false, isHover: false, position: {x: 2, y:0}},
+				{value: 4, isActive: false, isHover: false, position: {x: 3, y:0}},
+				{value: 5, isActive: false, isHover: false, position: {x: 0, y:1}},
+				{value: 6, isActive: false, isHover: false, position: {x: 1, y:1}},
+				{value: 7, isActive: false, isHover: false, position: {x: 2, y:1}},
+				{value: 8, isActive: false, isHover: false, position: {x: 3, y:1}},
+				{value: 9, isActive: false, isHover: false, position: {x: 0, y:2}},
+				{value: 10, isActive: false, isHover: false, position: {x: 1, y:2}},
+				{value: 11, isActive: false, isHover: false, position: {x: 2, y:2}},
+				{value: 12, isActive: false, isHover: false, position: {x: 3, y:2}},
+				{value: 13, isActive: false, isHover: false, position: {x: 0, y:3}},
+				{value: 14, isActive: false, isHover: false, position: {x: 1, y:3}},
+				{value: 15, isActive: false, isHover: false, position: {x: 2, y:3}},
+				{value: null, isActive: false, isHover: false, position: {x: 3, y:3}}
+			];
+
+			function getParentRect(){
+				return parent.getBoundingClientRect();
+			};
+
+			function setCanvasSize(rect){
+				canvas.width = width = rect.width;
+				canvas.height = height = rect.height;
+				w = width / 4;
+				h = height / 4;
+			};
+
+			function drawCell(cell){
+				cell.isHover = (cursor.x === cell.position.x && cursor.y === cell.position.y)
+				ctx.fillStyle = cell.isHover ? '#25d' : 'rgba(0,0,0,'+(0.1+cell.value/20)+')';
+				if (currentCell && cell.position.x === currentCell.position.x && cell.position.y === currentCell.position.y ){
+					ctx.fillStyle = '#2d5';
+				}
+				ctx.fillRect(w*cell.position.x, h*cell.position.y, w, h);
+				if (!cell.value){ return; }
+
+				ctx.textAlign = 'center';
+				ctx.textBaseline = "middle";
+				ctx.font = (w/3)+"px Roboto";
+				ctx.fillStyle = '#fff';
+				ctx.fillText(cell.value, w*cell.position.x+w/2, h*cell.position.y+h/2);
+			};
+
+			function getPosition(index){
+				pos = {x: 0, y: 0};
+				pos.y = index / 4;
+				pos.x = Math.ceil(4 * (pos.y - Math.floor(pos.y)));
+				pos.y = Math.floor(pos.y);
+				return pos
+			};
+
+			function getIndex(pos){
+				return pos.y*4 + pos.x;
+			};
+
+			function getCurrent(){
+				return cells[getIndex(cursor)];
+			};
+
+			function isEmpty(origin){
+				var current = getCurrent(),
+						compared;
+				switch (origin){
+					case 'top':
+						compared = getIndex({x: cursor.x, y: cursor.y-1});
+						break;
+					case 'left':
+						compared = getIndex({x: cursor.x-1, y: cursor.y});
+						break;
+					case 'right':
+						compared = getIndex({x: cursor.x+1, y: cursor.y});
+						break;
+					case 'bottom':
+						compared = getIndex({x: cursor.x, y: cursor.y+1});
+						break;
+				};
+				if (cells[compared] && !cells[compared].value) {
+					return true;
+				} else {
+					return false;
+				}
+			};
+
+			Array.prototype.swap = function(a, b){
+				this[a] = this.splice(b, 1, this[a])[0];
+				return this;
+			}
+
+			function render() {
+
+				rect = getParentRect();
+				ctx.clearRect(0, 0, rect.width, rect.height);
+
+				cells.forEach(function(cell){
+					drawCell(cell);
+				});
+
+				requestAnimationFrame(render)
+			};
+
+			setCanvasSize(getParentRect())
+			render()
+
+			window.addEventListener('resize', function(){
+				setCanvasSize(getParentRect());
+			});
+			document.addEventListener('keyup', function(e){
+				/*
+					37 - left
+					39 - right
+					38 - top
+					40 - bottom
+				*/
+				// left
+				if (e.keyCode === 37){
+					if (cursor.x > 0){ cursor.x--; }
+				}
+				// right
+				if (e.keyCode === 39){
+					if (cursor.x < 3){ cursor.x++; }
+				}
+				// top
+				if (e.keyCode === 38){
+					if (cursor.y > 0){ cursor.y--; }
+				}
+				// bottom
+				if (e.keyCode === 40){
+					if (cursor.y < 3){ cursor.y++; }
+				}
+				// enter
+				if (e.keyCode === 13){
+					var current = getCurrent()
+					if (currentCell){
+						temp = {
+							x: currentCell.position.x,
+							y: currentCell.position.y
+						}
+						currentCell.position.x = current.position.x
+						currentCell.position.y = current.position.y
+						currentCell.isActive = false
+						current.position.x = temp.x
+						current.position.y = temp.y
+						current.isActive = false
+						// cells.swap(indx, indx2)
+						// var temp = cells[indx];
+						// cells[indx] = current;
+						// cells[indx2] = currentCell;
+						currentCell = null;
+						// console.log(cells[indx], cells[indx2])
+					} else if (current){
+						currentCell = current;
+					}
+				}
+			});
+
+
+
+
+		</script>
+
+
+	</body>
+</html>
