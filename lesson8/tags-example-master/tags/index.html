@@ -1,0 +1,140 @@
+<html>
+<head>
+    <script src="/jquery.js"></script>
+
+</head>
+<body>
+
+    <div class="selected-tags">Selected tags: </div>
+
+    <div class="autoComplete-wrapper">
+        <input type="text" id="autoComplete">
+
+        <div id="result">
+            <ul class="result-list">
+                <li></li>
+            </ul>
+        </div>
+    </div>
+
+
+    <style>
+     ul li {
+        cursor: pointer;
+    }
+    ul li.active {
+        background-color: rgba(0,0,0,0.2);
+    }
+
+    .selected-tags span {
+        margin-right: 10px;
+    }
+
+
+
+
+
+
+
+</style>
+<script>
+
+    $(".result-list").on("click", "li", function(){
+        var selectedTag = $(this).text();
+     $(".selected-tags").html(selectedTag);
+ })
+
+
+
+
+
+
+    $("#autoComplete").on("keyup",function(){
+        var searchVal = $(this).val();
+        console.log(searchVal)
+        $(".result-list li").html(searchVal)
+    });
+    ;( function( $, window, document, undefined )
+    {
+        var $container = $( '.autoComplete-wrappe' );
+        if( !$container.length ) return true;
+
+        var $input          = $container.find( 'input' ),
+        $items          = $container.find( '> ul > li' ),
+        $item           = $(),
+        itemsIndexed    = [];
+
+        $items.each( function()
+        {
+            itemsIndexed.push( $( this ).text().replace( /\s{2,}/g, ' ' ).toLowerCase() );
+        });
+
+        $input.on( 'keyup', function( e )
+        {
+            if( e.keyCode == 13 )
+            {
+                $input.trigger( 'blur' );
+                return true;
+            }
+
+            $items.each( function()
+            {
+                $item = $( this );
+                $item.html( $item.html().replace( /<span class="highlight">([^<]+)<\/span>/gi, '$1' ) );
+            });
+
+            var searchVal = $.trim( $input.val() ).toLowerCase();
+            if( searchVal.length )
+            {
+                for( var i in itemsIndexed )
+                {
+                    $item = $items.eq( i );
+                    if( itemsIndexed[ i ].indexOf( searchVal ) != -1 )
+                        $item.removeClass( 'is-hidden' ).html( $item.html().replace( new RegExp( searchVal+'(?!([^<]+)?>)', 'gi' ), '<span class="highlight">$&</span>' ) );
+                    else
+                        $item.addClass( 'is-hidden' );
+                }
+            }
+            else $items.removeClass( 'is-hidden' );
+
+            $notfound.toggleClass( 'is-visible', $items.not( '.is-hidden' ).length == 0 );
+        });
+    })( jQuery, window, document );
+
+
+    ;( function( $, window, document, undefined )
+    {
+        $( document ).on( 'click', '.faq h2 a', function( e )
+        {
+            e.preventDefault();
+            $( this ).parents( 'li' ).toggleClass( 'is-active' );
+        });
+    })( jQuery, window, document );
+
+
+
+    ;( function( $, window, document, undefined )
+    {
+        var $container = $( '.faq' );
+        if( !$container.length ) return true;
+
+        var $input      = $container.find( 'input' ),
+        $items      = $container.find( '> ul > li' ),
+        $item       = $();
+
+        $input.on( 'keyup', function()
+        {
+            $item = $items.not( '.is-hidden' );
+            if( $item.length == 1 )
+                $item.addClass( 'js--autoshown is-active' );
+            else
+                $items.filter( '.js--autoshown' ).removeClass( 'js--autoshown is-active' );
+        });
+    })( jQuery, window, document );
+
+
+</script>
+</body>
+</html>
+
+

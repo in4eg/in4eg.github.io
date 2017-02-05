@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+
+	<title>To Do List</title>
+
+	<link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link rel="stylesheet" href="css/materialize.min.css">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	
+
+	<section class="list-section">
+		<div class="container">
+		<div class="row">
+
+			<div class="input-field">
+				<input type="text" class="title validate header" disabled id="title" value="Your List Title">
+				<label for="title">Your List Title</label>
+			</div>
+			<button class="waves-effect waves-circle btn-floating btn-large edit-title red">
+				<i class="large material-icons">mode_edit</i>
+			</button>
+		</div>
+		</div>
+		
+
+	</section>
+	<div class="container">
+		<div class="row">
+			<div class="col s6 section-group">
+				<div class="input-field">
+					<input type="text" class="adding" id="myInput">
+					<label for="myInput">Add smth to your list...</label>
+				</div>
+				<button onclick="newElement()" class="waves-effect waves-circle btn-floating btn-large"><i class="material-icons">add</i></button>
+			</div>
+			<div class="col s6">
+				<div class="total-task">
+					Total task: <div id="total" class="total">0</div>
+				</div>
+				<ul id="myList" class="collection">
+				</ul>
+			</div>
+		</div>
+	</div>
+	
+
+	<!-- script -->
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script src="js/script.js"></script>
+	<script src="js/materialize.min.js"></script>
+</body>
+</html>
