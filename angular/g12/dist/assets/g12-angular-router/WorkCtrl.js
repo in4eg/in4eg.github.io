@@ -41,7 +41,7 @@ app.controller('WorkCtrl', function ($scope, $routeParams) {
 			]
 		},
 		{
-			name: 'BDSM',
+			name: 'Other',
 			img: '1600/1100',
 			text: [
 				'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem commodi, beatae, incidunt maiores nisi ut explicabo reprehenderit magnam accusamus ducimus dolor quisquam, obcaecati, eos velit amet consequuntur fugiat in veritatis?',
