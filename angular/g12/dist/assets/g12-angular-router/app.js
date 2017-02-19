@@ -58,12 +58,32 @@ app.config(function($routeProvider) {
 // form controller
 app.controller('FormController', function($scope) {
 
-	// после успешной отправки формы			
+	// после успешной отправки формы
 	$scope.submitForm = function() {
 
 		if ($scope.userForm.$valid) {
-			alert('Thanks');
+			var mailgunUrl = "https://api.mailgun.net/v3/sandboxb044556b9f0bea856d4410ea30cf2e19.mailgun.org/messages";
+			var mailgunApiKey = window.btoa("api:key-b044556b9f0bea856d4410ea30cf2e19")
+
+			$scope.send = function() {
+				$http({
+					"method": "POST",
+					"url": "https://api.mailgun.net/v3/" + mailgunUrl + "/messages",
+					"headers": {
+						"Content-Type": "application/x-www-form-urlencoded",
+						"Authorization": "Basic " + mailgunApiKey
+					},
+					data: "from=" + "test@example.com" + "&to=" + "soeone@gmail.com" + "&subject=" + "MailgunTest" + "&text=" + "EmailBody"
+				}).then(function(success) {
+					console.log("SUCCESS " + JSON.stringify(success));
+				}, function(error) {
+					console.log("ERROR " + JSON.stringify(error));
+				});
+			}
 		}
+
 	};
 
 });
+
+
