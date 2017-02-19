@@ -46,11 +46,24 @@ app.config(function($routeProvider) {
 	})
 	// сонтакты
 	.when("/contact", {
-		templateUrl : "assets/g12-angular-router/templates/contact.html"
+		templateUrl : "assets/g12-angular-router/templates/contact.html",
 	})
 	// если ничего такого нет, то перенаправляем на главку
 	.otherwise({
 		templateUrl : "assets/g12-angular-router/templates/main.html",
 		controller: 'MainCtrl'
 	})
+});
+
+// form controller
+app.controller('FormController', function($scope) {
+
+	// после успешной отправки формы			
+	$scope.submitForm = function() {
+
+		if ($scope.userForm.$valid) {
+			alert('Thanks');
+		}
+	};
+
 });
