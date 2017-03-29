@@ -68,7 +68,7 @@ app.controller('FormController', function($scope) {
 			$scope.send = function() {
 				$http({
 					"method": "POST",
-					"url": "https://api.mailgun.net/v3/" + mailgunUrl + "/messages",
+					"url": mailgunUrl,
 					"headers": {
 						"Content-Type": "application/x-www-form-urlencoded",
 						"Authorization": "Basic " + mailgunApiKey
