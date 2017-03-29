@@ -1,3 +1,1246 @@
-Hello World
+<!DOCTYPE html>
+<html lang="eng">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+	<meta name="format-detection" content="telephone=no">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="theme-color" content="#5570e7">
 
-<a href="https://in4eg.github.io/angular/g12/dist/angular.html#/">Angular</a>
+	<title>Sky-Club::Main</title>
+
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/style.min.css">
+	<link rel="stylesheet" href="css/media.min.css">
+	<link href="images/favicon.png" rel="shortcut icon" type="image/x-icon">
+	<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+	<!--[if lt IE 9]> <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script> <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script> <![endif]-->
+	<!--[if lt IE 7 ]><html class="ie ie6" lang="en-US"> <![endif]-->
+	<!--[if IE 7 ]><html class="ie ie7" lang="en-US"> <![endif]-->
+	<!--[if IE 8 ]><html class="ie ie8" lang="en-US"> <![endif]-->
+</head>
+<body>
+	<div class="body-wrap">
+		<div class="body-outer">
+				<header class="main-header">
+					<div class="top-bar">
+						<div class="container">
+							<div class="row">
+								<div class="col-md-6">
+									<div class="city-select-wrap">
+										<div class="wrap-select">
+											<label for="city-select" class="city-label select-label">Ваш город:</label>
+											<select name="city" id="city-select" class="nice-select">
+												<option value="city1">Москва</option>
+												<option value="city2">Санкт-Петербург</option>
+											</select>
+										</div>
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="user-panel">
+										<ul class="panel-list">
+											<li>
+												<div class="user-link-wrap">
+													<a href="#">
+														<span class="wrap-caption">Личный кабинет:</span>
+														Test Agency
+													</a>
+												</div>
+											</li>
+											<li>
+												<div class="logout">
+													<a href="#">
+														<span class="logout-link">Выход</span>
+													</a>
+												</div>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="bottom-bar">
+						<div class="container">
+							<div class="row">
+								<div class="inline-wrap">
+									<div class="col-6 to-middle block-inside">
+										<div class="logo-holder">
+											<a href="index.html"><img src="images/logo.png" alt="logo"></a>
+										</div>
+									</div>
+									<div class="col-6 to-middle block-inside">
+										<div class="address-holder">
+											<a href="tel:74952155230">+7(495) 215-52-30</a>
+											Москва, ул.
+											<div class="address-street">Воздвиженка, 9</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</header>
+				<!-- header -->
+		</div>
+	</div>
+	<div class="top-slider-section">
+		<!-- slider -->
+		<div class="owl-carousel owl-theme top-slider fadeOut">
+			<div class="item">
+				<div class="slide-inner first-slide"></div>
+				<!-- background-image: url(../images/banner1.jpg); -->
+			</div>
+			<!-- item -->
+			<div class="item">
+				<div class="slide-inner secound-slide"></div>
+				<!-- background-image: url(../images/banner2.jpg); -->
+			</div>
+			<!-- item -->
+			<div class="item">
+				<div class="slide-inner third-slide"></div>
+				<!-- background-image: url(../images/banner3.jpg); -->
+			</div>
+			<!-- item -->
+		</div>
+		<!-- calculator -->
+		<div class="calculator-section">
+			<div class="container">
+				<div class="row">
+					<div class="calculator-wrap">
+						<div class="calculator-inner">
+							<div class="search-wrap">
+								<div class="select-holder">
+									<div class="search-label">
+										<label for="country">Страна</label>
+									</div>
+									<div class="search-select">
+										<select name="country" id="country">
+											<option value="country">- Выберите страну</option>
+											<option value="country1">Россия</option>
+											<option value="country2">Италия</option>
+											<option value="country3">Испания</option>
+										</select>
+									</div>
+								</div>
+								<div class="select-holder">
+									<div class="search-label">
+										<label for="city">Город</label>
+									</div>
+									<div class="search-select">
+										<select name="city" id="city">
+											<option value="city">- Выберите город</option>
+											<option value="city1">Лондон</option>
+											<option value="city2">Оксфорд</option>
+											<option value="city3">Кембридж</option>
+										</select>
+									</div>
+								</div>
+								<div class="search-input">
+									<div class="input-inside">
+										<div class="label-outer">
+											<label for="arrive">Прибытие</label>
+										</div>
+										<div class="input-count">
+											<input type="text" value="01-01-2017" id="arrive">
+											<label for="arrive" class="calendar-icon"></label>
+										</div>
+									</div>
+									<div class="input-inside">
+										<div class="label-outer">
+											<label for="night">Ночей</label>
+										</div>
+										<div class="input-count">
+											<input type="number" id="night" value="1">
+										</div>
+									</div>
+									<div class="input-inside">
+										<div class="label-outer">
+											<label for="count">Выезд</label>
+										</div>
+										<div class="input-count">
+											<input type="text" id="count" value="01-01-2017">
+											<label for="count" class="calendar-icon"></label>
+										</div>
+									</div>
+								</div>
+								<div class="half-part">
+									<div class="select-holder">
+										<div class="label-outer">
+											<label for="adult">Взрослых</label>
+										</div>
+										<div class="search-select full">
+											<select name="adult" id="adult">
+												<option value="adult1">1</option>
+												<option value="adult2">2</option>
+												<option value="adult3">3</option>
+												<option value="adult4">4</option>
+												<option value="adult5">5</option>
+												<option value="adult6">6</option>
+											</select>
+										</div>
+									</div>
+									<div class="select-holder">
+										<div class="label-outer">
+											<label for="child">Детей</label>
+										</div>
+										<div class="search-select full">
+											<select name="child" id="child">
+												<option value="child1">1</option>
+												<option value="child2">2</option>
+												<option value="child3">3</option>
+												<option value="child4">4</option>
+												<option value="child5">5</option>
+												<option value="child6">6</option>
+											</select>
+										</div>
+									</div>
+								</div>
+								<div class="search-btn-wrap">
+									<button class="blue-btn" type="button">Поиск</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="body-wrap">
+		<div class="body-outer">
+			<!-- main -->
+			<div class="main-nav-section" id="sticky">
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-12">
+							<nav class="main-nav">
+								<ul class="main-nav-list">
+									<li class="nav-item">
+										<div class="nav-item-wrap">
+											<div class="nav-title"><a href="#">О компании</a></div>
+										</div>
+									</li>
+									<li class="nav-item">
+										<div class="nav-item-wrap">
+											<div class="nav-title"><a href="#">Страны</a></div>
+										</div>
+									</li>
+									<li class="nav-item">
+										<div class="nav-item-wrap parent">
+											<!-- add class parent if item has submenu-list -->
+											<div class="nav-title">Журнал</div>
+											<div class="submenu-wrap">
+												<ul class="submenu-list">
+													<li>
+														<div class="submenu-item">
+															<a href="#">Пункт меню</a>
+														</div>
+													</li>
+													<li>
+														<div class="submenu-item">
+															<a href="#">Пункт меню</a>
+														</div>
+													</li>
+													<li>
+														<div class="submenu-item">
+															<a href="#">Пункт меню</a>
+														</div>
+													</li>
+												</ul>
+											</div>
+										</div>
+									</li>
+									<!-- nav item with submenu -->
+									<li class="nav-item">
+										<div class="nav-item-wrap parent">
+											<div class="nav-title">Путешествия</div>
+											<div class="submenu-wrap">
+												<ul class="submenu-list">
+													<li>
+														<div class="submenu-item">
+															<a href="#">Пункт меню</a>
+														</div>
+													</li>
+													<li>
+														<div class="submenu-item">
+															<a href="#">Пункт меню</a>
+														</div>
+													</li>
+													<li>
+														<div class="submenu-item">
+															<a href="#">Пункт меню</a>
+														</div>
+													</li>
+													<li>
+														<div class="submenu-item">
+															<a href="#">Пункт меню</a>
+														</div>
+													</li>
+													<li>
+														<div class="submenu-item">
+															<a href="#">Пункт меню</a>
+														</div>
+													</li>
+												</ul>
+											</div>
+										</div>
+									</li>
+									<li class="nav-item">
+										<div class="nav-item-wrap">
+											<div class="nav-title">Афиша и новости</div>
+										</div>
+									</li>
+									<li class="nav-item">
+										<div class="nav-item-wrap">
+											<div class="nav-title">Авиабилеты</div>
+										</div>
+									</li>
+								</ul>
+							</nav>
+							<!-- main nav -->
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- main nav-->
+			<div class="logo-line"><div class="line"></div></div>
+			<!-- line with round logo -->
+			<div class="card-section">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-3">
+							<div class="card-outer">
+								<div class="owl-carousel owl-theme card-outer-slider">
+									<div class="item">
+										<div class="card-wrap">
+											<figure class="card-figure figure-wrap">
+												<a href="#"><img src="images/card1.jpg" alt="image" class="horizontal"></a>
+												<!-- use horizontal or vertical class for 100% width or 100% image height and center align  -->
+											</figure>
+											<div class="card-caption">
+												<div class="caption-inner">
+													<div class="caption-title"><a href="#">China Best Selection</a></div>
+													<div class="caption-description">
+														Beijing - Xi'an - Guilin - Shanghai
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<!-- item -->
+									<div class="item">
+										<div class="card-wrap">
+											<figure class="card-figure figure-wrap">
+												<a href="#"><img src="images/card6.jpg" alt="image" class="horizontal"></a>
+												<!-- use horizontal or vertical class for 100% width or 100% image height and center align  -->
+											</figure>
+											<div class="card-caption">
+												<div class="caption-inner">
+													<div class="caption-title"><a href="#">China Best Selection</a></div>
+													<div class="caption-description">
+														Beijing - Xi'an - Guilin - Shanghai
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<!-- item -->
+								</div>
+								<!-- use slider if there are more than 6 items -->
+							</div>
+						</div>
+						<!-- card item -->
+						<div class="col-md-3">
+							<div class="card-outer">
+								<div class="card-wrap">
+									<figure class="card-figure figure-wrap">
+										<a href="#"><img src="images/card2.jpg" alt="image" class="horizontal"></a>
+										<!-- use horizontal or vertical class for 100% width or 100% image height and center align  -->
+									</figure>
+									<div class="card-caption">
+										<div class="caption-inner">
+											<div class="caption-title"><a href="#">Spirit of China</a></div>
+											<div class="caption-description">
+												Shanghai - Suzhou - Hangzhou - Xi'an - Beijing
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-6">
+							<div class="card-outer">
+								<div class="card-wrap">
+									<figure class="card-figure figure-wrap">
+										<a href="#"><img src="images/card3.jpg" alt="image" class="horizontal"></a>
+										<!-- use horizontal or vertical class for 100% width or 100% image height and center align  -->
+									</figure>
+									<div class="card-caption">
+										<div class="caption-inner">
+											<div class="caption-title"><a href="#">Essence of China with Hong Kong Stopove</a></div>
+											<div class="caption-description">
+												Beijing - Xi'an - Shanghai - Guilin - Hong Kong
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-6">
+							<div class="card-outer">
+								<div class="card-wrap">
+									<figure class="card-figure figure-wrap">
+										<a href="#"><img src="images/card4.jpg" alt="image" class="horizontal"></a>
+										<!-- use horizontal or vertical class for 100% width or 100% image height and center align  -->
+									</figure>
+									<div class="card-caption">
+										<div class="caption-inner">
+											<div class="caption-title"><a href="#">China Golden Triangle with Pingyao Culture </a></div>
+											<div class="caption-description">
+												Beijing - Xi'an - Pingyao - Taiyuan - Shanghai
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-3">
+							<div class="card-outer">
+								<div class="card-wrap">
+									<figure class="card-figure figure-wrap">
+										<a href="#"><img src="images/card5.jpg" alt="image" class="horizontal"></a>
+										<!-- use horizontal or vertical class for 100% width or 100% image height and center align  -->
+									</figure>
+									<div class="card-caption">
+										<div class="caption-inner">
+											<div class="caption-title"><a href="#">Bullet Train Tour of Splendid China</a></div>
+											<div class="caption-description">
+												Beijing - Xi’an - Hangzhou - Shanghai
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- item -->
+						<div class="col-md-3">
+							<div class="card-outer">
+								<div class="card-wrap">
+									<figure class="card-figure figure-wrap">
+										<a href="#"><img src="images/card6.jpg" alt="image" class="horizontal"></a>
+										<!-- use horizontal or vertical class for 100% width or 100% image height and center align  -->
+									</figure>
+									<div class="card-caption">
+										<div class="caption-inner">
+											<div class="caption-title"><a href="#">Holy Tibet Tour</a></div>
+											<div class="caption-description">
+												Lhasa - Gyantse - Shigatse - Lhasa
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- item -->
+					</div>
+				</div>
+				<!-- container row -->
+			</div>
+			<!-- card section -->
+		</div>
+	</div>
+	<!-- body container -->
+	<div class="banner-section">
+		<div class="banner-wrap">
+			<div class="container">
+				<div class="row">
+					<div class="banner-gray-wrap">
+						<div class="gray-outer">
+							<div class="banner-gray-inside table-wrap">
+								<div class="table-cell to-middle">
+									<div class="banner-gray-caption">
+										<div class="inner-title">Создать свое путешествие</div>
+										<div class="line-dashed white"></div>
+										<div class="inner-caption">Каждыи из нас особенныи. Мы поможем воплотить ваши мечты и желания, создадим удивительное, незабываемое путешествие, обратим внимание на мелочи и детали, важные персонально для вас.</div>
+										<div class="btn-wrap">
+											<button class="white-btn" type="button">Создать путешествие</button>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- full width block -->
+	<div class="body-wrap">
+		<div class="body-outer">
+			<section class="tab-section">
+				<div class="container">
+					<div class="row">
+						<div class="col-xs-12">
+							<div class="logo-line"><div class="line"></div></div>
+							<h2 class="section-title">Самые популярные предложения</h2>
+							<div class="tab-wrap">
+								<div class="tab-nav-cover">
+									<nav class="tab-nav">
+										<ul class="tab-nav-list">
+											<li class="tab-item active">
+												<div class="tab-item-inner">
+													<div class="tab-icon icon-1"></div>
+													<div class="tab-item-caption">Лучшие предложения</div>
+												</div>
+											</li>
+											<!-- tab 1 -->
+											<li class="tab-item">
+												<div class="tab-item-inner">
+													<div class="tab-icon icon-2"></div>
+													<div class="tab-item-caption">Для любознательных</div>
+												</div>
+											</li>
+											<!-- tab 2 -->
+											<li class="tab-item">
+												<div class="tab-item-inner">
+													<div class="tab-icon icon-3"></div>
+													<div class="tab-item-caption">Море, солнце, пляж</div>
+												</div>
+											</li>
+											<!-- tab 3 -->
+											<li class="tab-item">
+												<div class="tab-item-inner">
+													<div class="tab-icon icon-4"></div>
+													<div class="tab-item-caption">Музыка, кино, шоу</div>
+												</div>
+											</li>
+											<!-- tab 4 -->
+											<li class="tab-item">
+												<div class="tab-item-inner">
+													<div class="tab-icon icon-5"></div>
+													<div class="tab-item-caption">Наш эксклюзив</div>
+												</div>
+											</li>
+											<!-- tab 5 -->
+										</ul>
+									</nav>
+									<div class="tab-content-wrap">
+										<div class="tab-content tab-content-1 active">
+											<div class="tab-inner">
+												<div class="tab-lines"></div>
+												<div class="tab-content-title">Лучшие предложения</div>
+												<div class="tab-elements clearfix">
+													<div class="col-md-3">
+														<div class="card-outer">
+															<div class="card-wrap">
+																<figure class="card-figure figure-wrap">
+																	<a href="#"><img src="images/card7.jpg" alt="image" class="horizontal"></a>
+																	<!-- use horizontal or vertical class for 100% width or 100% image height and center align  -->
+																	<div class="icon-tab-1 icon-figure"></div>
+																</figure>
+																<div class="card-caption">
+																	<div class="caption-inner">
+																		<div class="caption-title"><a href="#">China Best Selection</a></div>
+																		<div class="caption-description">
+																			Beijing - Xi'an - Guilin - Shanghai
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+													<!-- card item -->
+													<div class="col-md-3">
+														<div class="card-outer">
+															<div class="card-wrap">
+																<figure class="card-figure figure-wrap">
+																	<a href="#"><img src="images/card8.jpg" alt="image" class="horizontal"></a>
+																	<!-- use horizontal or vertical class for 100% width or 100% image height and center align  -->
+																	<div class="icon-tab-1 icon-figure"></div>
+																</figure>
+																<div class="card-caption">
+																	<div class="caption-inner">
+																		<div class="caption-title"><a href="#">China Best Selection</a></div>
+																		<div class="caption-description">
+																			Beijing - Xi'an - Guilin - Shanghai
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+													<!-- card item -->
+													<div class="col-md-3">
+														<div class="card-outer">
+															<div class="card-wrap">
+																<figure class="card-figure figure-wrap">
+																	<a href="#"><img src="images/card9.jpg" alt="image" class="horizontal"></a>
+																	<!-- use horizontal or vertical class for 100% width or 100% image height and center align  -->
+																	<div class="icon-tab-1 icon-figure"></div>
+																</figure>
+																<div class="card-caption">
+																	<div class="caption-inner">
+																		<div class="caption-title"><a href="#">China Best Selection</a></div>
+																		<div class="caption-description">
+																			Beijing - Xi'an - Guilin - Shanghai
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+													<!-- card item -->
+													<div class="col-md-3">
+														<div class="card-outer">
+															<div class="card-wrap">
+																<figure class="card-figure figure-wrap">
+																	<a href="#"><img src="images/card10.jpg" alt="image" class="horizontal"></a>
+																	<!-- use horizontal or vertical class for 100% width or 100% image height and center align  -->
+																	<div class="icon-tab-1 icon-figure"></div>
+																</figure>
+																<div class="card-caption">
+																	<div class="caption-inner">
+																		<div class="caption-title"><a href="#">China Best Selection</a></div>
+																		<div class="caption-description">
+																			Beijing - Xi'an - Guilin - Shanghai
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+													<!-- card item -->
+												</div>
+												<!-- tab-elements -->
+											</div>
+										</div>
+										<!-- tab 1 -->
+										<div class="tab-content tab-content-2">
+											<div class="tab-inner">
+												<div class="tab-lines"></div>
+												<div class="tab-content-title">Для любознательных</div>
+												<div class="tab-elements clearfix">
+													<div class="col-md-3">
+														<div class="card-outer">
+															<div class="card-wrap">
+																<figure class="card-figure figure-wrap">
+																	<a href="#"><img src="images/card7.jpg" alt="image" class="horizontal"></a>
+																	<!-- use horizontal or vertical class for 100% width or 100% image height and center align  -->
+																	<div class="icon-tab-2 icon-figure"></div>
+																</figure>
+																<div class="card-caption">
+																	<div class="caption-inner">
+																		<div class="caption-title"><a href="#">China Best Selection</a></div>
+																		<div class="caption-description">
+																			Beijing - Xi'an - Guilin - Shanghai
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+													<!-- card item -->
+													<div class="col-md-3">
+														<div class="card-outer">
+															<div class="card-wrap">
+																<figure class="card-figure figure-wrap">
+																	<a href="#"><img src="images/card8.jpg" alt="image" class="horizontal"></a>
+																	<!-- use horizontal or vertical class for 100% width or 100% image height and center align  -->
+																	<div class="icon-tab-2 icon-figure"></div>
+																</figure>
+																<div class="card-caption">
+																	<div class="caption-inner">
+																		<div class="caption-title"><a href="#">China Best Selection</a></div>
+																		<div class="caption-description">
+																			Beijing - Xi'an - Guilin - Shanghai
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+													<!-- card item -->
+													<div class="col-md-3">
+														<div class="card-outer">
+															<div class="card-wrap">
+																<figure class="card-figure figure-wrap">
+																	<a href="#"><img src="images/card9.jpg" alt="image" class="horizontal"></a>
+																	<!-- use horizontal or vertical class for 100% width or 100% image height and center align  -->
+																	<div class="icon-tab-2 icon-figure"></div>
+																</figure>
+																<div class="card-caption">
+																	<div class="caption-inner">
+																		<div class="caption-title"><a href="#">China Best Selection</a></div>
+																		<div class="caption-description">
+																			Beijing - Xi'an - Guilin - Shanghai
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+													<!-- card item -->
+													<div class="col-md-3">
+														<div class="card-outer">
+															<div class="card-wrap">
+																<figure class="card-figure figure-wrap">
+																	<a href="#"><img src="images/card10.jpg" alt="image" class="horizontal"></a>
+																	<!-- use horizontal or vertical class for 100% width or 100% image height and center align  -->
+																	<div class="icon-tab-2 icon-figure"></div>
+																</figure>
+																<div class="card-caption">
+																	<div class="caption-inner">
+																		<div class="caption-title"><a href="#">China Best Selection</a></div>
+																		<div class="caption-description">
+																			Beijing - Xi'an - Guilin - Shanghai
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+													<!-- card item -->
+												</div>
+												<!-- tab-elements -->
+											</div>
+										</div>
+										<!-- tab 2 -->
+										<div class="tab-content tab-content-3">
+											<div class="tab-inner">
+												<div class="tab-lines"></div>
+												<div class="tab-content-title">Море, солнце, пляж</div>
+												<div class="tab-elements clearfix">
+													<div class="col-md-3">
+														<div class="card-outer">
+															<div class="card-wrap">
+																<figure class="card-figure figure-wrap">
+																	<a href="#"><img src="images/card7.jpg" alt="image" class="horizontal"></a>
+																	<!-- use horizontal or vertical class for 100% width or 100% image height and center align  -->
+																	<div class="icon-tab-3 icon-figure"></div>
+																</figure>
+																<div class="card-caption">
+																	<div class="caption-inner">
+																		<div class="caption-title"><a href="#">China Best Selection</a></div>
+																		<div class="caption-description">
+																			Beijing - Xi'an - Guilin - Shanghai
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+													<!-- card item -->
+													<div class="col-md-3">
+														<div class="card-outer">
+															<div class="card-wrap">
+																<figure class="card-figure figure-wrap">
+																	<a href="#"><img src="images/card8.jpg" alt="image" class="horizontal"></a>
+																	<!-- use horizontal or vertical class for 100% width or 100% image height and center align  -->
+																	<div class="icon-tab-3 icon-figure"></div>
+																</figure>
+																<div class="card-caption">
+																	<div class="caption-inner">
+																		<div class="caption-title"><a href="#">China Best Selection</a></div>
+																		<div class="caption-description">
+																			Beijing - Xi'an - Guilin - Shanghai
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+													<!-- card item -->
+													<div class="col-md-3">
+														<div class="card-outer">
+															<div class="card-wrap">
+																<figure class="card-figure figure-wrap">
+																	<a href="#"><img src="images/card9.jpg" alt="image" class="horizontal"></a>
+																	<!-- use horizontal or vertical class for 100% width or 100% image height and center align  -->
+																	<div class="icon-tab-3 icon-figure"></div>
+																</figure>
+																<div class="card-caption">
+																	<div class="caption-inner">
+																		<div class="caption-title"><a href="#">China Best Selection</a></div>
+																		<div class="caption-description">
+																			Beijing - Xi'an - Guilin - Shanghai
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+													<!-- card item -->
+													<div class="col-md-3">
+														<div class="card-outer">
+															<div class="card-wrap">
+																<figure class="card-figure figure-wrap">
+																	<a href="#"><img src="images/card10.jpg" alt="image" class="horizontal"></a>
+																	<!-- use horizontal or vertical class for 100% width or 100% image height and center align  -->
+																	<div class="icon-tab-3 icon-figure"></div>
+																</figure>
+																<div class="card-caption">
+																	<div class="caption-inner">
+																		<div class="caption-title"><a href="#">China Best Selection</a></div>
+																		<div class="caption-description">
+																			Beijing - Xi'an - Guilin - Shanghai
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+													<!-- card item -->
+												</div>
+												<!-- tab-elements -->
+											</div>
+										</div>
+										<!-- tab 3 -->
+										<div class="tab-content tab-content-4">
+											<div class="tab-inner">
+												<div class="tab-lines"></div>
+												<div class="tab-content-title">Море, солнце, пляж</div>
+												<div class="tab-elements clearfix">
+													<div class="col-md-3">
+														<div class="card-outer">
+															<div class="card-wrap">
+																<figure class="card-figure figure-wrap">
+																	<a href="#"><img src="images/card7.jpg" alt="image" class="horizontal"></a>
+																	<!-- use horizontal or vertical class for 100% width or 100% image height and center align  -->
+																	<div class="icon-tab-4 icon-figure"></div>
+																</figure>
+																<div class="card-caption">
+																	<div class="caption-inner">
+																		<div class="caption-title"><a href="#">China Best Selection</a></div>
+																		<div class="caption-description">
+																			Beijing - Xi'an - Guilin - Shanghai
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+													<!-- card item -->
+													<div class="col-md-3">
+														<div class="card-outer">
+															<div class="card-wrap">
+																<figure class="card-figure figure-wrap">
+																	<a href="#"><img src="images/card8.jpg" alt="image" class="horizontal"></a>
+																	<!-- use horizontal or vertical class for 100% width or 100% image height and center align  -->
+																	<div class="icon-tab-4 icon-figure"></div>
+																</figure>
+																<div class="card-caption">
+																	<div class="caption-inner">
+																		<div class="caption-title"><a href="#">China Best Selection</a></div>
+																		<div class="caption-description">
+																			Beijing - Xi'an - Guilin - Shanghai
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+													<!-- card item -->
+													<div class="col-md-3">
+														<div class="card-outer">
+															<div class="card-wrap">
+																<figure class="card-figure figure-wrap">
+																	<a href="#"><img src="images/card9.jpg" alt="image" class="horizontal"></a>
+																	<!-- use horizontal or vertical class for 100% width or 100% image height and center align  -->
+																	<div class="icon-tab-4 icon-figure"></div>
+																</figure>
+																<div class="card-caption">
+																	<div class="caption-inner">
+																		<div class="caption-title"><a href="#">China Best Selection</a></div>
+																		<div class="caption-description">
+																			Beijing - Xi'an - Guilin - Shanghai
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+													<!-- card item -->
+													<div class="col-md-3">
+														<div class="card-outer">
+															<div class="card-wrap">
+																<figure class="card-figure figure-wrap">
+																	<a href="#"><img src="images/card10.jpg" alt="image" class="horizontal"></a>
+																	<!-- use horizontal or vertical class for 100% width or 100% image height and center align  -->
+																	<div class="icon-tab-4 icon-figure"></div>
+																</figure>
+																<div class="card-caption">
+																	<div class="caption-inner">
+																		<div class="caption-title"><a href="#">China Best Selection</a></div>
+																		<div class="caption-description">
+																			Beijing - Xi'an - Guilin - Shanghai
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+													<!-- card item -->
+												</div>
+												<!-- tab-elements -->
+											</div>
+										</div>
+										<!-- tab 4 -->
+										<div class="tab-content tab-content-5">
+											<div class="tab-inner">
+												<div class="tab-lines"></div>
+												<div class="tab-content-title">Наш эксклюзив</div>
+												<div class="tab-elements clearfix">
+													<div class="col-md-3">
+														<div class="card-outer">
+															<div class="card-wrap">
+																<figure class="card-figure figure-wrap">
+																	<a href="#"><img src="images/card7.jpg" alt="image" class="horizontal"></a>
+																	<!-- use horizontal or vertical class for 100% width or 100% image height and center align  -->
+																	<div class="icon-tab-5 icon-figure"></div>
+																</figure>
+																<div class="card-caption">
+																	<div class="caption-inner">
+																		<div class="caption-title"><a href="#">China Best Selection</a></div>
+																		<div class="caption-description">
+																			Beijing - Xi'an - Guilin - Shanghai
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+													<!-- card item -->
+													<div class="col-md-3">
+														<div class="card-outer">
+															<div class="card-wrap">
+																<figure class="card-figure figure-wrap">
+																	<a href="#"><img src="images/card8.jpg" alt="image" class="horizontal"></a>
+																	<!-- use horizontal or vertical class for 100% width or 100% image height and center align  -->
+																	<div class="icon-tab-5 icon-figure"></div>
+																</figure>
+																<div class="card-caption">
+																	<div class="caption-inner">
+																		<div class="caption-title"><a href="#">China Best Selection</a></div>
+																		<div class="caption-description">
+																			Beijing - Xi'an - Guilin - Shanghai
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+													<!-- card item -->
+													<div class="col-md-3">
+														<div class="card-outer">
+															<div class="card-wrap">
+																<figure class="card-figure figure-wrap">
+																	<a href="#"><img src="images/card9.jpg" alt="image" class="horizontal"></a>
+																	<!-- use horizontal or vertical class for 100% width or 100% image height and center align  -->
+																	<div class="icon-tab-5 icon-figure"></div>
+																</figure>
+																<div class="card-caption">
+																	<div class="caption-inner">
+																		<div class="caption-title"><a href="#">China Best Selection</a></div>
+																		<div class="caption-description">
+																			Beijing - Xi'an - Guilin - Shanghai
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+													<!-- card item -->
+													<div class="col-md-3">
+														<div class="card-outer">
+															<div class="card-wrap">
+																<figure class="card-figure figure-wrap">
+																	<a href="#"><img src="images/card10.jpg" alt="image" class="horizontal"></a>
+																	<!-- use horizontal or vertical class for 100% width or 100% image height and center align  -->
+																	<div class="icon-tab-5 icon-figure"></div>
+																</figure>
+																<div class="card-caption">
+																	<div class="caption-inner">
+																		<div class="caption-title"><a href="#">China Best Selection</a></div>
+																		<div class="caption-description">
+																			Beijing - Xi'an - Guilin - Shanghai
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+													<!-- card item -->
+												</div>
+												<!-- tab-elements -->
+											</div>
+										</div>
+										<!-- tab 5 -->
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- tab section -->
+			<section class="events-section">
+				<div class="container">
+					<div class="row">
+						<div class="col-xs-12">
+							<div class="logo-line"><div class="line"></div></div>
+							<h2 class="section-title">Афиша событий</h2>
+						</div>
+						<div class="col-md-3">
+							<div class="calendar-outer">
+								<div class="calendar-event">
+									<div class="calendar-inner">
+										<header class="calendar-title-header">
+											<h2 class="month"></h2>
+											<button class="btn-prev" type="button"></button>
+											<button class="btn-next" type="button"></button>
+										</header>
+										<table class="calendar-table">
+											<thead class="event-days">
+												<tr></tr>
+											</thead>
+											<tbody class="event-calendar">
+												<tr class="1"></tr>
+												<tr class="2"></tr>
+												<tr class="3"></tr>
+												<tr class="4"></tr>
+												<tr class="5"></tr>
+											</tbody>
+										</table>
+										<footer class="calendar-footer"></footer>
+									</div>
+								</div>
+								<div class="list-event">
+									<div class="day-event active" date-day="" date-month="" date-year="" data-number="">
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-9">
+							<div class="events-slider-wrap">
+								<div class="owl-carousel owl-theme event-slider">
+									<div class="item">
+										<div class="card-wrap">
+											<figure class="card-figure figure-wrap">
+												<a href="#"><img src="images/card1.jpg" alt="image" class="horizontal"></a>
+												<!-- use horizontal or vertical class for 100% width or 100% image height and center align  -->
+												<div class="icon-tab-3 icon-figure"></div>
+											</figure>
+											<div class="card-caption">
+												<div class="caption-inner">
+													<div class="caption-title"><a href="#">China Best Selection</a></div>
+													<div class="caption-description">
+														Beijing - Xi'an - Guilin - Shanghai
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<!-- item -->
+									<div class="item">
+										<div class="card-wrap">
+											<figure class="card-figure figure-wrap">
+												<a href="#"><img src="images/card3.jpg" alt="image" class="horizontal"></a>
+												<!-- use horizontal or vertical class for 100% width or 100% image height and center align  -->
+												<div class="icon-tab-3 icon-figure"></div>
+											</figure>
+											<div class="card-caption">
+												<div class="caption-inner">
+													<div class="caption-title"><a href="#">China Best Selection</a></div>
+													<div class="caption-description">
+														Beijing - Xi'an - Guilin - Shanghai
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<!-- item -->
+									<div class="item">
+										<div class="card-wrap">
+											<figure class="card-figure figure-wrap">
+												<a href="#"><img src="images/card7.jpg" alt="image" class="horizontal"></a>
+												<!-- use horizontal or vertical class for 100% width or 100% image height and center align  -->
+												<div class="icon-tab-3 icon-figure"></div>
+											</figure>
+											<div class="card-caption">
+												<div class="caption-inner">
+													<div class="caption-title"><a href="#">China Best Selection</a></div>
+													<div class="caption-description">
+														Beijing - Xi'an - Guilin - Shanghai
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<!-- item -->
+									<div class="item">
+										<div class="card-wrap">
+											<figure class="card-figure figure-wrap">
+												<a href="#"><img src="images/card8.jpg" alt="image" class="horizontal"></a>
+												<!-- use horizontal or vertical class for 100% width or 100% image height and center align  -->
+												<div class="icon-tab-3 icon-figure"></div>
+											</figure>
+											<div class="card-caption">
+												<div class="caption-inner">
+													<div class="caption-title"><a href="#">China Best Selection</a></div>
+													<div class="caption-description">
+														Beijing - Xi'an - Guilin - Shanghai
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<!-- item -->
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- events section -->
+			<section class="partners-section">
+				<div class="container">
+					<div class="row">
+						<div class="col-xs-12">
+							<div class="logo-line"><div class="line"></div></div>
+							<h2 class="section-title">Партнеры</h2>
+							<div class="partners-slider-wrap">
+								<div class="owl-carousel owl-theme partners-slider">
+									<div class="item">
+										<figure class="partner-logo-figure">
+											<img src="images/2323.jpg" alt="jpg">
+										</figure>
+									</div>
+									<!-- item -->
+									<div class="item">
+										<figure class="partner-logo-figure">
+											<img src="images/19464.jpg" alt="jpg">
+										</figure>
+									</div>
+									<!-- item -->
+									<div class="item">
+										<figure class="partner-logo-figure">
+											<img src="images/31878.jpg" alt="jpg">
+										</figure>
+									</div>
+									<!-- item -->
+									<div class="item">
+										<figure class="partner-logo-figure">
+											<img src="images/4834.png" alt="png">
+										</figure>
+									</div>
+									<!-- item -->
+									<div class="item">
+										<figure class="partner-logo-figure">
+											<img src="images/5995.png" alt="png">
+										</figure>
+									</div>
+									<!-- item -->
+									<div class="item">
+										<figure class="partner-logo-figure">
+											<img src="images/10528.png" alt="png">
+										</figure>
+									</div>
+									<!-- item -->
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- partners -->
+		</div>
+	</div>
+	<!-- body container -->
+
+	<!-- footer -->
+	<footer class="main-footer">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-5">
+					<div class="top-caption">
+						Компания «Sky Club Travel Concierge» - международный туроператор, профессионал в мире роскошных путешествий класса «люкс». Для нас путешествие – это искусство. Менеджеры компании имеют более чем 20-летний опыт работы в туризме, и все отлично разбираются в специфике работы Travel Concierge.
+					</div>
+					<div class="footer-list-wrap">
+						<h3 class="list-title">Наши преимущества:</h3>
+						<ul class="footer-list">
+							<li>Прямые контракты с ведущими цепочками отелей мира и авиакомпаниями </li>
+							<li>Сотрудничество с лучшими фирмами по аренде авто, бизнес джетов, яхт и лимузинов </li>
+							<li>Собственная принимающая компания в ОАЭ </li>
+							<li>Контроль качества сервиса </li>
+							<li>Умение минимизации расходов при формировании тура даже при самых сложных запросах </li>
+							<li>Повышение категории номера и другие привилегии для постоянных клиентов</li>
+							<li>Сертификация менеджеров</li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-md-2">
+					<figure class="footer-logo">
+						<img src="images/footer-logo.png" alt="logo">
+					</figure>
+				</div>
+				<div class="col-md-5">
+					<div class="address-footer">
+						<ul class="address-list">
+							<li>
+								<address>Москва, ул. Воздвиженка, 9, +7(495) <span class="number">215-52-30</span></address>
+							</li>
+							<li>
+								<address>Санкт-Петербург, ул. Караванная, 1 +7(812) <span class="number">740-11-15</span></address>
+							</li>
+						</ul>
+					</div>
+					<div class="partners-footer">
+						<ul class="partners-footer-list">
+							<li>
+								<a href="#">
+									<figure class="logo-wrap">
+										<img src="images/partner2.png" alt="logo">
+									</figure>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<figure class="logo-wrap">
+										<img src="images/partner1.png" alt="logo">
+									</figure>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<figure class="logo-wrap">
+										<img src="images/partner3.png" alt="logo">
+									</figure>
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-xs-12">
+					<div class="footer-line"></div>
+				</div>
+			</div>
+		</div>
+	</footer>
+	<!-- footer -->
+	<!-- <script src="js/jquery-1.12.4.min.js"></script> -->
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+	<script src="js/vendor/owl.carousel.min.js"></script>
+	<script src="js/vendor/jquery.placeholder.min.js"></script>
+	<script src="js/vendor/jquery.nice-select.min.js"></script>
+	<script src="js/vendor/jquery.fancybox.min.js"></script>
+	<script src="js/vendor/pickmeup.min.js"></script>
+
+	<!-- main -->
+	<script src="js/main.js"></script>
+
+</body>
+</html>
