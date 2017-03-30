@@ -1,3 +1,195 @@
 /*fonts*/
 /*colors*/
 /*body*/
+/* Large Devices, Wide Screens */
+@media only screen and (max-width: 1199px) {
+  .nav-item-wrap {
+    padding-left: 5px;
+    padding-right: 5px; }
+  .partners-footer-list {
+    margin: 0 -5px;
+    font-size: 0; }
+    .partners-footer-list li {
+      padding: 0 5px;
+      width: 33%; }
+      .partners-footer-list li img {
+        width: 100%; }
+  .partners-footer {
+    margin-left: -5px;
+    margin-right: -5px; }
+  .tab-nav-list .tab-item .tab-item-inner {
+    padding: 0 25px; }
+  .tab-content-3 .tab-lines {
+    background-position: 473px -218px; }
+  .tab-content-4 .tab-lines {
+    background-position: 462px -109px; }
+  .tab-content-5 .tab-lines {
+    background-position: 438px 0; } }
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width: 991px) {
+  .card-figure img {
+    min-width: 100%; }
+  .banner-gray-wrap {
+    width: 100%; }
+  .tab-nav-list .tab-item .tab-item-inner {
+    padding: 0 5px; }
+  .tab-lines {
+    display: none; }
+  .calendar-outer {
+    margin: 25px 0; }
+  .calendar-event {
+    display: inline-block;
+    width: 279px;
+    margin: 0;
+    max-width: 100%; }
+  .list-event {
+    position: static;
+    display: inline-block;
+    max-width: 300px;
+    vertical-align: top; }
+  .section-title {
+    margin: 15px 0; }
+  .events-section {
+    padding-top: 250px; }
+  .footer-logo,
+  .address-footer {
+    padding-top: 20px; }
+  .partners-footer {
+    margin: 0;
+    text-align: center; }
+  .nav-item-wrap {
+    padding-left: 2px;
+    padding-right: 2px;
+    font-size: 12px; } }
+
+/* Small Devices, Tablets */
+@media only screen and (max-width: 767px) {
+  .open-nav,
+  .close-nav {
+    display: inline-block; }
+  .logo-holder {
+    padding: 0; }
+    .logo-holder img {
+      width: 100%; }
+  .address-holder {
+    padding: 0; }
+  .address-holder {
+    font-size: 14px; }
+  .calculator-wrap {
+    padding: 20px 10px;
+    text-align: center; }
+  .slide-inner {
+    height: 293px; }
+  .toggle-nav {
+    display: block; }
+  .main-nav {
+    position: fixed;
+    z-index: 30;
+    background-color: rgba(34, 90, 162, 0.8);
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    overflow: auto;
+    display: none; }
+    .main-nav.active {
+      display: block; }
+  .main-nav-list .nav-item {
+    display: block;
+    width: 50%;
+    margin: 0 auto;
+    font-size: 14px; }
+  .nav-item-wrap {
+    font-size: 16px; }
+  .nav-item-wrap.parent:hover {
+    background-color: #c6c6c6; }
+  .submenu-list {
+    background-color: #c6c6c6; }
+  .close-nav {
+    display: inline-block; }
+  .main-nav-section {
+    height: 35px; }
+  .card-wrap,
+  .inner-title,
+  .inner-caption {
+    transform: scale(1);
+    opacity: 1; }
+  .tab-nav {
+    display: none; }
+  .tab-content-wrap .tab-content {
+    position: static;
+    opacity: 1;
+    visibility: visible;
+    z-index: 2; }
+  .section-title {
+    font-size: 24px; }
+  .tab-content-title {
+    font-size: 24px;
+    margin: 25px 0; }
+  .banner-gray-caption .inner-title {
+    font-size: 24px; }
+  .banner-gray-caption .inner-caption {
+    font-size: 16px; }
+  .tab-content-wrap {
+    height: auto; }
+  .events-section {
+    padding-top: 25px; }
+  .calendar-outer {
+    text-align: center; }
+  .calendar-event {
+    padding: 0 13px; }
+  .footer-logo {
+    height: 150px;
+    text-align: center; }
+    .footer-logo img {
+      max-height: 100%;
+      width: auto;
+      display: inline-block; }
+  .address-footer {
+    text-align: left;
+    padding-bottom: 20px; }
+  .address-list .number {
+    display: inline; } }
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width: 479px) {
+  .partners-footer-list li {
+    display: block;
+    width: 100%; }
+  .top-bar {
+    height: auto; }
+    .top-bar .col-xs-6 {
+      width: 100%;
+      text-align: left; }
+  .user-panel {
+    text-align: left; }
+  .open-nav {
+    top: 10px;
+    left: auto;
+    right: 10px; }
+  .bottom-bar {
+    padding: 15px 0; }
+  .xs-12 {
+    width: 100%; }
+  .address-holder {
+    margin-top: 15px; }
+  .main-nav-list {
+    margin-top: 25px; }
+    .main-nav-list .nav-item {
+      width: 80%; }
+  .search-wrap {
+    width: 255px; }
+  .banner-gray-caption {
+    padding: 20px 10px; }
+  .banner-gray-wrap,
+  .banner-section {
+    height: 350px; }
+  .partners-footer-list li {
+    padding: 15px 0; }
+    .partners-footer-list li img {
+      width: auto; }
+  .address-list address {
+    font-size: 12px; } }
+
+/* Custom, iPhone Retina */

@@ -77,10 +77,7 @@ $(document).ready(function () {
 			navText: ["", ""],
 			responsive:{
 				0:{
-					items:2
-				},
-				480:{
-					items:3
+					items:1
 				},
 				768:{
 					items:5
@@ -103,52 +100,47 @@ $(".tab-item").hover(function(){
 });
 calendar.init('ajax');
 
-var browserWidth = window.innerWidth;
+$(window).scroll(function(){
 
-if (browserWidth >= 992) {
+	if (isVisible($('.card-section')) == true) {
+		setTimeout(function(){
+			$('.card-section').addClass("animated");
+		}, 500);
+	} else {
+		$('.card-section').removeClass("animated");
+	}
+	if (isVisible($('.tab-nav-list')) == true) {
+		setTimeout(function(){
+			$('.tab-nav-list').addClass("animated");
+		}, 500);
+	} else {
+		$('.tab-nav-list').removeClass("animated");
+	}
+	if (isVisible($('.tab-content-wrap')) == true) {
+		setTimeout(function(){
+			$('.tab-content-wrap').addClass("animated");
+		}, 500);
+	} else {
+		$('.tab-content-wrap').removeClass("animated");
+	}
+	if (isVisible($('.events-section')) == true) {
+		setTimeout(function(){
+			$('.events-section').addClass("animated");
+		}, 900);
+	} else {
+		$('.events-section').removeClass("animated");
+	}
+	if (isVisible($('.banner-gray-caption')) == true) {
+		setTimeout(function(){
+			$('.banner-gray-caption').addClass("animated");
+		}, 900);
+	} else {
+		$('.banner-gray-caption').removeClass("animated");
+	}
 
-	$(window).scroll(function(){
+	
+});
 
-		if (isVisible($('.card-section')) == true) {
-			setTimeout(function(){
-				$('.card-section').addClass("animated");
-			}, 500);
-		} else {
-			$('.card-section').removeClass("animated");
-		}
-		if (isVisible($('.tab-nav-list')) == true) {
-			setTimeout(function(){
-				$('.tab-nav-list').addClass("animated");
-			}, 500);
-		} else {
-			$('.tab-nav-list').removeClass("animated");
-		}
-		if (isVisible($('.tab-content-wrap')) == true) {
-			setTimeout(function(){
-				$('.tab-content-wrap').addClass("animated");
-			}, 500);
-		} else {
-			$('.tab-content-wrap').removeClass("animated");
-		}
-		if (isVisible($('.events-section')) == true) {
-			setTimeout(function(){
-				$('.events-section').addClass("animated");
-			}, 900);
-		} else {
-			$('.events-section').removeClass("animated");
-		}
-		if (isVisible($('.banner-gray-caption')) == true) {
-			setTimeout(function(){
-				$('.banner-gray-caption').addClass("animated");
-			}, 900);
-		} else {
-			$('.banner-gray-caption').removeClass("animated");
-		}
-	});
-};
-//open nav
-openNav($(".open-nav"), $(".main-nav"));
-closeNav($(".close-nav"), $(".main-nav"));
 });
 //document end
 
@@ -158,21 +150,9 @@ isVisible = function(element){
 	elementHeight = $(window).height();
 	return top + elementHeight > elementOffset && top < elementOffset + elementHeight;
 };
-//open nav 
-function openNav(btn, nav) {
 
-	btn.on("click", function(){
-		nav.addClass("active");
-		$("body, html").addClass("no-scroll");
-	});
-};
-function closeNav(btn, nav) {
 
-	btn.on("click", function(){
-		nav.removeClass("active");
-		$("body, html").removeClass("no-scroll");
-	});
-};
+
 //data
 addEventListener('DOMContentLoaded', function () {
 	pickmeup('#arrive', {
