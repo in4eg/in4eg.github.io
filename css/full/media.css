@@ -178,8 +178,6 @@
     margin-top: 25px; }
     .main-nav-list .nav-item {
       width: 80%; }
-  .search-wrap {
-    width: 255px; }
   .banner-gray-caption {
     padding: 20px 10px; }
   .banner-gray-wrap,
@@ -190,6 +188,12 @@
     .partners-footer-list li img {
       width: auto; }
   .address-list address {
-    font-size: 12px; } }
+    font-size: 12px; }
+  .top-slider-section .calculator-section {
+    position: static; }
+  .search-wrap {
+    width: auto; }
+  .card-section .card-in:nth-child(n + 5) {
+    display: none; } }
 
 /* Custom, iPhone Retina */
