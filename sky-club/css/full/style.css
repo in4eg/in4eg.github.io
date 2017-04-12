@@ -1894,13 +1894,28 @@ address {
 
 .body-wrap {
   /*background-color: $primary;*/
-  background-image: url(../images/banner3.jpg);
+  background-image: url(../images/back.jpg);
   background-attachment: fixed;
-  background-size: cover; }
+  background-size: cover;
+  position: relative; }
+  .body-wrap .left-link {
+    position: absolute;
+    height: 100%;
+    width: 50%;
+    top: 0;
+    left: 0; }
+  .body-wrap .right-link {
+    position: absolute;
+    height: 100%;
+    width: 50%;
+    top: 0;
+    right: 0; }
 
 .body-outer {
   max-width: 1200px;
   width: 100%;
+  position: relative;
+  z-index: 2;
   margin: 0 auto;
   background-color: #fff;
   padding: 0 50px;
@@ -2266,7 +2281,7 @@ address {
       background-image: url(../images/icons/icon_intour_hover6.png); }
 
 .tab-item-caption {
-  margin: 20px auto;
+  margin: 5px auto;
   height: 50px;
   overflow: hidden; }
 
@@ -2302,28 +2317,31 @@ address {
 
 .tab-lines {
   height: 109px;
-  /*background: url(../images/icons/tab_lines.png) no-repeat left top;*/
+  background: url(../images/icons/tab_lines.png) no-repeat left top;
   background-repeat: no-repeat; }
 
 .tab-content-1 .tab-lines {
   background-position: 120px -327px; }
 
 .tab-content-2 .tab-lines {
-  background-position: 120px -435px; }
+  background-position: 32px -435px; }
 
 .tab-content-3 .tab-lines {
-  background-position: 600px -218px; }
+  background-position: 446px -218px; }
 
 .tab-content-4 .tab-lines {
-  background-position: 600px -109px; }
+  background-position: 621px -218px; }
 
 .tab-content-5 .tab-lines {
-  background-position: 600px 0px; }
+  background-position: 600px -109px; }
+
+.tab-content-6 .tab-lines {
+  background-position: 516px 0px; }
 
 .tab-content-title {
   font-size: 35px;
   text-align: center;
-  margin-bottom: 40px; }
+  margin-bottom: 20px; }
 
 .tab-content-wrap {
   position: relative;
