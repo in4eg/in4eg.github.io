@@ -1478,7 +1478,10 @@ line-height: $input_height - 2;*/
       color: #a4c4ec; }
 
 .logo-holder {
-  /*padding: 0 30px;*/ }
+  /*padding: 0 30px;*/
+  height: 100px; }
+  .logo-holder img {
+    max-height: 100%; }
 
 .address-holder {
   /*padding: 0 30px;*/
@@ -1920,6 +1923,9 @@ address {
   background-color: #fff;
   padding: 0 50px;
   box-shadow: 0px 0px 41px -4px rgba(0, 0, 0, 0.75); }
+  .body-outer.transparent {
+    box-shadow: none;
+    background-color: transparent; }
 
 .main-wrap {
   overflow: hidden; }
@@ -1928,31 +1934,9 @@ address {
   .main-wrap {
     min-height: calc(100vh - 534px); } }
 
-.slide-inner {
-  height: 500px;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover; }
-  .slide-inner.first-slide {
-    background-image: url(../images/banner1.jpg); }
-  .slide-inner.secound-slide {
-    background-image: url(../images/banner2.jpg); }
-  .slide-inner.third-slide {
-    background-image: url(../images/banner3.jpg); }
-
-.top-slider-section {
-  position: relative; }
-  .top-slider-section .calculator-section {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    z-index: 2; }
-
 .calculator-wrap {
   text-align: right;
-  padding: 60px 50px; }
+  padding: 60px 0; }
 
 .calculator-inner {
   display: inline-block;

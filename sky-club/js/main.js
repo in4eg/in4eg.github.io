@@ -112,35 +112,35 @@ if (browserWidth >= 768) {
 		if (isVisible($('.card-section')) == true) {
 			setTimeout(function(){
 				$('.card-section').addClass("animated");
-			}, 500);
+			}, 400);
 		} else {
 			$('.card-section').removeClass("animated");
 		}
 		if (isVisible($('.tab-nav-list')) == true) {
 			setTimeout(function(){
 				$('.tab-nav-list').addClass("animated");
-			}, 500);
+			}, 400);
 		} else {
 			$('.tab-nav-list').removeClass("animated");
 		}
 		if (isVisible($('.tab-content-wrap')) == true) {
 			setTimeout(function(){
 				$('.tab-content-wrap').addClass("animated");
-			}, 500);
+			}, 400);
 		} else {
 			$('.tab-content-wrap').removeClass("animated");
 		}
 		if (isVisible($('.events-section')) == true) {
 			setTimeout(function(){
 				$('.events-section').addClass("animated");
-			}, 900);
+			}, 700);
 		} else {
 			$('.events-section').removeClass("animated");
 		}
 		if (isVisible($('.banner-gray-caption')) == true) {
 			setTimeout(function(){
 				$('.banner-gray-caption').addClass("animated");
-			}, 900);
+			}, 700);
 		} else {
 			$('.banner-gray-caption').removeClass("animated");
 		}
