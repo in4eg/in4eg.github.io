@@ -105,42 +105,42 @@ calendar.init('ajax');
 
 var browserWidth = window.innerWidth;
 
-if (browserWidth >= 992) {
+if (browserWidth >= 768) {
 
 	$(window).scroll(function(){
 
 		if (isVisible($('.card-section')) == true) {
 			setTimeout(function(){
 				$('.card-section').addClass("animated");
-			}, 500);
+			}, 400);
 		} else {
 			$('.card-section').removeClass("animated");
 		}
 		if (isVisible($('.tab-nav-list')) == true) {
 			setTimeout(function(){
 				$('.tab-nav-list').addClass("animated");
-			}, 500);
+			}, 400);
 		} else {
 			$('.tab-nav-list').removeClass("animated");
 		}
 		if (isVisible($('.tab-content-wrap')) == true) {
 			setTimeout(function(){
 				$('.tab-content-wrap').addClass("animated");
-			}, 500);
+			}, 400);
 		} else {
 			$('.tab-content-wrap').removeClass("animated");
 		}
 		if (isVisible($('.events-section')) == true) {
 			setTimeout(function(){
 				$('.events-section').addClass("animated");
-			}, 900);
+			}, 700);
 		} else {
 			$('.events-section').removeClass("animated");
 		}
 		if (isVisible($('.banner-gray-caption')) == true) {
 			setTimeout(function(){
 				$('.banner-gray-caption').addClass("animated");
-			}, 900);
+			}, 700);
 		} else {
 			$('.banner-gray-caption').removeClass("animated");
 		}
@@ -149,8 +149,87 @@ if (browserWidth >= 992) {
 //open nav
 openNav($(".open-nav"), $(".main-nav"));
 closeNav($(".close-nav"), $(".main-nav"));
+
+
 });
 //document end
+
+
+// Функция добавления обработчика
+// function addEventToObject(object, type, callback) {
+// 	if (object == null || typeof(object) == 'undefined') return;
+// 	if (object.addEventListener) {
+// 		object.addEventListener(type, callback, false);
+// 	} else if (object.attachEvent) {
+// 		object.attachEvent("on" + type, callback);
+// 	} else {
+// 		object["on"+type] = callback;
+// 	}
+// };
+
+// function updateColumnPosition() {
+// 	var element = $('.main-nav'), 
+// 	innerblock  = $('body'),
+// 	siblingblock  = $('.step-right'),
+
+// 	elementHeight = element.outerHeight(),
+// 	innerblockWidth = innerblock.outerWidth(),
+// 	siblingblockWidth = siblingblock.width(),
+// 	siblingblocOuterWidth = siblingblock.outerWidth(),
+
+// 	footerHeight = $('footer').outerHeight(),
+// 	headerHeight = $('.top-bar').outerHeight(),
+// 	screenHeight = $(window).height(),
+// 	documentHeight = $(document).height(),
+// 	topHeight = headerHeight,
+// 	scrollTop = $(document).scrollTop();
+
+// 	if(!element.data('isloaded')) {
+// 		element.data('isloaded', true);
+// 		element.css({ width: element.width() });
+// 	}
+// 	var windWi = $(window).width();
+// 	var margin = (siblingblocOuterWidth - siblingblockWidth)/2
+	
+// 	if (windWi >= 768) {
+// 		if (scrollTop - topHeight > 560 && documentHeight - scrollTop > elementHeight + footerHeight) {
+// 			element.css({
+// 				position: 'fixed',
+// 				top: (34) + 'px',
+// 				left: (0) + 'px',
+// 				width: (100) + '%'
+
+// 			}).css("padding", "15px 0").css("z-index", "25");
+// 			element.children(".outer-float").addClass("container");
+// 			element.find(".order-left").addClass("offset-4").css("width", innerblockWidth).css("margin-left", siblingblockWidth + margin);
+
+// 		}
+// 		else if (scrollTop - topHeight > 560 && documentHeight - scrollTop < elementHeight + footerHeight) {
+// 			element.css({
+// 				position: 'fixed',
+// 				top: (documentHeight - elementHeight - footerHeight - 20) - scrollTop + 'px'
+// 			});
+
+// 		}
+// 		else if (scrollTop - topHeight < 560) {
+// 			element.css({
+// 				position: 'relative',
+// 				top: 'inherit',
+// 				left: (0) + 'px',
+// 				width: (100) + '%'
+// 			}).css("padding", "28px 0").css("z-index", "0");
+// 			element.children(".outer-float").removeClass("container");
+// 			element.find(".order-left").removeClass("offset-4").css("width", "").css("margin-left", "");
+// 		};
+// 	}
+
+// };
+
+// $(function () {
+// 	addEventToObject(window, 'scroll', updateColumnPosition);
+// 	updateColumnPosition();
+// });
+
 
 isVisible = function(element){
 	var top = $(document).scrollTop(),
