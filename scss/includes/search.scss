@@ -1,0 +1,120 @@
+.search-wrap {
+    width: 300px;
+    max-width: 100%;
+    text-align: left;
+    font-family: $a-reg;
+}
+.select-holder {
+    font-size: 0;
+    margin: 0 -4px;
+    padding: 2px 0;
+
+    .search-label {
+        display: inline-block;
+        font-size: 14px;
+        padding: 0 4px;
+        width: 17%;
+    }
+    .search-select {
+        display: inline-block;
+        font-size: 15px;
+        padding: 0 4px;
+        width: 83%;
+
+        &.full {
+            width: 100%;
+        }
+        .nice-select {
+            color: $text-color;
+            border: 1px solid #c6c6c6;
+            background-color: #fff;
+            width: 100%;
+            height: 32px;
+            line-height: 32px;
+
+            &:after {
+                border: 4px solid transparent;
+                border-top: 7px solid $text-color;
+                transform: rotate(0);
+                transform-origin: center;
+                transform: translateY(-50%);
+                margin-top: 3px;
+                right: 8px;
+            }
+            &.open {
+
+              &:after {
+                border-top-color: transparent;
+                border-bottom: 7px solid $text-color;
+                margin-top: -3px;
+            }
+        }
+    }
+}
+}
+.search-input {
+    padding: 2px 0;
+    margin: 0 -2px;
+    font-size: 0;
+
+    .input-inside {
+        padding: 0 2px;
+        font-size: 13px;
+        display: inline-block;
+        vertical-align: top;
+        width: 33.33%;
+    }
+}
+.calendar-icon {
+    height: 17px; width: 15px;
+    background-image: url(../images/icons/calendar-icon.gif);
+    display: inline-block;
+    background-position: center;
+    display: inline-block;
+}
+.input-count {
+
+    input {
+        width: calc(100% - 19px);
+        display: inline-block;
+        height: 32px;
+        text-align: center;
+    }
+}
+.half-part {
+    font-size: 0;
+    margin: 0 -4px;
+
+    .select-holder {
+        display: inline-block;
+        width: 52.5%;
+        font-size: 13px;
+        padding: 0 4px;
+    }
+    .label-outer {
+        padding: 0 4px;
+    }
+    .nice-select {
+
+        .list {
+            min-width: 100%;
+        }
+    }
+}
+.search-btn-wrap {
+    padding: 12px 0 0;
+}
+.blue-btn {
+    background-color: #45aae8;
+    border: 1px solid #45aae8;
+    color: #fff;
+    text-align: center;
+    height: 39px;
+    line-height: 39px;
+    width: 100%;
+    font-size: 15px;
+
+    &:hover {
+        opacity: .7;
+    }
+}
