@@ -165,10 +165,14 @@
     text-align: left;
     padding-bottom: 20px; }
   .address-list .number {
-    display: inline; } }
+    display: inline; }
+  .banner-section {
+    padding: 0 10px; } }
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width: 479px) {
+  .half-part .select-holder {
+    width: 51.8%; }
   .partners-footer-list li {
     display: block;
     width: 100%; }
@@ -194,7 +198,7 @@
     .main-nav-list .nav-item {
       width: 80%; }
   .search-wrap {
-    width: 255px; }
+    width: auto; }
   .banner-gray-caption {
     padding: 20px 10px; }
   .banner-gray-wrap,
@@ -205,6 +209,14 @@
     .partners-footer-list li img {
       width: auto; }
   .address-list address {
-    font-size: 12px; } }
+    font-size: 12px; }
+  /*	.calculator-wrap {
+		padding-left: 0;
+		padding-right: 0;
+
+		.calculator-inner {
+			display: block;
+		}
+	}*/ }
 
 /* Custom, iPhone Retina */

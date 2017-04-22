@@ -83,19 +83,17 @@
 			<div class="body-outer">
 				<div class="bottom-bar">
 					<div class="container">
-						<div class="row">
-							<div class="inline-wrap">
-								<div class="col-6 xs-12 to-middle block-inside">
-									<div class="logo-holder">
-										<a href="index.html"><img src="images/logo.png" alt="logo"></a>
-									</div>
+						<div class="inline-wrap row">
+							<div class="col-6 xs-12 to-middle block-inside">
+								<div class="logo-holder">
+									<a href="index.html"><img src="images/logo.png" alt="logo"></a>
 								</div>
-								<div class="col-6 xs-12 to-middle block-inside">
-									<div class="address-holder">
-										<a href="tel:74952155230">+7(495) 215-52-30</a>
-										Москва, ул.
-										<div class="address-street">Воздвиженка, 9</div>
-									</div>
+							</div>
+							<div class="col-6 xs-12 to-middle block-inside">
+								<div class="address-holder">
+									<a href="tel:74952155230">+7(495) 215-52-30</a>
+									Москва, ул.
+									<div class="address-street">Воздвиженка, 9</div>
 								</div>
 							</div>
 						</div>
@@ -108,9 +106,27 @@
 	
 
 	<div class="body-wrap">
+		<!-- now body-wrap has blue background, you can change it into some image or another color, find css-rule in a style.css or style.min.css-->
 		<a href="#" class="left-link"></a>
-		<div class="body-outer transparent">
-
+		<div class="top-slider-section">
+			<!-- slider -->
+			<div class="owl-carousel owl-theme top-slider fadeOut">
+				<div class="item">
+					<div class="slide-inner first-slide"></div>
+					<!-- background-image: url(../images/banner1.jpg); -->
+				</div>
+				<!-- item -->
+				<div class="item">
+					<div class="slide-inner secound-slide"></div>
+					<!-- background-image: url(../images/banner2.jpg); -->
+				</div>
+				<!-- item -->
+				<div class="item">
+					<div class="slide-inner third-slide"></div>
+					<!-- background-image: url(../images/banner3.jpg); -->
+				</div>
+				<!-- item -->
+			</div>
 			<!-- calculator -->
 			<div class="calculator-section">
 				<div class="container">
@@ -307,6 +323,11 @@
 											<div class="nav-title">Авиабилеты</div>
 										</div>
 									</li>
+									<li class="nav-item">
+										<div class="nav-item-wrap">
+											<div class="nav-title">Агенствам</div>
+										</div>
+									</li>
 								</ul>
 								<button type="button" class="close-nav">&times;</button>
 							</nav>
@@ -465,9 +486,9 @@
 		<a href="#" class="right-link"></a>
 	</div>
 	<!-- body container -->
-	<div class="banner-section">
-		<div class="banner-wrap">
-			<div class="container">
+	<div class="body-wrap">
+		<div class="container">
+		<div class="banner-section row">
 				<div class="banner-gray-wrap">
 					<div class="gray-outer">
 						<div class="banner-gray-inside table-wrap">
@@ -485,6 +506,7 @@
 					</div>
 				</div>
 			</div>
+
 		</div>
 	</div>
 	<!-- full width block -->

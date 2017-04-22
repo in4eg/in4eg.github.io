@@ -1479,9 +1479,9 @@ line-height: $input_height - 2;*/
 
 .logo-holder {
   /*padding: 0 30px;*/
-  height: 100px; }
+  width: 240px; }
   .logo-holder img {
-    max-height: 100%; }
+    max-width: 100%; }
 
 .address-holder {
   /*padding: 0 30px;*/
@@ -1495,7 +1495,7 @@ line-height: $input_height - 2;*/
 .main-footer {
   background-color: #0e3367;
   color: #fff;
-  padding: 40px 0;
+  padding: 30px 0;
   font-size: 13px;
   overflow: hidden; }
   .main-footer .container {
@@ -1529,7 +1529,7 @@ line-height: $input_height - 2;*/
   margin: 0; }
 
 .footer-list-wrap {
-  margin-top: 45px; }
+  margin-top: 15px; }
 
 .footer-list {
   list-style-type: disc;
@@ -1542,7 +1542,7 @@ line-height: $input_height - 2;*/
   margin-top: 20px; }
 
 .footer-logo {
-  padding-top: 58px; }
+  padding-top: 30px; }
   .footer-logo img {
     width: 100%; }
 
@@ -1897,10 +1897,10 @@ address {
   max-width: 1200px; }
 
 .body-wrap {
-  /*background-color: $primary;*/
-  background-image: url(../images/back.jpg);
-  background-attachment: fixed;
-  background-size: cover;
+  background-color: #225aa2;
+  /*background-image: url(../images/back.jpg);
+	background-attachment: fixed;
+	background-size: cover;*/
   position: relative; }
   .body-wrap .left-link {
     position: absolute;
@@ -1936,6 +1936,28 @@ address {
   .main-wrap {
     min-height: calc(100vh - 534px); } }
 
+.slide-inner {
+  height: 500px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover; }
+  .slide-inner.first-slide {
+    background-image: url(../images/banner1.jpg); }
+  .slide-inner.secound-slide {
+    background-image: url(../images/banner2.jpg); }
+  .slide-inner.third-slide {
+    background-image: url(../images/banner3.jpg); }
+
+.top-slider-section {
+  position: relative; }
+  .top-slider-section .calculator-section {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 2; }
+
 .calculator-wrap {
   text-align: right;
   padding: 60px 0; }
@@ -1947,7 +1969,7 @@ address {
   pointer-events: visible; }
 
 .main-nav {
-  padding: 28px 0;
+  padding: 28px 0 18px;
   background-color: rgba(255, 255, 255, 0.8); }
 
 .main-nav-section {
@@ -1955,14 +1977,13 @@ address {
 
 .main-nav-list {
   font-size: 0;
-  padding: 0 20px;
-  max-width: 1170px;
-  margin: 0 auto; }
+  margin: 0 -20px;
+  max-width: 1170px; }
   .main-nav-list .nav-item {
     display: inline-block;
     cursor: pointer;
-    font-size: 17px;
-    width: 16.66667%; }
+    font-size: 16px;
+    width: 14.28571%; }
 
 .nav-title {
   color: #9a9a9a;
@@ -2024,7 +2045,7 @@ address {
     color: #fff; }
 
 .nav-item-wrap {
-  padding: 10px 15px;
+  padding: 10px;
   transition: .3s background-color;
   position: relative; }
   .nav-item-wrap.parent:hover {
@@ -2106,7 +2127,7 @@ address {
     font-size: 18px; }
 
 .card-section, .partners-section {
-  padding: 40px 0 60px;
+  padding: 30px 0 60px;
   position: relative; }
   .card-section:after, .partners-section:after {
     position: absolute;
@@ -2144,9 +2165,8 @@ address {
   background-position: center;
   height: 500px;
   text-align: right;
-  overflow: hidden; }
-  .banner-section .container {
-    padding: 0 50px; }
+  overflow: hidden;
+  padding: 0 50px; }
 
 .banner-gray-wrap {
   width: 52.8%;
@@ -2197,7 +2217,7 @@ address {
     background-color: #fff; }
 
 .tab-section {
-  padding: 30px 0 20px; }
+  padding: 30px 0 0; }
 
 .section-title {
   text-align: center;
@@ -2349,7 +2369,7 @@ address {
       z-index: 2; }
 
 .events-section {
-  padding: 30px 0 20px; }
+  padding: 10px 0 0; }
   .events-section .events-slider-wrap {
     margin: 0 -10px; }
 
