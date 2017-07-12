@@ -1,0 +1,44 @@
+<a href="#main">&lt; Main</a>
+
+<h1>Contact Me</h1>
+
+<p class="simple">
+	You Can write me a message on <a href="twitter.com">Twitter</a>, <a href="facebook.com">Facebook</a> or <a href="google.com">Google</a>
+</p>
+
+<h2>Get in Touch</h2>
+
+<p class="simple">
+	You can also use a quick contact form below. I would be happy to answer your questions.
+</p>
+
+<form name="userForm" ng-submit="submitForm()" novalidate ng-controller="FormController" class="form">
+
+	<!-- name -->
+	<div class="form-group">
+	<label class="label">Name</label>
+		<input type="text" name="name" class="form-element input" ng-model="user.name" required>
+		<p ng-show="userForm.name.$invalid && !userForm.name.$pristine" class="help-block">You name is required.</p>
+	</div>
+	<div class="form-group">
+	<label class="label">Email</label>
+		<input type="email" name="email" class="form-element input" ng-model="user.email" required>
+		<p ng-show="userForm.email.$invalid && !userForm.email.$pristine" class="help-block">Enter a valid email.</p>
+	</div>
+	<!-- message -->
+	<div class="form-group">
+	<label class="label">Your Message</label>
+		<textarea name="username" class="form-element textarea" ng-model="user.username" ng-minlength="20" required></textarea>
+		<p ng-show="userForm.username.$error.minlength" class="help-block">Your Message is too short (must be more than 20 signs).</p>
+	</div>
+
+	<!-- email -->
+
+
+	<button type="submit" ng-disabled="userForm.$invalid" class="primary-btn">Send a message</button>
+
+</form>
+
+</br>
+
+<a href="#works">&lt; My Works</a>

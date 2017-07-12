@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Angular Routing</title>
+
+	<link rel="stylesheet" href="css/g12-angular-routing.min.css">
+	<link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
+
+</head>
+<body ng-app="portfolio">
+
+	<!-- http://lorempixel.com/ -->
+
+	<div class="container">
+
+		<!-- ng-view нужен для роутинга и вообще для рендеринга, MVC же -->
+		<ng-view>
+			<p>loading...</p>
+		</ng-view>
+	</div>
+
+	<script src="assets/g12-angular-router/angular.js"></script>
+	<script src="assets/g12-angular-router/angular-route.js"></script>
+	<script src="assets/g12-angular-router/app.js"></script>
+	<script src="assets/g12-angular-router/MainCtrl.js"></script>
+	<script src="assets/g12-angular-router/SkillsCtrl.js"></script>
+	<script src="assets/g12-angular-router/WorksCtrl.js"></script>
+	<script src="assets/g12-angular-router/WorkCtrl.js"></script>
+
+</body>
+</html>
