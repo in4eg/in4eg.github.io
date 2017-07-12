@@ -1,7 +1,7 @@
 app.controller('WorksCtrl', function ($scope) {
 
 	$scope.works = [
-		'USA-Realty', 'Sky-Club', 'Sartogosm', 'Miele', 'M-Style', 'Good Wheels'
+		'Sky-Club', 'USA-Realty', 'Sartogosm', 'Miele', 'M-Style', 'Good Wheels'
 	];
 
 });
