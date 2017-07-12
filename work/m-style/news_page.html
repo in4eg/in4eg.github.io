@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+	<meta charset="UTF-8">
+	<title>M-Style :: News Page</title>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+	<meta name="format-detection" content="telephone=no">
+
+	<link rel="stylesheet" href="css/_bundle.min.css">
+
+</head>
+<body>
+
+	<header class="main-header">
+		<div class="sub-head">
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-sm-7" id="miniNavDesktop">
+						<ul class="clear menu" data-mobile="#miniNavMobile" data-desktop="#miniNavDesktop">
+							<li><a href="#">О компании</a></li>
+							<li><a href="#">Работа у нас</a></li>
+							<li><a href="#">Консультант плюс</a></li>
+						</ul>
+					</div>
+					<div class="col-xs-12 col-sm-5 align-right">
+						ВАШ ГОРОД:&nbsp;
+						<div class="dropdown" data-dropdown>
+							<button class="anchor">Санкт-петербург</button>
+							<ul class="dropdown-menu">
+								<li><a href="#">Санкт-петербург</a></li>
+								<li><a href="#">Москва</a></li>
+								<li><a href="#">Екатеринбург</a></li>
+								<li><a href="#">Тюмень</a></li>
+								<li><a href="#">нижний новгород</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="main-head">
+			<div class="container-fluid">
+				<div class="row collapsed-row collapse-right">
+					<div class="col-xs-2">
+						<a href="index.html" class="logo">
+							<img src="img/logo.png" alt="">
+						</a>
+					</div>
+					<div class="col-xs-10 col-md-7 align-right menu-toggle-col">
+						<a class="phone" href="tel:78122449595"><i class="icon icon-points"></i>+7 (812) 244-95-95</a>
+						<a class="phone" href="tel:88002000226">8-800-2000-226</a>
+						<div class="dropdown large dropdown-window" data-dropdown>
+							<button class="anchor">
+								<i class="icon icon-phone"></i>
+								<span>Заказать звонок</span>
+							</button>
+							<div class="dropdown-menu">
+								<form action="#" class="form validate-form">
+									<div class="success-fadeout">
+										<div class="form-group">
+											<input id="userName" type="text" class="input">
+											<label for="userName">Имя</label>
+											<i class="icon icon-checked icon-success"></i>
+											<i class="icon icon-cancel icon-error"></i>
+										</div>
+										<div class="form-group">
+											<input id="userPhone" type="text" class="input" data-mask="+9(999) 999-99-99">
+											<label for="userPhone">Телефон</label>
+											<i class="icon icon-checked icon-success"></i>
+											<i class="icon icon-cancel icon-error"></i>
+										</div>
+									<!-- 	<div class="form-group">
+											<input id="userEmail" type="text" class="input email">
+											<label for="userEmail">Email</label>
+											<i class="icon icon-checked icon-success"></i>
+											<i class="icon icon-cancel icon-error"></i>
+										</div> -->
+										<button class="btn">Отправить</button>
+										<div class="success-fadein">
+											<div class="verticaly-middle">
+												<div class="inner">
+													Благодарим за вашу заявку! <br>
+													Наш пециалист свяжется с Вами <br> в течение 15 минут!
+												</div>
+											</div>
+										</div>
+									</div>
+								</form>
+							</div>
+						</div>
+						<button class="btn search-toggle">
+							<i></i><i></i>
+							<span class="icon icon-search"></span>
+						</button>
+						<button class="none btn main-menu-toggle" id="mainMenuToggle">
+							<i></i><i></i><i></i>
+						</button>
+					</div>
+					<div class="col-xs-3 search-col">
+						<form action="#" class="search-form">
+							<input type="text" class="input" placeholder="Поиск...">
+							<button class="btn"><i class="icon icon-search"></i></button>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="menu-head bordered-bottom">
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-xs-7" id="desktopMenuPlace">
+						<nav class="main-nav" data-desktop="#desktopMenuPlace" data-tablet="#mobileMenuPlace">
+							<ul class="clear">
+								<li class="active"><a href="#">Продукты</a></li>
+								<li><a href="#">Семинары и вебинары</a></li>
+								<li><a href="#">Услуги</a></li>
+								<li><a href="#">Тесты</a></li>
+								<li><a href="#">Контакты</a></li>
+							</ul>
+						</nav>
+					</div>
+					<div class="col-xs-5 collapse-right" id="userMenuDesktop">
+						<ul class="clear user-menu" data-tablet="#userMenuMobile" data-desktop="#userMenuDesktop">
+							<li><a href="#"><i class="icon icon-info"></i>Помощь</a></li>
+							<li><a href="#"><i class="icon icon-user"></i>Личный кабинет</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
+	
+	<div class="none mobile-nav">
+		<div class="head">
+			<div class="row">
+				<div class="col-xs-6">
+					<a href="#" class="logo">
+						<img src="img/logo.png" alt="">
+					</a>
+				</div>
+				<div class="col-xs-6 align-right">
+					<button class="btn" id="hideMainMenu">&times;</button>
+				</div>
+			</div>
+		</div>
+		<div id="userMenuMobile" class="inner"></div>
+		<div id="mobileMenuPlace" class="inner"></div>
+		<div id="miniNavMobile" class="inner"></div>
+	</div>
+
+	<main>
+
+		<section>
+			<div class="container">
+				<div class="breadcrumbs simple">
+					<ul class="list">
+						<li><a href="#">Главная</a></li>
+						<li>Работа у нас</li>
+					</ul>
+				</div>
+			</div>
+		</section>
+
+		<section>
+			<div class="container small">
+				<article class="news-article">
+					<div class="h1-title">Поздравляем вас с профессиональным праздником! Вы стоите на страже безопасности компании, защищая ее от ненадежных контрагентов и нечестных конкурентов.</div>
+					<div class="paragraph">
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget.
+					</div>
+					<figure class="image-cover news-image">
+						<img src="temp/vacancy.jpg" alt="img" class="vertical">
+					</figure>
+					<div class="image-caption">
+						Фото: Название фото
+					</div>
+					<div class="paragraph">
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget.
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget.
+					</div>
+					<div class="share">
+						<ul class="socials-list">
+							<li><a href="#"><i class="icon icon-vk"></i></a></li>
+							<li><a href="#"><i class="icon icon-facebook"></i></a></li>
+							<li><a href="#"><i class="icon icon-ok"></i></a></li>
+							<li><a href="#"><i class="icon icon-twitter"></i></a></li>
+							<li><a href="#"><i class="icon icon-youtube2"></i></a></li>
+						</ul>
+					</div>
+				</article>
+			</div>
+		</section>
+
+		<section class="section">
+			<div class="container">
+				<div class="h3-title">Новости компании</div>
+				<ul class="news-page-list">
+					<li class="item">
+						<div class="news">
+							<div class="date">25 февраля 2017</div>
+							<a href="#" class="link">
+								<figure class="news-image image-cover">
+									<img src="temp/seminar2.jpg" alt="img">
+								</figure>
+							</a>
+							<div class="title">
+								<a href="#">Социальные пособия: сложные ситуации в практике бухгалтер. еще немного текста</a>
+							</div>
+							<div class="description">
+								Количество консультаций, для вашей организации уточняйте у специалиста или по телефону Горячей линииКоличество консультаций, для вашей организации уточняйте у специалиста или по телефону
+							</div>
+							<div class="link-holder">
+								<a href="#" class="link">Читать новость</a>
+							</div>
+						</div>
+					</li>
+					<li class="item">
+						<div class="news">
+							<div class="date">25 февраля 2017</div>
+							<a href="#" class="link">
+								<figure class="news-image image-cover">
+									<img src="temp/seminar1.jpg" alt="img">
+								</figure>
+							</a>
+							<div class="title">
+								<a href="#">Социальные пособия: сложные ситуации в практике бухгалтер</a>
+							</div>
+							<div class="description">
+								Количество консультаций, для вашей организации уточняйте у специалиста
+							</div>
+							<div class="link-holder">
+								<a href="#" class="link">Читать новость</a>
+							</div>
+						</div>
+					</li>
+					<li class="item">
+						<div class="news">
+							<div class="date">25 февраля 2017</div>
+							<div class="title">
+								<a href="#">Социальные пособия: сложные ситуации в практике бухгалтер</a>
+							</div>
+							<div class="description">
+								Количество консультаций, для вашей организации уточняйте у специалиста или по телефону Горячей линии Количество консультаций уточняйте
+							</div>
+							<div class="link-holder">
+								<a href="#" class="link">Читать новость</a>
+							</div>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</section>
+
+		<section class="section primary-section">
+			<div class="container">
+				<form action="#" class="reg-form small validate-form">
+					<div class="row">
+						<div class="col-xs-8 col-md-6 mobile-full">
+							<div class="row">
+								<div class="col-xs-2 col-md-2 mobile-hide">
+									<i class="icon icon-email title-icon"></i>
+								</div>
+								<div class="col-xs-10 col-md-10 mobile-full">
+									<div class="h4-title">
+										Получать информацию о новостях, акциях и специальных предложениях
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-xs-12 col-md-5 offset-top--t">
+							<div class="row success-fadeout">
+								<div class="col-xs-8 mobile-full">
+									<div class="form-group">
+										<input type="text" id="user3Email" class="input email">
+										<label for="user3Email">Email</label>
+										<i class="icon icon-checked icon-success"></i>
+										<i class="icon icon-cancel icon-error"></i>
+										<div class="alert">Некорректный ввод</div>
+									</div>
+								</div>
+								<div class="col-xs-4 mobile-full">
+									<div class="form-group">
+										<button class="btn">Отправить</button>
+									</div>
+								</div>
+								<div class="success-fadein">
+									<div class="verticaly-middle">
+										<div class="inner">
+											Благодарим за вашу заявку! <br>
+											Наш пециалист свяжется с Вами <br> в течение 15 минут!
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</form>
+			</div>
+		</section>
+
+	</main>
+
+	<footer class="main-footer">
+		<div class="container small">
+			<div class="row">
+				<div class="col-xs-3 mobile-full">
+					<div class="heading">О компании</div>
+					<ul class="footer-list">
+						<li><a href="#">Работа у нас</a></li>
+						<li><a href="#">Наши клиенты</a></li>
+						<li><a href="#">Команда М-СТАЙЛ</a></li>
+						<li><a href="#">Новости</a></li>
+					</ul>
+				</div>
+				<div class="col-xs-3 mobile-full">
+					<div class="heading">Продукты</div>
+					<ul class="footer-list">
+						<li><a href="#">Консультант Плюс</a></li>
+						<li><a href="#">Главная книга</a></li>
+						<li><a href="#">Астрал-Отчет</a></li>
+						<li><a href="#">World Business Law</a></li>
+						<li><a href="#">Мобильное приложение</a></li>
+					</ul>
+				</div>
+				<div class="col-xs-3 mobile-full">
+					<div class="heading">Семинары</div>
+					<ul class="footer-list">
+						<li><a href="#">Вебинары</a></li>
+						<li><a href="#">Квартальные семинары</a></li>
+						<li><a href="#">Семинары-тренинги</a></li>
+						<li><a href="#">Обучающие семинары</a></li>
+					</ul>
+				</div>
+				<div class="col-xs-3 mobile-full">
+					<div class="heading">Услуги</div>
+					<ul class="footer-list">
+						<li><a href="#">Горячая линия</a></li>
+						<li><a href="#">Правовые сборники</a></li>
+						<li><a href="#">Консультации</a></li>
+						<li><a href="#">Проверка контрагента</a></li>
+						<li><a href="#">«Что нового?»</a></li>
+					</ul>
+				</div>
+			</div>
+			<!-- top -->
+		</div>
+		<div class="social-section">
+			<div class="container small">
+				<div class="row">
+					<div class="col-xs-6 col-sm-3 col-md-3 phone-col">
+						<div class="subheading">горячая линия</div>
+						<a href="tel:88002000226" class="phone-link">8-800-2000-226</a>
+					</div>
+					<div class="col-xs-6 col-sm-3 col-md-3 phone-col">
+						<div class="subheading">Санкт-Петербург</div>
+						<a href="tel:78122449595" class="phone-link">+7 (812) 244-95-95</a>
+					</div>
+					<div class="col-xs-6 col-sm-3 col-md-3 phone-col">
+						<div class="subheading">Москва</div>
+						<a href="tel:74956487800" class="phone-link">+7 (495) 648-78-00</a>
+					</div>
+					<div class="col-xs-6 col-sm-3 col-md-3 mobile-full">
+						<div class="subheading">Следите за нами</div>
+						<ul class="socials-list">
+							<li><a href="#"><i class="icon icon-vk"></i></a></li>
+							<li><a href="#"><i class="icon icon-facebook"></i></a></li>
+							<li><a href="#"><i class="icon icon-ok"></i></a></li>
+							<li><a href="#"><i class="icon icon-twitter"></i></a></li>
+							<li><a href="#"><i class="icon icon-youtube2"></i></a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- middle -->
+		<div class="container small">
+			<div class="row">
+				<div class="col-xs-12 col-sm-3">
+					<a href="#" class="logo-holder"><img src="img/footer-logo.png" alt="img"></a>
+				</div>
+				<div class="col-xs-12 col-sm-9">
+					<div class="row">
+						<div class="col-md-6">
+							<div class="copy">Copyright &copy; 1994 — 2016. Компания <span class="upper">«М-СТАЙЛ»</span>. Все права защищены</div>
+						</div>
+						<div class="col-md-6">
+							<div class="copy">Создание сайта — <a href="#" class="upper">АГЕНТСТВО DIGITAL-ТРАНСФОРМАЦИИ УЛЕЙ</a></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- bottom -->
+	</footer>
+
+	<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700|Roboto:300,400,500,700" rel="stylesheet">
+	<script src="js/bundle/bundle.js"></script>
+
+</body>
+</html>

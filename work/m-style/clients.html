@@ -1,0 +1,1050 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+	<meta charset="UTF-8">
+	<title>M-Style :: Clients</title>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+	<meta name="format-detection" content="telephone=no">
+
+	<link rel="stylesheet" href="css/_bundle.min.css">
+
+</head>
+<body>
+
+	<header class="main-header">
+		<div class="sub-head">
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-sm-7" id="miniNavDesktop">
+						<ul class="clear menu" data-mobile="#miniNavMobile" data-desktop="#miniNavDesktop">
+							<li><a href="#">О компании</a></li>
+							<li><a href="#">Работа у нас</a></li>
+							<li><a href="#">Консультант плюс</a></li>
+						</ul>
+					</div>
+					<div class="col-xs-12 col-sm-5 align-right">
+						ВАШ ГОРОД:&nbsp;
+						<div class="dropdown" data-dropdown>
+							<button class="anchor">Санкт-петербург</button>
+							<ul class="dropdown-menu">
+								<li><a href="#">Санкт-петербург</a></li>
+								<li><a href="#">Москва</a></li>
+								<li><a href="#">Екатеринбург</a></li>
+								<li><a href="#">Тюмень</a></li>
+								<li><a href="#">нижний новгород</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="main-head">
+			<div class="container-fluid">
+				<div class="row collapsed-row collapse-right">
+					<div class="col-xs-2">
+						<a href="index.html" class="logo">
+							<img src="img/logo.png" alt="">
+						</a>
+					</div>
+					<div class="col-xs-10 col-md-7 align-right menu-toggle-col">
+						<a class="phone" href="tel:78122449595"><i class="icon icon-points"></i>+7 (812) 244-95-95</a>
+						<a class="phone" href="tel:88002000226">8-800-2000-226</a>
+						<div class="dropdown large dropdown-window" data-dropdown>
+							<button class="anchor">
+								<i class="icon icon-phone"></i>
+								<span>Заказать звонок</span>
+							</button>
+							<div class="dropdown-menu">
+								<form action="#" class="form validate-form">
+									<div class="success-fadeout">
+										<div class="form-group">
+											<input id="userName" type="text" class="input">
+											<label for="userName">Имя</label>
+											<i class="icon icon-checked icon-success"></i>
+											<i class="icon icon-cancel icon-error"></i>
+										</div>
+										<div class="form-group">
+											<input id="userPhone" type="text" class="input" data-mask="+9(999) 999-99-99">
+											<label for="userPhone">Телефон</label>
+											<i class="icon icon-checked icon-success"></i>
+											<i class="icon icon-cancel icon-error"></i>
+										</div>
+									<!-- 	<div class="form-group">
+											<input id="userEmail" type="text" class="input email">
+											<label for="userEmail">Email</label>
+											<i class="icon icon-checked icon-success"></i>
+											<i class="icon icon-cancel icon-error"></i>
+										</div> -->
+										<button class="btn">Отправить</button>
+										<div class="success-fadein">
+											<div class="verticaly-middle">
+												<div class="inner">
+													Благодарим за вашу заявку! <br>
+													Наш пециалист свяжется с Вами <br> в течение 15 минут!
+												</div>
+											</div>
+										</div>
+									</div>
+								</form>
+							</div>
+						</div>
+						<button class="btn search-toggle">
+							<i></i><i></i>
+							<span class="icon icon-search"></span>
+						</button>
+						<button class="none btn main-menu-toggle" id="mainMenuToggle">
+							<i></i><i></i><i></i>
+						</button>
+					</div>
+					<div class="col-xs-3 search-col">
+						<form action="#" class="search-form">
+							<input type="text" class="input" placeholder="Поиск...">
+							<button class="btn"><i class="icon icon-search"></i></button>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="menu-head bordered-bottom">
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-xs-7" id="desktopMenuPlace">
+						<nav class="main-nav" data-desktop="#desktopMenuPlace" data-tablet="#mobileMenuPlace">
+							<ul class="clear">
+								<li class="active"><a href="#">Продукты</a></li>
+								<li><a href="#">Семинары и вебинары</a></li>
+								<li><a href="#">Услуги</a></li>
+								<li><a href="#">Тесты</a></li>
+								<li><a href="#">Контакты</a></li>
+							</ul>
+						</nav>
+					</div>
+					<div class="col-xs-5 collapse-right" id="userMenuDesktop">
+						<ul class="clear user-menu" data-tablet="#userMenuMobile" data-desktop="#userMenuDesktop">
+							<li><a href="#"><i class="icon icon-info"></i>Помощь</a></li>
+							<li><a href="#"><i class="icon icon-user"></i>Личный кабинет</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
+	
+	<div class="none mobile-nav">
+		<div class="head">
+			<div class="row">
+				<div class="col-xs-6">
+					<a href="#" class="logo">
+						<img src="img/logo.png" alt="">
+					</a>
+				</div>
+				<div class="col-xs-6 align-right">
+					<button class="btn" id="hideMainMenu">&times;</button>
+				</div>
+			</div>
+		</div>
+		<div id="userMenuMobile" class="inner"></div>
+		<div id="mobileMenuPlace" class="inner"></div>
+		<div id="miniNavMobile" class="inner"></div>
+	</div>
+
+	<main>
+
+		<section class="slider-outer">
+			<div class="slide-item inner">
+				<figure class="image">
+					<img src="temp/about.jpg" alt="">
+				</figure>
+				<div class="verticaly-middle">
+					<div class="inner">
+						<div class="container">
+							<div class="row">
+								<div class="col-xs-6">
+								<div class="breadcrumbs">
+									<ul class="list">
+										<li><a href="#">Главная</a></li>
+										<li>Наши клиенты</li>
+									</ul>
+								</div>
+								<div class="title bold">Наши клиенты</div>
+								<div class="paragraph">
+									Среди наших клиентов более 10 000 организаций. Именно они - наша главная ценность. 60% клиентов сотрудничают с нами уже более 5 лет, и очень положительно о нас отзываются. Мы стараемся выстроить длительные партнерские отношения и, конечно, создавать настроение «М-СТАЙЛ».
+								</div>
+							</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			
+		</section>
+
+
+		<section class="section">
+			<div class="container">
+				
+				<div class="tabs">
+					<ul class="nav" data-tabs="#tabs1">
+						<li class="active"><span>Все</span></li>
+						<li><span>Бюджетные организации</span></li>
+						<li><span>Банки</span></li>
+						<li><span>Производство</span></li>
+						<li><span>Сфера услуг</span></li>
+					</ul>
+					<div id="tabs1">
+						<div class="content active">
+							<div data-title="Все"></div>
+							<div class="inner">
+								<ul class="clients clear">
+									<li>
+										<a href="#">
+											<figure class="image-client">
+												<img src="temp/feedback2.png" alt="img">
+											</figure>
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<figure class="image-client">
+												<img src="temp/stdlib.png" alt="img">
+											</figure>
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<figure class="image-client">
+												<img src="temp/feedback2.png" alt="img">
+											</figure>
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<figure class="image-client">
+												<img src="temp/feedback1.jpg" alt="img">
+											</figure>
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<figure class="image-client">
+												<img src="temp/stdlib.png" alt="img">
+											</figure>
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<figure class="image-client">
+												<img src="temp/feedback2.png" alt="img">
+											</figure>
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<figure class="image-client">
+												<img src="temp/stdlib.png" alt="img">
+											</figure>
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<figure class="image-client">
+												<img src="temp/stdlib.png" alt="img">
+											</figure>
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<figure class="image-client">
+												<img src="temp/u1173.png" alt="img">
+											</figure>
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<figure class="image-client">
+												<img src="temp/u1173.png" alt="img">
+											</figure>
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<figure class="image-client">
+												<img src="temp/feedback2.png" alt="img">
+											</figure>
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<figure class="image-client">
+												<img src="temp/feedback1.jpg" alt="img">
+											</figure>
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<figure class="image-client">
+												<img src="temp/stdlib.png" alt="img">
+											</figure>
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<figure class="image-client">
+												<img src="temp/feedback2.png" alt="img">
+											</figure>
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<figure class="image-client">
+												<img src="temp/stdlib.png" alt="img">
+											</figure>
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<figure class="image-client">
+												<img src="temp/stdlib.png" alt="img">
+											</figure>
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<figure class="image-client">
+												<img src="temp/u1173.png" alt="img">
+											</figure>
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<figure class="image-client">
+												<img src="temp/u1173.png" alt="img">
+											</figure>
+										</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<div class="content">
+							<div data-title="Бюджетные организации"></div>
+							<div class="inner">
+								<ul class="clients clear">
+									<li>
+										<a href="#">
+											<figure class="image-client">
+												<img src="temp/feedback2.png" alt="img">
+											</figure>
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<figure class="image-client">
+												<img src="temp/stdlib.png" alt="img">
+											</figure>
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<figure class="image-client">
+												<img src="temp/feedback2.png" alt="img">
+											</figure>
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<figure class="image-client">
+												<img src="temp/feedback1.jpg" alt="img">
+											</figure>
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<figure class="image-client">
+												<img src="temp/stdlib.png" alt="img">
+											</figure>
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<figure class="image-client">
+												<img src="temp/feedback2.png" alt="img">
+											</figure>
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<figure class="image-client">
+												<img src="temp/stdlib.png" alt="img">
+											</figure>
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<figure class="image-client">
+												<img src="temp/stdlib.png" alt="img">
+											</figure>
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<figure class="image-client">
+												<img src="temp/u1173.png" alt="img">
+											</figure>
+										</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<div class="content">
+							<div data-title="Банки"></div>
+							<div class="inner">
+								<ul class="clients clear">
+									<li>
+										<a href="#">
+											<figure class="image-client">
+												<img src="temp/feedback2.png" alt="img">
+											</figure>
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<figure class="image-client">
+												<img src="temp/stdlib.png" alt="img">
+											</figure>
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<figure class="image-client">
+												<img src="temp/feedback2.png" alt="img">
+											</figure>
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<figure class="image-client">
+												<img src="temp/feedback1.jpg" alt="img">
+											</figure>
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<figure class="image-client">
+												<img src="temp/stdlib.png" alt="img">
+											</figure>
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<figure class="image-client">
+												<img src="temp/feedback2.png" alt="img">
+											</figure>
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<figure class="image-client">
+												<img src="temp/stdlib.png" alt="img">
+											</figure>
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<figure class="image-client">
+												<img src="temp/stdlib.png" alt="img">
+											</figure>
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<figure class="image-client">
+												<img src="temp/u1173.png" alt="img">
+											</figure>
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<figure class="image-client">
+												<img src="temp/stdlib.png" alt="img">
+											</figure>
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<figure class="image-client">
+												<img src="temp/stdlib.png" alt="img">
+											</figure>
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<figure class="image-client">
+												<img src="temp/u1173.png" alt="img">
+											</figure>
+										</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<div class="content">
+							<div data-title="Производство"></div>
+							<div class="inner">
+								<ul class="clients clear">
+									<li>
+										<a href="#">
+											<figure class="image-client">
+												<img src="temp/feedback2.png" alt="img">
+											</figure>
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<figure class="image-client">
+												<img src="temp/stdlib.png" alt="img">
+											</figure>
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<figure class="image-client">
+												<img src="temp/feedback2.png" alt="img">
+											</figure>
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<figure class="image-client">
+												<img src="temp/feedback1.jpg" alt="img">
+											</figure>
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<figure class="image-client">
+												<img src="temp/stdlib.png" alt="img">
+											</figure>
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<figure class="image-client">
+												<img src="temp/feedback2.png" alt="img">
+											</figure>
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<figure class="image-client">
+												<img src="temp/stdlib.png" alt="img">
+											</figure>
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<figure class="image-client">
+												<img src="temp/stdlib.png" alt="img">
+											</figure>
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<figure class="image-client">
+												<img src="temp/u1173.png" alt="img">
+											</figure>
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<figure class="image-client">
+												<img src="temp/stdlib.png" alt="img">
+											</figure>
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<figure class="image-client">
+												<img src="temp/stdlib.png" alt="img">
+											</figure>
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<figure class="image-client">
+												<img src="temp/u1173.png" alt="img">
+											</figure>
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<figure class="image-client">
+												<img src="temp/stdlib.png" alt="img">
+											</figure>
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<figure class="image-client">
+												<img src="temp/stdlib.png" alt="img">
+											</figure>
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<figure class="image-client">
+												<img src="temp/u1173.png" alt="img">
+											</figure>
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<figure class="image-client">
+												<img src="temp/stdlib.png" alt="img">
+											</figure>
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<figure class="image-client">
+												<img src="temp/stdlib.png" alt="img">
+											</figure>
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<figure class="image-client">
+												<img src="temp/u1173.png" alt="img">
+											</figure>
+										</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<div class="content">
+							<div data-title="Сфера услуг"></div>
+							<div class="inner">
+								<ul class="clients clear">
+									<li>
+										<a href="#">
+											<figure class="image-client">
+												<img src="temp/stdlib.png" alt="img">
+											</figure>
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<figure class="image-client">
+												<img src="temp/feedback2.png" alt="img">
+											</figure>
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<figure class="image-client">
+												<img src="temp/stdlib.png" alt="img">
+											</figure>
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<figure class="image-client">
+												<img src="temp/stdlib.png" alt="img">
+											</figure>
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<figure class="image-client">
+												<img src="temp/u1173.png" alt="img">
+											</figure>
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<figure class="image-client">
+												<img src="temp/stdlib.png" alt="img">
+											</figure>
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<figure class="image-client">
+												<img src="temp/feedback2.png" alt="img">
+											</figure>
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<figure class="image-client">
+												<img src="temp/stdlib.png" alt="img">
+											</figure>
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<figure class="image-client">
+												<img src="temp/stdlib.png" alt="img">
+											</figure>
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<figure class="image-client">
+												<img src="temp/u1173.png" alt="img">
+											</figure>
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<figure class="image-client">
+												<img src="temp/feedback2.png" alt="img">
+											</figure>
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<figure class="image-client">
+												<img src="temp/stdlib.png" alt="img">
+											</figure>
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<figure class="image-client">
+												<img src="temp/feedback2.png" alt="img">
+											</figure>
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<figure class="image-client">
+												<img src="temp/feedback1.jpg" alt="img">
+											</figure>
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<figure class="image-client">
+												<img src="temp/stdlib.png" alt="img">
+											</figure>
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<figure class="image-client">
+												<img src="temp/feedback2.png" alt="img">
+											</figure>
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<figure class="image-client">
+												<img src="temp/stdlib.png" alt="img">
+											</figure>
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<figure class="image-client">
+												<img src="temp/stdlib.png" alt="img">
+											</figure>
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<figure class="image-client">
+												<img src="temp/u1173.png" alt="img">
+											</figure>
+										</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+
+		<section class="section spaced-bottom">
+			<div class="container">
+				<div class="row">
+					<div class="col-xs-7">
+						<div class="h3-title">Отзывы клиентов</div>
+					</div>
+					<div class="col-xs-5 align-right">
+						<div class="offset-top collapse--t" data-nav="review1">
+							<button class="btn btn-round btn-transparent prev">
+								<i class="icon icon-angle-left"></i>
+							</button>
+							<button class="btn btn-round btn-transparent next">
+								<i class="icon icon-angle-right"></i>
+							</button>
+						</div>
+					</div>
+				</div>
+				<div class="reviews-list owl-carousel" id="review1">
+					<div class="item">
+						<div class="review">
+							<a href="#">
+								<figure class="image">
+									<img src="img/feedback1.jpg" alt="img">
+								</figure>
+							</a>
+							<div class="text">
+								RexLex Nova - первая специализированная российская коммерческая гибридная платформа (Техноброкер/Техноскаут/Консультант) для коммерциализации наукоемкой, инновационной технологии и продукции на локальные и глобальные рынки - выражает благодарность ООО «М-СТАЙЛ» за профессиональное, ответственное и своевременное информационно- аналитическое сопровождение программы КонсультантПлюс.
+								RexLex Nova - первая специализированная российская коммерческая гибридная платформа (Техноброкер/Техноскаут/Консультант) для коммерциализации наукоемкой, инновационной технологии и продукции на локальные и глобальные рынки - выражает благодарность ООО «М-СТАЙЛ» за профессиональное, ответственное и своевременное информационно- аналитическое сопровождение программы КонсультантПлюс.
+							</div>
+							<div class="caption">
+								<div class="name">
+									Анастасия Нечаева
+								</div>
+								<div class="company">Ведущий юрист <a href="#" class="red">RexLex Nova</a></div>
+							</div>
+						</div>
+					</div>
+					<div class="item">
+						<div class="review">
+							<a href="#">
+								<figure class="image">
+								<img src="img/feedback2.png" alt="img">
+							</figure>
+							</a>
+							<div class="text">
+								Выражаем благодарность и признательность ООО «М-СТАЙЛ» за услуги по информационному сопровождению СПС КонсультантПлюс. Будем рады сотрудничеству с вами вновь
+							</div>
+							<div class="caption">
+								<div class="name">
+									Анастасия Нечаева
+								</div>
+								<div class="company">Ведущий юрист <a href="#" class="red">RexLex Nova</a></div>
+							</div>
+						</div>
+					</div>
+					<div class="item">
+						<div class="review">
+							<a href="#">
+								<figure class="image">
+									<img src="img/feedback1.jpg" alt="img">
+								</figure>
+							</a>
+							<div class="text">
+								RexLex Nova - первая специализированная российская коммерческая гибридная платформа (Техноброкер/Техноскаут/Консультант) для коммерциализации наукоемкой, инновационной технологии и продукции на локальные и глобальные рынки - выражает благодарность ООО «М-СТАЙЛ» за профессиональное, ответственное и своевременное информационно- аналитическое сопровождение программы КонсультантПлюс.
+								RexLex Nova - первая специализированная российская коммерческая гибридная платформа (Техноброкер/Техноскаут/Консультант) для коммерциализации наукоемкой, инновационной технологии и продукции на локальные и глобальные рынки - выражает благодарность ООО «М-СТАЙЛ» за профессиональное, ответственное и своевременное информационно- аналитическое сопровождение программы КонсультантПлюс.
+							</div>
+							<div class="caption">
+								<div class="name">
+									Анастасия Нечаева
+								</div>
+								<div class="company">Ведущий юрист <a href="#" class="red">RexLex Nova</a></div>
+							</div>
+						</div>
+					</div>
+					<div class="item">
+						<div class="review">
+							<a href="#">
+								<figure class="image">
+								<img src="img/feedback2.png" alt="img">
+							</figure>
+							</a>
+							<div class="text">
+								Выражаем благодарность и признательность ООО «М-СТАЙЛ» за услуги по информационному сопровождению СПС КонсультантПлюс. Будем рады сотрудничеству с вами вновь
+							</div>
+							<div class="caption">
+								<div class="name">
+									Анастасия Нечаева
+								</div>
+								<div class="company">Ведущий юрист <a href="#" class="red">RexLex Nova</a></div>
+							</div>
+						</div>
+					</div>
+					<div class="item">
+						<div class="review">
+							<a href="#">
+								<figure class="image">
+									<img src="img/feedback1.jpg" alt="img">
+								</figure>
+							</a>
+							<div class="text">
+								RexLex Nova - первая специализированная российская коммерческая гибридная платформа (Техноброкер/Техноскаут/Консультант) для коммерциализации наукоемкой, инновационной технологии и продукции на локальные и глобальные рынки - выражает благодарность ООО «М-СТАЙЛ» за профессиональное, ответственное и своевременное информационно- аналитическое сопровождение программы КонсультантПлюс.
+								RexLex Nova - первая специализированная российская коммерческая гибридная платформа (Техноброкер/Техноскаут/Консультант) для коммерциализации наукоемкой, инновационной технологии и продукции на локальные и глобальные рынки - выражает благодарность ООО «М-СТАЙЛ» за профессиональное, ответственное и своевременное информационно- аналитическое сопровождение программы КонсультантПлюс.
+							</div>
+							<div class="caption">
+								<div class="name">
+									Анастасия Нечаева
+								</div>
+								<div class="company">Ведущий юрист <a href="#" class="red">RexLex Nova</a></div>
+							</div>
+						</div>
+					</div>
+					<div class="item">
+						<div class="review">
+							<a href="#">
+								<figure class="image">
+								<img src="img/feedback2.png" alt="img">
+							</figure>
+							</a>
+							<div class="text">
+								Выражаем благодарность и признательность ООО «М-СТАЙЛ» за услуги по информационному сопровождению СПС КонсультантПлюс. Будем рады сотрудничеству с вами вновь
+							</div>
+							<div class="caption">
+								<div class="name">
+									Анастасия Нечаева
+								</div>
+								<div class="company">Ведущий юрист <a href="#" class="red">RexLex Nova</a></div>
+							</div>
+						</div>
+					</div>
+					<div class="item">
+						<div class="review">
+							<a href="#">
+								<figure class="image">
+									<img src="img/feedback1.jpg" alt="img">
+								</figure>
+							</a>
+							<div class="text">
+								RexLex Nova - первая специализированная российская коммерческая гибридная платформа (Техноброкер/Техноскаут/Консультант) для коммерциализации наукоемкой, инновационной технологии и продукции на локальные и глобальные рынки - выражает благодарность ООО «М-СТАЙЛ» за профессиональное, ответственное и своевременное информационно- аналитическое сопровождение программы КонсультантПлюс.
+								RexLex Nova - первая специализированная российская коммерческая гибридная платформа (Техноброкер/Техноскаут/Консультант) для коммерциализации наукоемкой, инновационной технологии и продукции на локальные и глобальные рынки - выражает благодарность ООО «М-СТАЙЛ» за профессиональное, ответственное и своевременное информационно- аналитическое сопровождение программы КонсультантПлюс.
+							</div>
+							<div class="caption">
+								<div class="name">
+									Анастасия Нечаева
+								</div>
+								<div class="company">Ведущий юрист <a href="#" class="red">RexLex Nova</a></div>
+							</div>
+						</div>
+					</div>
+					<div class="item">
+						<div class="review">
+							<a href="#">
+								<figure class="image">
+								<img src="img/feedback2.png" alt="img">
+							</figure>
+							</a>
+							<div class="text">
+								Выражаем благодарность и признательность ООО «М-СТАЙЛ» за услуги по информационному сопровождению СПС КонсультантПлюс. Будем рады сотрудничеству с вами вновь
+							</div>
+							<div class="caption">
+								<div class="name">
+									Анастасия Нечаева
+								</div>
+								<div class="company">Ведущий юрист <a href="#" class="red">RexLex Nova</a></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	</main>
+
+	<footer class="main-footer">
+		<div class="container small">
+			<div class="row">
+				<div class="col-xs-3 mobile-full">
+					<div class="heading">О компании</div>
+					<ul class="footer-list">
+						<li><a href="#">Работа у нас</a></li>
+						<li><a href="#">Наши клиенты</a></li>
+						<li><a href="#">Команда М-СТАЙЛ</a></li>
+						<li><a href="#">Новости</a></li>
+					</ul>
+				</div>
+				<div class="col-xs-3 mobile-full">
+					<div class="heading">Продукты</div>
+					<ul class="footer-list">
+						<li><a href="#">Консультант Плюс</a></li>
+						<li><a href="#">Главная книга</a></li>
+						<li><a href="#">Астрал-Отчет</a></li>
+						<li><a href="#">World Business Law</a></li>
+						<li><a href="#">Мобильное приложение</a></li>
+					</ul>
+				</div>
+				<div class="col-xs-3 mobile-full">
+					<div class="heading">Семинары</div>
+					<ul class="footer-list">
+						<li><a href="#">Вебинары</a></li>
+						<li><a href="#">Квартальные семинары</a></li>
+						<li><a href="#">Семинары-тренинги</a></li>
+						<li><a href="#">Обучающие семинары</a></li>
+					</ul>
+				</div>
+				<div class="col-xs-3 mobile-full">
+					<div class="heading">Услуги</div>
+					<ul class="footer-list">
+						<li><a href="#">Горячая линия</a></li>
+						<li><a href="#">Правовые сборники</a></li>
+						<li><a href="#">Консультации</a></li>
+						<li><a href="#">Проверка контрагента</a></li>
+						<li><a href="#">«Что нового?»</a></li>
+					</ul>
+				</div>
+			</div>
+			<!-- top -->
+		</div>
+		<div class="social-section">
+			<div class="container small">
+				<div class="row">
+					<div class="col-xs-6 col-sm-3 col-md-3 phone-col">
+						<div class="subheading">горячая линия</div>
+						<a href="tel:88002000226" class="phone-link">8-800-2000-226</a>
+					</div>
+					<div class="col-xs-6 col-sm-3 col-md-3 phone-col">
+						<div class="subheading">Санкт-Петербург</div>
+						<a href="tel:78122449595" class="phone-link">+7 (812) 244-95-95</a>
+					</div>
+					<div class="col-xs-6 col-sm-3 col-md-3 phone-col">
+						<div class="subheading">Москва</div>
+						<a href="tel:74956487800" class="phone-link">+7 (495) 648-78-00</a>
+					</div>
+					<div class="col-xs-6 col-sm-3 col-md-3 mobile-full">
+						<div class="subheading">Следите за нами</div>
+						<ul class="socials-list">
+							<li><a href="#"><i class="icon icon-vk"></i></a></li>
+							<li><a href="#"><i class="icon icon-facebook"></i></a></li>
+							<li><a href="#"><i class="icon icon-ok"></i></a></li>
+							<li><a href="#"><i class="icon icon-twitter"></i></a></li>
+							<li><a href="#"><i class="icon icon-youtube2"></i></a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- middle -->
+		<div class="container small">
+			<div class="row">
+				<div class="col-xs-12 col-sm-3">
+					<a href="#" class="logo-holder"><img src="img/footer-logo.png" alt="img"></a>
+				</div>
+				<div class="col-xs-12 col-sm-9">
+					<div class="row">
+						<div class="col-md-6">
+							<div class="copy">Copyright &copy; 1994 — 2016. Компания <span class="upper">«М-СТАЙЛ»</span>. Все права защищены</div>
+						</div>
+						<div class="col-md-6">
+							<div class="copy">Создание сайта — <a href="#" class="upper">АГЕНТСТВО DIGITAL-ТРАНСФОРМАЦИИ УЛЕЙ</a></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- bottom -->
+	</footer>
+
+
+	<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700|Roboto:300,400,500,700" rel="stylesheet">
+
+	<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+	<script>
+		window.points = [{
+			point: [55.7498436,37.6367613],
+			title: 'Lorem ipsum dolor sit amet.',
+			text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae, delectus.'
+		}];
+	</script>
+
+	<script src="js/bundle/bundle.js"></script>
+
+</body>
+</html>
