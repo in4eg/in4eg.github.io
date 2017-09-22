@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ru" class="lang-ru">
+<head>
+
+	<meta charset="UTF-8">
+	<meta name="theme-color" content="#efeeed">
+	
+	<title>Object.create()</title>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+	<meta name="format-detection" content="telephone=no">
+
+	<link rel="stylesheet" href="css/bundle.css">
+
+</head>
+<body>
+
+	<div class="container">
+		<div class="inner">
+			<div class="col">
+				<form action="" class="main-form">
+					<div class="form-group">
+						<input type="text" name="name" placeholder="enter car name" id="name">
+					</div>
+					<div class="form-group" id="color">
+						<input type="radio" name="color" id="red" value="red">
+						<label for="red" class="red">red</label>
+						<input type="radio" name="color" id="blue" value="blue">
+						<label for="blue" class="blue">blue</label>
+						<input type="radio" name="color" id="green" value="green">
+						<label for="green" class="green">green</label>
+						<input type="radio" name="color" id="yellow" value="yellow">
+						<label for="yellow" class="yellow">yellow</label>
+						<input type="radio" name="color" id="black" value="black">
+						<label for="black" class="black">black</label>
+					</div>
+					<div class="form-group">
+						<select name="engine" id="engine">
+							<option value="engine1">engine1</option>
+							<option value="engine2">engine2</option>
+							<option value="engine3">engine3</option>
+							<option value="engine4">engine4</option>
+							<option value="engine5">engine5</option>
+						</select>
+					</div>
+					<div class="form-group">
+						<input type="checkbox" name="option" id="option">
+						<label for="option">enable or Disable Color Option</label>
+					</div>
+				</form>
+			</div>
+			<div class="col">
+				<div class="title">Object <span id="title">Car</span></div>
+				<ul id="object-value" class="list">
+					<li>name: <span id="nameResult">name</span></li>
+					<li>color: <span id="colorResult">blue</span></li>
+					<li>engine:
+						<span id="engineResult">"V-8 Engine"</span>
+						<div class="alert">You can not change this option</div>
+					</li>
+					<li>isColorChangable: <span id="optionResult">true</span></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<!-- map -->
+	<script src="js/main.js"></script>
+
+
+</body>
+</html>
