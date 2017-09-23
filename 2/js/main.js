@@ -1,110 +1,41 @@
-var car = Object.create(Object.prototype);
-
-Object.defineProperty(car, 'name', {
-  value: 'bmw',
-  writable: true,
-  configurable: true,
-  enumerable: true
-});
-
-Object.defineProperty(car, 'color', {
-  value: 'blue',
-  writable: true,
-  configurable: true,
-  enumerable: true
-});
-
-Object.defineProperty(car, 'engine', {
-  value: 'V-8 Engine',
-  writable: false,
-  configurable: true,
-  enumerable: true
-});
-
-Object.defineProperty(car, 'isColorChangable', {
-  value: true,
-  writable: true,
-  configurable: true,
-  enumerable: true
-});
+function Bacteria(name, type,  caption, siblings, parent, isPrimary) {
+  this.name = name || 'no name';
+  this.type = type || 'no type';
+  this.caption = caption || 'no caption';
+  this.siblings = siblings || [];
+  this.parent = parent || 'no parent';
+  this.isPrimary = isPrimary || false;
 
 
-// set Value from object
-function render(object, name, color, engine, option) {
-  name.innerHTML = object.name;
-  color.innerHTML = object.color;
-  engine.innerHTML = object.engine;
-  option.innerHTML = object.isColorChangable;
+  this.result = (function (name, type) {
+    // console.log(name)
 
-  // console.log(car);
+    var createName = document.createElement('div');
+    createName.innerHTML = name;
+
+    document.getElementById('result').appendChild(createName);
+
+    var createType = document.createElement('div');
+    createType.innerHTML = type;
+
+    document.getElementById('result').appendChild(createType);
+
+  }(this.name, this.type));
 
 }
+// kingdom
+var kingdomBacteria = new Bacteria('Bacteria', 'kingdom', 'large domain of prokaryotic microorganisms', ['Viruses', 'Mushrooms', 'Plants', 'Animals'], 'Nature', true)
 
+// phylum
+var phylumAquificae = new Bacteria('Aquificae', 'phylum', 'Diverse collection of bacteria that live in harsh environmental settings', ['Chlamydiae', 'Proteobacteria', 'Spirochaetes'], 'Bacteria', false)
+var phylumChlamydiae = new Bacteria('Chlamydiae', 'phylum', 'Its members are a group of obligate intracellular bacteria', ['Aquificae', 'Proteobacteria', 'Spirochaetes'], 'Bacteria', false)
+var phylumSpirochaetes = new Bacteria('Spirochaetes', 'phylum', 'Contains distinctive diderm bacteria, most of which have long, helically coiled cells', ['Aquificae', 'Proteobacteria', 'Chlamydiae'], 'Bacteria', true)
 
-nameResult = document.getElementById('nameResult');
-colorResult = document.getElementById('colorResult');
-engineResult = document.getElementById('engineResult');
-optionResult = document.getElementById('optionResult');
+// class
+var classSpirochaetia = new Bacteria('Spirochaetia', 'class', 'The class currently consists of 14 validly named genera across 4 orders and 5 families', [], 'Spirochaetes', true)
 
-title = document.getElementById('title');
+// order
+var orderSpirochaete = new Bacteria('Spirochaete', 'order', 'Many organisms within the Spirochaetes phylum cause prevalent diseases.', [], 'Spirochaetia', false)
+var orderLeptospirales = new Bacteria('Leptospirales', 'order', 'It includes the genus Leptospira which contains some pathogenic species', [], 'Spirochaetia', false)
 
-
-render(car, nameResult, colorResult, engineResult, optionResult);
-
-// name
-var inputName = document.getElementById('name');
-
-inputName.oninput = function() {
-  car.name = inputName.value;
-  render(car, nameResult, colorResult, engineResult, optionResult);
-};
-
-// color
-var radioColor = document.getElementsByName('color');
-
-for(var i = 0; i < radioColor.length; i++){
-  radioColor[i].onclick = function(){
-   car.color = this.value;
-   render(car, nameResult, colorResult, engineResult, optionResult);
- }
-}
-
-// engine
-var selectEngine = document.getElementById('engine');
-
-selectEngine.onchange = function() {
-  selectValue = this[this.selectedIndex].value;
-  car.engine = selectValue;
-  console.log(car.engine + ' ' + 'You can"t change it');
-  document.getElementById('engineResult').classList.add('warning');
-  render(car, nameResult, colorResult, engineResult, optionResult);
-};
-
-// options
-var checkboxOption = document.getElementById('option');
-
-
-checkboxOption.onchange = function() {
-  colorBlock = document.getElementById('color');
-
-  if (checkboxOption.checked) {
-    colorBlock.classList.add('hidden');
-    car.isColorChangable = false;
-
-    for(var i = 0; i < radioColor.length; i++){
-      radioColor[i].setAttribute("disabled", "true");
-    }
-    render(car, nameResult, colorResult, engineResult, optionResult);
-    
-  } else {
-    colorBlock.classList.remove('hidden');
-    car.isColorChangable = true;
-
-    for(var i = 0; i < radioColor.length; i++){
-      radioColor[i].removeAttribute("disabled", "true");
-    }
-    render(car, nameResult, colorResult, engineResult, optionResult);
-    
-  }
-};
 
