@@ -8,7 +8,7 @@ Object.defineProperty(car, 'name', {
 });
 
 Object.defineProperty(car, 'color', {
-  value: 'blue',
+  value: 'black',
   writable: true,
   configurable: true,
   enumerable: true
@@ -62,11 +62,17 @@ inputName.oninput = function() {
 // color
 var radioColor = document.getElementsByName('color');
 
+className = document.getElementById('path').classList.value;
+
 for(var i = 0; i < radioColor.length; i++){
+
   radioColor[i].onclick = function(){
-   car.color = this.value;
-   render(car, nameResult, colorResult, engineResult, optionResult);
- }
+    car.color = this.value;
+    console.log(className);
+    document.getElementById('path').classList = ""
+    document.getElementById('path').classList.add(className, this.value);
+    render(car, nameResult, colorResult, engineResult, optionResult);
+  }
 }
 
 // engine
