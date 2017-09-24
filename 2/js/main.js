@@ -34,18 +34,6 @@ function Bacteria(name, type,  caption, siblings, parent, isPrimary) {
 
   }(this.name, this.type, this.caption, this.isPrimary));
 
-  this.FamilyTies = (function (name) {
-
-    var createOptionParent = document.createElement('option');
-    createOptionParent.innerHTML = name;
-    document.getElementById('parent').appendChild(createOptionParent);
-
-    var createOptionChild = document.createElement('option');
-    createOptionChild.innerHTML = name;
-    document.getElementById('child').appendChild(createOptionChild);
-
-  }(this.name));
-
   //get family ties
   this.familyTies = function(obj){
     if (this.name == obj.parent) {
@@ -55,8 +43,7 @@ function Bacteria(name, type,  caption, siblings, parent, isPrimary) {
    } else {
      console.log('other');
    }
-  };
-
+ };
 };
 // kingdom
 var kingdomBacteria = new Bacteria('Bacteria', 'kingdom', 'large domain of prokaryotic microorganisms', ['Viruses', 'Fungus', 'Plants', 'Animals'], 'Nature', true)
@@ -75,8 +62,7 @@ var orderLeptospirales = new Bacteria('Leptospirales', 'order', 'It includes the
 
 
 //get family ties
-classSpirochaetia.familyTies(orderLeptospirales)
-
+phylumChlamydiae.familyTies(phylumAquificae)
 
 //find in array
 function inArray(arr, prop){
