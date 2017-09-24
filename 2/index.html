@@ -16,44 +16,29 @@
 <body>
 
 	<div class="container">
-		<h1 class="main-title">Паттерны создания объектов: Фабрика, Конструктор, Прототип, Динаический прототип, Синглтон</h1>
-		<section class="section">
-			<h2 class="title">Фабрика</h2>
-			<div class="paragraph">
-				Представляет собой функцию, которая создает временный объект с нужными свойствами / методами и возвращает его.
-			</div>
-		</section>
-		<section class="section">
-			<h2 class="title">Конструктор</h2>
-			<div class="paragraph">
-				Представляет собой функцию, которая не создает временный объект, а навешивает свойства и методы на саму себя, таким образом создавая контекст вызова
-			</div>
-		</section>
-		<section class="section">
-			<h2 class="title">Прототип</h2>
-			<div class="paragraph">
-				Изначально создается прототип функции. Чтобы расширить функционал - нужно добавить свойства и методы на прототип функции, таким образом все новосозданные объекты будут содержать в себе эти свойства и методы.
-			</div>
-		</section>
-		<section class="section">
-			<h2 class="title">Динамический прототип</h2>
-			<div class="paragraph">
-				Так же создается функция-прототип, но вместо навешивания на прототип, свойства и методы определяются внутри самой функции при первом вызове конутруктора, если таковых не было определено ранее.
-			</div>
-		</section>
-		<section class="section">
-			<h2 class="title">Синглтон</h2>
-			<div class="paragraph">
-				Создается с помощью подходаs Lazy Load и создает единственный экземпляр, отсюда название.
-			</div>
-		</section>
+		<div class="section primary">
+			<div class="title main">Nature</div>
+			<div class="caption">Nature, in the broadest sense, is the natural, physical, or material world or universe.</div>
+		</div>
+		<div id="result" class="inner"></div>
 
+		<section class="section typical">
+			<div class="title main">Check Family Ties</div>
 
-		<section class="section">
-			<h2 class="title">Царство Бактерий</h2>
-			<div id="result"></div>
+			<div class="inner">
+				<div class="col">
+					<select name="parent" id="parent" class="select">
+						<option value="defaul">Choose parent</option>
+					</select>
+				</div>
+				<div class="col">
+					<select name="child" id="child" class="select">
+						<option value="defaul">Choose child</option>
+					</select>
+				</div>
+				<div class="paragraph">Results: <span id="tiesResult"></span></div>
+			</div>
 		</section>
-
 	</div>
 
 	<!-- map -->
