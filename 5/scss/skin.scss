@@ -1,0 +1,145 @@
+@import 'https://necolas.github.io/normalize.css/3.0.2/normalize.css';
+
+* {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+	outline: none !important;
+}
+
+html, body, main {
+	width: 100%; height: 100%;
+	font-size: 14px;
+	font-family: sans-serif;
+	font-weight: 400;
+	line-height: 20px;
+	background-color: #efeeed;
+
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	text-size-adjust: none;
+	-moz-text-size-adjust: none;
+	-webkit-text-size-adjust: none;
+	-ms-text-size-adjust: none;
+
+	&.overlayed {
+		overflow: hidden !important;
+	}
+}
+
+#map {
+	position: absolute;
+	height: 100%; width: 100%;
+}
+
+.inner-wrap {
+	font-size: 0;
+
+	.half-part {
+		display: inline-block;
+		vertical-align: top;
+		width: 50%;
+		height: 100vh;
+		font-size: 14px;
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: cover;
+		position: relative;
+	}
+}
+.form {
+	font-size: 0;
+
+	.input {
+		display: inline-block;
+		font-size: 16px;
+		height: 40px; width: 80%;
+		padding: 0 15px;
+		vertical-align: top;
+		line-height: 40px;
+		border: none;
+		background-color: lighten(#9cd, 20%);
+		outline: none;
+		transition: .3s;
+
+		&:focus {
+			background-color: #ececec;
+		}
+	}
+	.submit-btn {
+		display: inline-block;
+		font-size: 16px;
+		height: 40px; width: 20%;
+		padding: 0;
+		vertical-align: top;
+		line-height: 40px;
+		border: none;
+		background-color: #9cd;
+		outline: none;
+		transition: .3s;
+
+
+		&:hover {
+			background-color: #335;
+			color: #fff;
+		}
+		&:focus,
+		&:active {
+			background-color: #333;
+			color: #fff;
+		}
+	}
+}
+.wrap {
+	padding: 15px;
+	background-color: rgba(#fff, .5);
+	font-size: 0;
+	position: relative;
+
+	.name {
+		font-size: 34px;
+	}
+	.country {
+		font-size: 18px;
+		position: absolute;
+		right: 15px; top: 10px;
+	}
+	.flag {
+		position: absolute;
+		right: 15px; top: 40px;
+	}
+	.lon {
+		font-size: 18px;
+	}
+	.lat {
+		font-size: 18px;
+	}
+	.weather {
+		position: absolute;
+		top: 65px; left: 75px;
+		font-size: 18px;
+	}
+	.icon {
+		display: block;
+		width: 50px; height: 50px;
+		margin: 15px 0;
+	}
+	.temp {
+		font-size: 42px;
+		position: absolute;
+		bottom: 25px; right: 15px;
+	}
+}
+
+
+@media screen and (max-width: 768px) {
+
+	.inner-wrap {
+		font-size: 0;
+
+		.half-part {
+			width: 100%;
+			font-size: 12px;
+		}
+	}
+}
