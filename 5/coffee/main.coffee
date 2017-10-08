@@ -1,5 +1,5 @@
 getSearchData = (JSONobject) ->
-  console.log JSONobject
+  # console.log JSONobject
   
   name = JSONobject.name
   country = JSONobject.sys.country
@@ -8,7 +8,8 @@ getSearchData = (JSONobject) ->
   weather = JSONobject.weather[0].description
   icon = 'http://openweathermap.org/img/w/' + JSONobject.weather[0].icon + '.png'
   flag = 'http://openweathermap.org/images/flags/' + JSONobject.sys.country.toLowerCase() + '.png'
-  temp = Math.round(JSONobject.main.temp * 4.5 / 100)
+  temp = Math.round(JSONobject.main.temp)
+
 
   section = document.getElementsByClassName('weather-section')[0]
   section.style.backgroundImage = 'url("img/' + JSONobject.weather[0].icon + '.jpg")'
@@ -84,7 +85,7 @@ prepareData = (text) ->
 FindCity = (param)->
   param = prepareData document.getElementById('search-input').value
 
-  jsonurl = 'http://api.openweathermap.org/data/2.5/weather?APPID=2f42d399f9f939b664dca10abedd0504&q=' + param
+  jsonurl = 'http://api.openweathermap.org/data/2.5/weather?APPID=2f42d399f9f939b664dca10abedd0504&q=' + param + '&units=metric'
   request = new XMLHttpRequest
 
   request.open 'post', jsonurl
