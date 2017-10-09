@@ -1,14 +1,18 @@
+var app = require('./app');
 
 
-import {add} from './app/operations'; //Unexpected token import
-
-
-
-
-console.log('operation list:');
-console.log('add');
-console.log('subtr');
-
+console.log(`
+	operation list:
+	+---+---+---+---+---+
+	-   add             -
+	-   substract       -
+	+   divide          +
+	-   multiply        -
+	-   pow             -
+	-   rad to deg      -
+	+   deg to rad      +
+	---+---+---+---+---+-
+	`);
 
 
 
@@ -18,16 +22,47 @@ const rl = readline.createInterface({
 	input: process.stdin,
 	output: process.stdout
 });
-rl.on('line', (line) => {
-  console.log(`Received: ${line}`);
+
+
+rl.question('What operation do you want to choose? ', (answer, callback) => {
+	console.log(`you have choosen:: ${answer}`);
+
+	rl.question('first number ', (a) => {
+		console.log(a);
+
+		rl.question('secound number ', (b) => {
+			console.log(b);
+
+			if (answer == 'add') {
+				console.log('result is: ' + operations.add(a,b));
+				rl.close();
+			}
+			else if (answer == 'substract') {
+				console.log('result is: ' + operations.substract(a,b));
+				rl.close();
+			}
+			else if (answer == 'divide') {
+				console.log('result is: ' + operations.divide(a,b));
+				rl.close();
+			}
+			else if (answer == 'pow') {
+				console.log('result is: ' + operations.pow(a,b));
+				rl.close();
+			}
+			else if (answer == 'rad') {
+				console.log('result is: ' + operations.rad(a,b));
+				rl.close();
+			}
+			else if (answer == 'deg') {
+				console.log('result is: ' + operations.deg(a,b));
+				rl.close();
+			}
+		});
+	});
 });
 
 
-rl.question('What operation do you want to choose? ', (answer) => {
-	if (answer == 'add') {
-
-	}
-	rl.close();
+rl.on('close', function() {
+	console.log('Have a great day!');
+	process.exit(0);
 });
-
-
