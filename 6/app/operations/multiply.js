@@ -1,5 +1,5 @@
-function substract(a,b){
-	return a-b;
+function multiply(a,b){
+	return parseInt(a) * parseInt(b);
 }
 
-module.exports = substract;
+module.exports = multiply;

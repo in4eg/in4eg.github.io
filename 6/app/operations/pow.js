@@ -1,5 +1,11 @@
-function substract(a,b){
-	return a-b;
+function pow(a,b){
+	var result = a;
+
+	for (var i = 1; i < b; i++) {
+		result = a * result;
+	}
+
+	return result;
 }
 
-module.exports = substract;
+module.exports = pow;
