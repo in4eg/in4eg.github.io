@@ -8,7 +8,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="format-detection" content="telephone=no">
 
-	<link rel="stylesheet" href="css/bundle.min.css">
+	<link rel="stylesheet" href="css/_bundle.min.css">
 
 </head>
 <body>
@@ -18,9 +18,10 @@
 			<div class="inner">
 				<nav class="main-nav">
 					<ul class="nav-list clear">
+						<!-- add class="active" to active li -->
 						<li><a href="#topHeader" data-scrollto="#navSection">Главная</a></li>
 						<li><a href="#">Экпертиза</a></li>
-						<li class="active"><a href="#">Блог</a></li>
+						<li><a href="#">Блог</a></li>
 						<li><a href="#aboutUs" data-scrollto="#aboutUs">О нас</a></li>
 						<li><a href="#" data-scrollto="#contacts">Контакты</a></li>
 					</ul>
@@ -57,7 +58,7 @@
 						<img src="img/logo.png" alt="logo">
 					</a>
 					<a href="#navSection" class="btn btn-link scroll-bottom" data-scrollto="#navSection">
-						<i class="icon icon-down-arrow"></i>
+						<i class="icon icon-arrow-down"></i>
 					</a>
 				</div>
 				<!-- / 1 -->
@@ -65,24 +66,24 @@
 				<!-- 2 -->
 				<div class="skew-nav" id="navSection">
 					<ul class="nav-list clear">
-						<li>
+						<li data-text="О нас">
 							<div class="outer">
-								<div class="bg-cover"><a href="#aboutUs" data-scrollto="#aboutUs"><span class="text">О нас</span></a></div>
+								<a href="#aboutUs" data-scrollto="#aboutUs">О нас</a>
 							</div>
 						</li>
-						<li>
+						<li data-text="Экспертиза">
 							<div class="outer">
-								<div class="bg-cover"><a href="#"><span class="text">Экспертиза</span></a></div>
+								<a href="#">Экспертиза</a>
 							</div>
 						</li>
-						<li>
+						<li data-text="Блог">
 							<div class="outer">
-								<div class="bg-cover"><a href="#"><span class="text">Блог</span></a></div>
+								<a href="#">Блог</a>
 							</div>
 						</li>
-						<li>
+						<li data-text="Контакты">
 							<div class="outer">
-								<div class="bg-cover"><a href="#contacts" data-scrollto="#contacts"><span class="text">Контакты</span></a></div>
+								<a href="#contacts" data-scrollto="#contacts">Контакты</a>
 							</div>
 						</li>
 					</ul>
@@ -90,10 +91,10 @@
 				<!-- / 2 -->
 				
 				<!-- 3 -->
-				<section class="section spaced-top" id="brandSection">
+				<section class="section" id="brandSection">
 					<article class="outer clearfix" id="article1">
 				
-						<figure class="image-cover colored to-right">
+						<figure class="image-cover colored to-right gray-image">
 							<img src="temp/man.png" alt="man">
 						</figure>
 				
@@ -112,16 +113,14 @@
 						</div>
 						<div class="align-right">
 							<button data-open="#article1" class="btn btn-link">
-								<i class="icon icon-right-arrow"></i>
-								<i class="icon icon-right-arrow"></i>
-								<i class="icon icon-right-arrow"></i>
+								<i class="icon icon-arrows"></i>
 							</button>
 						</div>
 					</article>
 					<!-- 2 -->
 						<article class="outer clearfix primary-back" id="article2">
 				
-						<figure class="image-cover to-left">
+						<figure class="image-cover to-left gray-image">
 							<img src="temp/article2.jpg" alt="man">
 						</figure>
 				
@@ -140,9 +139,7 @@
 						</div>
 						<div class="align-right spaced-btn">
 							<button data-open="#article2" class="btn btn-link">
-								<i class="icon icon-right-arrow"></i>
-								<i class="icon icon-right-arrow"></i>
-								<i class="icon icon-right-arrow"></i>
+								<i class="icon icon-arrows"></i>
 							</button>
 						</div>
 					</article>
@@ -152,18 +149,22 @@
 				<!-- 4 -->
 				<section class="full-section">
 					<div class="middle">
-						<div class="outer">
+						<div class="outer" id="section1">
 							<h2 class="large-title">Type something</h2>
-							<div class="paragraph">
+							<div class="paragraph hidden">
+								Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero voluptas odio voluptatibus quae, nemo magni ipsum sed natus dolor. Iste optio minima voluptates magni debitis temporibus, cum eveniet enim ad?
+							</div>
+							<div class="paragraph hidden">
+								Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero voluptas odio voluptatibus quae, nemo magni ipsum sed natus dolor. Iste optio minima voluptates magni debitis temporibus, cum eveniet enim ad?
+							</div>
+							<div class="paragraph hidden">
 								Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero voluptas odio voluptatibus quae, nemo magni ipsum sed natus dolor. Iste optio minima voluptates magni debitis temporibus, cum eveniet enim ad?
 							</div>
 							<!-- link -->
 							<div class="align-center spaced-btn">
-								<a href="#"	class="btn btn-link">
-									<i class="icon icon-right-arrow"></i>
-									<i class="icon icon-right-arrow"></i>
-									<i class="icon icon-right-arrow"></i>
-								</a>
+								<button data-open="#section1" class="btn btn-link">
+									<i class="icon icon-arrows"></i>
+								</button>
 							</div>
 						</div>
 					</div>
@@ -178,13 +179,17 @@
 							<div class="paragraph">
 								Lorem ipsum eu sapien ac placerat neque, mauris. Auctor sed quis, sed, eu In tempor ac maximus porta laoreet, ac, Quisque augue Quisque pharetra ac, Praesent. Lorem ipsum eu sapien ac placerat neque, mauris. Auctor sed quis, sed, eu In tempor ac maximus Lorem ipsum eu sapien ac placerat neque, mauris. Auctor sed quis, sed, eu In tempor ac maximus porta laoreet, ac, Quisque augue Quisque pharetra ac, Praesent. Lorem ipsum eu sapien ac placerat neque, mauris. Auctor sed quis, sed, eu In tempor ac maximus Lorem ipsum eu sapien ac placerat neque, mauris. Auctor sed quis, sed, eu In tempor ac maximus porta laoreet, ac, Quisque augue Quisque pharetra ac, Praesent. Lorem ipsum eu sapien ac placerat neque, mauris. Auctor sed quis, sed, eu In tempor ac maximus Lorem ipsum eu sapien ac placerat neque, Auctor sed quis, sed, eu In tempor ac maximus porta laoreet, ac, Quisque augue Quisque pharetra ac, Praesent.Lorem ipsum eu sapien ac placerat neque,Auctor sed quis, sed, eu In tempor ac maximus porta laoreet, ac, Quisque augue Quisque pharetra ac, Praesent.Lorem ipsum eu sapien ac placerat neque,mauris. 
 							</div>
+							<div class="paragraph hidden">
+								Lorem ipsum eu sapien ac placerat neque, mauris. Auctor sed quis, sed, eu In tempor ac maximus porta laoreet, ac, Quisque augue Quisque pharetra ac, Praesent. Lorem ipsum eu sapien ac placerat neque, mauris. Auctor sed quis, sed, eu In tempor ac maximus Lorem ipsum eu sapien ac placerat neque, mauris. Auctor sed quis, sed, eu In tempor ac maximus porta laoreet, ac, Quisque augue Quisque pharetra ac, Praesent. Lorem ipsum eu sapien ac placerat neque, mauris. Auctor sed quis, sed, eu In tempor ac maximus Lorem ipsum eu sapien ac placerat neque, mauris. Auctor sed quis, sed, eu In tempor ac maximus porta laoreet, ac, Quisque augue Quisque pharetra ac, Praesent. Lorem ipsum eu sapien ac placerat neque, mauris. Auctor sed quis, sed, eu In tempor ac maximus Lorem ipsum eu sapien ac placerat neque, Auctor sed quis, sed, eu In tempor ac maximus porta laoreet, ac, Quisque augue Quisque pharetra ac, Praesent.Lorem ipsum eu sapien ac placerat neque,Auctor sed quis, sed, eu In tempor ac maximus porta laoreet, ac, Quisque augue Quisque pharetra ac, Praesent.Lorem ipsum eu sapien ac placerat neque,mauris. 
+							</div>
+							<div class="paragraph hidden">
+								Lorem ipsum eu sapien ac placerat neque, mauris. Auctor sed quis, sed, eu In tempor ac maximus porta laoreet, ac, Quisque augue Quisque pharetra ac, Praesent. Lorem ipsum eu sapien ac placerat neque, mauris. Auctor sed quis, sed, eu In tempor ac maximus Lorem ipsum eu sapien ac placerat neque, mauris. Auctor sed quis, sed, eu In tempor ac maximus porta laoreet, ac, Quisque augue Quisque pharetra ac, Praesent. Lorem ipsum eu sapien ac placerat neque, mauris. Auctor sed quis, sed, eu In tempor ac maximus Lorem ipsum eu sapien ac placerat neque, mauris. Auctor sed quis, sed, eu In tempor ac maximus porta laoreet, ac, Quisque augue Quisque pharetra ac, Praesent. Lorem ipsum eu sapien ac placerat neque, mauris. Auctor sed quis, sed, eu In tempor ac maximus Lorem ipsum eu sapien ac placerat neque, Auctor sed quis, sed, eu In tempor ac maximus porta laoreet, ac, Quisque augue Quisque pharetra ac, Praesent.Lorem ipsum eu sapien ac placerat neque,Auctor sed quis, sed, eu In tempor ac maximus porta laoreet, ac, Quisque augue Quisque pharetra ac, Praesent.Lorem ipsum eu sapien ac placerat neque,mauris. 
+							</div>
 							<!-- link -->
 							<div class="align-right spaced-top">
-								<a href="#"	class="btn btn-link">
-									<i class="icon icon-right-arrow"></i>
-									<i class="icon icon-right-arrow"></i>
-									<i class="icon icon-right-arrow"></i>
-								</a>
+								<button data-open="#aboutUs" class="btn btn-link">
+									<i class="icon icon-arrows"></i>
+								</button>
 							</div>
 						</div>
 					</div>
@@ -194,7 +199,7 @@
 				<!-- 5 -->
 				<section class="section contact-section" id="contacts">
 					<div class="outer align-right">
-						<figure class="image-cover half">
+						<figure class="image-cover half gray-image">
 							<img src="temp/contact.jpg" alt="contact">
 						</figure>
 				
@@ -207,9 +212,7 @@
 							<div class="align-right spaced-top">
 								<button data-open="#mapSection" class="btn btn-link">
 									<span class="text">карта</span>
-									<i class="icon icon-right-arrow"></i>
-									<i class="icon icon-right-arrow"></i>
-									<i class="icon icon-right-arrow"></i>
+									<i class="icon icon-arrows"></i>
 								</button>
 							</div>
 						</div>
@@ -223,31 +226,41 @@
 				<!-- 5 -->
 				<section class="section form-section">
 					<div class="outer">
-						<div class="form-title">
-							Свяжитесь с нами:
-						</div>
-						<form action="" class="validate-form">
-							<div class="row">
-								<div class="col-xs-12 col-sm-4">
-									<div class="form-group">
-										<input type="text" class="input" placeholder="Имя">
+						<div class="success-fadeout">
+							<div class="cover">
+								<div class="form-title">
+									Свяжитесь с нами:
+								</div>
+								<form action="" class="validate-form">
+									<div class="row">
+										<div class="col-xs-12 col-sm-4">
+											<div class="form-group">
+												<input type="text" class="input" placeholder="Имя">
+											</div>
+										</div>
+										<div class="col-xs-12 col-sm-4">
+											<div class="form-group">
+												<input type="email" class="input email" placeholder="E-mail">
+											</div>
+										</div>
+										<div class="col-xs-12 col-sm-4">
+											<div class="form-group">
+												<input type="text" class="input" placeholder="Сообщение">
+											</div>
+										</div>
+										<div class="col-xs-12">
+											<button type="submit" class="btn btn-block btn-yellow">Отправить сообщение</button>
+										</div>
 									</div>
-								</div>
-								<div class="col-xs-12 col-sm-4">
-									<div class="form-group">
-									<input type="email" class="input email" placeholder="E-mail">
-									</div>
-								</div>
-								<div class="col-xs-12 col-sm-4">
-									<div class="form-group">
-										<input type="text" class="input" placeholder="Сообщение">
-									</div>
-								</div>
-								<div class="col-xs-12">
-									<button type="submit" class="btn btn-block btn-yellow">Отправить сообщение</button>
-								</div>
+								</form>
 							</div>
-						</form>
+							<div class="success-fadein">
+								<div class="form-title">
+									Спасибо за заявку!
+								</div>
+								<div class="paragraph">Мы свяжемся с вами как можно скорее</div>
+							</div>
+						</div>
 					</div>
 				</section>
 				<!-- / 5 -->
