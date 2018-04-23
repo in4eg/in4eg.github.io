@@ -98,31 +98,26 @@ if (document.getElementsByClassName('google-map')) {
           'color': '#d3d3d3'
         }
       ]
-    },
-    {
+    }, {
       'featureType': 'transit',
       'stylers': [
         {
           'color': '#808080'
-        },
-        {
+        }, {
           'visibility': 'off'
         }
       ]
-    },
-    {
+    }, {
       'featureType': 'road.highway',
       'elementType': 'geometry.stroke',
       'stylers': [
         {
           'visibility': 'on'
-        },
-        {
+        }, {
           'color': '#b3b3b3'
         }
       ]
-    },
-    {
+    }, {
       'featureType': 'road.highway',
       'elementType': 'geometry.fill',
       'stylers': [
@@ -130,23 +125,19 @@ if (document.getElementsByClassName('google-map')) {
           'color': '#ffffff'
         }
       ]
-    },
-    {
+    }, {
       'featureType': 'road.local',
       'elementType': 'geometry.fill',
       'stylers': [
         {
           'visibility': 'on'
-        },
-        {
+        }, {
           'color': '#ffffff'
-        },
-        {
+        }, {
           'weight': 1.8
         }
       ]
-    },
-    {
+    }, {
       'featureType': 'road.local',
       'elementType': 'geometry.stroke',
       'stylers': [
@@ -154,20 +145,17 @@ if (document.getElementsByClassName('google-map')) {
           'color': '#d7d7d7'
         }
       ]
-    },
-    {
+    }, {
       'featureType': 'poi',
       'elementType': 'geometry.fill',
       'stylers': [
         {
           'visibility': 'on'
-        },
-        {
+        }, {
           'color': '#ebebeb'
         }
       ]
-    },
-    {
+    }, {
       'featureType': 'administrative',
       'elementType': 'geometry',
       'stylers': [
@@ -175,8 +163,7 @@ if (document.getElementsByClassName('google-map')) {
           'color': '#a7a7a7'
         }
       ]
-    },
-    {
+    }, {
       'featureType': 'road.arterial',
       'elementType': 'geometry.fill',
       'stylers': [
@@ -184,8 +171,7 @@ if (document.getElementsByClassName('google-map')) {
           'color': '#ffffff'
         }
       ]
-    },
-    {
+    }, {
       'featureType': 'road.arterial',
       'elementType': 'geometry.fill',
       'stylers': [
@@ -193,20 +179,17 @@ if (document.getElementsByClassName('google-map')) {
           'color': '#ffffff'
         }
       ]
-    },
-    {
+    }, {
       'featureType': 'landscape',
       'elementType': 'geometry.fill',
       'stylers': [
         {
           'visibility': 'on'
-        },
-        {
+        }, {
           'color': '#efefef'
         }
       ]
-    },
-    {
+    }, {
       'featureType': 'road',
       'elementType': 'labels.text.fill',
       'stylers': [
@@ -214,20 +197,17 @@ if (document.getElementsByClassName('google-map')) {
           'color': '#696969'
         }
       ]
-    },
-    {
+    }, {
       'featureType': 'administrative',
       'elementType': 'labels.text.fill',
       'stylers': [
         {
           'visibility': 'on'
-        },
-        {
+        }, {
           'color': '#737373'
         }
       ]
-    },
-    {
+    }, {
       'featureType': 'poi',
       'elementType': 'labels.icon',
       'stylers': [
@@ -235,8 +215,7 @@ if (document.getElementsByClassName('google-map')) {
           'visibility': 'off'
         }
       ]
-    },
-    {
+    }, {
       'featureType': 'poi',
       'elementType': 'labels',
       'stylers': [
@@ -244,8 +223,7 @@ if (document.getElementsByClassName('google-map')) {
           'visibility': 'off'
         }
       ]
-    },
-    {
+    }, {
       'featureType': 'road.arterial',
       'elementType': 'geometry.stroke',
       'stylers': [
@@ -253,8 +231,7 @@ if (document.getElementsByClassName('google-map')) {
           'color': '#d6d6d6'
         }
       ]
-    },
-    {
+    }, {
       'featureType': 'road',
       'elementType': 'labels.icon',
       'stylers': [
@@ -262,9 +239,7 @@ if (document.getElementsByClassName('google-map')) {
           'visibility': 'off'
         }
       ]
-    },
-    {},
-    {
+    }, {}, {
       'featureType': 'poi',
       'elementType': 'geometry.fill',
       'stylers': [
@@ -343,15 +318,11 @@ if (document.getElementById('map')) {
     zoom = $('#map').data('zoom');
   };
 }
-
-// google.maps.event.addDomListener window, 'load', initMap
 ;$('[data-mask]').each(function(i, input) {
   var mask;
   mask = $(input).attr('data-mask');
   $(input).mask(mask, {});
 });
-
-// placeholder: mask
 ;$(function() {
   var CallPopup, hidePopups;
   $('[data-call]').click(function(e) {
@@ -497,7 +468,6 @@ isNumberKey = function(evt) {
     re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     return re.test(email);
   };
-  // console.log $('.link')
   isValidLink = function(link) {
     var reg;
     reg = /:\/\/(?:www\.)?(facebook)(.*)/;
