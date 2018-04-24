@@ -8,7 +8,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="format-detection" content="telephone=no">
 
-	<link rel="stylesheet" href="css/bundle.min.css">
+	<link rel="stylesheet" href="css/_bundle.min.css">
 
 </head>
 <body>
@@ -16,11 +16,12 @@
 	<header class="main-header" id="topHeader">
 		<div class="container">
 			<div class="inner">
-				<nav class="main-nav">
+			<button type="button" class="btn toggle-btn" data-toggle="#mainNav"><span></span></button>
+				<nav class="main-nav" id="mainNav">
 					<ul class="nav-list clear">
 						<!-- add class="active" to active li -->
-						<li><a href="#topHeader" data-scrollto="#navSection">Главная</a></li>
-						<li class="active"><a href="#">Экпертиза</a></li>
+						<li class="active"><a href="#topHeader" data-scrollto="#navSection">Главная</a></li>
+						<li><a href="#">Экпертиза</a></li>
 						<li><a href="#">Блог</a></li>
 						<li><a href="#aboutUs" data-scrollto="#aboutUs">О нас</a></li>
 						<li><a href="#" data-scrollto="#contacts">Контакты</a></li>
@@ -111,7 +112,7 @@
 						<div class="paragraph hidden" data-hidden>
 							Lorem ipsum eu sapien ac placerat neque, mauris. Auctor sed quis, sed, eu In tempor ac maximus porta laoreet, ac, Quisque augue Quisque pharetra ac, Praesent. Lorem ipsum eu sapien ac placerat neque, mauris. Auctor sed quis, sed, eu In tempor ac maximus  Lorem ipsum eu sapien ac placerat neque, mauris. Auctor sed quis, sed, eu In tempor ac maximus porta laoreet, ac, Quisque augue Quisque pharetra ac, Praesent.Lorem ipsum eu sapien ac placerat neque, Auctor sed quis, sed, eu In tempor ac maximus porta laoreet, ac, Quisque augue Quisque pharetra ac, Praesent.Lorem ipsum eu sapien ac placerat neque,
 						</div>
-						<div class="align-right">
+						<div class="align-right bottom-position">
 							<button data-open="#article1" class="btn btn-link">
 								<span class="icons"><i class="icon icon-arrows"></i></span>
 							</button>
@@ -137,7 +138,7 @@
 						<div class="paragraph hidden" data-hidden>
 							Lorem ipsum eu sapien ac placerat neque, mauris. Auctor sed quis, sed, eu In tempor ac maximus porta laoreet, ac, Quisque augue Quisque pharetra ac, Praesent. Lorem ipsum eu sapien ac placerat neque, mauris. Auctor sed quis, sed, eu In tempor ac maximus  Lorem ipsum eu sapien ac placerat neque, mauris. Auctor sed quis, sed, eu In tempor ac maximus porta laoreet, ac, Quisque augue Quisque pharetra ac, Praesent.Lorem ipsum eu sapien ac placerat neque, Auctor sed quis, sed, eu In tempor ac maximus porta laoreet, ac, Quisque augue Quisque pharetra ac, Praesent.Lorem ipsum eu sapien ac placerat neque,
 						</div>
-						<div class="align-right spaced-btn">
+						<div class="align-right spaced-btn block-position">
 							<button data-open="#article2" class="btn btn-link">
 								<span class="icons"><i class="icon icon-arrows"></i></span>
 							</button>
@@ -233,18 +234,18 @@
 								</div>
 								<form action="" class="validate-form">
 									<div class="row">
-										<div class="col-xs-12 col-sm-4">
+										<div class="col-xs-6 col-md-4">
 											<div class="form-group">
 												<input type="text" class="input" placeholder="Имя">
 											</div>
 										</div>
-										<div class="col-xs-12 col-sm-4">
+										<div class="col-xs-6 col-md-4">
 											<div class="form-group">
 												<input type="email" class="input email" placeholder="E-mail">
 											</div>
 										</div>
-										<div class="col-xs-12 col-sm-4">
-											<div class="form-group">
+										<div class="col-xs-12 col-sm-12 col-md-4">
+											<div class="form-group spaced-sm">
 												<input type="text" class="input" placeholder="Сообщение">
 											</div>
 										</div>

@@ -23,8 +23,42 @@ padding:"inner"+a,content:b,"":"outer"+a},function(c,d){n.fn[d]=function(d,e){va
     $('.main-header').removeClass('scrolled');
   }
 });
+;$('[data-toggle]').click(function() {
+  if ($($(this).data('toggle')).hasClass('active')) {
+    $(this).removeClass('active');
+    $($(this).data('toggle')).removeClass('animated');
+    setTimeout((() => {
+      $($(this).data('toggle')).removeClass('active');
+    }), 250);
+  } else {
+    $($(this).data('toggle')).addClass('active');
+    $(this).addClass('active');
+    setTimeout((() => {
+      $($(this).data('toggle')).addClass('animated');
+    }), 100);
+  }
+});
+
+$('body').click(function(e) {
+  if ($(e.target).closest('[data-toggle], #mainNav').length === 0) {
+    $('#mainNav').removeClass('animated');
+    setTimeout((() => {
+      $('#mainNav').removeClass('active');
+    }), 250);
+  }
+});
+
+$('.nav-list').on('click', 'li', function() {
+  if (window.innerWidth <= 768) {
+    $('#mainNav').removeClass('animated');
+    setTimeout((() => {
+      $('#mainNav').removeClass('active');
+      $('.toggle-btn').removeClass('active');
+    }), 250);
+  }
+});
 ;$(document).ready(function() {
-  var animateHeader, intervals, intervalsSecoundPage, setFooter, typeLetters, waitForFinalEvent;
+  var animateHeader, intervals, intervalsSecoundPage, setBtnColor, setFooter, typeLetters, waitForFinalEvent;
   waitForFinalEvent = (function() {
     var timers;
     timers = {};
@@ -80,9 +114,23 @@ padding:"inner"+a,content:b,"":"outer"+a},function(c,d){n.fn[d]=function(d,e){va
       scrollTop: $($(this).data('scrollto')).offset().top
     }, 500);
   });
+  (setBtnColor = function() {
+    $(document).scroll(function() {
+      var height;
+      height = $('.main-screen').outerHeight() + $('.skew-nav').outerHeight();
+      if ($(document).scrollTop() > height / 2) {
+        $('.toggle-btn').addClass('colored');
+      } else {
+        $('.toggle-btn').removeClass('colored');
+      }
+    });
+  })();
   $(window).resize(function() {
     waitForFinalEvent((function() {
       setFooter();
+      if (window.innerWidth <= 768) {
+        setBtnColor();
+      }
     }), 200, '');
   });
 });
