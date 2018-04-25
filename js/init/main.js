@@ -24,24 +24,26 @@ $(document).ready(function() {
     var div, i, interval, str;
     div = document.getElementById('printed');
     str = document.getElementById('text1').innerHTML;
-    i = 0;
-    interval = setInterval((function() {
-      var tempString;
-      tempString = str.substr(0, i);
-      if (tempString.match(/\[br\]/gim)) {
-        tempString = tempString.replace(/\[br\]/gim, '<br>');
-      } else if (tempString.match(/(\[br\]|\[br|\[b|\[)/gim)) {
-        tempString = tempString.replace(/(\[br\]|\[br|\[b|\[)/gim, '');
-      }
-      div.innerHTML = tempString;
-      if (i < str.length) {
-        i++;
-      } else {
-        clearInterval(interval);
-        $('#caption').addClass('in');
-      }
-    }), 75);
-    intervals.push(interval);
+    if (window.innerWidth >= 480) {
+      i = 0;
+      interval = setInterval((function() {
+        var tempString;
+        tempString = str.substr(0, i);
+        if (tempString.match(/\[br\]/gim)) {
+          tempString = tempString.replace(/\[br\]/gim, '<br>');
+        } else if (tempString.match(/(\[br\]|\[br|\[b|\[)/gim)) {
+          tempString = tempString.replace(/(\[br\]|\[br|\[b|\[)/gim, '');
+        }
+        div.innerHTML = tempString;
+        if (i < str.length) {
+          i++;
+        } else {
+          clearInterval(interval);
+          $('#caption').addClass('in');
+        }
+      }), 75);
+      intervals.push(interval);
+    }
   })();
   (setFooter = function() {
     var height;
