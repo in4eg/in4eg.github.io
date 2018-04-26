@@ -22,3 +22,5 @@ if (document.getElementById('map')) {
     zoom = $('#map').data('zoom');
   };
 }
+
+// google.maps.event.addDomListener window, 'load', initMap

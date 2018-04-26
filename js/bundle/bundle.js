@@ -6,6 +6,7 @@ padding:"inner"+a,content:b,"":"outer"+a},function(c,d){n.fn[d]=function(d,e){va
   var parent;
   parent = $($(this).data('open')).find('[data-hidden]');
   if (parent.hasClass('hidden')) {
+    // $('html,body').animate { scrollTop: parent.offset().top - 30 }, 200
     $(this).addClass('active');
     $($(this).data('open')).addClass('opened');
     parent.removeClass('hidden');
@@ -26,42 +27,35 @@ padding:"inner"+a,content:b,"":"outer"+a},function(c,d){n.fn[d]=function(d,e){va
   if ($($(this).data('toggle')).hasClass('active')) {
     $(this).removeClass('active');
     $($(this).data('toggle')).removeClass('animated');
-    setTimeout(((function(_this) {
-      return function() {
-        $($(_this).data('toggle')).removeClass('active');
-      };
-    })(this)), 250);
+    setTimeout((() => {
+      $($(this).data('toggle')).removeClass('active');
+    }), 250);
   } else {
     $($(this).data('toggle')).addClass('active');
     $(this).addClass('active');
-    setTimeout(((function(_this) {
-      return function() {
-        $($(_this).data('toggle')).addClass('animated');
-      };
-    })(this)), 100);
+    setTimeout((() => {
+      $($(this).data('toggle')).addClass('animated');
+    }), 100);
   }
 });
 
 $('body').click(function(e) {
   if ($(e.target).closest('[data-toggle], #mainNav').length === 0) {
     $('#mainNav').removeClass('animated');
-    setTimeout(((function(_this) {
-      return function() {
-        $('#mainNav').removeClass('active');
-      };
-    })(this)), 250);
+    setTimeout((() => {
+      $('#mainNav').removeClass('active');
+      $('.toggle-btn').removeClass('active');
+    }), 250);
   }
 });
 
 $('.nav-list').on('click', 'li', function() {
   if (window.innerWidth <= 768) {
     $('#mainNav').removeClass('animated');
-    setTimeout(((function(_this) {
-      return function() {
-        $('#mainNav').removeClass('active');
-        $('.toggle-btn').removeClass('active');
-      };
-    })(this)), 250);
+    setTimeout((() => {
+      $('#mainNav').removeClass('active');
+      $('.toggle-btn').removeClass('active');
+    }), 250);
   }
 });
 ;$(document).ready(function() {
@@ -155,26 +149,31 @@ if (document.getElementsByClassName('google-map')) {
           'color': '#d3d3d3'
         }
       ]
-    }, {
+    },
+    {
       'featureType': 'transit',
       'stylers': [
         {
           'color': '#808080'
-        }, {
+        },
+        {
           'visibility': 'off'
         }
       ]
-    }, {
+    },
+    {
       'featureType': 'road.highway',
       'elementType': 'geometry.stroke',
       'stylers': [
         {
           'visibility': 'on'
-        }, {
+        },
+        {
           'color': '#b3b3b3'
         }
       ]
-    }, {
+    },
+    {
       'featureType': 'road.highway',
       'elementType': 'geometry.fill',
       'stylers': [
@@ -182,19 +181,23 @@ if (document.getElementsByClassName('google-map')) {
           'color': '#ffffff'
         }
       ]
-    }, {
+    },
+    {
       'featureType': 'road.local',
       'elementType': 'geometry.fill',
       'stylers': [
         {
           'visibility': 'on'
-        }, {
+        },
+        {
           'color': '#ffffff'
-        }, {
+        },
+        {
           'weight': 1.8
         }
       ]
-    }, {
+    },
+    {
       'featureType': 'road.local',
       'elementType': 'geometry.stroke',
       'stylers': [
@@ -202,17 +205,20 @@ if (document.getElementsByClassName('google-map')) {
           'color': '#d7d7d7'
         }
       ]
-    }, {
+    },
+    {
       'featureType': 'poi',
       'elementType': 'geometry.fill',
       'stylers': [
         {
           'visibility': 'on'
-        }, {
+        },
+        {
           'color': '#ebebeb'
         }
       ]
-    }, {
+    },
+    {
       'featureType': 'administrative',
       'elementType': 'geometry',
       'stylers': [
@@ -220,7 +226,8 @@ if (document.getElementsByClassName('google-map')) {
           'color': '#a7a7a7'
         }
       ]
-    }, {
+    },
+    {
       'featureType': 'road.arterial',
       'elementType': 'geometry.fill',
       'stylers': [
@@ -228,7 +235,8 @@ if (document.getElementsByClassName('google-map')) {
           'color': '#ffffff'
         }
       ]
-    }, {
+    },
+    {
       'featureType': 'road.arterial',
       'elementType': 'geometry.fill',
       'stylers': [
@@ -236,17 +244,20 @@ if (document.getElementsByClassName('google-map')) {
           'color': '#ffffff'
         }
       ]
-    }, {
+    },
+    {
       'featureType': 'landscape',
       'elementType': 'geometry.fill',
       'stylers': [
         {
           'visibility': 'on'
-        }, {
+        },
+        {
           'color': '#efefef'
         }
       ]
-    }, {
+    },
+    {
       'featureType': 'road',
       'elementType': 'labels.text.fill',
       'stylers': [
@@ -254,17 +265,20 @@ if (document.getElementsByClassName('google-map')) {
           'color': '#696969'
         }
       ]
-    }, {
+    },
+    {
       'featureType': 'administrative',
       'elementType': 'labels.text.fill',
       'stylers': [
         {
           'visibility': 'on'
-        }, {
+        },
+        {
           'color': '#737373'
         }
       ]
-    }, {
+    },
+    {
       'featureType': 'poi',
       'elementType': 'labels.icon',
       'stylers': [
@@ -272,7 +286,8 @@ if (document.getElementsByClassName('google-map')) {
           'visibility': 'off'
         }
       ]
-    }, {
+    },
+    {
       'featureType': 'poi',
       'elementType': 'labels',
       'stylers': [
@@ -280,7 +295,8 @@ if (document.getElementsByClassName('google-map')) {
           'visibility': 'off'
         }
       ]
-    }, {
+    },
+    {
       'featureType': 'road.arterial',
       'elementType': 'geometry.stroke',
       'stylers': [
@@ -288,7 +304,8 @@ if (document.getElementsByClassName('google-map')) {
           'color': '#d6d6d6'
         }
       ]
-    }, {
+    },
+    {
       'featureType': 'road',
       'elementType': 'labels.icon',
       'stylers': [
@@ -296,7 +313,9 @@ if (document.getElementsByClassName('google-map')) {
           'visibility': 'off'
         }
       ]
-    }, {}, {
+    },
+    {},
+    {
       'featureType': 'poi',
       'elementType': 'geometry.fill',
       'stylers': [
@@ -375,11 +394,15 @@ if (document.getElementById('map')) {
     zoom = $('#map').data('zoom');
   };
 }
+
+// google.maps.event.addDomListener window, 'load', initMap
 ;$('[data-mask]').each(function(i, input) {
   var mask;
   mask = $(input).attr('data-mask');
   $(input).mask(mask, {});
 });
+
+// placeholder: mask
 ;$(function() {
   var CallPopup, hidePopups;
   $('[data-call]').click(function(e) {
@@ -551,6 +574,7 @@ isNumberKey = function(evt) {
     re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     return re.test(email);
   };
+  // console.log $('.link')
   isValidLink = function(link) {
     var reg;
     reg = /:\/\/(?:www\.)?(facebook)(.*)/;
