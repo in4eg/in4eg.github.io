@@ -3,3 +3,5 @@ $('[data-mask]').each(function(i, input) {
   mask = $(input).attr('data-mask');
   $(input).mask(mask, {});
 });
+
+// placeholder: mask
