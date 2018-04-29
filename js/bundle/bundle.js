@@ -66,7 +66,7 @@ $('.nav-list').on('click', 'li', function() {
   }
 });
 ;$(document).ready(function() {
-  var animateHeader, intervals, intervalsSecoundPage, setBtnColor, setFooter, typeLetters, waitForFinalEvent;
+  var animateHeader, intervals, intervalsSecoundPage, setBtnColor, setFooter, waitForFinalEvent;
   waitForFinalEvent = (function() {
     var timers;
     timers = {};
@@ -85,36 +85,11 @@ $('.nav-list').on('click', 'li', function() {
   (animateHeader = function() {
     setTimeout((function() {
       $('.main-header').addClass('animated');
-    }), 350);
+    }), 400);
     if (window.innerWidth > 640) {
       setTimeout((function() {
         $('.main-screen').addClass('animated');
-      }), 450);
-    }
-  })();
-  (typeLetters = function() {
-    var div, i, interval, str;
-    div = document.getElementById('printed');
-    str = document.getElementById('text1').innerHTML;
-    if (window.innerWidth >= 480) {
-      i = 0;
-      interval = setInterval((function() {
-        var tempString;
-        tempString = str.substr(0, i);
-        if (tempString.match(/\[br\]/gim)) {
-          tempString = tempString.replace(/\[br\]/gim, '<br>');
-        } else if (tempString.match(/(\[br\]|\[br|\[b|\[)/gim)) {
-          tempString = tempString.replace(/(\[br\]|\[br|\[b|\[)/gim, '');
-        }
-        div.innerHTML = tempString;
-        if (i < str.length) {
-          i++;
-        } else {
-          clearInterval(interval);
-          $('#caption').addClass('in');
-        }
-      }), 75);
-      intervals.push(interval);
+      }), 550);
     }
   })();
   (setFooter = function() {

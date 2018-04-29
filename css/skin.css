@@ -336,7 +336,9 @@ select {
   .page-main .container > .inner {
     margin: 0 -15px; }
   .image-cover.to-left {
-    width: 72%; } }
+    width: 72%; }
+  .section-title.spaced-top {
+    margin-top: 100px; } }
 
 @media (max-width: 1199px) {
   .section-title.spaced-top {
@@ -1123,6 +1125,7 @@ select {
   padding-bottom: 170px;
   position: relative;
   background-image: url(../temp/main-screen.jpg);
+  background-color: #fcdffe;
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-position: center;
@@ -1458,11 +1461,11 @@ select {
       .skew-nav .nav-list li:hover:nth-child(1) .outer:after {
         background-position: -186% 69px; }
       .skew-nav .nav-list li:hover:nth-child(2) .outer:after {
-        background-position: -113% -126px; }
+        background-position: -113% -137px; }
       .skew-nav .nav-list li:hover:nth-child(3) .outer:after {
-        background-position: -113% -126px; }
+        background-position: -113% -137px; }
       .skew-nav .nav-list li:hover:nth-child(4) .outer:after {
-        background-position: 72% 42%; }
+        background-position: 72% 99px; }
     .skew-nav .nav-list li:nth-child(1) .outer:after {
       background-image: url(../temp/item1.jpg);
       background-size: cover; }
@@ -1484,16 +1487,16 @@ select {
     .skew-nav .nav-list li:nth-child(4):before {
       top: 120px; }
     .skew-nav .nav-list li:nth-child(1) .outer:after {
-      background-position: -186% 0;
+      background-position: -186% 69px;
       background-size: 200%; }
     .skew-nav .nav-list li:nth-child(2) .outer:after {
-      background-position: -113% 295%;
+      background-position: -113% -137px;
       background-size: 257%; }
     .skew-nav .nav-list li:nth-child(3) .outer:after {
-      background-position: -113% 295%;
+      background-position: -113% -137px;
       background-size: 257%; }
     .skew-nav .nav-list li:nth-child(4) .outer:after {
-      background-position: 72% 48%;
+      background-position: 72% 99px;
       background-size: 263%; }
 
 @media (max-width: 1366px) {
@@ -1501,7 +1504,7 @@ select {
     background-position: 20% top;
     background-size: cover; }
   .skew-nav .nav-list li:nth-child(2) .outer:after {
-    background-position: center top;
+    background-position: center -115px;
     background-size: cover; }
   .skew-nav .nav-list li:nth-child(3) .outer:after {
     background-position: center top;
@@ -1510,7 +1513,15 @@ select {
     background-position: -70% top;
     background-size: cover; }
   .skew-nav .nav-list li:hover:nth-child(1) .outer:after {
-    background-position: -120% 69px; } }
+    background-position: -120% 69px; }
+  .skew-nav .nav-list li:hover:nth-child(1) .outer:after {
+    background-position: 31% 69px; }
+  .skew-nav .nav-list li:hover:nth-child(2) .outer:after {
+    background-position: -106% -153px; }
+  .skew-nav .nav-list li:hover:nth-child(3) .outer:after {
+    background-position: -106% -153px; }
+  .skew-nav .nav-list li:hover:nth-child(4) .outer:after {
+    background-position: 72% 99px; } }
 
 @media (max-width: 1270px) {
   .skew-nav .nav-list li:before {
