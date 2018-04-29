@@ -86,11 +86,9 @@ $('.nav-list').on('click', 'li', function() {
     setTimeout((function() {
       $('.main-header').addClass('animated');
     }), 400);
-    if (window.innerWidth > 640) {
-      setTimeout((function() {
-        $('.main-screen').addClass('animated');
-      }), 550);
-    }
+    setTimeout((function() {
+      $('.main-screen').addClass('animated');
+    }), 550);
   })();
   (setFooter = function() {
     var height;

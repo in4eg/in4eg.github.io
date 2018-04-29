@@ -1355,8 +1355,8 @@ select {
 
 @media (max-width: 479px) {
   .main-screen {
-    padding-bottom: 140px;
-    background-size: 160%; }
+    padding-bottom: 122px;
+    background-size: 117%; }
     .main-screen .logo-holder {
       left: 15px;
       max-width: 110px; }
