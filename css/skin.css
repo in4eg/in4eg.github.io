@@ -1312,7 +1312,8 @@ select {
 
 @media (max-width: 1900px) {
   .main-screen {
-    background-size: cover; } }
+    background-size: 100%;
+    background-position: top; } }
 
 @media (max-width: 1199px) {
   .main-screen .skewed-bg {
@@ -1324,7 +1325,7 @@ select {
 
 @media (max-width: 993px) {
   .main-screen {
-    background-size: contain;
+    background-size: cover;
     background-position: top; }
     .main-screen .skewed-bg {
       padding-top: 500px; }
@@ -1334,24 +1335,36 @@ select {
       left: 50px;
       max-width: 260px; } }
 
+@media (max-width: 960px) and (max-height: 1024px) {
+  .main-screen {
+    background-size: contain; } }
+
+@media (max-width: 768px) and (max-height: 1024px) {
+  .main-screen {
+    background-size: contain; } }
+
 @media (max-width: 768px) {
-  .main-screen .printed {
-    font-size: 80px; }
-  .main-screen .skewed-bg {
-    padding-top: 433px; }
-  .main-screen .logo-holder {
-    left: 40px;
-    max-width: 223px;
-    z-index: 4; } }
+  .main-screen {
+    background-size: contain; }
+    .main-screen .printed {
+      font-size: 80px; }
+    .main-screen .skewed-bg {
+      padding-top: 433px; }
+    .main-screen .logo-holder {
+      left: 40px;
+      max-width: 223px;
+      z-index: 4; } }
 
 @media (max-width: 639px) {
-  .main-screen .skewed-bg {
-    padding-top: 330px; }
-  .main-screen .printed {
-    font-size: 50px; }
-  .main-screen .logo-holder {
-    left: 20px;
-    max-width: 170px; } }
+  .main-screen {
+    background-size: cover; }
+    .main-screen .skewed-bg {
+      padding-top: 330px; }
+    .main-screen .printed {
+      font-size: 50px; }
+    .main-screen .logo-holder {
+      left: 20px;
+      max-width: 170px; } }
 
 @media (max-width: 479px) {
   .main-screen {
@@ -1536,11 +1549,17 @@ select {
 
 @media (max-width: 993px) {
   .skew-nav .nav-list {
-    margin: 0 -30px; }
+    margin: 0 -40px; }
     .skew-nav .nav-list li {
       height: 420px; }
       .skew-nav .nav-list li:before {
         font-size: 32px; }
+      .skew-nav .nav-list li:hover:nth-child(2) .outer:after {
+        background-position: -118% -96px; }
+      .skew-nav .nav-list li:hover:nth-child(3) .outer:after {
+        background-position: -118% -96px; }
+      .skew-nav .nav-list li:hover:nth-child(4) .outer:after {
+        background-position: 72% 0; }
     .skew-nav .nav-list li:nth-child(1):before {
       top: 20px; }
     .skew-nav .nav-list li:nth-child(2):before {

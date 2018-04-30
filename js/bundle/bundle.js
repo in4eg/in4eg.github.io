@@ -82,14 +82,17 @@ $('.nav-list').on('click', 'li', function() {
   })();
   intervals = [];
   intervalsSecoundPage = [];
-  (animateHeader = function() {
+  animateHeader = function() {
     setTimeout((function() {
       $('.main-header').addClass('animated');
     }), 400);
     setTimeout((function() {
       $('.main-screen').addClass('animated');
     }), 550);
-  })();
+  };
+  $(window).on('load', function() {
+    animateHeader();
+  });
   (setFooter = function() {
     var height;
     height = $('.main-footer').outerHeight();
