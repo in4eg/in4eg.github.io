@@ -1339,6 +1339,10 @@ select {
   .main-screen {
     background-size: contain; } }
 
+@media (max-width: 812px) and (max-height: 375px) {
+  .main-screen {
+    background-size: cover; } }
+
 @media (max-width: 768px) and (max-height: 1024px) {
   .main-screen {
     background-size: contain; } }
@@ -1354,6 +1358,10 @@ select {
       left: 40px;
       max-width: 223px;
       z-index: 4; } }
+
+@media (max-width: 750px) {
+  .main-screen {
+    background-size: cover; } }
 
 @media (max-width: 639px) {
   .main-screen {
@@ -1583,13 +1591,17 @@ select {
         margin-top: 65px;
         font-size: 34px; }
       .skew-nav .nav-list li:hover:nth-child(1) .outer:after {
-        background-position: -187% -78%; }
+        background-position: -187% -78%;
+        background-size: cover; }
       .skew-nav .nav-list li:hover:nth-child(2) .outer:after {
-        background-position: -113% 212%; }
+        background-position: 51% 46%;
+        background-size: 70%; }
       .skew-nav .nav-list li:hover:nth-child(3) .outer:after {
-        background-position: -113% 212%; }
+        background-position: 47% 67%;
+        background-size: 70%; }
       .skew-nav .nav-list li:hover:nth-child(4) .outer:after {
-        background-position: 72% 0; }
+        background-position: 44% 3%;
+        background-size: 123%; }
     .skew-nav .nav-list li:nth-child(1):before {
       top: 0; }
     .skew-nav .nav-list li:nth-child(2):before {
@@ -1602,49 +1614,102 @@ select {
       background-position: -187% -78%;
       background-size: cover; }
     .skew-nav .nav-list li:nth-child(2) .outer:after {
-      background-position: -113% 212%;
-      background-size: cover; }
+      background-position: 51% 46%;
+      background-size: 70%; }
     .skew-nav .nav-list li:nth-child(3) .outer:after {
-      background-position: -113% 212%;
-      background-size: cover; }
+      background-position: 47% 67%;
+      background-size: 70%; }
     .skew-nav .nav-list li:nth-child(4) .outer:after {
-      background-position: 72% 0;
-      background-size: cover; } }
+      background-position: 44% 3%;
+      background-size: 123%; } }
 
-@media (max-width: 639px) {
-  .skew-nav .nav-list li {
-    height: 150px; }
-    .skew-nav .nav-list li:before {
-      margin-top: 50px; } }
+@media (max-width: 640px) {
+  .skew-nav .nav-list li:hover:nth-child(1) .outer:after {
+    background-position: 36% -141%;
+    background-size: 80%; }
+  .skew-nav .nav-list li:hover:nth-child(2) .outer:after {
+    background-position: 51% 46%;
+    background-size: 80%; }
+  .skew-nav .nav-list li:hover:nth-child(3) .outer:after {
+    background-position: 47% 67%;
+    background-size: 70%; }
+  .skew-nav .nav-list li:hover:nth-child(4) .outer:after {
+    background-position: 49% 3%;
+    background-size: 157%; }
+  .skew-nav .nav-list li:nth-child(1) .outer:after {
+    background-position: 36% -141%;
+    background-size: 80%; }
+  .skew-nav .nav-list li:nth-child(2) .outer:after {
+    background-position: 51% 46%;
+    background-size: 80%; }
+  .skew-nav .nav-list li:nth-child(3) .outer:after {
+    background-position: 47% 67%;
+    background-size: 70%; }
+  .skew-nav .nav-list li:nth-child(4) .outer:after {
+    background-position: 49% 3%;
+    background-size: 157%; } }
 
-@media (max-width: 479px) {
+@media (max-width: 593px) {
   .skew-nav .nav-list li {
-    height: 120px; }
+    height: 160px; }
     .skew-nav .nav-list li:before {
       font-size: 24px;
       margin-top: 40px; }
     .skew-nav .nav-list li:nth-child(4):before {
       margin-left: 0; }
     .skew-nav .nav-list li:hover:nth-child(1) .outer:after {
-      background-position: -187% -114%; }
+      background-position: -187% -114%;
+      background-size: cover; }
     .skew-nav .nav-list li:hover:nth-child(2) .outer:after {
-      background-position: -113% 59%; }
+      background-position: -113% 48%;
+      background-size: cover; }
     .skew-nav .nav-list li:hover:nth-child(3) .outer:after {
-      background-position: -113% 59%; }
+      background-position: -113% 48%;
+      background-size: cover; }
     .skew-nav .nav-list li:hover:nth-child(4) .outer:after {
-      background-position: 72% 0; }
+      background-position: 72% 0;
+      background-size: cover; }
   .skew-nav .nav-list li:nth-child(1) .outer:after {
-    background-position: -187% -114%;
+    background-position: -187% -79%;
     background-size: cover; }
   .skew-nav .nav-list li:nth-child(2) .outer:after {
-    background-position: -113% 59%;
+    background-position: -113% 48%;
     background-size: cover; }
   .skew-nav .nav-list li:nth-child(3) .outer:after {
-    background-position: -113% 59%;
+    background-position: -113% 48%;
     background-size: cover; }
   .skew-nav .nav-list li:nth-child(4) .outer:after {
-    background-position: 72% 0;
+    background-position: 72% 1%;
     background-size: cover; } }
+
+@media (max-width: 480px) {
+  .skew-nav .nav-list li {
+    height: 140px;
+    background-size: cover; }
+    .skew-nav .nav-list li:hover:nth-child(1) .outer:after {
+      background-position: -187% -120%;
+      background-size: cover; }
+    .skew-nav .nav-list li:hover:nth-child(2) {
+      background-size: cover; }
+  .skew-nav .nav-list li:nth-child(1) .outer:after {
+    background-position: -187% -120%;
+    background-size: cover; } }
+
+@media (max-width: 325px) {
+  .skew-nav .nav-list li {
+    height: 140px;
+    background-size: cover; }
+    .skew-nav .nav-list li:hover:nth-child(1) .outer:after {
+      background-position: -187% -152%; }
+    .skew-nav .nav-list li:hover:nth-child(4) .outer:after {
+      background-position: 40% -2%;
+      background-size: 150%; }
+  .skew-nav .nav-list li:nth-child(1) .outer:after {
+    background-position: -187% -152%;
+    background-size: cover; }
+  .skew-nav .nav-list li:nth-child(4) .outer:after {
+    background-position: 40% -2%;
+    background-size: 150%; } }
 
 .full-section {
   position: relative;
