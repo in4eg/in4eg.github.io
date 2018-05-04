@@ -1315,18 +1315,30 @@ select {
     background-size: 100%;
     background-position: top; } }
 
+@media (width: 1440px) {
+  .main-screen {
+    background-size: 120%;
+    background-position: -189px 0; } }
+
+@media (max-width: 1440px) {
+  .main-screen {
+    padding-bottom: 98px; } }
+
 @media (max-width: 1199px) {
-  .main-screen .skewed-bg {
-    padding-top: 610px; }
-  .main-screen .printed {
-    font-size: 120px; }
-  .main-screen .logo-holder {
-    max-width: 330px; } }
+  .main-screen {
+    padding-bottom: 170px; }
+    .main-screen .skewed-bg {
+      padding-top: 610px; }
+    .main-screen .printed {
+      font-size: 120px; }
+    .main-screen .logo-holder {
+      max-width: 330px; } }
 
 @media (max-width: 993px) {
   .main-screen {
-    background-size: cover;
-    background-position: top; }
+    background-size: 100%;
+    background-position: top;
+    padding-bottom: 138px; }
     .main-screen .skewed-bg {
       padding-top: 500px; }
     .main-screen .printed {
@@ -1335,17 +1347,10 @@ select {
       left: 50px;
       max-width: 260px; } }
 
-@media (max-width: 960px) and (max-height: 1024px) {
+@media (width: 960px) {
   .main-screen {
-    background-size: contain; } }
-
-@media (max-width: 812px) and (max-height: 375px) {
-  .main-screen {
-    background-size: cover; } }
-
-@media (max-width: 768px) and (max-height: 1024px) {
-  .main-screen {
-    background-size: contain; } }
+    background-size: 120%;
+    background-position: -189px 0; } }
 
 @media (max-width: 768px) {
   .main-screen {
@@ -1359,24 +1364,26 @@ select {
       max-width: 223px;
       z-index: 4; } }
 
+@media (max-width: 768px) and (max-height: 1024px) {
+  .main-screen {
+    background-size: 100%; } }
+
 @media (max-width: 750px) {
   .main-screen {
-    background-size: cover; } }
+    background-size: 100%; } }
 
 @media (max-width: 639px) {
-  .main-screen {
-    background-size: cover; }
-    .main-screen .skewed-bg {
-      padding-top: 330px; }
-    .main-screen .printed {
-      font-size: 50px; }
-    .main-screen .logo-holder {
-      left: 20px;
-      max-width: 170px; } }
+  .main-screen .skewed-bg {
+    padding-top: 330px; }
+  .main-screen .printed {
+    font-size: 50px; }
+  .main-screen .logo-holder {
+    left: 20px;
+    max-width: 170px; } }
 
 @media (max-width: 479px) {
   .main-screen {
-    padding-bottom: 122px;
+    padding-bottom: 89px;
     background-size: 117%; }
     .main-screen .logo-holder {
       left: 15px;
@@ -1508,7 +1515,7 @@ select {
     .skew-nav .nav-list li:nth-child(4):before {
       top: 120px; }
     .skew-nav .nav-list li:nth-child(1) .outer:after {
-      background-position: -186% 69px;
+      background-position: -186% 0;
       background-size: 200%; }
     .skew-nav .nav-list li:nth-child(2) .outer:after {
       background-position: -113% -137px;
@@ -1562,12 +1569,18 @@ select {
       height: 420px; }
       .skew-nav .nav-list li:before {
         font-size: 32px; }
+      .skew-nav .nav-list li:hover:nth-child(1) .outer:after {
+        background-position: 22% -90px; }
       .skew-nav .nav-list li:hover:nth-child(2) .outer:after {
         background-position: -118% -96px; }
       .skew-nav .nav-list li:hover:nth-child(3) .outer:after {
         background-position: -118% -96px; }
       .skew-nav .nav-list li:hover:nth-child(4) .outer:after {
         background-position: 72% 0; }
+      .skew-nav .nav-list li:nth-child(1) .outer:after {
+        background-position: 20% -97px; }
+      .skew-nav .nav-list li:nth-child(2) .outer:after {
+        background-position: center -95px; }
     .skew-nav .nav-list li:nth-child(1):before {
       top: 20px; }
     .skew-nav .nav-list li:nth-child(2):before {
@@ -1591,8 +1604,8 @@ select {
         margin-top: 65px;
         font-size: 34px; }
       .skew-nav .nav-list li:hover:nth-child(1) .outer:after {
-        background-position: -187% -78%;
-        background-size: cover; }
+        background-position: 39% -86%;
+        background-size: 93%; }
       .skew-nav .nav-list li:hover:nth-child(2) .outer:after {
         background-position: 51% 46%;
         background-size: 70%; }
@@ -1686,6 +1699,8 @@ select {
   .skew-nav .nav-list li {
     height: 140px;
     background-size: cover; }
+    .skew-nav .nav-list li:before {
+      top: 15px; }
     .skew-nav .nav-list li:hover:nth-child(1) .outer:after {
       background-position: -187% -120%;
       background-size: cover; }
