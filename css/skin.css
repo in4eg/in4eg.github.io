@@ -1148,10 +1148,10 @@ select {
       line-height: 0.7;
       margin-bottom: -90px; }
   .main-screen svg {
-    -webkit-transform: translateY(-20%);
-    -ms-transform: translateY(-20%);
-    transform: translateY(-20%);
-    max-width: 70%; }
+    -webkit-transform: translateY(-22%) translateX(6%);
+    -ms-transform: translateY(-22%) translateX(6%);
+    transform: translateY(-22%) translateX(6%);
+    max-width: 51%; }
     .main-screen svg path {
       opacity: 0; }
   .main-screen path:nth-child(1) {
@@ -1403,7 +1403,12 @@ select {
 
 @media (max-width: 768px) {
   .main-screen {
-    background-size: contain; }
+    background-size: 110%;
+    background-position: -41px 0; }
+    .main-screen svg {
+      -webkit-transform: translateY(-14%) translateX(4%);
+      -ms-transform: translateY(-14%) translateX(4%);
+      transform: translateY(-14%) translateX(4%); }
     .main-screen .printed {
       font-size: 80px; }
     .main-screen .skewed-bg {
@@ -1413,19 +1418,14 @@ select {
       max-width: 223px;
       z-index: 4; } }
 
-@media (max-width: 768px) and (max-height: 1024px) {
-  .main-screen {
-    background-size: 100%; } }
-
 @media (max-width: 750px) {
   .main-screen {
-    background-size: 129%; }
+    background-size: 129%;
+    background-position: -102px 0; }
     .main-screen svg {
       max-width: 58%; } }
 
 @media (max-width: 639px) {
-  .main-screen .skewed-bg {
-    padding-top: 330px; }
   .main-screen .printed {
     font-size: 50px; }
   .main-screen .logo-holder {
@@ -1434,7 +1434,7 @@ select {
 
 @media (max-width: 479px) {
   .main-screen {
-    padding-bottom: 170px;
+    padding-bottom: 110px;
     background-size: 150%;
     background-position: -115px 0; }
     .main-screen svg {
@@ -1447,6 +1447,10 @@ select {
       bottom: 175px; } }
 
 @media (max-width: 375px) {
+  .main-screen {
+    padding-bottom: 90px; } }
+
+@media (max-width: 350px) {
   .main-screen {
     padding-bottom: 89px;
     background-size: 164%; }
