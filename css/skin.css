@@ -1353,8 +1353,14 @@ select {
 
 @media (width: 1440px) {
   .main-screen {
-    background-size: 120%;
-    background-position: -189px 0; } }
+    background-size: 110%;
+    background-position: -61px 0; }
+    .main-screen svg {
+      max-width: 53%;
+      width: 53%;
+      -webkit-transform: translateY(-19%) translateX(9%);
+      -ms-transform: translateY(-19%) translateX(9%);
+      transform: translateY(-19%) translateX(9%); } }
 
 @media (max-width: 1440px) {
   .main-screen {
@@ -1383,10 +1389,17 @@ select {
       left: 50px;
       max-width: 260px; } }
 
-@media (width: 960px) {
+@media (max-width: 960px) {
   .main-screen {
-    background-size: 120%;
-    background-position: -189px 0; } }
+    background-size: 111%;
+    background-position: -47px 0; }
+    .main-screen .skewed-bg {
+      padding-top: 535px; }
+    .main-screen svg {
+      -webkit-transform: translateY(-14%) translateX(6%);
+      -ms-transform: translateY(-14%) translateX(6%);
+      transform: translateY(-14%) translateX(6%);
+      max-width: 50%; } }
 
 @media (max-width: 768px) {
   .main-screen {
@@ -1406,7 +1419,9 @@ select {
 
 @media (max-width: 750px) {
   .main-screen {
-    background-size: 100%; } }
+    background-size: 129%; }
+    .main-screen svg {
+      max-width: 58%; } }
 
 @media (max-width: 639px) {
   .main-screen .skewed-bg {
@@ -1420,9 +1435,14 @@ select {
 @media (max-width: 479px) {
   .main-screen {
     padding-bottom: 89px;
-    background-size: 117%; }
+    background-size: 164%; }
+    .main-screen svg {
+      max-width: 71%; }
+    .main-screen .skewed-bg {
+      padding-top: 352px; }
     .main-screen .logo-holder {
       left: 15px;
+      bottom: 175px;
       max-width: 110px; }
     .main-screen .scroll-bottom {
       bottom: 195px; } }
