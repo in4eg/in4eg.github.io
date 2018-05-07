@@ -1129,7 +1129,8 @@ select {
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-position: center;
-  background-size: 84%; }
+  background-size: 84%;
+  background-position: top center; }
   .main-screen .printed {
     -webkit-transform: rotate(-6deg);
     -ms-transform: rotate(-6deg);
@@ -1445,6 +1446,11 @@ select {
       max-width: 115px; }
     .main-screen .scroll-bottom {
       bottom: 175px; } }
+
+@media (max-width: 450px) {
+  .main-screen {
+    padding-bottom: 110px;
+    background-size: 150%; } }
 
 @media (max-width: 375px) {
   .main-screen {
