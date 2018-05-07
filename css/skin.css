@@ -1434,10 +1434,24 @@ select {
 
 @media (max-width: 479px) {
   .main-screen {
+    padding-bottom: 170px;
+    background-size: 150%;
+    background-position: -115px 0; }
+    .main-screen svg {
+      max-width: 78%; }
+    .main-screen .logo-holder {
+      left: 15px;
+      bottom: 190px;
+      max-width: 115px; }
+    .main-screen .scroll-bottom {
+      bottom: 175px; } }
+
+@media (max-width: 375px) {
+  .main-screen {
     padding-bottom: 89px;
     background-size: 164%; }
     .main-screen svg {
-      max-width: 71%; }
+      max-width: 84%; }
     .main-screen .skewed-bg {
       padding-top: 352px; }
     .main-screen .logo-holder {
@@ -1445,7 +1459,7 @@ select {
       bottom: 175px;
       max-width: 110px; }
     .main-screen .scroll-bottom {
-      bottom: 195px; } }
+      bottom: 170px; } }
 
 .skew-nav {
   margin-top: -170px;
