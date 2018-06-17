@@ -260,6 +260,7 @@ select {
   font-size: 0;
   text-align: left; }
   .popup-inner .form-part {
+    height: 626px;
     font-weight: 300;
     line-height: 1.6;
     display: inline-block;
@@ -268,6 +269,7 @@ select {
     border-right: 1px solid #e0e1e1;
     box-shadow: 4px 0px 8px -5px rgba(0, 0, 0, 0.75); }
   .popup-inner .message-part {
+    height: 626px;
     font-size: 13px;
     font-weight: 300;
     line-height: 1.6;
