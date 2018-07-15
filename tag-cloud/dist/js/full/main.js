@@ -1,4 +1,4 @@
-var canvas, centerX, centerY, ctx, drawCircle, getRandomColor, height, math, radius, setCanvasSize, tags, width, writeText;
+var canvas, centerX, centerY, coef, ctx, drawCircle, getRandomColor, height, math, radius, setCanvasSize, tags, width, writeText;
 
 (function() {
   var requestAnimationFrame;
@@ -57,7 +57,9 @@ tags = {
   'vue': '#'
 };
 
-radius = canvas.width / 15;
+coef = 8;
+
+radius = canvas.width / coef;
 
 centerX = canvas.width / 2;
 
@@ -85,9 +87,11 @@ getRandomColor = function() {
 };
 
 writeText = function() {
-  var finalX, finalY, i, link, n, startX, startY, tag, tagWidth, totalHeight, totalWidth, word;
-  startX = centerX - centerX / 4;
-  startY = centerY - centerY / 2;
+  var coefX, coefY, finalX, finalY, i, link, n, startX, startY, tag, tagWidth, totalHeight, totalWidth, word;
+  coefX = coef / 2;
+  coefY = coef / 4;
+  startX = centerX - centerX / coefX;
+  startY = centerY - centerY / coefY;
   finalX = startX + radius * 2;
   finalY = startY + radius * 2;
   totalWidth = startX;

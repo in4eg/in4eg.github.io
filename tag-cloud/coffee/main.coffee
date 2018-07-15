@@ -52,7 +52,9 @@ tags = {
 	'vue': '#'
 }
 
-radius = canvas.width / 15
+coef = 8
+
+radius = canvas.width / coef
 centerX = canvas.width / 2
 centerY = canvas.height / 2
 
@@ -78,8 +80,10 @@ getRandomColor = ->
 	color
 
 writeText = ->
-	startX = centerX - centerX/4
-	startY = centerY - centerY/2
+	coefX = coef / 2
+	coefY = coef / 4
+	startX = centerX - centerX/coefX
+	startY = centerY - centerY/coefY
 	finalX = startX + radius*2
 	finalY = startY + radius*2
 
