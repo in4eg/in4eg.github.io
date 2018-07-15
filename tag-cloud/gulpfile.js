@@ -1,38 +1,30 @@
-/*--------------------------- variables --------------------------*/
-
 var PATH = '',
 		OPTIONS = {
 			serverHost: 'localhost',
 			serverPort: 1111,
 			serverLivereload: true,
 			coffeeWraping: true,
-			notices: false
+			notices: true
 		};
 
-/*---------------------------- modules ----------------------------*/
+var gulp = require('gulp'),
+		connect = require('gulp-connect'),
+		coffee = require('gulp-coffee'),
+		clean = require('gulp-clean'),
+		sass = require('gulp-sass'),
+		colors = require('colors'),
+		fileinclude = require('gulp-include'),
+		cssmin = require('gulp-cssmin'),
+		rename = require('gulp-rename'),
+		filelist = require('gulp-filelist'),
+		using = require('gulp-using'),
+		map = require('map-stream'),
+		plumber = require('gulp-plumber'),
+		autoprefixer = require('gulp-autoprefixer'),
+		jsmin = require('gulp-jsmin'),
 
-var fs 						= require('fs'),
-		gulp 					= require('gulp'),
-		connect 			= require('gulp-connect'),
-		coffee 				= require('gulp-coffee'),
-		sass 					= require('gulp-sass'),
-		clean 				= require('gulp-clean'),
-		colors 				= require('colors'),
-		fileinclude 	= require('gulp-include'),
-		cssmin 				= require('gulp-cssmin'),
-		rename 				= require('gulp-rename'),
-		plumber 			= require('gulp-plumber'),
-		autoprefixer 	= require('gulp-autoprefixer'),
-		jsmin 				= require('gulp-minify'),
-		concat 				= require('gulp-concat'),
-		zip 					= require('gulp-zip'),
-
-		// notifications
 		exec = require("child_process").exec;
 
-/*---------------------------- helpers ----------------------------*/
-
-// notifications function
 var execute = function(command, callback){
 	exec(command, function(error, stdout, stderr){
 		if (callback){
@@ -41,7 +33,8 @@ var execute = function(command, callback){
 	});
 };
 
-// console log for SASS task
+execute("notify-send 'Gulp.js' 'Система сборки успешно запущена.' -i dialog-apply");
+
 var logSASS = function(err) {
 	var mess = err.message.replace(/(\n|\r|Current dir:)/gim, '');
 	if (OPTIONS.notices === true) {
@@ -53,7 +46,6 @@ var logSASS = function(err) {
 	);
 };
 
-// console log for CoffeeScript task
 var logCoffeeScript = function(err) {
 	var mess = err.message.replace(/(\n|\r|Current dir:)/gim, '');
 	if (OPTIONS.notices === true) {
@@ -65,188 +57,113 @@ var logCoffeeScript = function(err) {
 	);
 };
 
-/*----------------------------- tasks ----------------------------*/
-
-// console log for SASS task
 gulp.task('connect', function(){
 	connect.server({
 		host: OPTIONS.serverHost,
 		port: OPTIONS.serverPort,
-		livereload: {
-			port: 2233
-		},
+		livereload: OPTIONS.serverLivereload,
 		root: [PATH+'dist',PATH+'dev-tools',PATH+'scss',PATH+'server']
 	});
 });
 
-// SASS compilation
+gulp.task('CoffeeScript', function(){
+	var src = gulp.src([PATH+'coffee/*coffee', PATH+'coffee/*/*coffee'])
+		.pipe(plumber())
+		.pipe(fileinclude());
+	if (OPTIONS.coffeeWraping === true){
+		src
+			.pipe(plumber({
+				errorHandler: function(err){
+					logCoffeeScript(err);
+				}
+			}))
+			.pipe(coffee({bare: true}))
+			.pipe(gulp.dest(PATH+'dist/js/full'))
+			.pipe(jsmin())
+			.pipe(rename({suffix: '.min'}))
+			.pipe(gulp.dest(PATH+'dist/js'));
+	} else {
+		src
+			.pipe(plumber({
+				errorHandler: function(err){
+					logCoffeeScript(err);
+				}
+			}))
+			.pipe(coffee())
+			.pipe(gulp.dest(PATH+'dist/js/full'))
+			.pipe(jsmin())
+			.pipe(rename({suffix: '.min'}))
+			.pipe(gulp.dest(PATH+'dist/js'));
+	}
+	src.pipe(connect.reload());
+});
+
 gulp.task('SASS', function(){
-	gulp.src([
-			PATH+'scss/variables.scss',
-			PATH+'scss/skin.scss',
-			PATH+'scss/components/**/*.scss', // По-идее этим: [ scss/**/*.scss ] можно заменить первые 4 строчки.
-			PATH+'scss/media/*.scss',
-			'!'+PATH+'scss/bundle.scss'
-		])
+	var src = gulp.src(PATH+'scss/*.scss');
+	src
 		.pipe(plumber({
 			errorHandler: function(err){
 				logSASS(err);
 			}
 		}))
-		.pipe(concat('bundle.scss'))
 		.pipe(sass())
 		.pipe(autoprefixer({
 			cascade: false,
 			browsers: [
-				'Chrome > 50', 'Firefox > 40', 'iOS > 7', 'Opera > 20',
-				'Explorer > 10', 'Edge > 10']
+				'Chrome > 30', 'Firefox > 20', 'iOS > 5', 'Opera > 12',
+				'Explorer > 8', 'Edge > 10']
+		}))
+		.pipe(gulp.dest(PATH+'dist/css/full'))
+		.pipe(cssmin())
+		.pipe(rename({
+			suffix: '.min'
 		}))
 		.pipe(gulp.dest(PATH+'dist/css'))
-});
-
-// CSS concat / reload
-gulp.task('CSS', function(){
-	return gulp.src([
-			PATH+'dist/css/*.css',
-			'!'+PATH+'dist/css/bundle.min.css'
-		])
-		.pipe(concat('bundle.min.css'))
-		.pipe(cssmin())
-		.pipe(gulp.dest(PATH+'dist/css/'))
 		.pipe(connect.reload());
 });
 
-
-// clean html
-gulp.task('html-clean', function(){
-	return gulp.src(PATH+"dist/*.html")
-			.pipe(clean({read: false}));
-});
-
-// HTML includer
-gulp.task('HTML-include', ['html-clean'], function(){
-	return gulp.src(PATH+'html/*.html')
+gulp.task('HTML-include', function(){
+	var src = gulp.src(PATH+'html/*.html');
+	src
 		.pipe(plumber())
 		.pipe(fileinclude())
 		.pipe(gulp.dest(PATH+'dist/'))
-});
-
-// HTML reload
-gulp.task('HTML', ['HTML-include'], function(){
-	return gulp.src(PATH+'dist/*html')
-		.pipe(connect.reload())
-});
-
-// CoffeeScript compiler
-gulp.task('CoffeeScript', function(){
-	return gulp.src([PATH+'coffee/*coffee', PATH+'coffee/*/*coffee'])
-		.pipe(plumber())
-		.pipe(fileinclude())
-		.pipe(plumber({
-			errorHandler: function(err){
-				logCoffeeScript(err);
-			}
-		}))
-		.pipe(coffee({bare: true}))
-		.pipe(gulp.dest(PATH+'dist/js'))
-});
-
-// Javascript concat / reload
-gulp.task('Javascript', ['CoffeeScript'], function(){
-	return gulp.src([
-			PATH+'dist/js/lib/*.js',
-			PATH+'dist/js/plugins/*.js',
-			PATH+'dist/js/init/*.js',
-			PATH+'dist/js/*.js',
-			'!'+PATH+'dist/js/bundle.js'
-		])
-		.pipe(concat('bundle.js', {newLine: ';'}))
-		.pipe(gulp.dest(PATH+'dist/js'))
 		.pipe(connect.reload());
 });
 
-// Javascript concat / reload
-gulp.task('Javascript-min', ['CoffeeScript'], function(){
-	return gulp.src([
-			PATH+'dist/js/lib/*.js',
-			PATH+'dist/js/plugins/*.js',
-			PATH+'dist/js/init/*.js',
-			PATH+'dist/js/*.js',
-			'!'+PATH+'dist/js/bundle.js'
-		])
-		.pipe(concat('bundle.js', {newLine: ';'}))
-		.pipe(jsmin())
-		.pipe(gulp.dest(PATH+'dist/js'));
+gulp.task('CSS', function(){
+	src = gulp.src(PATH+'dist/css/*.css');
+	src.pipe(connect.reload());
 });
 
-
-gulp.task('ugly', ['Javascript-min'], function(){
-	var content = fs.readFileSync(PATH+'dist/js/bundle-min.js', 'utf8');
-	fs.writeFile(PATH+'dist/js/bundle.js', content);
-	fs.unlink(PATH+'dist/js/bundle-min.js');
+gulp.task('Javascript', function(){
+	src = gulp.src(PATH+'dist/js/*.js');
+	src.pipe(connect.reload());
+});
+gulp.task('HTML', function(){
+	src = gulp.src(PATH+'dist/*html');
+	src.pipe(connect.reload());
 });
 
-// arcive
-gulp.task('create-zip', [
-		'CoffeeScript',
-		'HTML-include',
-		'SASS',
-		'Javascript-min',
-		'HTML',
-		'CSS',
-		'ugly'
-	], function(){
-	gulp.src([PATH+'dist/**/*', '!'+PATH+'dist/**/dist.zip'])
-		.pipe(zip('dist.zip'))
-		.pipe(gulp.dest('dist'))
+gulp.task('Watch-task', function(){
+	gulp.watch(PATH+'coffee/*coffee', 				['CoffeeScript']);
+	gulp.watch(PATH+'coffee/*/*coffee',				['CoffeeScript']);
+	gulp.watch(PATH+'scss/*.scss', 						['SASS']);
+	gulp.watch(PATH+'scss/*/*.scss', 					['SASS']);
+	gulp.watch(PATH+'html/*html', 						['HTML-include']);
+	gulp.watch(PATH+'html/includes/*html', 		['HTML-include']);
+	// gulp.watch(PATH+'dist/css/*css', 					['CSS']);
+	// gulp.watch(PATH+'dist/js/*js', 						['Javascript']);
+	// gulp.watch(PATH+'dist/*html', 						['HTML']);
 });
 
-// watch task
-gulp.task('Watch-dev', function(){
-	gulp.watch(PATH+'coffee/**/*coffee', 				['Javascript']);
-	gulp.watch(PATH+'scss/**/*.scss', 					['SASS']);
-	gulp.watch([
-		PATH+'dist/css/*.css',
-		'!'+PATH+'dist/css/bundle.min.css'
-	], 																					['CSS']);
-	gulp.watch(PATH+'html/**/*html', 						['HTML-include', 'HTML']);
-});
-
-
-
-/*
-	Production
-	`gulp production`
-	`npm run prod`
-*/
-gulp.task('production', [
-	'html-clean',
-	'CoffeeScript',
-	'HTML-include',
-	'SASS',
-	'Javascript',
-	'HTML',
-	'CSS',
-	'create-zip'
-], function(){
-	execute("notify-send 'Gulp.js' 'Production mode' -i dialog-apply");
-});
-
-/*
-	Development
-	`gulp`
-	`npm run dev`
-*/
 gulp.task('default', [
-	'html-clean',
 	'CoffeeScript',
-	'Watch-dev',
+	'Watch-task',
 	'SASS',
-	'CSS',
 	'HTML-include',
-	'Javascript',
-	'HTML',
+	// 'CSS',
+	// 'HTML',
+	// 'Javascript',
 	'connect'
-], function(){
-	execute("notify-send 'Gulp.js' 'Development mode' -i dialog-apply");
-});
+]);
