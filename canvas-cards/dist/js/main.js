@@ -1,6 +1,6 @@
 var cards = [{
-	title: "Lorem ipsum dolor s - - -- it - - amet.",
-	caption: "CLorem - ipsum-dolor sit a - m-et, consectetur adipisicing elit. Odit, accusantium.",
+	title: "Lorem ipsum dolor sit amet.",
+	caption: "CLorem ipsum-dolor sit a met, consectetur adipisicing elit. Odit, accusantium.",
 	image: "https://i2.wp.com/beebom.com/wp-content/uploads/2016/01/Reverse-Image-Search-Engines-Apps-And-Its-Uses-2016.jpg?resize=640%2C426",
 	button: "Cat"
 },{
@@ -41,8 +41,9 @@ setCanvasSize();
 
 ctx = canvas.getContext('2d');
 
-
 var cardWidth = 300;
+var cardPadding = 20;
+
 
 function wrapText(context, text, x, y, maxWidth, lineHeight) {
 	var words = text.split(/( |\s|\,\-)/gim);
@@ -68,8 +69,8 @@ function wrapText(context, text, x, y, maxWidth, lineHeight) {
 
 var drawtext = function(text, offsetTop, font, color, lineHeight) {
 	var lineHeight = lineHeight;
-	var x = 0;
-	var y = offsetTop;
+	var x = cardPadding;
+	var y = offsetTop + cardPadding * 2;
 
 	ctx.font = font;
 	ctx.fillStyle = color;
@@ -80,10 +81,15 @@ var drawtext = function(text, offsetTop, font, color, lineHeight) {
 
 var titleHeight = undefined;
 var captionHeight = undefined;
+var btnHeight = undefined;
+var imageHeight = undefined;
+
 
 var getTextHeight = function(text, font, titleLineHeight) {
+	var totalWidth = cardWidth - cardPadding;
 	var block = document.createElement('div');
-	block.style.cssText = 'position:absolute; top: 0px; left: 0; width:' + cardWidth + 'px; font: ' + font + '; line-height:' + titleLineHeight + 'px; ';
+
+	block.style.cssText = 'position:absolute; top: 0px; left: 0; width:' + totalWidth + 'px; font: ' + font + '; line-height:' + titleLineHeight + 'px; ';
 	block.innerHTML = text
 
 	document.body.appendChild(block);
@@ -94,43 +100,46 @@ var getTextHeight = function(text, font, titleLineHeight) {
 }
 
 var drawBtn = function(text, offset, font, background, color, btnLHeight) {
-	console.log(text);
 	var lineHeight = lineHeight;
-	var x = 0;
-	var y = offset;
+	var x = cardPadding;
+	var y = offset + cardPadding * 2;
+
+	btnTextHeigth = getTextHeight(text, font, lineHeight);
+
+	btnHeight = btnTextHeigth + cardPadding * 2;
+	btnWidth = ctx.measureText(text).width + cardPadding * 2;
+
+	ctx.beginPath();
+	ctx.fillStyle = background;
+	ctx.fillRect(cardPadding, offset + cardPadding * 2, btnWidth, btnHeight);
+	ctx.fill();
 
 	ctx.font = font;
 	ctx.fillStyle = color;
-	ctx.textBaseline = 'top';
-	ctx.fillText(text, x, y);
-	// ctx.textAlign = 'center';
+	ctx.fillText(text, x + cardPadding, y + cardPadding);
+}
 
-	btnTextHeigth = getTextHeight(text, font, lineHeight);
-	console.log(btnTextHeigth);
 
-	console.log(ctx.measureText(text).width)
-
+var drawCard = function(height, padding) {
+	ctx.beginPath();
+	ctx.fillStyle = '#fff';
+	ctx.rect(0, 0, cardWidth + padding * 2, height + padding * 5);
+	ctx.fill();
+	ctx.lineWidth = 1;
+	ctx.strokeStyle = '#e3effb';
+	ctx.stroke();
 }
 
 var renderCard = function(cards, cardWidth) {
-	// console.log(cards);
 
 	for (var i = 0; i < cards.length; i++) {
-		// console.log([
-		// 	cards[0].title,
-		// 	cards[0].caption,
-		// 	cards[0].image,
-		// 	cards[0].button
-		// 	]);
-
 		var cardImage = new Image();
-		cardImage.src = cards[0].image;
+		cardImage.src = cards[2].image;
 
 		cardImage.onload = function() {
-			var imageRatio = cardImage.naturalHeight / cardImage.naturalWidth;
 
+			var imageRatio = cardImage.naturalHeight / cardImage.naturalWidth;
 			imageRatio = cardImage.naturalHeight / cardImage.naturalWidth;
-			ctx.drawImage(cardImage, 0, 0, cardWidth, cardWidth * imageRatio);
 
 			// title
 			var imageHeight = cardWidth * imageRatio;
@@ -138,33 +147,42 @@ var renderCard = function(cards, cardWidth) {
 			var titleColor = '#305496';
 			var titleLineHeight = 34;
 
-			drawtext(cards[0].title, imageHeight, titleFont, titleColor, titleLineHeight);
+			// gereral wrap
+			var totalHeight = imageHeight + titleHeight + captionHeight + btnHeight;
+			drawCard(totalHeight, cardPadding);
 
-			getTextHeight(cards[0].title, titleFont, titleLineHeight);
-			titleHeight = getTextHeight(cards[0].title, titleFont, titleLineHeight);
+			// image
+			ctx.drawImage(cardImage, cardPadding, cardPadding, cardWidth, cardWidth * imageRatio);
+
+
+			drawtext(cards[2].title, imageHeight, titleFont, titleColor, titleLineHeight);
+
+			getTextHeight(cards[2].title, titleFont, titleLineHeight);
+			titleHeight = getTextHeight(cards[2].title, titleFont, titleLineHeight);
 
 			// caption
 			var captionFont = '18px Arial';
 			var captionColor = '#006699';
 			var captionLineHeight = 28;
-			var captionOffset = imageHeight + titleHeight + 20;
+			var captionOffset = imageHeight + titleHeight + cardPadding;
 
-			drawtext(cards[0].caption, captionOffset, captionFont, captionColor, captionLineHeight);
+			drawtext(cards[2].caption, captionOffset, captionFont, captionColor, captionLineHeight);
 
-			captionHeight = getTextHeight(cards[0].caption, captionFont, captionLineHeight);
-			// console.log(captionHeight);
+			captionHeight = getTextHeight(cards[2].caption, captionFont, captionLineHeight);
 
 			// button
 			var btnFont = '18px Arial';
-			var btnTextColor = '#fff';
-			var btnColor = '#006699';
+			var btnTextColor = '#000';
+			var btnColor = '#770b71';
 			var btnLineHeight = 28;
-			var btnOffset = captionOffset + captionHeight + 20;
+			var btnOffset = captionOffset + captionHeight + cardPadding;
 
-			drawBtn(cards[0].button, btnOffset, btnFont, btnColor, btnTextColor, btnLineHeight);
+			drawBtn(cards[2].button, btnOffset, btnFont, btnColor, btnTextColor, btnLineHeight);
+
 		};
 	}
 }
+
 renderCard(cards, cardWidth)
 
 
