@@ -16,26 +16,7 @@ ctx = canvas.getContext('2d');
 var cardWidth = 300;
 var cardPadding = 20;
 
-var renderCard = function(cards, cardWidth, cardPadding) {
-
-	var titleStyle = {
-		font: '28px Arial',
-		textColor: '#000',
-		lineHeight: 34
-	};
-
-	var captionStyle = {
-		font: '16px Arial',
-		textColor: '#999',
-		lineHeight: 22
-	};
-
-	var btnStyle = {
-		font: '18px Arial',
-		textColor: '#000',
-		background: '#d1d5da',
-		lineHeight: 28
-	};
+var renderCard = function(cards, cardWidth, cardPadding, style) {
 
 	var cardImage = new Image();
 	cardImage.src = cards[2].image;
@@ -45,13 +26,13 @@ var renderCard = function(cards, cardWidth, cardPadding) {
 		var imageRatio = cardImage.naturalHeight / cardImage.naturalWidth;
 		// title
 		var imageSize = cardWidth * imageRatio;
-		var title = new TextElement(cards[2].title, imageSize, titleStyle.font, titleStyle.textColor, titleStyle.lineHeight);
+		var title = new TextElement(cards[2].title, imageSize, style.titleStyle.font, style.titleStyle.textColor, style.titleStyle.lineHeight);
 		// caption
 		var captionOffset = imageSize + title.height + cardPadding;
-		var caption = new TextElement(cards[2].caption, captionOffset, captionStyle.font, captionStyle.textColor, captionStyle.lineHeight);
+		var caption = new TextElement(cards[2].caption, captionOffset, style.captionStyle.font, style.captionStyle.textColor, style.captionStyle.lineHeight);
 		// button
 		var btnPosition = captionOffset + caption.height + cardPadding;
-		var btn = new BtnElement(cards[2].button, btnPosition, btnStyle.font, btnStyle.background, btnStyle.textColor, btnStyle.lineHeight);
+		var btn = new BtnElement(cards[2].button, btnPosition, style.btnStyle.font, style.btnStyle.background, style.btnStyle.textColor, style.btnStyle.lineHeight);
 
 		// render wrap
 		var totalHeigth = title.height + caption.height + imageSize + btn.height;
@@ -64,11 +45,12 @@ var renderCard = function(cards, cardWidth, cardPadding) {
 		caption.render();
 		btn.render();
 	};
-}
+};
 
-renderCard(cards, cardWidth, cardPadding)
+renderCard(cards, cardWidth, cardPadding, cardStyle);
 
 
 window.addEventListener('resize', function() {
 	setCanvasSize();
+	renderCard(cards, cardWidth, cardPadding, cardStyle);
 });

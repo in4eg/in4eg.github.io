@@ -27,5 +27,7 @@ function BtnElement(text, offset, font, background, color, btnLHeight){
 		ctx.font = font;
 		ctx.fillStyle = color;
 		ctx.fillText(text, cardPadding * 2, y + this.height / 4);
+
+
 	}
 }

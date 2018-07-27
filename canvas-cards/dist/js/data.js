@@ -24,3 +24,22 @@ var cards = [{
 	image: "http://kb4images.com/images/image/37185176-image.jpg",
 	button: "Elephant"
 }];
+
+
+var cardStyle = {
+	titleStyle: {
+		font: '28px Arial',
+		textColor: '#000',
+		lineHeight: 34
+	},
+	captionStyle: {
+		font: '16px Arial',
+		textColor: '#999',
+		lineHeight: 22
+	},
+	btnStyle: {
+		font: '18px Arial',
+		textColor: '#000',
+		background: '#d1d5da',
+	}
+}
