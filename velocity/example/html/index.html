@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+	<meta name="format-detection" content="telephone=no">
+
+	<link rel="stylesheet" href="css/bundle.min.css">
+
+</head>
+<body>
+
+	#=include includes/header.html
+
+	<main>
+		<canvas id="canvas"></canvas>
+		<div class="ui">
+			<input type="range" id="range" min="0" max="1" value="0.5" step="0.01">
+			<span id="range-data">0.5</span>
+		</div>
+	</main>
+
+	#=include includes/footer.html
+
+	<script src="js/vector.js"></script>
+	<script src="js/main.js"></script>
+
+</body>
+</html>
