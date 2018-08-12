@@ -91,9 +91,22 @@
   !*** ./src/index.ts ***!
   \**********************/
 /*! no static exports found */
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
 
-eval("\n\n//# sourceURL=webpack:///./src/index.ts?");
+"use strict";
+eval("\nObject.defineProperty(exports, \"__esModule\", { value: true });\nvar vector_1 = __webpack_require__(/*! ./vector */ \"./src/vector.ts\");\nvar v1 = new vector_1.Vector(70, 120);\nconsole.log(v1);\n\n\n//# sourceURL=webpack:///./src/index.ts?");
+
+/***/ }),
+
+/***/ "./src/vector.ts":
+/*!***********************!*\
+  !*** ./src/vector.ts ***!
+  \***********************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+eval("\nObject.defineProperty(exports, \"__esModule\", { value: true });\nvar Vector = /** @class */ (function () {\n    function Vector(vectorX, vectorY) {\n        this.x = 0;\n        this.y = 0;\n        this.x = vectorX;\n        this.y = vectorY;\n    }\n    Vector.prototype.getAngle = function () {\n        return Math.atan2(this.y, this.x);\n    };\n    Vector.prototype.getLength = function () {\n        return Math.sqrt(this.x * this.x + this.y * this.y);\n    };\n    Vector.prototype.setAngle = function (angle) {\n        var length = this.getLength();\n        this.x = Math.cos(angle) * length;\n        this.y = Math.sin(angle) * length;\n        return this;\n    };\n    Vector.prototype.setLength = function (length) {\n        var angle = this.getAngle();\n        this.x = Math.cos(angle) * length;\n        this.y = Math.sin(angle) * length;\n        return this;\n    };\n    Vector.prototype.add = function (vector) {\n        return new Vector(this.x + vector.x, this.y + vector.y);\n    };\n    Vector.prototype.substract = function (vector) {\n        return new Vector(this.x - vector.x, this.y - vector.y);\n    };\n    Vector.prototype.substractFrom = function (vector) {\n        return new Vector(vector.x - this.x, vector.y - this.y);\n    };\n    Vector.prototype.multiply = function (value) {\n        return new Vector(this.x * value, this.y * value);\n    };\n    Vector.prototype.divide = function (value) {\n        return new Vector(this.x / value, this.y / value);\n    };\n    Vector.prototype.clamp = function (min, max) {\n        return new Vector(this.x = (this.x < min.x) ? min.x : (this.x > max.x) ? max.x : this.x, this.y = (this.y < min.y) ? min.y : (this.y > max.y) ? max.y : this.y);\n    };\n    Vector.prototype.lerp = function (vector, coef) {\n        if (coef === void 0) { coef = 0; }\n        return new Vector(this.x + (vector.x - this.x) * coef, this.y + (vector.y - this.y) * coef);\n    };\n    return Vector;\n}());\nexports.Vector = Vector;\n;\n\n\n//# sourceURL=webpack:///./src/vector.ts?");
 
 /***/ })
 
