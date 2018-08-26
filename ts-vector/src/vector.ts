@@ -53,5 +53,14 @@ export class Vector {
 			this.y + (vector.y - this.y) * coef
 			);
 	}
+	deg2rad(): number {
+		// 360 / Math.PI = 114.59155902616465
+		var angle = this.getAngle();
+		return angle * 114.59155902616465;
+	}
+	deg2Rad(): number {
+		// Math.PI / 360 = 0.008726646259971648
+		var angle = this.getAngle();
+		return angle * 0.008726646259971648;
+	}
 };
-
