@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
+	<meta name="format-detection" content="telephone=no">
+	<meta name="RATING" content="RTA-5042-1996-1400-1577-RTA">
+	<meta name="Rating" content="mature">
+
+	<!-- Start of Social Graph Protocol Meta Data -->
+	<meta property="og:type" content="website">
+	<meta property="og:title" content="Chat Main">
+	<meta property="og:description" content="Main Page">
+	<!-- End of Social Graph Protocol Meta Data -->
+
+	<title>Chat :: Main</title>
+
+	<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+
+	<link rel="stylesheet" href="css/grid.css">
+	<link rel="stylesheet" href="css/skin.css">
+
+	<style>
+		.canvas-cover {
+			position: relative;
+			padding-top: 100%;
+			background-color: rgba(48,128,236, 0.1);
+		}
+		.canvas-cover canvas {
+			position: absolute;
+			top: 0; left: 0;
+			width: 100%; height: 100%;
+		}
+	</style>
+</head>
+<body>
+
+	<main>
+		<section class="section">
+			<div class="container">
+				<h1 class="spaced-bottom">By ClassName</h1>
+				<div class="row">
+					<div class="col-xs-6 col-md-3">
+						<div class="canvas-cover">
+							<canvas id="canvas1" class="confetti-canvas"></canvas>
+						</div>
+					</div>
+					<div class="col-xs-6 col-md-3">
+						<div class="canvas-cover">
+							<canvas id="canvas2" class="confetti-canvas"></canvas>
+						</div>
+					</div>
+					<div class="col-xs-6 col-md-3">
+						<div class="canvas-cover">
+							<canvas id="canvas3" class="confetti-canvas"></canvas>
+						</div>
+					</div>
+					<div class="col-xs-6 col-md-3">
+						<div class="canvas-cover">
+							<canvas id="canvas4" class="confetti-canvas"></canvas>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="section">
+			<div class="container">
+				<h1 class="spaced-bottom">By Id</h1>
+				<div class="row">
+					<div class="col-xs-6 col-md-3">
+						<div class="canvas-cover">
+							<canvas id="canvasId1" class="canvas"></canvas>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	</main>
+</body>
+
+<script>
+		// initialize by Classname
+		var canvasElements = document.getElementsByClassName("confetti-canvas");
+		Array.prototype.forEach.call(canvasElements, function(slide, index) {
+			var element = canvasElements.item(index);
+			setCanvasAnimation(element);
+		});
+	// byId
+	var canvas1 = document.getElementById("canvasId1");
+	setCanvasAnimation(canvas1);
+
+	// canvas animation
+	function clamp(value, min, max){
+		return value < min ? min : value > max ? max : value;
+	};
+
+	function lerp(start, end, t) {
+		return start * (1 - t) + end * t;
+	};
+
+	function setCanvasAnimation(canvas) {
+
+		var config = {
+			pointsMax: 10,
+			maxParticleSize: 10,
+			speed: 20,
+			colorVariation: 50
+		};
+
+		var pixelRatio = window.devicePixelRatio || 1;
+		var canvas = canvas;
+		var ctx = canvas.getContext('2d');
+		var width = 0, height = 0;
+
+		function setCanvasSize() {
+			canvas.width = canvas.parentElement.getBoundingClientRect().width * pixelRatio || 165 * pixelRatio;
+			canvas.height = canvas.parentElement.getBoundingClientRect().height * pixelRatio || 300 * pixelRatio;
+
+			width = canvas.width;
+			height = canvas.height;
+		};
+
+		setCanvasSize();
+
+		window.addEventListener('resize', setCanvasSize);
+
+		function getRandomColor() {
+			var letters = '0123456789ABCDEF';
+			var color = '#';
+			for (var i = 0; i < 6; i++) {
+				color += letters[Math.floor(Math.random() * 16)];
+			}
+			return color;
+		}
+
+		Circle = function(x, y, radius, color){
+			this.x = x || Math.round(Math.random() * canvas.width);
+			this.y = y || Math.round(Math.random() * canvas.height);
+			this.radius = radius || Math.round(Math.random() * config.maxParticleSize);
+			this.vx = -5 + Math.random()*10;
+			this.vy = .2* this.radius;
+			this.color = color;
+			this.opacity = 1;
+
+			this.draw = function(){
+				ctx.beginPath();
+				ctx.arc(this.x, this.y, this.radius, 0,Math.PI *2, false);
+				ctx.globalAlpha = this.opacity;
+				ctx.fillStyle = this.color;
+				ctx.shadowBlur = 5;
+				ctx.shadowColor = this.color;
+				ctx.fill();
+				ctx.closePath();
+			}
+			this.update = function(){
+				if (this.x < canvas.width - radius*2 && this.x > radius*2) {
+					this.x = (this.x + this.vx/config.speed);
+				} else {
+					this.replace();
+				}
+				if (this.y < canvas.height - radius*2 && this.y > radius*2) {
+					this.y = (this.y + this.vy/config.speed);
+				} else {
+					this.replace();
+				}
+				this.changeAlpha();
+				this.changeRadius();
+				this.draw(this.x, this.y, this.radius, this.color);
+			}
+			this.changeAlpha = function() {
+				var step = 1/canvas.height/this.radius;
+				this.opacity -= step;
+
+				if (this.opacity <= 0) {
+					this.replace();
+				}
+			}
+			this.changeRadius = function() {
+				var step = 1/this.radius/config.speed;
+				this.radius = clamp(this.radius - step, 0, this.radius);
+			}
+			this.updatePosition = function(x, y){
+				this.x = x; this.y = y;
+			}
+			this.replace = function(){
+				this.opacity = 1;
+				this.radius = radius || Math.round(Math.random() * config.maxParticleSize);
+				this.x = Math.round(Math.random() * canvas.width);
+				this.y = Math.round(Math.random() * canvas.height);
+			}
+		};
+
+		var pointsArray = [];
+
+		function animateCircle() {
+			ctx.clearRect(0, 0, width, height);
+
+			for (var i = 0; i < pointsArray.length; i++ ){
+				pointsArray[i].update();
+			}
+			requestAnimationFrame(animateCircle);
+		};
+
+		function drawCircle() {
+			for ( var i = 0; i < config.pointsMax; i++ ){
+		// Возвращает случайное число между min (включительно) и max (не включая max)
+		// Math.random() * (max - min) + min;
+		var radius = Math.ceil(Math.random() * config.maxParticleSize);
+		// учитывая ширину частицы и отступы по краям
+		var x = Math.random() * (width - radius*2) + radius;
+		var y = Math.random() * (height - radius*2) + radius;
+		pointsArray.push(new Circle(x, y, radius, getRandomColor()));
+	};
+	animateCircle()
+};
+
+drawCircle()
+
+
+function getCursorPosition(canvas, event) {
+	var rect = canvas.getBoundingClientRect();
+	var x = event.clientX - rect.left;
+	var y = event.clientY - rect.top;
+	return {x: x, y: y};
+}
+
+//report the mouse position on click
+canvas.addEventListener("click", function (event) {
+	var coords = getCursorPosition(canvas, event);
+	for (var i = 0; i < pointsArray.length; i++ ){ 
+		pointsArray[i].updatePosition(coords.x, coords.y);
+	}
+});
+};
+</script>
+</html>
