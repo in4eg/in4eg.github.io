@@ -2380,8 +2380,7 @@ a {
 
 .video-cover {
   padding-top: 56.3%;
-  position: relative;
-  background: red; }
+  position: relative; }
   .video-cover iframe {
     border: 0;
     position: absolute;
