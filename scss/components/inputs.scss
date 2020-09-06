@@ -1,0 +1,32 @@
+.form-group {
+	padding: 22px 0;
+
+	.input {
+		border: 1px solid rgba(#fff, 0.6);
+		background-color: transparent;
+		color: #fff;
+		height: 46px;
+		display: block;
+		width: 100%;
+		padding: 10px 15px;
+		font-family: $font;
+		font-size: 16px;
+		font-weight: 400;
+
+		@include placeholder(#fff);
+	}
+
+	&.error {
+
+		.input {
+			border-color: $danger;
+		}
+	}
+
+	&.success {
+
+		.input {
+			border-color: $success;
+		}
+	}
+}

@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+	<meta charset="UTF-8">
+	<title>1000 :: Main</title>
+	<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="format-detection" content="telephone=no">
+
+	<link rel="stylesheet" href="css/bundle.min.css">
+
+</head>
+<body class="main-page">
+	<!-- preloader -->
+<!-- 	<section class="preloader-section">
+		#= include includes/preloader-section.html
+	</section> -->
+	<!-- / preloader -->
+	<!-- banner -->
+	<section class="banner-section section">
+		<!-- header -->
+		#= include includes/main-header.html
+		<!-- / header -->
+		<figure class="main-banner image-cover">
+			<img src="images/main-banner.jpg" alt="main-banner" class="image-responsive" draggable="false">
+		</figure>
+		<div class="banner-caption">
+			<div class="verticaly-middle">
+				<div class="inner">
+					<div class="caption-figures">
+						<img src="images/figure/figure-banner1.png" alt="shape" class="shape-bottom" draggable="false">
+						<img src="images/figure/figure-banner2.png" alt="shape" class="shape-top animated" draggable="false">
+					</div>
+					<h1 class="main-title">
+						нерухомість <br> Черкаси
+					</h1>
+					<div class="city-options">
+						<!-- class active -->
+						<a class="city-item" href="#">
+							<figure class="image-cover">
+								<img src="images/banner-cherkassy.jpg" alt="cherkassy" draggable="false">
+								<figcaption class="caption">Черкаси</figcaption>
+							</figure>
+						</a>
+						<a class="city-item" href="#">
+							<figure class="image-cover">
+								<img src="images/banner-lviv.jpg" alt="lviv" draggable="false">
+								<figcaption class="caption">Львів</figcaption>
+							</figure>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- / banner -->
+
+	<main class="main-overlay">
+		<!-- items-section -->
+		<section class="items-section section">
+			<div class="caption-figures">
+				<img src="images/figure/figure-items-left.png" alt="shape" class="shape-left">
+			</div>
+			<div class="container">
+				<div class="row paddless-row">
+					<div class="col-xs-12 col-sm-6 col-md-3">
+						<a class="detail-item" href="#">
+							<figure class="image-cover">
+								<img src="images/item1.jpg" alt="item" draggable="false">
+								<figcaption class="caption">Квартири</figcaption>
+							</figure>
+							<div class="icon-cover">
+								<i class="icon icon-plus"></i>
+							</div>
+						</a>
+					</div>
+					<div class="col-xs-12 col-sm-6 col-md-3">
+						<a class="detail-item" href="#">
+							<figure class="image-cover">
+								<img src="images/item2.jpg" alt="item" draggable="false">
+								<figcaption class="caption">Будинки</figcaption>
+							</figure>
+							<div class="icon-cover">
+								<i class="icon icon-plus"></i>
+							</div>
+						</a>
+					</div>
+					<div class="col-xs-12 col-sm-6 col-md-3">
+						<a class="detail-item" href="#">
+							<figure class="image-cover">
+								<img src="images/item3.jpg" alt="item" draggable="false">
+								<figcaption class="caption">Ділянки</figcaption>
+							</figure>
+							<div class="icon-cover">
+								<i class="icon icon-plus"></i>
+							</div>
+						</a>
+					</div>
+					<div class="col-xs-12 col-sm-6 col-md-3">
+						<a class="detail-item" href="#">
+							<figure class="image-cover">
+								<img src="images/item4.jpg" alt="item" draggable="false">
+								<figcaption class="caption">Комерція</figcaption>
+							</figure>
+							<div class="icon-cover">
+								<i class="icon icon-plus"></i>
+							</div>
+						</a>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- / items-section -->
+
+		<!-- counters section -->
+		#= include includes/counters-section.html
+		<!-- / counters section -->
+
+		<!-- new object slider section -->
+		#= include includes/object-slider-section.html
+		<!-- / new object slider section -->
+
+		<!-- employees slider section -->
+		#= include includes/employees-slider-section.html
+		<!-- / employees slider section -->
+
+		<!-- news-section -->
+		<section class="section news-section">
+			<div class="container">
+				<h2 class="section-title align-center">Останні новини</h2>
+				#= include includes/news-section.html
+				<div class="btn-cover align-center">
+					<a href="#" class="btn btn-primary">
+						<span class="text">Інші новини</span>
+						<span class="fader"></span>
+					</a>
+				</div>
+			</div>
+		</section>
+		<!-- / news-section -->
+
+		<!-- form-section section -->
+		#= include includes/form-section.html
+		<!-- / form-section section -->
+
+		<!-- about us -->
+		#= include includes/about-us-section.html
+		<!-- / about us -->
+	</main>
+	<!-- main footer -->
+	#= include includes/main-footer.html
+	<!-- / main footer -->
+
+	<!-- font -->
+	<link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap" rel="stylesheet">
+	<!-- map -->
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDX5G4kr9nfwMSvnydJHAgLFaCXBywjUtI"></script>
+	<!-- places for map -->
+	<script>
+		var places = [
+			{ title: '1000 Варiантiв', address: 'м. Черкаси, вул. Небесної Сотні (Леніна), 31 оф. 5', position: [49.4407874793488, 32.06693841569514], main: true
+			}
+		];
+	</script>
+
+	<script src="js/bundle.js"></script>
+</body>
+</html>

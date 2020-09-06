@@ -1,0 +1,48 @@
+.main-footer {
+	border-top: 3px solid #47515b;
+
+	.footer-bottom {
+		background-color: #0f1a27;
+		color: #fff;
+
+		.footer-nav {
+			font-size: 0;
+
+			.nav-item {
+				display: inline-block;
+
+			}
+
+			.nav-link {
+				color: #fff;
+				font-size: 14px;
+				font-weight: 400;
+				line-height: 24px;
+				letter-spacing: 0.35px;
+				padding: 6px 10px 7px;
+
+				&:hover {
+					color: $primary;
+				}
+			}
+		}
+
+		.copy {
+
+			.text {
+				font-size: 14px;
+				font-weight: 400;
+				letter-spacing: 0.35px;
+				display: inline-block;
+				vertical-align: middle;
+				margin-right: 7px;
+			}
+
+			.link {
+				display: inline-block;
+				vertical-align: middle;
+				font-size: 0;
+			}
+		}
+	}
+}

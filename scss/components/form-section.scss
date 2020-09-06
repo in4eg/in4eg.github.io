@@ -1,0 +1,63 @@
+.form-section {
+	padding: 57px 0;
+
+	.section-inner {
+		background-image: url(../images/form-back.jpg);
+		background-size: cover;
+		font-size: 0;
+		position: relative;
+
+		.caption-figures {
+			position: absolute;
+			right: -107px; top: -126px;
+			pointer-events: none;
+		}
+
+		.image-side {
+			display: inline-block;
+			vertical-align: bottom;
+			position: relative;
+			width: 49%;
+
+			.support-image {
+				position: absolute;
+				bottom: 0; left: 32px;
+				max-width: 100%;
+			}
+		}
+		.caption-side {
+			display: inline-block;
+			vertical-align: top;
+			width: 51%;
+			padding: 73px 0 56px;
+
+			.section-title {
+				color: #fff;
+				margin: 0 0 16px;
+			}
+			.subtitle {
+				color: #fff;
+				font-size: 16px;
+				font-weight: 400;
+				line-height: 23.98px;
+			}
+
+			.support-form {
+				max-width: 80.5%;
+				text-align: center;
+
+				.form-group {
+					padding-left: 33px;
+					padding-right: 34px;
+					margin: 0 0 6px;
+				}
+
+				.btn {
+					padding-left: 32px;
+					padding-right: 32px;
+				}
+			}
+
+		}
+	}
+}

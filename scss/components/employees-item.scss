@@ -1,0 +1,78 @@
+.employees-item {
+
+	.image-cover {
+		padding-top: 109%;
+
+		&:hover {
+
+			.name {
+				background-color: $primary;
+			}
+		}
+	}
+
+	.name {
+		position: absolute;
+		bottom: 0;
+		left: 0; right: 0;
+		background-color: $secondary;
+		z-index: 1;
+		display: block;
+		font-size: 18px;
+		font-weight: 400;
+		line-height: 26px;
+		text-align: center;
+		color: #fff;
+		padding: 5px 10px;
+		transition: background-color .3s;
+	}
+
+	.details {
+		padding: 12px 17px;
+		text-align: center;
+		max-height: 217px;
+		overflow: hidden;
+
+		.title {
+			color: $gray;
+			font-size: 16px;
+			font-weight: 700;
+			line-height: 24px;
+			margin: 0 0 4px;
+			height: 24px;
+			overflow: hidden;
+			white-space: nowrap;
+		}
+
+		.contact-list {
+
+			.list-item {
+				color: $gray;
+				font-size: 16px;
+				font-weight: 400;
+
+				.link {
+					color: $gray;
+
+					&:hover {
+						color: $primary;
+					}
+				}
+				.mail-link {
+					margin: 0 0 9px;
+				}
+			}
+		}
+
+		.social-list {
+			margin: 20px -8px 2px;
+
+			.list-item {
+				display: inline-block;
+				vertical-align: middle;
+				padding: 0 8px;
+
+			}
+		}
+	}
+}
