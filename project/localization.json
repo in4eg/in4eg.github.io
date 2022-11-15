@@ -1,0 +1,106 @@
+{
+	"nation.all": "All",
+	"nation.ger": "Germany",
+	"nation.rus": "USSR",
+	"nation.ukr": "Ukraine",
+	"nation.isr": "Israel",
+	"nation.usa": "USA",
+	"nation.ita": "Italy",
+	"nation.eng": "Britain",
+
+	"buy": "Buy for ",
+	"buy.free": "Free download",
+
+	"m4a3_hvss.name": "M4A3 76W HVSS \"Fury\"",
+	"m4a3_hvss.desc": "The M4 Sherman, officially Medium Tank, M4, was the most widely used medium tank by the United States and Western Allies in World War II. The M4 Sherman proved to be reliable, relatively cheap to produce, and available in great numbers. It was also the basis of several other armored fighting vehicles including self-propelled artillery, tank destroyers, and recovery vehicles.  --- Read more: [https://en.wikipedia.org/wiki/M4_Sherman](Wikipedia)",
+
+	"panther_g.name": "Panther (G)",
+	"panther_g.desc": "The Panther was intended to counter the Soviet T-34 medium tank and to replace the Panzer III and Panzer IV. Nevertheless, it served alongside the Panzer IV and the heavier Tiger I until the end of the war. It is considered one of the best tanks of World War II for its excellent firepower, protection and mobility although its reliability in early times were less impressive. --- Read more: [https://en.wikipedia.org/wiki/Panther_tank](Wikipedia)",
+
+	"merkava_4.name": "Merkava MK IV",
+	"merkava_4.desc": "he Mark IV is the most recent variant of the Merkava tank, which has been in development since 1999 and production since 2004. The upgrade's development was announced in an October 1999 edition of the military publication Bamachaneh (\"At the Camp\"). However, the Merkava Mark III remained in production until 2003. The first Merkava IVs were in production in limited numbers by the end of 2004 --- Read more: [https://en.wikipedia.org/wiki/Merkava#Merkava_Mark_IV](Wikipedia)",
+
+	"tiger_2.name": "Königstiger (H / P)",
+	"tiger_2.desc": "The Tiger II was the successor to the Tiger I, combining the latter's thick armour with the armour sloping used on the Panther medium tank. The tank weighed almost 70 tonnes, and was protected by 100 to 185 mm (3.9 to 7.3 in) of armour to the front. It was armed with the long barrelled 8.8 cm KwK 43 L/71 anti-tank cannon. The chassis was also the basis for the Jagdtiger turretless Jagdpanzer anti-tank vehicle --- Read more: [https://en.wikipedia.org/wiki/Tiger_II](Wikipedia)",
+
+	"su_152.name": "SU 152 \"Beastslayer\"",
+	"su_152.desc": "It mounted a 152 mm gun-howitzer on the chassis of a KV-1S heavy tank. Later production used an IS tank chassis and was re-designated ISU-152. Because of its adopted role as an impromptu heavy tank destroyer, capable of knocking out heavy German armoured vehicles such as the Tiger and Elefant, it was nicknamed Zveroboy (\"Beast Slayer\") --- Read more: [https://en.wikipedia.org/wiki/SU-152](Wikipedia)",
+
+	"tiger_1.name": "Tiger (H)",
+	"tiger_1.desc": "While the Tiger I has been called an outstanding design for its time, it has also been called over-engineered, using expensive materials and labour-intensive production methods. In the early period Tiger was prone to certain types of track failures and breakdowns and was in general limited in range by its high fuel consumption. It was expensive to maintain, but generally mechanically reliable. It was difficult to transport and vulnerable to immobilisation when mud, ice, and snow froze between its overlapping and interleaved Schachtellaufwerk-pattern road wheels, often jamming them solid. This was a problem on the Eastern Front in the muddy rasputitsa season and during periods of extreme cold. --- Read more: [https://en.wikipedia.org/wiki/Tiger_I](Wikipedia)",
+
+	"is_7.name": "IS 7",
+	"is_7.desc": "The IS-7 heavy tank, also known by its project name Object 260, is a Soviet tank that began development in 1945. The vehicle existed only in prototype form and was cancelled in favor of the T-10 tank. --- Read more: [https://en.wikipedia.org/wiki/IS-7](Wikipedia)",
+
+	"sturer_emil.name": "Sturer Emil",
+	"sturer_emil.desc": "Sturer Emil was an experimental World War II German self-propelled anti-tank gun. It was based on the Henschel VK 30.01 (H) chassis and armed with a Rheinmetall 12.8 cm Kanone 40 L/61 gun (based on the 12.8 cm FlaK 40). This gun could traverse 7° to each side, elevate 10° and depress -15°. It carried 15 rounds for the main gun. --- Read more: [https://en.wikipedia.org/wiki/Sturer_Emil](Wikipedia)",
+
+	"t_34_85m.name": "T-34-85M",
+	"t_34_85m.desc": "The T-34-85 gave the Red Army a tank with better armour and mobility than the German Panzer IV tank and StuG III assault gun. While it could not match the armour or weapons of the heavier Panther and Tiger tanks, its improved firepower made it much more effective than earlier models, and overall it was more cost-effective than the heaviest German tanks.  --- Read more: [https://en.wikipedia.org/wiki/T-34#T-34-85](Wikipedia)",
+
+	"is_2.name": "IS 2",
+	"is_2.desc": "The IS-2 (sometimes romanized as JS-2) is a Soviet heavy tank, the first of the IS tank series named after the Soviet leader Joseph Stalin. It was developed and saw combat during World War II, and saw service in other Soviet allied countries after the war. --- Read more: [https://en.wikipedia.org/wiki/IS-2](Wikipedia)",
+
+	"t_84bm_oplot.name": "T-84BM \"Oplot\"",
+	"t_84bm_oplot.desc": "The T-84BM Oplot (or BM Oplot) is an advanced version incorporating an armoured ammunition compartment in a new turret bustle. Ten of these entered Ukrainian service in 2001. The T-84-120 Yatagan is a prototype model intended for export, mounting a 120 mm gun capable of firing standard NATO ammunition and guided missiles. --- Read more: [https://en.wikipedia.org/wiki/T-84#T-84_Oplot-M](Wikipedia)",
+
+	"t26e4.name": "T26E4 \"Super Pershing\"",
+	"t26e4.desc": "The T26E3 test tank was standardized as the M26 Pershing, which had a standard 90mm main gun. The T26E4 version, a later experiment, was developed in early 1945. It replaced the T26E3’s main gun with a more powerful high velocity 90 mm gun. Unfortunately, the main gun round was so long that a two-piece, separated round had to be developed to fit in the tank’s cramped interior. --- Read more: [https://en.wikipedia.org/wiki/M26_Pershing#Super_Pershing](Wikipedia)",
+
+	"jagdpanther.name": "Jagdpanther",
+	"jagdpanther.desc": "The Jagdpanther (German: \"hunting Panther\"), was a tank destroyer (Jagdpanzer, a self-propelled anti-tank gun) built by Germany during World War II. The Jagdpanther combined the 8.8 cm Pak 43 anti-tank gun, similar to the main gun of the Tiger II, and the armor and suspension of the Panther chassis. --- Read more: [https://en.wikipedia.org/wiki/Jagdpanther](Wikipedia)",
+
+	"su_85.name": "SU 85",
+	"su_85.desc": "The SU-85 was a Soviet self-propelled gun used during World War II, based on the chassis of the T-34 medium tank. Earlier Soviet self-propelled guns were meant to serve as either assault guns, such as the SU-122, or as tank destroyers; the SU-85 fell into the latter category. The designation \"85\" means the bore of the vehicle's armament, the 85 mm D-5S gun. --- Read more: [https://en.wikipedia.org/wiki/SU-85](Wikipedia)",
+
+	"su_100.name": "SU 100",
+	"su_100.desc": "The SU-100 was a Soviet tank destroyer armed with the D-10S 100 mm anti-tank gun in a casemate superstructure. It was used extensively during the last year of World War II and saw service for many years afterwards with the armies of Soviet allies around the world. --- Read more: [https://en.wikipedia.org/wiki/SU-100](Wikipedia)",
+
+	"isu_152.name": "ISU 152 / 122",
+	"isu_152.desc": "The ISU-152 is a Soviet self-propelled gun developed and used during World War II. It was unofficially nicknamed zveroboy (\"beast killer\") in response to several large German tanks and guns coming into service, including Tigers and Panthers.  --- Read more: [https://en.wikipedia.org/wiki/ISU-152](Wikipedia)",
+
+	"sturmtiger.name": "Sturmtiger",
+	"sturmtiger.desc": "Sturmtiger (German: \"Assault Tiger\") was a World War II German assault gun built on the Tiger I chassis and armed with a 380mm rocket-propelled mortar. The official German designation was Sturmmörserwagen 606/4 mit 38 cm RW 61. Its primary task was to provide heavy fire support for infantry units fighting in urban areas. The few vehicles produced fought in the Warsaw Uprising, the Battle of the Bulge and the Battle of the Reichswald. The fighting vehicle is also known by various informal names, among which the Sturmtiger became the most popular. --- Read more: [https://en.wikipedia.org/wiki/Sturmtiger](Wikipedia)",
+
+	"ariete_pso.name": "C1 Ariete PSO",
+	"ariete_pso.desc": "The C1 Ariete is the main battle tank of the Italian Army \n The vehicle carries the latest optical and digital-imaging and fire-control systems, enabling it to fight day and night and to fire on the move. Six prototypes were developed by 1988, which were subject to intensive testing the following year during which the vehicles travelled a combined 16,000 km. Deliveries were first planned for 1993, but in fact took place in 1995 due to delays. Final delivery occurred 7 years later in August 2002. --- Read more: [https://en.wikipedia.org/wiki/Ariete](Wikipedia)",
+
+	"imr_1.name": "IMR 1",
+	"imr_1.desc": "The IMR-1 is a Soviet tracked military engineering vehicle built on T-55 main battle tank chassis. Means \"Clearing Engineering Vehicle\". --- Read more: [https://en.wikipedia.org/wiki/IMR-2](Wikipedia)",
+	
+	"e100.name": "E 100",
+	"e100.desc": "The E-100 was to be a superheavy combat tank designed to be the replacement for the prototype-only, Porsche-designed Maus. Development and building of a prototype E-100 started in 1944 but was largely abandoned after Adolf Hitler ordered an end to the development of the Maus. --- Read more: [https://en.wikipedia.org/wiki/Entwicklung_series#E-100](Wikipedia)",
+	
+	"t_64bm_bulat.name": "T-64BM \"Bulat\"",
+	"t_64bm_bulat.desc": "The T-64BM Bulat is a Ukrainian upgrade of the ageing Soviet T-64B main battle tank --- Read more: [http://www.military-today.com/tanks/t64bm_bulat.htm](More info)",
+	
+	"is_4.name": "IS-4",
+	"is_4.desc": "Derived from the IS-2 and part of the IS tank family, the IS-4 featured a longer hull and increased armor. With the IS-3 already in production, as well as the decreased need for tanks (particularly heavy tanks) and sluggish mobility, many were sent to the Russian Far East with some eventually becoming pillboxes along the Chinese border in the 1960s. Less than 250 were produced. --- Read more: [https://en.wikipedia.org/wiki/IS-4](More info)",
+	
+	"leopard_1a5.name": "Leopard 1A5",
+	"leopard_1a5.desc": "The resulting Leopard 1A5 was based on 1,225 vehicles of the Leopard 1A1A1 model. The turrets were again modified for the 1A5, both in order to store all of the new equipment, as well as to move more of the ammunition into the rear of the turret, as opposed to the left side of the driver where it had previously been stored. The new turret was also able to mount the newer 120 mm gun from the Leopard 2 if desired, although this option has not been used. --- Read more: [https://en.wikipedia.org/wiki/Leopard_1#Leopard_1A5](More info)",
+	
+	"m18_hellcat.name": "M18 Hellcat",
+	"m18_hellcat.desc": "Tank destroyer that was used by the United States Army in World War II and the Korean War. A top speed of up to 55 mph (89 km/h) was attained by keeping armor to a minimum, using the innovative Torqmatic automatic transmission, and by equipping the relatively light vehicle with the same main gun used on some variants of the much larger Sherman tank. --- Read more: [https://en.wikipedia.org/wiki/M18_Hellcat](More info)",
+	
+	"tiger_p.name": "Tiger Porsche",
+	"tiger_p.desc": "Porsche Tiger, was a gasoline-electric drive heavy tank prototype designed by Porsche in Germany. Losing to its Henschel competitor on trials, it was not selected for mass production and the Henschel design was produced as the Tiger I. Most of the already produced chassis were rebuilt as Elefant tank destroyers. --- Read more: [https://en.wikipedia.org/wiki/VK_45.01_(P)](More info)",
+	
+	"m1a2_tusk.name": "M1A2 Tusk I / II",
+	"m1a2_tusk.desc": "Production began in 1986 and entered service in 1992. The M1A2 offers the tank commander an independent thermal sight and ability to, in rapid sequence, shoot at two targets without the need to acquire each one sequentially, also 2nd generation depleted uranium armor components. --- Read more: [https://en.wikipedia.org/wiki/M1_Abrams#Variants_and_upgrades](More info)",
+	
+	"gepard.name": "Gepard",
+	"gepard.desc": "All-weather-capable German self-propelled anti-aircraft gun. It was developed in the 1960s, fielded in the 1970s, and has been upgraded several times with the latest electronics --- Read more: [https://en.wikipedia.org/wiki/Flakpanzer_Gepard](More info)",
+	
+	"b1_centauro.name": "B1 Centauro",
+	"b1_centauro.desc": "The Centauro is a family of Italian military vehicles originating from a wheeled tank destroyer for light to medium territorial defense and tactical reconnaissance --- Read more: [https://en.wikipedia.org/wiki/B1_Centauro](More info)",
+	
+	"ferdinand.name": "Ferdinand",
+	"ferdinand.desc": "The Elefant (German for \"elephant\") was a heavy tank destroyer used by German Wehrmacht Panzerjäger during World War II. Ninety-one units were built in 1943 under the name Ferdinand. In January to April 1944, Ferdinands received modifications and upgrades. They were renamed Elefant in May 1944 --- Read more: [https://en.wikipedia.org/wiki/Elefant](More info)",
+	
+	"shot_kal.name": "Sho't Kal Gimel",
+	"shot_kal.desc": "The Kal entered service in 1970, and by 1974 all Israeli Centurions and Sho't Meteor were upgraded to Sho't Kal. Subvariants indicate upgrades received by Sho't Kal tanks during their operational life, including a new turret rotating mechanism, a new gun stabilizer, a new fire-control system and preparations for the installation of the Blazer reactive armour. --- Read more: [https://en.wikipedia.org/wiki/Sho%27t](More info)",
+	
+	"m50.name": "M50",
+	"m50.desc": "Sherman M50 is modified versions of the American M4 Sherman tank that served with the Israel Defense Forces from the mid-1950s to early 1980s. --- Read more: [https://en.wikipedia.org/wiki/Super_Sherman](More info)"
+}
