@@ -1,0 +1,87 @@
+$gutter: 15px;
+
+
+.row {
+	box-orient: horizontal;
+}
+
+.content {
+	margin: 0 auto;
+	padding-right: $gutter;
+	padding-left: $gutter;
+	max-width: 1170px;
+}
+
+.row {
+	box-sizing: border-box;
+	display: block;
+	display: -ms-flexbox;
+	display: -webkit-box;
+	display: flex;
+	-ms-flex: 0 1 auto;
+	-webkit-box-flex: 0;
+	flex: 0 1 auto;
+	-ms-flex-direction: row;
+	-webkit-box-direction: normal;
+	flex-direction: row;
+	-ms-flex-wrap: wrap;
+	flex-wrap: wrap;
+	margin-right: -$gutter;
+	margin-left: -$gutter;
+}
+
+.row.middle {
+	-ms-flex-align: center;
+	-webkit-box-align: center;
+	align-items: center;
+}
+
+[class*="col-"] {
+	float: left;
+	box-sizing: border-box;
+	-ms-flex: 0 0 auto;
+	-webkit-box-flex: 0;
+	flex: 0 0 auto;
+	padding-right: $gutter;
+	padding-left: $gutter;
+	-webkit-flex-grow: 1;
+	-ms-flex-positive: 1;
+	-webkit-box-flex: 1;
+	flex-grow: 1;
+	-ms-flex-preferred-size: 0;
+	flex-basis: 0;
+	max-width: 100%;
+}
+
+@mixin generateCells() {
+	@for $i from 1 through 12 {
+		.col-#{$i} {
+			-ms-flex-preferred-size: #{calc(($i/12) * 100%)};
+			flex-basis: #{calc(($i/12) * 100%)};
+			max-width: #{calc(($i/12) * 100%)};
+			width: #{calc(($i/12) * 100%)};
+		}
+	}
+	@for $i from 0 through 12 {
+		.col-offset-#{$i} {
+			margin-left: #{calc(($i/12) * 100%)};
+		}
+	}
+}
+
+.hidden {
+	display: none;
+}
+
+/*all*/
+@include generateCells();
+
+@media (max-width: 552px) {
+
+	[class*="col-"] {
+			-ms-flex-preferred-size: 100%;
+			flex-basis: 100%;
+			max-width: 100%;
+			width: 100%;
+	}
+}

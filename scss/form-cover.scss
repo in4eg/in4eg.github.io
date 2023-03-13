@@ -1,0 +1,44 @@
+.form-cover {
+
+	.input {
+		padding: 12px 25px;
+		color: $color_text_light;
+		font-style: italic;
+		font-weight: 300;
+		font-family: $font3;
+		border: 1px solid $color_grey_light;
+	}
+}
+
+.form-cover.form-cover_inline {
+	white-space: nowrap;
+	font-size: 0;
+	width: 100%;
+
+	.input {
+		display: inline-block;
+		vertical-align: middle;
+		width: calc(100% - 150px);
+		border-right: 0;
+	}
+
+	.button {
+		display: inline-block;
+		vertical-align: middle;
+		width: 150px;
+	}
+}
+
+@media (max-width: 552px) {
+
+	.form-cover.form-cover_inline {
+
+		.input {
+			width: calc(100% - 120px);
+		}
+
+		.button {
+			width: 120px;
+		}
+	}
+}
