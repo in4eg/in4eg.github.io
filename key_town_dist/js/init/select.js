@@ -87,6 +87,9 @@ $(document).ready(function(){
 					});
 				});
 				checkFilters();
+				if ($('#filterButton').length) {
+					$('#filterButton').removeClass('marker-active');
+				};
 			}
 		})
 	})
