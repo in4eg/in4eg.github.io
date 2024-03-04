@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+	<meta charset="UTF-8">
+	<title>Key Town :: Contacts</title>
+
+	<link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
+	<link rel="manifest" href="/favicon/site.webmanifest">
+	<link rel="mask-icon" href="/favicon/safari-pinned-tab.svg" color="#5bbad5">
+	<meta name="msapplication-TileColor" content="#ffc40d">
+	<meta name="theme-color" content="#ffffff">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+	<meta name="format-detection" content="telephone=no">
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="css/bundle.min.css">
+
+</head>
+<body>
+
+	<script>
+	var apiKey = '';
+</script>
+
+<header class="main-header" id="mainHeader">
+	<div class="container">
+		<div class="row middle-xs">
+			<div class="col-xs-8 col-lg-2">
+				<a href="index.html" class="logo">
+					<img src="img/logo.png" class="logo-image">
+				</a>
+			</div>
+			<div class="col-xs-4 col-lg-10">
+				<div class="main-navigation" id="mainNavigation">
+					<div class="row middle-xs">
+						<div class="col-xs-12 col-lg-10">
+							<nav class="main-nav">
+								<ul class="link-list clear">
+									<li class="item">
+										<a href="index.html" class="link gray active">Головна</a>
+									</li>
+									<li class="item">
+										<a href="catalog.html" class="link gray">Оренда</a>
+									</li>
+									<li class="item">
+										<a href="contacts.html" class="link gray">Контакти</a>
+									</li>
+								</ul>
+							</nav>
+						</div>
+						<div class="col-xs-12 col-lg-2">
+							<ul class="link-list clear align-right">
+								<li class="item"><a href="index.html" class="link gray">Eng</a></li>
+								<li class="item"><a href="index.html" class="link gray active">Укр</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="align-right mobile-panel">
+					<button class="button button-menu menu-toggle" data-toggle="mainNavigation">
+						<span></span>
+					</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</header>
+
+	<main class="page-main" id="pageMain">
+		<div class="breadcrumbs">
+			<div class="container">
+				<ul class="list clear">
+					<li><a href="index.html" class="link">Головна</a></li>
+					<li>Контакти</li>
+				</ul>
+			</div>
+		</div>
+		<section class="section large-spaced collapsed-bottom">
+			<div class="container">
+				<h2 class="spaced-bottom-large align-center">Контакти</h2>
+			</div>
+			<div class="bordered-all">
+				<div class="container">
+					<div class="row">
+						<div class="col-xs-12 col-sm-6 bordered-space">
+							<ul class="contact-list clear tiled">
+								<li class="list-item">
+									<i class="icon icon-map-pin"></i>
+									<div class="info">
+										<div class="title">Адреса</div>
+										<a href="https://www.google.com.ua/maps/preview" class="link gray" target="_blank" rel="noopener noreferrer">
+											Contact 500 Terry Francine <br>
+											St. San Francisco, CA 94158
+										</a>
+									</div>
+								</li>
+								<li class="list-item">
+									<i class="icon icon-phone"></i>
+									<div class="info">
+										<div class="title">Телефон</div>
+										<a href="tel:+3801234567" class="link gray">+380 123 45 67</a>
+									</div>
+								</li>
+								<li class="list-item">
+									<i class="icon icon-mail"></i>
+									<div class="info">
+										<div class="title">Ел. пошта</div>
+										<a href="mailto:info@mysite.com" class="link gray">info@mysite.com</a>
+									</div>
+								</li>
+								<li class="list-item">
+									<i class="icon icon-thumbs-up"></i>
+									<div class="info">
+										<div class="title">Соцмережі</div>
+										<ul class="link-list clear">
+											<li class="item">
+												<a href="https://www.facebook.com/" target="_blank" class="icon-link gray" rel="noopener noreferrer">
+													<i class="icon icon-facebook-with-circle"></i>
+												</a>
+											</li>
+											<li class="item">
+												<a href="thttps://twitter.com" target="_blank" class="icon-link gray" rel="noopener noreferrer">
+													<i class="icon icon-twitter-with-circle"></i>
+												</a>
+											</li>
+											<li class="item">
+												<a href="https://www.linkedin.com" target="_blank" class="icon-link gray" rel="noopener noreferrer">
+													<i class="icon icon-linkedin-with-circle"></i>
+												</a>
+											</li>
+											<li class="item">
+												<a href="https://www.instagram.com/" target="_blank" class="icon-link gray" rel="noopener noreferrer">
+													<i class="icon icon-instagram-with-circle"></i>
+												</a>
+											</li>
+										</ul>
+									</div>
+								</li>
+							</ul>
+						</div>
+						<div class="col-xs-12 col-sm-6 bordered-space">
+							<!-- contact form -->
+							<form action="" class="form validate-form">
+	<div class="row">
+		<div class="col-xs-12 col-ms-6 spaced-xs">
+			<div class="input-cover">
+				<label class="label" for="name">Ім'я<sup>*</sup></label>
+				<input type="text" class="input" id="name" data-minlength="2">
+				<div class="error-alert">Вкажіть ім'я повністю</div>
+			</div>
+		</div>
+		<div class="col-xs-12 col-ms-6 spaced-xs">
+			<div class="input-cover">
+				<label class="label" for="secondName">Прізвище<sup>*</sup></label>
+				<input type="text" class="input" id="secondName" data-minlength="2">
+				<div class="error-alert">Вкажіть прізвище повністю</div>
+			</div>
+		</div>
+		<div class="col-xs-12 spaced-xs">
+			<div class="input-cover">
+				<label class="label" for="email">Email<sup>*</sup></label>
+				<input type="email" class="input email" id="email" data-validate="email">
+				<div class="error-alert">Електронна адреса введена не вірно</div>
+			</div>
+		</div>
+		<div class="col-xs-12 spaced-xs">
+			<div class="input-cover">
+				<label class="label" for="message">Повідомлення<sup>*</sup></label>
+				<textarea type="textarea" class="textarea" id="message" data-minlength="10"></textarea>
+				<div class="error-alert">Введіть повідомлення, мін 10 символів</div>
+			</div>
+		</div>
+		<div class="col-xs-12">
+			<button class="button button-primary button-block" type="submit">
+				Відправити
+				<span class="fade"></span>
+			</button>
+		</div>
+	</div>
+</form>
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	</main>
+
+	<!-- footer -->
+	<div class="map-container">
+	<!-- data attributes changable in html -->
+	<div id="map" class="map"
+		data-position="50.450001, 30.523333"
+		data-zoom="16"
+		data-title="Kyiv, Ukraine"
+	></div>
+</div>
+
+<footer class="main-footer">
+	<!-- scroll to top -->
+	<div class="container align-right">
+		<a href="#pageMain" data-scrollto="#pageMain" class="top-link button square-button">
+	<i class="icon icon-arrow-up"></i>
+	<span class="fade"></span>
+</a>
+	</div>
+	<div class="container">
+		<div class="spaced-bottom-large">
+			<h4>Key Town</h4>
+		</div>
+		<div class="spaced-bottom">
+			<a href="mailto:kirill.zaharovsky@gmail.com" target="_blank" class="link gray" rel="noopener noreferrer">
+				kirill.zaharovsky@gmail.com
+			</a>
+		</div>
+		<div class="copyright">&copy; Key Town, 2024</div>
+	</div>
+</footer>
+
+
+	<script src="js/lib/jquery.min.js"></script>
+	<!-- map -->
+	<script>
+		var script = document.createElement('script');
+		script.src = "https://maps.googleapis.com/maps/api/js?key="+apiKey+"&callback=initMap&v=weekly";
+		document.getElementsByTagName('script')[0].parentNode.appendChild(script);
+	</script>
+	<!-- bundle -->
+	<script src="js/bundle.min.js"></script>
+</body>
+</html>
