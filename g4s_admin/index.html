@@ -1,0 +1,3230 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+
+	<meta charset="UTF-8">
+	<title>G4S Admin :: Main</title>
+	<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="format-detection" content="telephone=no">
+
+	<link rel="stylesheet" href="css/bundle.min.css">
+
+</head>
+<body>
+	<div class="main-layout" id="mainLayout">
+		<div class="left-side side tabs" id="offersTab">
+			<div class="menu-part part">
+				<a href="index.html" class="logo">
+					<img src="img/logo.svg" alt="logo">
+				</a>
+				<div class="offers-nav" data-tabs="#offersTab">
+					<div class="tooltip">
+						<div class="tab-item round-button button active clicked ">
+							<span class="text">€1,559</span>
+							<span class="fader"></span>
+						</div>
+						<!-- tooltip -->
+						<div class="tooltip-cover">
+							<div class="options">
+								<button type="button" class="option-btn" data-clone="#tab0, #tabCover">
+									<span class="text">
+										Duplicate
+										<i class="icon icon-dublicate"></i>
+									</span>
+								</button>
+								<button type="button" class="option-btn" data-call="#popupDelete">
+									<span class="text">
+										Delete
+										<i class="icon icon-delete"></i>
+									</span>
+								</button>
+							</div>
+						</div>
+					</div>
+					<div class="tooltip">
+						<div class="tab-item round-button button clicked">
+							<span class="text">€0</span>
+							<span class="fader"></span>
+						</div>
+						<!-- tooltip -->
+						<div class="tooltip-cover">
+							<div class="options">
+								<!-- data clone - child to clone, parent -->
+								<button type="button" class="option-btn" data-clone="#tab1, #tabCover">
+									<span class="text">
+										Duplicate
+										<i class="icon icon-dublicate"></i>
+									</span>
+								</button>
+								<button type="button" class="option-btn" data-call="#popupDelete">
+									<span class="text">
+										Delete
+										<i class="icon icon-delete"></i>
+									</span>
+								</button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="tab-item round-button button clicked">
+					<span class="text">
+						<svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M1.58946e-07 5L10 5" stroke="black" stroke-width="2" stroke-linejoin="round"/>
+							<path d="M5 1.58946e-07L5 10" stroke="black" stroke-width="2" stroke-linejoin="round"/>
+						</svg>
+					</span>
+					<span class="fader"></span>
+				</div>
+			</div>
+			<div class="content-part part" id="tabCover">
+				<div class="search-bar">
+	<div data-toggle class="toggle-panel catalog-panel">
+		<div class="catalog-anchor">
+			<button type="button" class="btn btn-toggle catalog-toggle" data-category-button="#buttonImage, #buttonTitle">
+				<span class="line-icon">
+					<span class="line"></span>
+					<span class="line"></span>
+					<span class="line"></span>
+				</span>
+				<figure class="button-image"><img id="buttonImage"></figure>
+				<span class="header-title" id="buttonTitle">All categories</span>
+			</button>
+		</div>
+		<div class="toggle-inner">
+			<form action="#" class="category-form">
+				<div class="scrolled items-cover" id="checkboxAll">
+					<div class="checkbox-group" id="catalogGroup" data-group="single">
+						<div class="item checkbox-item">
+							<input type="checkbox" class="checkbox" id="checkbox1">
+							<label for="checkbox1" class="checkbox-label clicked">
+								<figure class="checkbox-image text">
+									<img src="temp/image2.png" alt="G4S iTos">
+								</figure>
+								<span class="caption text">Bundles</span>
+								<span class="fader"></span>
+							</label>
+						</div>
+						<div class="item checkbox-item">
+							<input type="checkbox" class="checkbox" id="checkbox2">
+							<label for="checkbox2" class="checkbox-label clicked">
+								<figure class="checkbox-image text">
+									<img src="temp/image.png" alt="G4S iTos">
+								</figure>
+								<span class="caption text">Cameras</span>
+								<span class="fader"></span>
+							</label>
+						</div>
+						<div class="item checkbox-item">
+							<input type="checkbox" class="checkbox" id="checkbox3">
+							<label for="checkbox3" class="checkbox-label clicked">
+								<figure class="checkbox-image text">
+									<img src="temp/image.png" alt="G4S iTos">
+								</figure>
+								<span class="caption text">Detectors</span>
+								<span class="fader"></span>
+							</label>
+						</div>
+						<div class="item checkbox-item">
+							<input type="checkbox" class="checkbox" id="checkbox4">
+							<label for="checkbox4" class="checkbox-label clicked">
+								<figure class="checkbox-image text">
+									<img src="temp/image.png" alt="G4S iTos">
+								</figure>
+								<span class="caption text">Keypads</span>
+								<span class="fader"></span>
+							</label>
+						</div>
+						<div class="item checkbox-item">
+							<input type="checkbox" class="checkbox" id="checkbox5">
+							<label for="checkbox5" class="checkbox-label clicked">
+								<figure class="checkbox-image text">
+									<img src="temp/image2.png" alt="G4S iTos">
+								</figure>
+								<span class="caption text">Cameras</span>
+								<span class="fader"></span>
+							</label>
+						</div>
+						<div class="item checkbox-item">
+							<input type="checkbox" class="checkbox" id="checkbox6">
+							<label for="checkbox6" class="checkbox-label clicked">
+								<figure class="checkbox-image text">
+									<img src="temp/image3.png" alt="G4S iTos">
+								</figure>
+								<span class="caption text">Cameras</span>
+								<span class="fader"></span>
+							</label>
+						</div>
+						<div class="item checkbox-item">
+							<input type="checkbox" class="checkbox" id="checkbox7">
+							<label for="checkbox7" class="checkbox-label clicked">
+								<figure class="checkbox-image text">
+									<img src="temp/image.png" alt="G4S iTos">
+								</figure>
+								<span class="caption text">Cameras</span>
+								<span class="fader"></span>
+							</label>
+						</div>
+					</div>
+				</div>
+				<div class="toggle-all">
+					<input type="checkbox" class="checkbox" id="all" data-check-all="#catalogGroup">
+					<label for="all" class="general-label clicked">
+						<span class="text">All categories</span>
+						<span class="fader"></span>
+					</label>
+				</div>
+			</form>
+		</div>
+	</div>
+	<div data-toggle class="toggle-panel search-panel">
+		<button type="button" class="btn btn-toggle search-toggle">
+			<svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+				<path d="M15.5 14.5L13.8636 12.9546" stroke="black" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+				<path fill-rule="evenodd" clip-rule="evenodd" d="M14.6818 8.04545C14.6818 11.6607 11.7516 14.5909 8.13634 14.5909C4.52106 14.5909 1.59088 11.6607 1.59088 8.04545C1.59088 4.43018 4.52106 1.5 8.13634 1.5C11.7516 1.5 14.6818 4.43018 14.6818 8.04545Z" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+			</svg>
+		</button>
+		<div class="toggle-inner">
+			<form action="#" class="search-form">
+				<div class="form-group">
+					<input type="text" class="input text-input">
+				</div>
+				<input type="submit" hidden>
+				<button class="btn cancel-btn" type="button" data-clear>
+					<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path d="M4.46409 4.46409L11.5352 11.5352" stroke="#000" stroke-width="2" stroke-linejoin="round"/>
+						<path d="M11.5359 4.46409L4.46484 11.5352" stroke="#000" stroke-width="2" stroke-linejoin="round"/>
+					</svg>
+				</button>
+			</form>
+		</div>
+	</div>
+</div>
+				<div class="tab-content scrolled active animated" id="tab0">
+					<div class="offers-cover">
+	<div class="dropdown dropdown-simple active" data-dropdown>
+		<div class="dropdown-title">
+			<div class="title-inner">
+				<span class="caption">Bundles</span>
+				<div class="line"></div>
+			</div>
+			<div class="dropdown-anchor">
+				<i class="icon icon-angle-down"></i>
+			</div>
+		</div>
+		<div class="dropdown-inner">
+			<!-- item -->
+			<div class="accordeon accordeon-light with-image" data-accordeon data-draggable="#mainContent" id="item1">
+				<h2 class="title">
+					<figure class="item-image">
+						<img src="temp/image2.png" alt="G4S iTos Up">
+					</figure>
+					<span class="draggable-anchor">G4S iTos Plus</span>
+					<div class="anchor">
+						<i class="icon icon-angle-down"></i>
+					</div>
+				</h2>
+				<div class="inner">
+					<figure class="inner-image" data-call="#popupGallery" data-gallery>
+						<img src="temp/image2.png" alt="G4S iTos Up">
+					</figure>
+					<h3 class="item-title title">Camera</h3>
+					<div class="paragraph">
+						Ιδιαίτερα κομψός ανιχνευτής PIR (παθητικός αισθητήρας υπερύθρων), σχεδιασμένος ειδικά για οικίες και γραφεία. Εγκαθίσταται επιτοίχια, με τη βοήθεια διακριτικού βραχίονα, ώστε να μην επιβαρύνει τη σύνθεση του χώρου σου
+					</div>
+					<ul class="clear items-list">
+						<li class="item">
+							<div class="accordeon accordeon-bordered" data-accordeon>
+								<h3 class="item-title title list-title">
+									Κεντρική Μονάδα 
+									<div class="anchor">
+										<i class="icon icon-angle-down"></i>
+									</div>
+								</h3>
+								<div class="inner">
+									<figure class="inner-image">
+										<img src="temp/image.png" alt="G4S iTos Up">
+									</figure>
+									<h3 class="title">Camera</h3>
+									<div class="paragraph">
+										Ιδιαίτερα κομψός ανιχνευτής PIR (παθητικός αισθητήρας υπερύθρων), σχεδιασμένος ειδικά για οικίες και γραφεία. Εγκαθίσταται επιτοίχια, με τη βοήθεια διακριτικού βραχίονα, ώστε να μην επιβαρύνει τη σύνθεση του χώρου σου
+									</div>
+								</div>
+							</div>
+						</li>
+						<li class="item">
+							<div class="accordeon accordeon-bordered" data-accordeon>
+								<h3 class="item-title title list-title">
+									Πληκτρολόγιο
+									<div class="anchor">
+										<i class="icon icon-angle-down"></i>
+									</div>
+								</h3>
+								<div class="inner">
+									<figure class="inner-image">
+										<img src="temp/image2.png" alt="G4S iTos Up">
+									</figure>
+									<h3 class="title">Camera</h3>
+									<div class="paragraph">
+										Ιδιαίτερα κομψός ανιχνευτής PIR (παθητικός αισθητήρας υπερύθρων), σχεδιασμένος ειδικά για οικίες και γραφεία. Εγκαθίσταται επιτοίχια, με τη βοήθεια διακριτικού βραχίονα, ώστε να μην επιβαρύνει τη σύνθεση του χώρου σου
+									</div>
+								</div>
+							</div>
+						</li>
+						<li class="item">
+							<div class="accordeon accordeon-bordered" data-accordeon>
+								<h3 class="item-title title list-title">
+									Radar
+									<div class="anchor">
+										<i class="icon icon-angle-down"></i>
+									</div>
+								</h3>
+								<div class="inner">
+									<figure class="inner-image">
+										<img src="temp/image2.png" alt="G4S iTos Up">
+									</figure>
+									<h3 class="title">Camera</h3>
+									<div class="paragraph">
+										Ιδιαίτερα κομψός ανιχνευτής PIR (παθητικός αισθητήρας υπερύθρων), σχεδιασμένος ειδικά για οικίες και γραφεία. Εγκαθίσταται επιτοίχια, με τη βοήθεια διακριτικού βραχίονα, ώστε να μην επιβαρύνει τη σύνθεση του χώρου σου
+									</div>
+								</div>
+							</div>
+						</li>
+						<li class="item">
+							<div class="accordeon accordeon-bordered" data-accordeon>
+								<h3 class="item-title title list-title">
+									Ασύρματη Μαγνητική Επαφή
+									<div class="anchor">
+										<i class="icon icon-angle-down"></i>
+									</div>
+								</h3>
+								<div class="inner">
+									<figure class="inner-image">
+										<img src="temp/image2.png" alt="G4S iTos Up">
+									</figure>
+									<h3 class="title">Camera</h3>
+									<div class="paragraph">
+										Ιδιαίτερα κομψός ανιχνευτής PIR (παθητικός αισθητήρας υπερύθρων), σχεδιασμένος ειδικά για οικίες και γραφεία. Εγκαθίσταται επιτοίχια, με τη βοήθεια διακριτικού βραχίονα, ώστε να μην επιβαρύνει τη σύνθεση του χώρου σου
+									</div>
+								</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<!-- item -->
+			<div class="accordeon accordeon-light with-image" data-accordeon data-draggable="#mainContent" id="item2">
+				<h2 class="title">
+					<figure class="item-image">
+						<img src="temp/image2.png" alt="G4S iTos Up">
+					</figure>
+					<span class="draggable-anchor">G4S iTos One</span>
+					<div class="anchor">
+						<i class="icon icon-angle-down"></i>
+					</div>
+				</h2>
+				<div class="inner">
+					<figure class="inner-image" data-call="#popupGallery" data-gallery>
+						<img src="temp/image2.png" alt="G4S iTos Up">
+					</figure>
+					<h3 class="item-title title">Camera</h3>
+					<div class="paragraph">
+						Ιδιαίτερα κομψός ανιχνευτής PIR (παθητικός αισθητήρας υπερύθρων), σχεδιασμένος ειδικά για οικίες και γραφεία. Εγκαθίσταται επιτοίχια, με τη βοήθεια διακριτικού βραχίονα, ώστε να μην επιβαρύνει τη σύνθεση του χώρου σου
+					</div>
+					<ul class="clear items-list">
+						<li class="item">
+							<div class="accordeon accordeon-bordered" data-accordeon>
+								<h3 class="item-title title list-title">
+									Κεντρική Μονάδα 
+									<div class="anchor">
+										<i class="icon icon-angle-down"></i>
+									</div>
+								</h3>
+								<div class="inner">
+									<figure class="inner-image">
+										<img src="temp/image.png" alt="G4S iTos Up">
+									</figure>
+									<h3 class="title">Camera</h3>
+									<div class="paragraph">
+										Ιδιαίτερα κομψός ανιχνευτής PIR (παθητικός αισθητήρας υπερύθρων), σχεδιασμένος ειδικά για οικίες και γραφεία. Εγκαθίσταται επιτοίχια, με τη βοήθεια διακριτικού βραχίονα, ώστε να μην επιβαρύνει τη σύνθεση του χώρου σου
+									</div>
+								</div>
+							</div>
+						</li>
+						<li class="item">
+							<div class="accordeon accordeon-bordered" data-accordeon>
+								<h3 class="item-title title list-title">
+									Πληκτρολόγιο
+									<div class="anchor">
+										<i class="icon icon-angle-down"></i>
+									</div>
+								</h3>
+								<div class="inner">
+									<figure class="inner-image">
+										<img src="temp/image2.png" alt="G4S iTos Up">
+									</figure>
+									<h3 class="title">Camera</h3>
+									<div class="paragraph">
+										Ιδιαίτερα κομψός ανιχνευτής PIR (παθητικός αισθητήρας υπερύθρων), σχεδιασμένος ειδικά για οικίες και γραφεία. Εγκαθίσταται επιτοίχια, με τη βοήθεια διακριτικού βραχίονα, ώστε να μην επιβαρύνει τη σύνθεση του χώρου σου
+									</div>
+								</div>
+							</div>
+						</li>
+						<li class="item">
+							<div class="accordeon accordeon-bordered" data-accordeon>
+								<h3 class="item-title title list-title">
+									Radar
+									<div class="anchor">
+										<i class="icon icon-angle-down"></i>
+									</div>
+								</h3>
+								<div class="inner">
+									<figure class="inner-image">
+										<img src="temp/image2.png" alt="G4S iTos Up">
+									</figure>
+									<h3 class="title">Camera</h3>
+									<div class="paragraph">
+										Ιδιαίτερα κομψός ανιχνευτής PIR (παθητικός αισθητήρας υπερύθρων), σχεδιασμένος ειδικά για οικίες και γραφεία. Εγκαθίσταται επιτοίχια, με τη βοήθεια διακριτικού βραχίονα, ώστε να μην επιβαρύνει τη σύνθεση του χώρου σου
+									</div>
+								</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<!-- item -->
+			<div class="accordeon accordeon-light with-image" data-accordeon data-draggable="#mainContent" id="item3">
+				<h2 class="title">
+					<figure class="item-image">
+						<img src="temp/image2.png" alt="G4S iTos Up">
+					</figure>
+					<span class="draggable-anchor">G4S iTos Up</span>
+					<div class="anchor">
+						<i class="icon icon-angle-down"></i>
+					</div>
+				</h2>
+				<div class="inner">
+					<figure class="inner-image" data-call="#popupGallery" data-gallery>
+						<img src="temp/image2.png" alt="G4S iTos Up">
+					</figure>
+					<h3 class="item-title title">Camera</h3>
+					<div class="paragraph">
+						Ιδιαίτερα κομψός ανιχνευτής PIR (παθητικός αισθητήρας υπερύθρων), σχεδιασμένος ειδικά για οικίες και γραφεία. Εγκαθίσταται επιτοίχια, με τη βοήθεια διακριτικού βραχίονα, ώστε να μην επιβαρύνει τη σύνθεση του χώρου σου
+					</div>
+					<ul class="clear items-list">
+						<li class="item">
+							<div class="accordeon accordeon-bordered" data-accordeon>
+								<h3 class="item-title title list-title">
+									Ασύρματη Μαγνητική Επαφή
+									<div class="anchor">
+										<i class="icon icon-angle-down"></i>
+									</div>
+								</h3>
+								<div class="inner">
+									<figure class="inner-image">
+										<img src="temp/image2.png" alt="G4S iTos Up">
+									</figure>
+									<h3 class="title">Camera</h3>
+									<div class="paragraph">
+										Ιδιαίτερα κομψός ανιχνευτής PIR (παθητικός αισθητήρας υπερύθρων), σχεδιασμένος ειδικά για οικίες και γραφεία. Εγκαθίσταται επιτοίχια, με τη βοήθεια διακριτικού βραχίονα, ώστε να μην επιβαρύνει τη σύνθεση του χώρου σου
+									</div>
+								</div>
+							</div>
+						</li>
+						<li class="item">
+							<div class="accordeon accordeon-bordered" data-accordeon>
+								<h3 class="item-title title list-title">
+									Κεντρική Μονάδα 
+									<div class="anchor">
+										<i class="icon icon-angle-down"></i>
+									</div>
+								</h3>
+								<div class="inner">
+									<figure class="inner-image">
+										<img src="temp/image.png" alt="G4S iTos Up">
+									</figure>
+									<h3 class="title">Camera</h3>
+									<div class="paragraph">
+										Ιδιαίτερα κομψός ανιχνευτής PIR (παθητικός αισθητήρας υπερύθρων), σχεδιασμένος ειδικά για οικίες και γραφεία. Εγκαθίσταται επιτοίχια, με τη βοήθεια διακριτικού βραχίονα, ώστε να μην επιβαρύνει τη σύνθεση του χώρου σου
+									</div>
+								</div>
+							</div>
+						</li>
+						<li class="item">
+							<div class="accordeon accordeon-bordered" data-accordeon>
+								<h3 class="item-title title list-title">
+									Πληκτρολόγιο
+									<div class="anchor">
+										<i class="icon icon-angle-down"></i>
+									</div>
+								</h3>
+								<div class="inner">
+									<figure class="inner-image">
+										<img src="temp/image2.png" alt="G4S iTos Up">
+									</figure>
+									<h3 class="title">Camera</h3>
+									<div class="paragraph">
+										Ιδιαίτερα κομψός ανιχνευτής PIR (παθητικός αισθητήρας υπερύθρων), σχεδιασμένος ειδικά για οικίες και γραφεία. Εγκαθίσταται επιτοίχια, με τη βοήθεια διακριτικού βραχίονα, ώστε να μην επιβαρύνει τη σύνθεση του χώρου σου
+									</div>
+								</div>
+							</div>
+						</li>
+						<li class="item">
+							<div class="accordeon accordeon-bordered" data-accordeon>
+								<h3 class="item-title title list-title">
+									Radar
+									<div class="anchor">
+										<i class="icon icon-angle-down"></i>
+									</div>
+								</h3>
+								<div class="inner">
+									<figure class="inner-image">
+										<img src="temp/image2.png" alt="G4S iTos Up">
+									</figure>
+									<h3 class="title">Camera</h3>
+									<div class="paragraph">
+										Ιδιαίτερα κομψός ανιχνευτής PIR (παθητικός αισθητήρας υπερύθρων), σχεδιασμένος ειδικά για οικίες και γραφεία. Εγκαθίσταται επιτοίχια, με τη βοήθεια διακριτικού βραχίονα, ώστε να μην επιβαρύνει τη σύνθεση του χώρου σου
+									</div>
+								</div>
+							</div>
+						</li>
+						<li class="item">
+							<div class="accordeon accordeon-bordered" data-accordeon>
+								<h3 class="item-title title list-title">
+									Ασύρματη Μαγνητική Επαφή
+									<div class="anchor">
+										<i class="icon icon-angle-down"></i>
+									</div>
+								</h3>
+								<div class="inner">
+									<figure class="inner-image">
+										<img src="temp/image2.png" alt="G4S iTos Up">
+									</figure>
+									<h3 class="title">Camera</h3>
+									<div class="paragraph">
+										Ιδιαίτερα κομψός ανιχνευτής PIR (παθητικός αισθητήρας υπερύθρων), σχεδιασμένος ειδικά για οικίες και γραφεία. Εγκαθίσταται επιτοίχια, με τη βοήθεια διακριτικού βραχίονα, ώστε να μην επιβαρύνει τη σύνθεση του χώρου σου
+									</div>
+								</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="dropdown dropdown-simple active" data-dropdown>
+		<div class="dropdown-title">
+			<div class="title-inner">
+				<span class="caption">Items</span>
+				<div class="line"></div>
+			</div>
+			<div class="dropdown-anchor">
+				<i class="icon icon-angle-down"></i>
+			</div>
+		</div>
+		<div class="dropdown-inner">
+			<!-- item -->
+			<div class="accordeon accordeon-light with-image" data-accordeon data-draggable="#mainContent" id="item4">
+				<div class="title">
+					<figure class="item-image">
+						<img src="temp/image.png" alt="G4S iTos Up">
+					</figure>
+					<span class="draggable-anchor">Outdoor Camera</span>
+					<div class="anchor">
+						<i class="icon icon-angle-down"></i>
+					</div>
+				</div>
+				<div class="inner">
+					<figure class="inner-image" data-call="#popupGallery" data-gallery>
+						<img src="temp/image.png" alt="G4S iTos Up">
+					</figure>
+					<h3 class="item-title title">Camera</h3>
+					<div class="paragraph">
+						Ιδιαίτερα κομψός ανιχνευτής PIR (παθητικός αισθητήρας υπερύθρων), σχεδιασμένος ειδικά για οικίες και γραφεία. Εγκαθίσταται επιτοίχια, με τη βοήθεια διακριτικού βραχίονα, ώστε να μην επιβαρύνει τη σύνθεση του χώρου σου
+					</div>
+					<ul class="clear items-list">
+						<li class="item">
+							<div class="accordeon accordeon-bordered" data-accordeon>
+								<h3 class="item-title title list-title">
+									Κεντρική Μονάδα 
+									<div class="anchor">
+										<i class="icon icon-angle-down"></i>
+									</div>
+								</h3>
+								<div class="inner">
+									<figure class="inner-image">
+										<img src="temp/image.png" alt="G4S iTos Up">
+									</figure>
+									<h3 class="title">Camera</h3>
+									<div class="paragraph">
+										Ιδιαίτερα κομψός ανιχνευτής PIR (παθητικός αισθητήρας υπερύθρων), σχεδιασμένος ειδικά για οικίες και γραφεία. Εγκαθίσταται επιτοίχια, με τη βοήθεια διακριτικού βραχίονα, ώστε να μην επιβαρύνει τη σύνθεση του χώρου σου
+									</div>
+								</div>
+							</div>
+						</li>
+						<li class="item">
+							<div class="accordeon accordeon-bordered" data-accordeon>
+								<h3 class="item-title title list-title">
+									Πληκτρολόγιο
+									<div class="anchor">
+										<i class="icon icon-angle-down"></i>
+									</div>
+								</h3>
+								<div class="inner">
+									<figure class="inner-image">
+										<img src="temp/image2.png" alt="G4S iTos Up">
+									</figure>
+									<h3 class="title">Camera</h3>
+									<div class="paragraph">
+										Ιδιαίτερα κομψός ανιχνευτής PIR (παθητικός αισθητήρας υπερύθρων), σχεδιασμένος ειδικά για οικίες και γραφεία. Εγκαθίσταται επιτοίχια, με τη βοήθεια διακριτικού βραχίονα, ώστε να μην επιβαρύνει τη σύνθεση του χώρου σου
+									</div>
+								</div>
+							</div>
+						</li>
+						<li class="item">
+							<div class="accordeon accordeon-bordered" data-accordeon>
+								<h3 class="item-title title list-title">
+									Radar
+									<div class="anchor">
+										<i class="icon icon-angle-down"></i>
+									</div>
+								</h3>
+								<div class="inner">
+									<figure class="inner-image">
+										<img src="temp/image2.png" alt="G4S iTos Up">
+									</figure>
+									<h3 class="title">Camera</h3>
+									<div class="paragraph">
+										Ιδιαίτερα κομψός ανιχνευτής PIR (παθητικός αισθητήρας υπερύθρων), σχεδιασμένος ειδικά για οικίες και γραφεία. Εγκαθίσταται επιτοίχια, με τη βοήθεια διακριτικού βραχίονα, ώστε να μην επιβαρύνει τη σύνθεση του χώρου σου
+									</div>
+								</div>
+							</div>
+						</li>
+						<li class="item">
+							<div class="accordeon accordeon-bordered" data-accordeon>
+								<h3 class="item-title title list-title">
+									Ασύρματη Μαγνητική Επαφή
+									<div class="anchor">
+										<i class="icon icon-angle-down"></i>
+									</div>
+								</h3>
+								<div class="inner">
+									<figure class="inner-image">
+										<img src="temp/image2.png" alt="G4S iTos Up">
+									</figure>
+									<h3 class="title">Camera</h3>
+									<div class="paragraph">
+										Ιδιαίτερα κομψός ανιχνευτής PIR (παθητικός αισθητήρας υπερύθρων), σχεδιασμένος ειδικά για οικίες και γραφεία. Εγκαθίσταται επιτοίχια, με τη βοήθεια διακριτικού βραχίονα, ώστε να μην επιβαρύνει τη σύνθεση του χώρου σου
+									</div>
+								</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<!-- item -->
+			<div class="accordeon accordeon-light with-image" data-accordeon data-draggable="#mainContent" id="item5">
+				<div class="title">
+					<figure class="item-image">
+						<img src="temp/image.png" alt="G4S iTos Up">
+					</figure>
+					<span class="draggable-anchor">Outdoor Camera</span>
+					<div class="anchor">
+						<i class="icon icon-angle-down"></i>
+					</div>
+				</div>
+				<div class="inner">
+					<figure class="inner-image" data-call="#popupGallery" data-gallery>
+						<img src="temp/image.png" alt="G4S iTos Up">
+					</figure>
+					<h3 class="item-title title">Camera</h3>
+					<div class="paragraph">
+						Ιδιαίτερα κομψός ανιχνευτής PIR (παθητικός αισθητήρας υπερύθρων), σχεδιασμένος ειδικά για οικίες και γραφεία. Εγκαθίσταται επιτοίχια, με τη βοήθεια διακριτικού βραχίονα, ώστε να μην επιβαρύνει τη σύνθεση του χώρου σου
+					</div>
+					<ul class="clear items-list">
+						<li class="item">
+							<div class="accordeon accordeon-bordered" data-accordeon>
+								<h3 class="item-title title list-title">
+									Κεντρική Μονάδα 
+									<div class="anchor">
+										<i class="icon icon-angle-down"></i>
+									</div>
+								</h3>
+								<div class="inner">
+									<figure class="inner-image">
+										<img src="temp/image.png" alt="G4S iTos Up">
+									</figure>
+									<h3 class="title">Camera</h3>
+									<div class="paragraph">
+										Ιδιαίτερα κομψός ανιχνευτής PIR (παθητικός αισθητήρας υπερύθρων), σχεδιασμένος ειδικά για οικίες και γραφεία. Εγκαθίσταται επιτοίχια, με τη βοήθεια διακριτικού βραχίονα, ώστε να μην επιβαρύνει τη σύνθεση του χώρου σου
+									</div>
+								</div>
+							</div>
+						</li>
+						<li class="item">
+							<div class="accordeon accordeon-bordered" data-accordeon>
+								<h3 class="item-title title list-title">
+									Πληκτρολόγιο
+									<div class="anchor">
+										<i class="icon icon-angle-down"></i>
+									</div>
+								</h3>
+								<div class="inner">
+									<figure class="inner-image">
+										<img src="temp/image2.png" alt="G4S iTos Up">
+									</figure>
+									<h3 class="title">Camera</h3>
+									<div class="paragraph">
+										Ιδιαίτερα κομψός ανιχνευτής PIR (παθητικός αισθητήρας υπερύθρων), σχεδιασμένος ειδικά για οικίες και γραφεία. Εγκαθίσταται επιτοίχια, με τη βοήθεια διακριτικού βραχίονα, ώστε να μην επιβαρύνει τη σύνθεση του χώρου σου
+									</div>
+								</div>
+							</div>
+						</li>
+						<li class="item">
+							<div class="accordeon accordeon-bordered" data-accordeon>
+								<h3 class="item-title title list-title">
+									Radar
+									<div class="anchor">
+										<i class="icon icon-angle-down"></i>
+									</div>
+								</h3>
+								<div class="inner">
+									<figure class="inner-image">
+										<img src="temp/image2.png" alt="G4S iTos Up">
+									</figure>
+									<h3 class="title">Camera</h3>
+									<div class="paragraph">
+										Ιδιαίτερα κομψός ανιχνευτής PIR (παθητικός αισθητήρας υπερύθρων), σχεδιασμένος ειδικά για οικίες και γραφεία. Εγκαθίσταται επιτοίχια, με τη βοήθεια διακριτικού βραχίονα, ώστε να μην επιβαρύνει τη σύνθεση του χώρου σου
+									</div>
+								</div>
+							</div>
+						</li>
+						<li class="item">
+							<div class="accordeon accordeon-bordered" data-accordeon>
+								<h3 class="item-title title list-title">
+									Ασύρματη Μαγνητική Επαφή
+									<div class="anchor">
+										<i class="icon icon-angle-down"></i>
+									</div>
+								</h3>
+								<div class="inner">
+									<figure class="inner-image">
+										<img src="temp/image2.png" alt="G4S iTos Up">
+									</figure>
+									<h3 class="title">Camera</h3>
+									<div class="paragraph">
+										Ιδιαίτερα κομψός ανιχνευτής PIR (παθητικός αισθητήρας υπερύθρων), σχεδιασμένος ειδικά για οικίες και γραφεία. Εγκαθίσταται επιτοίχια, με τη βοήθεια διακριτικού βραχίονα, ώστε να μην επιβαρύνει τη σύνθεση του χώρου σου
+									</div>
+								</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<!-- item -->
+			<div class="accordeon accordeon-light with-image" data-accordeon data-draggable="#mainContent" id="item6">
+				<div class="title">
+					<figure class="item-image">
+						<img src="temp/image.png" alt="G4S iTos Up">
+					</figure>
+					<span class="draggable-anchor">Outdoor Camera</span>
+					<div class="anchor">
+						<i class="icon icon-angle-down"></i>
+					</div>
+				</div>
+				<div class="inner">
+					<figure class="inner-image" data-call="#popupGallery" data-gallery>
+						<img src="temp/image.png" alt="G4S iTos Up">
+					</figure>
+					<h3 class="item-title title">Camera</h3>
+					<div class="paragraph">
+						Ιδιαίτερα κομψός ανιχνευτής PIR (παθητικός αισθητήρας υπερύθρων), σχεδιασμένος ειδικά για οικίες και γραφεία. Εγκαθίσταται επιτοίχια, με τη βοήθεια διακριτικού βραχίονα, ώστε να μην επιβαρύνει τη σύνθεση του χώρου σου
+					</div>
+					<ul class="clear items-list">
+						<li class="item">
+							<div class="accordeon accordeon-bordered" data-accordeon>
+								<h3 class="item-title title list-title">
+									Κεντρική Μονάδα 
+									<div class="anchor">
+										<i class="icon icon-angle-down"></i>
+									</div>
+								</h3>
+								<div class="inner">
+									<figure class="inner-image">
+										<img src="temp/image.png" alt="G4S iTos Up">
+									</figure>
+									<h3 class="title">Camera</h3>
+									<div class="paragraph">
+										Ιδιαίτερα κομψός ανιχνευτής PIR (παθητικός αισθητήρας υπερύθρων), σχεδιασμένος ειδικά για οικίες και γραφεία. Εγκαθίσταται επιτοίχια, με τη βοήθεια διακριτικού βραχίονα, ώστε να μην επιβαρύνει τη σύνθεση του χώρου σου
+									</div>
+								</div>
+							</div>
+						</li>
+						<li class="item">
+							<div class="accordeon accordeon-bordered" data-accordeon>
+								<h3 class="item-title title list-title">
+									Πληκτρολόγιο
+									<div class="anchor">
+										<i class="icon icon-angle-down"></i>
+									</div>
+								</h3>
+								<div class="inner">
+									<figure class="inner-image">
+										<img src="temp/image2.png" alt="G4S iTos Up">
+									</figure>
+									<h3 class="title">Camera</h3>
+									<div class="paragraph">
+										Ιδιαίτερα κομψός ανιχνευτής PIR (παθητικός αισθητήρας υπερύθρων), σχεδιασμένος ειδικά για οικίες και γραφεία. Εγκαθίσταται επιτοίχια, με τη βοήθεια διακριτικού βραχίονα, ώστε να μην επιβαρύνει τη σύνθεση του χώρου σου
+									</div>
+								</div>
+							</div>
+						</li>
+						<li class="item">
+							<div class="accordeon accordeon-bordered" data-accordeon>
+								<h3 class="item-title title list-title">
+									Radar
+									<div class="anchor">
+										<i class="icon icon-angle-down"></i>
+									</div>
+								</h3>
+								<div class="inner">
+									<figure class="inner-image">
+										<img src="temp/image2.png" alt="G4S iTos Up">
+									</figure>
+									<h3 class="title">Camera</h3>
+									<div class="paragraph">
+										Ιδιαίτερα κομψός ανιχνευτής PIR (παθητικός αισθητήρας υπερύθρων), σχεδιασμένος ειδικά για οικίες και γραφεία. Εγκαθίσταται επιτοίχια, με τη βοήθεια διακριτικού βραχίονα, ώστε να μην επιβαρύνει τη σύνθεση του χώρου σου
+									</div>
+								</div>
+							</div>
+						</li>
+						<li class="item">
+							<div class="accordeon accordeon-bordered" data-accordeon>
+								<h3 class="item-title title list-title">
+									Ασύρματη Μαγνητική Επαφή
+									<div class="anchor">
+										<i class="icon icon-angle-down"></i>
+									</div>
+								</h3>
+								<div class="inner">
+									<figure class="inner-image">
+										<img src="temp/image2.png" alt="G4S iTos Up">
+									</figure>
+									<h3 class="title">Camera</h3>
+									<div class="paragraph">
+										Ιδιαίτερα κομψός ανιχνευτής PIR (παθητικός αισθητήρας υπερύθρων), σχεδιασμένος ειδικά για οικίες και γραφεία. Εγκαθίσταται επιτοίχια, με τη βοήθεια διακριτικού βραχίονα, ώστε να μην επιβαρύνει τη σύνθεση του χώρου σου
+									</div>
+								</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<!-- item -->
+			<div class="accordeon accordeon-light with-image" data-accordeon data-draggable="#mainContent" id="item7">
+				<div class="title">
+					<figure class="item-image">
+						<img src="temp/image.png" alt="G4S iTos Up">
+					</figure>
+					<span class="draggable-anchor">Outdoor Camera</span>
+					<div class="anchor">
+						<i class="icon icon-angle-down"></i>
+					</div>
+				</div>
+				<div class="inner">
+					<figure class="inner-image" data-call="#popupGallery" data-gallery>
+						<img src="temp/image.png" alt="G4S iTos Up">
+					</figure>
+					<h3 class="item-title title">Camera</h3>
+					<div class="paragraph">
+						Ιδιαίτερα κομψός ανιχνευτής PIR (παθητικός αισθητήρας υπερύθρων), σχεδιασμένος ειδικά για οικίες και γραφεία. Εγκαθίσταται επιτοίχια, με τη βοήθεια διακριτικού βραχίονα, ώστε να μην επιβαρύνει τη σύνθεση του χώρου σου
+					</div>
+					<ul class="clear items-list">
+						<li class="item">
+							<div class="accordeon accordeon-bordered" data-accordeon>
+								<h3 class="item-title title list-title">
+									Κεντρική Μονάδα 
+									<div class="anchor">
+										<i class="icon icon-angle-down"></i>
+									</div>
+								</h3>
+								<div class="inner">
+									<figure class="inner-image">
+										<img src="temp/image.png" alt="G4S iTos Up">
+									</figure>
+									<h3 class="title">Camera</h3>
+									<div class="paragraph">
+										Ιδιαίτερα κομψός ανιχνευτής PIR (παθητικός αισθητήρας υπερύθρων), σχεδιασμένος ειδικά για οικίες και γραφεία. Εγκαθίσταται επιτοίχια, με τη βοήθεια διακριτικού βραχίονα, ώστε να μην επιβαρύνει τη σύνθεση του χώρου σου
+									</div>
+								</div>
+							</div>
+						</li>
+						<li class="item">
+							<div class="accordeon accordeon-bordered" data-accordeon>
+								<h3 class="item-title title list-title">
+									Πληκτρολόγιο
+									<div class="anchor">
+										<i class="icon icon-angle-down"></i>
+									</div>
+								</h3>
+								<div class="inner">
+									<figure class="inner-image">
+										<img src="temp/image2.png" alt="G4S iTos Up">
+									</figure>
+									<h3 class="title">Camera</h3>
+									<div class="paragraph">
+										Ιδιαίτερα κομψός ανιχνευτής PIR (παθητικός αισθητήρας υπερύθρων), σχεδιασμένος ειδικά για οικίες και γραφεία. Εγκαθίσταται επιτοίχια, με τη βοήθεια διακριτικού βραχίονα, ώστε να μην επιβαρύνει τη σύνθεση του χώρου σου
+									</div>
+								</div>
+							</div>
+						</li>
+						<li class="item">
+							<div class="accordeon accordeon-bordered" data-accordeon>
+								<h3 class="item-title title list-title">
+									Radar
+									<div class="anchor">
+										<i class="icon icon-angle-down"></i>
+									</div>
+								</h3>
+								<div class="inner">
+									<figure class="inner-image">
+										<img src="temp/image2.png" alt="G4S iTos Up">
+									</figure>
+									<h3 class="title">Camera</h3>
+									<div class="paragraph">
+										Ιδιαίτερα κομψός ανιχνευτής PIR (παθητικός αισθητήρας υπερύθρων), σχεδιασμένος ειδικά για οικίες και γραφεία. Εγκαθίσταται επιτοίχια, με τη βοήθεια διακριτικού βραχίονα, ώστε να μην επιβαρύνει τη σύνθεση του χώρου σου
+									</div>
+								</div>
+							</div>
+						</li>
+						<li class="item">
+							<div class="accordeon accordeon-bordered" data-accordeon>
+								<h3 class="item-title title list-title">
+									Ασύρματη Μαγνητική Επαφή
+									<div class="anchor">
+										<i class="icon icon-angle-down"></i>
+									</div>
+								</h3>
+								<div class="inner">
+									<figure class="inner-image">
+										<img src="temp/image2.png" alt="G4S iTos Up">
+									</figure>
+									<h3 class="title">Camera</h3>
+									<div class="paragraph">
+										Ιδιαίτερα κομψός ανιχνευτής PIR (παθητικός αισθητήρας υπερύθρων), σχεδιασμένος ειδικά για οικίες και γραφεία. Εγκαθίσταται επιτοίχια, με τη βοήθεια διακριτικού βραχίονα, ώστε να μην επιβαρύνει τη σύνθεση του χώρου σου
+									</div>
+								</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<!-- item -->
+			<div class="accordeon accordeon-light with-image" data-accordeon data-draggable="#mainContent" id="item8">
+				<div class="title">
+					<figure class="item-image">
+						<img src="temp/image.png" alt="G4S iTos Up">
+					</figure>
+					<span class="draggable-anchor">Outdoor Camera</span>
+					<div class="anchor">
+						<i class="icon icon-angle-down"></i>
+					</div>
+				</div>
+				<div class="inner">
+					<figure class="inner-image" data-call="#popupGallery" data-gallery>
+						<img src="temp/image.png" alt="G4S iTos Up">
+					</figure>
+					<h3 class="item-title title">Camera</h3>
+					<div class="paragraph">
+						Ιδιαίτερα κομψός ανιχνευτής PIR (παθητικός αισθητήρας υπερύθρων), σχεδιασμένος ειδικά για οικίες και γραφεία. Εγκαθίσταται επιτοίχια, με τη βοήθεια διακριτικού βραχίονα, ώστε να μην επιβαρύνει τη σύνθεση του χώρου σου
+					</div>
+					<ul class="clear items-list">
+						<li class="item">
+							<div class="accordeon accordeon-bordered" data-accordeon>
+								<h3 class="item-title title list-title">
+									Κεντρική Μονάδα 
+									<div class="anchor">
+										<i class="icon icon-angle-down"></i>
+									</div>
+								</h3>
+								<div class="inner">
+									<figure class="inner-image">
+										<img src="temp/image.png" alt="G4S iTos Up">
+									</figure>
+									<h3 class="title">Camera</h3>
+									<div class="paragraph">
+										Ιδιαίτερα κομψός ανιχνευτής PIR (παθητικός αισθητήρας υπερύθρων), σχεδιασμένος ειδικά για οικίες και γραφεία. Εγκαθίσταται επιτοίχια, με τη βοήθεια διακριτικού βραχίονα, ώστε να μην επιβαρύνει τη σύνθεση του χώρου σου
+									</div>
+								</div>
+							</div>
+						</li>
+						<li class="item">
+							<div class="accordeon accordeon-bordered" data-accordeon>
+								<h3 class="item-title title list-title">
+									Πληκτρολόγιο
+									<div class="anchor">
+										<i class="icon icon-angle-down"></i>
+									</div>
+								</h3>
+								<div class="inner">
+									<figure class="inner-image">
+										<img src="temp/image2.png" alt="G4S iTos Up">
+									</figure>
+									<h3 class="title">Camera</h3>
+									<div class="paragraph">
+										Ιδιαίτερα κομψός ανιχνευτής PIR (παθητικός αισθητήρας υπερύθρων), σχεδιασμένος ειδικά για οικίες και γραφεία. Εγκαθίσταται επιτοίχια, με τη βοήθεια διακριτικού βραχίονα, ώστε να μην επιβαρύνει τη σύνθεση του χώρου σου
+									</div>
+								</div>
+							</div>
+						</li>
+						<li class="item">
+							<div class="accordeon accordeon-bordered" data-accordeon>
+								<h3 class="item-title title list-title">
+									Radar
+									<div class="anchor">
+										<i class="icon icon-angle-down"></i>
+									</div>
+								</h3>
+								<div class="inner">
+									<figure class="inner-image">
+										<img src="temp/image2.png" alt="G4S iTos Up">
+									</figure>
+									<h3 class="title">Camera</h3>
+									<div class="paragraph">
+										Ιδιαίτερα κομψός ανιχνευτής PIR (παθητικός αισθητήρας υπερύθρων), σχεδιασμένος ειδικά για οικίες και γραφεία. Εγκαθίσταται επιτοίχια, με τη βοήθεια διακριτικού βραχίονα, ώστε να μην επιβαρύνει τη σύνθεση του χώρου σου
+									</div>
+								</div>
+							</div>
+						</li>
+						<li class="item">
+							<div class="accordeon accordeon-bordered" data-accordeon>
+								<h3 class="item-title title list-title">
+									Ασύρματη Μαγνητική Επαφή
+									<div class="anchor">
+										<i class="icon icon-angle-down"></i>
+									</div>
+								</h3>
+								<div class="inner">
+									<figure class="inner-image">
+										<img src="temp/image2.png" alt="G4S iTos Up">
+									</figure>
+									<h3 class="title">Camera</h3>
+									<div class="paragraph">
+										Ιδιαίτερα κομψός ανιχνευτής PIR (παθητικός αισθητήρας υπερύθρων), σχεδιασμένος ειδικά για οικίες και γραφεία. Εγκαθίσταται επιτοίχια, με τη βοήθεια διακριτικού βραχίονα, ώστε να μην επιβαρύνει τη σύνθεση του χώρου σου
+									</div>
+								</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<!-- item -->
+			<div class="accordeon accordeon-light with-image" data-accordeon data-draggable="#mainContent" id="item9">
+				<div class="title">
+					<figure class="item-image">
+						<img src="temp/image.png" alt="G4S iTos Up">
+					</figure>
+					<span class="draggable-anchor">Outdoor Camera</span>
+					<div class="anchor">
+						<i class="icon icon-angle-down"></i>
+					</div>
+				</div>
+				<div class="inner">
+					<figure class="inner-image" data-call="#popupGallery" data-gallery>
+						<img src="temp/image.png" alt="G4S iTos Up">
+					</figure>
+					<h3 class="item-title title">Camera</h3>
+					<div class="paragraph">
+						Ιδιαίτερα κομψός ανιχνευτής PIR (παθητικός αισθητήρας υπερύθρων), σχεδιασμένος ειδικά για οικίες και γραφεία. Εγκαθίσταται επιτοίχια, με τη βοήθεια διακριτικού βραχίονα, ώστε να μην επιβαρύνει τη σύνθεση του χώρου σου
+					</div>
+					<ul class="clear items-list">
+						<li class="item">
+							<div class="accordeon accordeon-bordered" data-accordeon>
+								<h3 class="item-title title list-title">
+									Κεντρική Μονάδα 
+									<div class="anchor">
+										<i class="icon icon-angle-down"></i>
+									</div>
+								</h3>
+								<div class="inner">
+									<figure class="inner-image">
+										<img src="temp/image.png" alt="G4S iTos Up">
+									</figure>
+									<h3 class="title">Camera</h3>
+									<div class="paragraph">
+										Ιδιαίτερα κομψός ανιχνευτής PIR (παθητικός αισθητήρας υπερύθρων), σχεδιασμένος ειδικά για οικίες και γραφεία. Εγκαθίσταται επιτοίχια, με τη βοήθεια διακριτικού βραχίονα, ώστε να μην επιβαρύνει τη σύνθεση του χώρου σου
+									</div>
+								</div>
+							</div>
+						</li>
+						<li class="item">
+							<div class="accordeon accordeon-bordered" data-accordeon>
+								<h3 class="item-title title list-title">
+									Πληκτρολόγιο
+									<div class="anchor">
+										<i class="icon icon-angle-down"></i>
+									</div>
+								</h3>
+								<div class="inner">
+									<figure class="inner-image">
+										<img src="temp/image2.png" alt="G4S iTos Up">
+									</figure>
+									<h3 class="title">Camera</h3>
+									<div class="paragraph">
+										Ιδιαίτερα κομψός ανιχνευτής PIR (παθητικός αισθητήρας υπερύθρων), σχεδιασμένος ειδικά για οικίες και γραφεία. Εγκαθίσταται επιτοίχια, με τη βοήθεια διακριτικού βραχίονα, ώστε να μην επιβαρύνει τη σύνθεση του χώρου σου
+									</div>
+								</div>
+							</div>
+						</li>
+						<li class="item">
+							<div class="accordeon accordeon-bordered" data-accordeon>
+								<h3 class="item-title title list-title">
+									Radar
+									<div class="anchor">
+										<i class="icon icon-angle-down"></i>
+									</div>
+								</h3>
+								<div class="inner">
+									<figure class="inner-image">
+										<img src="temp/image2.png" alt="G4S iTos Up">
+									</figure>
+									<h3 class="title">Camera</h3>
+									<div class="paragraph">
+										Ιδιαίτερα κομψός ανιχνευτής PIR (παθητικός αισθητήρας υπερύθρων), σχεδιασμένος ειδικά για οικίες και γραφεία. Εγκαθίσταται επιτοίχια, με τη βοήθεια διακριτικού βραχίονα, ώστε να μην επιβαρύνει τη σύνθεση του χώρου σου
+									</div>
+								</div>
+							</div>
+						</li>
+						<li class="item">
+							<div class="accordeon accordeon-bordered" data-accordeon>
+								<h3 class="item-title title list-title">
+									Ασύρματη Μαγνητική Επαφή
+									<div class="anchor">
+										<i class="icon icon-angle-down"></i>
+									</div>
+								</h3>
+								<div class="inner">
+									<figure class="inner-image">
+										<img src="temp/image2.png" alt="G4S iTos Up">
+									</figure>
+									<h3 class="title">Camera</h3>
+									<div class="paragraph">
+										Ιδιαίτερα κομψός ανιχνευτής PIR (παθητικός αισθητήρας υπερύθρων), σχεδιασμένος ειδικά για οικίες και γραφεία. Εγκαθίσταται επιτοίχια, με τη βοήθεια διακριτικού βραχίονα, ώστε να μην επιβαρύνει τη σύνθεση του χώρου σου
+									</div>
+								</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<!-- item -->
+			<div class="accordeon accordeon-light with-image" data-accordeon data-draggable="#mainContent" id="item10">
+				<div class="title">
+					<figure class="item-image">
+						<img src="temp/image.png" alt="G4S iTos Up">
+					</figure>
+					<span class="draggable-anchor">Outdoor Camera</span>
+					<div class="anchor">
+						<i class="icon icon-angle-down"></i>
+					</div>
+				</div>
+				<div class="inner">
+					<figure class="inner-image" data-call="#popupGallery" data-gallery>
+						<img src="temp/image.png" alt="G4S iTos Up">
+					</figure>
+					<h3 class="item-title title">Camera</h3>
+					<div class="paragraph">
+						Ιδιαίτερα κομψός ανιχνευτής PIR (παθητικός αισθητήρας υπερύθρων), σχεδιασμένος ειδικά για οικίες και γραφεία. Εγκαθίσταται επιτοίχια, με τη βοήθεια διακριτικού βραχίονα, ώστε να μην επιβαρύνει τη σύνθεση του χώρου σου
+					</div>
+					<ul class="clear items-list">
+						<li class="item">
+							<div class="accordeon accordeon-bordered" data-accordeon>
+								<h3 class="item-title title list-title">
+									Κεντρική Μονάδα 
+									<div class="anchor">
+										<i class="icon icon-angle-down"></i>
+									</div>
+								</h3>
+								<div class="inner">
+									<figure class="inner-image">
+										<img src="temp/image.png" alt="G4S iTos Up">
+									</figure>
+									<h3 class="title">Camera</h3>
+									<div class="paragraph">
+										Ιδιαίτερα κομψός ανιχνευτής PIR (παθητικός αισθητήρας υπερύθρων), σχεδιασμένος ειδικά για οικίες και γραφεία. Εγκαθίσταται επιτοίχια, με τη βοήθεια διακριτικού βραχίονα, ώστε να μην επιβαρύνει τη σύνθεση του χώρου σου
+									</div>
+								</div>
+							</div>
+						</li>
+						<li class="item">
+							<div class="accordeon accordeon-bordered" data-accordeon>
+								<h3 class="item-title title list-title">
+									Πληκτρολόγιο
+									<div class="anchor">
+										<i class="icon icon-angle-down"></i>
+									</div>
+								</h3>
+								<div class="inner">
+									<figure class="inner-image">
+										<img src="temp/image2.png" alt="G4S iTos Up">
+									</figure>
+									<h3 class="title">Camera</h3>
+									<div class="paragraph">
+										Ιδιαίτερα κομψός ανιχνευτής PIR (παθητικός αισθητήρας υπερύθρων), σχεδιασμένος ειδικά για οικίες και γραφεία. Εγκαθίσταται επιτοίχια, με τη βοήθεια διακριτικού βραχίονα, ώστε να μην επιβαρύνει τη σύνθεση του χώρου σου
+									</div>
+								</div>
+							</div>
+						</li>
+						<li class="item">
+							<div class="accordeon accordeon-bordered" data-accordeon>
+								<h3 class="item-title title list-title">
+									Radar
+									<div class="anchor">
+										<i class="icon icon-angle-down"></i>
+									</div>
+								</h3>
+								<div class="inner">
+									<figure class="inner-image">
+										<img src="temp/image2.png" alt="G4S iTos Up">
+									</figure>
+									<h3 class="title">Camera</h3>
+									<div class="paragraph">
+										Ιδιαίτερα κομψός ανιχνευτής PIR (παθητικός αισθητήρας υπερύθρων), σχεδιασμένος ειδικά για οικίες και γραφεία. Εγκαθίσταται επιτοίχια, με τη βοήθεια διακριτικού βραχίονα, ώστε να μην επιβαρύνει τη σύνθεση του χώρου σου
+									</div>
+								</div>
+							</div>
+						</li>
+						<li class="item">
+							<div class="accordeon accordeon-bordered" data-accordeon>
+								<h3 class="item-title title list-title">
+									Ασύρματη Μαγνητική Επαφή
+									<div class="anchor">
+										<i class="icon icon-angle-down"></i>
+									</div>
+								</h3>
+								<div class="inner">
+									<figure class="inner-image">
+										<img src="temp/image2.png" alt="G4S iTos Up">
+									</figure>
+									<h3 class="title">Camera</h3>
+									<div class="paragraph">
+										Ιδιαίτερα κομψός ανιχνευτής PIR (παθητικός αισθητήρας υπερύθρων), σχεδιασμένος ειδικά για οικίες και γραφεία. Εγκαθίσταται επιτοίχια, με τη βοήθεια διακριτικού βραχίονα, ώστε να μην επιβαρύνει τη σύνθεση του χώρου σου
+									</div>
+								</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<!-- item -->
+			<div class="accordeon accordeon-light with-image" data-accordeon data-draggable="#mainContent" id="item11">
+				<div class="title">
+					<figure class="item-image">
+						<img src="temp/image.png" alt="G4S iTos Up">
+					</figure>
+					<span class="draggable-anchor">Outdoor Camera</span>
+					<div class="anchor">
+						<i class="icon icon-angle-down"></i>
+					</div>
+				</div>
+				<div class="inner">
+					<figure class="inner-image" data-call="#popupGallery" data-gallery>
+						<img src="temp/image.png" alt="G4S iTos Up">
+					</figure>
+					<h3 class="item-title title">Camera</h3>
+					<div class="paragraph">
+						Ιδιαίτερα κομψός ανιχνευτής PIR (παθητικός αισθητήρας υπερύθρων), σχεδιασμένος ειδικά για οικίες και γραφεία. Εγκαθίσταται επιτοίχια, με τη βοήθεια διακριτικού βραχίονα, ώστε να μην επιβαρύνει τη σύνθεση του χώρου σου
+					</div>
+					<ul class="clear items-list">
+						<li class="item">
+							<div class="accordeon accordeon-bordered" data-accordeon>
+								<h3 class="item-title title list-title">
+									Κεντρική Μονάδα 
+									<div class="anchor">
+										<i class="icon icon-angle-down"></i>
+									</div>
+								</h3>
+								<div class="inner">
+									<figure class="inner-image">
+										<img src="temp/image.png" alt="G4S iTos Up">
+									</figure>
+									<h3 class="title">Camera</h3>
+									<div class="paragraph">
+										Ιδιαίτερα κομψός ανιχνευτής PIR (παθητικός αισθητήρας υπερύθρων), σχεδιασμένος ειδικά για οικίες και γραφεία. Εγκαθίσταται επιτοίχια, με τη βοήθεια διακριτικού βραχίονα, ώστε να μην επιβαρύνει τη σύνθεση του χώρου σου
+									</div>
+								</div>
+							</div>
+						</li>
+						<li class="item">
+							<div class="accordeon accordeon-bordered" data-accordeon>
+								<h3 class="item-title title list-title">
+									Πληκτρολόγιο
+									<div class="anchor">
+										<i class="icon icon-angle-down"></i>
+									</div>
+								</h3>
+								<div class="inner">
+									<figure class="inner-image">
+										<img src="temp/image2.png" alt="G4S iTos Up">
+									</figure>
+									<h3 class="title">Camera</h3>
+									<div class="paragraph">
+										Ιδιαίτερα κομψός ανιχνευτής PIR (παθητικός αισθητήρας υπερύθρων), σχεδιασμένος ειδικά για οικίες και γραφεία. Εγκαθίσταται επιτοίχια, με τη βοήθεια διακριτικού βραχίονα, ώστε να μην επιβαρύνει τη σύνθεση του χώρου σου
+									</div>
+								</div>
+							</div>
+						</li>
+						<li class="item">
+							<div class="accordeon accordeon-bordered" data-accordeon>
+								<h3 class="item-title title list-title">
+									Radar
+									<div class="anchor">
+										<i class="icon icon-angle-down"></i>
+									</div>
+								</h3>
+								<div class="inner">
+									<figure class="inner-image">
+										<img src="temp/image2.png" alt="G4S iTos Up">
+									</figure>
+									<h3 class="title">Camera</h3>
+									<div class="paragraph">
+										Ιδιαίτερα κομψός ανιχνευτής PIR (παθητικός αισθητήρας υπερύθρων), σχεδιασμένος ειδικά για οικίες και γραφεία. Εγκαθίσταται επιτοίχια, με τη βοήθεια διακριτικού βραχίονα, ώστε να μην επιβαρύνει τη σύνθεση του χώρου σου
+									</div>
+								</div>
+							</div>
+						</li>
+						<li class="item">
+							<div class="accordeon accordeon-bordered" data-accordeon>
+								<h3 class="item-title title list-title">
+									Ασύρματη Μαγνητική Επαφή
+									<div class="anchor">
+										<i class="icon icon-angle-down"></i>
+									</div>
+								</h3>
+								<div class="inner">
+									<figure class="inner-image">
+										<img src="temp/image2.png" alt="G4S iTos Up">
+									</figure>
+									<h3 class="title">Camera</h3>
+									<div class="paragraph">
+										Ιδιαίτερα κομψός ανιχνευτής PIR (παθητικός αισθητήρας υπερύθρων), σχεδιασμένος ειδικά για οικίες και γραφεία. Εγκαθίσταται επιτοίχια, με τη βοήθεια διακριτικού βραχίονα, ώστε να μην επιβαρύνει τη σύνθεση του χώρου σου
+									</div>
+								</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+				</div>
+				<div class="tab-content scrolled" id="tab1">
+					<div class="offers-cover">
+	<div class="dropdown dropdown-simple active" data-dropdown>
+		<div class="dropdown-title">
+			<div class="title-inner">
+				<span class="caption">Bundles</span>
+				<div class="line"></div>
+			</div>
+			<div class="dropdown-anchor">
+				<i class="icon icon-angle-down"></i>
+			</div>
+		</div>
+		<div class="dropdown-inner">
+			<!-- item -->
+			<div class="accordeon accordeon-light with-image" data-accordeon data-draggable="#mainContent" id="item2_1">
+				<h2 class="title">
+					<figure class="item-image">
+						<img src="temp/image2.png" alt="G4S iTos Up">
+					</figure>
+					<span class="draggable-anchor">G4S iTos Plus</span>
+					<div class="anchor">
+						<i class="icon icon-angle-down"></i>
+					</div>
+				</h2>
+				<div class="inner">
+					<figure class="inner-image" data-call="#popupGallery" data-gallery>
+						<img src="temp/image2.png" alt="G4S iTos Up">
+					</figure>
+					<h3 class="item-title title">Camera</h3>
+					<div class="paragraph">
+						Ιδιαίτερα κομψός ανιχνευτής PIR (παθητικός αισθητήρας υπερύθρων), σχεδιασμένος ειδικά για οικίες και γραφεία. Εγκαθίσταται επιτοίχια, με τη βοήθεια διακριτικού βραχίονα, ώστε να μην επιβαρύνει τη σύνθεση του χώρου σου
+					</div>
+					<ul class="clear items-list">
+						<li class="item">
+							<div class="accordeon accordeon-bordered" data-accordeon>
+								<h3 class="item-title title list-title">
+									Κεντρική Μονάδα 
+									<div class="anchor">
+										<i class="icon icon-angle-down"></i>
+									</div>
+								</h3>
+								<div class="inner">
+									<figure class="inner-image">
+										<img src="temp/image.png" alt="G4S iTos Up">
+									</figure>
+									<h3 class="title">Camera</h3>
+									<div class="paragraph">
+										Ιδιαίτερα κομψός ανιχνευτής PIR (παθητικός αισθητήρας υπερύθρων), σχεδιασμένος ειδικά για οικίες και γραφεία. Εγκαθίσταται επιτοίχια, με τη βοήθεια διακριτικού βραχίονα, ώστε να μην επιβαρύνει τη σύνθεση του χώρου σου
+									</div>
+								</div>
+							</div>
+						</li>
+						<li class="item">
+							<div class="accordeon accordeon-bordered" data-accordeon>
+								<h3 class="item-title title list-title">
+									Πληκτρολόγιο
+									<div class="anchor">
+										<i class="icon icon-angle-down"></i>
+									</div>
+								</h3>
+								<div class="inner">
+									<figure class="inner-image">
+										<img src="temp/image2.png" alt="G4S iTos Up">
+									</figure>
+									<h3 class="title">Camera</h3>
+									<div class="paragraph">
+										Ιδιαίτερα κομψός ανιχνευτής PIR (παθητικός αισθητήρας υπερύθρων), σχεδιασμένος ειδικά για οικίες και γραφεία. Εγκαθίσταται επιτοίχια, με τη βοήθεια διακριτικού βραχίονα, ώστε να μην επιβαρύνει τη σύνθεση του χώρου σου
+									</div>
+								</div>
+							</div>
+						</li>
+						<li class="item">
+							<div class="accordeon accordeon-bordered" data-accordeon>
+								<h3 class="item-title title list-title">
+									Radar
+									<div class="anchor">
+										<i class="icon icon-angle-down"></i>
+									</div>
+								</h3>
+								<div class="inner">
+									<figure class="inner-image">
+										<img src="temp/image2.png" alt="G4S iTos Up">
+									</figure>
+									<h3 class="title">Camera</h3>
+									<div class="paragraph">
+										Ιδιαίτερα κομψός ανιχνευτής PIR (παθητικός αισθητήρας υπερύθρων), σχεδιασμένος ειδικά για οικίες και γραφεία. Εγκαθίσταται επιτοίχια, με τη βοήθεια διακριτικού βραχίονα, ώστε να μην επιβαρύνει τη σύνθεση του χώρου σου
+									</div>
+								</div>
+							</div>
+						</li>
+						<li class="item">
+							<div class="accordeon accordeon-bordered" data-accordeon>
+								<h3 class="item-title title list-title">
+									Ασύρματη Μαγνητική Επαφή
+									<div class="anchor">
+										<i class="icon icon-angle-down"></i>
+									</div>
+								</h3>
+								<div class="inner">
+									<figure class="inner-image">
+										<img src="temp/image2.png" alt="G4S iTos Up">
+									</figure>
+									<h3 class="title">Camera</h3>
+									<div class="paragraph">
+										Ιδιαίτερα κομψός ανιχνευτής PIR (παθητικός αισθητήρας υπερύθρων), σχεδιασμένος ειδικά για οικίες και γραφεία. Εγκαθίσταται επιτοίχια, με τη βοήθεια διακριτικού βραχίονα, ώστε να μην επιβαρύνει τη σύνθεση του χώρου σου
+									</div>
+								</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<!-- item -->
+			<div class="accordeon accordeon-light with-image" data-accordeon data-draggable="#mainContent" id="item2_2">
+				<h2 class="title">
+					<figure class="item-image">
+						<img src="temp/image2.png" alt="G4S iTos Up">
+					</figure>
+					<span class="draggable-anchor">G4S iTos One</span>
+					<div class="anchor">
+						<i class="icon icon-angle-down"></i>
+					</div>
+				</h2>
+				<div class="inner">
+					<figure class="inner-image" data-call="#popupGallery" data-gallery>
+						<img src="temp/image2.png" alt="G4S iTos Up">
+					</figure>
+					<h3 class="item-title title">Camera</h3>
+					<div class="paragraph">
+						Ιδιαίτερα κομψός ανιχνευτής PIR (παθητικός αισθητήρας υπερύθρων), σχεδιασμένος ειδικά για οικίες και γραφεία. Εγκαθίσταται επιτοίχια, με τη βοήθεια διακριτικού βραχίονα, ώστε να μην επιβαρύνει τη σύνθεση του χώρου σου
+					</div>
+					<ul class="clear items-list">
+						<li class="item">
+							<div class="accordeon accordeon-bordered" data-accordeon>
+								<h3 class="item-title title list-title">
+									Κεντρική Μονάδα 
+									<div class="anchor">
+										<i class="icon icon-angle-down"></i>
+									</div>
+								</h3>
+								<div class="inner">
+									<figure class="inner-image">
+										<img src="temp/image.png" alt="G4S iTos Up">
+									</figure>
+									<h3 class="title">Camera</h3>
+									<div class="paragraph">
+										Ιδιαίτερα κομψός ανιχνευτής PIR (παθητικός αισθητήρας υπερύθρων), σχεδιασμένος ειδικά για οικίες και γραφεία. Εγκαθίσταται επιτοίχια, με τη βοήθεια διακριτικού βραχίονα, ώστε να μην επιβαρύνει τη σύνθεση του χώρου σου
+									</div>
+								</div>
+							</div>
+						</li>
+						<li class="item">
+							<div class="accordeon accordeon-bordered" data-accordeon>
+								<h3 class="item-title title list-title">
+									Πληκτρολόγιο
+									<div class="anchor">
+										<i class="icon icon-angle-down"></i>
+									</div>
+								</h3>
+								<div class="inner">
+									<figure class="inner-image">
+										<img src="temp/image2.png" alt="G4S iTos Up">
+									</figure>
+									<h3 class="title">Camera</h3>
+									<div class="paragraph">
+										Ιδιαίτερα κομψός ανιχνευτής PIR (παθητικός αισθητήρας υπερύθρων), σχεδιασμένος ειδικά για οικίες και γραφεία. Εγκαθίσταται επιτοίχια, με τη βοήθεια διακριτικού βραχίονα, ώστε να μην επιβαρύνει τη σύνθεση του χώρου σου
+									</div>
+								</div>
+							</div>
+						</li>
+						<li class="item">
+							<div class="accordeon accordeon-bordered" data-accordeon>
+								<h3 class="item-title title list-title">
+									Radar
+									<div class="anchor">
+										<i class="icon icon-angle-down"></i>
+									</div>
+								</h3>
+								<div class="inner">
+									<figure class="inner-image">
+										<img src="temp/image2.png" alt="G4S iTos Up">
+									</figure>
+									<h3 class="title">Camera</h3>
+									<div class="paragraph">
+										Ιδιαίτερα κομψός ανιχνευτής PIR (παθητικός αισθητήρας υπερύθρων), σχεδιασμένος ειδικά για οικίες και γραφεία. Εγκαθίσταται επιτοίχια, με τη βοήθεια διακριτικού βραχίονα, ώστε να μην επιβαρύνει τη σύνθεση του χώρου σου
+									</div>
+								</div>
+							</div>
+						</li>
+						<li class="item">
+							<div class="accordeon accordeon-bordered" data-accordeon>
+								<h3 class="item-title title list-title">
+									Ασύρματη Μαγνητική Επαφή
+									<div class="anchor">
+										<i class="icon icon-angle-down"></i>
+									</div>
+								</h3>
+								<div class="inner">
+									<figure class="inner-image">
+										<img src="temp/image2.png" alt="G4S iTos Up">
+									</figure>
+									<h3 class="title">Camera</h3>
+									<div class="paragraph">
+										Ιδιαίτερα κομψός ανιχνευτής PIR (παθητικός αισθητήρας υπερύθρων), σχεδιασμένος ειδικά για οικίες και γραφεία. Εγκαθίσταται επιτοίχια, με τη βοήθεια διακριτικού βραχίονα, ώστε να μην επιβαρύνει τη σύνθεση του χώρου σου
+									</div>
+								</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<!-- item -->
+			<div class="accordeon accordeon-light with-image" data-accordeon data-draggable="#mainContent" id="item2_3">
+				<h2 class="title">
+					<figure class="item-image">
+						<img src="temp/image2.png" alt="G4S iTos Up">
+					</figure>
+					<span class="draggable-anchor">G4S iTos Up</span>
+					<div class="anchor">
+						<i class="icon icon-angle-down"></i>
+					</div>
+				</h2>
+				<div class="inner">
+					<figure class="inner-image" data-call="#popupGallery" data-gallery>
+						<img src="temp/image2.png" alt="G4S iTos Up">
+					</figure>
+					<h3 class="item-title title">Camera</h3>
+					<div class="paragraph">
+						Ιδιαίτερα κομψός ανιχνευτής PIR (παθητικός αισθητήρας υπερύθρων), σχεδιασμένος ειδικά για οικίες και γραφεία. Εγκαθίσταται επιτοίχια, με τη βοήθεια διακριτικού βραχίονα, ώστε να μην επιβαρύνει τη σύνθεση του χώρου σου
+					</div>
+					<ul class="clear items-list">
+						<li class="item">
+							<div class="accordeon accordeon-bordered" data-accordeon>
+								<h3 class="item-title title list-title">
+									Κεντρική Μονάδα 
+									<div class="anchor">
+										<i class="icon icon-angle-down"></i>
+									</div>
+								</h3>
+								<div class="inner">
+									<figure class="inner-image">
+										<img src="temp/image.png" alt="G4S iTos Up">
+									</figure>
+									<h3 class="title">Camera</h3>
+									<div class="paragraph">
+										Ιδιαίτερα κομψός ανιχνευτής PIR (παθητικός αισθητήρας υπερύθρων), σχεδιασμένος ειδικά για οικίες και γραφεία. Εγκαθίσταται επιτοίχια, με τη βοήθεια διακριτικού βραχίονα, ώστε να μην επιβαρύνει τη σύνθεση του χώρου σου
+									</div>
+								</div>
+							</div>
+						</li>
+						<li class="item">
+							<div class="accordeon accordeon-bordered" data-accordeon>
+								<h3 class="item-title title list-title">
+									Πληκτρολόγιο
+									<div class="anchor">
+										<i class="icon icon-angle-down"></i>
+									</div>
+								</h3>
+								<div class="inner">
+									<figure class="inner-image">
+										<img src="temp/image2.png" alt="G4S iTos Up">
+									</figure>
+									<h3 class="title">Camera</h3>
+									<div class="paragraph">
+										Ιδιαίτερα κομψός ανιχνευτής PIR (παθητικός αισθητήρας υπερύθρων), σχεδιασμένος ειδικά για οικίες και γραφεία. Εγκαθίσταται επιτοίχια, με τη βοήθεια διακριτικού βραχίονα, ώστε να μην επιβαρύνει τη σύνθεση του χώρου σου
+									</div>
+								</div>
+							</div>
+						</li>
+						<li class="item">
+							<div class="accordeon accordeon-bordered" data-accordeon>
+								<h3 class="item-title title list-title">
+									Radar
+									<div class="anchor">
+										<i class="icon icon-angle-down"></i>
+									</div>
+								</h3>
+								<div class="inner">
+									<figure class="inner-image">
+										<img src="temp/image2.png" alt="G4S iTos Up">
+									</figure>
+									<h3 class="title">Camera</h3>
+									<div class="paragraph">
+										Ιδιαίτερα κομψός ανιχνευτής PIR (παθητικός αισθητήρας υπερύθρων), σχεδιασμένος ειδικά για οικίες και γραφεία. Εγκαθίσταται επιτοίχια, με τη βοήθεια διακριτικού βραχίονα, ώστε να μην επιβαρύνει τη σύνθεση του χώρου σου
+									</div>
+								</div>
+							</div>
+						</li>
+						<li class="item">
+							<div class="accordeon accordeon-bordered" data-accordeon>
+								<h3 class="item-title title list-title">
+									Ασύρματη Μαγνητική Επαφή
+									<div class="anchor">
+										<i class="icon icon-angle-down"></i>
+									</div>
+								</h3>
+								<div class="inner">
+									<figure class="inner-image">
+										<img src="temp/image2.png" alt="G4S iTos Up">
+									</figure>
+									<h3 class="title">Camera</h3>
+									<div class="paragraph">
+										Ιδιαίτερα κομψός ανιχνευτής PIR (παθητικός αισθητήρας υπερύθρων), σχεδιασμένος ειδικά για οικίες και γραφεία. Εγκαθίσταται επιτοίχια, με τη βοήθεια διακριτικού βραχίονα, ώστε να μην επιβαρύνει τη σύνθεση του χώρου σου
+									</div>
+								</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="dropdown dropdown-simple active" data-dropdown>
+		<div class="dropdown-title">
+			<div class="title-inner">
+				<span class="caption">Items</span>
+				<div class="line"></div>
+			</div>
+			<div class="dropdown-anchor">
+				<i class="icon icon-angle-down"></i>
+			</div>
+		</div>
+		<div class="dropdown-inner">
+			<!-- item -->
+			<div class="accordeon accordeon-light with-image" data-accordeon data-draggable="#mainContent" id="item2_4">
+				<div class="title">
+					<figure class="item-image">
+						<img src="temp/image.png" alt="G4S iTos Up">
+					</figure>
+					<span class="draggable-anchor">Outdoor Camera</span>
+					<div class="anchor">
+						<i class="icon icon-angle-down"></i>
+					</div>
+				</div>
+				<div class="inner">
+					<figure class="inner-image" data-call="#popupGallery" data-gallery>
+						<img src="temp/image.png" alt="G4S iTos Up">
+					</figure>
+					<h3 class="item-title title">Camera</h3>
+					<div class="paragraph">
+						Ιδιαίτερα κομψός ανιχνευτής PIR (παθητικός αισθητήρας υπερύθρων), σχεδιασμένος ειδικά για οικίες και γραφεία. Εγκαθίσταται επιτοίχια, με τη βοήθεια διακριτικού βραχίονα, ώστε να μην επιβαρύνει τη σύνθεση του χώρου σου
+					</div>
+					<ul class="clear items-list">
+						<li class="item">
+							<div class="accordeon accordeon-bordered" data-accordeon>
+								<h3 class="item-title title list-title">
+									Κεντρική Μονάδα 
+									<div class="anchor">
+										<i class="icon icon-angle-down"></i>
+									</div>
+								</h3>
+								<div class="inner">
+									<figure class="inner-image">
+										<img src="temp/image.png" alt="G4S iTos Up">
+									</figure>
+									<h3 class="title">Camera</h3>
+									<div class="paragraph">
+										Ιδιαίτερα κομψός ανιχνευτής PIR (παθητικός αισθητήρας υπερύθρων), σχεδιασμένος ειδικά για οικίες και γραφεία. Εγκαθίσταται επιτοίχια, με τη βοήθεια διακριτικού βραχίονα, ώστε να μην επιβαρύνει τη σύνθεση του χώρου σου
+									</div>
+								</div>
+							</div>
+						</li>
+						<li class="item">
+							<div class="accordeon accordeon-bordered" data-accordeon>
+								<h3 class="item-title title list-title">
+									Πληκτρολόγιο
+									<div class="anchor">
+										<i class="icon icon-angle-down"></i>
+									</div>
+								</h3>
+								<div class="inner">
+									<figure class="inner-image">
+										<img src="temp/image2.png" alt="G4S iTos Up">
+									</figure>
+									<h3 class="title">Camera</h3>
+									<div class="paragraph">
+										Ιδιαίτερα κομψός ανιχνευτής PIR (παθητικός αισθητήρας υπερύθρων), σχεδιασμένος ειδικά για οικίες και γραφεία. Εγκαθίσταται επιτοίχια, με τη βοήθεια διακριτικού βραχίονα, ώστε να μην επιβαρύνει τη σύνθεση του χώρου σου
+									</div>
+								</div>
+							</div>
+						</li>
+						<li class="item">
+							<div class="accordeon accordeon-bordered" data-accordeon>
+								<h3 class="item-title title list-title">
+									Radar
+									<div class="anchor">
+										<i class="icon icon-angle-down"></i>
+									</div>
+								</h3>
+								<div class="inner">
+									<figure class="inner-image">
+										<img src="temp/image2.png" alt="G4S iTos Up">
+									</figure>
+									<h3 class="title">Camera</h3>
+									<div class="paragraph">
+										Ιδιαίτερα κομψός ανιχνευτής PIR (παθητικός αισθητήρας υπερύθρων), σχεδιασμένος ειδικά για οικίες και γραφεία. Εγκαθίσταται επιτοίχια, με τη βοήθεια διακριτικού βραχίονα, ώστε να μην επιβαρύνει τη σύνθεση του χώρου σου
+									</div>
+								</div>
+							</div>
+						</li>
+						<li class="item">
+							<div class="accordeon accordeon-bordered" data-accordeon>
+								<h3 class="item-title title list-title">
+									Ασύρματη Μαγνητική Επαφή
+									<div class="anchor">
+										<i class="icon icon-angle-down"></i>
+									</div>
+								</h3>
+								<div class="inner">
+									<figure class="inner-image">
+										<img src="temp/image2.png" alt="G4S iTos Up">
+									</figure>
+									<h3 class="title">Camera</h3>
+									<div class="paragraph">
+										Ιδιαίτερα κομψός ανιχνευτής PIR (παθητικός αισθητήρας υπερύθρων), σχεδιασμένος ειδικά για οικίες και γραφεία. Εγκαθίσταται επιτοίχια, με τη βοήθεια διακριτικού βραχίονα, ώστε να μην επιβαρύνει τη σύνθεση του χώρου σου
+									</div>
+								</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<!-- item -->
+			<div class="accordeon accordeon-light with-image" data-accordeon data-draggable="#mainContent" id="item2_5">
+				<div class="title">
+					<figure class="item-image">
+						<img src="temp/image.png" alt="G4S iTos Up">
+					</figure>
+					<span class="draggable-anchor">Outdoor Camera</span>
+					<div class="anchor">
+						<i class="icon icon-angle-down"></i>
+					</div>
+				</div>
+				<div class="inner">
+					<figure class="inner-image" data-call="#popupGallery" data-gallery>
+						<img src="temp/image.png" alt="G4S iTos Up">
+					</figure>
+					<h3 class="item-title title">Camera</h3>
+					<div class="paragraph">
+						Ιδιαίτερα κομψός ανιχνευτής PIR (παθητικός αισθητήρας υπερύθρων), σχεδιασμένος ειδικά για οικίες και γραφεία. Εγκαθίσταται επιτοίχια, με τη βοήθεια διακριτικού βραχίονα, ώστε να μην επιβαρύνει τη σύνθεση του χώρου σου
+					</div>
+					<ul class="clear items-list">
+						<li class="item">
+							<div class="accordeon accordeon-bordered" data-accordeon>
+								<h3 class="item-title title list-title">
+									Κεντρική Μονάδα 
+									<div class="anchor">
+										<i class="icon icon-angle-down"></i>
+									</div>
+								</h3>
+								<div class="inner">
+									<figure class="inner-image">
+										<img src="temp/image.png" alt="G4S iTos Up">
+									</figure>
+									<h3 class="title">Camera</h3>
+									<div class="paragraph">
+										Ιδιαίτερα κομψός ανιχνευτής PIR (παθητικός αισθητήρας υπερύθρων), σχεδιασμένος ειδικά για οικίες και γραφεία. Εγκαθίσταται επιτοίχια, με τη βοήθεια διακριτικού βραχίονα, ώστε να μην επιβαρύνει τη σύνθεση του χώρου σου
+									</div>
+								</div>
+							</div>
+						</li>
+						<li class="item">
+							<div class="accordeon accordeon-bordered" data-accordeon>
+								<h3 class="item-title title list-title">
+									Πληκτρολόγιο
+									<div class="anchor">
+										<i class="icon icon-angle-down"></i>
+									</div>
+								</h3>
+								<div class="inner">
+									<figure class="inner-image">
+										<img src="temp/image2.png" alt="G4S iTos Up">
+									</figure>
+									<h3 class="title">Camera</h3>
+									<div class="paragraph">
+										Ιδιαίτερα κομψός ανιχνευτής PIR (παθητικός αισθητήρας υπερύθρων), σχεδιασμένος ειδικά για οικίες και γραφεία. Εγκαθίσταται επιτοίχια, με τη βοήθεια διακριτικού βραχίονα, ώστε να μην επιβαρύνει τη σύνθεση του χώρου σου
+									</div>
+								</div>
+							</div>
+						</li>
+						<li class="item">
+							<div class="accordeon accordeon-bordered" data-accordeon>
+								<h3 class="item-title title list-title">
+									Radar
+									<div class="anchor">
+										<i class="icon icon-angle-down"></i>
+									</div>
+								</h3>
+								<div class="inner">
+									<figure class="inner-image">
+										<img src="temp/image2.png" alt="G4S iTos Up">
+									</figure>
+									<h3 class="title">Camera</h3>
+									<div class="paragraph">
+										Ιδιαίτερα κομψός ανιχνευτής PIR (παθητικός αισθητήρας υπερύθρων), σχεδιασμένος ειδικά για οικίες και γραφεία. Εγκαθίσταται επιτοίχια, με τη βοήθεια διακριτικού βραχίονα, ώστε να μην επιβαρύνει τη σύνθεση του χώρου σου
+									</div>
+								</div>
+							</div>
+						</li>
+						<li class="item">
+							<div class="accordeon accordeon-bordered" data-accordeon>
+								<h3 class="item-title title list-title">
+									Ασύρματη Μαγνητική Επαφή
+									<div class="anchor">
+										<i class="icon icon-angle-down"></i>
+									</div>
+								</h3>
+								<div class="inner">
+									<figure class="inner-image">
+										<img src="temp/image2.png" alt="G4S iTos Up">
+									</figure>
+									<h3 class="title">Camera</h3>
+									<div class="paragraph">
+										Ιδιαίτερα κομψός ανιχνευτής PIR (παθητικός αισθητήρας υπερύθρων), σχεδιασμένος ειδικά για οικίες και γραφεία. Εγκαθίσταται επιτοίχια, με τη βοήθεια διακριτικού βραχίονα, ώστε να μην επιβαρύνει τη σύνθεση του χώρου σου
+									</div>
+								</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<!-- item -->
+			<div class="accordeon accordeon-light with-image" data-accordeon data-draggable="#mainContent" id="item2_6">
+				<div class="title">
+					<figure class="item-image">
+						<img src="temp/image.png" alt="G4S iTos Up">
+					</figure>
+					<span class="draggable-anchor">Outdoor Camera</span>
+					<div class="anchor">
+						<i class="icon icon-angle-down"></i>
+					</div>
+				</div>
+				<div class="inner">
+					<figure class="inner-image" data-call="#popupGallery" data-gallery>
+						<img src="temp/image.png" alt="G4S iTos Up">
+					</figure>
+					<h3 class="item-title title">Camera</h3>
+					<div class="paragraph">
+						Ιδιαίτερα κομψός ανιχνευτής PIR (παθητικός αισθητήρας υπερύθρων), σχεδιασμένος ειδικά για οικίες και γραφεία. Εγκαθίσταται επιτοίχια, με τη βοήθεια διακριτικού βραχίονα, ώστε να μην επιβαρύνει τη σύνθεση του χώρου σου
+					</div>
+					<ul class="clear items-list">
+						<li class="item">
+							<div class="accordeon accordeon-bordered" data-accordeon>
+								<h3 class="item-title title list-title">
+									Κεντρική Μονάδα 
+									<div class="anchor">
+										<i class="icon icon-angle-down"></i>
+									</div>
+								</h3>
+								<div class="inner">
+									<figure class="inner-image">
+										<img src="temp/image.png" alt="G4S iTos Up">
+									</figure>
+									<h3 class="title">Camera</h3>
+									<div class="paragraph">
+										Ιδιαίτερα κομψός ανιχνευτής PIR (παθητικός αισθητήρας υπερύθρων), σχεδιασμένος ειδικά για οικίες και γραφεία. Εγκαθίσταται επιτοίχια, με τη βοήθεια διακριτικού βραχίονα, ώστε να μην επιβαρύνει τη σύνθεση του χώρου σου
+									</div>
+								</div>
+							</div>
+						</li>
+						<li class="item">
+							<div class="accordeon accordeon-bordered" data-accordeon>
+								<h3 class="item-title title list-title">
+									Πληκτρολόγιο
+									<div class="anchor">
+										<i class="icon icon-angle-down"></i>
+									</div>
+								</h3>
+								<div class="inner">
+									<figure class="inner-image">
+										<img src="temp/image2.png" alt="G4S iTos Up">
+									</figure>
+									<h3 class="title">Camera</h3>
+									<div class="paragraph">
+										Ιδιαίτερα κομψός ανιχνευτής PIR (παθητικός αισθητήρας υπερύθρων), σχεδιασμένος ειδικά για οικίες και γραφεία. Εγκαθίσταται επιτοίχια, με τη βοήθεια διακριτικού βραχίονα, ώστε να μην επιβαρύνει τη σύνθεση του χώρου σου
+									</div>
+								</div>
+							</div>
+						</li>
+						<li class="item">
+							<div class="accordeon accordeon-bordered" data-accordeon>
+								<h3 class="item-title title list-title">
+									Radar
+									<div class="anchor">
+										<i class="icon icon-angle-down"></i>
+									</div>
+								</h3>
+								<div class="inner">
+									<figure class="inner-image">
+										<img src="temp/image2.png" alt="G4S iTos Up">
+									</figure>
+									<h3 class="title">Camera</h3>
+									<div class="paragraph">
+										Ιδιαίτερα κομψός ανιχνευτής PIR (παθητικός αισθητήρας υπερύθρων), σχεδιασμένος ειδικά για οικίες και γραφεία. Εγκαθίσταται επιτοίχια, με τη βοήθεια διακριτικού βραχίονα, ώστε να μην επιβαρύνει τη σύνθεση του χώρου σου
+									</div>
+								</div>
+							</div>
+						</li>
+						<li class="item">
+							<div class="accordeon accordeon-bordered" data-accordeon>
+								<h3 class="item-title title list-title">
+									Ασύρματη Μαγνητική Επαφή
+									<div class="anchor">
+										<i class="icon icon-angle-down"></i>
+									</div>
+								</h3>
+								<div class="inner">
+									<figure class="inner-image">
+										<img src="temp/image2.png" alt="G4S iTos Up">
+									</figure>
+									<h3 class="title">Camera</h3>
+									<div class="paragraph">
+										Ιδιαίτερα κομψός ανιχνευτής PIR (παθητικός αισθητήρας υπερύθρων), σχεδιασμένος ειδικά για οικίες και γραφεία. Εγκαθίσταται επιτοίχια, με τη βοήθεια διακριτικού βραχίονα, ώστε να μην επιβαρύνει τη σύνθεση του χώρου σου
+									</div>
+								</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<!-- item -->
+			<div class="accordeon accordeon-light with-image" data-accordeon data-draggable="#mainContent" id="item2_7">
+				<div class="title">
+					<figure class="item-image">
+						<img src="temp/image.png" alt="G4S iTos Up">
+					</figure>
+					<span class="draggable-anchor">Outdoor Camera</span>
+					<div class="anchor">
+						<i class="icon icon-angle-down"></i>
+					</div>
+				</div>
+				<div class="inner">
+					<figure class="inner-image" data-call="#popupGallery" data-gallery>
+						<img src="temp/image.png" alt="G4S iTos Up">
+					</figure>
+					<h3 class="item-title title">Camera</h3>
+					<div class="paragraph">
+						Ιδιαίτερα κομψός ανιχνευτής PIR (παθητικός αισθητήρας υπερύθρων), σχεδιασμένος ειδικά για οικίες και γραφεία. Εγκαθίσταται επιτοίχια, με τη βοήθεια διακριτικού βραχίονα, ώστε να μην επιβαρύνει τη σύνθεση του χώρου σου
+					</div>
+					<ul class="clear items-list">
+						<li class="item">
+							<div class="accordeon accordeon-bordered" data-accordeon>
+								<h3 class="item-title title list-title">
+									Κεντρική Μονάδα 
+									<div class="anchor">
+										<i class="icon icon-angle-down"></i>
+									</div>
+								</h3>
+								<div class="inner">
+									<figure class="inner-image">
+										<img src="temp/image.png" alt="G4S iTos Up">
+									</figure>
+									<h3 class="title">Camera</h3>
+									<div class="paragraph">
+										Ιδιαίτερα κομψός ανιχνευτής PIR (παθητικός αισθητήρας υπερύθρων), σχεδιασμένος ειδικά για οικίες και γραφεία. Εγκαθίσταται επιτοίχια, με τη βοήθεια διακριτικού βραχίονα, ώστε να μην επιβαρύνει τη σύνθεση του χώρου σου
+									</div>
+								</div>
+							</div>
+						</li>
+						<li class="item">
+							<div class="accordeon accordeon-bordered" data-accordeon>
+								<h3 class="item-title title list-title">
+									Πληκτρολόγιο
+									<div class="anchor">
+										<i class="icon icon-angle-down"></i>
+									</div>
+								</h3>
+								<div class="inner">
+									<figure class="inner-image">
+										<img src="temp/image2.png" alt="G4S iTos Up">
+									</figure>
+									<h3 class="title">Camera</h3>
+									<div class="paragraph">
+										Ιδιαίτερα κομψός ανιχνευτής PIR (παθητικός αισθητήρας υπερύθρων), σχεδιασμένος ειδικά για οικίες και γραφεία. Εγκαθίσταται επιτοίχια, με τη βοήθεια διακριτικού βραχίονα, ώστε να μην επιβαρύνει τη σύνθεση του χώρου σου
+									</div>
+								</div>
+							</div>
+						</li>
+						<li class="item">
+							<div class="accordeon accordeon-bordered" data-accordeon>
+								<h3 class="item-title title list-title">
+									Radar
+									<div class="anchor">
+										<i class="icon icon-angle-down"></i>
+									</div>
+								</h3>
+								<div class="inner">
+									<figure class="inner-image">
+										<img src="temp/image2.png" alt="G4S iTos Up">
+									</figure>
+									<h3 class="title">Camera</h3>
+									<div class="paragraph">
+										Ιδιαίτερα κομψός ανιχνευτής PIR (παθητικός αισθητήρας υπερύθρων), σχεδιασμένος ειδικά για οικίες και γραφεία. Εγκαθίσταται επιτοίχια, με τη βοήθεια διακριτικού βραχίονα, ώστε να μην επιβαρύνει τη σύνθεση του χώρου σου
+									</div>
+								</div>
+							</div>
+						</li>
+						<li class="item">
+							<div class="accordeon accordeon-bordered" data-accordeon>
+								<h3 class="item-title title list-title">
+									Ασύρματη Μαγνητική Επαφή
+									<div class="anchor">
+										<i class="icon icon-angle-down"></i>
+									</div>
+								</h3>
+								<div class="inner">
+									<figure class="inner-image">
+										<img src="temp/image2.png" alt="G4S iTos Up">
+									</figure>
+									<h3 class="title">Camera</h3>
+									<div class="paragraph">
+										Ιδιαίτερα κομψός ανιχνευτής PIR (παθητικός αισθητήρας υπερύθρων), σχεδιασμένος ειδικά για οικίες και γραφεία. Εγκαθίσταται επιτοίχια, με τη βοήθεια διακριτικού βραχίονα, ώστε να μην επιβαρύνει τη σύνθεση του χώρου σου
+									</div>
+								</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<!-- item -->
+			<div class="accordeon accordeon-light with-image" data-accordeon data-draggable="#mainContent" id="item2_8">
+				<div class="title">
+					<figure class="item-image">
+						<img src="temp/image.png" alt="G4S iTos Up">
+					</figure>
+					<span class="draggable-anchor">Outdoor Camera</span>
+					<div class="anchor">
+						<i class="icon icon-angle-down"></i>
+					</div>
+				</div>
+				<div class="inner">
+					<figure class="inner-image" data-call="#popupGallery" data-gallery>
+						<img src="temp/image.png" alt="G4S iTos Up">
+					</figure>
+					<h3 class="item-title title">Camera</h3>
+					<div class="paragraph">
+						Ιδιαίτερα κομψός ανιχνευτής PIR (παθητικός αισθητήρας υπερύθρων), σχεδιασμένος ειδικά για οικίες και γραφεία. Εγκαθίσταται επιτοίχια, με τη βοήθεια διακριτικού βραχίονα, ώστε να μην επιβαρύνει τη σύνθεση του χώρου σου
+					</div>
+					<ul class="clear items-list">
+						<li class="item">
+							<div class="accordeon accordeon-bordered" data-accordeon>
+								<h3 class="item-title title list-title">
+									Κεντρική Μονάδα 
+									<div class="anchor">
+										<i class="icon icon-angle-down"></i>
+									</div>
+								</h3>
+								<div class="inner">
+									<figure class="inner-image">
+										<img src="temp/image.png" alt="G4S iTos Up">
+									</figure>
+									<h3 class="title">Camera</h3>
+									<div class="paragraph">
+										Ιδιαίτερα κομψός ανιχνευτής PIR (παθητικός αισθητήρας υπερύθρων), σχεδιασμένος ειδικά για οικίες και γραφεία. Εγκαθίσταται επιτοίχια, με τη βοήθεια διακριτικού βραχίονα, ώστε να μην επιβαρύνει τη σύνθεση του χώρου σου
+									</div>
+								</div>
+							</div>
+						</li>
+						<li class="item">
+							<div class="accordeon accordeon-bordered" data-accordeon>
+								<h3 class="item-title title list-title">
+									Πληκτρολόγιο
+									<div class="anchor">
+										<i class="icon icon-angle-down"></i>
+									</div>
+								</h3>
+								<div class="inner">
+									<figure class="inner-image">
+										<img src="temp/image2.png" alt="G4S iTos Up">
+									</figure>
+									<h3 class="title">Camera</h3>
+									<div class="paragraph">
+										Ιδιαίτερα κομψός ανιχνευτής PIR (παθητικός αισθητήρας υπερύθρων), σχεδιασμένος ειδικά για οικίες και γραφεία. Εγκαθίσταται επιτοίχια, με τη βοήθεια διακριτικού βραχίονα, ώστε να μην επιβαρύνει τη σύνθεση του χώρου σου
+									</div>
+								</div>
+							</div>
+						</li>
+						<li class="item">
+							<div class="accordeon accordeon-bordered" data-accordeon>
+								<h3 class="item-title title list-title">
+									Radar
+									<div class="anchor">
+										<i class="icon icon-angle-down"></i>
+									</div>
+								</h3>
+								<div class="inner">
+									<figure class="inner-image">
+										<img src="temp/image2.png" alt="G4S iTos Up">
+									</figure>
+									<h3 class="title">Camera</h3>
+									<div class="paragraph">
+										Ιδιαίτερα κομψός ανιχνευτής PIR (παθητικός αισθητήρας υπερύθρων), σχεδιασμένος ειδικά για οικίες και γραφεία. Εγκαθίσταται επιτοίχια, με τη βοήθεια διακριτικού βραχίονα, ώστε να μην επιβαρύνει τη σύνθεση του χώρου σου
+									</div>
+								</div>
+							</div>
+						</li>
+						<li class="item">
+							<div class="accordeon accordeon-bordered" data-accordeon>
+								<h3 class="item-title title list-title">
+									Ασύρματη Μαγνητική Επαφή
+									<div class="anchor">
+										<i class="icon icon-angle-down"></i>
+									</div>
+								</h3>
+								<div class="inner">
+									<figure class="inner-image">
+										<img src="temp/image2.png" alt="G4S iTos Up">
+									</figure>
+									<h3 class="title">Camera</h3>
+									<div class="paragraph">
+										Ιδιαίτερα κομψός ανιχνευτής PIR (παθητικός αισθητήρας υπερύθρων), σχεδιασμένος ειδικά για οικίες και γραφεία. Εγκαθίσταται επιτοίχια, με τη βοήθεια διακριτικού βραχίονα, ώστε να μην επιβαρύνει τη σύνθεση του χώρου σου
+									</div>
+								</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<!-- item -->
+			<div class="accordeon accordeon-light with-image" data-accordeon data-draggable="#mainContent" id="item2_9">
+				<div class="title">
+					<figure class="item-image">
+						<img src="temp/image.png" alt="G4S iTos Up">
+					</figure>
+					<span class="draggable-anchor">Outdoor Camera</span>
+					<div class="anchor">
+						<i class="icon icon-angle-down"></i>
+					</div>
+				</div>
+				<div class="inner">
+					<figure class="inner-image" data-call="#popupGallery" data-gallery>
+						<img src="temp/image.png" alt="G4S iTos Up">
+					</figure>
+					<h3 class="item-title title">Camera</h3>
+					<div class="paragraph">
+						Ιδιαίτερα κομψός ανιχνευτής PIR (παθητικός αισθητήρας υπερύθρων), σχεδιασμένος ειδικά για οικίες και γραφεία. Εγκαθίσταται επιτοίχια, με τη βοήθεια διακριτικού βραχίονα, ώστε να μην επιβαρύνει τη σύνθεση του χώρου σου
+					</div>
+					<ul class="clear items-list">
+						<li class="item">
+							<div class="accordeon accordeon-bordered" data-accordeon>
+								<h3 class="item-title title list-title">
+									Κεντρική Μονάδα 
+									<div class="anchor">
+										<i class="icon icon-angle-down"></i>
+									</div>
+								</h3>
+								<div class="inner">
+									<figure class="inner-image">
+										<img src="temp/image.png" alt="G4S iTos Up">
+									</figure>
+									<h3 class="title">Camera</h3>
+									<div class="paragraph">
+										Ιδιαίτερα κομψός ανιχνευτής PIR (παθητικός αισθητήρας υπερύθρων), σχεδιασμένος ειδικά για οικίες και γραφεία. Εγκαθίσταται επιτοίχια, με τη βοήθεια διακριτικού βραχίονα, ώστε να μην επιβαρύνει τη σύνθεση του χώρου σου
+									</div>
+								</div>
+							</div>
+						</li>
+						<li class="item">
+							<div class="accordeon accordeon-bordered" data-accordeon>
+								<h3 class="item-title title list-title">
+									Πληκτρολόγιο
+									<div class="anchor">
+										<i class="icon icon-angle-down"></i>
+									</div>
+								</h3>
+								<div class="inner">
+									<figure class="inner-image">
+										<img src="temp/image2.png" alt="G4S iTos Up">
+									</figure>
+									<h3 class="title">Camera</h3>
+									<div class="paragraph">
+										Ιδιαίτερα κομψός ανιχνευτής PIR (παθητικός αισθητήρας υπερύθρων), σχεδιασμένος ειδικά για οικίες και γραφεία. Εγκαθίσταται επιτοίχια, με τη βοήθεια διακριτικού βραχίονα, ώστε να μην επιβαρύνει τη σύνθεση του χώρου σου
+									</div>
+								</div>
+							</div>
+						</li>
+						<li class="item">
+							<div class="accordeon accordeon-bordered" data-accordeon>
+								<h3 class="item-title title list-title">
+									Radar
+									<div class="anchor">
+										<i class="icon icon-angle-down"></i>
+									</div>
+								</h3>
+								<div class="inner">
+									<figure class="inner-image">
+										<img src="temp/image2.png" alt="G4S iTos Up">
+									</figure>
+									<h3 class="title">Camera</h3>
+									<div class="paragraph">
+										Ιδιαίτερα κομψός ανιχνευτής PIR (παθητικός αισθητήρας υπερύθρων), σχεδιασμένος ειδικά για οικίες και γραφεία. Εγκαθίσταται επιτοίχια, με τη βοήθεια διακριτικού βραχίονα, ώστε να μην επιβαρύνει τη σύνθεση του χώρου σου
+									</div>
+								</div>
+							</div>
+						</li>
+						<li class="item">
+							<div class="accordeon accordeon-bordered" data-accordeon>
+								<h3 class="item-title title list-title">
+									Ασύρματη Μαγνητική Επαφή
+									<div class="anchor">
+										<i class="icon icon-angle-down"></i>
+									</div>
+								</h3>
+								<div class="inner">
+									<figure class="inner-image">
+										<img src="temp/image2.png" alt="G4S iTos Up">
+									</figure>
+									<h3 class="title">Camera</h3>
+									<div class="paragraph">
+										Ιδιαίτερα κομψός ανιχνευτής PIR (παθητικός αισθητήρας υπερύθρων), σχεδιασμένος ειδικά για οικίες και γραφεία. Εγκαθίσταται επιτοίχια, με τη βοήθεια διακριτικού βραχίονα, ώστε να μην επιβαρύνει τη σύνθεση του χώρου σου
+									</div>
+								</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<!-- item -->
+			<div class="accordeon accordeon-light with-image" data-accordeon data-draggable="#mainContent" id="item2_10">
+				<div class="title">
+					<figure class="item-image">
+						<img src="temp/image.png" alt="G4S iTos Up">
+					</figure>
+					<span class="draggable-anchor">Outdoor Camera</span>
+					<div class="anchor">
+						<i class="icon icon-angle-down"></i>
+					</div>
+				</div>
+				<div class="inner">
+					<figure class="inner-image" data-call="#popupGallery" data-gallery>
+						<img src="temp/image.png" alt="G4S iTos Up">
+					</figure>
+					<h3 class="item-title title">Camera</h3>
+					<div class="paragraph">
+						Ιδιαίτερα κομψός ανιχνευτής PIR (παθητικός αισθητήρας υπερύθρων), σχεδιασμένος ειδικά για οικίες και γραφεία. Εγκαθίσταται επιτοίχια, με τη βοήθεια διακριτικού βραχίονα, ώστε να μην επιβαρύνει τη σύνθεση του χώρου σου
+					</div>
+					<ul class="clear items-list">
+						<li class="item">
+							<div class="accordeon accordeon-bordered" data-accordeon>
+								<h3 class="item-title title list-title">
+									Κεντρική Μονάδα 
+									<div class="anchor">
+										<i class="icon icon-angle-down"></i>
+									</div>
+								</h3>
+								<div class="inner">
+									<figure class="inner-image">
+										<img src="temp/image.png" alt="G4S iTos Up">
+									</figure>
+									<h3 class="title">Camera</h3>
+									<div class="paragraph">
+										Ιδιαίτερα κομψός ανιχνευτής PIR (παθητικός αισθητήρας υπερύθρων), σχεδιασμένος ειδικά για οικίες και γραφεία. Εγκαθίσταται επιτοίχια, με τη βοήθεια διακριτικού βραχίονα, ώστε να μην επιβαρύνει τη σύνθεση του χώρου σου
+									</div>
+								</div>
+							</div>
+						</li>
+						<li class="item">
+							<div class="accordeon accordeon-bordered" data-accordeon>
+								<h3 class="item-title title list-title">
+									Πληκτρολόγιο
+									<div class="anchor">
+										<i class="icon icon-angle-down"></i>
+									</div>
+								</h3>
+								<div class="inner">
+									<figure class="inner-image">
+										<img src="temp/image2.png" alt="G4S iTos Up">
+									</figure>
+									<h3 class="title">Camera</h3>
+									<div class="paragraph">
+										Ιδιαίτερα κομψός ανιχνευτής PIR (παθητικός αισθητήρας υπερύθρων), σχεδιασμένος ειδικά για οικίες και γραφεία. Εγκαθίσταται επιτοίχια, με τη βοήθεια διακριτικού βραχίονα, ώστε να μην επιβαρύνει τη σύνθεση του χώρου σου
+									</div>
+								</div>
+							</div>
+						</li>
+						<li class="item">
+							<div class="accordeon accordeon-bordered" data-accordeon>
+								<h3 class="item-title title list-title">
+									Radar
+									<div class="anchor">
+										<i class="icon icon-angle-down"></i>
+									</div>
+								</h3>
+								<div class="inner">
+									<figure class="inner-image">
+										<img src="temp/image2.png" alt="G4S iTos Up">
+									</figure>
+									<h3 class="title">Camera</h3>
+									<div class="paragraph">
+										Ιδιαίτερα κομψός ανιχνευτής PIR (παθητικός αισθητήρας υπερύθρων), σχεδιασμένος ειδικά για οικίες και γραφεία. Εγκαθίσταται επιτοίχια, με τη βοήθεια διακριτικού βραχίονα, ώστε να μην επιβαρύνει τη σύνθεση του χώρου σου
+									</div>
+								</div>
+							</div>
+						</li>
+						<li class="item">
+							<div class="accordeon accordeon-bordered" data-accordeon>
+								<h3 class="item-title title list-title">
+									Ασύρματη Μαγνητική Επαφή
+									<div class="anchor">
+										<i class="icon icon-angle-down"></i>
+									</div>
+								</h3>
+								<div class="inner">
+									<figure class="inner-image">
+										<img src="temp/image2.png" alt="G4S iTos Up">
+									</figure>
+									<h3 class="title">Camera</h3>
+									<div class="paragraph">
+										Ιδιαίτερα κομψός ανιχνευτής PIR (παθητικός αισθητήρας υπερύθρων), σχεδιασμένος ειδικά για οικίες και γραφεία. Εγκαθίσταται επιτοίχια, με τη βοήθεια διακριτικού βραχίονα, ώστε να μην επιβαρύνει τη σύνθεση του χώρου σου
+									</div>
+								</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<!-- item -->
+			<div class="accordeon accordeon-light with-image" data-accordeon data-draggable="#mainContent" id="item2_11">
+				<div class="title">
+					<figure class="item-image">
+						<img src="temp/image.png" alt="G4S iTos Up">
+					</figure>
+					<span class="draggable-anchor">Outdoor Camera</span>
+					<div class="anchor">
+						<i class="icon icon-angle-down"></i>
+					</div>
+				</div>
+				<div class="inner">
+					<figure class="inner-image" data-call="#popupGallery" data-gallery>
+						<img src="temp/image.png" alt="G4S iTos Up">
+					</figure>
+					<h3 class="item-title title">Camera</h3>
+					<div class="paragraph">
+						Ιδιαίτερα κομψός ανιχνευτής PIR (παθητικός αισθητήρας υπερύθρων), σχεδιασμένος ειδικά για οικίες και γραφεία. Εγκαθίσταται επιτοίχια, με τη βοήθεια διακριτικού βραχίονα, ώστε να μην επιβαρύνει τη σύνθεση του χώρου σου
+					</div>
+					<ul class="clear items-list">
+						<li class="item">
+							<div class="accordeon accordeon-bordered" data-accordeon>
+								<h3 class="item-title title list-title">
+									Κεντρική Μονάδα 
+									<div class="anchor">
+										<i class="icon icon-angle-down"></i>
+									</div>
+								</h3>
+								<div class="inner">
+									<figure class="inner-image">
+										<img src="temp/image.png" alt="G4S iTos Up">
+									</figure>
+									<h3 class="title">Camera</h3>
+									<div class="paragraph">
+										Ιδιαίτερα κομψός ανιχνευτής PIR (παθητικός αισθητήρας υπερύθρων), σχεδιασμένος ειδικά για οικίες και γραφεία. Εγκαθίσταται επιτοίχια, με τη βοήθεια διακριτικού βραχίονα, ώστε να μην επιβαρύνει τη σύνθεση του χώρου σου
+									</div>
+								</div>
+							</div>
+						</li>
+						<li class="item">
+							<div class="accordeon accordeon-bordered" data-accordeon>
+								<h3 class="item-title title list-title">
+									Πληκτρολόγιο
+									<div class="anchor">
+										<i class="icon icon-angle-down"></i>
+									</div>
+								</h3>
+								<div class="inner">
+									<figure class="inner-image">
+										<img src="temp/image2.png" alt="G4S iTos Up">
+									</figure>
+									<h3 class="title">Camera</h3>
+									<div class="paragraph">
+										Ιδιαίτερα κομψός ανιχνευτής PIR (παθητικός αισθητήρας υπερύθρων), σχεδιασμένος ειδικά για οικίες και γραφεία. Εγκαθίσταται επιτοίχια, με τη βοήθεια διακριτικού βραχίονα, ώστε να μην επιβαρύνει τη σύνθεση του χώρου σου
+									</div>
+								</div>
+							</div>
+						</li>
+						<li class="item">
+							<div class="accordeon accordeon-bordered" data-accordeon>
+								<h3 class="item-title title list-title">
+									Radar
+									<div class="anchor">
+										<i class="icon icon-angle-down"></i>
+									</div>
+								</h3>
+								<div class="inner">
+									<figure class="inner-image">
+										<img src="temp/image2.png" alt="G4S iTos Up">
+									</figure>
+									<h3 class="title">Camera</h3>
+									<div class="paragraph">
+										Ιδιαίτερα κομψός ανιχνευτής PIR (παθητικός αισθητήρας υπερύθρων), σχεδιασμένος ειδικά για οικίες και γραφεία. Εγκαθίσταται επιτοίχια, με τη βοήθεια διακριτικού βραχίονα, ώστε να μην επιβαρύνει τη σύνθεση του χώρου σου
+									</div>
+								</div>
+							</div>
+						</li>
+						<li class="item">
+							<div class="accordeon accordeon-bordered" data-accordeon>
+								<h3 class="item-title title list-title">
+									Ασύρματη Μαγνητική Επαφή
+									<div class="anchor">
+										<i class="icon icon-angle-down"></i>
+									</div>
+								</h3>
+								<div class="inner">
+									<figure class="inner-image">
+										<img src="temp/image2.png" alt="G4S iTos Up">
+									</figure>
+									<h3 class="title">Camera</h3>
+									<div class="paragraph">
+										Ιδιαίτερα κομψός ανιχνευτής PIR (παθητικός αισθητήρας υπερύθρων), σχεδιασμένος ειδικά για οικίες και γραφεία. Εγκαθίσταται επιτοίχια, με τη βοήθεια διακριτικού βραχίονα, ώστε να μην επιβαρύνει τη σύνθεση του χώρου σου
+									</div>
+								</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+				</div>
+			</div>
+		</div>
+		<div class="right-side side">
+			<div class="content-part part relative">
+				<!-- top offers -->
+				<div class="offer-container" data-toggle>
+	<div class="offer-title btn-toggle">
+		<span class="anchor">
+			<i class="icon icon-angle-down"></i>
+		</span>
+		New G4S itos security system offer 
+		<div class="active-arrow show-if-items">
+			<svg width="19" height="10" viewBox="0 0 19 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+				<path d="M13 9L17 5L13 1" stroke="#F10000" stroke-width="2"/>
+				<path d="M0 5L16 5" stroke="#F10000" stroke-width="2" stroke-linejoin="round"/>
+			</svg>
+		</div>
+	</div>
+	<div class="offer-detail toggle-inner">
+		<form action="#" class="user-form validate-form" data-popup-error="#popupCart">
+			<div class="row">
+				<div class="col-xs-6">
+					<div class="form-group disabled">
+						<label for="firstName" class="input-label">Username</label>
+						<input type="text" class="input filled" id="firstName" autocomplete="off" data-minlength="2" value="George Misailidis" readonly>
+						<div class="line"></div>
+						<div class="alert-icon status-icon">
+							<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M5.00103 5.00055L15 14.9995" stroke="#F10000" stroke-width="2" stroke-linejoin="round"/>
+								<path d="M14.999 5.00055L5 14.9995" stroke="#F10000" stroke-width="2" stroke-linejoin="round"/>
+							</svg>
+						</div>
+						<div class="success-icon status-icon">
+							<svg width="10" height="8" viewBox="0 0 10 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M1 3.5L4 6.5L9 1.5" stroke="#F10000" stroke-width="2"/>
+							</svg>
+						</div>
+					</div>
+				</div>
+				<div class="col-xs-6">
+					<div class="form-group disabled">
+						<label for="secondName" class="input-label">Username</label>
+						<input type="text" class="input filled" id="secondName" autocomplete="off" data-minlength="2" value="George Misailidis" readonly>
+						<div class="line"></div>
+						<div class="alert-icon status-icon">
+							<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M5.00103 5.00055L15 14.9995" stroke="#F10000" stroke-width="2" stroke-linejoin="round"/>
+								<path d="M14.999 5.00055L5 14.9995" stroke="#F10000" stroke-width="2" stroke-linejoin="round"/>
+							</svg>
+						</div>
+						<div class="success-icon status-icon">
+							<svg width="10" height="8" viewBox="0 0 10 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M1 3.5L4 6.5L9 1.5" stroke="#F10000" stroke-width="2"/>
+							</svg>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row spaced-top">
+				<div class="col-xs-6">
+					<div class="form-group">
+						<label for="userEmail" class="input-label">Email</label>
+						<input type="text" class="input email" id="userEmail" autocomplete="off" data-minlength="2">
+						<div class="line"></div>
+						<div class="alert-icon status-icon">
+							<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M5.00103 5.00055L15 14.9995" stroke="#F10000" stroke-width="2" stroke-linejoin="round"/>
+								<path d="M14.999 5.00055L5 14.9995" stroke="#F10000" stroke-width="2" stroke-linejoin="round"/>
+							</svg>
+						</div>
+						<div class="success-icon status-icon">
+							<svg width="10" height="8" viewBox="0 0 10 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M1 3.5L4 6.5L9 1.5" stroke="#F10000" stroke-width="2"/>
+							</svg>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row spaced-top middle-xs">
+				<div class="col-xs-6">
+					<ul class="checkbox-list clear" id="offersGroup">
+						<li class="item">
+							<div class="round-checkbox">
+								<input type="checkbox" class="checkbox" id="checkboxOffer1" data-offers-checkbox="#offersCount" checked>
+								<label for="checkboxOffer1" class="label">€1,593</label>
+							</div>
+						</li>
+						<li class="item">
+							<div class="round-checkbox">
+								<input type="checkbox" class="checkbox" id="checkboxOffer2" data-offers-checkbox="#offersCount">
+								<label for="checkboxOffer2" class="label">€839</label>
+							</div>
+						</li>
+					</ul>
+				</div>
+				<div class="col-xs-6 align-center">
+					<button type="submit" class="button clicked light-button">
+						<span class="text">
+							<span class="count" id="offersCount">1</span>
+							send
+						</span>
+						<span class="arrow">
+							<svg width="19" height="10" viewBox="0 0 19 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M13 9L17 5L13 1" stroke="#F10000" stroke-width="2"/>
+								<path d="M0 5L16 5" stroke="#F10000" stroke-width="2" stroke-linejoin="round"/>
+							</svg>
+						</span>
+						<span class="fader"></span>
+					</button>
+				</div>
+			</div>
+		</form>
+	</div>
+</div>
+				<!-- / top-offers -->
+				<div class="main-content scrolled offers-cover" id="mainContent">
+
+					<div class="fake-drag-item">
+						<div class="left anchor element"></div>
+						<div class="image element"></div>
+						<div class="text element"></div>
+						<div class="right anchor element"></div>
+					</div>
+				</div>
+				<!-- services-bottom -->
+				<div class="services-bottom">
+	<div class="offer-container" data-toggle>
+		<div class="offer-title btn-toggle">
+			<span class="anchor">
+				<i class="icon icon-angle-up"></i>
+			</span>
+			<span class="services-icon">
+				<i class="icon icon-settings"></i>
+			</span>
+			Διάρκεια Συμβολαίου και Υπηρεσίες
+			<div class="checkbox-toggle toggle-inner">
+				<input type="checkbox" class="checkbox" id="servicesMain" data-check-all="#servicesGroup">
+				<label for="servicesMain" class="checkbox-label"></label>
+			</div>
+		</div>
+		<div class="offer-detail toggle-inner" id="servicesGroup" data-group="general">
+			<!-- item -->
+			<div class="calculated-item" data-count>
+				<div class="item-title">
+					<div class="inner-cover">
+						<div class="item-icon">
+							<i class="icon icon-connection"></i>
+						</div>
+						<h3 class="text">
+							Σύνδεση με ΕΚΑ
+						</h3>
+						<div class="diamond-icon tooltip warning-tooltip" data-position="left">
+							<svg width="14" height="12" viewBox="0 0 14 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M13.8706 3.48073L11.9402 0.383406C11.7906 0.143345 11.5369 0 11.2616 0H2.7444C2.46954 0 2.21611 0.142985 2.06643 0.382434L0.130002 3.48015C-0.0678821 3.79665 -0.0373157 4.21456 0.204339 4.49635L6.39601 11.7187C6.54926 11.8975 6.76925 12 6.99965 12C6.99968 12 6.99965 12 6.99968 12C7.23004 12 7.4501 11.8975 7.60335 11.7187L13.7957 4.49595C14.037 4.21448 14.0678 3.79701 13.8706 3.48073ZM10.8706 0.720111L9.24711 3.32849L7.62265 0.720111H10.8706ZM8.61017 3.63138H5.38912L6.99965 1.04537L8.61017 3.63138ZM6.37664 0.720183L4.75665 3.32139L3.13722 0.720183H6.37664ZM2.4964 1.0167L4.12419 3.63138H0.861933L2.4964 1.0167ZM1.00832 4.35153H4.49625L6.34049 10.5713L1.00832 4.35153ZM6.99965 10.3483L5.22149 4.35153H8.7778L6.99965 10.3483ZM7.65876 10.5715L9.50307 4.35156H12.9913L7.65876 10.5715ZM9.88405 3.63138L11.5103 1.0185L13.1388 3.63138H9.88405Z" fill="black"/>
+							</svg>
+							<div class="tooltip-cover">
+								Use any warning message.
+							</div>
+						</div>
+						<!-- calculator -->
+						<div class="calculator" data-max="99" data-min="0">
+							<button type="button" class="btn action-btn minus">
+								<svg width="10" height="2" viewBox="0 0 10 2" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M1.58946e-07 1L10 1" stroke="black" stroke-width="2" stroke-linejoin="round"/>
+								</svg>
+							</button>
+							<input type="number" value="0" class="value-input" readonly>
+							<button type="button" class="btn action-btn plus">
+								<svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M1.58946e-07 5L10 5" stroke="black" stroke-width="2" stroke-linejoin="round"/>
+									<path d="M5 1.58946e-07L5 10" stroke="black" stroke-width="2" stroke-linejoin="round"/>
+								</svg>
+							</button>
+						</div>
+					</div>
+					<!-- checkbox -->
+					<div class="checkbox-toggle">
+						<input type="checkbox" class="checkbox" id="servicesItem1">
+						<label for="servicesItem1" class="checkbox-label"></label>
+					</div>
+				</div>
+			</div>
+			<!-- item -->
+			<div class="calculated-item" data-count>
+				<div class="item-title">
+					<div class="inner-cover">
+						<div class="item-icon">
+							<i class="icon icon-contract"></i>
+						</div>
+						<h3 class="text">
+							Συμβόλαιο Συντήρησης
+						</h3>
+						<div class="diamond-icon tooltip warning-tooltip" data-position="left">
+							<svg width="14" height="12" viewBox="0 0 14 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M13.8706 3.48073L11.9402 0.383406C11.7906 0.143345 11.5369 0 11.2616 0H2.7444C2.46954 0 2.21611 0.142985 2.06643 0.382434L0.130002 3.48015C-0.0678821 3.79665 -0.0373157 4.21456 0.204339 4.49635L6.39601 11.7187C6.54926 11.8975 6.76925 12 6.99965 12C6.99968 12 6.99965 12 6.99968 12C7.23004 12 7.4501 11.8975 7.60335 11.7187L13.7957 4.49595C14.037 4.21448 14.0678 3.79701 13.8706 3.48073ZM10.8706 0.720111L9.24711 3.32849L7.62265 0.720111H10.8706ZM8.61017 3.63138H5.38912L6.99965 1.04537L8.61017 3.63138ZM6.37664 0.720183L4.75665 3.32139L3.13722 0.720183H6.37664ZM2.4964 1.0167L4.12419 3.63138H0.861933L2.4964 1.0167ZM1.00832 4.35153H4.49625L6.34049 10.5713L1.00832 4.35153ZM6.99965 10.3483L5.22149 4.35153H8.7778L6.99965 10.3483ZM7.65876 10.5715L9.50307 4.35156H12.9913L7.65876 10.5715ZM9.88405 3.63138L11.5103 1.0185L13.1388 3.63138H9.88405Z" fill="black"/>
+							</svg>
+							<div class="tooltip-cover">
+								Use any warning message.
+							</div>
+						</div>
+						<!-- calculator -->
+						<div class="calculator" data-max="99" data-min="0">
+							<button type="button" class="btn action-btn minus">
+								<svg width="10" height="2" viewBox="0 0 10 2" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M1.58946e-07 1L10 1" stroke="black" stroke-width="2" stroke-linejoin="round"/>
+								</svg>
+							</button>
+							<input type="number" value="0" class="value-input" readonly>
+							<button type="button" class="btn action-btn plus">
+								<svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M1.58946e-07 5L10 5" stroke="black" stroke-width="2" stroke-linejoin="round"/>
+									<path d="M5 1.58946e-07L5 10" stroke="black" stroke-width="2" stroke-linejoin="round"/>
+								</svg>
+							</button>
+						</div>
+					</div>
+					<!-- checkbox -->
+					<div class="checkbox-toggle">
+						<input type="checkbox" class="checkbox" id="servicesItem2">
+						<label for="servicesItem2" class="checkbox-label"></label>
+					</div>
+				</div>
+			</div>
+			<!-- item -->
+			<div class="calculated-item" data-count>
+				<div class="item-title">
+					<div class="inner-cover">
+						<div class="item-icon">
+							<i class="icon icon-maintenance"></i>
+						</div>
+						<h3 class="text">
+							GPRS
+						</h3>
+						<div class="diamond-icon tooltip warning-tooltip" data-position="left">
+							<svg width="14" height="12" viewBox="0 0 14 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M13.8706 3.48073L11.9402 0.383406C11.7906 0.143345 11.5369 0 11.2616 0H2.7444C2.46954 0 2.21611 0.142985 2.06643 0.382434L0.130002 3.48015C-0.0678821 3.79665 -0.0373157 4.21456 0.204339 4.49635L6.39601 11.7187C6.54926 11.8975 6.76925 12 6.99965 12C6.99968 12 6.99965 12 6.99968 12C7.23004 12 7.4501 11.8975 7.60335 11.7187L13.7957 4.49595C14.037 4.21448 14.0678 3.79701 13.8706 3.48073ZM10.8706 0.720111L9.24711 3.32849L7.62265 0.720111H10.8706ZM8.61017 3.63138H5.38912L6.99965 1.04537L8.61017 3.63138ZM6.37664 0.720183L4.75665 3.32139L3.13722 0.720183H6.37664ZM2.4964 1.0167L4.12419 3.63138H0.861933L2.4964 1.0167ZM1.00832 4.35153H4.49625L6.34049 10.5713L1.00832 4.35153ZM6.99965 10.3483L5.22149 4.35153H8.7778L6.99965 10.3483ZM7.65876 10.5715L9.50307 4.35156H12.9913L7.65876 10.5715ZM9.88405 3.63138L11.5103 1.0185L13.1388 3.63138H9.88405Z" fill="black"/>
+							</svg>
+							<div class="tooltip-cover">
+								Use any warning message.
+							</div>
+						</div>
+						<!-- calculator -->
+						<div class="calculator" data-max="99" data-min="0">
+							<button type="button" class="btn action-btn minus">
+								<svg width="10" height="2" viewBox="0 0 10 2" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M1.58946e-07 1L10 1" stroke="black" stroke-width="2" stroke-linejoin="round"/>
+								</svg>
+							</button>
+							<input type="number" value="0" class="value-input" readonly>
+							<button type="button" class="btn action-btn plus">
+								<svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M1.58946e-07 5L10 5" stroke="black" stroke-width="2" stroke-linejoin="round"/>
+									<path d="M5 1.58946e-07L5 10" stroke="black" stroke-width="2" stroke-linejoin="round"/>
+								</svg>
+							</button>
+						</div>
+					</div>
+					<!-- checkbox -->
+					<div class="checkbox-toggle">
+						<input type="checkbox" class="checkbox" id="servicesItem3">
+						<label for="servicesItem3" class="checkbox-label"></label>
+					</div>
+				</div>
+			</div>
+			<!-- item -->
+			<div class="calculated-item" data-count>
+				<div class="item-title">
+					<div class="inner-cover">
+						<div class="item-icon">
+							<i class="icon icon-intervention"></i>
+						</div>
+						<h3 class="text">
+							Αμεση Επέμβαση
+						</h3>
+						<div class="diamond-icon tooltip warning-tooltip" data-position="left">
+							<svg width="14" height="12" viewBox="0 0 14 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M13.8706 3.48073L11.9402 0.383406C11.7906 0.143345 11.5369 0 11.2616 0H2.7444C2.46954 0 2.21611 0.142985 2.06643 0.382434L0.130002 3.48015C-0.0678821 3.79665 -0.0373157 4.21456 0.204339 4.49635L6.39601 11.7187C6.54926 11.8975 6.76925 12 6.99965 12C6.99968 12 6.99965 12 6.99968 12C7.23004 12 7.4501 11.8975 7.60335 11.7187L13.7957 4.49595C14.037 4.21448 14.0678 3.79701 13.8706 3.48073ZM10.8706 0.720111L9.24711 3.32849L7.62265 0.720111H10.8706ZM8.61017 3.63138H5.38912L6.99965 1.04537L8.61017 3.63138ZM6.37664 0.720183L4.75665 3.32139L3.13722 0.720183H6.37664ZM2.4964 1.0167L4.12419 3.63138H0.861933L2.4964 1.0167ZM1.00832 4.35153H4.49625L6.34049 10.5713L1.00832 4.35153ZM6.99965 10.3483L5.22149 4.35153H8.7778L6.99965 10.3483ZM7.65876 10.5715L9.50307 4.35156H12.9913L7.65876 10.5715ZM9.88405 3.63138L11.5103 1.0185L13.1388 3.63138H9.88405Z" fill="black"/>
+							</svg>
+							<div class="tooltip-cover">
+								Use any warning message.
+							</div>
+						</div>
+						<!-- calculator -->
+						<div class="calculator" data-max="99" data-min="0">
+							<button type="button" class="btn action-btn minus">
+								<svg width="10" height="2" viewBox="0 0 10 2" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M1.58946e-07 1L10 1" stroke="black" stroke-width="2" stroke-linejoin="round"/>
+								</svg>
+							</button>
+							<input type="number" value="0" class="value-input" readonly>
+							<button type="button" class="btn action-btn plus">
+								<svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M1.58946e-07 5L10 5" stroke="black" stroke-width="2" stroke-linejoin="round"/>
+									<path d="M5 1.58946e-07L5 10" stroke="black" stroke-width="2" stroke-linejoin="round"/>
+								</svg>
+							</button>
+						</div>
+					</div>
+					<!-- checkbox -->
+					<div class="checkbox-toggle">
+						<input type="checkbox" class="checkbox" id="servicesItem4">
+						<label for="servicesItem4" class="checkbox-label"></label>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+				<!-- / services-bottom -->
+			</div>
+			<div class="menu-part part">
+				<div class="right-menu" id="menuSide">
+	<div class="menu-title">
+		<h2 class="text-title show-active">Price Details</h2>
+		<button type="button" class="menu-btn clicked" id="navToggleBtn" data-nav="#mainLayout, #menuSide">
+			<span class="text show-closed">
+				<svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<rect x="1" y="1" width="20" height="20" rx="3" stroke="#2E343A" stroke-width="2"/>
+					<path d="M11 2V20" stroke="#2E343A"/>
+					<path d="M20 11L2 11" stroke="#2E343A"/>
+					<path d="M4 6H8" stroke="#2E343A" stroke-linejoin="round"/>
+					<path d="M6 4L6 8" stroke="#2E343A" stroke-linejoin="round"/>
+					<path d="M14 6H18" stroke="#2E343A" stroke-linejoin="round"/>
+					<path d="M14 17H18" stroke="#2E343A" stroke-linejoin="round"/>
+					<path d="M14 15H18" stroke="#2E343A" stroke-linejoin="round"/>
+					<path d="M4.58576 14.5856L7.41418 17.4141" stroke="#2E343A" stroke-linejoin="round"/>
+					<path d="M7.41424 14.5856L4.58582 17.4141" stroke="#2E343A" stroke-linejoin="round"/>
+				</svg>
+			</span>
+			<span class="text show-active">
+				<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<path d="M4.46409 4.46409L11.5352 11.5352" stroke="black" stroke-width="2" stroke-linejoin="round"/>
+					<path d="M11.5359 4.46409L4.46484 11.5352" stroke="black" stroke-width="2" stroke-linejoin="round"/>
+				</svg>
+			</span>
+			<span class="fader"></span>
+		</button>
+	</div>
+	<div class="payment-method">
+		<div class="checkbox-group" data-index="0">
+			<input type="radio" class="checkbox" id="payCard" checked name="payment" data-check>
+			<label for="payCard" class="label">
+				<i class="icon icon-card"></i>
+				<span class="text">Card</span>
+			</label>
+		</div>
+		<div class="checkbox-group" data-index="1">
+			<input type="radio" class="checkbox" id="payWallet" name="payment" data-check>
+			<label for="payWallet" class="label">
+				<i class="icon icon-wallet"></i>
+				<span class="text">Leasing</span>
+			</label>
+		</div>
+		<div class="checkbox-group" data-index="2">
+			<input type="radio" class="checkbox" id="payCash" name="payment" data-check>
+			<label for="payCash" class="label">
+				<i class="icon icon-cash"></i>
+				<span class="text">Cash</span>
+			</label>
+		</div>
+		<div class="fader"></div>
+	</div>
+	<div id="calculatorTab" class="show-active calculator-tabs tabs">
+		<div data-payment="payCard" class="tab-content active animated">
+			<div class="calculator-group">
+				<div class="title partice">
+					<div class="cell">
+						€39,90
+					</div>
+					<div class="cell calculator-cell align-right">
+						το μήνα
+					</div>
+				</div>
+				<div class="bordered-part">
+					<div class="cell">
+						<div class="simple-text">€500.00</div>
+					</div>
+					<div class="cell calculator-cell align-right">
+						<div class="calculator" data-max="99" data-min="0" data-input="μήνες">
+							<button type="button" class="btn action-btn minus">
+								<svg width="10" height="2" viewBox="0 0 10 2" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M1.58946e-07 1L10 1" stroke="black" stroke-width="2" stroke-linejoin="round"/>
+								</svg>
+							</button>
+							<input type="number" value="0" class="value-input" readonly>
+							<button type="button" class="btn action-btn plus">
+								<svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M1.58946e-07 5L10 5" stroke="black" stroke-width="2" stroke-linejoin="round"/>
+									<path d="M5 1.58946e-07L5 10" stroke="black" stroke-width="2" stroke-linejoin="round"/>
+								</svg>
+							</button>
+						</div>
+					</div>
+					<div class="helper">
+						κι έπειτα <span class="bold">€6,20</span> το μήνα
+					</div>
+				</div>
+			</div>
+		</div>
+		<div data-payment="payWallet" class="tab-content">
+			<div class="calculator-group">
+				<div class="title">Προκαταβολή</div>
+				<div class="bordered-part">
+					<div class="cell calculator-cell">
+						<div class="calculator" data-max="100" data-min="0" data-input="%">
+							<button type="button" class="btn action-btn minus">
+								<svg width="10" height="2" viewBox="0 0 10 2" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M1.58946e-07 1L10 1" stroke="black" stroke-width="2" stroke-linejoin="round"/>
+								</svg>
+							</button>
+							<input type="number" value="50" class="value-input" readonly>
+							<button type="button" class="btn action-btn plus">
+								<svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M1.58946e-07 5L10 5" stroke="black" stroke-width="2" stroke-linejoin="round"/>
+									<path d="M5 1.58946e-07L5 10" stroke="black" stroke-width="2" stroke-linejoin="round"/>
+								</svg>
+							</button>
+						</div>
+					</div>
+					<div class="cell align-right">
+						<div class="simple-text">€500.00</div>
+					</div>
+				</div>
+			</div>
+			<div class="calculator-group">
+				<div class="title">Υπόλοιπο</div>
+				<div class="bordered-part">
+					<div class="cell calculator-cell">
+						<div class="calculator" data-max="99" data-min="0" data-input="Δόσεις">
+							<button type="button" class="btn action-btn minus">
+								<svg width="10" height="2" viewBox="0 0 10 2" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M1.58946e-07 1L10 1" stroke="black" stroke-width="2" stroke-linejoin="round"/>
+								</svg>
+							</button>
+							<input type="number" value="2" class="value-input" readonly>
+							<button type="button" class="btn action-btn plus">
+								<svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M1.58946e-07 5L10 5" stroke="black" stroke-width="2" stroke-linejoin="round"/>
+									<path d="M5 1.58946e-07L5 10" stroke="black" stroke-width="2" stroke-linejoin="round"/>
+								</svg>
+							</button>
+						</div>
+					</div>
+					<div class="cell align-right">
+						<div class="simple-text">€500.00</div>
+					</div>
+				</div>
+			</div>
+			<div class="calculator-group">
+				<div class="title">Πληρωτέες ανα</div>
+				<div class="bordered-part">
+					<div class="cell calculator-cell">
+						<div class="calculator" data-max="99" data-min="0" data-input="μήνες">
+							<button type="button" class="btn action-btn minus">
+								<svg width="10" height="2" viewBox="0 0 10 2" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M1.58946e-07 1L10 1" stroke="black" stroke-width="2" stroke-linejoin="round"/>
+								</svg>
+							</button>
+							<input type="number" value="0" class="value-input" readonly>
+							<button type="button" class="btn action-btn plus">
+								<svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M1.58946e-07 5L10 5" stroke="black" stroke-width="2" stroke-linejoin="round"/>
+									<path d="M5 1.58946e-07L5 10" stroke="black" stroke-width="2" stroke-linejoin="round"/>
+								</svg>
+							</button>
+						</div>
+					</div>
+					<div class="cell align-right">
+						<div class="simple-text">€500.00</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div data-payment="payCash" class="tab-content">
+			<div class="calculator-group">
+				<div class="title partice">
+					<div class="cell calculator-cell">
+						Μηνιαία Συνδρομή
+					</div>
+					<div class="cell  align-right">
+						€39,90
+					</div>
+				</div>
+				<div class="bordered-part">
+					<div class="helper">
+						<span class="bold">31,69 € + ΦΠΑ</span>
+					</div>
+				</div>
+			</div>
+			<div class="calculator-group">
+				<div class="title partice">
+					<div class="cell calculator-cell">
+						Τέλος Ενεργοποίησης
+					</div>
+					<div class="cell  align-right">
+						€50.00
+					</div>
+				</div>
+				<div class="bordered-part">
+					<div class="helper">
+						<span class="bold">31,69 € + ΦΠΑ</span>
+					</div>
+				</div>
+			</div>
+			<div class="calculator-group">
+				<div class="bordered-part" data-toggle>
+					<div class="title btn-toggle">
+						Ρήτρα αποχώρησης
+
+						<span class="anchor"><i class="icon icon-angle-down"></i></span>
+					</div>
+					<div class="toggle-inner">
+						<table class="simple-table">
+							<thead>
+								<tr>
+									<td>Παραμονή</td>
+									<td>Με ΦΠΑ</td>
+									<td>Χωρίς ΦΠΑ</td>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>1 έτος</td>
+									<td>€1,295</td>
+									<td>€61,04 </td>
+								</tr>
+								<tr>
+									<td>2 έτη</td>
+									<td>€1,036</td>
+									<td>€836</td>
+								</tr>
+								<tr>
+									<td>3 έτη</td>
+									<td>€829</td>
+									<td>€668</td>
+								</tr>
+								<tr>
+									<td>Μετέπειτα</td>
+									<td>€0</td>
+									<td>€0</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="bottom-part dropdown show-if-items" data-toggle>
+		<form action="#" class="discout-form show-active">
+			<div class="relative">
+				<input type="text" class="input" placeholder="discount" data-discount maxlength="2">
+				<button type="submit" class="btn clicked">
+					<span class="text">
+						<svg width="19" height="10" viewBox="0 0 19 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M13 9L17 5L13 1" stroke="black" stroke-width="2"/>
+							<path d="M0 5L16 5" stroke="black" stroke-width="2" stroke-linejoin="round"/>
+						</svg>
+					</span>
+					<span class="fader"></span>
+				</button>
+			</div>
+		</form>
+		<div class="spaced-side relative">
+			<div class="btn-toggle show-active right-btn">
+				<i class="icon icon-angle-down"></i>
+			</div>
+			<div class="row">
+				<div class="col-xs-6 show-active">
+					<div class="small-title">36 μήνες</div>
+				</div>
+				<div class="col-xs-6 align-right">
+					<div class="price">€1,593</div>
+				</div>
+			</div>
+		</div>
+		<!-- dropdown -->
+		<div class="dropdown-inner spaced-side">
+			<div class="row">
+				<div class="col-xs-6 show-active">
+					<div class="title-helper">Διάρκεια</div>
+				</div>
+				<div class="col-xs-6 align-right">
+					<div class="title-helper">Τελική Τιμή</div>
+				</div>
+			</div>
+
+			<div class="data-part show-active spaced-top">
+				<div class="cell">
+					<div class="text">Equipment</div>
+				</div>
+				<div class="cell align-right">
+					<div class="helper">1,552.68 €</div>
+					<div class="text">1,352.68 €</div>
+				</div>
+			</div>
+			<div class="data-part show-active">
+				<div class="cell">
+					<div class="text">Services</div>
+				</div>
+				<div class="cell align-right">
+					<div class="helper">197 €</div>
+					<div class="text">74,40 €</div>
+				</div>
+			</div>
+			<div class="data-part show-active">
+				<div class="cell">
+					<div class="text">Without VAT</div>
+				</div>
+				<div class="cell align-right">
+					<div class="helper">1,552.68 €</div>
+					<div class="text">1,452.68 €</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- popup remove offer-->
+	<div class="popup" id="popupDelete">
+	<div class="inner">
+		<div class="title">
+			Are you sure you want to delete this board?
+		</div>
+		<div class="paragraph">
+			You will lose all data in this board. 
+		</div>
+		<div class="buttons-list">
+			<div class="item">
+				<button type="button" class="clicked button gray-button" data-dismiss="#popupDelete">
+					<span class="text">Cancel</span>
+					<span class="fader"></span>
+				</button>
+			</div>
+			<div class="item">
+				<button type="button" class="clicked button dark-button">
+					<span class="text">Delete</span>
+					<span class="fader"></span>
+				</button>
+			</div>
+		</div>
+	</div>
+</div>
+	<!-- / popup remove offer-->
+
+	<!-- popup gallery-->
+	<div class="popup gallery-popup" id="popupGallery">
+	<div class="inner" data-gallery-slider="#mainImage">
+		<div class="btn-group">
+			<div class="item">
+				<button type="button" class="top-button clicked" data-prev>
+					<span class="text">
+						<svg width="19" height="10" viewBox="0 0 19 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M6 1L2 5L6 9" stroke="black" stroke-width="2"/>
+							<path d="M19 5L3 5" stroke="black" stroke-width="2" stroke-linejoin="round"/>
+						</svg>
+					</span>
+					<span class="fader"></span>
+				</button>
+			</div>
+			<div class="item">
+				<button type="button" class="top-button clicked" data-next>
+					<span class="text">
+						<svg width="19" height="10" viewBox="0 0 19 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M13 9L17 5L13 1" stroke="black" stroke-width="2"/>
+							<path d="M0 5L16 5" stroke="black" stroke-width="2" stroke-linejoin="round"/>
+						</svg>
+					</span>
+					<span class="fader"></span>
+				</button>
+			</div>
+			<div class="item">
+				<button type="button" class="top-button clicked" data-dismiss="#popupGallery">
+					<span class="text">
+						<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M5.00103 5.00055L15 14.9995" stroke="black" stroke-width="2" stroke-linejoin="round"/>
+							<path d="M14.999 5.00055L5 14.9995" stroke="black" stroke-width="2" stroke-linejoin="round"/>
+						</svg>
+					</span>
+					<span class="fader"></span>
+				</button>
+			</div>
+		</div>
+		<figure id="mainImage" class="image-main">
+			<img src="temp/image4.png" alt="image">
+		</figure>
+		<ul class="preview-items clear">
+			<li class="item" data-preview>
+				<figure class="image-preview">
+					<img src="temp/image3.png" alt="image">
+				</figure>
+			</li>
+			<li class="item" data-preview>
+				<figure class="image-preview">
+					<img src="temp/image4.png" alt="image">
+				</figure>
+			</li>
+			<li class="item" data-preview>
+				<figure class="image-preview">
+					<img src="temp/image2.png" alt="image">
+				</figure>
+			</li>
+			<li class="item" data-preview>
+				<figure class="image-preview">
+					<img src="temp/image.png" alt="image">
+				</figure>
+			</li>
+			<li class="item" data-preview>
+				<figure class="image-preview">
+					<img src="temp/image3.png" alt="image">
+				</figure>
+			</li>
+			<li class="item active" data-preview>
+				<figure class="image-preview">
+					<img src="temp/image4.png" alt="image">
+				</figure>
+			</li>
+			<li class="item" data-preview>
+				<figure class="image-preview">
+					<img src="temp/image2.png" alt="image">
+				</figure>
+			</li>
+			<li class="item" data-preview>
+				<figure class="image-preview">
+					<img src="temp/image.png" alt="image">
+				</figure>
+			</li>
+		</ul>
+	</div>
+</div>
+	<!-- / popup gallery-->
+
+	<!-- popup cart-->
+	<div class="popup" id="popupCart">
+	<div class="inner">
+		<div class="title">
+			There is nothing to send yet
+		</div>
+		<div class="paragraph">
+			First you need to add some items to your cart.
+		</div>
+		<div class="buttons-list align-center">
+			<div class="item">
+				<button type="button" class="clicked button gray-button" data-dismiss="#popupCart">
+					<span class="text">Ok</span>
+					<span class="fader"></span>
+				</button>
+			</div>
+		</div>
+	</div>
+</div>
+	<!-- / popup cart-->
+
+	<!-- popup remove item from cart-->
+	<div class="popup" id="popupRemoveItem">
+	<div class="inner">
+		<div class="title">
+			Are you sure you want to delete this item?
+		</div>
+		<div class="paragraph">
+			You will lose all data.
+		</div>
+		<div class="buttons-list">
+			<div class="item">
+				<button type="button" class="clicked button gray-button" data-dismiss="#popupRemoveItem">
+					<span class="text">Cancel</span>
+					<span class="fader"></span>
+				</button>
+			</div>
+			<div class="item">
+				<button type="button" class="clicked button dark-button">
+					<span class="text">Delete</span>
+					<span class="fader"></span>
+				</button>
+			</div>
+		</div>
+	</div>
+</div>
+	<!-- / popup remove item from cart-->
+
+	<!-- font -->
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700&display=swap&subset=greek-ext" rel="stylesheet">
+
+	<!-- general script -->
+	<script src="js/bundle.js"></script>
+</body>
+</html>
