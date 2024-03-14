@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+	<meta charset="UTF-8">
+	<title>JQuery Selecter :: Plugin</title>
+
+	<meta name="msapplication-TileColor" content="#ffc40d">
+	<meta name="theme-color" content="#ffffff">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+	<meta name="format-detection" content="telephone=no">
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="css/bundle.min.css">
+
+</head>
+<body>
+	<header class="header">
+		<div class="container">
+			<h1 class="form-title">jQuery Selecter</h1>
+			<div>Jquery.selecter.js</div>
+			<div>jQuery plugin that lets you to create a beautiful customization for select element</div>
+		</div>
+	</header>
+	<main class="page-main">
+		<div class="container">
+			<section class="verticaly-middle">
+				<div class="inner">
+					<div class="step">
+						<h2>Usage</h2>
+						<div class="subheader">1. Include jQuery and the plugin.</div>
+						<div class="pre-markup">
+							<span class="line">
+								<span class="element brackets"><</span>
+								<span class="element tag">script&nbsp;</span>
+								<span class="element attr">src=</span>
+								<span class="element path">"path/to/jquery.js"</span>
+								<span class="element brackets">></span>
+								<span class="element brackets"><</span>
+								<span class="element brackets">/</span>
+								<span class="element tag">script</span>
+								<span class="element brackets">></span>
+							</span>
+						</div>
+						<div class="pre-markup">
+							<span class="line">
+								<span class="element brackets"><</span>
+								<span class="element tag">script&nbsp;</span>
+								<span class="element attr">src=</span>
+								<span class="element path">"path/to/jquery.selecter.js"</span>
+								<span class="element brackets">></span>
+								<span class="element brackets"><</span>
+								<span class="element brackets">/</span>
+								<span class="element tag">script</span>
+								<span class="element brackets">></span>
+							</span>
+						</div>
+					</div>
+					<div class="step">
+						<div class="subheader">2. Include the plugin styles, either the compiled CSS...</div>
+						<div class="pre-markup">
+							<span class="line">
+								<span class="element brackets"><</span>
+								<span class="element tag">link&nbsp;</span>
+								<span class="element attr">rel=</span>
+								<span class="element path">"stylesheet"&nbsp;</span>
+								<span class="element attr">href=</span>
+								<span class="element path">"path/to/jquery-selecter.css"</span>
+								<span class="element brackets">></span>
+							</span>
+						</div>
+					</div>
+					<div class="step">
+						<div class="subheader">3. Initialize the plugin.</div>
+						<div class="pre-markup">
+							<div class="line">
+								<div class="element">$(document).ready(function() {</div>
+									<div class="element">&nbsp;&nbsp;$('select').selecter();</div>
+								<div class="element">});</div>
+							</div>
+						</div>
+						<!-- 1 -->
+						<div class="selecter-cover">
+							<label for="selecter3" class="label">Selecter Simple</label>
+							<select name="selecter3" id="selecter3" class="select">
+								<option value="none" disabled selected>Choose an option</option>
+								<option value="Yes">Yes</option>
+								<option value="No">No</option>
+							</select>
+						</div>
+					</div>
+					<div class="step">
+						<div class="subheader">4. Add multiple option</div>
+						<div class="pre-markup">
+							<div class="line">
+								<div class="element">$(document).ready(function() {</div>
+									<div class="element">&nbsp;&nbsp;$('select').selecter({multiple: true});</div>
+								<div class="element">});</div>
+							</div>
+						</div>
+						<!-- 2 -->
+						<div class="selecter-cover">
+							<label for="selecter1" class="label">Multiple selecter</label>
+							<select name="selecter1" id="selecter1" class="select" data-multiple="true" multiple>
+								<option value="none" disabled selected>Choose options</option>
+								<option value="option 1">option 1</option>
+								<option value="option 2">option 2</option>
+								<option value="option 3">option 3</option>
+								<option value="option 4">option 4</option>
+								<option value="option 5">option 5</option>
+							</select>
+						</div>
+					</div>
+					<div class="step">
+						<div class="subheader">5. Add custom classes</div>
+						<div class="pre-markup">
+							<div class="line">
+								<div class="element">$(document).ready(function() {</div>
+									<div class="element">&nbsp;&nbsp;$('select').selecter({classname: 'dark'});</div>
+								<div class="element">});</div>
+							</div>
+						</div>
+						<!-- 3 -->
+						<div class="selecter-cover">
+							<label for="selecter2" class="label">Multiple selecter with custom class</label>
+							<select name="selecter2" id="selecter2" class="select" data-multiple="true" multiple data-classname="dark">
+								<option value="none" disabled selected>Choose options</option>
+								<option value="option 1">option 1</option>
+								<option value="option 2">option 2</option>
+								<option value="option 3">option 3</option>
+								<option value="option 4">option 4</option>
+								<option value="option 5">option 5</option>
+							</select>
+						</div>
+					</div>
+					<div class="step">
+						<h2>Events</h2>
+						<div class="subheader">onOpen</div>
+						<div class="pre-markup">
+							<div class="line">
+								<div class="element">$(document).ready(function() {</div>
+									<div class="element">&nbsp;&nbsp;$('select').selecter({</div>
+									<div class="element">&nbsp;&nbsp;&nbsp;&nbsp;onOpen: function(){ }</div>
+									<div class="element">&nbsp;&nbsp;});</div>
+								<div class="element">});</div>
+							</div>
+						</div>
+					</div>
+					<div class="step">
+						<div class="subheader">onChange</div>
+						<div class="pre-markup">
+							<div class="line">
+								<div class="element">$(document).ready(function() {</div>
+									<div class="element">&nbsp;&nbsp;$('select').selecter({</div>
+									<div class="element">&nbsp;&nbsp;&nbsp;&nbsp;onChange: function(){ }</div>
+									<div class="element">&nbsp;&nbsp;});</div>
+								<div class="element">});</div>
+							</div>
+						</div>
+					</div>
+					<div class="step">
+						<div class="subheader">onClose</div>
+						<div class="pre-markup">
+							<div class="line">
+								<div class="element">$(document).ready(function() {</div>
+									<div class="element">&nbsp;&nbsp;$('select').selecter({</div>
+									<div class="element">&nbsp;&nbsp;&nbsp;&nbsp;onClose: function(){ }</div>
+									<div class="element">&nbsp;&nbsp;});</div>
+								<div class="element">});</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+		</div>
+	</main>
+	<footer class="footer">
+		<div class="container">
+			<a href="https://github.com/in4eg/jquery-select" class="large link" target="_blank" noreferrer noopener>Download</a>
+		</div>
+	</footer>
+
+	<script src="js/lib/jquery.min.js"></script>
+	<!-- selecter -->
+	<script src="js/jquery.selecter.js"></script>
+	<script src="js/init/jquery.selecter.js"></script>
+</body>
+</html>
