@@ -9,7 +9,7 @@ $(document).ready(function(){
 
 			$(carousel).owlCarousel({
 				loop: !data.loop || data.loop == false ? false : true,
-				margin:0,
+				margin: data.margin ? data.margin : 0,
 				nav: !data.nav || data.nav == false ? false : true,
 				dots: !data.dots || data.dots == false ? false : true,
 				autoplay: !data.autoplay || data.autoplay == false ? false : true,
