@@ -1,0 +1,2035 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+	<meta charset="UTF-8">
+	<title>Travelkiki :: Airline</title>
+	<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+	<meta name="format-detection" content="telephone=no">
+
+	<link rel="stylesheet" href="css/bundle.min.css">
+
+</head>
+<body>
+
+	<div class="copy-block">
+	<div class="container-fluid">
+		<div class="layout">
+			<div class="column">
+				<div data-tooltip="Copy to clipboard" data-tooltip-copied="Copied to clipboard!">
+					<button type="button" class="btn btn-round" data-copy-link="copyLink">
+						<i class="icon icon-copy"></i>
+					</button>
+					<button type="button" class="btn btn-link sm-hide" data-copy-link="copyLink">
+						Copy link
+					</button>
+				</div>
+			</div>
+			<div class="column">
+				<input type="text" readonly value="https://www.travelkiki.com/en/airlines/lufthansa/" id="copyLink">
+			</div>
+			<div class="column">
+				<div data-tooltip="Share with Facebook">
+					<button class="btn btn-round">
+						<i class="icon icon-facebook"></i>
+					</button>
+				</div>
+				<div data-tooltip="Share with Messenger">
+					<button class="btn btn-round">
+						<i class="icon icon-messenger"></i>
+					</button>
+				</div>
+				<div data-tooltip="Share with Viber">
+					<button class="btn btn-round">
+						<i class="icon icon-viber"></i>
+					</button>
+				</div>
+			</div>
+		</div>
+		<ul class="clear breadcrumbs">
+			<li><a href="#">Home</a></li>
+			<li><a href="#">Airlines</a></li>
+			<li class="active">Lufthansa</li>
+		</ul>
+	</div>
+</div>
+
+	<!-- .collapsed - for collapsed (small) header + "back" arrow -->
+<header class="main-header static collapsed">
+	<div class="container-fluid relative">
+		<div class="row">
+			<div class="col-xs-12 col-sm-4">
+				<a href="index.html" class="btn btn-back">
+					<span class="text"><i class="icon icon-arrow-left"></i></span>
+				</a>
+				<a href="index.html" class="logo">
+					<img src="img/logo.svg" alt="">
+				</a>
+				<button type="button" class="btn btn-round sm-hide" data-toggle-copy>
+					<i class="icon icon-share inactive"></i>
+					<i class="icon icon-close active"></i>
+				</button>
+			</div>
+			<div class="col-xs-4 align-center sm-show">
+				<div data-tooltip="Share">
+					<button type="button" class="btn btn-round dark" data-toggle-copy>
+						<i class="icon icon-share inactive"></i>
+						<i class="icon icon-close active"></i>
+					</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</header>
+
+	<div class="mobile-filter primary">
+		<i class="icon icon-filter-plane"></i>
+	</div>
+
+	<main>
+
+		<section class="form-hero spaced-bottom on-scroll" data-parallax-ratio="1">
+			<div class="background" style="background-image: url(temp/airline.jpeg);"></div>
+			<!-- form & map -->
+			<!-- .collapsed - for getting collapsed (small) form -->
+			<div class="form-section fixed-form"  id="app">
+				<div class="filter">
+					<form action="tickets.html" id="form" autocomplete="off" autocorrect="off" autocapitalize="off">
+						<div data-scroll>
+							<!-- static -->
+							<div class="static">
+	<div class="container-fluid">
+		<div class="row moddle-xs">
+			<div class="col-xs-12 col-sm-2 col-sm-offset-3 col-md-offset-2">
+				Roundtrip
+			</div>
+			<div class="col-xs-12 col-sm-1 col-md-2">
+				<span class="passengers-icon" style="background-image: url(img/icons/passenger4.svg)"></span>
+				<span class="md-inline" v-cloak>Passenger{{totalPassangers() > 1 ? 's' : ''}}</span>
+				<span class="md-hide" v-cloak>{{totalPassangers()}}</span>
+			</div>
+			<div class="col-xs-12 col-sm-2">
+				KBP
+				<span class="md-inline">
+					<span class="dividing">― <i class="icon icon-plane"></i> ―</span>
+				</span>
+				<span class="md-hide"><i class="icon icon-plane"></i></span>
+				KBP
+			</div>
+			<div class="col-xs-12 col-sm-2">
+				JUL 16 <span class="dividing">―</span> AUG 5</div>
+			<!-- <div class="col-xs-2 align-right">
+				<span class="text"><i class="icon icon-drop"></i></span>
+			</div> -->
+		</div>
+	</div>
+</div>
+							<!-- filter -->
+							<div class="container filter-body">
+
+	<a href="index.html" class="logo">
+		<img src="img/logo.svg" alt="">
+	</a>
+	
+	<div class="layout offset-bottom">
+
+		<div class="column align-center" id="tripTypeDesktopPlace">
+			<button class="sm-hide active" type="button" v-on:click="toggle('trip')">
+				{{tripTypes[calendarType]}}
+				<i class="icon icon-checked"></i>
+			</button>
+			<div class="checkboxes" data-mobile="#tripTypeMobilePlace" data-desktop="#tripTypeDesktopPlace">
+				<input type="radio" name="way-type" value="roundtrip" id="roundTrip" checked v-on:click="setCalendarType('double')">
+				<label class="btn btn-link" for="roundTrip">ROUNDTRIP</label>
+				<div class="sm-hide"></div>
+				<input type="radio" name="way-type" value="oneway" id="onewayTrip" v-on:click="setCalendarType('single')">
+				<label class="btn btn-link" for="onewayTrip">ONE WAY</label>
+				<div class="accept-button sm-hide">
+					<button type="button" class="btn btn-primary btn-block" v-on:click="close('trip')">OK</button>
+				</div>
+			</div>
+		</div>
+
+		<div class="column small"></div>
+
+		<div class="column">
+			<button class="sm-hide active" type="button" v-on:click="toggle('passangers')">
+				Passenger<span v-cloak v-if="totalPassangers() > 1">s</span>
+				<i class="icon icon-checked"></i>
+				<span class="counter">{{totalPassangers() || ''}}</span>
+			</button>
+			<div data-dropdown id="passengersDesktopPlace">
+				<div class="sm-show">
+					<button type="button" class="btn btn-link btn-block anchor">
+						<span class="text align-center">
+							<span class="passengers-icon">
+								<!-- .active - to show it -->
+								<span style="background-image: url(img/icons/passenger1.svg)" v-bind:class="{active: totalPassangers() === 1}"></span>
+								<span style="background-image: url(img/icons/passenger2.svg)" v-bind:class="{active: totalPassangers() === 2}"></span>
+								<span style="background-image: url(img/icons/passenger3.svg)" v-bind:class="{active: totalPassangers() === 3}"></span>
+								<span style="background-image: url(img/icons/passenger4.svg)" v-bind:class="{active: totalPassangers() > 3}"></span>
+							</span>
+							Passenger<span v-cloak v-if="totalPassangers() > 1">s</span>
+							<i class="icon icon-drop"></i>
+						</span>
+					</button>
+				</div>
+				<div class="dropdown max-width" data-mobile="#passengersMobilePlace" data-desktop="#passengersDesktopPlace">
+					<div class="block">
+						<div class="title">
+							<i class="icon icon-adult"></i> Adults
+							<span class="badge">16+</span>
+						</div>
+						<div class="calculator">
+							<span class="minus" v-on:click="decreasePassanger('adult')">
+								<i class="icon icon-minus"></i>
+							</span>
+							<!-- .disabled - for making grey -->
+							<input type="text" readonly disabled v-model="passangers.adult" class="disabled">
+							<span class="plus" v-on:click="increasePassanger('adult')">
+								<i class="icon icon-plus"></i>
+							</span>
+						</div>
+					</div>
+					<div class="block">
+						<div class="title">
+							<i class="icon icon-children"></i> Children
+							<span class="badge">2-15</span>
+						</div>
+						<div class="calculator">
+							<span class="minus" v-on:click="decreasePassanger('children')">
+								<i class="icon icon-minus"></i>
+							</span>
+							<input type="text" readonly disabled v-model="passangers.children">
+							<span class="plus" v-on:click="increasePassanger('children')">
+								<i class="icon icon-plus"></i>
+							</span>
+						</div>
+					</div>
+					<div class="block">
+						<div class="title">
+							<i class="icon icon-babies"></i> Babies
+							<span class="badge">0-2</span>
+						</div>
+						<div class="calculator">
+							<span class="minus" v-on:click="decreasePassanger('babies')">
+								<i class="icon icon-minus"></i>
+							</span>
+							<input type="text" readonly disabled v-model="passangers.babies">
+							<span class="plus" v-on:click="increasePassanger('babies')">
+								<i class="icon icon-plus"></i>
+							</span>
+						</div>
+					</div>
+					<div class="accept-button sm-hide">
+						<button type="button" class="btn btn-primary btn-block" v-on:click="close('passangers')">OK</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="column align-center">
+			<div class="checkboxes">
+				<input type="checkbox" id="onlyDirect" v-model="onlyDirect">
+				<label for="onlyDirect" class="btn btn-link btn-block anchor">
+					<span class="text">
+						<!-- states: checked / unchecked -->
+						<i class="icon icon-unchecked" v-if="!onlyDirect"></i>
+						<i class="icon icon-checked" v-if="onlyDirect"></i>
+						DIRECT FLYGHTS ONLY
+					</span>
+				</label>
+			</div>
+		</div>
+
+		<div class="column"></div>
+
+	</div>
+</div>
+							<!-- search -->
+							<div class="container search">
+	<div class="layout">
+
+		<div class="column" id="searchFromDesktopPlace">
+			<button class="sm-hide" type="button" v-on:click="toggle('from', 'fromCity')" v-bind:class="{active: models.from}" data-search-model>
+				{{models.from || 'From?'}}
+				<i class="icon icon-checked"></i>
+			</button>
+			<div class="form-group" data-desktop="#searchFromDesktopPlace" data-mobile="#searchFromMobilePlace">
+				<!-- .filled - if input isn't empty -->
+				<input type="text" class="input grey filled" id="fromCity" placeholder="from?" autocomplete="off" autocorrect="off" autocapitalize="off" v-on:input="setModel('from', $event)" tabindex="1">
+				<i class="icon icon-fly-up input-icon"></i>
+				<span tabindex="-1" class="input-clear" v-cloak v-if="models.from" v-on:click="resetModel('from', 'fromCity')">&times;</span>
+				<!-- .active - to open up -->
+				<div class="dropdown min-width">
+					<div class="scrolled">
+						<ul class="clear cities-list">
+							<li class="">
+								<a href="#" tabindex="-1">
+									<i class="icon icon-building"></i>
+									<b><span class="highlight">London</span></b>, Canada
+								</a>
+							</li>
+							<li class="">
+								<a href="#" tabindex="-1">
+									<i class="icon icon-building"></i>
+									<b><span class="highlight">London</span></b>, United Kingdom
+								</a>
+								<ul class="clear airports-list expanded">
+									<li class="highlighted">
+										<a href="#" tabindex="-1">
+											<i class="icon icon-enter"></i>
+											<div><b>LHR</b> Heathrow</div>
+											<small>City center 33km</small>
+										</a>
+									</li>
+									<li>
+										<a href="#" tabindex="-1">
+											<i class="icon icon-enter"></i>
+											<div><b>LGW</b> Gatwick</div>
+											<small>City center 20km</small>
+										</a>
+									</li>
+									<li>
+										<a href="#" tabindex="-1">
+											<i class="icon icon-enter"></i>
+											<div><b>STN</b> Stansted</div>
+											<small>City center 40km</small>
+										</a>
+									</li>
+									<li>
+										<a href="#" tabindex="-1">
+											<i class="icon icon-enter"></i>
+											<div><b>LCY</b> City</div>
+											<small>City center 57km</small>
+										</a>
+									</li>
+									<li>
+										<a href="#" tabindex="-1">
+											<i class="icon icon-enter"></i>
+											<div><b>LTN</b> Luton</div>
+											<small>City center 3km</small>
+										</a>
+									</li>
+									<li>
+										<a href="#" tabindex="-1">
+											<i class="icon icon-enter"></i>
+											<div><b>SEN</b> Southend</div>
+											<small>City center 1km</small>
+										</a>
+									</li>
+								</ul>
+							</li>
+							<li>
+								<a href="#" tabindex="-1">
+									<i class="icon icon-building"></i>
+									<b><span class="highlight">London</span></b>, Canada
+								</a>
+							</li>
+						</ul>
+					</div>
+					<!-- <div class="empty">There is no results</div> -->
+				</div>
+				<div class="accept-button sm-hide">
+					<button type="button" tabindex="-1" class="btn btn-primary btn-block" v-on:click="close('from')">OK</button>
+				</div>
+			</div>
+		</div>
+
+		<div class="column align-center small" tabindex="-1">
+			<div class="sm-show">
+				<button type="button" class="btn btn-link btn-block" tabindex="-1">
+					<span class="text"><i class="icon icon-arrows"></i></span>
+					<span class="animation"></span>
+				</button>
+			</div>
+		</div>
+
+		<div class="column" id="searchToDesktopPlace">
+			<button class="sm-hide" type="button" v-on:click="toggle('to', 'toCity')" v-bind:class="{active: models.to}" data-search-model tabindex="-1">
+				{{models.to || 'To?'}}
+				<i class="icon icon-checked"></i>
+			</button>
+			<div class="form-group" data-desktop="#searchToDesktopPlace" data-mobile="#searchToMobilePlace">
+				<input type="text" class="input grey" id="toCity" placeholder="to?" autocomplete="off" autocorrect="off" autocapitalize="off" v-on:input="setModel('to', $event)" tabindex="2">
+				<i class="icon icon-fly-up input-icon"></i>
+				<span class="input-clear" v-cloak v-if="models.to" v-on:click="resetModel('to', 'toCity')">&times;</span>
+				<div class="dropdown min-width">
+					<div class="empty">There is no results</div>
+				</div>
+				<div class="accept-button sm-hide">
+					<button type="button" class="btn btn-primary btn-block" v-on:click="close('to')">OK</button>
+				</div>
+			</div>
+		</div>
+
+		<div class="column" id="searchDateDesktopPlace">
+			<button class="sm-hide active" type="button" v-on:click="toggle('date')" id="date-button" v-bind:class="{active: models.date}" data-search-model>
+				{{models.date || 'Date'}}
+			</button>
+			<div class="form-group" id="date-range-parent" data-desktop="#searchDateDesktopPlace" data-mobile="#searchDateMobilePlace">
+				<input type="text" class="input grey" id="date-range" placeholder="date" autocomplete="off" autocorrect="off" autocapitalize="off" v-bind:class="{active: models.date}" v-on:input="setModel('date', $event)" v-on:change="setModel('date', $event)" readonly="true" tabindex="3">
+				<!-- <label for="date-range"></label> -->
+				<i class="icon icon-calendar input-icon"></i>
+				<span class="input-clear" v-cloak v-if="models.date" v-on:click="resetModel('date', 'date-range')">&times;</span>
+			</div>
+		</div>
+
+		<div class="column align-right">
+			<!-- [disabled] - for disabling (becomes light blue) -->
+			<div class="sm-show">
+				<button type="submit" class="btn btn-info"
+				v-bind:class="{
+				'btn-info': !models.from || !models.to || !models.date,
+				'btn-primary': models.from && models.to && models.date
+			}"
+			>
+			<span class="text">Search</span>
+			<span class="animation"></span>
+		</button>
+	</div>
+</div>
+</div>
+<!-- calendar -->
+<div class="relative" id="calendarWrapper">
+	<!-- [model] is ID of input where we should paste the result -->
+	<!-- [v-bind:single="true"] if we need only one day to be selected -->
+	<!-- [v-bind:header="true"] to show header bar -->
+	<div data-desktop="#calendarWrapper" data-tablet="#searchCalendarMobilePlace">
+		<calendar model="date-range" output="date-button" v-bind:single="calendarType == 'single'" ref="calendar" v-on:change="setModel('date', $event)"></calendar>
+	</div>
+</div>
+</div>
+							<!-- filtering -->
+							<div class="darken">
+	<div class="container-fluid">
+		<div class="layout">
+			<div class="column">
+				<div data-dropdown id="filterStopsDesktopPlace">
+					<button type="button" class="btn btn-block anchor" v-on:click="toggle('stops')">
+						<i class="icon icon-stops"></i>
+						Stops
+						<span data-lg>Direct <i class="icon icon-plus"></i></span>
+					</button>
+					<div class="dropdown" data-mobile="#filterStopsMobilePlace" data-desktop="#filterStopsDesktopPlace">
+						<div class="checkbox">
+							<input type="checkbox" id="direct" checked>
+							<label for="direct">
+								<span></span>
+								<dl>
+									<dt>Direct</dt><dd>243&euro;</dd>
+								</dl>
+							</label>
+						</div>
+						<div class="checkbox">
+							<input type="checkbox" id="stop">
+							<label for="stop">
+								<span></span>
+								<dl>
+									<dt>1 Stop</dt><dd>243&euro;</dd>
+								</dl>
+							</label>
+						</div>
+						<div class="checkbox">
+							<input type="checkbox" id="stops">
+							<label for="stops">
+								<span></span>
+								<dl>
+									<dt>2 + Stops</dt><dd>243&euro;</dd>
+								</dl>
+							</label>
+						</div>
+						<div class="accept-button sm-hide">
+							<button type="button" class="btn btn-primary btn-block" v-on:click="close('stops')">OK</button>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="column">
+				<div data-dropdown id="filterDepartureDesktopPlace">
+					<button type="button" class="btn btn-block anchor" v-on:click="toggle('departure')">
+						<i class="icon icon-fly-up"></i>
+						Depart
+						<span data-lg><span class="departTimeLabel1">06</span>:00 &mdash; <span class="departTimeLabel2">22</span>:00</span>
+					</button>
+					<div class="dropdown" data-mobile="#filterDepartureMobilePlace" data-desktop="#filterDepartureDesktopPlace">
+						<div class="block">
+							<input type="hidden" id="departTimeRange1" value="10">
+							<input type="hidden" id="departTimeRange2" value="20">
+							<div class="row range-labels">
+								<div class="col-xs-6"><span class="departTimeLabel1">10</span>:00</div>
+								<div class="col-xs-6 align-right primary"><span class="departTimeLabel2">20</span>:00</div>
+							</div>
+							<div class="range-slider">
+								<div
+								data-range-time="#departTimeRange1,#departTimeRange2"
+								data-range-labels=".departTimeLabel1,.departTimeLabel2"
+								data-start="0" data-end="23" data-step="1"
+								data-values="8,14"
+								></div>
+							</div>
+						</div>
+						<div class="accept-button sm-hide">
+							<button type="button" class="btn btn-primary btn-block" v-on:click="close('departure')">OK</button>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="column">
+				<div data-dropdown id="filterReturningDesktopPlace">
+					<button type="button" class="btn btn-block anchor" v-on:click="toggle('returning')">
+						<i class="icon icon-fly-return"></i>
+						Return
+						<span data-lg><span class="returnTimeLabel1">06</span>:00 &mdash; <span class="returnTimeLabel2">22</span>:00</span>
+					</button>
+					<div class="dropdown" data-mobile="#filterReturningMobilePlace" data-desktop="#filterReturningDesktopPlace">
+						<div class="block">
+							<input type="hidden" id="returnTimeRange1" value="10">
+							<input type="hidden" id="returnTimeRange2" value="20">
+							<div class="row range-labels">
+								<div class="col-xs-6"><span class="returnTimeLabel1">10</span>:00</div>
+								<div class="col-xs-6 align-right primary"><span class="returnTimeLabel2">20</span>:00</div>
+							</div>
+							<div class="range-slider">
+								<div
+								data-range-time="#returnTimeRange1,#returnTimeRange2"
+								data-range-labels=".returnTimeLabel1,.returnTimeLabel2"
+								data-start="0" data-end="23" data-step="1"
+								data-values="14,20"
+								></div>
+							</div>
+						</div>
+						<div class="accept-button sm-hide">
+							<button type="button" class="btn btn-primary btn-block" v-on:click="close('returning')">OK</button>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="column">
+				<div data-dropdown id="filterDurationDesktopPlace">
+					<button type="button" class="btn btn-block anchor" v-on:click="toggle('duration')">
+						<i class="icon icon-duration"></i>
+						Duration
+						<span data-lg style="display:inline-block;width:25px;"><span class="durtationLabel1">5</span>h</span>
+					</button>
+					<div class="dropdown" data-mobile="#filterDurationMobilePlace" data-desktop="#filterDurationDesktopPlace">
+						<div class="block">
+							<input type="hidden" id="durtationRange1" value="10">
+							<div class="row range-labels">
+								<div class="col-xs-6">2h</div>
+								<div class="col-xs-6 align-right primary">25h</div>
+							</div>
+							<div class="range-slider">
+								<div
+								data-range-time="#durtationRange1"
+								data-range-labels=".durtationLabel1"
+								data-start="2" data-end="25" data-step="1"
+								data-value="5"
+								></div>
+							</div>
+						</div>
+						<div class="accept-button sm-hide">
+							<button type="button" class="btn btn-primary btn-block" v-on:click="close('duration')">OK</button>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="column">
+				<div data-dropdown id="airlinesDropdown">
+					<button type="button" class="btn btn-block anchor" v-on:click="toggle('airlines')">
+						<i class="icon icon-airlines"></i>
+						Airlines
+						<span data-lg id="airlinesOutput">
+							all
+							<i class="icon icon-plus"></i>
+						</span>
+					</button>
+					<div class="dropdown" data-mobile="#filterAirlinesMobilePlace" data-desktop="#airlinesDropdown">
+						<div class="block header">
+							<div class="row">
+								<div class="col-xs-6">
+									<div class="title">Airlines</div>
+								</div>
+								<div class="col-xs-6 align-right">
+									<div class="checkbox round">
+										<input type="checkbox" id="selectAllAirlines" data-activate="[data-mobile*='irlines']" checked data-output="#airlinesOutput">
+										<label for="selectAllAirlines">
+											<span></span>
+										</label>
+									</div>
+								</div>
+							</div>
+						</div>
+						<button class="btn btn-light btn-expander" type="button" id="expandAirlines">Alliances</button>
+						<ul class="clear light hidden" data-expand="#expandAirlines">
+							<li>
+								<div class="checkbox">
+									<input type="checkbox" id="all1" checked>
+									<label for="all1"><span></span>Star Alliance</label>
+								</div>
+							</li>
+							<li>
+								<div class="checkbox">
+									<input type="checkbox" id="all2" checked>
+									<label for="all2"><span></span>Oneworld</label>
+								</div>
+							</li>
+							<li>
+								<div class="checkbox">
+									<input type="checkbox" id="all3" checked>
+									<label for="all3"><span></span>Sky Team</label>
+								</div>
+							</li>
+						</ul>
+						<div class="scrolled">
+							<ul class="clear">
+								<li>
+									<div class="checkbox">
+										<input type="checkbox" id="air1" checked>
+										<label for="air1"><span></span>Aegean</label>
+									</div>
+								</li>
+								<li>
+									<div class="checkbox">
+										<input type="checkbox" id="air2" checked>
+										<label for="air2"><span></span>Aer Lingus</label>
+									</div>
+								</li>
+								<li>
+									<div class="checkbox">
+										<input type="checkbox" id="air3" checked>
+										<label for="air3"><span></span>Aeroflot</label>
+									</div>
+								</li>
+								<li>
+									<div class="checkbox">
+										<input type="checkbox" id="air4" checked>
+										<label for="air4"><span></span>Star Alliance</label>
+									</div>
+								</li>
+								<li>
+									<div class="checkbox">
+										<input type="checkbox" id="air5" checked>
+										<label for="air5"><span></span>Oneworld</label>
+									</div>
+								</li>
+								<li>
+									<div class="checkbox">
+										<input type="checkbox" id="air6" checked>
+										<label for="air6"><span></span>Sky Team</label>
+									</div>
+								</li>
+								<li>
+									<div class="checkbox">
+										<input type="checkbox" id="air7" checked>
+										<label for="air7"><span></span>Aer Lingus</label>
+									</div>
+								</li>
+								<li>
+									<div class="checkbox">
+										<input type="checkbox" id="air8" checked>
+										<label for="air8"><span></span>Aeroflot</label>
+									</div>
+								</li>
+								<li>
+									<div class="checkbox">
+										<input type="checkbox" id="air9" checked>
+										<label for="air9"><span></span>Star Alliance</label>
+									</div>
+								</li>
+								<li>
+									<div class="checkbox">
+										<input type="checkbox" id="air10" checked>
+										<label for="air10"><span></span>Oneworld</label>
+									</div>
+								</li>
+								<li>
+									<div class="checkbox">
+										<input type="checkbox" id="air11" checked>
+										<label for="air11"><span></span>Sky Team</label>
+									</div>
+								</li>
+								<li>
+									<div class="checkbox">
+										<input type="checkbox" id="air12" checked>
+										<label for="air12"><span></span>Sky Team</label>
+									</div>
+								</li>
+								<li>
+									<div class="checkbox">
+										<input type="checkbox" id="air13" checked>
+										<label for="air13"><span></span>Sky Team</label>
+									</div>
+								</li>
+								<li>
+									<div class="checkbox">
+										<input type="checkbox" id="air14" checked>
+										<label for="air14"><span></span>Sky Team</label>
+									</div>
+								</li>
+								<li>
+									<div class="checkbox">
+										<input type="checkbox" id="air15" checked>
+										<label for="air15"><span></span>Sky Team</label>
+									</div>
+								</li>
+								<li>
+									<div class="checkbox">
+										<input type="checkbox" id="air16" checked>
+										<label for="air16"><span></span>Sky Team</label>
+									</div>
+								</li>
+								<li>
+									<div class="checkbox">
+										<input type="checkbox" id="air17" checked>
+										<label for="air17"><span></span>Sky Team</label>
+									</div>
+								</li>
+								<li>
+									<div class="checkbox">
+										<input type="checkbox" id="air18" checked>
+										<label for="air18"><span></span>Sky Team</label>
+									</div>
+								</li>
+								<li>
+									<div class="checkbox">
+										<input type="checkbox" id="air19" checked>
+										<label for="air19"><span></span>Sky Team</label>
+									</div>
+								</li>
+							</ul>
+						</div>
+						<div class="accept-button sm-hide">
+							<button type="button" class="btn btn-primary btn-block" v-on:click="close('airlines')">OK</button>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="column" md-show>
+				<button class="btn btn-block anchor" type="button" v-on:click="toggle('sortedBy')">
+					Sorted by
+					<span data-md>recomended</span>
+				</button>
+			</div>
+			<div class="column right">
+				<div class="checkbox checkbox-btn" id="offersBtn">
+					<canvas class="offers-animation" id="offers-animation"></canvas>
+					<span class="inner-side">
+						<input type="checkbox" id="offers" data-toggle="#offersBtn">
+						<label for="offers">
+							<span class="label-round"></span>
+							<span class="label-icon">
+								<img src="img/icons/percent-icon.svg" alt="icon">
+							</span>
+							Offers
+						</label>
+					</span>
+				</div>
+				<button class="btn btn-block anchor btn-clear" type="reset" data-tooltip="Clear">
+					<span class="mobile-text">Clear All Filters</span>
+					<span><i class="icon icon-trash-filled btn-icon"></i></span>
+					<span>
+						<span class="sm-hide">
+							<i class="icon icon-trash"></i>
+							<i class="icon icon-trash-filled"></i>
+						</span>
+					</span>
+				</button>
+			</div>
+		</div>
+	</div>
+	<div class="fader"></div>
+</div>
+						</div>
+						<!-- submit only for mobile -->
+						<div class="sm-hide" data-main-submit>
+							<button type="submit" class="btn btn-block"
+							v-bind:class="{
+							'btn-info': !models.from || !models.to || !models.date,
+							'btn-primary': models.from && models.to && models.date
+						}"
+						>
+						<span class="text">Search</span>
+						<span class="animation"></span>
+					</button>
+				</div>
+				<!-- mobile modals -->
+				<div class="modals sm-hide">
+					<!-- trip -->
+					<div data-modal v-bind:class="{open: open.trip}" v-on:click="toggle('trip', $event)">
+						<div class="verticaly-middle">
+							<div class="inner" id="tripTypeMobilePlace"></div>
+						</div>
+					</div>
+					<!-- passangers -->
+					<div data-modal v-bind:class="{open: open.passangers}" v-on:click="toggle('passangers', $event)">
+						<div class="verticaly-middle">
+							<div class="inner" id="passengersMobilePlace"></div>
+						</div>
+					</div>
+					<!-- from -->
+					<div data-modal v-bind:class="{open: open.from}" v-on:click="toggle('from', $event)" id="searchFromMobilePlace" data-search-field>
+					</div>
+					<!-- to -->
+					<div data-modal v-bind:class="{open: open.to}" v-on:click="toggle('to', $event)" id="searchToMobilePlace" data-search-field>
+					</div>
+					<!-- dates -->
+					<div data-modal v-bind:class="{open: open.date}" v-on:click="toggle('date', $event)"data-search-field>
+						<div id="searchDateMobilePlace" data-months></div>
+						<div>
+							<div id="searchCalendarMobilePlace" data-calendar></div>
+							<div class="accept-button sm-hide">
+								<button type="button" class="btn btn-primary btn-block" v-on:click="close('date')">OK</button>
+							</div>
+						</div>
+					</div>
+					<!-- filtering -->
+					<div data-modal v-bind:class="{open: open.stops}" v-on:click="toggle('stops', $event)">
+						<div class="verticaly-middle">
+							<div class="inner" id="filterStopsMobilePlace"></div>
+						</div>
+					</div>
+					<div data-modal v-bind:class="{open: open.departure}" v-on:click="toggle('departure', $event)">
+						<div class="verticaly-middle">
+							<div class="inner" id="filterDepartureMobilePlace"></div>
+						</div>
+					</div>
+					<div data-modal v-bind:class="{open: open.returning}" v-on:click="toggle('returning', $event)">
+						<div class="verticaly-middle">
+							<div class="inner" id="filterReturningMobilePlace"></div>
+						</div>
+					</div>
+					<div data-modal v-bind:class="{open: open.duration}" v-on:click="toggle('duration', $event)">
+						<div class="verticaly-middle">
+							<div class="inner" id="filterDurationMobilePlace"></div>
+						</div>
+					</div>
+					<div data-modal v-bind:class="{open: open.airlines}" v-on:click="toggle('airlines', $event)" data-airlines-field>
+						<div class="verticaly-middle">
+							<div class="inner" id="filterAirlinesMobilePlace"></div>
+						</div>
+					</div>
+					<div data-modal >
+						<div class="verticaly-middle">
+							<div class="inner"></div>
+						</div>
+					</div>
+				</div>
+				<div class="sm-hide">
+					<button class="close-form" type="button">
+						<i class="icon icon-close"></i>
+					</button>
+				</div>
+				<div class="fader"></div>
+			</form>
+		</div>
+	</div>
+	<img src="temp/airline4.png" alt="" class="airline-logo">
+</section>
+
+<section class="section city-hero-section">
+	<div class="container-fluid">
+		<div class="city-hero">
+			<div class="row bottom-xs">
+				<div class="col-xs-12 col-sm-9 col-md-6">
+					<h2 class="name">Lufthansa</h2>
+					<div class="subtitle">
+						<span class="sm-inline">
+							<img src="temp/provider1.svg" alt="" class="inline-logo">
+						</span>
+						<span class="sm-inline">
+							<a href="http://www.lufthansa.com" class="link" target="_blank">
+								<i class="icon icon-share"></i>
+								www.lufthansa.com
+							</a>
+						</span>
+						<span class="sm-hide">
+							<span class="premium-mobile">
+								<i class="icon icon-union-star"></i>
+								Airline of the month
+							</span>
+						</span>
+					</div>
+					<div id="premiumDesktopPlace">
+						<div class="premium" data-mobile="#premiumMobilePlace" data-desktop="#premiumDesktopPlace">
+							<i class="icon icon-union-star"></i>
+							<div class="text">
+								Airline of the month 
+								<small>
+									<b>2.1k</b> flights per month
+								</small>
+							</div>
+						</div>
+					</div>
+					<div id="detailsDesktopPlace" class="sm-show">
+						<ul class="clear properties-table"  data-mobile="#detailsMobilePlace" data-desktop="#detailsDesktopPlace">
+							<li style="width: 100px;">
+								<dl>
+									<dt>IATA</dt><dd>LH</dd>
+								</dl>
+							</li>
+							<li>
+								<dl>
+									<dt>Alliance</dt><dd>Star Alliance</dd>
+								</dl>
+							</li>
+							<li>
+								<dl>
+									<dt>Telephone</dt><dd>+30 210 617 52 00</dd>
+								</dl>
+							</li>
+							<li>
+								<dl>
+									<dt>email</dt><dd>ath.mm@dlh.de</dd>
+								</dl>
+							</li>
+						</ul>
+					</div>
+					<div class="sm-hide align-center">
+						<button type="button" class="btn btn-round larger dark" data-call="#information-popup">
+							<i class="icon icon-info"></i>
+						</button>
+					</div>
+					<!-- <div class="hidden" data-expand="#details1" id="detailsMobilePlace"></div> -->
+				</div>
+				<div class="col-xs-12 col-sm-3 col-md-2 col-lg-2" data-graph-block>
+					<div class="graph-wrapper">
+						<svg class="graph" width="500px" height="500px" viewbox="0 0 500 500" data-max="10" data-mobile-state="0">
+							<path data-value="8" data-tooltip="1"/>
+							<path data-value="7.4" data-tooltip="2"/>
+							<path data-value="6" data-tooltip="3"/>
+						</svg>
+						<div class="value" data-default="7.0">7.0</div>
+					</div>
+					<div class="tooltip-block active" data-tooltip-id="0">
+						<div class="title">&mdash; &nbsp;&nbsp; Average</div>
+						Rating on airline
+					</div>
+					<div class="tooltip-block" data-tooltip-id="1">
+						<div class="title">&mdash; &nbsp;&nbsp;Airline</div>
+						Some information about <b>Skytrax</b> airline option
+					</div>
+					<div class="tooltip-block" data-tooltip-id="2">
+						<div class="title">&mdash; &nbsp;&nbsp;Service</div>
+						Lorem ipsum dolor sit amet, <b>consectetur</b> adipisicing.
+					</div>
+					<div class="tooltip-block" data-tooltip-id="3">
+						<div class="title">&mdash; &nbsp;&nbsp;Launge</div>
+						Non ipsa, <b>quia</b>, dicta dolor, beatae accusantium nulla
+					</div>
+				</div>
+
+				<section class="section show-xs" id="descriptionMobile"></section>
+
+				<div class="col-xs-12 col-sm-4 col-md-4 col-lg-3 col-lg-offset-1 md-show" data-destinations>
+					<div class="marked-title">Top Destinations</div>
+					<ul class="clear destinations-list">
+						<li>
+							<i class="icon icon-price-up"></i>
+							<div class="cost">140€</div>
+							<div class="city">Thessaloniki <span class="divider"></span> London</div>
+						</li>
+						<li>
+							<i class="icon icon-price-down"></i>
+							<div class="cost">220€</div>
+							<div class="city">Athens <span class="divider"></span> Berlin</div>
+						</li>
+						<li>
+							<i class="icon icon-price-up"></i>
+							<div class="cost">140€</div>
+							<div class="city">Thessaloniki <span class="divider"></span> London</div>
+						</li>
+						<li>
+							<i class="icon icon-price-down"></i>
+							<div class="cost">220€</div>
+							<div class="city">Athens <span class="divider"></span> Berlin</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<!-- offers-dark -->
+<section class="section offers-dark">
+	<div class="container">
+		<div class="company-info">
+			<div class="logo">
+				<img src="temp/logo1-light.svg" alt="logo">
+			</div>
+			<div class="count">
+				374 Offers
+			</div>
+		</div>
+		<div class="tickets-outer">
+			<!-- ticket -->
+			<a href="ticket.html" class="ticket dark-ticket">
+				<div class="layout">
+					<div class="column collapsed">
+						<div class="map-wrapper">
+							<div class="rounder">
+								<img src="temp/map-dark.png">
+							</div>
+						</div>
+					</div>
+					<div class="column" data-double>
+						<div class="row middle-xs paddless-row">
+							<div class="col-xs-6">
+								<img src="temp/logo1-light.svg" alt="" class="airline-image">
+							</div>
+							<div class="col-xs-6 align-right">
+								<div class="date">
+									<span class="wrap-icon" data-tooltip="Depart">
+										<i class="icon icon-fly-up"></i>
+									</span>
+									July, 5
+								</div>
+							</div>
+						</div>
+						<div class="content">
+							<div class="row timing middle-xs collapsed-row">
+								<div class="col-xs-4" data-hover>06:30</div>
+								<div class="col-xs-4 align-center">
+									<div class="smaller">
+										direct
+										<img src="img/straight.svg" alt="" class="indicator">
+									</div>
+								</div>
+								<div class="col-xs-4 align-right" data-hover>16:20</div>
+							</div>
+							<div class="row labels middle-xs">
+								<div class="col-xs-4">ATH</div>
+								<div class="col-xs-4 align-center">
+									<div class="duration light">
+										<i class="icon icon-duration"></i> 3h 20
+									</div>
+								</div>
+								<div class="col-xs-4 align-right">LHR</div>
+							</div>
+						</div>
+						<div class="separator"></div>
+					</div>
+					<div class="column" data-double>
+						<div class="row middle-xs paddless-row">
+							<div class="col-xs-6">
+								<img src="temp/logo2-light.svg" alt="" class="airline-image">
+							</div>
+							<div class="col-xs-6 align-right">
+								<div class="date">
+									<span class="wrap-icon" data-tooltip="Return">
+										<i class="icon icon-fly-return"></i>
+									</span>
+									September, 8
+								</div>
+							</div>
+						</div>
+						<div class="content">
+							<div class="row timing middle-xs collapsed-row">
+								<div class="col-xs-4" data-hover>10:45</div>
+								<div class="col-xs-4 align-center">
+									<div class="smaller">
+										1 stop
+										<img src="img/stops.svg" alt="" class="indicator">
+									</div>
+								</div>
+								<div class="col-xs-4 align-right" data-hover>19:20</div>
+							</div>
+							<div class="row labels middle-xs">
+								<div class="col-xs-4">LHR</div>
+								<div class="col-xs-4 align-center">
+									<div class="duration light">
+										<i class="icon icon-duration"></i> 6h
+									</div>
+								</div>
+								<div class="col-xs-4 align-right">ATH</div>
+							</div>
+						</div>
+						<div class="separator faded"></div>
+					</div>
+					<div class="column small align-center no-corner-right no-border">
+						<div class="price">342&euro;</div>
+						<div class="price old-price"><span>520&euro;</span></div>
+						<div class="offers-state">
+							<div class="label-cover">
+								<div class="label-icon">
+									<img src="img/icons/percent-icon.svg" alt="icon">
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</a>
+			<!-- ticket -->
+			<a href="ticket.html" class="ticket dark-ticket">
+				<div class="layout">
+					<div class="column collapsed">
+						<div class="map-wrapper">
+							<div class="rounder">
+								<img src="temp/map-dark.png">
+							</div>
+						</div>
+					</div>
+					<div class="column" data-double>
+						<div class="row middle-xs paddless-row">
+							<div class="col-xs-6">
+								<img src="temp/logo1-light.svg" alt="" class="airline-image">
+							</div>
+							<div class="col-xs-6 align-right">
+								<div class="date">
+									<span class="wrap-icon" data-tooltip="Depart">
+										<i class="icon icon-fly-up"></i>
+									</span>
+									July, 5
+								</div>
+							</div>
+						</div>
+						<div class="content">
+							<div class="row timing middle-xs collapsed-row">
+								<div class="col-xs-4" data-hover>06:30</div>
+								<div class="col-xs-4 align-center">
+									<div class="smaller">
+										direct
+										<img src="img/straight.svg" alt="" class="indicator">
+									</div>
+								</div>
+								<div class="col-xs-4 align-right" data-hover>16:20</div>
+							</div>
+							<div class="row labels middle-xs">
+								<div class="col-xs-4">ATH</div>
+								<div class="col-xs-4 align-center">
+									<div class="duration light">
+										<i class="icon icon-duration"></i> 3h 20
+									</div>
+								</div>
+								<div class="col-xs-4 align-right">LHR</div>
+							</div>
+						</div>
+						<div class="separator"></div>
+					</div>
+					<div class="column" data-double>
+						<div class="row middle-xs paddless-row">
+							<div class="col-xs-6">
+								<img src="temp/logo2-light.svg" alt="" class="airline-image">
+							</div>
+							<div class="col-xs-6 align-right">
+								<div class="date">
+									<span class="wrap-icon" data-tooltip="Return">
+										<i class="icon icon-fly-return"></i>
+									</span>
+									September, 8
+								</div>
+							</div>
+						</div>
+						<div class="content">
+							<div class="row timing middle-xs collapsed-row">
+								<div class="col-xs-4" data-hover>10:45</div>
+								<div class="col-xs-4 align-center">
+									<div class="smaller">
+										1 stop
+										<img src="img/stops.svg" alt="" class="indicator">
+									</div>
+								</div>
+								<div class="col-xs-4 align-right" data-hover>19:20</div>
+							</div>
+							<div class="row labels middle-xs">
+								<div class="col-xs-4">LHR</div>
+								<div class="col-xs-4 align-center">
+									<div class="duration light">
+										<i class="icon icon-duration"></i> 6h
+									</div>
+								</div>
+								<div class="col-xs-4 align-right">ATH</div>
+							</div>
+						</div>
+						<div class="separator faded"></div>
+					</div>
+					<div class="column small align-center no-corner-right no-border">
+						<div class="price">342&euro;</div>
+						<div class="price old-price"><span>520&euro;</span></div>
+						<div class="offers-state">
+							<div class="label-cover">
+								<div class="label-icon">
+									<img src="img/icons/percent-icon.svg" alt="icon">
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</a>
+			<!-- ticket -->
+			<a href="ticket.html" class="ticket dark-ticket">
+				<div class="layout">
+					<div class="column collapsed">
+						<div class="map-wrapper">
+							<div class="rounder">
+								<img src="temp/map-dark.png">
+							</div>
+						</div>
+					</div>
+					<div class="column" data-double>
+						<div class="row middle-xs paddless-row">
+							<div class="col-xs-6">
+								<img src="temp/logo1-light.svg" alt="" class="airline-image">
+							</div>
+							<div class="col-xs-6 align-right">
+								<div class="date">
+									<span class="wrap-icon" data-tooltip="Depart">
+										<i class="icon icon-fly-up"></i>
+									</span>
+									July, 5
+								</div>
+							</div>
+						</div>
+						<div class="content">
+							<div class="row timing middle-xs collapsed-row">
+								<div class="col-xs-4" data-hover>06:30</div>
+								<div class="col-xs-4 align-center">
+									<div class="smaller">
+										direct
+										<img src="img/straight.svg" alt="" class="indicator">
+									</div>
+								</div>
+								<div class="col-xs-4 align-right" data-hover>16:20</div>
+							</div>
+							<div class="row labels middle-xs">
+								<div class="col-xs-4">ATH</div>
+								<div class="col-xs-4 align-center">
+									<div class="duration light">
+										<i class="icon icon-duration"></i> 3h 20
+									</div>
+								</div>
+								<div class="col-xs-4 align-right">LHR</div>
+							</div>
+						</div>
+						<div class="separator"></div>
+					</div>
+					<div class="column" data-double>
+						<div class="row middle-xs paddless-row">
+							<div class="col-xs-6">
+								<img src="temp/logo2-light.svg" alt="" class="airline-image">
+							</div>
+							<div class="col-xs-6 align-right">
+								<div class="date">
+									<span class="wrap-icon" data-tooltip="Return">
+										<i class="icon icon-fly-return"></i>
+									</span>
+									September, 8
+								</div>
+							</div>
+						</div>
+						<div class="content">
+							<div class="row timing middle-xs collapsed-row">
+								<div class="col-xs-4" data-hover>10:45</div>
+								<div class="col-xs-4 align-center">
+									<div class="smaller">
+										1 stop
+										<img src="img/stops.svg" alt="" class="indicator">
+									</div>
+								</div>
+								<div class="col-xs-4 align-right" data-hover>19:20</div>
+							</div>
+							<div class="row labels middle-xs">
+								<div class="col-xs-4">LHR</div>
+								<div class="col-xs-4 align-center">
+									<div class="duration light">
+										<i class="icon icon-duration"></i> 6h
+									</div>
+								</div>
+								<div class="col-xs-4 align-right">ATH</div>
+							</div>
+						</div>
+						<div class="separator faded"></div>
+					</div>
+					<div class="column small align-center no-corner-right no-border">
+						<div class="price">342&euro;</div>
+						<div class="price old-price"><span>520&euro;</span></div>
+						<div class="offers-state">
+							<div class="label-cover">
+								<div class="label-icon">
+									<img src="img/icons/percent-icon.svg" alt="icon">
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</a>
+		</div>
+	</div>
+	<div class="title-outer">
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-12 col-ms-9 col-sm-6 col-md-4">
+					<div class="vertical-middle">
+						<div class="middle-outer">
+							<h2 class="title">
+								<span class="paper-plane">Book</span>
+								best offers with
+								<span class="primary">Lufthansa</span>
+							</h2>
+							<div class="btn-outer">
+								<a href="#" class="offers-link">
+									<canvas class="offers-animation"></canvas>
+									<span class="label-icon">
+										<img src="img/icons/percent-icon.svg" alt="icon">
+									</span>
+									<span class="text">Offers</span>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<!-- / offers-dark -->
+
+
+<section class="section hidden-xs" id="descriptionDesktop">
+	<div class="container" data-desktop="#descriptionDesktop" data-mobile="#descriptionMobile">
+		<div class="row">
+			<div class="col-xs-12 col-sm-5">
+				<div class="marked-title">Flights from Greece to <span>London</span></div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-xs-12 col-ms-6 col-sm-5">
+				<p class="paragraph">
+					London, the city of <b>Big Ben, Buckingham Palace</b> and the famous red <b>double-decker buses</b>! If you are looking for cheap airtickets to London, then you are about to visit the second most important city in the world, following New York. 
+				</p>
+				<p class="paragraph">
+					A cosmopolitan metropolis, financial centre and a top notch art, fashion and culture hub, London is so vast – and yet so well structured. All the different cultures,
+				</p>
+			</div>
+			<div class="col-xs-12 col-ms-6 col-sm-4 col-sm-offset-3">
+				<p class="paragraph">
+					colours, scents and auras of the world are concentrated at the melting pot of the neighbourhoods of London, each and every one of them with its own unique character.
+				</p>
+				<p class="paragraph">
+					Once you book your accommodation in one of the cheap hotels you’ll find in London, you will be free to go out and explore. There is so much to see, taste, listen to and experience!
+				</p>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section class="section">
+	<div class="container">
+		<div class="section-title align-center">
+			<span class="paper-plane">Lufthansa.</span>
+			<span class="block-xs dark">Baggage rules</span>
+		</div>
+		<div class="section-subtitle align-center">
+			<span data-tooltip="Make attention">
+				<i class="icon icon-info danger"></i>
+			</span>&nbsp;
+			For example this block refers to <br class="ms-hide"> Lufthansa only!
+		</div>
+
+		<div class="marked-title primary">
+			<img src="temp/class1.svg" alt="">
+			Economy class
+		</div>
+		<div class="row bottom-xs">
+			<div class="col-xs-12 col-ms-6 col-sm-3">
+				<div class="airline-bag" data-mobile-inviewport>
+					<div class="relative">
+						<img src="temp/bag.svg" alt="" class="adaptive">
+						<div class="width"><span class="unit"><b>55</b>cm</span></div>
+						<div class="height"><span class="unit"><b>40</b>cm</span></div>
+						<div class="depth"><span class="unit"><b>23</b>cm</span></div>
+					</div>
+					<div class="title">Hand</div>
+					<div class="value">
+						1 place <b>8kg</b>
+					</div>
+				</div>
+				<hr class="ms-hide">
+			</div>
+			<div class="col-xs-12 col-ms-6 col-sm-3 col-sm-offset-1">
+				<div class="airline-bag" data-mobile-inviewport>
+					<div class="relative">
+						<img src="temp/bag2.svg" alt="" class="adaptive">
+						<div class="width"><span class="unit"><b>55</b>cm</span></div>
+						<div class="height"><span class="unit"><b>40</b>cm</span></div>
+						<div class="depth"><span class="unit"><b>23</b>cm</span></div>
+					</div>
+					<div class="title">Luggage</div>
+					<div class="value">
+						1 place <b>23kg</b>
+					</div>
+				</div>
+			</div>
+			<div class="col-xs-12 col-sm-4 col-sm-offset-1">
+				<div class="marked-title">Extra baggage cost</div>
+				<div class="paragraph">
+					<b>Tariff Light</b> provides to buy <b>1 place</b> of baggage weighing up to <b>23kg</b> online on the airline's website. The price will be significantly lower than at the airport. 
+				</div>
+				<dl class="simple-dl">
+					<dt>15€</dt>
+					<dd>Flights in Germany</dd>
+				</dl>
+				<dl class="simple-dl">
+					<dt>25€</dt>
+					<dd>International flights</dd>
+				</dl>
+				<div data-tooltip="Read more about something" class="clickable" data-call="#classDetail">
+					<i class="icon icon-info danger"></i>Read more
+				</div>
+			</div>
+		</div>
+
+		<hr class="ms-show">
+
+		<div class="marked-title ms-offset-top">
+			<img src="temp/class2.svg" alt="">
+			Business class
+		</div>
+		<div class="row bottom-xs">
+			<div class="col-xs-12 col-ms-6 col-sm-3">
+				<div class="airline-bag" data-mobile-inviewport>
+					<div class="relative">
+						<img src="temp/bag.svg" alt="" class="adaptive">
+						<div class="width"><span class="unit"><b>55</b>cm</span></div>
+						<div class="height"><span class="unit"><b>40</b>cm</span></div>
+						<div class="depth"><span class="unit"><b>23</b>cm</span></div>
+					</div>
+					<div class="title">Hand</div>
+					<div class="value">
+						1 place <b>8kg</b>
+					</div>
+				</div>
+				<hr class="ms-hide">
+			</div>
+			<div class="col-xs-12 col-ms-6 col-sm-3 col-sm-offset-1">
+				<div class="airline-bag" data-mobile-inviewport>
+					<div class="relative">
+						<img src="temp/bag2.svg" alt="" class="adaptive">
+						<div class="width"><span class="unit"><b>55</b>cm</span></div>
+						<div class="height"><span class="unit"><b>40</b>cm</span></div>
+						<div class="depth"><span class="unit"><b>23</b>cm</span></div>
+					</div>
+					<div class="title">Luggage</div>
+					<div class="value">
+						1 place <b>23kg</b>
+					</div>
+				</div>
+			</div>
+			<div class="col-xs-12 col-sm-4 col-sm-offset-1">
+				<div class="marked-title">Extra baggage cost</div>
+				<div class="paragraph">
+					<b>Tariff Light</b> provides to buy <b>1 place</b> of baggage weighing up to <b>23kg</b> online on the airline's website. The price will be significantly lower than at the airport. 
+				</div>
+				<dl class="simple-dl">
+					<dt>15€</dt>
+					<dd>Flights in Germany</dd>
+				</dl>
+				<dl class="simple-dl">
+					<dt>25€</dt>
+					<dd>International flights</dd>
+				</dl>
+				<div data-tooltip="Read more about something" class="clickable" data-call="#classDetail2">
+					<i class="icon icon-info danger"></i>Read more
+				</div>
+			</div>
+		</div>
+
+		<hr class="ms-show">
+
+		<div class="marked-title ms-offset-top">
+			<img src="temp/class3.svg" alt="">
+			First class
+		</div>
+		<div class="row bottom-xs">
+			<div class="col-xs-12 col-ms-6 col-sm-3">
+				<div class="airline-bag" data-mobile-inviewport>
+					<div class="relative">
+						<img src="temp/bag.svg" alt="" class="adaptive">
+						<div class="width"><span class="unit"><b>55</b>cm</span></div>
+						<div class="height"><span class="unit"><b>40</b>cm</span></div>
+						<div class="depth"><span class="unit"><b>23</b>cm</span></div>
+					</div>
+					<div class="title">Hand</div>
+					<div class="value">
+						1 place <b>8kg</b>
+					</div>
+				</div>
+				<hr class="ms-hide">
+			</div>
+			<div class="col-xs-12 col-ms-6 col-sm-3 col-sm-offset-1">
+				<div class="airline-bag" data-mobile-inviewport>
+					<div class="relative">
+						<img src="temp/bag2.svg" alt="" class="adaptive">
+						<div class="width"><span class="unit"><b>55</b>cm</span></div>
+						<div class="height"><span class="unit"><b>40</b>cm</span></div>
+						<div class="depth"><span class="unit"><b>23</b>cm</span></div>
+					</div>
+					<div class="title">Luggage</div>
+					<div class="value">
+						1 place <b>23kg</b>
+					</div>
+				</div>
+			</div>
+			<div class="col-xs-12 col-sm-4 col-sm-offset-1">
+				<div class="marked-title">Extra baggage cost</div>
+				<div class="paragraph">
+					<b>Tariff Light</b> provides to buy <b>1 place</b> of baggage weighing up to <b>23kg</b> online on the airline's website. The price will be significantly lower than at the airport. 
+				</div>
+				<dl class="simple-dl">
+					<dt>15€</dt>
+					<dd>Flights in Germany</dd>
+				</dl>
+				<dl class="simple-dl">
+					<dt>25€</dt>
+					<dd>International flights</dd>
+				</dl>
+				<div data-tooltip="Read more about something" class="clickable" data-call="#classDetail3">
+					<i class="icon icon-info danger"></i>Read more
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section class="section">
+	<div class="container">
+		<div class="row">
+			<div class="col-xs-12 col-ms-6 col-sm-5">
+				<div class="marked-title">
+					Check in for <span>Lufthansa</span> flights.
+				</div>
+				<div class="paragraph">
+					You can register for Lufthansa flights via the Internet, using a mobile application or at the airport before departure. 
+				</div>
+				<div class="paragraph">
+					Online check-in opens 23 hours and closes 40 minutes before departure. Boarding pass must be printed, it can be done independently, at the airline counter or in a special machine. The time of beginning and end of check-in for Lufthansa flights at the airport depends on the specific flight. The exact time can be found when purchasing tickets.
+				</div>
+			</div>
+			<div class="col-xs-12 col-ms-6 col-sm-4 col-sm-offset-3">
+				<div class="marked-title small ms-offset-top">Check in Details</div>
+				<ul class="clear simple-list">
+					<li>
+						<span data-tooltip="Tooltip 1"><i class="icon icon-info danger"></i></span> &nbsp; Online
+					</li>
+					<li>
+						<span data-tooltip="Tooltip 2"><i class="icon icon-info danger"></i></span> &nbsp; App
+					</li>
+					<li>
+						<span data-tooltip="Tooltip 3"><i class="icon icon-info danger"></i></span> &nbsp; Airport
+					</li>
+					<li>
+						<span data-tooltip="Tooltip 4"><i class="icon icon-info danger"></i></span> &nbsp; 40m
+					</li>
+					<li>
+						<span data-tooltip="Tooltip 5"><i class="icon icon-info danger"></i></span> &nbsp; 40m
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</section>
+
+</main>
+
+<a href="#" class="scroll-top">
+	<i class="icon icon-arrow-up"></i>
+</a>
+
+<div class="popup" id="information-popup">
+	<div class="inner" data-align="bottom">
+		<button type="button" class="btn btn-round close-popup dark">
+			<i class="icon icon-close"></i>
+		</button>
+		<div class="title align-center">Lufthansa</div>
+		<div id="premiumMobilePlace"></div>
+		<div class="align-center">
+			<a href="www.lufthansa.com" class="link">www.lufthansa.com</a>
+		</div>
+		<div id="detailsMobilePlace"></div>
+	</div>
+</div>
+
+<footer class="main-footer">
+	<div class="container">
+		<div class="row">
+			<div class="col-xs-9 sm-show">
+				<ul class="clear menu">
+					<li><a href="index.html" class="active">Home</a></li>
+					<li><a href="cities.html">Cities</a></li>
+					<li><a href="airlines.html">Airlines</a></li>
+					<li><a href="map.html">Map</a></li>
+					<li><a href="blog.html">Blog</a></li>
+					<li><a href="about.html">About</a></li>
+					<li><a href="#">Jobs</a></li>
+					<li><a href="#">Help</a></li>
+				</ul>
+			</div>
+			<div class="col-xs-12 col-sm-3">
+				<div class="row">
+					<div class="col-xs-12 col-sm-7">
+						<ul class="clear socials">
+							<li><a href="#"><i class="icon icon-facebook"></i></a></li>
+							<li><a href="#"><i class="icon icon-twitter"></i></a></li>
+							<li><a href="#"><i class="icon icon-pinterest"></i></a></li>
+						</ul>
+					</div>
+					<div class="col-xs-12 col-sm-5 align-right first-xs last-sm">
+<!-- 						<a href="#" class="language">
+							EN<img src="img/icons/en.svg" alt="">
+						</a> -->
+						<div data-dropdown class="language">
+							<div class="anchor"><img src="img/icons/language.svg" alt="language icon"></div>
+							<div class="dropdown">
+								<ul class="lang-list clear">
+									<li class="item active">
+										<a href="#" class="lang-select">
+											<img src="img/icons/en.svg" alt="en" class="img-icon">
+											English
+										</a>
+									</li>
+									<li class="item">
+										<a href="#" class="lang-select">
+											<img src="img/icons/gr.svg" alt="gr" class="img-icon">
+											Greek
+										</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="footer">
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-12 col-sm-8">
+					<span class="copyright">© 2016 Travelkiki.</span>
+					<a href="terms.html" class="link">Terms</a>
+					<a href="#" class="link">Privacy policy</a>
+					<a href="contacts.html" class="link">Contact Us</a>
+				</div>
+				<div class="col-xs-12 col-sm-4 align-right">
+					<a href="#" class="information">@ Inform me about Travelkiki</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</footer>
+
+
+
+<script>
+	function subscribeCallback(event){
+		console.log(this, event);
+	}
+</script>
+
+<form action="#" class="subscribe-form validate-form" data-skip-input data-callback="subscribeCallback">
+	<div class="preloader"></div>
+	<div class="container">
+		<div class="form-group">
+			<input type="text" class="input email" data-validate="email" placeholder="Type your email">
+			<div class="error">Please enter a valid email!</div>
+			<button type="submit" class="btn faded">
+				<img src="img/icons/send.svg" alt="">
+				<img src="img/icons/send-error.svg" alt="">
+			</button>
+		</div>
+	</div>
+	<!-- .active - for showing -->
+	<div class="success success-fadein">
+		<div class="container">
+			<i class="icon icon-checked"></i>
+			Your email was sent successfully!
+		</div>
+	</div>
+</form>
+<div class="ticket-popup">
+	<button class="btn close-popup" type="button">
+		<i class="icon icon-arrow-left"></i>
+	</button>
+	<a href="index.html" class="site-logo">
+		<img src="img/logo.svg" alt="logo" class="dark-logo">
+		<img src="img/logo-white.svg" alt="logo" class="light-logo">
+	</a>
+	<div class="offers-label">
+		<img src="img/icons/offers-icon.svg" alt="icon">
+	</div>
+	<div class="map-wrapper">
+		<div id="map" class="map"></div>
+	</div>
+	<div class="content-wrapper">
+		<ul class="clear" data-tickets-info>
+			<li>
+				#=include small-ticket1.html
+			</li>
+			<li>
+				#=include small-ticket2.html
+			</li>
+			<li class="spaced">
+				<div class="booking active">
+					<div class="price">249&euro;</div>
+					<div class="host">Pamediakopes.gr</div>
+					<div class="text">Book</div>
+				</div>
+			</li>
+			<li class="spaced">
+				<div class="booking">
+					<div class="price">321&euro;</div>
+					<div class="host">Petas.gr</div>
+					<div class="text">Book</div>
+				</div>
+			</li>
+			<li class="spaced">
+				<div class="booking">
+					<div class="price">32 412&euro;</div>
+					<div class="host">Pamediakopes.gr</div>
+					<div class="text">Book</div>
+				</div>
+			</li>
+		</ul>
+	</div>
+</div>
+<div id="classDetail" class="popup class-popup">
+	<button type="button" class="close-popup show-ms" data-close="#classDetail">
+		<i class="icon icon-close"></i>
+	</button>
+	<div class="inner">
+		<div class="header">
+			<div class="title">
+				<img src="temp/class-economy-white.svg" alt="icon" class="title-icon">
+				<span class="text">Economy class</span>
+			</div>
+			<button type="button" class="close-popup hidden-ms" data-close="#classDetail">
+				<i class="icon icon-close"></i>
+			</button>
+		</div>
+		<div class="content relative">
+			<div class="row">
+				<div class="col-xs-12 col-sm-6 col-md-7">
+					<div class="row">
+						<div class="col-xs-12 col-ms-6">
+							<div class="airline-bag active-mobile" data-mobile-inviewport>
+								<div class="relative">
+									<img src="temp/bag.svg" alt="" class="adaptive">
+									<div class="width"><span class="unit"><b>55</b>cm</span></div>
+									<div class="height"><span class="unit"><b>40</b>cm</span></div>
+									<div class="depth"><span class="unit"><b>23</b>cm</span></div>
+								</div>
+								<div class="bag-title">Hand</div>
+								<div class="value">
+									1 place <b>8kg</b>
+								</div>
+							</div>
+							<hr class="ms-hide">
+						</div>
+						<div class="col-xs-12 col-ms-6">
+							<div class="airline-bag" data-mobile-inviewport>
+								<div class="relative">
+									<img src="temp/bag2.svg" alt="" class="adaptive">
+									<div class="width"><span class="unit"><b>55</b>cm</span></div>
+									<div class="height"><span class="unit"><b>40</b>cm</span></div>
+									<div class="depth"><span class="unit"><b>23</b>cm</span></div>
+								</div>
+								<div class="bag-title">Luggage</div>
+								<div class="value">
+									1 place <b>23kg</b>
+								</div>
+							</div>
+						</div>
+						<div class="col-xs-12 hidden-xs" id="infoDesktop">
+							<div class="spaced-info" data-desktop="#infoDesktop" data-mobile="#infoMobile">
+								<div class="marked-title small ms-offset-top">Details</div>
+								<ul class="clear simple-list part">
+									<li>
+										<span data-tooltip="Tooltip 1"><i class="icon icon-info danger"></i></span> &nbsp; Online
+									</li>
+									<li>
+										<span data-tooltip="Tooltip 2"><i class="icon icon-info danger"></i></span> &nbsp; App
+									</li>
+									<li>
+										<span data-tooltip="Tooltip 3"><i class="icon icon-info danger"></i></span> &nbsp; Airport
+									</li>
+									<li>
+										<span data-tooltip="Tooltip 4"><i class="icon icon-info danger"></i></span> &nbsp; 40m
+									</li>
+									<li>
+										<span data-tooltip="Tooltip 5"><i class="icon icon-info danger"></i></span> &nbsp; 40m
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-5 scrolled to-top">
+					<div class="marked-title">Extra baggage cost</div>
+					<div class="paragraph">
+						<b>Tariff Light</b> provides to buy <b>1 place</b> of baggage weighing up to <b>23kg</b> online on the airline's website. The price will be significantly lower than at the airport. 
+					</div>
+					<dl class="simple-dl">
+						<dt>15€</dt>
+						<dd>Flights in Germany</dd>
+					</dl>
+					<dl class="simple-dl">
+						<dt>25€</dt>
+						<dd>International flights</dd>
+					</dl>
+					<div class="paragraph">
+						The data collected by Lufthansa is generally used to fulfil the contract of carriage you have with us. It includes both passenger and baggage data. To ensure the onward transportation of your baggage with other airlines, as well as its timely processing at airports, we pass data on to the airlines and airports concerned. In addition, we support the German Customs authorities in the fulfilment of their legal duties by allowing limited access to selected data.
+					</div>
+					<div class="paragraph">
+						The data collected by Lufthansa is generally used to fulfil the contract of carriage you have with us. It includes both passenger and baggage data. To ensure the onward transportation of your baggage with other airlines, as well as its timely processing at airports, we pass data on to the airlines and airports concerned. In addition, we support the German Customs authorities in the fulfilment of their legal duties by allowing limited access to selected data.
+					</div>
+				</div>
+				<div class="col-xs-12 show-xs" id="infoMobile"></div>
+			</div>
+		</div>
+	</div>
+</div>
+<div id="classDetail2" class="popup class-popup">
+	<button type="button" class="close-popup show-ms" data-close="#classDetail2">
+		<i class="icon icon-close"></i>
+	</button>
+	<div class="inner">
+		<div class="header">
+			<div class="title">
+				<img src="temp/class-bussines-white.svg" alt="icon" class="title-icon">
+				<span class="text">Business class</span>
+			</div>
+			<button type="button" class="close-popup hidden-ms" data-close="#classDetail2">
+				<i class="icon icon-close"></i>
+			</button>
+		</div>
+		<div class="content relative">
+			<div class="row">
+				<div class="col-xs-12 col-sm-6 col-md-7">
+					<div class="row">
+						<div class="col-xs-12 col-ms-6">
+							<div class="airline-bag active-mobile" data-mobile-inviewport>
+								<div class="relative">
+									<img src="temp/bag.svg" alt="" class="adaptive">
+									<div class="width"><span class="unit"><b>55</b>cm</span></div>
+									<div class="height"><span class="unit"><b>40</b>cm</span></div>
+									<div class="depth"><span class="unit"><b>23</b>cm</span></div>
+								</div>
+								<div class="bag-title">Hand</div>
+								<div class="value">
+									1 place <b>8kg</b>
+								</div>
+							</div>
+							<hr class="ms-hide">
+						</div>
+						<div class="col-xs-12 col-ms-6">
+							<div class="airline-bag" data-mobile-inviewport>
+								<div class="relative">
+									<img src="temp/bag2.svg" alt="" class="adaptive">
+									<div class="width"><span class="unit"><b>55</b>cm</span></div>
+									<div class="height"><span class="unit"><b>40</b>cm</span></div>
+									<div class="depth"><span class="unit"><b>23</b>cm</span></div>
+								</div>
+								<div class="bag-title">Luggage</div>
+								<div class="value">
+									1 place <b>23kg</b>
+								</div>
+							</div>
+						</div>
+						<div class="col-xs-12 hidden-xs" id="infoDesktop2">
+							<div class="spaced-info" data-desktop="#infoDesktop2" data-mobile="#infoMobile2">
+								<div class="marked-title small ms-offset-top">Details</div>
+								<ul class="clear simple-list part">
+									<li>
+										<span data-tooltip="Tooltip 1"><i class="icon icon-info danger"></i></span> &nbsp; Online
+									</li>
+									<li>
+										<span data-tooltip="Tooltip 2"><i class="icon icon-info danger"></i></span> &nbsp; App
+									</li>
+									<li>
+										<span data-tooltip="Tooltip 3"><i class="icon icon-info danger"></i></span> &nbsp; Airport
+									</li>
+									<li>
+										<span data-tooltip="Tooltip 4"><i class="icon icon-info danger"></i></span> &nbsp; 40m
+									</li>
+									<li>
+										<span data-tooltip="Tooltip 5"><i class="icon icon-info danger"></i></span> &nbsp; 40m
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-5 scrolled to-top">
+					<div class="marked-title">Extra baggage cost</div>
+					<div class="paragraph">
+						<b>Tariff Light</b> provides to buy <b>1 place</b> of baggage weighing up to <b>23kg</b> online on the airline's website. The price will be significantly lower than at the airport. 
+					</div>
+					<dl class="simple-dl">
+						<dt>15€</dt>
+						<dd>Flights in Germany</dd>
+					</dl>
+					<dl class="simple-dl">
+						<dt>25€</dt>
+						<dd>International flights</dd>
+					</dl>
+					<div class="paragraph">
+						The data collected by Lufthansa is generally used to fulfil the contract of carriage you have with us. It includes both passenger and baggage data. To ensure the onward transportation of your baggage with other airlines, as well as its timely processing at airports, we pass data on to the airlines and airports concerned. In addition, we support the German Customs authorities in the fulfilment of their legal duties by allowing limited access to selected data.
+					</div>
+					<div class="paragraph">
+						The data collected by Lufthansa is generally used to fulfil the contract of carriage you have with us. It includes both passenger and baggage data. To ensure the onward transportation of your baggage with other airlines, as well as its timely processing at airports, we pass data on to the airlines and airports concerned. In addition, we support the German Customs authorities in the fulfilment of their legal duties by allowing limited access to selected data.
+					</div>
+				</div>
+				<div class="col-xs-12 show-xs" id="infoMobile2"></div>
+			</div>
+		</div>
+	</div>
+</div>
+<div id="classDetail3" class="popup class-popup">
+	<button type="button" class="close-popup show-ms" data-close="#classDetail3">
+		<i class="icon icon-close"></i>
+	</button>
+	<div class="inner">
+		<div class="header">
+			<div class="title">
+				<img src="temp/class-first-white.svg" alt="icon" class="title-icon">
+				<span class="text">First class</span>
+			</div>
+			<button type="button" class="close-popup hidden-ms" data-close="#classDetail3">
+				<i class="icon icon-close"></i>
+			</button>
+		</div>
+		<div class="content relative">
+			<div class="row">
+				<div class="col-xs-12 col-sm-6 col-md-7">
+					<div class="row">
+						<div class="col-xs-12 col-ms-6">
+							<div class="airline-bag active-mobile" data-mobile-inviewport>
+								<div class="relative">
+									<img src="temp/bag.svg" alt="" class="adaptive">
+									<div class="width"><span class="unit"><b>55</b>cm</span></div>
+									<div class="height"><span class="unit"><b>40</b>cm</span></div>
+									<div class="depth"><span class="unit"><b>23</b>cm</span></div>
+								</div>
+								<div class="bag-title">Hand</div>
+								<div class="value">
+									1 place <b>8kg</b>
+								</div>
+							</div>
+							<hr class="ms-hide">
+						</div>
+						<div class="col-xs-12 col-ms-6">
+							<div class="airline-bag" data-mobile-inviewport>
+								<div class="relative">
+									<img src="temp/bag2.svg" alt="" class="adaptive">
+									<div class="width"><span class="unit"><b>55</b>cm</span></div>
+									<div class="height"><span class="unit"><b>40</b>cm</span></div>
+									<div class="depth"><span class="unit"><b>23</b>cm</span></div>
+								</div>
+								<div class="bag-title">Luggage</div>
+								<div class="value">
+									1 place <b>23kg</b>
+								</div>
+							</div>
+						</div>
+						<div class="col-xs-12 hidden-xs" id="infoDesktop3">
+							<div class="spaced-info" data-desktop="#infoDesktop3" data-mobile="#infoMobile3">
+								<div class="marked-title small ms-offset-top">Details</div>
+								<ul class="clear simple-list part">
+									<li>
+										<span data-tooltip="Tooltip 1"><i class="icon icon-info danger"></i></span> &nbsp; Online
+									</li>
+									<li>
+										<span data-tooltip="Tooltip 2"><i class="icon icon-info danger"></i></span> &nbsp; App
+									</li>
+									<li>
+										<span data-tooltip="Tooltip 3"><i class="icon icon-info danger"></i></span> &nbsp; Airport
+									</li>
+									<li>
+										<span data-tooltip="Tooltip 4"><i class="icon icon-info danger"></i></span> &nbsp; 40m
+									</li>
+									<li>
+										<span data-tooltip="Tooltip 5"><i class="icon icon-info danger"></i></span> &nbsp; 40m
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-5 scrolled to-top">
+					<div class="marked-title">Extra baggage cost</div>
+					<div class="paragraph">
+						<b>Tariff Light</b> provides to buy <b>1 place</b> of baggage weighing up to <b>23kg</b> online on the airline's website. The price will be significantly lower than at the airport. 
+					</div>
+					<dl class="simple-dl">
+						<dt>15€</dt>
+						<dd>Flights in Germany</dd>
+					</dl>
+					<dl class="simple-dl">
+						<dt>25€</dt>
+						<dd>International flights</dd>
+					</dl>
+					<div class="paragraph">
+						The data collected by Lufthansa is generally used to fulfil the contract of carriage you have with us. It includes both passenger and baggage data. To ensure the onward transportation of your baggage with other airlines, as well as its timely processing at airports, we pass data on to the airlines and airports concerned. In addition, we support the German Customs authorities in the fulfilment of their legal duties by allowing limited access to selected data.
+					</div>
+					<div class="paragraph">
+						The data collected by Lufthansa is generally used to fulfil the contract of carriage you have with us. It includes both passenger and baggage data. To ensure the onward transportation of your baggage with other airlines, as well as its timely processing at airports, we pass data on to the airlines and airports concerned. In addition, we support the German Customs authorities in the fulfilment of their legal duties by allowing limited access to selected data.
+					</div>
+				</div>
+				<div class="col-xs-12 show-xs" id="infoMobile3"></div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<script src="js/lib/jquery.min.js"></script>
+<script src="js/lib/vue.js"></script>
+<script src="js/lib/math.js"></script>
+<script src="js/lib/array.js"></script>
+<script src="js/lib/graph.js"></script>
+<script src="js/plugins/jquery.mousewheel.min.js"></script>
+<script src="js/plugins/perfect-scrollbar.jquery.min.js"></script>
+<script src="js/plugins/owl.carousel.min.js"></script>
+<script src="js/plugins/moment.js"></script>
+<script src="js/plugins/nouislider.min.js"></script>
+<script src="js/plugins/progress.js"></script>
+
+<script src="js/main.js"></script>
+<script src="js/validator.js"></script>
+
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900&amp;subset=greek" rel="stylesheet">
+
+<script src="js/init/checkbox-class.js"></script>
+<script src="js/init/validation.js"></script>
+<script src="js/init/hero-parallax.js"></script>
+
+<script src="js/init/copy-link.js"></script>
+
+<script src="js/init/scrollbar.js"></script>
+<script src="js/init/activate.js"></script>
+<script src="js/init/expander.js"></script>
+<script src="js/init/dropdown.js"></script>
+<!-- for mobile version -->
+<script src="js/init/text-animation.js"></script>
+<script src="js/init/validation.js"></script>
+<script src="js/init/vue.calendar-component.js"></script>
+<script src="js/app.js"></script>
+
+<script src="js/plugins/mapbox-gl.js"></script>
+<link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.48.0/mapbox-gl.css' rel='stylesheet' />
+<script src="js/lib/maps.utils.js"></script>
+<script src="js/init/city-map.js"></script>
+<script src="js/init/popup.js"></script>
+
+<script src="js/init/offers-canvas.js"></script>
+
+<script>
+		// $('.form-section form').on('custom.submit', function(event) {
+		// 	location.href = 'tickets.html';
+		// });
+	</script>
+
+</body>
+</html>
