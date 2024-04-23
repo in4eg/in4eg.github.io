@@ -140,7 +140,7 @@
 						<div class="paragraph justify spaced-top">
 							Оплата погодинна. Тривалість залежить від швидкості видачі страв, від додаткових фото з напоями чи динамічними сценами. В середньому 10 страв ~1,5-2год. Додаткові послуги за узгодженням та окремою оплатою. Ознайомитись з вартістю можна за <a href="pricing.html" class="link text-link">посиланнням</a>.
 						</div>
-						<button class="button button-primary spaced-top" data-call="#contactPopup">
+						<button class="button button-primary spaced-top" data-call="#orderPopup">
 							Залишити заявку
 							<span class="fade"></span>
 						</button>
@@ -345,32 +345,42 @@
 		<!-- / latest -->
 	</main>
 
-	<!-- contact form -->
-	<div id="contactPopup" class="popup">
+	<!-- order popup -->
+	<div id="orderPopup" class="popup">
 	<div class="inner">
 		<button type="button" class="close-popup button">&times;</button>
-		<!-- contact form -->
 		<section class="section large-spaced">
-	<div class="container">
-		<h2>Будьмо на зв'язку</h2>
-		<div class="text spaced-bottom spaced-top">
-			Якщо у вас виникли питання чи бажання залишити заявку на зйомку, скористайтесь швидкою формою, залишивши свою електронну пошту. Я відразу відповім, як тільки побачу!
-		</div>
-		<form action="" class="form">
-			<div class="row">
-				<div class="col-xs-12 col-ms-6 col-sm-7 col-md-8 col-lg-8 spaced-xs">
-					<input type="email" class="input" required placeholder="email@email.com">
+			<div class="container">
+				<h2>Залишити заявку на замовлення</h2>
+				<div class="text spaced-bottom spaced-top">
+					Будь ласка, заповніть форму на отримання консультації та оформлення заявки на фотозйомку. Я отримаю заявку на електронну пошту та зв'яжусь якомога швидше!
 				</div>
-				<div class="col-xs-12 col-ms-6 col-sm-5 col-md-4 col-lg-4">
-					<button class="button button-primary button-block" type="submit">
-						Відправити
-						<span class="fade"></span>
-					</button>
-				</div>
+				<form action="" class="form">
+					<div class="row">
+						<div class="col-xs-12 col-ms-6 spaced-xs">
+							<div class="input-cover">
+								<input type="text" class="input" required placeholder="Ім'я">
+							</div>
+							<div class="input-cover">
+								<input type="email" class="input" required placeholder="email@email.com">
+							</div>
+							<div class="input-cover">
+								<input type="text" class="input" required placeholder="viber/telegram">
+							</div>
+						</div>
+						<div class="col-xs-12 col-ms-6">
+							<div class="input-cover">
+								<textarea class="textarea" required placeholder="Повідомлення" maxlength="250"></textarea>
+							</div>
+							<button class="button button-primary button-block" type="submit">
+								Відправити
+								<span class="fade"></span>
+							</button>
+						</div>
+					</div>
+				</form>
 			</div>
-		</form>
-	</div>
-</section>
+		</section>
 	</div>
 </div>
 
