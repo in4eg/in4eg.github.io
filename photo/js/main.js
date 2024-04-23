@@ -175,7 +175,9 @@ $(document).ready(function(){
 				margin: data.margin ? data.margin : 0,
 				nav: !data.nav || data.nav == false ? false : true,
 				dots: !data.dots || data.dots == false ? false : true,
+				center: !data.center || data.center == false ? false : true,
 				autoplay: !data.autoplay || data.autoplay == false ? false : true,
+				smartSpeed: 1000,
 				responsive:{
 					0:{
 						items: responsiveArr.length ? responsiveArr[4] : 1
