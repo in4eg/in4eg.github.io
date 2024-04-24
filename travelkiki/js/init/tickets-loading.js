@@ -44,16 +44,16 @@ $(document).ready(function() {
 		var pointImageRed = '';
 
 		if(!useDarkTheme){
-			href = 'https://api.mapbox.com/styles/v1/m1sa/cjkntwiak1h8l2spjxmjajomg/static/'; //light map
+			href = 'https://api.mapbox.com/styles/v1/in4eg/clvdxr21d013701qu84j6bw1g.html?title=view&access_token=pk.eyJ1IjoiaW40ZWciLCJhIjoiY2x1d3N1YXhvMGMxMjJybW94d2tuamhsYSJ9.FZXR1OgP4OwrwXTCqHJhhg&zoomwheel=true&fresh=true#11/40.73/-74'; //light map
 			colors = ['EDA2C1', 'EDA2C1', '2E48E8'];
-			pointImageRed ='http%3A%2F%2Fdev.divisory.com%2F5%2Ftravel%2Fdist%2Fimg%2Fpoint-red.png';
+			pointImageRed ='http%3A%2F%2Fin4eg.github.io%2F5%2Ftravelkiki%2Fimg%2Fpoint-red.png';
 		} else {
-			href = 'https://api.mapbox.com/styles/v1/m1sa/cjpiabvcr0f8v2rozc8rm66kt/static/'; //dark map
+			href = 'https://api.mapbox.com/styles/in4eg/clvdxvn25012a01oc81v2hqh2/'; //dark map
 			colors = ['4F5458', '4F5458', 'ffffff'];
-			pointImageRed ='http%3A%2F%2Fdev.divisory.com%2F5%2Ftravel%2Fdist%2Fimg%2Fpoint-grey.png';
+			pointImageRed ='https://in4eg.github.io/travelkiki/img/point-grey.png';
 		}
 
-		var pointImage = "http%3A%2F%2Fdev.divisory.com%2F1%2Ftravel%2Fdist%2Fimg%2Fpoint.png",
+		var pointImage = "https://in4eg.github.io/travelkiki/img/point.png",
 		randomPath = variants[Math.floor(Math.random()*variants.length)],
 		cityA = randomPath.a,
 		cityB = randomPath.b,
@@ -112,7 +112,7 @@ $(document).ready(function() {
 				// width: width,
 				height: height
 			})
-			$(ticket).find('.map-wrapper img').attr('src', createImageString())
+			// $(ticket).find('.map-wrapper img').attr('src', createImageString())
 			setTimeout(function(){
 				fake.addClass('faded');
 				$(ticket).addClass('active');

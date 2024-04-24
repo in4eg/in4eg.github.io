@@ -13,7 +13,7 @@ Vue.component('ticket', {
 	methods: {
 		createImageString: function(){
 			var href = 'https://api.mapbox.com/styles/v1/inkor/cjm09fiiw784r2rppn2itgscr/static/',
-					pointImage = "http%3A%2F%2Fdev.divisory.com%2F1%2Ftravel%2Fdist%2Fimg%2Fpoint.png",
+					pointImage = "http%3A%2F%2Fin4eg.github.io%2F5%2Ftravelkiki%2Fimg%2Fpoint.png",
 					pointA = this.data.from.position,
 					pointB = this.data.to.position,
 					bounds = [

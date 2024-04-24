@@ -14123,7 +14123,9 @@ $(document).ready(function() {
 			// pointImageRed ='http%3A%2F%2Fdev.divisory.com%2F5%2Ftravel%2Fdist%2Fimg%2Fpoint-grey.png';
 		}
 
-		var pointImage = "http%3A%2F%2Fdev.divisory.com%2F1%2Ftravel%2Fdist%2Fimg%2Fpoint.png",
+
+
+		var pointImage = "https%3A%2F%2Fapi.otaje.com%2F1%2Fwp-content%2Fuploads%2F2024%2F04%2Fset-brittany6-1-768x1024.jpg",
 		randomPath = variants[Math.floor(Math.random()*variants.length)],
 		cityA = randomPath.a,
 		cityB = randomPath.b,
@@ -14582,14 +14584,14 @@ $(document).ready(function() {
 		if(!useDarkTheme){
 			href = 'https://api.mapbox.com/styles/v1/m1sa/cjkntwiak1h8l2spjxmjajomg/static/'; //light map
 			colors = ['EDA2C1', 'EDA2C1', '2E48E8'];
-			pointImageRed ='http%3A%2F%2Fdev.divisory.com%2F5%2Ftravel%2Fdist%2Fimg%2Fpoint-red.png';
+			pointImageRed ='var pointImage = "https%3A%2F%2Fapi.otaje.com%2F1%2Fwp-content%2Fuploads%2F2024%2F04%2Fset-brittany6-1-768x1024.jpg",';
 		} else {
 			href = 'https://api.mapbox.com/styles/v1/m1sa/cjpiabvcr0f8v2rozc8rm66kt/static/'; //dark map
 			colors = ['4F5458', '4F5458', 'ffffff'];
-			pointImageRed ='http%3A%2F%2Fdev.divisory.com%2F5%2Ftravel%2Fdist%2Fimg%2Fpoint-grey.png';
+			pointImageRed ='var pointImage = "https%3A%2F%2Fapi.otaje.com%2F1%2Fwp-content%2Fuploads%2F2024%2F04%2Fset-brittany6-1-768x1024.jpg",';
 		}
 
-		var pointImage = "http%3A%2F%2Fdev.divisory.com%2F1%2Ftravel%2Fdist%2Fimg%2Fpoint.png",
+		var pointImage = "https%3A%2F%2Fapi.otaje.com%2F1%2Fwp-content%2Fuploads%2F2024%2F04%2Fset-brittany6-1-768x1024.jpg",
 		randomPath = variants[Math.floor(Math.random()*variants.length)],
 		cityA = randomPath.a,
 		cityB = randomPath.b,
@@ -15301,7 +15303,7 @@ Vue.component('calendar', {
 	methods: {
 		createImageString: function(){
 			var href = 'https://api.mapbox.com/styles/v1/inkor/cjm09fiiw784r2rppn2itgscr/static/',
-					pointImage = "http%3A%2F%2Fdev.divisory.com%2F1%2Ftravel%2Fdist%2Fimg%2Fpoint.png",
+					pointImage = "https%3A%2F%2Fapi.otaje.com%2F1%2Fwp-content%2Fuploads%2F2024%2F04%2Fset-brittany6-1-768x1024.jpg",
 					pointA = this.data.from.position,
 					pointB = this.data.to.position,
 					bounds = [
