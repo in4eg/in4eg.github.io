@@ -1,0 +1,82 @@
+/*primary font*/
+$font: 'Gilroy', sans-serif;
+
+/* typography */
+$font-size: 14px;
+$button_icon_font-size: 18px;
+$button_font-size: 16px;
+
+$h1-font-size: 48px;
+$h2-font-size: 32px;
+$h3-font-size: 24px;
+$h4-font-size: 18px;
+$subheader1-font-size: 34px;
+$subheader2-font-size: 26px;
+$subheader3-font-size: 20px;
+$font-size-small: 10px;
+
+$border-width: 1px;
+$border-radius: 8px;
+
+$margin: 10px;
+$padding: 20px;
+$space-gap: 5px;
+
+/*icons*/
+$icon_height: 20px;
+
+/*colors theme1*/
+$color_primary: #0037fe;
+$color_primary_button: #d2ecff;
+$color_primary_button_hover: #d2f6ff;
+$color_primary_dark: #0033eb;
+$color_primary_button_shadow: #a3d0ee;
+
+$color_secondary: #fec41a;
+$color_secondary_hover: #ffd367;
+$color_secondary_dark: #fdc319;
+
+$color_secondary_button: #ffeab6;
+$color_secondary_button_hover: $color_secondary;
+$color_secondary_button_shadow: $color_secondary_hover;
+
+$color_white_clear: #ffffff;
+$color_white: #f8f8f8;
+
+$color_info: #00b898;
+$color_info_hover: #54ccb7;
+
+$color_danger: #ff5a5a;
+$color_danger_hover: #f42e2e;
+
+$text_color: #000000;
+
+$color_gray: #e1e1e1;
+$color_gray_hover: #a8a8a8;
+
+/*document*/
+$header_height: 80px;
+
+$squere_button_size: 41px;
+
+:root {
+	--font-size: #{$font-size};
+	--button_icon_font-size: #{$button_icon_font-size};
+	--button_font-size: #{$button_font-size};
+
+	--border-width: #{$border-width};
+	--border-radius: #{$border-radius};
+	--margin: #{$margin};
+	--padding: #{$padding};
+
+	--icon_height: #{$icon_height};
+
+	--header_height: #{$header_height};
+	--space-gap: #{$space-gap};
+
+	--squere_button_size: #{$squere_button_size};
+}
+
+@media (max-width: 1200px) {
+
+}

@@ -1,0 +1,85 @@
+@import '../variables.scss';
+
+h1, h2, h3, h4 {
+	font-weight: normal;
+	text-transform: uppercase;
+	font-weight: 100;
+	line-height: 1.42;
+	color: $color_primary;
+
+	&.spaced-bottom {
+		margin-bottom: calc(var(--section-padding)*4);
+	}
+
+	&.spaced-top {
+		margin-top: calc(var(--section-padding)*4);
+	}
+
+	&::selection {
+		color: $color_white;
+		background-color: $color_primary;
+	}
+}
+
+div, a, p {
+
+	&::selection {
+		color: $color_white;
+		background-color: $color_primary;
+	}
+}
+
+h1 {
+	font-size: var(--h1-font-size);
+}
+
+h2 {
+	font-size: var(--h2-font-size);
+}
+
+h3 {
+	font-size: var(--h3-font-size);
+}
+
+h4 {
+	font-size: var(--h4-font-size);
+}
+
+.paragraph {
+	font-size: var(--font-size);
+	line-height: 1.92;
+
+	&.justify {
+		text-align: justify;
+	}
+
+	&:last-child {
+		margin-bottom: 0;
+	}
+}
+
+.icon-with-text {
+	position: relative;
+	display: block;
+	height: var(--icon_height);
+
+	.text {
+		position: absolute;
+		color: $color_white_clear;
+		z-index: 1;
+		left: 50%; top: 50%;
+		transform: translate(-50%, -50%);
+		font-weight: bold;
+		font-size: 0.5em;
+	}
+
+	.icon {
+		top: -2px;
+		position: relative;
+	}
+}
+
+@media (max-width: 768px) {
+
+
+}

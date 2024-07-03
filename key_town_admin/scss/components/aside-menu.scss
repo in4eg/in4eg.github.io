@@ -1,0 +1,29 @@
+@import '../variables.scss';
+
+.aside-menu {
+	height: 100%;
+	display: block;
+
+	.header-top {
+		background-color: $color_primary_dark;
+		position: relative;
+		text-align: center;
+		padding: calc(var(--padding)/2) 0;
+
+		.button-menu {
+			position: absolute;
+			top: var(--space-gap);
+			right: calc(var(--space-gap)*2);
+			z-index: 1;
+		}
+
+		.logo-cover {
+			font-weight: 0;
+		}
+
+	}
+
+	.menu-content {
+		background-color: $color_primary;
+	}
+}

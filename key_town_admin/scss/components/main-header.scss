@@ -1,0 +1,22 @@
+@import '../variables.scss';
+
+:root {
+	
+}
+
+.main-header {
+
+	.header-top {
+		background-color: $color_white;
+		padding: calc(var(--padding)*0.7) 0;
+	}
+
+	nav {
+		padding: 0 calc(var(--space-gap)*2);
+		white-space: nowrap;
+	}
+}
+
+@media (max-width: 1400px) {
+
+}

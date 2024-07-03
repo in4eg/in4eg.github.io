@@ -1,0 +1,54 @@
+@import '../variables.scss';
+
+:root {
+	--menu-side_width: 57px;
+	--menu-side_width_active: 271px;
+}
+
+.page-outer {
+	min-height: 100%;
+	display: grid;
+	grid-template-columns: var(--menu-side_width) 1fr;
+
+	.side {
+		height: 100%;
+	}
+
+	.header-top {
+		height: var(--header_height);
+	}
+
+	.side-content {
+		height: calc(100% - var(--header_height));
+	}
+
+	.menu-side {
+		width: var(--menu-side_width);
+
+		.logo-cover {
+			display: none;
+		}
+	}
+
+	&.active {
+		grid-template-columns: var(--menu-side_width_active) 1fr;
+
+		.menu-side {
+			width: var(--menu-side_width_active);
+
+			.logo-cover {
+				display: block;
+			}
+		}
+
+		&.animated {
+
+			.menu-side {
+
+				.logo-cover {
+		
+				}
+			}
+		}
+	}
+}

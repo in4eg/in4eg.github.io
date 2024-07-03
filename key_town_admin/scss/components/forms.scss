@@ -1,0 +1,44 @@
+@import '../variables.scss';
+
+.form {
+
+	.input-cover {
+		margin-bottom: var(--margin);
+
+		.label {
+
+		}
+	}
+
+	.input {
+		display: block;
+		font-size: var(--font-size);
+		font-family: $font;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		vertical-align: middle;
+		white-space: nowrap;
+		position: relative;
+		z-index: 1;
+		border-radius: 0;
+		text-align: left;
+		transition: .2s;
+		text-decoration: none;
+		border: none;
+		width: 100%;
+		background-color: transparent;
+		border: 1px solid $color_primary;
+		padding: var(--margin) calc(var(--margin)*1.2);
+	}
+
+	.textarea {
+		@extend .input;
+		height: 120px;
+		resize: none;
+		white-space: normal;
+	}
+
+	&.spaced-top {
+		margin-top: calc(var(--margin)*2);
+	}
+}

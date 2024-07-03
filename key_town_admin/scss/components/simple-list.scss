@@ -1,0 +1,13 @@
+@import '../variables.scss';
+
+.simple-list {
+	font-size: 0;
+	margin: 0 calc(var(--space-gap)*2*-1);
+	padding: 0 calc(var(--space-gap)*2);
+
+	.item {
+		display: inline-block;
+		vertical-align: middle;
+		padding: 0 calc(var(--space-gap)*2);
+	}
+}
