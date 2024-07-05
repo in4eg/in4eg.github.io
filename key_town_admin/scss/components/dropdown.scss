@@ -13,6 +13,13 @@
 		padding: var(--space-gap) calc(var(--padding)*2) var(--space-gap) var(--space-gap);
 		cursor: pointer;
 
+		&.button-square {
+			padding: var(--space-gap);
+			text-align: center;
+			font-size: var(--button_icon_font-size);
+			line-height: 1.4;
+		}
+
 		&.button-transparent {
 			background-color: transparent;
 			box-shadow: none;
@@ -49,12 +56,14 @@
 		width: 100%;
 		min-width: 386px;
 		border-radius: var(--border-radius);
+		z-index: 10;
 
 		.head {
 			padding: var(--padding) calc(var(--padding)*2) var(--padding) calc(var(--padding)*0.75);
 			background-color: $color_secondary_button;
 			position: relative;
 			z-index: 2;
+			border-radius: var(--border-radius) var(--border-radius) 0 0;
 
 			&:before {
 				border-left: 7px solid transparent;
@@ -95,6 +104,11 @@
 		.bottom {
 			padding: var(--padding) calc(var(--padding)*0.75);
 			background-color: $color_white_clear;
+			border-radius: 0 0 var(--border-radius) var(--border-radius);
+
+			&.collapsed-top {
+				padding-top: 0;
+			}
 		}
 	}
 
@@ -113,6 +127,8 @@
 	}
 }
 
+
+
 .dropdown.static {
 
 	.dropdown-content {
@@ -121,16 +137,22 @@
 		padding: var(--padding);
 		width: 100%;
 		min-width: auto;
+		margin-top: 0;
 	}
 }
 
 
-.dropdown.static {
+.dropdown[data-origin="right"] {
 
 	.dropdown-content {
-		position: static;
-		box-shadow: none;
-		padding: var(--padding);
-		margin-top: 0;
+		right: auto; left: -30px;
+
+		.head {
+
+			&:before {
+				position: absolute;
+				right: auto; left: 52px;
+			}
+		}
 	}
 }

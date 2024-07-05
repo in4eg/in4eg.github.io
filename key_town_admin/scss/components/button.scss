@@ -50,7 +50,8 @@
 		background-color: $color_secondary_dark;
 		border-radius: 3px;
 		z-index: 2;
-		padding: var(--space-gap) calc(var(--space-gap)*0.6);
+		line-height: 1;
+		padding: calc(var(--space-gap)*0.6);
 		left: 100%; bottom: 100%;
 		transform: translate(-60%, 60%);
 	}

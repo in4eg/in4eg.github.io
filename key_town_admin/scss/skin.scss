@@ -87,6 +87,10 @@ img.adaptive {
 .color-white {
 	color: $color-white;
 }
+.color-gray {
+	color: $color_gray_hover;
+}
+
 
 .margin-top { margin-top: var(--margin); }
 .margin-bottom { margin-bottom: var(--margin); }

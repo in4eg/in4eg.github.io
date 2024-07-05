@@ -1,0 +1,20 @@
+@import '../variables.scss';
+
+.underlined-list {
+
+	> .item {
+		display: block;
+		border-bottom: 1px solid $color_gray;
+		margin-bottom: var(--padding);
+		padding-bottom: var(--padding);
+
+		&:last-child {
+			margin-bottom: 0;
+			border-bottom: 0;
+		}
+
+		.user-data {
+			margin-bottom: 0;
+		}
+	}
+}

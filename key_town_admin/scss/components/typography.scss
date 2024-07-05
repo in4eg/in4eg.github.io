@@ -97,6 +97,20 @@ h4 {
 	.text {
 		font-size: var(--font-size);
 	}
+
+	&.color-info {
+
+		.icon {
+			color: $color_info;
+		}
+	}
+
+	&.color-gray {
+
+		.icon {
+			color: $color_gray_hover;
+		}
+	}
 }
 
 .link-primary {

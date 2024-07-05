@@ -26,6 +26,19 @@
 		grid-gap: calc(var(--margin)*1.5);
 		margin-bottom: calc(var(--margin)*1.5);
 	}
+
+	.underlined-list.dropdown-list {
+		max-height: 300px;
+		overflow: auto;
+		padding-right: var(--padding);
+		margin-right: calc(var(--padding)*-1);
+		padding-top: var(--padding);
+	}
+
+	.details.dropdown-spaced-top {
+		padding-top: var(--padding);
+		border-top: 1px solid $color_gray;
+	}
 }
 
 @media (max-width: 1480px) {
