@@ -142,6 +142,9 @@
 }
 .icon-bag:before {
 	content: "\e926";
+	transform: scale(0.8);
+	position: relative;
+	display: block;
 }
 .icon-user:before {
 	content: "\e927";
@@ -187,4 +190,13 @@
 }
 .icon-users:before {
 	content: "\e935";
+}
+.icon-high-house:before {
+	content: "\e938";
+}
+.icon-top-round:before {
+	content: "\e936";
+}
+.icon-logout:before {
+	content: "\e937";
 }

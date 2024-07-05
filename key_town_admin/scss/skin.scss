@@ -46,7 +46,6 @@ html, body {
 	-moz-text-size-adjust: none;
 	-webkit-text-size-adjust: none;
 	-ms-text-size-adjust: none;
-	overflow: hidden;
 
 	&.overlayed {
 		overflow: hidden !important;
@@ -125,11 +124,6 @@ img.adaptive {
 			height: auto; width: 100%;
 			transform: translateY(-50%);
 		}
-	}
-
-	&.user-image {
-		border-radius: var(--border-radius);
-		padding-top: 0;
 	}
 }
 

@@ -79,7 +79,35 @@ h4 {
 	}
 }
 
-@media (max-width: 768px) {
+.title-with-icon {
+	position: relative;
+	padding-left: var(--padding);
+
+	.icon {
+		color: $color_primary;
+		font-size: var(--font-size);
+		position: absolute;
+		left: 0; top: 0.15em;
+	}
+
+	.bold {
+		font-weight: bold;
+	}
+
+	.text {
+		font-size: var(--font-size);
+	}
+}
+
+.link-primary {
+	color: $color_primary;
+
+	&:hover {
+		color: $color_secondary;
+	}
+}
+
+@media (max-width: 1480px) {
 
 
 }

@@ -1,0 +1,27 @@
+@import '../variables.scss';
+
+.bullet-list {
+
+	.item {
+		display: block;
+		padding: calc(var(--padding)/3) calc(var(--padding)/2) calc(var(--padding)/3) var(--padding);
+		position: relative;
+		transition: .2s;
+
+		&:before {
+			content: '';
+			position: absolute;
+			top: calc(var(--padding)* 0.7); left: 0;
+			height: 5px; width: 5px;
+			background-color: #76adff;
+		}
+
+		&:hover,
+		&.active {
+
+			&:before {
+				background-color: #ffd24f;
+			}
+		}
+	}
+}

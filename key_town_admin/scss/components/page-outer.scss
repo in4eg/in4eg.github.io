@@ -1,12 +1,13 @@
 @import '../variables.scss';
 
 :root {
-	--menu-side_width: 57px;
+	--menu-side_width: 53px;
 	--menu-side_width_active: 271px;
 }
 
 .page-outer {
-	min-height: 100%;
+	height: 100vh;
+	overflow: hidden;
 	display: grid;
 	grid-template-columns: var(--menu-side_width) 1fr;
 
@@ -19,7 +20,13 @@
 	}
 
 	.side-content {
-		height: calc(100% - var(--header_height));
+		height: calc(100vh - var(--header_height));
+		overflow: auto;
+
+		.page-main {
+			min-height: calc(100% - var(--footer-height));
+			padding: var(--padding);
+		}
 	}
 
 	.menu-side {
@@ -50,5 +57,12 @@
 				}
 			}
 		}
+	}
+}
+
+@media (max-width: 1480px) {
+
+	:root {
+		--menu-side_width_active: 180px;
 	}
 }

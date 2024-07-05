@@ -5,44 +5,44 @@
 				<nav>
 					<ul class="clear simple-list">
 						<li class="item">
-							<button class="button button-primary button-square">
+							<button class="button button-primary button-square" data-tooltip="Рієлтори онлайн">
 								<i class="icon icon-users"></i>
 								<!-- if we have notifications -->
 								<span class="count">21</span>
 							</button>
 						</li>
 						<li class="item">
-							<button class="button button-primary button-square">
+							<button class="button button-primary button-square" data-tooltip="Додати клієнта">
 								<i class="icon icon-user-add"></i>
 							</button>
 						</li>
 						<li class="item">
-							<button class="button button-primary button-square">
+							<button class="button button-primary button-square" data-tooltip="Збережені фільтри">
 								<i class="icon icon-pin"></i>
 							</button>
 						</li>
 						<li class="item">
-							<button class="button button-primary button-square">
+							<button class="button button-primary button-square" data-tooltip="Фільтри">
 								<i class="icon icon-filter"></i>
 							</button>
 						</li>
 						<li class="item">
-							<button class="button button-primary button-square">
+							<button class="button button-primary button-square" data-tooltip="Знайти об'єкт">
 								<i class="icon icon-lamp"></i>
 							</button>
 						</li>
 						<li class="item">
-							<button class="button button-primary button-square">
+							<button class="button button-primary button-square" data-tooltip="Перевірка № телефону">
 								<i class="icon icon-phone-call"></i>
 							</button>
 						</li>
 						<li class="item">
-							<button class="button button-primary button-square">
+							<button class="button button-primary button-square" data-tooltip="Створити нагадування">
 								<i class="icon icon-house-user"></i>
 							</button>
 						</li>
 						<li class="item">
-							<button class="button button-primary button-square">
+							<button class="button button-primary button-square" data-tooltip="Створити об'єкт Власника">
 								<span class="icon-with-text">
 									<i class="icon icon-house-simple"></i>
 									<span class="text">+</span>
@@ -50,17 +50,17 @@
 							</button>
 						</li>
 						<li class="item">
-							<button class="button button-primary button-square">
+							<button class="button button-primary button-square" data-tooltip="Створити об'єкт Клієнта">
 								<i class="icon icon-bag"></i>
 							</button>
 						</li>
 						<li class="item">
-							<button class="button button-primary button-square">
+							<button class="button button-primary button-square" data-tooltip="Актуальні об'єкти">
 								<i class="icon icon-house-simple"></i>
 							</button>
 						</li>
 						<li class="item">
-							<button class="button button-primary button-square">
+							<button class="button button-primary button-square" data-tooltip="Нові, Оренда -> Власники">
 								<span class="icon-with-text">
 									<i class="icon icon-house-simple"></i>
 									<span class="text">new</span>
@@ -68,7 +68,7 @@
 							</button>
 						</li>
 						<li class="item">
-							<button class="button button-primary button-square">
+							<button class="button button-primary button-square" data-tooltip="Угоди">
 								<i class="icon icon-key"></i>
 							</button>
 						</li>
@@ -79,23 +79,24 @@
 				<nav>
 					<ul class="clear simple-list">
 						<li class="item">
-							<button class="button button-primary button-square">
+							<button class="button button-primary button-square" data-tooltip="Угоди">
 								<i class="icon icon-file-add"></i>
 							</button>
 						</li>
 						<li class="item">
-							<button class="button button-primary button-square">
+							<button class="button button-primary button-square" data-tooltip="Угоди">
 								<i class="icon icon-file"></i>
 							</button>
 						</li>
 						<li class="item">
+							<!-- user info -->
 							<div class="dropdown" data-dropdown>
-								<div class="anchor button button-primary">
+								<div class="anchor button button-primary not-active">
 									<div class="image-cover user-image">
-										<!-- if we have no user image img/user.svg for default -->
+										<!-- if we have no user image tag <img> is unnecessary-->
 										<img src="img/user.jpg" draggable="false">
 									</div>
-									<div class="text">Валерія Іванівна</div>
+									<div class="text">Василь Іванович</div>
 									<i class="icon anchor-icon icon-triangle-down"></i>
 								</div>
 								<div class="dropdown-content">
@@ -109,12 +110,64 @@
 										</button>
 									</div>
 									<div class="bottom">
+										<div class="user-data">
+											<div class="image-cover user-image">
+												<!-- if we have no user image tag <img> is unnecessary-->
+												<img src="img/user.jpg" draggable="false">
+											</div>
+											<div class="info">
+												<ul class="clear block-list">
+													<li class="item">
+														<div class="title-with-icon">
+															<i class="icon icon-user"></i>
+															<span class="bold">ПІБ:</span>
+															<span class="text">Ткаченко Василь Іванович</span>
+														</div>
+													</li>
+													<li class="item">
+														<div class="title-with-icon">
+															<i class="icon icon-high-house"></i>
+															<span class="bold">Компанія:</span>
+															<span class="text">Home City</span>
+														</div>
+													</li>
+													<li class="item">
+														<div class="title-with-icon">
+															<i class="icon icon-logout"></i>
+															<span class="bold">Логін:</span>
+															<span class="text">Василь Іванович</span>
+														</div>
+													</li>
+													<li class="item">
+														<div class="title-with-icon">
+															<i class="icon icon-phone-call"></i>
+															<span class="bold">Телефон:</span>
+															<span class="text">0661231212</span>
+														</div>
+													</li>
+													<li class="item">
+														<div class="title-with-icon">
+															<i class="icon icon-top-round"></i>
+															<span class="bold">Залишилось підняття у топ:</span>
+															<span class="text">99999</span>
+														</div>
+													</li>
+													<!-- edit profile link -->
+													<li class="item">
+														<div class="title-with-icon">
+															<a href="#" class="link-primary link-simple">Редагувати профіль</a>
+														</div>
+													</li>
+												</ul>
+											</div>
+										</div>
 										<button class="button button-primary button-block">
 											<span class="text">Вихід</span>
 										</button>
 									</div>
 								</div>
 							</div>
+							<!-- / user info -->
 						</li>
 					</ul>
 				</nav>

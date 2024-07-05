@@ -3,6 +3,7 @@
 .dropdown {
 	position: relative;
 	text-align: left;
+	font-size: var(--font-size);
 
 	.anchor {
 		background-color: $color_primary_button;
@@ -11,6 +12,11 @@
 		font-size: var(--button_font-size);
 		padding: var(--space-gap) calc(var(--padding)*2) var(--space-gap) var(--space-gap);
 		cursor: pointer;
+
+		&.button-transparent {
+			background-color: transparent;
+			box-shadow: none;
+		}
 
 		.user-image {
 			height: var(--squere_button_size); width: var(--squere_button_size);
@@ -48,6 +54,18 @@
 			padding: var(--padding) calc(var(--padding)*2) var(--padding) calc(var(--padding)*0.75);
 			background-color: $color_secondary_button;
 			position: relative;
+			z-index: 2;
+
+			&:before {
+				border-left: 7px solid transparent;
+				border-right: 7px solid transparent;
+				border-bottom: 10px solid $color_secondary_button;
+				top: -9px;
+				content: '';
+				right: 20%;
+				margin-left: -10px;
+				position: absolute;
+			}
 
 			.text {
 				color: $text_color;
@@ -92,5 +110,27 @@
 		.dropdown-content {
 			display: block;
 		}
+	}
+}
+
+.dropdown.static {
+
+	.dropdown-content {
+		position: static;
+		box-shadow: none;
+		padding: var(--padding);
+		width: 100%;
+		min-width: auto;
+	}
+}
+
+
+.dropdown.static {
+
+	.dropdown-content {
+		position: static;
+		box-shadow: none;
+		padding: var(--padding);
+		margin-top: 0;
 	}
 }

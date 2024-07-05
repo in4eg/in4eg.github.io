@@ -1,0 +1,9 @@
+@import '../variables.scss';
+
+.block-list {
+
+	> .item {
+		display: block;
+		margin-bottom: var(--space-gap);
+	}
+}

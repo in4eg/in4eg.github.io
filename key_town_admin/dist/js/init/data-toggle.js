@@ -1,12 +1,12 @@
 $(document).ready(function() {
 	$('[data-toggle]').each(function(i, button) {
 		$(button).click(function(e) {
-			if ($(this).hasClass('open')) {
-				$(this).removeClass('open');
-				$($(this).data('toggle')).removeClass('open animated');
+			if ($(this).hasClass('active')) {
+				$(this).removeClass('active');
+				$($(this).data('toggle')).removeClass('active animated');
 			} else {
-				$(this).addClass('open');
-				$($(this).data('toggle')).addClass('open');
+				$(this).addClass('active');
+				$($(this).data('toggle')).addClass('active');
 				setTimeout(function(){
 					$($(this).data('toggle')).addClass('animated');
 				}.bind(this), 200);

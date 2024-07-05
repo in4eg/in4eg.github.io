@@ -1,0 +1,18 @@
+@import '../variables.scss';
+
+
+:root {
+	--user-image_size: 78px;
+}
+
+.image-cover.user-image {
+	height: var(--user-image_size);
+	width: var(--user-image_size);
+	padding: 0;
+	background-color: $color_primary_button;
+	border-radius: var(--border-radius);
+	background-image: url('../img/user.svg');
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 50%;
+}

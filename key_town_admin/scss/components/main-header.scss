@@ -14,9 +14,27 @@
 	nav {
 		padding: 0 calc(var(--space-gap)*2);
 		white-space: nowrap;
+
+		.simple-list {
+			white-space: normal;
+		}
+	}
+
+	.user-data {
+		display: grid;
+		grid-template-columns: var(--user-image_size) calc(100% - var(--user-image_size) - var(--margin)*1.5);
+		grid-gap: calc(var(--margin)*1.5);
+		margin-bottom: calc(var(--margin)*1.5);
 	}
 }
 
-@media (max-width: 1400px) {
+@media (max-width: 1480px) {
 
+	.main-header {
+
+		nav {
+			padding: 0 calc(var(--space-gap)*1.1);
+			white-space: nowrap;
+		}
+	}
 }
