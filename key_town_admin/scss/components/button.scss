@@ -19,8 +19,16 @@
 	cursor: pointer;
 	background-color: transparent;
 	border: 1px solid transparent;
-	border-radius: var(--border-radius);
-	padding: calc(var(--space-gap)*2 + 3px) var(--space-gap) calc(var(--space-gap)*2);
+	border-radius: calc(var(--border-radius)/2);
+	padding: calc(var(--space-gap)*1.6 + 3px) calc(var(--padding)*2) calc(var(--space-gap)*1.6);
+
+	&.fixed-width {
+		width: 249px;
+	}
+
+	&:active {
+		box-shadow: none;
+	}
 
 	.fader-cover {
 		overflow: hidden;
@@ -81,6 +89,22 @@
 
 	&:hover,
 	&.active {
+		background-color: $color_primary_button_hover;
+	}
+
+	&:active {
+		box-shadow: none;
+	}
+}
+
+.button.nav-button {
+	border-radius: var(--border-radius);
+	background-color: $color_primary_button;
+	color: $color_primary;
+	box-shadow: 0px 2px 0px $color_primary_button_shadow;
+
+	&:hover,
+	&.active {
 		background-color: $color_secondary_button;
 		color: $color_secondary;
 		box-shadow: 0px 2px 0px $color_secondary_button_shadow;
@@ -97,6 +121,40 @@
 
 	&:hover {
 		background-color: $color_secondary_button_hover;
+	}
+
+	&:active {
+		box-shadow: none;
+	}
+}
+
+.button.button-info {
+	background-color: $color_info;
+	color: $color_white;
+	box-shadow: 0px 2px 0px $color_info_dark;
+	font-size: var(--button_icon_font-size);
+
+	&:hover {
+		background-color: $color_info_hover;
+	}
+
+	&:active {
+		box-shadow: none;
+	}
+}
+
+.button.button-danger {
+	background-color: $color_danger;
+	color: $color_white;
+	box-shadow: 0px 2px 0px $color_danger_dark;
+	font-size: var(--button_icon_font-size);
+
+	&:hover {
+		background-color: $color_danger_hover;
+	}
+
+	&:active {
+		box-shadow: none;
 	}
 }
 

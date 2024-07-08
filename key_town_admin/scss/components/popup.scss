@@ -43,12 +43,12 @@
 		width: 100%;
 		vertical-align: middle;
 		padding: 0;
-		max-width: 1000px;
+		max-width: 600px;
 		background: transparent;
 		text-align: left;
 		opacity: 0;
 		background-color: $color_white_clear;
-		font-size: 13px;
+		font-size: var(--font-size);
 		white-space: normal;
 		position: relative;
 		transition: .3s;
@@ -95,21 +95,74 @@
 	}
 }
 
-/*custom*/
+.popup.middle-popup {
 
+	.inner {
+		max-width: 1400px;
+	}
+}
+
+/*custom*/
 .popup {
 
 	.inner {
-		padding: 0 50px;
+		border-radius: var(--border-radius);
+
+		.head {
+			padding: var(--padding) calc(var(--padding)*2) var(--padding) calc(var(--padding)*0.75);
+			background-color: $color_secondary_button;
+			position: relative;
+			z-index: 2;
+			border-radius: var(--border-radius) var(--border-radius) 0 0;
+
+			.modal-title {
+				color: $text_color;
+				font-size: var(--button_font-size);
+				font-weight: bold;
+
+				.icon {
+					color: $color_primary;
+					margin-right: var(--margin);
+					vertical-align: baseline;
+				}
+
+				.icon-with-text {
+					display: inline-block;
+					width: var(--button_font-size);
+					height: var(--button_font-size);
+					vertical-align: middle;
+					margin-right: var(--space-gap);
+				}
+			}
+
+			.close-popup {
+				color: $color_primary;
+				position: absolute;
+				top: 0; right: 0;
+				height: 100%;
+				width: var(--squere_button_size);
+
+				&:hover {
+					color: $color_danger;
+				}
+			}
+		}
+
+		.content {
+			padding: var(--padding) calc(var(--padding)*0.75);
+			background-color: $color_white_clear;
+			border-radius: 0 0 var(--border-radius) var(--border-radius);
+		}
 	}
 }
+
 
 @media (max-width: 768px) {
 
 	.popup {
 
 		.inner {
-			padding: 0 20px;
+
 		}
 	}
 }

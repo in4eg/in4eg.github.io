@@ -6,7 +6,7 @@
 					<ul class="clear simple-list">
 						<li class="item">
 							<div class="dropdown" data-dropdown data-origin="right">
-								<div class="anchor button button-primary not-active button-square" data-tooltip="Рієлтори онлайн">
+								<div class="anchor button not-active button-square nav-button" data-tooltip="Рієлтори онлайн">
 									<i class="icon icon-users"></i>
 									<!-- if we have notifications -->
 									<span class="count">21</span>
@@ -202,37 +202,32 @@
 							</div>
 						</li>
 						<li class="item">
-							<button class="button button-primary button-square" data-tooltip="Додати клієнта">
+							<button class="button button-square nav-button" data-tooltip="Додати кліента/покупця" data-call="#addClientModal">
 								<i class="icon icon-user-add"></i>
 							</button>
 						</li>
 						<li class="item">
-							<button class="button button-primary button-square" data-tooltip="Збережені фільтри">
+							<button class="button button-square nav-button" data-tooltip="Збережені фільтри">
 								<i class="icon icon-pin"></i>
 							</button>
 						</li>
 						<li class="item">
-							<button class="button button-primary button-square" data-tooltip="Фільтри">
+							<button class="button button-square nav-button" data-tooltip="Фільтри">
 								<i class="icon icon-filter"></i>
 							</button>
 						</li>
 						<li class="item">
-							<button class="button button-primary button-square" data-tooltip="Знайти об'єкт">
+							<button class="button button-square nav-button" data-tooltip="Перевірка № ID" data-call="#checkIdModal">
 								<i class="icon icon-lamp"></i>
 							</button>
 						</li>
 						<li class="item">
-							<button class="button button-primary button-square" data-tooltip="Перевірка № телефону">
+							<button class="button button-square nav-button" data-tooltip="Перевірка № телефону" data-call="#checkTelModal">
 								<i class="icon icon-phone-call"></i>
 							</button>
 						</li>
 						<li class="item">
-							<button class="button button-primary button-square" data-tooltip="Створити нагадування">
-								<i class="icon icon-house-user"></i>
-							</button>
-						</li>
-						<li class="item">
-							<button class="button button-primary button-square" data-tooltip="Створити об'єкт Власника">
+							<button class="button button-square nav-button" data-tooltip="Додати новий об'єкт" data-call="#addObjectModal">
 								<span class="icon-with-text">
 									<i class="icon icon-house-simple"></i>
 									<span class="text">+</span>
@@ -240,17 +235,17 @@
 							</button>
 						</li>
 						<li class="item">
-							<button class="button button-primary button-square" data-tooltip="Створити об'єкт Клієнта">
-								<i class="icon icon-bag"></i>
+							<button class="button button-square nav-button">
+								<i class="icon icon-house-user"></i>
 							</button>
 						</li>
 						<li class="item">
-							<button class="button button-primary button-square" data-tooltip="Актуальні об'єкти">
+							<button class="button button-square nav-button" data-tooltip="Актуальні об'єкти">
 								<i class="icon icon-house-simple"></i>
 							</button>
 						</li>
 						<li class="item">
-							<button class="button button-primary button-square" data-tooltip="Нові, Оренда -> Власники">
+							<button class="button button-square nav-button" data-tooltip="Нові, Оренда -> Власники">
 								<span class="icon-with-text">
 									<i class="icon icon-house-simple"></i>
 									<span class="text">new</span>
@@ -258,7 +253,7 @@
 							</button>
 						</li>
 						<li class="item">
-							<button class="button button-primary button-square" data-tooltip="Угоди">
+							<button class="button button-square nav-button" data-tooltip="Угоди">
 								<i class="icon icon-key"></i>
 							</button>
 						</li>
@@ -269,19 +264,19 @@
 				<nav>
 					<ul class="clear simple-list">
 						<li class="item">
-							<button class="button button-primary button-square" data-tooltip="Угоди">
+							<button class="button button-square nav-button" data-tooltip="Створити нагадування" data-call="#createRemindModal">
 								<i class="icon icon-file-add"></i>
 							</button>
 						</li>
 						<li class="item">
-							<button class="button button-primary button-square" data-tooltip="Угоди">
+							<button class="button button-square nav-button" data-tooltip="Переглянути нагадування">
 								<i class="icon icon-file"></i>
 							</button>
 						</li>
 						<li class="item">
 							<!-- user info -->
 							<div class="dropdown" data-dropdown>
-								<div class="anchor button button-primary not-active">
+								<div class="anchor button not-active nav-button">
 									<div class="image-cover user-image">
 										<!-- if we have no user image tag <img> is unnecessary-->
 										<img src="img/user.jpg" draggable="false">

@@ -4,6 +4,8 @@ $font: 'Gilroy', sans-serif;
 /* typography */
 $font-size: 14px;
 $font-size_small: 12px;
+$font-size_large: 16px;
+
 $button_icon_font-size: 18px;
 $button_font-size: 16px;
 
@@ -48,9 +50,11 @@ $color_white: #f7f7f7;
 
 $color_info: #00b898;
 $color_info_hover: #54ccb7;
+$color_info_dark: #00876f;
 
 $color_danger: #ff5a5a;
 $color_danger_hover: #f42e2e;
+$color_danger_dark: #c60202;
 
 $text_color: #000000;
 
@@ -61,11 +65,13 @@ $color_gray_hover: #989898;
 $header_height: 80px;
 $footer-height: 122px;
 
-$squere_button_size: 41px;
+$squere_button_size: 42px;
 
 :root {
 	--font-size: #{$font-size};
 	--font-size_small: #{$font-size_small};
+	--font-size_large: #{$font-size_large};
+
 	--button_icon_font-size: #{$button_icon_font-size};
 	--button_font-size: #{$button_font-size};
 

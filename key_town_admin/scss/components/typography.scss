@@ -2,7 +2,6 @@
 
 h1, h2, h3, h4 {
 	font-weight: normal;
-	text-transform: uppercase;
 	font-weight: 100;
 	line-height: 1.42;
 	color: $color_primary;
@@ -71,6 +70,10 @@ h4 {
 		transform: translate(-50%, -50%);
 		font-weight: bold;
 		font-size: 0.5em;
+
+		&.color-info {
+			color: $color_info;
+		}
 	}
 
 	.icon {

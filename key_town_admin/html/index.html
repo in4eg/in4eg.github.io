@@ -3,7 +3,7 @@
 <head>
 
 	<meta charset="UTF-8">
-	<title>Key Town :: Admin</title>
+	<title>Key Town :: Main</title>
 
 	<link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
 	<link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
@@ -44,16 +44,25 @@
 		</div>
 	</div>
 
-	
-
-	<!-- order popup -->
-	@@include('./includes/order-popup.html')
-
-
-
+	<!-- MODALS -->
+	<!-- check id -->
+	@@include('./includes/modal-check-id.html')
+	<!-- / check id -->
+	<!-- check tel number -->
+	@@include('./includes/modal-check-tel.html')
+	<!-- / check tel number -->
+	<!-- create a reminding -->
+	@@include('./includes/modal-create-remind.html')
+	<!-- / create a reminding -->
+	<!-- add new client -->
+	@@include('./includes/modal-add-client.html')
+	<!-- / add new client -->
+	<!-- add new client -->
+	@@include('./includes/modal-add-object.html')
+	<!-- / add new object -->
 
 	<script src="js/lib/jquery.min.js"></script>
+	<script src="js/plugins/jquery.selecter.js"></script>
 	<script src="js/main.js"></script>
-	<!-- <script src="js/bundle.min.js"></script> -->
 </body>
 </html>

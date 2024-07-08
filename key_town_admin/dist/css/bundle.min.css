@@ -1,6 +1,7 @@
 :root {
   --font-size: 14px;
   --font-size_small: 10px;
+  --font-size_large: 16px;
   --button_icon_font-size: 18px;
   --button_font-size: 16px;
   --border-width: 1px;
@@ -11,7 +12,7 @@
   --header_height: 80px;
   --footer-height: 122px;
   --space-gap: 5px;
-  --squere_button_size: 41px
+  --squere_button_size: 42px
 }
 @media (max-width:1480px) {
   :root {
@@ -554,6 +555,7 @@ img.adaptive {
 :root {
   --font-size: 14px;
   --font-size_small: 10px;
+  --font-size_large: 16px;
   --button_icon_font-size: 18px;
   --button_font-size: 16px;
   --border-width: 1px;
@@ -564,7 +566,7 @@ img.adaptive {
   --header_height: 80px;
   --footer-height: 122px;
   --space-gap: 5px;
-  --squere_button_size: 41px
+  --squere_button_size: 42px
 }
 @media (max-width:1480px) {
   :root {
@@ -575,6 +577,7 @@ img.adaptive {
 :root {
   --font-size: 14px;
   --font-size_small: 10px;
+  --font-size_large: 16px;
   --button_icon_font-size: 18px;
   --button_font-size: 16px;
   --border-width: 1px;
@@ -585,7 +588,7 @@ img.adaptive {
   --header_height: 80px;
   --footer-height: 122px;
   --space-gap: 5px;
-  --squere_button_size: 41px
+  --squere_button_size: 42px
 }
 @media (max-width:1480px) {
   :root {
@@ -764,6 +767,7 @@ img.adaptive {
 :root {
   --font-size: 14px;
   --font-size_small: 10px;
+  --font-size_large: 16px;
   --button_icon_font-size: 18px;
   --button_font-size: 16px;
   --border-width: 1px;
@@ -774,7 +778,7 @@ img.adaptive {
   --header_height: 80px;
   --footer-height: 122px;
   --space-gap: 5px;
-  --squere_button_size: 41px
+  --squere_button_size: 42px
 }
 @media (max-width:1480px) {
   :root {
@@ -789,6 +793,7 @@ img.adaptive {
 :root {
   --font-size: 14px;
   --font-size_small: 10px;
+  --font-size_large: 16px;
   --button_icon_font-size: 18px;
   --button_font-size: 16px;
   --border-width: 1px;
@@ -799,7 +804,7 @@ img.adaptive {
   --header_height: 80px;
   --footer-height: 122px;
   --space-gap: 5px;
-  --squere_button_size: 41px
+  --squere_button_size: 42px
 }
 @media (max-width:1480px) {
   :root {
@@ -830,6 +835,7 @@ img.adaptive {
 :root {
   --font-size: 14px;
   --font-size_small: 10px;
+  --font-size_large: 16px;
   --button_icon_font-size: 18px;
   --button_font-size: 16px;
   --border-width: 1px;
@@ -840,7 +846,7 @@ img.adaptive {
   --header_height: 80px;
   --footer-height: 122px;
   --space-gap: 5px;
-  --squere_button_size: 41px
+  --squere_button_size: 42px
 }
 @media (max-width:1480px) {
   :root {
@@ -868,8 +874,15 @@ img.adaptive {
   cursor: pointer;
   background-color: transparent;
   border: 1px solid transparent;
-  border-radius: var(--border-radius);
-  padding: calc(var(--space-gap) * 2 + 3px) var(--space-gap) calc(var(--space-gap) * 2)
+  border-radius: calc(var(--border-radius)/ 2);
+  padding: calc(var(--space-gap) * 1.6 + 3px) calc(var(--padding) * 2) calc(var(--space-gap) * 1.6)
+}
+.button.fixed-width {
+  width: 249px
+}
+.button:active {
+  -webkit-box-shadow: none;
+  box-shadow: none
 }
 .button .fader-cover {
   overflow: hidden
@@ -947,12 +960,27 @@ img.adaptive {
 }
 .button.button-primary.active,
 .button.button-primary:hover {
+  background-color: #d2f6ff
+}
+.button.button-primary:active {
+  -webkit-box-shadow: none;
+  box-shadow: none
+}
+.button.nav-button {
+  border-radius: var(--border-radius);
+  background-color: #d2ecff;
+  color: #0037fe;
+  -webkit-box-shadow: 0 2px 0 #a3d0ee;
+  box-shadow: 0 2px 0 #a3d0ee
+}
+.button.nav-button.active,
+.button.nav-button:hover {
   background-color: #ffeab6;
   color: #fec41a;
   -webkit-box-shadow: 0 2px 0 #ffd367;
   box-shadow: 0 2px 0 #ffd367
 }
-.button.button-primary:active {
+.button.nav-button:active {
   -webkit-box-shadow: none;
   box-shadow: none
 }
@@ -962,6 +990,38 @@ img.adaptive {
 }
 .button.button-secondary:hover {
   background-color: #fec41a
+}
+.button.button-secondary:active {
+  -webkit-box-shadow: none;
+  box-shadow: none
+}
+.button.button-info {
+  background-color: #00b898;
+  color: #f7f7f7;
+  -webkit-box-shadow: 0 2px 0 #00876f;
+  box-shadow: 0 2px 0 #00876f;
+  font-size: var(--button_icon_font-size)
+}
+.button.button-info:hover {
+  background-color: #54ccb7
+}
+.button.button-info:active {
+  -webkit-box-shadow: none;
+  box-shadow: none
+}
+.button.button-danger {
+  background-color: #ff5a5a;
+  color: #f7f7f7;
+  -webkit-box-shadow: 0 2px 0 #c60202;
+  box-shadow: 0 2px 0 #c60202;
+  font-size: var(--button_icon_font-size)
+}
+.button.button-danger:hover {
+  background-color: #f42e2e
+}
+.button.button-danger:active {
+  -webkit-box-shadow: none;
+  box-shadow: none
 }
 .button.button-menu {
   height: var(--squere_button_size);
@@ -1026,6 +1086,7 @@ img.adaptive {
 :root {
   --font-size: 14px;
   --font-size_small: 10px;
+  --font-size_large: 16px;
   --button_icon_font-size: 18px;
   --button_font-size: 16px;
   --border-width: 1px;
@@ -1036,7 +1097,7 @@ img.adaptive {
   --header_height: 80px;
   --footer-height: 122px;
   --space-gap: 5px;
-  --squere_button_size: 41px
+  --squere_button_size: 42px
 }
 @media (max-width:1480px) {
   :root {
@@ -1063,6 +1124,9 @@ img.adaptive {
   text-align: center;
   font-size: var(--button_icon_font-size);
   line-height: 1.4
+}
+.dropdown .anchor.button-square.nav-button {
+  border-radius: var(--border-radius)
 }
 .dropdown .anchor.button-transparent {
   background-color: transparent;
@@ -1192,6 +1256,7 @@ img.adaptive {
 :root {
   --font-size: 14px;
   --font-size_small: 10px;
+  --font-size_large: 16px;
   --button_icon_font-size: 18px;
   --button_font-size: 16px;
   --border-width: 1px;
@@ -1202,7 +1267,7 @@ img.adaptive {
   --header_height: 80px;
   --footer-height: 122px;
   --space-gap: 5px;
-  --squere_button_size: 41px
+  --squere_button_size: 42px
 }
 @media (max-width:1480px) {
   :root {
@@ -1211,9 +1276,52 @@ img.adaptive {
   }
 }
 .form .input-cover {
-  margin-bottom: var(--margin)
+  margin-bottom: calc(var(--margin) * 2);
+  position: relative
+}
+.form .input-cover.collapsed-bottom {
+  margin-bottom: 0
+}
+.form .input-cover .alert {
+  position: absolute;
+  color: #ff5a5a;
+  position: absolute;
+  right: 0;
+  bottom: 100%;
+  font-size: var(--font-size);
+  -webkit-transform: translateY(10px);
+  -ms-transform: translateY(10px);
+  transform: translateY(10px);
+  opacity: 0
+}
+.form .label {
+  font-weight: 700;
+  font-size: var(--font-size_large)
+}
+.form .input-cover.with-label {
+  padding-left: 65px
+}
+.form .input-cover.with-label .label {
+  position: absolute;
+  max-width: 55px;
+  left: 0;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%)
+}
+.form .input-cover.with-label.large-space {
+  padding-left: 135px
+}
+.form .input-cover.with-label.large-space .label {
+  max-width: 120px
+}
+.form .input-cover.bottom-label .label {
+  margin-bottom: var(--margin);
+  display: block
 }
 .form .input,
+.form .select,
 .form .textarea {
   display: block;
   font-size: var(--font-size);
@@ -1232,13 +1340,28 @@ img.adaptive {
   border: none;
   width: 100%;
   background-color: transparent;
-  border: 1px solid #0037fe;
-  padding: var(--margin) calc(var(--margin) * 1.2)
+  border: 1px solid #e1e1e1;
+  padding: calc(var(--margin) * 1.3);
+  border-radius: calc(var(--border-radius)/ 2)
+}
+.form .input:focus,
+.form .input:hover,
+.form .select:focus,
+.form .select:hover,
+.form .textarea:focus,
+.form .textarea:hover {
+  border-color: #8ba4ff
 }
 .form .textarea {
   height: 120px;
   resize: none;
   white-space: normal
+}
+.form .select {
+  outline: 0
+}
+.form .select::-ms-expand {
+  display: none
 }
 .form.spaced-top {
   margin-top: calc(var(--margin) * 2)
@@ -1246,6 +1369,7 @@ img.adaptive {
 :root {
   --font-size: 14px;
   --font-size_small: 10px;
+  --font-size_large: 16px;
   --button_icon_font-size: 18px;
   --button_font-size: 16px;
   --border-width: 1px;
@@ -1256,7 +1380,7 @@ img.adaptive {
   --header_height: 80px;
   --footer-height: 122px;
   --space-gap: 5px;
-  --squere_button_size: 41px
+  --squere_button_size: 42px
 }
 @media (max-width:1480px) {
   :root {
@@ -2451,9 +2575,9 @@ img.adaptive {
 }
 .icon-bag:before {
   content: "\e926";
-  -webkit-transform: scale(.8);
-  -ms-transform: scale(.8);
-  transform: scale(.8);
+  -webkit-transform: scale(.9);
+  -ms-transform: scale(.9);
+  transform: scale(.9);
   position: relative;
   display: block
 }
@@ -2514,6 +2638,7 @@ img.adaptive {
 :root {
   --font-size: 14px;
   --font-size_small: 10px;
+  --font-size_large: 16px;
   --button_icon_font-size: 18px;
   --button_font-size: 16px;
   --border-width: 1px;
@@ -2524,7 +2649,7 @@ img.adaptive {
   --header_height: 80px;
   --footer-height: 122px;
   --space-gap: 5px;
-  --squere_button_size: 41px
+  --squere_button_size: 42px
 }
 @media (max-width:1480px) {
   :root {
@@ -2542,6 +2667,7 @@ img.adaptive {
 :root {
   --font-size: 14px;
   --font-size_small: 10px;
+  --font-size_large: 16px;
   --button_icon_font-size: 18px;
   --button_font-size: 16px;
   --border-width: 1px;
@@ -2552,7 +2678,7 @@ img.adaptive {
   --header_height: 80px;
   --footer-height: 122px;
   --space-gap: 5px;
-  --squere_button_size: 41px
+  --squere_button_size: 42px
 }
 @media (max-width:1480px) {
   :root {
@@ -2599,6 +2725,7 @@ img.adaptive {
 :root {
   --font-size: 14px;
   --font-size_small: 10px;
+  --font-size_large: 16px;
   --button_icon_font-size: 18px;
   --button_font-size: 16px;
   --border-width: 1px;
@@ -2609,7 +2736,7 @@ img.adaptive {
   --header_height: 80px;
   --footer-height: 122px;
   --space-gap: 5px;
-  --squere_button_size: 41px
+  --squere_button_size: 42px
 }
 @media (max-width:1480px) {
   :root {
@@ -2670,6 +2797,7 @@ img.adaptive {
 :root {
   --font-size: 14px;
   --font-size_small: 10px;
+  --font-size_large: 16px;
   --button_icon_font-size: 18px;
   --button_font-size: 16px;
   --border-width: 1px;
@@ -2680,7 +2808,7 @@ img.adaptive {
   --header_height: 80px;
   --footer-height: 122px;
   --space-gap: 5px;
-  --squere_button_size: 41px
+  --squere_button_size: 42px
 }
 @media (max-width:1480px) {
   :root {
@@ -2737,12 +2865,12 @@ img.adaptive {
   width: 100%;
   vertical-align: middle;
   padding: 0;
-  max-width: 1000px;
+  max-width: 600px;
   background: 0 0;
   text-align: left;
   opacity: 0;
   background-color: #fff;
-  font-size: 13px;
+  font-size: var(--font-size);
   white-space: normal;
   position: relative;
   -webkit-transition: .3s;
@@ -2793,17 +2921,56 @@ img.adaptive {
   -ms-transform: translateY(0);
   transform: translateY(0)
 }
-.popup .inner {
-  padding: 0 50px
+.popup.middle-popup .inner {
+  max-width: 1400px
 }
-@media (max-width:768px) {
-  .popup .inner {
-    padding: 0 20px
-  }
+.popup .inner {
+  border-radius: var(--border-radius)
+}
+.popup .inner .head {
+  padding: var(--padding) calc(var(--padding) * 2) var(--padding) calc(var(--padding) * .75);
+  background-color: #ffeab6;
+  position: relative;
+  z-index: 2;
+  border-radius: var(--border-radius) var(--border-radius) 0 0
+}
+.popup .inner .head .modal-title {
+  color: #000;
+  font-size: var(--button_font-size);
+  font-weight: 700
+}
+.popup .inner .head .modal-title .icon {
+  color: #0037fe;
+  margin-right: var(--margin);
+  vertical-align: baseline
+}
+.popup .inner .head .modal-title .icon-with-text {
+  display: inline-block;
+  width: var(--button_font-size);
+  height: var(--button_font-size);
+  vertical-align: middle;
+  margin-right: var(--space-gap)
+}
+.popup .inner .head .close-popup {
+  color: #0037fe;
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: var(--squere_button_size)
+}
+.popup .inner .head .close-popup:hover {
+  color: #ff5a5a
+}
+.popup .inner .content {
+  padding: var(--padding) calc(var(--padding) * .75);
+  background-color: #fff;
+  border-radius: 0 0 var(--border-radius) var(--border-radius)
 }
 :root {
   --font-size: 14px;
   --font-size_small: 10px;
+  --font-size_large: 16px;
   --button_icon_font-size: 18px;
   --button_font-size: 16px;
   --border-width: 1px;
@@ -2814,7 +2981,230 @@ img.adaptive {
   --header_height: 80px;
   --footer-height: 122px;
   --space-gap: 5px;
-  --squere_button_size: 41px
+  --squere_button_size: 42px
+}
+@media (max-width:1480px) {
+  :root {
+    --button_font-size: 14px;
+    --squere_button_size: 39px
+  }
+}
+:root {
+  --label_size: 42px
+}
+.selecter-cover .label {
+  color: #1975f5;
+  margin-bottom: calc(var(--margin)/ 2);
+  display: block
+}
+.selecter {
+  position: relative
+}
+.selecter .anchor {
+  display: block;
+  font-size: var(--font-size);
+  font-weight: 500;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  text-align: left;
+  position: relative;
+  z-index: 1;
+  -webkit-transition: .2s;
+  transition: .2s;
+  border: 1px solid #e1e1e1;
+  padding: var(--margin) calc(var(--margin) * 3) var(--margin) var(--margin);
+  border-radius: calc(var(--border-radius)/ 2);
+  white-space: nowrap;
+  overflow: hidden;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  outline: 0;
+  background-color: transparent;
+  background-image: url(../img/select-arrows.png);
+  background-repeat: no-repeat;
+  background-size: auto 30%;
+  background-position: right var(--margin) center;
+  cursor: pointer
+}
+.selecter .anchor:focus,
+.selecter .anchor:hover {
+  border-color: #8ba4ff
+}
+.selecter .anchor .count {
+  color: #1975f5;
+  position: absolute;
+  right: calc(var(--margin) * 2);
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%)
+}
+.selecter.opened .dropdown {
+  display: block
+}
+.selecter .dropdown {
+  position: absolute;
+  z-index: 5;
+  width: 100%;
+  display: none;
+  left: 0;
+  top: 100%
+}
+.selecter .dropdown ul {
+  list-style-type: none;
+  border-top: none;
+  border: 1px solid #ccc;
+  border-radius: calc(var(--border-radius)/ 2);
+  max-height: 250px;
+  overflow: auto
+}
+.selecter .dropdown ul li {
+  display: block;
+  width: 100%;
+  padding: calc(var(--margin) * 1.2);
+  z-index: 1;
+  -webkit-transition: background-color .3s;
+  transition: background-color .3s;
+  cursor: pointer;
+  position: relative;
+  font-size: var(--font-size);
+  border-bottom: 1px solid #ccc;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  background-color: #fff
+}
+.selecter .dropdown ul li:last-child {
+  border-bottom: none
+}
+.selecter .dropdown ul li:hover:not(.disabled) {
+  color: #1975f5
+}
+.selecter .dropdown ul li.active {
+  background-color: #f9fbfe;
+  font-weight: 700
+}
+.selecter .dropdown ul li.disabled {
+  color: #ccc
+}
+.selecter .dropdown ul li.disabled input[type=checkbox] {
+  display: none
+}
+.selecter .dropdown ul input[type=checkbox] {
+  opacity: 0;
+  position: absolute;
+  z-index: 1;
+  right: var(--margin);
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  pointer-events: none
+}
+.selecter .dropdown ul input[type=checkbox]:checked ~ label:before {
+  border-color: #1975f5
+}
+.selecter .dropdown ul input[type=checkbox]:checked ~ label:after {
+  opacity: 1
+}
+.selecter .dropdown ul input[type=checkbox]:focus ~ label:before {
+  -webkit-transition: .1s;
+  transition: .1s;
+  border-color: #ccc
+}
+.selecter .dropdown ul input[type=checkbox]:disabled ~ label {
+  color: #ccc
+}
+.selecter .dropdown ul input[type=checkbox]:disabled ~ label:before {
+  opacity: 1
+}
+.selecter .dropdown ul input[type=checkbox]:disabled ~ label:hover:after {
+  opacity: 0
+}
+.selecter .dropdown ul label {
+  cursor: pointer;
+  line-height: 1.1;
+  -webkit-transition: .2s;
+  transition: .2s;
+  display: inline-block;
+  position: absolute;
+  z-index: 1;
+  right: var(--margin);
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%)
+}
+.selecter .dropdown ul label:before {
+  position: absolute;
+  height: calc(var(--label_size) * .8);
+  width: calc(var(--label_size) * .8);
+  content: "";
+  border-radius: 2px;
+  border: 1px solid #ccc;
+  -webkit-transition: .2s;
+  transition: .2s;
+  left: calc(var(--margin) * -1.2);
+  top: 50%;
+  z-index: 2;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%)
+}
+.selecter .dropdown ul label:after {
+  content: "";
+  position: absolute;
+  height: calc(var(--label_size) * .5);
+  width: calc(var(--label_size) * .5);
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(calc(var(--margin) * -1),-50%);
+  -ms-transform: translate(calc(var(--margin) * -1),-50%);
+  transform: translate(calc(var(--margin) * -1),-50%);
+  background-color: #1975f5;
+  border-radius: 2px;
+  z-index: 3;
+  opacity: 0
+}
+.selecter .dropdown ul label:hover:before {
+  border-color: #1975f5
+}
+.selecter.dark {
+  background-color: #17202c;
+  color: #f9f7f7
+}
+.selecter.dark .anchor {
+  background-image: url(../img/select-arrows-light.png);
+  border: 1px solid #000
+}
+.selecter.dark .dropdown ul {
+  background-color: #17202c;
+  border: 1px solid #000
+}
+.selecter.dark .dropdown ul li {
+  background-color: #17202c;
+  color: #f9f7f7;
+  border-bottom: 1px solid #000
+}
+.selecter.dark .dropdown ul li.disabled {
+  color: #3a516f
+}
+:root {
+  --font-size: 14px;
+  --font-size_small: 10px;
+  --font-size_large: 16px;
+  --button_icon_font-size: 18px;
+  --button_font-size: 16px;
+  --border-width: 1px;
+  --border-radius: 8px;
+  --margin: 10px;
+  --padding: 20px;
+  --icon_height: 20px;
+  --header_height: 80px;
+  --footer-height: 122px;
+  --space-gap: 5px;
+  --squere_button_size: 42px
 }
 @media (max-width:1480px) {
   :root {
@@ -2832,6 +3222,13 @@ img.adaptive {
   vertical-align: middle;
   padding: 0 calc(var(--space-gap) * 2)
 }
+.simple-list.smaller-spaces {
+  padding: 0;
+  margin: 0 calc(var(--space-gap) * -1)
+}
+.simple-list.smaller-spaces > .item {
+  padding: 0 var(--space-gap)
+}
 @media (max-width:1480px) {
   .simple-list {
     margin: 0 calc(var(--space-gap) * 1.1 * -1);
@@ -2844,6 +3241,7 @@ img.adaptive {
 :root {
   --font-size: 14px;
   --font-size_small: 10px;
+  --font-size_large: 16px;
   --button_icon_font-size: 18px;
   --button_font-size: 16px;
   --border-width: 1px;
@@ -2854,7 +3252,7 @@ img.adaptive {
   --header_height: 80px;
   --footer-height: 122px;
   --space-gap: 5px;
-  --squere_button_size: 41px
+  --squere_button_size: 42px
 }
 @media (max-width:1480px) {
   :root {
@@ -2869,13 +3267,14 @@ img.adaptive {
   background-color: #00176c;
   border-radius: calc(var(--border-radius)/ 2);
   color: #f7f7f7;
-  z-index: 12;
+  z-index: 20;
   opacity: 0;
   -webkit-transform: translate(5px,0);
   -ms-transform: translate(5px,0);
   transform: translate(5px,0);
   -webkit-transition: .2s;
-  transition: .2s
+  transition: .2s;
+  pointer-events: none
 }
 .tooltip.active {
   opacity: 1;
@@ -2886,6 +3285,7 @@ img.adaptive {
 :root {
   --font-size: 14px;
   --font-size_small: 10px;
+  --font-size_large: 16px;
   --button_icon_font-size: 18px;
   --button_font-size: 16px;
   --border-width: 1px;
@@ -2896,7 +3296,7 @@ img.adaptive {
   --header_height: 80px;
   --footer-height: 122px;
   --space-gap: 5px;
-  --squere_button_size: 41px
+  --squere_button_size: 42px
 }
 @media (max-width:1480px) {
   :root {
@@ -2909,7 +3309,6 @@ h2,
 h3,
 h4 {
   font-weight: 400;
-  text-transform: uppercase;
   font-weight: 100;
   line-height: 1.42;
   color: #0037fe
@@ -2991,6 +3390,9 @@ h4 {
   font-weight: 700;
   font-size: .5em
 }
+.icon-with-text .text.color-info {
+  color: #00b898
+}
 .icon-with-text .icon {
   top: -2px;
   position: relative
@@ -3027,6 +3429,7 @@ h4 {
 :root {
   --font-size: 14px;
   --font-size_small: 10px;
+  --font-size_large: 16px;
   --button_icon_font-size: 18px;
   --button_font-size: 16px;
   --border-width: 1px;
@@ -3037,7 +3440,7 @@ h4 {
   --header_height: 80px;
   --footer-height: 122px;
   --space-gap: 5px;
-  --squere_button_size: 41px
+  --squere_button_size: 42px
 }
 @media (max-width:1480px) {
   :root {
@@ -3061,6 +3464,7 @@ h4 {
 :root {
   --font-size: 14px;
   --font-size_small: 10px;
+  --font-size_large: 16px;
   --button_icon_font-size: 18px;
   --button_font-size: 16px;
   --border-width: 1px;
@@ -3071,7 +3475,7 @@ h4 {
   --header_height: 80px;
   --footer-height: 122px;
   --space-gap: 5px;
-  --squere_button_size: 41px
+  --squere_button_size: 42px
 }
 @media (max-width:1480px) {
   :root {

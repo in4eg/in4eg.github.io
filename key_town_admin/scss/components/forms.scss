@@ -3,10 +3,53 @@
 .form {
 
 	.input-cover {
-		margin-bottom: var(--margin);
+		margin-bottom: calc(var(--margin)*2);
+		position: relative;
+
+		&.collapsed-bottom {
+			margin-bottom: 0;
+		}
+
+		.alert {
+			position: absolute;
+			color: $color_danger;
+			position: absolute;
+			right: 0; bottom: 100%;
+			font-size: var(--font-size);
+			transform: translateY(10px);
+			opacity: 0;
+		}
+	}
+
+	.label {
+		font-weight: bold;
+		font-size: var(--font-size_large);
+	}
+
+	.input-cover.with-label {
+		padding-left: 65px;
+
+	.label {
+		position: absolute;
+		max-width: 55px;
+		left: 0; top: 50%;
+		transform: translateY(-50%);
+	}
+
+		&.large-space {
+			padding-left: 135px;
+
+			.label {
+				max-width: 120px;
+			}
+		}
+	}
+
+	.input-cover.bottom-label {
 
 		.label {
-
+			margin-bottom: var(--margin);
+			display: block;
 		}
 	}
 
@@ -27,8 +70,14 @@
 		border: none;
 		width: 100%;
 		background-color: transparent;
-		border: 1px solid $color_primary;
-		padding: var(--margin) calc(var(--margin)*1.2);
+		border: 1px solid $color_gray;
+		padding: calc(var(--margin)*1.3);
+		border-radius: calc(var(--border-radius)/2);
+
+		&:hover,
+		&:focus {
+			border-color: #8ba4ff;
+		}
 	}
 
 	.textarea {
@@ -37,6 +86,16 @@
 		resize: none;
 		white-space: normal;
 	}
+
+	.select {
+		@extend .input;
+		outline: none;
+
+		&::-ms-expand {
+			display: none;
+		}
+	}
+
 
 	&.spaced-top {
 		margin-top: calc(var(--margin)*2);

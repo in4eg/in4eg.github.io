@@ -1,0 +1,36 @@
+<div id="createRemindModal" class="popup">
+	<div class="inner">
+		<div class="head">
+			<h2 class="modal-title">
+				<i class="icon icon-file-add"></i>
+				Створити нагадування
+			</h2>
+			<button type="button" class="close-popup button" data-tooltip="Закрити вікно">&times;</button>
+		</div>
+		<div class="content">
+			<form action="" class="form">
+				<div class="input-cover with-label">
+					<label for="remindDate" class="label">Дата:<sup>*</sup></label>
+					<input type="date" class="input" required id="remindDate">
+					<div class="alert">Не обрано дату</div>
+				</div>
+				<div class="input-cover with-label">
+					<label for="remindTime" class="label">Час:<sup>*</sup></label>
+					<input type="time" class="input" required id="remindTime">
+					<div class="alert">Не обрано час</div>
+				</div>
+				<div class="input-cover with-label">
+					<label for="remindText" class="label">Опис:<sup>*</sup></label>
+					<textarea name="remindText" id="remindText" class="textarea" placeholder="Опис нагадування"></textarea>
+					<div class="alert">Мінімум 20 символів</div>
+				</div>
+				<div class="input-cover with-label collapsed-bottom">
+					<button class="button button-info fixed-width" type="submit">
+						<span class="text">Зберегти</span>
+						<span class="fade"></span>
+					</button>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
