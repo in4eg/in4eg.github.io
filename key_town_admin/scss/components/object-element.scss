@@ -1,0 +1,21 @@
+@import '../variables.scss';
+
+:root {
+	--gallery_height: 103px;
+	--gallery_width: 137px;
+}
+
+.object-element {
+
+	.image-cover.gallery-cover {
+		height: var(--gallery_height);
+		width: var(--gallery_width);
+		padding: 0;
+		background-color: #d2ecff;
+		border-radius: var(--border-radius);
+		background-image: url(../img/picture.svg);
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: 50%;
+	}
+}

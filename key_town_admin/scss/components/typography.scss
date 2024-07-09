@@ -97,6 +97,7 @@ h4 {
 .title-with-icon {
 	position: relative;
 	padding-left: var(--padding);
+	color: $text_color;
 
 	.icon {
 		color: $color_primary;
@@ -125,6 +126,10 @@ h4 {
 		.icon {
 			color: $color_gray_hover;
 		}
+	}
+
+	&[href]:hover {
+		color: $color_primary;
 	}
 }
 
