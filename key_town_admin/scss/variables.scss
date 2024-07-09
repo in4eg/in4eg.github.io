@@ -6,11 +6,9 @@ $font-size: 14px;
 $font-size_small: 12px;
 $font-size_large: 16px;
 
-$button_icon_font-size: 18px;
-$button_font-size: 16px;
 
-$h1-font-size: 48px;
-$h2-font-size: 32px;
+$h1-font-size: 30px;
+$h2-font-size: 26px;
 $h3-font-size: 24px;
 $h4-font-size: 18px;
 $subheader1-font-size: 34px;
@@ -72,9 +70,6 @@ $squere_button_size: 42px;
 	--font-size_small: #{$font-size_small};
 	--font-size_large: #{$font-size_large};
 
-	--button_icon_font-size: #{$button_icon_font-size};
-	--button_font-size: #{$button_font-size};
-
 	--border-width: #{$border-width};
 	--border-radius: #{$border-radius};
 	--margin: #{$margin};
@@ -87,14 +82,16 @@ $squere_button_size: 42px;
 	--space-gap: #{$space-gap};
 
 	--squere_button_size: #{$squere_button_size};
+
+	--h1-font-size: #{$h1-font-size};
+	--h2-font-size: #{$h2-font-size};
+	--h3-font-size: #{$h3-font-size};
 }
 
 @media (max-width: 1480px) {
-	$button_font-size: 14px;
 	$squere_button_size: 39px;
 
 	:root {
-		--button_font-size: #{$button_font-size};
 		--squere_button_size: #{$squere_button_size};
 	}
 }

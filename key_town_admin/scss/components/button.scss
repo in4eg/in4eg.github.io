@@ -1,5 +1,10 @@
 @import '../variables.scss';
 
+:root {
+	--button_icon_font-size: 18px;
+	--button_font-size: 16px;
+}
+
 .button {
 	display: inline-block;
 	font-size: var(--button_font-size);
@@ -132,7 +137,6 @@
 	background-color: $color_info;
 	color: $color_white;
 	box-shadow: 0px 2px 0px $color_info_dark;
-	font-size: var(--button_icon_font-size);
 
 	&:hover {
 		background-color: $color_info_hover;
@@ -147,7 +151,6 @@
 	background-color: $color_danger;
 	color: $color_white;
 	box-shadow: 0px 2px 0px $color_danger_dark;
-	font-size: var(--button_icon_font-size);
 
 	&:hover {
 		background-color: $color_danger_hover;
@@ -207,7 +210,6 @@
 .button.button-block {
 	display: block;
 	width: 100%;
-	font-size: var(--button_icon_font-size);
 }
 
 .button.button-square {
@@ -216,7 +218,6 @@
 	line-height: 0.5;
 	z-index: 10;
 	text-align: center;
-	font-size: var(--button_icon_font-size);
 }
 
 

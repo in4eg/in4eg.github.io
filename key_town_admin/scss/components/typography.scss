@@ -4,7 +4,7 @@ h1, h2, h3, h4 {
 	font-weight: normal;
 	font-weight: 100;
 	line-height: 1.42;
-	color: $color_primary;
+	color: $text_color;
 
 	&.spaced-bottom {
 		margin-bottom: calc(var(--section-padding)*4);
@@ -30,6 +30,12 @@ div, a, p {
 
 h1 {
 	font-size: var(--h1-font-size);
+	font-weight: bold;
+
+	small {
+		font-size: var(--font-size_large);
+		font-weight: normal;
+	}
 }
 
 h2 {

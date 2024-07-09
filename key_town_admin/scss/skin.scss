@@ -262,6 +262,11 @@ img.adaptive {
 }
 
 
+.spaced-bottom {
+	margin-bottom: calc(var(--margin)*2);
+}
+
+
 
 [data-fade-in] {
 	transition: .2s opacity;
@@ -335,24 +340,4 @@ img.adaptive {
 @keyframes fade-in-animation-up {
 	0% { opacity: 0; transform: translateY(5px); }
 	100% { opacity: 1; transform: translateY(0);}
-}
-
-
-@media (max-width: 768px) {
-
-	.spaced-xs {
-		margin-bottom: calc(var(--margin)*2);
-	}
-
-	.image-responsive {
-
-		&.full-width-xs {
-			margin-left: -20px;
-			margin-right: -20px;
-		}
-	}
-
-	.hidden-xs {
-		display: none;
-	}
 }
