@@ -161,6 +161,22 @@
 	}
 }
 
+.button.button-gray {
+	background-color: $color_gray;
+	color: $color_gray_hover;
+	box-shadow: 0px 2px 0px $color_gray_dark;
+
+	&:hover {
+		background-color: $color_gray_hover;
+		color: $color_white;
+	}
+
+	&:active {
+		box-shadow: none;
+	}
+}
+
+
 .button.button-menu {
 	height: var(--squere_button_size); width: var(--squere_button_size);
 	padding: 0 calc(var(--padding)/2 - 1px);
@@ -218,6 +234,10 @@
 	line-height: 0.5;
 	z-index: 10;
 	text-align: center;
+}
+
+.button.transparent-button {
+	padding: 0;
 }
 
 

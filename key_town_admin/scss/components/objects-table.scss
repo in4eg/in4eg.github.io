@@ -1,0 +1,58 @@
+@import '../variables.scss';
+
+:root {
+
+}
+
+.objects-table {
+	border-radius: calc(var(--border-radius)/2);
+
+	thead {
+		text-align: left;
+
+		.primary-top {
+			background-color: $color_primary;
+			border: 1px solid $color_primary;
+		}
+
+		.gray-bottom {
+			background-color: #efefef;
+			border: 1px solid $color_gray;
+
+			th {
+				padding: var(--space-gap) var(--padding);
+			}
+		}
+
+		.transparent-button {
+			border: 0;
+			background-color: transparent;
+			cursor: pointer;
+
+			.icon {
+				color: $color_primary_button_hover;
+				font-size: var(--font-size);
+			}
+		}
+
+		.text {
+			font-weight: bold;
+			font-size: var(--font-size_large);
+			color: $color_white;
+			display: inline-block;
+			vertical-align: middle;
+			padding: var(--padding);
+		}
+	}
+
+	tbody {
+
+		tr {
+			position: relative;
+
+			td {
+				padding: var(--padding);
+			}
+		}
+	}
+}

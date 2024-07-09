@@ -2,6 +2,7 @@
 
 :root {
 	--pagination-link_size: 40px;
+	--pagination-font_size: 18px;
 }
 
 .pagination {
@@ -25,7 +26,7 @@
 		display: inline-block;
 		vertical-align: middle;
 		text-align: center;
-		font-size: var(--font-size);
+		font-size: var(--pagination-font_size);
 		border-right: 1px solid #b9ddf6;
 
 		&:last-child {
@@ -55,7 +56,6 @@
 
 		&.empty {
 			pointer-events: none;
-			padding-top: 5px;
 		}
 
 		&.disabled {
@@ -67,6 +67,6 @@
 	}
 
 	.pagination-position {
-		font-size: var(--font-size);
+		font-size: var(--pagination-font_size);
 	}
 }

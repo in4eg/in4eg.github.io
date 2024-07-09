@@ -500,8 +500,11 @@
 		<small>з 1 по 250 з 1083</small>
 	</h1>
 </div>
-<!-- pagination -->
-<div class="pagination spaced-bottom">
+<div class="spaced-bottom">
+	<div class="row">
+		<div class="col-xs-6">
+			<!-- pagination -->
+			<div class="pagination">
 	<div class="pagination-elements">
 		<a href="#" class="link item"><i class="icon icon-cheveron-left"></i></a>
 		<a href="#" class="link item active">1</a>
@@ -512,7 +515,404 @@
 		<a href="#" class="link item"><i class="icon icon-cheveron-right"></i></a>
 	</div>
 </div>
-<!-- / pagination -->
+			<!-- / pagination -->
+		</div>
+		<div class="col-xs-6 align-right">
+			<form action="" class="form">
+				<ul class="clear simple-list smaller-spaces">
+					<li class="item">
+						<input type="text" class="input" id="multySearch" placeholder="Мульти-Пошук`—`Дефіс">
+					</li>
+					<li class="item">
+						<button class="button button-gray button-square" type="button" data-tooltip="Роздрукувати" data-print="printedObjects">
+							<span class="text"><i class="icon icon-print"></i></span>
+						</button>
+					</li>
+					<li class="item">
+						<button class="button button-gray button-square" type="reset" data-tooltip="Очистити фільтри">
+							<span class="text"><i class="icon icon-close"></i></span>
+						</button>
+					</li>
+				</ul>
+			</form>
+		</div>
+	</div>
+</div>
+
+<!-- OBJECTS -->
+<form class="table-cover form">
+	<table class="objects-table table" id="printedObjects">
+		<thead>
+			<tr class="primary-top">
+				<th>
+					<label class="text" for="checkAllElement" class="checkbox-label" data-tooltip="Вибрати всі">
+						<input type="checkbox" class="checkbox" id="checkAllElement">
+					</label>
+				</th>
+				<th>
+					<button class="transparent-button" data-tooltip="Сортувати по зростанню/спаданню">
+						<span class="text">
+							ID
+							<i class="icon icon-select-arrows"></i>
+						</span>
+					</button>
+				</th>
+				<th>
+					<button class="transparent-button" data-tooltip="Сортувати по зростанню/спаданню">
+						<span class="text">
+							Дата
+							<i class="icon icon-select-arrows"></i>
+						</span>
+					</button>
+				</th>
+				<th>
+					<button class="transparent-button" data-tooltip="Сортувати по зростанню/спаданню">
+						<span class="text">
+							Контакт
+							<i class="icon icon-select-arrows"></i>
+						</span>
+					</button>
+				</th>
+				<th><span class="text">Фото</span></th>
+				<th><span class="text">Загальний опис</span></th>
+				<th>
+					<button class="transparent-button" data-tooltip="Сортувати по зростанню/спаданню">
+						<span class="text">
+							Останні дії
+							<i class="icon icon-select-arrows"></i>
+						</span>
+					</button>
+				</th>
+				<th><span class="text">Ім`я рієлтора</span></th>
+			</tr>
+			<tr class="gray-bottom">
+				<th></th>
+				<!-- id -->
+				<th><input type="number" class="input smaller-input"></th>
+				<!-- date -->
+				<th><input type="date" class="input smaller-input"></th>
+				<!-- contact -->
+				<th><input type="text" class="input smaller-input"></th>
+				<!-- photo -->
+				<th></th>
+				<!-- description -->
+				<th><input type="text" class="input smaller-input"></th>
+				<!-- action -->
+				<th><input type="text" class="input smaller-input"></th>
+				<!-- rieltor name -->
+				<th><input type="text" class="input smaller-input"></th>
+			</tr>
+		</thead>
+		<tbody>
+			<!-- object element -->
+			<tr class="object-element">
+	<!-- check -->
+	<td>
+		<label class="text" for="objElement1" class="checkbox-label" data-tooltip="Вибрати">
+			<input type="checkbox" class="checkbox" id="objElement1">
+		</label>
+	</td>
+	<!-- id -->
+	<td>
+		<div class="paragraph">151721</div>
+		<div class="buton-cover">
+			<button class="transparent-button button" data-tooltip="Додати в обрані">
+				<span class="text">
+					<i class="icon icon-star"></i>
+				</span>
+			</button>
+		</div>
+		<div class="buton-cover">
+			<button class="transparent-button button" data-tooltip="Відкриється в новому вікні">
+				<span class="text">
+					<i class="icon icon-eye-open"></i>
+					<div class="text">Сайт</div>
+				</span>
+			</button>
+		</div>
+	</td>
+	<!-- date -->
+	<td>
+		<div class="date">2024-06-19</div>
+		<div class="time">10:26</div>
+	</td>
+	<!-- contact -->
+	<td>
+		<div class="title-with-icon">
+			<i class="icon icon-user"></i>
+			<span class="text">Власник</span>
+		</div>
+		<div class="title-with-icon">
+			<i class="icon icon-phone-square"></i>
+			<span class="text">0674947727</span>
+		</div>
+	</td>
+	<!-- photo -->
+	<td>
+		<div class="paragraph">Публічні фото</div>
+		
+	</td>
+	<!-- description -->
+	<td></td>
+	<!-- action -->
+	<td></td>
+	<!-- rieltor name -->
+	<td></td>
+</tr>
+			<!-- / object element -->
+			<!-- object element -->
+			<tr class="object-element">
+	<!-- check -->
+	<td>
+		<label class="text" for="objElement1" class="checkbox-label" data-tooltip="Вибрати">
+			<input type="checkbox" class="checkbox" id="objElement1">
+		</label>
+	</td>
+	<!-- id -->
+	<td>
+		<div class="paragraph">151721</div>
+		<div class="buton-cover">
+			<button class="transparent-button button" data-tooltip="Додати в обрані">
+				<span class="text">
+					<i class="icon icon-star"></i>
+				</span>
+			</button>
+		</div>
+		<div class="buton-cover">
+			<button class="transparent-button button" data-tooltip="Відкриється в новому вікні">
+				<span class="text">
+					<i class="icon icon-eye-open"></i>
+					<div class="text">Сайт</div>
+				</span>
+			</button>
+		</div>
+	</td>
+	<!-- date -->
+	<td>
+		<div class="date">2024-06-19</div>
+		<div class="time">10:26</div>
+	</td>
+	<!-- contact -->
+	<td>
+		<div class="title-with-icon">
+			<i class="icon icon-user"></i>
+			<span class="text">Власник</span>
+		</div>
+		<div class="title-with-icon">
+			<i class="icon icon-phone-square"></i>
+			<span class="text">0674947727</span>
+		</div>
+	</td>
+	<!-- photo -->
+	<td>
+		<div class="paragraph">Публічні фото</div>
+		
+	</td>
+	<!-- description -->
+	<td></td>
+	<!-- action -->
+	<td></td>
+	<!-- rieltor name -->
+	<td></td>
+</tr>
+			<!-- / object element -->
+			<!-- object element -->
+			<tr class="object-element">
+	<!-- check -->
+	<td>
+		<label class="text" for="objElement1" class="checkbox-label" data-tooltip="Вибрати">
+			<input type="checkbox" class="checkbox" id="objElement1">
+		</label>
+	</td>
+	<!-- id -->
+	<td>
+		<div class="paragraph">151721</div>
+		<div class="buton-cover">
+			<button class="transparent-button button" data-tooltip="Додати в обрані">
+				<span class="text">
+					<i class="icon icon-star"></i>
+				</span>
+			</button>
+		</div>
+		<div class="buton-cover">
+			<button class="transparent-button button" data-tooltip="Відкриється в новому вікні">
+				<span class="text">
+					<i class="icon icon-eye-open"></i>
+					<div class="text">Сайт</div>
+				</span>
+			</button>
+		</div>
+	</td>
+	<!-- date -->
+	<td>
+		<div class="date">2024-06-19</div>
+		<div class="time">10:26</div>
+	</td>
+	<!-- contact -->
+	<td>
+		<div class="title-with-icon">
+			<i class="icon icon-user"></i>
+			<span class="text">Власник</span>
+		</div>
+		<div class="title-with-icon">
+			<i class="icon icon-phone-square"></i>
+			<span class="text">0674947727</span>
+		</div>
+	</td>
+	<!-- photo -->
+	<td>
+		<div class="paragraph">Публічні фото</div>
+		
+	</td>
+	<!-- description -->
+	<td></td>
+	<!-- action -->
+	<td></td>
+	<!-- rieltor name -->
+	<td></td>
+</tr>
+			<!-- / object element -->
+			<!-- object element -->
+			<tr class="object-element">
+	<!-- check -->
+	<td>
+		<label class="text" for="objElement1" class="checkbox-label" data-tooltip="Вибрати">
+			<input type="checkbox" class="checkbox" id="objElement1">
+		</label>
+	</td>
+	<!-- id -->
+	<td>
+		<div class="paragraph">151721</div>
+		<div class="buton-cover">
+			<button class="transparent-button button" data-tooltip="Додати в обрані">
+				<span class="text">
+					<i class="icon icon-star"></i>
+				</span>
+			</button>
+		</div>
+		<div class="buton-cover">
+			<button class="transparent-button button" data-tooltip="Відкриється в новому вікні">
+				<span class="text">
+					<i class="icon icon-eye-open"></i>
+					<div class="text">Сайт</div>
+				</span>
+			</button>
+		</div>
+	</td>
+	<!-- date -->
+	<td>
+		<div class="date">2024-06-19</div>
+		<div class="time">10:26</div>
+	</td>
+	<!-- contact -->
+	<td>
+		<div class="title-with-icon">
+			<i class="icon icon-user"></i>
+			<span class="text">Власник</span>
+		</div>
+		<div class="title-with-icon">
+			<i class="icon icon-phone-square"></i>
+			<span class="text">0674947727</span>
+		</div>
+	</td>
+	<!-- photo -->
+	<td>
+		<div class="paragraph">Публічні фото</div>
+		
+	</td>
+	<!-- description -->
+	<td></td>
+	<!-- action -->
+	<td></td>
+	<!-- rieltor name -->
+	<td></td>
+</tr>
+			<!-- / object element -->
+			<!-- object element -->
+			<tr class="object-element">
+	<!-- check -->
+	<td>
+		<label class="text" for="objElement1" class="checkbox-label" data-tooltip="Вибрати">
+			<input type="checkbox" class="checkbox" id="objElement1">
+		</label>
+	</td>
+	<!-- id -->
+	<td>
+		<div class="paragraph">151721</div>
+		<div class="buton-cover">
+			<button class="transparent-button button" data-tooltip="Додати в обрані">
+				<span class="text">
+					<i class="icon icon-star"></i>
+				</span>
+			</button>
+		</div>
+		<div class="buton-cover">
+			<button class="transparent-button button" data-tooltip="Відкриється в новому вікні">
+				<span class="text">
+					<i class="icon icon-eye-open"></i>
+					<div class="text">Сайт</div>
+				</span>
+			</button>
+		</div>
+	</td>
+	<!-- date -->
+	<td>
+		<div class="date">2024-06-19</div>
+		<div class="time">10:26</div>
+	</td>
+	<!-- contact -->
+	<td>
+		<div class="title-with-icon">
+			<i class="icon icon-user"></i>
+			<span class="text">Власник</span>
+		</div>
+		<div class="title-with-icon">
+			<i class="icon icon-phone-square"></i>
+			<span class="text">0674947727</span>
+		</div>
+	</td>
+	<!-- photo -->
+	<td>
+		<div class="paragraph">Публічні фото</div>
+		
+	</td>
+	<!-- description -->
+	<td></td>
+	<!-- action -->
+	<td></td>
+	<!-- rieltor name -->
+	<td></td>
+</tr>
+			<!-- / object element -->
+		</tbody>
+	</table>
+</form>
+<!-- /OBJECTS -->
+<div class="spaced-bottom spaced-top">
+	<div class="row middle-xs">
+		<div class="col-xs-6">
+			<h3>
+				Актуальні об'єкти
+				<small>з 1 по 250 з 1083</small>
+			</h3>
+		</div>
+		<div class="col-xs-6 align-right">
+			<!-- pagination -->
+			<div class="pagination">
+	<div class="pagination-elements">
+		<a href="#" class="link item"><i class="icon icon-cheveron-left"></i></a>
+		<a href="#" class="link item active">1</a>
+		<a href="#" class="link item">2</a>
+		<a href="#" class="link item">3</a>
+		<a href="#" class="link item">4</a>
+		<span class="empty item">...</span>
+		<a href="#" class="link item"><i class="icon icon-cheveron-right"></i></a>
+	</div>
+</div>
+			<!-- / pagination -->
+		</div>
+	</div>
+</div>
 					<!-- / CONTENT -->
 				</main>
 				<!-- / main-content -->

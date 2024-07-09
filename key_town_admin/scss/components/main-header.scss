@@ -5,6 +5,8 @@
 }
 
 .main-header {
+	position: relative;
+	z-index: 12;
 
 	.header-top {
 		background-color: $color_white;

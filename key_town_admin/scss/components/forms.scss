@@ -71,8 +71,13 @@
 		width: 100%;
 		background-color: transparent;
 		border: 1px solid $color_gray;
+		background-color: $color_white_clear;
 		padding: calc(var(--margin)*1.3);
 		border-radius: calc(var(--border-radius)/2);
+
+		&.smaller-input {
+			padding: var(--space-gap) calc(var(--space-gap)*2);
+		}
 
 		&:hover,
 		&:focus {

@@ -262,10 +262,27 @@ img.adaptive {
 }
 
 
+.spaced-top {
+	margin-top: calc(var(--margin)*2);
+}
+
 .spaced-bottom {
 	margin-bottom: calc(var(--margin)*2);
 }
 
+.table-cover {
+	overflow: hidden;
+	border-radius: calc(var(--border-radius)/2);
+	transform: rotate(0deg);
+	border: 1px solid $color_gray;
+
+	.table {
+		border-spacing: 0;
+		background-color: $color_white_clear;
+		height: 100%;
+		width: 100%;
+	}
+}
 
 
 [data-fade-in] {
