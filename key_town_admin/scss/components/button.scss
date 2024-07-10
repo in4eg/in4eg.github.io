@@ -240,6 +240,27 @@
 	padding: 0;
 }
 
+.button.button-link {
+	font-size: var(--font-size);
+	padding: 0;
+
+	.icon {
+		font-size: var(--font-size);
+
+		&:before {
+			position: relative;
+			top: -2px;
+		}
+	}
+
+	&.color-primary {
+
+		&:hover {
+			color: $color_primary_hover;
+		}
+	}
+}
+
 
 @media (max-width: 993px) {
 
