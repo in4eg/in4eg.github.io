@@ -1,7 +1,7 @@
 @import '../variables.scss';
 
 :root {
-	
+	--scroll-size: 14px;
 }
 
 .main-header {
@@ -10,15 +10,15 @@
 
 	.header-top {
 		background-color: $color_white;
-		padding: calc(var(--padding)*0.7) 0;
+		padding: calc(var(--padding)*0.7) calc(var(--padding) + var(--scroll-size)) calc(var(--padding)*0.7) var(--padding);
 	}
 
 	nav {
-		padding: 0 calc(var(--space-gap)*2);
 		white-space: nowrap;
 
 		.simple-list {
 			white-space: normal;
+			padding: 0;
 		}
 	}
 
