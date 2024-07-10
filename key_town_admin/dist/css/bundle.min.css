@@ -2578,7 +2578,9 @@ img.adaptive {
   content: "\e91c"
 }
 .icon-scale:before {
-  content: "\e91d"
+  content: "\e91d";
+  position: relative;
+  top: 3px
 }
 .icon-location:before {
   content: "\e91e"
@@ -2783,6 +2785,27 @@ img.adaptive {
   --gallery_height: 103px;
   --gallery_width: 137px
 }
+.object-element .gallery {
+  position: relative;
+  height: var(--gallery_height);
+  width: var(--gallery_width);
+  margin-top: var(--space-gap)
+}
+.object-element .gallery .count {
+  position: absolute;
+  font-size: var(--font-size);
+  color: #fff;
+  background-color: #fdc319;
+  border-radius: 3px;
+  z-index: 2;
+  line-height: 1;
+  padding: calc(var(--space-gap) * .6);
+  left: 100%;
+  bottom: 100%;
+  -webkit-transform: translate(-60%,60%);
+  -ms-transform: translate(-60%,60%);
+  transform: translate(-60%,60%)
+}
 .object-element .image-cover.gallery-cover {
   height: var(--gallery_height);
   width: var(--gallery_width);
@@ -2792,7 +2815,28 @@ img.adaptive {
   background-image: url(../img/picture.svg);
   background-repeat: no-repeat;
   background-position: center;
-  background-size: 50%
+  background-size: 50%;
+  cursor: -webkit-zoom-in;
+  cursor: zoom-in
+}
+.object-element .simple-list .item,
+.object-element .simple-list.smaller-spaces .item {
+  margin-bottom: var(--space-gap)
+}
+.object-element .description {
+  margin: var(--margin) 0 calc(var(--margin) * 2)
+}
+.object-element .description .description-title {
+  margin-bottom: var(--margin)
+}
+.object-element .description .text {
+  text-align: justify
+}
+.object-element .title-with-icon.spaced {
+  margin-bottom: var(--space-gap)
+}
+.object-element .image-cover.user-image {
+  margin-top: var(--margin)
 }
 :root {
   --font-size: 14px;
@@ -2816,8 +2860,44 @@ img.adaptive {
     --squere_button_size: 39px
   }
 }
+:root {
+  --min-cell_width: 50px
+}
 .objects-table {
-  border-radius: calc(var(--border-radius)/ 2)
+  border-radius: calc(var(--border-radius)/ 2);
+  table-layout: fixed
+}
+.objects-table td:nth-child(1),
+.objects-table th:nth-child(1) {
+  width: var(--min-cell_width)
+}
+.objects-table td:nth-child(2),
+.objects-table th:nth-child(2) {
+  width: calc(var(--min-cell_width) * 2)
+}
+.objects-table td:nth-child(3),
+.objects-table th:nth-child(3) {
+  width: calc(var(--min-cell_width) * 3)
+}
+.objects-table td:nth-child(4),
+.objects-table th:nth-child(4) {
+  width: calc(var(--min-cell_width) * 2.5)
+}
+.objects-table td:nth-child(5),
+.objects-table th:nth-child(5) {
+  width: calc(var(--min-cell_width) * 3.5)
+}
+.objects-table td:nth-child(6),
+.objects-table th:nth-child(6) {
+  width: 100%
+}
+.objects-table td:nth-child(7),
+.objects-table th:nth-child(7) {
+  width: calc(var(--min-cell_width) * 4.5)
+}
+.objects-table td:nth-child(8),
+.objects-table th:nth-child(8) {
+  width: calc(var(--min-cell_width) * 4.5)
 }
 .objects-table thead {
   text-align: left
@@ -2831,7 +2911,7 @@ img.adaptive {
   border: 1px solid #e1e1e1
 }
 .objects-table thead .gray-bottom th {
-  padding: var(--space-gap) var(--padding)
+  padding: calc(var(--space-gap) * 2) calc(var(--space-gap) * 1.2)
 }
 .objects-table thead .transparent-button {
   border: 0;
@@ -2848,13 +2928,26 @@ img.adaptive {
   color: #f7f7f7;
   display: inline-block;
   vertical-align: middle;
-  padding: var(--padding)
+  padding: var(--padding) calc(var(--space-gap) * 2)
 }
 .objects-table tbody tr {
-  position: relative
+  position: relative;
+  vertical-align: top
+}
+.objects-table tbody tr:after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 1px;
+  background-color: #e1e1e1;
+  left: 0;
+  bottom: 0
 }
 .objects-table tbody tr td {
   padding: var(--padding)
+}
+.objects-table tbody tr:last-child:after {
+  display: none
 }
 :root {
   --font-size: 14px;
@@ -3590,9 +3683,13 @@ h3 small {
 h4 {
   font-size: var(--h4-font-size)
 }
+h5 {
+  font-size: var(--font-size_large);
+  font-weight: 700
+}
 .paragraph {
   font-size: var(--font-size);
-  line-height: 1.92
+  color: #000
 }
 .paragraph.justify {
   text-align: justify

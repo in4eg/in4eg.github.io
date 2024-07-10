@@ -56,9 +56,14 @@ h4 {
 	font-size: var(--h4-font-size);
 }
 
+h5 {
+	font-size: var(--font-size_large);
+	font-weight: bold;
+}
+
 .paragraph {
 	font-size: var(--font-size);
-	line-height: 1.92;
+	color: $text_color;
 
 	&.justify {
 		text-align: justify;

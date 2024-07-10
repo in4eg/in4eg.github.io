@@ -115,6 +115,8 @@
 }
 .icon-scale:before {
 	content: "\e91d";
+	position: relative;
+	top: 3px;
 }
 .icon-location:before {
 	content: "\e91e";

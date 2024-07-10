@@ -31,7 +31,7 @@
 	</td>
 	<!-- contact -->
 	<td>
-		<div class="title-with-icon">
+		<div class="title-with-icon spaced">
 			<i class="icon icon-user"></i>
 			<span class="text">Власник</span>
 		</div>
@@ -43,14 +43,103 @@
 	<!-- photo -->
 	<td>
 		<div class="paragraph">Публічні фото</div>
-		<div class="image-cover gallery-cover">
-			
+		<div class="gallery">
+		<!-- if we have no photo .image-cover needs to be empty -->
+		<!-- <div class="image-cover gallery-cover"></div> -->
+			<div class="image-cover gallery-cover" data-tooltip="Переглянути усі фото">
+				<img src="img/temp/1.jpg" class="gallery-image" graggable="false">
+				<img src="img/temp/2.jpg" class="gallery-image" graggable="false">
+				<img src="img/temp/3.jpg" class="gallery-image" graggable="false">
+				<img src="img/temp/4.jpg" class="gallery-image" graggable="false">
+				<!-- last photo is main -->
+				<img src="img/temp/5.jpg" class="gallery-image" graggable="false">
+			</div>
+			<div class="count">5</div>
 		</div>
 	</td>
 	<!-- description -->
-	<td></td>
+	<td>
+		<div class="title-with-icon spaced">
+			<i class="icon icon-money"></i>
+			<span class="text">Ціна:</span>
+			<span class="bold">14 000</span>
+		</div>
+		<ul class="simple-list smaller-spaces">
+			<li class="item">
+				<div class="title-with-icon">
+					<i class="icon icon-tower"></i>
+					<span class="text">1 к.кв.</span>
+				</div>
+			</li>
+			<li class="item">
+				<div class="title-with-icon">
+					<i class="icon icon-location"></i>
+					<span class="text">р-н: Дніпровський</span>
+				</div>
+			</li>
+			<li class="item">
+				<div class="title-with-icon">
+					<i class="icon icon-location"></i>
+					<span class="text">Русанівска Набережна</span>
+					<span class="bold">14 000</span>
+				</div>
+			</li>
+			<li class="item">
+				<div class="title-with-icon">
+					<i class="icon icon-scale"></i>
+					<span class="text">11/16/18&nbsp;36/40/15м<sup>2</sup></span>
+				</div>
+			</li>
+			<li class="item">
+				<div class="title-with-icon">
+					<i class="icon icon-subway"></i>
+					<span class="text">Метро Лівобережная 10 хвилин пішки</span>
+				</div>
+			</li>
+		</ul>
+		<div class="description">
+			<h5 class="description-title">Загальний опис:</h5>
+			<div class="text">
+				Здається довгостроково 1 к квартира на Русанівській набережній Здається в довгострокову оренду охайна та світла однокімнатна квартира за адресою Русанівська набережна. Квартира знаходиться на 11 поверсі/16 пов. будинку, площею 36 м.кв для 1-2 людей. Квартира з меблями, укомплектована необхідною побутовою технікою: кондиціонер, холодильник, мікрохвильова піч, пральна машина, пилесмок, в кімнаті велика шафа купе, розкладний диван, вана, плита з духовкою. Будинок знаходиться поряд з магазинами, школою та дитячим садком, сучасним футбольним та баскетбольним полем, АТБ, Сільпо, аптеки. Хороша транспортна розв"язка: метро Лівобережная 10 хвилин пішки.
+			</div>
+		</div>
+	</td>
 	<!-- action -->
-	<td></td>
+	<td>
+		<div class="title-with-icon spaced">
+			<i class="icon icon-user"></i>
+			<span class="text">Коржик Андрій Іванович</span>
+		</div>
+		<a class="title-with-icon spaced" href="tel:0674947727" data-tooltip="Подзвонити">
+			<i class="icon icon-phone-square"></i>
+			<span class="text">0674947727</span>
+		</a>
+		<!-- NO user image -->
+		<div class="image-cover user-image">
+			<!-- <img src="img/user.jpg" draggable="false"> -->
+		</div>
+		<div class="text status">Не додзвонились</div>
+	</td>
 	<!-- rieltor name -->
-	<td></td>
+	<td>
+		<div class="title-with-icon spaced">
+			<i class="icon icon-user"></i>
+			<span class="text">Таточенко Аліна Іванівна</span>
+		</div>
+		<a class="title-with-icon spaced" href="tel:0674947727" data-tooltip="Подзвонити">
+			<i class="icon icon-phone-square"></i>
+			<span class="text">0674947727</span>
+		</a>
+		<!-- with user image -->
+		<div class="image-cover user-image">
+			<!-- if we have no user image tag <img> is unnecessary-->
+			<img src="img/user.jpg" draggable="false">
+		</div>
+		<div class="spaced-top">
+			<button class="button transparent-button color-primary" data-call="#usersModal">
+				<i class="icon icon-edit"></i>
+				<span class="text">Змінити відповідального</span>
+			</button>
+		</div>
+	</td>
 </tr>
