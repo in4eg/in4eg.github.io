@@ -113,11 +113,16 @@ h5 {
 
 	.bold {
 		font-weight: bold;
+		margin-right: var(--space-gap);
+		display: inline-block;
+		vertical-align: middle;
 	}
 
 	.text,
 	.link {
 		font-size: var(--font-size);
+		display: inline-block;
+		vertical-align: middle;
 	}
 
 	&.color-info {

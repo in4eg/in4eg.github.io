@@ -44,7 +44,7 @@
 	.simple-list.smaller-spaces {
 
 		.item {
-			margin-bottom: var(--space-gap);
+			margin-bottom: calc(var(--space-gap)*2);
 		}
 	}
 

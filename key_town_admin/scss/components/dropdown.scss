@@ -12,6 +12,7 @@
 		font-size: var(--button_font-size);
 		padding: var(--space-gap) calc(var(--padding)*2) var(--space-gap) var(--space-gap);
 		cursor: pointer;
+		height: auto;
 
 		&.button-square {
 			padding: var(--space-gap);

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+	<meta charset="UTF-8">
+	<title>Key Town :: Main</title>
+
+	<link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
+	<link rel="mask-icon" href="/favicon/safari-pinned-tab.svg" color="#ffffff">
+	<meta name="msapplication-TileColor" content="#ffffff">
+	<meta name="theme-color" content="#ffffff">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+	<meta name="format-detection" content="telephone=no">
+
+	<link rel="stylesheet" href="css/bundle.min.css">
+
+</head>
+<body id="innerBody">
+	<div class="page-outer" id="pageOuter">
+		<div class="menu-side side">
+			<!-- menu -->
+			@@include('./includes/aside-menu.html')
+			<!-- / menu -->
+		</div>
+		<div class="main-side side">
+			<!-- header -->
+			@@include('./includes/main-header.html')
+			<!-- /header -->
+			<!-- main-content -->
+			<div class="side-content">
+				<main class="page-main" id="pageMain">
+					<!-- CONTENT -->
+					EDIT
+					<!-- / CONTENT -->
+				</main>
+				<!-- / main-content -->
+				<!-- footer -->
+				@@include('./includes/main-footer.html')
+				<!-- / footer -->
+			</div>
+		</div>
+	</div>
+
+	<!-- COMMON MODALS -->
+	<!-- check id -->
+	@@include('./includes/modal-check-id.html')
+	<!-- / check id -->
+	<!-- check tel number -->
+	@@include('./includes/modal-check-tel.html')
+	<!-- / check tel number -->
+	<!-- create a reminding -->
+	@@include('./includes/modal-create-remind.html')
+	<!-- / create a reminding -->
+	<!-- new client -->
+	@@include('./includes/modal-add-client.html')
+	<!-- / new client -->
+	<!-- new object -->
+	@@include('./includes/modal-add-object.html')
+	<!-- / new object -->
+
+	<!-- MODALS ONLY FOR THIS PAGE-->
+	<!-- modal search rieltors -->
+	@@include('./includes/modal-users.html')
+
+
+	<script src="js/lib/jquery.min.js"></script>
+	<script src="js/plugins/jquery.selecter.js"></script>
+	<script src="js/main.js"></script>
+</body>
+</html>

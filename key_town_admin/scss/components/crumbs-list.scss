@@ -1,0 +1,28 @@
+@import '../variables.scss';
+
+.crumbs-list {
+	display: inline-block;
+	vertical-align: middle;
+
+	.list-item {
+		display: inline-block;
+		padding-right: var(--margin);
+		margin-right: var(--margin);
+		position: relative;
+
+		&:after {
+			position: absolute;
+			content: '\∕';
+			right: -2px; top: 1px;
+			color: $text_color;
+			font-size: $font-size;
+		}
+
+		&:last-child {
+
+			&:after {
+				display: none;
+			}
+		}
+	}
+}

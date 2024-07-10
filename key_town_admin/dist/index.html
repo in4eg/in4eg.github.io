@@ -330,7 +330,8 @@
 							</button>
 						</li>
 						<li class="item">
-							<button class="button button-square nav-button" data-tooltip="Збережені фільтри">
+							<!-- class disabled if NO filters -->
+							<button class="button button-square nav-button disabled" data-tooltip="Збережені фільтри">
 								<i class="icon icon-pin"></i>
 							</button>
 						</li>
@@ -581,7 +582,6 @@
 				<th><span class="text">Ім`я рієлтора</span></th>
 			</tr>
 			<tr class="gray-bottom">
-				<th></th>
 				<!-- id -->
 				<th><input type="number" class="input smaller-input" data-tooltip="Введіть ID для пошуку"></th>
 				<!-- date -->
@@ -600,6 +600,7 @@
 				<th><input type="text" class="input smaller-input" data-tooltip="Введіть ім'я для пошуку"></th>
 			</tr>
 		</thead>
+		<!-- TBODY -->
 		<tbody>
 			<!-- object element -->
 			<tr class="object-element">
@@ -712,13 +713,60 @@
 			<li class="item">
 				<div class="title-with-icon">
 					<i class="icon icon-list"></i>
-					<span class="bold text">Деталі</span>
-					<a href="#" class="link color-primary">OLX</a>
-					<a href="#" class="link color-primary">dom.ria.ua</a>
-					<a href="#" class="link color-primary">domik.net</a>
+					<span class="bold text">Деталі:</span>
+					<ul class="crumbs-list">
+						<li class="list-item">
+							<a href="#" class="link color-primary" target="_blank" rel="noopener noreferrer" data-tooltip="Перейти на OLX">OLX</a>
+						</li>
+						<li class="list-item">
+							<a href="#" class="link color-primary" target="_blank" rel="noopener noreferrer" data-tooltip="Перейти на dom.ria.ua">dom.ria.ua</a>
+						</li>
+						<li class="list-item">
+							<a href="#" class="link color-primary" target="_blank" rel="noopener noreferrer" data-tooltip="Перейти на domik.net">domik.net</a>
+						</li>
+					</ul>
 				</div>
 			</li>
 		</ul>
+		<div class="spaced-top">
+			<ul class="simple-list smaller-spaces">
+				<li class="item">
+					<button class="button button-primary" data-tooltip="Редагувати у вікні" data-call="#addObjectModal">
+						<i class="icon icon-edit"></i>
+						<span class="text">Редагувати</span>
+					</button>
+				</li>
+				<li class="item">
+					<a href="object-page.html" data-tooltip="Редагувати у новій вкладці" target="_blank" rel="noopener noreferrer" class="button button-primary">
+						<i class="icon icon-edit"></i>
+						<span class="text">Редагувати у новій вкладці</span>
+					</a>
+				</li>
+				<li class="item">
+					<button class="button button-square button-primary" data-tooltip="Створити нагадування" data-call="#createRemindModal">
+						<i class="icon icon-file-add"></i>
+					</button>
+				</li>
+				<li class="item">
+					<button class="button button-secondary" data-tooltip="В архів">
+						<i class="icon icon-edit"></i>
+						<span class="text">В архів</span>
+					</button>
+				</li>
+				<li class="item">
+					<button class="button button-gray" data-tooltip="Не додзвонитись">
+						<i class="icon icon-phone-call"></i>
+						<span class="text">Не додзвонитись (0)</span>
+					</button>
+				</li>
+				<li class="item">
+					<button class="button button-info" data-tooltip="Зберегти">
+						<i class="icon icon-like"></i>
+						<span class="text">Зберегти</span>
+					</button>
+				</li>
+			</ul>
+		</div>
 	</td>
 	<!-- action -->
 	<td>
@@ -869,13 +917,60 @@
 			<li class="item">
 				<div class="title-with-icon">
 					<i class="icon icon-list"></i>
-					<span class="bold text">Деталі</span>
-					<a href="#" class="link color-primary">OLX</a>
-					<a href="#" class="link color-primary">dom.ria.ua</a>
-					<a href="#" class="link color-primary">domik.net</a>
+					<span class="bold text">Деталі:</span>
+					<ul class="crumbs-list">
+						<li class="list-item">
+							<a href="#" class="link color-primary" target="_blank" rel="noopener noreferrer" data-tooltip="Перейти на OLX">OLX</a>
+						</li>
+						<li class="list-item">
+							<a href="#" class="link color-primary" target="_blank" rel="noopener noreferrer" data-tooltip="Перейти на dom.ria.ua">dom.ria.ua</a>
+						</li>
+						<li class="list-item">
+							<a href="#" class="link color-primary" target="_blank" rel="noopener noreferrer" data-tooltip="Перейти на domik.net">domik.net</a>
+						</li>
+					</ul>
 				</div>
 			</li>
 		</ul>
+		<div class="spaced-top">
+			<ul class="simple-list smaller-spaces">
+				<li class="item">
+					<button class="button button-primary" data-tooltip="Редагувати у вікні" data-call="#addObjectModal">
+						<i class="icon icon-edit"></i>
+						<span class="text">Редагувати</span>
+					</button>
+				</li>
+				<li class="item">
+					<a href="object-page.html" data-tooltip="Редагувати у новій вкладці" target="_blank" rel="noopener noreferrer" class="button button-primary">
+						<i class="icon icon-edit"></i>
+						<span class="text">Редагувати у новій вкладці</span>
+					</a>
+				</li>
+				<li class="item">
+					<button class="button button-square button-primary" data-tooltip="Створити нагадування" data-call="#createRemindModal">
+						<i class="icon icon-file-add"></i>
+					</button>
+				</li>
+				<li class="item">
+					<button class="button button-secondary" data-tooltip="В архів">
+						<i class="icon icon-edit"></i>
+						<span class="text">В архів</span>
+					</button>
+				</li>
+				<li class="item">
+					<button class="button button-gray" data-tooltip="Не додзвонитись">
+						<i class="icon icon-phone-call"></i>
+						<span class="text">Не додзвонитись (0)</span>
+					</button>
+				</li>
+				<li class="item">
+					<button class="button button-info" data-tooltip="Зберегти">
+						<i class="icon icon-like"></i>
+						<span class="text">Зберегти</span>
+					</button>
+				</li>
+			</ul>
+		</div>
 	</td>
 	<!-- action -->
 	<td>
@@ -1026,13 +1121,60 @@
 			<li class="item">
 				<div class="title-with-icon">
 					<i class="icon icon-list"></i>
-					<span class="bold text">Деталі</span>
-					<a href="#" class="link color-primary">OLX</a>
-					<a href="#" class="link color-primary">dom.ria.ua</a>
-					<a href="#" class="link color-primary">domik.net</a>
+					<span class="bold text">Деталі:</span>
+					<ul class="crumbs-list">
+						<li class="list-item">
+							<a href="#" class="link color-primary" target="_blank" rel="noopener noreferrer" data-tooltip="Перейти на OLX">OLX</a>
+						</li>
+						<li class="list-item">
+							<a href="#" class="link color-primary" target="_blank" rel="noopener noreferrer" data-tooltip="Перейти на dom.ria.ua">dom.ria.ua</a>
+						</li>
+						<li class="list-item">
+							<a href="#" class="link color-primary" target="_blank" rel="noopener noreferrer" data-tooltip="Перейти на domik.net">domik.net</a>
+						</li>
+					</ul>
 				</div>
 			</li>
 		</ul>
+		<div class="spaced-top">
+			<ul class="simple-list smaller-spaces">
+				<li class="item">
+					<button class="button button-primary" data-tooltip="Редагувати у вікні" data-call="#addObjectModal">
+						<i class="icon icon-edit"></i>
+						<span class="text">Редагувати</span>
+					</button>
+				</li>
+				<li class="item">
+					<a href="object-page.html" data-tooltip="Редагувати у новій вкладці" target="_blank" rel="noopener noreferrer" class="button button-primary">
+						<i class="icon icon-edit"></i>
+						<span class="text">Редагувати у новій вкладці</span>
+					</a>
+				</li>
+				<li class="item">
+					<button class="button button-square button-primary" data-tooltip="Створити нагадування" data-call="#createRemindModal">
+						<i class="icon icon-file-add"></i>
+					</button>
+				</li>
+				<li class="item">
+					<button class="button button-secondary" data-tooltip="В архів">
+						<i class="icon icon-edit"></i>
+						<span class="text">В архів</span>
+					</button>
+				</li>
+				<li class="item">
+					<button class="button button-gray" data-tooltip="Не додзвонитись">
+						<i class="icon icon-phone-call"></i>
+						<span class="text">Не додзвонитись (0)</span>
+					</button>
+				</li>
+				<li class="item">
+					<button class="button button-info" data-tooltip="Зберегти">
+						<i class="icon icon-like"></i>
+						<span class="text">Зберегти</span>
+					</button>
+				</li>
+			</ul>
+		</div>
 	</td>
 	<!-- action -->
 	<td>
@@ -1183,13 +1325,60 @@
 			<li class="item">
 				<div class="title-with-icon">
 					<i class="icon icon-list"></i>
-					<span class="bold text">Деталі</span>
-					<a href="#" class="link color-primary">OLX</a>
-					<a href="#" class="link color-primary">dom.ria.ua</a>
-					<a href="#" class="link color-primary">domik.net</a>
+					<span class="bold text">Деталі:</span>
+					<ul class="crumbs-list">
+						<li class="list-item">
+							<a href="#" class="link color-primary" target="_blank" rel="noopener noreferrer" data-tooltip="Перейти на OLX">OLX</a>
+						</li>
+						<li class="list-item">
+							<a href="#" class="link color-primary" target="_blank" rel="noopener noreferrer" data-tooltip="Перейти на dom.ria.ua">dom.ria.ua</a>
+						</li>
+						<li class="list-item">
+							<a href="#" class="link color-primary" target="_blank" rel="noopener noreferrer" data-tooltip="Перейти на domik.net">domik.net</a>
+						</li>
+					</ul>
 				</div>
 			</li>
 		</ul>
+		<div class="spaced-top">
+			<ul class="simple-list smaller-spaces">
+				<li class="item">
+					<button class="button button-primary" data-tooltip="Редагувати у вікні" data-call="#addObjectModal">
+						<i class="icon icon-edit"></i>
+						<span class="text">Редагувати</span>
+					</button>
+				</li>
+				<li class="item">
+					<a href="object-page.html" data-tooltip="Редагувати у новій вкладці" target="_blank" rel="noopener noreferrer" class="button button-primary">
+						<i class="icon icon-edit"></i>
+						<span class="text">Редагувати у новій вкладці</span>
+					</a>
+				</li>
+				<li class="item">
+					<button class="button button-square button-primary" data-tooltip="Створити нагадування" data-call="#createRemindModal">
+						<i class="icon icon-file-add"></i>
+					</button>
+				</li>
+				<li class="item">
+					<button class="button button-secondary" data-tooltip="В архів">
+						<i class="icon icon-edit"></i>
+						<span class="text">В архів</span>
+					</button>
+				</li>
+				<li class="item">
+					<button class="button button-gray" data-tooltip="Не додзвонитись">
+						<i class="icon icon-phone-call"></i>
+						<span class="text">Не додзвонитись (0)</span>
+					</button>
+				</li>
+				<li class="item">
+					<button class="button button-info" data-tooltip="Зберегти">
+						<i class="icon icon-like"></i>
+						<span class="text">Зберегти</span>
+					</button>
+				</li>
+			</ul>
+		</div>
 	</td>
 	<!-- action -->
 	<td>
@@ -1340,13 +1529,60 @@
 			<li class="item">
 				<div class="title-with-icon">
 					<i class="icon icon-list"></i>
-					<span class="bold text">Деталі</span>
-					<a href="#" class="link color-primary">OLX</a>
-					<a href="#" class="link color-primary">dom.ria.ua</a>
-					<a href="#" class="link color-primary">domik.net</a>
+					<span class="bold text">Деталі:</span>
+					<ul class="crumbs-list">
+						<li class="list-item">
+							<a href="#" class="link color-primary" target="_blank" rel="noopener noreferrer" data-tooltip="Перейти на OLX">OLX</a>
+						</li>
+						<li class="list-item">
+							<a href="#" class="link color-primary" target="_blank" rel="noopener noreferrer" data-tooltip="Перейти на dom.ria.ua">dom.ria.ua</a>
+						</li>
+						<li class="list-item">
+							<a href="#" class="link color-primary" target="_blank" rel="noopener noreferrer" data-tooltip="Перейти на domik.net">domik.net</a>
+						</li>
+					</ul>
 				</div>
 			</li>
 		</ul>
+		<div class="spaced-top">
+			<ul class="simple-list smaller-spaces">
+				<li class="item">
+					<button class="button button-primary" data-tooltip="Редагувати у вікні" data-call="#addObjectModal">
+						<i class="icon icon-edit"></i>
+						<span class="text">Редагувати</span>
+					</button>
+				</li>
+				<li class="item">
+					<a href="object-page.html" data-tooltip="Редагувати у новій вкладці" target="_blank" rel="noopener noreferrer" class="button button-primary">
+						<i class="icon icon-edit"></i>
+						<span class="text">Редагувати у новій вкладці</span>
+					</a>
+				</li>
+				<li class="item">
+					<button class="button button-square button-primary" data-tooltip="Створити нагадування" data-call="#createRemindModal">
+						<i class="icon icon-file-add"></i>
+					</button>
+				</li>
+				<li class="item">
+					<button class="button button-secondary" data-tooltip="В архів">
+						<i class="icon icon-edit"></i>
+						<span class="text">В архів</span>
+					</button>
+				</li>
+				<li class="item">
+					<button class="button button-gray" data-tooltip="Не додзвонитись">
+						<i class="icon icon-phone-call"></i>
+						<span class="text">Не додзвонитись (0)</span>
+					</button>
+				</li>
+				<li class="item">
+					<button class="button button-info" data-tooltip="Зберегти">
+						<i class="icon icon-like"></i>
+						<span class="text">Зберегти</span>
+					</button>
+				</li>
+			</ul>
+		</div>
 	</td>
 	<!-- action -->
 	<td>
@@ -1387,6 +1623,7 @@
 </tr>
 			<!-- / object element -->
 		</tbody>
+		<!-- / TBODY -->
 	</table>
 </form>
 <!-- /OBJECTS -->
