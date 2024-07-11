@@ -32,16 +32,9 @@
 		<div class="paragraph">Публічні фото</div>
 		<div class="gallery">
 		<!-- if we have no photo .image-cover needs to be empty -->
-			<!-- <div class="image-cover gallery-cover"></div> -->
-			<div class="gallery-cover" data-tooltip="Подивитись усі фото">
-				<!-- first photo is main -->
-				<img src="img/temp/1.jpg" class="gallery-image" graggable="false" data-fancybox="gallery">
-				<img src="img/temp/2.jpg" class="gallery-image" graggable="false" data-fancybox="gallery">
-				<img src="img/temp/3.jpg" class="gallery-image" graggable="false" data-fancybox="gallery">
-				<img src="img/temp/4.jpg" class="gallery-image" graggable="false" data-fancybox="gallery">
-				<img src="img/temp/5.jpg" class="gallery-image" graggable="false">
-			</div>
-			<div class="count" data-tooltip="Всього 5 фото">5</div>
+			<div class="image-cover gallery-cover"></div>
+			<!-- NO count if empty -->
+			<!-- <div class="count"></div> -->
 		</div>
 	</td>
 	<!-- description -->
@@ -87,7 +80,7 @@
 		<div class="description">
 			<h5 class="description-title">Загальний опис:</h5>
 			<div class="text">
-				Здається довгостроково 1 к квартира на Русанівській набережній Здається в довгострокову оренду охайна та світла однокімнатна квартира за адресою Русанівська набережна. Квартира знаходиться на 11 поверсі/16 пов. будинку, площею 36 м.кв для 1-2 людей. Квартира з меблями, укомплектована необхідною побутовою технікою: кондиціонер, холодильник, мікрохвильова піч, пральна машина, пилесмок, в кімнаті велика шафа купе, розкладний диван, вана, плита з духовкою. Будинок знаходиться поряд з магазинами, школою та дитячим садком, сучасним футбольним та баскетбольним полем, АТБ, Сільпо, аптеки. Хороша транспортна розв"язка: метро Лівобережная 10 хвилин пішки.
+				Якісний ремонт у гарному стані. Квартира світла, тепла, затишна. На кухні є вся необхідна побутова техніка: плита, духовка, витяжка.Холодильник, кухонні меблі – кухня, стіл, стільці. У кімнаті: зовсім новий розкладний 2-х спальний диван, LCD телевізор, сучасні та надійні меблі. Санвузол суміщений, просторий. Ванна, унітаз, бойлер, пральна машина. Велика шафа-купе, окремий та просторий гардероб, містка шафа для різних дрібниць. Балкон світлий та вільний. Дахова котельня, індивідуальне опалення, лічильники води, тепла, електроенергії. Чудова транспортна розв"язка.Розвинена інфраструктура району. 
 			</div>
 		</div>
 		<ul class="simple-list smaller-spaces">
@@ -174,10 +167,8 @@
 			<span class="text">0674947727</span>
 		</a>
 		<!-- NO user image -->
-		<div class="image-cover user-image">
-			<!-- <img src="img/user.jpg" draggable="false"> -->
-		</div>
-		<div class="text status">Не додзвонились</div>
+		<div class="image-cover user-image"></div>
+		<div class="text status">Зберегти: оновити</div>
 	</td>
 	<!-- rieltor name -->
 	<td>
@@ -189,11 +180,8 @@
 			<i class="icon icon-phone-square"></i>
 			<span class="text">0674947727</span>
 		</a>
-		<!-- with user image -->
-		<div class="image-cover user-image">
-			<!-- if we have no user image tag <img> is unnecessary-->
-			<img src="img/user.jpg" draggable="false">
-		</div>
+		<!-- NO user image -->
+		<div class="image-cover user-image"></div>
 		<button class="button button-link color-primary" data-call="#searchRieltorsModal" data-tooltip="Змінити відповідального">
 			<i class="icon icon-edit"></i>
 			<span class="text">Змінити відповідального</span>

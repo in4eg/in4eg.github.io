@@ -16,6 +16,7 @@ $(document).ready(function(){
 		// selecter
 		$(select).selecter({
 			multiple: data && data.multiple === true ? true : false,
+			search: data && data.search === true ? true : false,
 			classname: data && data.classname ? data.classname : null,
 			onOpen: function(){ },
 			onChange: function(select){

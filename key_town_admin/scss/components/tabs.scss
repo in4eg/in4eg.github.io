@@ -1,0 +1,38 @@
+@import '../variables.scss';
+
+:root {
+
+}
+
+.tabs {
+
+	.tab {
+		border: 1px solid $color_primary_button_shadow;
+		background-color: $color_primary_button_hover;
+		color: $color_primary;
+		cursor: pointer;
+		display: inline-block;
+		padding: calc(var(--space-gap)*1.6 + 3px) calc(var(--padding)*2) calc(var(--space-gap)*1.6);
+		border-radius: calc(var(--border-radius)/2) calc(var(--border-radius)/2) 0 0;
+		border-bottom-color: $color_white_clear;
+		transform: translateY(2px);
+		margin-left: var(--space-gap);
+
+		&.active {
+			border-color: $color_gray;
+			background-color: $color_white_clear;
+			border-bottom-color: $color_white_clear;
+			color: $text_color;
+		}
+	}
+
+	.tab-content {
+		display: none;
+		border-top: 1px solid $color_gray;
+		padding-top: calc(var(--padding) + var(--space-gap));
+
+		&.active {
+			display: block;
+		}
+	}
+}

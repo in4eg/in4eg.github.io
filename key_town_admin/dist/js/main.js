@@ -213,14 +213,6 @@ formatBytes = function(bytes) {
 	}
 };
 
-
-$(document).ready(function() {
-	$('[data-search]').each(function(i, search) {
-		$(search).keydown(function(e) {
-			console.log(e)
-		});
-	});
-});
 $(document).ready(function() {
 	$('[data-toggle]').each(function(i, button) {
 		$(button).click(function(e) {
@@ -243,6 +235,7 @@ $(document).ready(function() {
 		x: 0,
 		y: 0,
 		newTooltip: null,
+		element: null,
 
 		setCoordinates: function(pageX, pageY, element){
 			this.x = pageX;
@@ -262,11 +255,23 @@ $(document).ready(function() {
 			return this.text;
 		},
 
+		getElementSize: function(){
+			return this.element.getBoundingClientRect();
+		},
+
+		setTooltipPosition: function(){
+			// console.log(this.getElementSize())
+			
+			// this.getCoordinates().y + "px";
+			// this.getCoordinates().x + "px";
+		},
+
 		createTooltipElement: function(){
 			this.newTooltip = document.createElement('div');
 			this.newTooltip.className = "tooltip";
 			this.newTooltip.setAttribute("id", "tooltip");
 			this.newTooltip.appendChild(document.createTextNode(this.getText()));
+			// postion
 			this.newTooltip.style.top = this.getCoordinates().y + "px";
 			this.newTooltip.style.left = this.getCoordinates().x + "px";
 					document.body.appendChild(this.newTooltip);
@@ -275,6 +280,7 @@ $(document).ready(function() {
 		show: function(element, event){
 			if (!element || !event) return;
 			let text = element.dataset.tooltip.trim();
+			this.element = element;
 			this.setText(text);
 			this.setCoordinates(event.pageX,event.pageY, element);
 			this.createTooltipElement();
@@ -345,6 +351,7 @@ $(document).ready(function(){
 		// selecter
 		$(select).selecter({
 			multiple: data && data.multiple === true ? true : false,
+			search: data && data.search === true ? true : false,
 			classname: data && data.classname ? data.classname : null,
 			onOpen: function(){ },
 			onChange: function(select){
@@ -510,22 +517,14 @@ $(document).ready(function() {
 		}, 500);
 	});
 });
-
-var setActiveTab = function(content, indx) {
-	content.each(function(i, cont) {
-		$('> .content', cont).removeClass('active').eq(indx).addClass('active');
-		$('> .content', cont).closest('.scrolled').perfectScrollbar('update');
-	});
-};
-
 $('body').on('click', '[data-tabs] > .tab', function(e) {
-	let nav = $(this).closest('[data-tabs]')[0];
+	let container = $(this).closest('[data-tabs]')[0];
 	if ($(this).hasClass('disabled')) {
 		return;
 	}
 	$(this).siblings().removeClass('active');
 	$(this).addClass('active');
-	setActiveTab($($(nav).data('tabs')), $(this).index());
+	$('> .tab-content', container).removeClass('active').eq($(this).index()).addClass('active');
 });
 
 

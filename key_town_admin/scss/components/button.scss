@@ -179,6 +179,20 @@
 	}
 }
 
+.button.button-black {
+	background-color: #1b1b1b;
+	color: $color_white;
+	box-shadow: 0px 2px 0px #747474;
+
+	&:hover {
+		background-color: #282828;
+	}
+
+	&:active {
+		box-shadow: none;
+	}
+}
+
 
 .button.button-menu {
 	height: var(--squere_button_size); width: var(--squere_button_size);
@@ -266,14 +280,13 @@
 
 .button.smaller {
 	height: var(--button_smaller_height);
-	padding: calc(var(--space-gap)*1.5 + 3px) calc(var(--padding)*0.8) calc(var(--space-gap)*1.5);
+	padding: calc(var(--space-gap)*1.4 + 3px) calc(var(--padding)*0.8) calc(var(--space-gap)*1.5);
 	line-height: 1;
 
 	&.button-square {
 		padding: 0;
 	}
 }
-
 
 @media (max-width: 993px) {
 

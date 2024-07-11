@@ -7,11 +7,11 @@ h1, h2, h3, h4 {
 	color: $text_color;
 
 	&.spaced-bottom {
-		margin-bottom: calc(var(--section-padding)*4);
+		margin-bottom: calc(var(--margin)*2);
 	}
 
 	&.spaced-top {
-		margin-top: calc(var(--section-padding)*4);
+		margin-top: calc(var(--margin)*2);
 	}
 
 	&::selection {

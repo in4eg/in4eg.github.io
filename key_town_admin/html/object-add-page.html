@@ -33,7 +33,7 @@
 			<div class="side-content">
 				<main class="page-main" id="pageMain">
 					<!-- CONTENT -->
-					CONTENT
+					@@include('./includes/form-add-obj.html')
 					<!-- / CONTENT -->
 				</main>
 				<!-- / main-content -->
@@ -58,12 +58,14 @@
 	@@include('./includes/modal-filters.html')
 	<!-- / filters -->
 
-	<!-- OTHER MODALS-->
+	<!-- MODALS ONLY FOR THIS PAGE-->
 	<!-- modal search rieltors -->
 	@@include('./includes/modal-rieltors-search.html')
 
 
+
 	<script src="js/lib/jquery.min.js"></script>
+	<script src="js/plugins/fancybox.umd.js"></script>
 	<script src="js/plugins/jquery.selecter.js"></script>
 	<script src="js/main.js"></script>
 </body>

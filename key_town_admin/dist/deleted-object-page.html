@@ -351,7 +351,7 @@
 							</button>
 						</li>
 						<li class="item">
-							<a href="object-page.html" class="button button-square nav-button" data-tooltip="Перейти на сторінку створення об'єкту">
+							<a href="object-add-page.html" class="button button-square nav-button" data-tooltip="Перейти на сторінку створення об'єкту">
 								<span class="icon-with-text">
 									<i class="icon icon-house-simple"></i>
 									<span class="text">+</span>
@@ -591,9 +591,7 @@
 							<!-- TBODY -->
 							<tbody>
 								<!-- object element -->
-								
-
-<tr class="object-element">
+								<tr class="object-element">
 	<!-- id -->
 	<td>
 		<div class="paragraph">151721</div>
@@ -605,7 +603,6 @@
 				</span>
 			</a>
 		</div>
-
 	</td>
 	<!-- date -->
 	<td>
@@ -637,7 +634,7 @@
 				<img src="img/temp/4.jpg" class="gallery-image" graggable="false" data-fancybox="gallery">
 				<img src="img/temp/5.jpg" class="gallery-image" graggable="false">
 			</div>
-			<div class="count">5</div>
+			<div class="count" data-tooltip="Всього 5 фото">5</div>
 		</div>
 	</td>
 	<!-- description -->
@@ -722,13 +719,13 @@
 		<div class="spaced-top">
 			<ul class="simple-list smaller-spaces">
 				<li class="item">
-					<button class="button button-primary" data-tooltip="Редагувати у вікні" data-call="#infoObjectModal">
+					<button class="button button-primary smaller" data-tooltip="Редагувати у вікні" data-call="#editObjectModal">
 						<i class="icon icon-edit"></i>
 						<span class="text">Редагувати</span>
 					</button>
 				</li>
 				<li class="item">
-					<a href="object-page.html" data-tooltip="Редагувати у новій вкладці" target="_blank" rel="noopener noreferrer" class="button smaller button-primary">
+					<a href="object-edit-page.html" data-tooltip="Редагувати у новій вкладці" target="_blank" rel="noopener noreferrer" class="button smaller button-primary">
 						<i class="icon icon-edit"></i>
 						<span class="text">Редагувати у новій вкладці</span>
 					</a>
@@ -790,7 +787,7 @@
 			<!-- if we have no user image tag <img> is unnecessary-->
 			<img src="img/user.jpg" draggable="false">
 		</div>
-		<button class="button button-link color-primary" data-call="#usersModal" data-tooltip="Змінити відповідального">
+		<button class="button button-link color-primary" data-call="#searchRieltorsModal" data-tooltip="Змінити відповідального">
 			<i class="icon icon-edit"></i>
 			<span class="text">Змінити відповідального</span>
 		</button>
@@ -922,7 +919,7 @@
 							</a>
 						</li>
 						<li class="item">
-							<a href="object-page.html" class="button button-info button-square" data-tooltip="Перейти на сторінку нового об'єкту">
+							<a href="object-add-page.html" class="button button-info button-square" data-tooltip="Перейти на сторінку нового об'єкту">
 								<span class="text">
 									<span class="icon-with-text">
 										<i class="icon icon-house-simple"></i>
@@ -998,10 +995,9 @@
 </div>
 	<!-- / filters -->
 
-
 	<!-- MODALS ONLY FOR THIS PAGE-->
 	<!-- modal search rieltors -->
-	<div id="usersModal" class="popup">
+	<div id="searchRieltorsModal" class="popup">
 	<div class="inner">
 		<div class="head">
 			<h2 class="modal-title">
@@ -1013,20 +1009,22 @@
 		<div class="content">
 			<form action="" class="form">
 				<div class="input-cover">
-					<input type="text" placeholder="Введіть ім'я" data-search="#rieltorsSelect" class="input">
+					<select name="rieltorsSelect" id="rieltorsSelect" class="select" data-search="true">
+						<option value="Вибрати рієлтора" selected disabled>Вибрати рієлтора</option>
+						<option value="Коржик Андрій Іванович">Коржик Андрій Іванович</option>
+						<option value="Таточенко Аліна Іванівна">Таточенко Аліна Іванівна</option>
+						<option value="Ткач Василь Іванович">Ткач Василь Іванович</option>
+						<option value="Зубенко Ніна Павлівна">Зубенко Ніна Павлівна</option>
+					</select>
 				</div>
-				<select name="rieltorsSelect" id="rieltorsSelect" class="select">
-					<option value="Вибрати рієлтора" selected disabled>Вибрати рієлтора</option>
-					<option value="Коржик Андрій Іванович">Коржик Андрій Іванович</option>
-					<option value="Таточенко Аліна Іванівна">Таточенко Аліна Іванівна</option>
-					<option value="Ткач Василь Іванович">Ткач Василь Іванович</option>
-					<option value="Зубенко Ніна Павлівна">Зубенко Ніна Павлівна</option>
-				</select>
+				<button class="button button-info fixed-width" type="submit">
+					<span class="text">Зберегти</span>
+				</button>
 			</form>
 		</div>
 	</div>
 </div>
-	<div id="infoObjectModal" class="popup middle-popup">
+	<div id="editObjectModal" class="popup middle-popup">
 	<div class="inner">
 		<div class="head">
 			<h2 class="modal-title">
@@ -1038,175 +1036,213 @@
 			<button type="button" class="close-popup button" data-tooltip="Закрити вікно">&times;</button>
 		</div>
 		<div class="content">
-			<form action="" class="form">
-				<div class="row">
-					<div class="col-xs-10">
-						<div class="tabs" data-tabs>
-							<div class="tab" data-tab="0">
-								Основна інформація
+			<!-- pagination -->
+			<h1 class="spaced-bottom">Власник ID: 152066</h1>
+<form action="" class="form">
+	<div class="tabs" data-tabs>
+		<div class="tab active" data-tab="0" data-tooltip="Редагувати основну інформацію">
+			Основна інформація
+		</div>
+		<div class="tab" data-tab="1" data-tooltip="Редагувати фото та відео">
+			Фото та відео об'єкту
+		</div>
+		<div class="tab-content active">
+			<div class="row">
+				<div class="col-xs-10">
+					<div class="row">
+						<div class="col-xs-8">
+							<div class="input-cover large-space">
+								<select name="objOwnerSelect" id="objOwnerSelect" class="select" data-search="true">
+									<option value="Вибрати власника" selected disabled>Вибрати власника</option>
+									<option value="0931112233">0931112233</option>
+									<option value="0633332211">0633332211</option>
+									<option value="Ткач Василь Іванович">Ткач Василь Іванович</option>
+									<option value="Зубенко Ніна Павлівна">Зубенко Ніна Павлівна</option>
+								</select>
 							</div>
-							<div class="tab" data-tab="1">
-								Фото об'єкту
+						</div>
+						<div class="col-xs-2">
+						</div>
+						<div class="col-xs-2">
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-xs-6">
+							<div class="input-cover with-label large-space">
+								<label for="newClientLastName" class="label">Прізвище: <sup>*</sup></label>
+								<input type="text" class="input" required placeholder="Введіть прізвище клієнта" id="newClientLastName">
+								<div class="alert">Мін 2 символи</div>
 							</div>
-							<div class="tab-content">
-								<div class="row">
-									<div class="col-xs-6">
-										<div class="input-cover with-label large-space">
-											<label for="newClientLastName" class="label">Прізвище: <sup>*</sup></label>
-											<input type="text" class="input" required placeholder="Введіть прізвище клієнта" id="newClientLastName">
-											<div class="alert">Мін 2 символи</div>
-										</div>
-									</div>
-									<div class="col-xs-6">
-										<div class="input-cover with-label large-space">
-											<label for="newClientFirstName" class="label">Ім`я: <sup>*</sup></label>
-											<input type="text" class="input" required placeholder="Введіть Ім`я клієнта" id="newClientFirstName">
-											<div class="alert">Мін 2 символи</div>
-										</div>
-									</div>
-								</div>
-								<div class="row">
-									<div class="col-xs-6">
-										<div class="input-cover with-label large-space">
-											<label for="newClientSecondName" class="label">По батькові:</label>
-											<input type="text" class="input" required placeholder="Введіть по батькові клієнта" id="newClientSecondName">
-										</div>
-									</div>
-								</div>
-								<div class="row">
-									<div class="col-xs-6">
-										<div class="input-cover with-label large-space">
-											<label for="newClientBirth" class="label">Дата народження:</label>
-											<input type="date" class="input" id="newClientBirth">
-										</div>
-									</div>
-								</div>
-								<div class="row">
-									<div class="col-xs-6">
-										<div class="input-cover with-label large-space">
-											<label for="newClientPassport" class="label">Серія та номер паспорту:</label>
-											<input type="text" class="input" id="newClientPassport">
-										</div>
-									</div>
-									<div class="col-xs-6">
-										<div class="input-cover with-label large-space">
-											<label for="newClientCode" class="label">Код підрозділу:</label>
-											<input type="number" class="input" id="newClientCode">
-										</div>
-									</div>
-								</div>
-								<div class="row">
-									<div class="col-xs-6">
-										<div class="input-cover with-label large-space">
-											<label for="newClientPassportPlace" class="label">Ким виданий:</label>
-											<input type="text" class="input" id="newClientPassportPlace">
-										</div>
-									</div>
-									<div class="col-xs-6">
-										<div class="input-cover with-label large-space">
-											<label for="newClientPassportDate" class="label">Дата видачі паспорту:</label>
-											<input type="date" class="input" id="newClientPassportDate">
-										</div>
-									</div>
-								</div>
-								<div class="row">
-									<div class="col-xs-6">
-										<div class="input-cover with-label large-space">
-											<label for="newClientCitizenship" class="label">Громадянство</label>
-											<select name="newClientCitizenship" id="newClientCitizenship" class="select">
-												<option value="none" disabled selected>Оберіть опцію</option>
-												<option value="Так">Так</option>
-												<option value="Ні">Ні</option>
-											</select>
-										</div>
-									</div>
-									<div class="col-xs-6">
-										<div class="input-cover with-label large-space">
-											<label for="newClientSalory" class="label">Дохід у місяць (грн):</label>
-											<input type="number" class="input" placeholder="Сума доходу" id="newClientSalory">
-										</div>
-									</div>
-								</div>
-								<div class="row">
-									<div class="col-xs-6">
-										<div class="input-cover with-label large-space">
-											<label for="newClientCity" class="label">Місто проживання:</label>
-											<input type=text class="input" placeholder="Введіть місто проживання" id="newClientCity">
-										</div>
-									</div>
-									<div class="col-xs-6">
-										<div class="input-cover with-label large-space">
-											<label for="newClientAddress" class="label">Адреса проживання:</label>
-											<input type=text class="input" placeholder="Введіть адресу проживання" id="newClientAddress">
-										</div>
-									</div>
-								</div>
-								<div class="row">
-									<div class="col-xs-6">
-										<div class="input-cover with-label large-space">
-											<label for="newClientRegCity" class="label">Місто реєстрації:</label>
-											<input type=text class="input" placeholder="Введіть місто реєстрації" id="newClientRegCity">
-										</div>
-									</div>
-									<div class="col-xs-6">
-										<div class="input-cover with-label large-space">
-											<label for="newClientRegAddress" class="label">Адреса реєстрації:</label>
-											<input type=text class="input" placeholder="Введіть адресу реєстрації" id="newClientRegAddress">
-										</div>
-									</div>
-								</div>
-								<div class="row">
-									<div class="col-xs-6">
-										<div class="input-cover with-label large-space">
-											<label for="newClientTel" class="label">Телефон:</label>
-											<input type="tel" class="input" placeholder="0000000000" id="newClientTel">
-										</div>
-									</div>
-									<div class="col-xs-6">
-										<div class="input-cover with-label large-space">
-											<label for="newClientEmail" class="label">Email:</label>
-											<input type="email" class="input" placeholder="Введіть Email клієнта" id="newClientEmail">
-										</div>
-									</div>
-								</div>
-								<div class="row">
-									<div class="col-xs-6">
-										<div class="input-cover with-label large-space">
-											<label for="newClientTelCity" class="label">Міський телефон:</label>
-											<input type="tel" class="input" placeholder="0000000000" id="newClientTelCity">
-										</div>
-									</div>
-								</div>
-								<div class="row">
-									<div class="col-xs-6">
-										<div class="input-cover with-label large-space">
-											<label for="newClientSocial" class="label">Соціальна мережа:</label>
-											<input type="text" class="input" placeholder="Введіть посилання на соціальну мережу" id="newClientSocial">
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="tab-content">
-								UPLOAD FILES
+						</div>
+						<div class="col-xs-6">
+							<div class="input-cover with-label large-space">
+								<label for="newClientFirstName" class="label">Ім`я: <sup>*</sup></label>
+								<input type="text" class="input" required placeholder="Введіть Ім`я клієнта" id="newClientFirstName">
+								<div class="alert">Мін 2 символи</div>
 							</div>
 						</div>
 					</div>
-					<div class="col-xs-2">
-						<div class="input-cover large-space">
-							<button class="button button-info fixed-width" type="submit">
-								<span class="text">Зберегти</span>
-								<span class="fade"></span>
-							</button>
+					<div class="row">
+						<div class="col-xs-6">
+							<div class="input-cover with-label large-space">
+								<label for="newClientSecondName" class="label">По батькові:</label>
+								<input type="text" class="input" required placeholder="Введіть по батькові клієнта" id="newClientSecondName">
+							</div>
 						</div>
-						<div class="input-cover collapsed-bottom large-space">
-							<button class="button button-danger fixed-width" type="reset">
-								<span class="text">Очистити</span>
-								<span class="fade"></span>
-							</button>
+					</div>
+					<div class="row">
+						<div class="col-xs-6">
+							<div class="input-cover with-label large-space">
+								<label for="newClientBirth" class="label">Дата народження:</label>
+								<input type="date" class="input" id="newClientBirth">
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-xs-6">
+							<div class="input-cover with-label large-space">
+								<label for="newClientPassport" class="label">Серія та номер паспорту:</label>
+								<input type="text" class="input" id="newClientPassport">
+							</div>
+						</div>
+						<div class="col-xs-6">
+							<div class="input-cover with-label large-space">
+								<label for="newClientCode" class="label">Код підрозділу:</label>
+								<input type="number" class="input" id="newClientCode">
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-xs-6">
+							<div class="input-cover with-label large-space">
+								<label for="newClientPassportPlace" class="label">Ким виданий:</label>
+								<input type="text" class="input" id="newClientPassportPlace">
+							</div>
+						</div>
+						<div class="col-xs-6">
+							<div class="input-cover with-label large-space">
+								<label for="newClientPassportDate" class="label">Дата видачі паспорту:</label>
+								<input type="date" class="input" id="newClientPassportDate">
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-xs-6">
+							<div class="input-cover with-label large-space">
+								<label for="newClientCitizenship" class="label">Громадянство</label>
+								<select name="newClientCitizenship" id="newClientCitizenship" class="select">
+									<option value="none" disabled selected>Оберіть опцію</option>
+									<option value="Так">Так</option>
+									<option value="Ні">Ні</option>
+								</select>
+							</div>
+						</div>
+						<div class="col-xs-6">
+							<div class="input-cover with-label large-space">
+								<label for="newClientSalory" class="label">Дохід у місяць (грн):</label>
+								<input type="number" class="input" placeholder="Сума доходу" id="newClientSalory">
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-xs-6">
+							<div class="input-cover with-label large-space">
+								<label for="newClientCity" class="label">Місто проживання:</label>
+								<input type=text class="input" placeholder="Введіть місто проживання" id="newClientCity">
+							</div>
+						</div>
+						<div class="col-xs-6">
+							<div class="input-cover with-label large-space">
+								<label for="newClientAddress" class="label">Адреса проживання:</label>
+								<input type=text class="input" placeholder="Введіть адресу проживання" id="newClientAddress">
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-xs-6">
+							<div class="input-cover with-label large-space">
+								<label for="newClientRegCity" class="label">Місто реєстрації:</label>
+								<input type=text class="input" placeholder="Введіть місто реєстрації" id="newClientRegCity">
+							</div>
+						</div>
+						<div class="col-xs-6">
+							<div class="input-cover with-label large-space">
+								<label for="newClientRegAddress" class="label">Адреса реєстрації:</label>
+								<input type=text class="input" placeholder="Введіть адресу реєстрації" id="newClientRegAddress">
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-xs-6">
+							<div class="input-cover with-label large-space">
+								<label for="newClientTel" class="label">Телефон:</label>
+								<input type="tel" class="input" placeholder="0000000000" id="newClientTel">
+							</div>
+						</div>
+						<div class="col-xs-6">
+							<div class="input-cover with-label large-space">
+								<label for="newClientEmail" class="label">Email:</label>
+								<input type="email" class="input" placeholder="Введіть Email клієнта" id="newClientEmail">
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-xs-6">
+							<div class="input-cover with-label large-space">
+								<label for="newClientTelCity" class="label">Міський телефон:</label>
+								<input type="tel" class="input" placeholder="0000000000" id="newClientTelCity">
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-xs-6">
+							<div class="input-cover with-label large-space">
+								<label for="newClientSocial" class="label">Соціальна мережа:</label>
+								<input type="text" class="input" placeholder="Введіть посилання на соціальну мережу" id="newClientSocial">
+							</div>
 						</div>
 					</div>
 				</div>
-			</form>
+				<div class="col-xs-2 align-right">
+					<div class="input-cover large-space">
+						<button class="button button-secondary fixed-width" type="button" data-tooltip="Відправити в архів">
+							<span class="text">В архів</span>
+						</button>
+					</div>
+					<div class="input-cover large-space">
+						<button class="button button-gray fixed-width" type="button" data-tooltip="Не додзвонитись">
+							<span class="text">Не додзвонитись (0)</span>
+						</button>
+					</div>
+					<div class="input-cover large-space">
+						<button class="button button-danger fixed-width" type="button" data-tooltip="Видалити об'єкт">
+							<span class="text">Видалити</span>
+						</button>
+					</div>
+					<div class="input-cover large-space">
+						<button class="button button-black fixed-width" type="button" data-tooltip="Відправити в чорний список">
+							<span class="text">В чорний список</span>
+						</button>
+					</div>
+					<div class="input-cover large-space">
+						<button class="button button-primary fixed-width" type="button" data-tooltip="Створити нагадування" data-call="#createRemindModal">
+							<span class="text">Створити нагадування</span>
+						</button>
+					</div>
+					<div class="input-cover large-space collapsed-bottom">
+						<button class="button button-info fixed-width" type="submit" data-tooltip="Зберегти об'єкт">
+							<span class="text">Зберегти</span>
+						</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="tab-content">
+			UPLOAD FILES
+		</div>
+	</div>
+</form>
+			<!-- / pagination -->
 		</div>
 	</div>
 </div>
