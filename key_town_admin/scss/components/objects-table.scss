@@ -124,6 +124,40 @@
 	}
 }
 
+.table-bottom {
+
+	.bottom-title {
+		display: inline-block;
+		vertical-align: middle;
+		margin-right: calc(var(--margin)*2);
+	}
+
+	.select,
+	.selecter {
+		width: 73px;
+		display: inline-block;
+		vertical-align: middle;
+	}
+
+	.caption,
+	.form {
+		display: inline-block;
+		vertical-align: middle;
+		margin-left: var(--margin);
+	}
+
+	.selecter {
+
+		.dropdown ul {
+			max-height: 150px;
+		}
+
+		.anchor {
+			background-color: $color_white;
+		}
+	}
+}
+
 @media (max-width: 1480px) {
 
 	:root {

@@ -1,3 +1,5 @@
+
+
 <tr class="object-element">
 	<!-- id -->
 	<td>
@@ -10,6 +12,7 @@
 				</span>
 			</a>
 		</div>
+
 	</td>
 	<!-- date -->
 	<td>
@@ -32,13 +35,13 @@
 		<div class="paragraph">Публічні фото</div>
 		<div class="gallery">
 		<!-- if we have no photo .image-cover needs to be empty -->
-		<!-- <div class="image-cover gallery-cover"></div> -->
-			<div class="image-cover gallery-cover" data-tooltip="Переглянути усі фото">
-				<img src="img/temp/1.jpg" class="gallery-image" graggable="false">
-				<img src="img/temp/2.jpg" class="gallery-image" graggable="false">
-				<img src="img/temp/3.jpg" class="gallery-image" graggable="false">
-				<img src="img/temp/4.jpg" class="gallery-image" graggable="false">
-				<!-- last photo is main -->
+			<!-- <div class="image-cover gallery-cover"></div> -->
+			<div class="gallery-cover" data-tooltip="Подивитись усі фото">
+				<!-- first photo is main -->
+				<img src="img/temp/1.jpg" class="gallery-image" graggable="false" data-fancybox="gallery">
+				<img src="img/temp/2.jpg" class="gallery-image" graggable="false" data-fancybox="gallery">
+				<img src="img/temp/3.jpg" class="gallery-image" graggable="false" data-fancybox="gallery">
+				<img src="img/temp/4.jpg" class="gallery-image" graggable="false" data-fancybox="gallery">
 				<img src="img/temp/5.jpg" class="gallery-image" graggable="false">
 			</div>
 			<div class="count">5</div>
@@ -126,36 +129,36 @@
 		<div class="spaced-top">
 			<ul class="simple-list smaller-spaces">
 				<li class="item">
-					<button class="button button-primary" data-tooltip="Редагувати у вікні" data-call="#addObjectModal">
+					<button class="button button-primary" data-tooltip="Редагувати у вікні" data-call="#infoObjectModal">
 						<i class="icon icon-edit"></i>
 						<span class="text">Редагувати</span>
 					</button>
 				</li>
 				<li class="item">
-					<a href="object-page.html" data-tooltip="Редагувати у новій вкладці" target="_blank" rel="noopener noreferrer" class="button button-primary">
+					<a href="object-page.html" data-tooltip="Редагувати у новій вкладці" target="_blank" rel="noopener noreferrer" class="button smaller button-primary">
 						<i class="icon icon-edit"></i>
 						<span class="text">Редагувати у новій вкладці</span>
 					</a>
 				</li>
 				<li class="item">
-					<button class="button button-square button-primary" data-tooltip="Створити нагадування" data-call="#createRemindModal">
+					<button class="button smaller button-square button-primary" data-tooltip="Створити нагадування" data-call="#createRemindModal">
 						<i class="icon icon-file-add"></i>
 					</button>
 				</li>
 				<li class="item">
-					<button class="button button-secondary" data-tooltip="В архів">
+					<button class="button smaller button-secondary" data-tooltip="В архів">
 						<i class="icon icon-edit"></i>
 						<span class="text">В архів</span>
 					</button>
 				</li>
 				<li class="item">
-					<button class="button button-gray" data-tooltip="Не додзвонитись">
+					<button class="button smaller button-gray" data-tooltip="Не додзвонитись">
 						<i class="icon icon-phone-call"></i>
 						<span class="text">Не додзвонитись (0)</span>
 					</button>
 				</li>
 				<li class="item">
-					<button class="button button-info" data-tooltip="Зберегти">
+					<button class="button smaller button-info" data-tooltip="Зберегти">
 						<i class="icon icon-like"></i>
 						<span class="text">Зберегти</span>
 					</button>

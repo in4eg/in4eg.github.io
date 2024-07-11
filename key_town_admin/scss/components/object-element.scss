@@ -27,7 +27,7 @@
 		}
 	}
 
-	.image-cover.gallery-cover {
+	.gallery-cover {
 		height: var(--gallery_height);
 		width: var(--gallery_width);
 		padding: 0;
@@ -38,6 +38,12 @@
 		background-position: center;
 		background-size: 50%;
 		cursor: zoom-in;
+		overflow: hidden;
+		position: relative;
+
+		img {
+			height: 100%;
+		}
 	}
 
 	.simple-list,

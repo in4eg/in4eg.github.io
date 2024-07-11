@@ -16,6 +16,6 @@ $(document).ready(function() {
 			return function() {
 				return $('.fade', _this).removeClass('active');
 			};
-		})(this), 610);
+		})(this), 600);
 	});
 });

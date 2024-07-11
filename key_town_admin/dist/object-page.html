@@ -49,13 +49,13 @@
 						<a href="index.html" class="aside-link active">Актуальні об'єкти</a>
 					</li>
 					<li class="item" data-fade-in>
-						<a href="#" class="aside-link">Нові об'єкти</a>
+						<a href="new-object-page.html" class="aside-link">Нові об'єкти</a>
 					</li>
 					<li class="item" data-fade-in>
-						<a href="#" class="aside-link">Архів</a>
+						<a href="archive-object-page.html" class="aside-link">Архів</a>
 					</li>
 					<li class="item" data-fade-in>
-						<a href="#" class="aside-link">Видалені</a>
+						<a href="deleted-object-page.html" class="aside-link">Видалені</a>
 					</li>
 				</ul>
 			</div>
@@ -75,10 +75,10 @@
 				</div>
 				<ul class="clear bullet-list">
 					<li class="item" data-fade-in>
-						<a href="#" class="aside-link">База контактів</a>
+						<a href="contacts.html" class="aside-link">База контактів</a>
 					</li>
 					<li class="item" data-fade-in>
-						<a href="#" class="aside-link">Чорний список</a>
+						<a href="black-list.html" class="aside-link">Чорний список</a>
 					</li>
 				</ul>
 			</div>
@@ -98,7 +98,7 @@
 				</div>
 				<ul class="clear bullet-list">
 					<li class="item" data-fade-in>
-						<a href="#" class="aside-link">Оренда</a>
+						<a href="deals.html" class="aside-link">Оренда</a>
 					</li>
 				</ul>
 			</div>
@@ -325,9 +325,9 @@
 							</div>
 						</li>
 						<li class="item">
-							<button class="button button-square nav-button" data-tooltip="Додати кліента/покупця" data-call="#addClientModal">
+							<a href="client.html" class="button button-square nav-button" data-tooltip="Перейти на сторінку створення кліента/покупця">
 								<i class="icon icon-user-add"></i>
-							</button>
+							</a>
 						</li>
 						<li class="item">
 							<!-- class disabled if NO filters -->
@@ -336,7 +336,7 @@
 							</button>
 						</li>
 						<li class="item">
-							<button class="button button-square nav-button" data-tooltip="Фільтри">
+							<button class="button button-square nav-button" data-tooltip="Фільтри" data-call="#filtersModal">
 								<i class="icon icon-filter"></i>
 							</button>
 						</li>
@@ -351,35 +351,30 @@
 							</button>
 						</li>
 						<li class="item">
-							<button class="button button-square nav-button" data-tooltip="Додати новий об'єкт" data-call="#addObjectModal">
+							<a href="object-page.html" class="button button-square nav-button" data-tooltip="Перейти на сторінку створення об'єкту">
 								<span class="icon-with-text">
 									<i class="icon icon-house-simple"></i>
 									<span class="text">+</span>
 								</span>
-							</button>
+							</a>
 						</li>
 						<li class="item">
-							<button class="button button-square nav-button">
-								<i class="icon icon-house-user"></i>
-							</button>
-						</li>
-						<li class="item">
-							<button class="button button-square nav-button" data-tooltip="Актуальні об'єкти">
+							<a href="index.html" class="button button-square nav-button" data-tooltip="Перейти на сторінку актуальних об'єктів">
 								<i class="icon icon-house-simple"></i>
-							</button>
+							</a>
 						</li>
 						<li class="item">
-							<button class="button button-square nav-button" data-tooltip="Нові, Оренда -> Власники">
+							<a href="new-object-page.html" class="button button-square nav-button" data-tooltip="Перейти на сторінку нових об'єктів">
 								<span class="icon-with-text">
 									<i class="icon icon-house-simple"></i>
 									<span class="text">new</span>
 								</span>
-							</button>
+							</a>
 						</li>
 						<li class="item">
-							<button class="button button-square nav-button" data-tooltip="Угоди">
+							<a href="deals.html" class="button button-square nav-button" data-tooltip="Перейти на сторінку створення угоди">
 								<i class="icon icon-key"></i>
-							</button>
+							</a>
 						</li>
 					</ul>
 				</nav>
@@ -393,9 +388,9 @@
 							</button>
 						</li>
 						<li class="item">
-							<button class="button button-square nav-button" data-tooltip="Переглянути нагадування">
+							<a href="notifications.html" class="button button-square nav-button" data-tooltip="Перейти на сторінку нагадувань">
 								<i class="icon icon-file"></i>
-							</button>
+							</a>
 						</li>
 						<li class="item">
 							<!-- user info -->
@@ -567,24 +562,24 @@
 							</button>
 						</li>
 						<li class="item">
-							<button class="button button-info button-square" type="button" data-tooltip="Додати клієнта" data-call="#addClientModal">
+							<a href="client.html" class="button button-info button-square" data-tooltip="Перейти на сторінку нового клієнта">
 								<span class="text"><i class="icon icon icon-user-add"></i></span>
-							</button>
+							</a>
 						</li>
 						<li class="item">
-							<button class="button button-info button-square" type="button" data-tooltip="Додати об'єкт">
+							<a href="object-page.html" class="button button-info button-square" data-tooltip="Перейти на сторінку нового об'єкту">
 								<span class="text">
 									<span class="icon-with-text">
 										<i class="icon icon-house-simple"></i>
 										<span class="text color-info">+</span>
 									</span>
 								</span>
-							</button>
+							</a>
 						</li>
 						<li class="item">
-							<button class="button button-info button-square" type="button" data-tooltip="Додати угоду">
+							<a href="deals.html" class="button button-info button-square" data-tooltip="Перейти на сторінку нової угоди">
 								<span class="text"><i class="icon icon-bag"></i></span>
-							</button>
+							</a>
 						</li>
 					</ul>
 				</div>
@@ -1002,13 +997,26 @@
 			<button type="button" class="close-popup button" data-tooltip="Закрити вікно">&times;</button>
 		</div>
 		<div class="content">
-			Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptas, tempore deserunt voluptatem iure harum! Dolorem rerum sit quam sunt quae minima, quo hic error recusandae quas incidunt cupiditate, ratione! Voluptatibus.
+			<form action="" class="form">
+				<div class="input-cover">
+					<input type="text" placeholder="Введіть ім'я" data-search="#rieltorsSelect" class="input">
+				</div>
+				<select name="rieltorsSelect" id="rieltorsSelect" class="select">
+					<option value="Вибрати рієлтора" selected disabled>Вибрати рієлтора</option>
+					<option value="Коржик Андрій Іванович">Коржик Андрій Іванович</option>
+					<option value="Таточенко Аліна Іванівна">Таточенко Аліна Іванівна</option>
+					<option value="Ткач Василь Іванович">Ткач Василь Іванович</option>
+					<option value="Зубенко Ніна Павлівна">Зубенко Ніна Павлівна</option>
+				</select>
+			</form>
 		</div>
 	</div>
 </div>
 
 
+
 	<script src="js/lib/jquery.min.js"></script>
+	<script src="js/plugins/fancybox.umd.js"></script>
 	<script src="js/plugins/jquery.selecter.js"></script>
 	<script src="js/main.js"></script>
 </body>
