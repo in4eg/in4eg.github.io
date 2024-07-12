@@ -24,6 +24,11 @@
 	.label {
 		font-weight: bold;
 		font-size: var(--font-size_large);
+
+		&.spaced-bottom {
+			margin-bottom: var(--margin);
+			display: inline-block;
+		}
 	}
 
 	.input-cover.with-label {

@@ -157,12 +157,12 @@
 }
 
 
-@media (max-width: 768px) {
+@media (max-width: 1480px) {
 
-	.popup {
+	.popup.middle-popup {
 
 		.inner {
-
+			max-width: 1400px;
 		}
 	}
 }

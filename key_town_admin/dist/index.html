@@ -744,7 +744,7 @@
 				</li>
 				<li class="item">
 					<button class="button smaller button-secondary" data-tooltip="В архів">
-						<i class="icon icon-edit"></i>
+						<i class="icon icon-archive"></i>
 						<span class="text">В архів</span>
 					</button>
 				</li>
@@ -941,7 +941,7 @@
 				</li>
 				<li class="item">
 					<button class="button smaller button-secondary" data-tooltip="В архів">
-						<i class="icon icon-edit"></i>
+						<i class="icon icon-archive"></i>
 						<span class="text">В архів</span>
 					</button>
 				</li>
@@ -1143,7 +1143,7 @@
 				</li>
 				<li class="item">
 					<button class="button smaller button-secondary" data-tooltip="В архів">
-						<i class="icon icon-edit"></i>
+						<i class="icon icon-archive"></i>
 						<span class="text">В архів</span>
 					</button>
 				</li>
@@ -1439,7 +1439,7 @@
 		<div class="head">
 			<h2 class="modal-title">
 				<span class="icon-with-text">
-					<i class="icon icon-house-simple"></i>
+					<i class="icon icon-edit"></i>
 				</span>
 				Редагувати об'єкт
 			</h2>
@@ -1464,18 +1464,219 @@
 							<div class="input-cover large-space">
 								<select name="objOwnerSelect" id="objOwnerSelect" class="select" data-search="true">
 									<option value="Вибрати власника" selected disabled>Вибрати власника</option>
-									<option value="0931112233">0931112233</option>
-									<option value="0633332211">0633332211</option>
+									<option value="Сокіл Євген Павлович">Сокіл Євген Павлович</option>
+									<option value="Косач Ірина Петрівна">Косач Ірина Петрівна</option>
 									<option value="Ткач Василь Іванович">Ткач Василь Іванович</option>
 									<option value="Зубенко Ніна Павлівна">Зубенко Ніна Павлівна</option>
 								</select>
 							</div>
 						</div>
 						<div class="col-xs-2">
+							<button class="button button-primary fixed-width" type="button" data-tooltip="Редагувати клієнта" data-call="#editClientModal">
+								<i class="icon icon icon-edit"></i>
+								<span class="text">Редагувати клієнта</span>
+							</button>
 						</div>
 						<div class="col-xs-2">
+							<button class="button button-primary fixed-width" type="button" data-tooltip="Додати клієнта"data-call="#addClientModal">
+								<i class="icon icon icon-user-add"></i>
+								<span class="text">Додати клієнта</span>
+							</button>
 						</div>
 					</div>
+					<div class="row">
+						<div class="col-xs-4"></div>
+						<div class="col-xs-4">
+							<div class="input-cover large-space">
+								<label for="editObjPrice" class="label spaced-bottom">Ціна: <sup>*</sup></label>
+								<input type="number" class="input" required placeholder="Введіть ціну в грн" id="editObjPrice">
+								<div class="alert">Тільки цифри</div>
+							</div>
+						</div>
+						<div class="col-xs-4">
+							<div class="input-cover large-space">
+								<label for="editObjType" class="label spaced-bottom">Тип: <sup>*</sup></label>
+								<select name="editObjType" id="editObjType" class="select" data-search="true">
+									<option value="Вибрати тип об'єкту" selected disabled>Вибрати тип об'єкту</option>
+									<option value="1 км. кв.">1 км. кв.</option>
+									<option value="2 км. кв.">2 км. кв.</option>
+									<option value="3 км. кв.">3 км. кв.</option>
+									<option value="Будинок">Будинок</option>
+								</select>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-xs-4">
+							<div class="input-cover large-space">
+								<label for="editObjCity" class="label spaced-bottom">Місто: <sup>*</sup></label>
+								<select name="editObjCity" id="editObjCity" class="select" data-search="true">
+									<option value="Вибрати місто" selected disabled>Вибрати місто</option>
+									<option value="Київ">Київ</option>
+									<option value="Львів">Львів</option>
+									<option value="Харків">Харків</option>
+									<option value="Дніпро">Дніпро</option>
+									<option value="Одеса">Одеса</option>
+								</select>
+							</div>
+						</div>
+						<div class="col-xs-4">
+							<div class="input-cover large-space">
+								<label for="editObjPlace" class="label spaced-bottom">Район: <sup>*</sup></label>
+								<select name="editObjPlace" id="editObjPlace" class="select" data-search="true">
+									<option value="Вибрати район" selected disabled>Вибрати район</option>
+									<option value="Печерський">Печерський</option>
+									<option value="Шевченківський">Шевченківський</option>
+									<option value="Голосіївський">Голосіївський</option>
+									<option value="Дарницький">Дарницький</option>
+									<option value="Солом'янський">Солом'янський</option>
+								</select>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-xs-4">
+							<div class="input-cover large-space">
+								<label for="editObjAdress" class="label spaced-bottom">Адреса: <sup>*</sup></label>
+								<input type="text" class="input" id="editObjAdress" placeholder="Введіть адресу">
+							</div>
+						</div>
+						<div class="col-xs-4">
+							<div class="input-cover large-space">
+								<label for="editObjFlor" class="label spaced-bottom">Поверх: <sup>*</sup></label>
+								<input type="number" class="input" id="editObjFlor" placeholder="Введіть поверх">
+							</div>
+						</div>
+						<div class="col-xs-4">
+							<div class="input-cover large-space">
+								<label for="editObjMaxFlor" class="label spaced-bottom">Всього поверхів: <sup>*</sup></label>
+								<input type="number" class="input" id="editObjMaxFlor" placeholder="Введіть скільки всього поверхів">
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-xs-4">
+							<div class="input-cover large-space">
+								<label for="editObjSquare" class="label spaced-bottom">Загальна площа: <sup>*</sup></label>
+								<input type="number" class="input" id="editObjSquare" placeholder="Введіть загальну площу">
+							</div>
+						</div>
+						<div class="col-xs-4">
+							<div class="input-cover large-space">
+								<label for="editObjSquareLive" class="label spaced-bottom">Житлова площа: <sup>*</sup></label>
+								<input type="number" class="input" id="editObjSquareLive" placeholder="Введіть житлову площу">
+							</div>
+						</div>
+						<div class="col-xs-4">
+							<div class="input-cover large-space">
+								<label for="editObjSquareKitchen" class="label spaced-bottom">Площа кухні (м <sup>2</sup>): <sup>*</sup></label>
+								<input type="number" class="input" id="editObjSquareKitchen" placeholder="Введіть площу кухні">
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-xs-4">
+							<div class="input-cover large-space">
+								<label for="editObjDeposit" class="label spaced-bottom">Застава власнику (грн):</label>
+								<input type="number" class="input" id="editObjDeposit" placeholder="Введіть сумму">
+							</div>
+						</div>
+						<div class="col-xs-4">
+							<div class="input-cover large-space">
+								<label for="editObjFreeDate" class="label spaced-bottom">Об'єкт звільниться:</label>
+								<input type="date" class="input" id="editObjFreeDate">
+							</div>
+						</div>
+						<div class="col-xs-4">
+							<div class="input-cover large-space">
+								<label for="editObjShowdate" class="label spaced-bottom">Об'єкт показують:</label>
+								<input type="date" class="input" id="editObjShowdate">
+							</div>
+						</div>
+					</div>
+					<div class="input-cover large-space">
+						<label for="editObjTitle" class="label spaced-bottom">Заголовок: <sup>*</sup></label>
+						<input type="text" class="input" id="editObjTitle" placeholder="Введіть заголовок">
+					</div>
+					<div class="input-cover large-space">
+						<label for="editObjDescription" class="label spaced-bottom">Опис:</label>
+						<textarea class="textarea" id="editObjDescription" placeholder="Введіть короткий опис"></textarea>
+					</div>
+					<div class="input-cover large-space">
+						<label for="editObjComment" class="label spaced-bottom">Коментар:</label>
+						<textarea class="textarea" id="editObjComment" placeholder="Введіть додатковий коментар"></textarea>
+					</div>
+				</div>
+				<div class="col-xs-2 align-right">
+					<div class="input-cover large-space">
+						<button class="button button-secondary fixed-width" type="button" data-tooltip="Відправити в архів">
+							<span class="text">В архів</span>
+						</button>
+					</div>
+					<div class="input-cover large-space">
+						<button class="button button-gray fixed-width" type="button" data-tooltip="Не додзвонитись">
+							<span class="text">Не додзвонитись (0)</span>
+						</button>
+					</div>
+					<div class="input-cover large-space">
+						<button class="button button-danger fixed-width" type="button" data-tooltip="Видалити об'єкт">
+							<span class="text">Видалити</span>
+						</button>
+					</div>
+					<div class="input-cover large-space">
+						<button class="button button-black fixed-width" type="button" data-tooltip="Відправити в чорний список">
+							<span class="text">В чорний список</span>
+						</button>
+					</div>
+					<div class="input-cover large-space">
+						<button class="button button-primary fixed-width" type="button" data-tooltip="Створити нагадування" data-call="#createRemindModal">
+							<span class="text">Створити нагадування</span>
+						</button>
+					</div>
+					<div class="input-cover large-space collapsed-bottom">
+						<button class="button button-info fixed-width" type="submit" data-tooltip="Зберегти об'єкт">
+							<span class="text">Зберегти</span>
+						</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="tab-content">
+			UPLOAD FILES
+		</div>
+	</div>
+</form>
+			<!-- / pagination -->
+		</div>
+	</div>
+</div>
+	<!-- / edit obj -->
+	<!-- add obj -->
+	<div id="addObjectModal" class="popup middle-popup">
+	<div class="inner">
+		<div class="head">
+			<h2 class="modal-title">
+				<span class="icon-with-text">
+					<i class="icon icon-house-simple"></i>
+					<span class="text">+</span>
+				</span>
+				Додати об'єкт
+			</h2>
+			<button type="button" class="close-popup button" data-tooltip="Закрити вікно">&times;</button>
+		</div>
+		<div class="content">
+			<!-- EDIT -->
+			<form action="" class="form">
+	<div class="row">
+		<div class="col-xs-10">
+			<div class="tabs" data-tabs>
+				<div class="tab active" data-tab="0">
+					Основна інформація
+				</div>
+				<div class="tab" data-tab="1">
+					Фото об'єкту
+				</div>
+				<div class="tab-content active">
 					<div class="row">
 						<div class="col-xs-6">
 							<div class="input-cover with-label large-space">
@@ -1613,50 +1814,33 @@
 						</div>
 					</div>
 				</div>
-				<div class="col-xs-2 align-right">
-					<div class="input-cover large-space">
-						<button class="button button-secondary fixed-width" type="button" data-tooltip="Відправити в архів">
-							<span class="text">В архів</span>
-						</button>
-					</div>
-					<div class="input-cover large-space">
-						<button class="button button-gray fixed-width" type="button" data-tooltip="Не додзвонитись">
-							<span class="text">Не додзвонитись (0)</span>
-						</button>
-					</div>
-					<div class="input-cover large-space">
-						<button class="button button-danger fixed-width" type="button" data-tooltip="Видалити об'єкт">
-							<span class="text">Видалити</span>
-						</button>
-					</div>
-					<div class="input-cover large-space">
-						<button class="button button-black fixed-width" type="button" data-tooltip="Відправити в чорний список">
-							<span class="text">В чорний список</span>
-						</button>
-					</div>
-					<div class="input-cover large-space">
-						<button class="button button-primary fixed-width" type="button" data-tooltip="Створити нагадування" data-call="#createRemindModal">
-							<span class="text">Створити нагадування</span>
-						</button>
-					</div>
-					<div class="input-cover large-space collapsed-bottom">
-						<button class="button button-info fixed-width" type="submit" data-tooltip="Зберегти об'єкт">
-							<span class="text">Зберегти</span>
-						</button>
-					</div>
+				<div class="tab-content">
+					UPLOAD FILES
 				</div>
 			</div>
 		</div>
-		<div class="tab-content">
-			UPLOAD FILES
+		<div class="col-xs-2">
+			<div class="input-cover large-space">
+				<button class="button button-info fixed-width" type="submit">
+					<span class="text">Зберегти</span>
+					<span class="fade"></span>
+				</button>
+			</div>
+			<div class="input-cover collapsed-bottom large-space">
+				<button class="button button-danger fixed-width" type="reset">
+					<span class="text">Очистити</span>
+					<span class="fade"></span>
+				</button>
+			</div>
 		</div>
 	</div>
 </form>
-			<!-- / pagination -->
+			<!-- / EDIT -->
 		</div>
 	</div>
 </div>
-	<!-- / edit obj -->
+	<!-- / add obj -->
+
 
 	<script src="js/lib/jquery.min.js"></script>
 	<script src="js/plugins/fancybox.umd.js"></script>

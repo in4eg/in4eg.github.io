@@ -15,153 +15,147 @@
 							<div class="input-cover large-space">
 								<select name="objOwnerSelect" id="objOwnerSelect" class="select" data-search="true">
 									<option value="Вибрати власника" selected disabled>Вибрати власника</option>
-									<option value="0931112233">0931112233</option>
-									<option value="0633332211">0633332211</option>
+									<option value="Сокіл Євген Павлович">Сокіл Євген Павлович</option>
+									<option value="Косач Ірина Петрівна">Косач Ірина Петрівна</option>
 									<option value="Ткач Василь Іванович">Ткач Василь Іванович</option>
 									<option value="Зубенко Ніна Павлівна">Зубенко Ніна Павлівна</option>
 								</select>
 							</div>
 						</div>
 						<div class="col-xs-2">
+							<button class="button button-primary fixed-width" type="button" data-tooltip="Редагувати клієнта" data-call="#editClientModal">
+								<i class="icon icon icon-edit"></i>
+								<span class="text">Редагувати клієнта</span>
+							</button>
 						</div>
 						<div class="col-xs-2">
+							<button class="button button-primary fixed-width" type="button" data-tooltip="Додати клієнта"data-call="#addClientModal">
+								<i class="icon icon icon-user-add"></i>
+								<span class="text">Додати клієнта</span>
+							</button>
 						</div>
 					</div>
 					<div class="row">
-						<div class="col-xs-6">
-							<div class="input-cover with-label large-space">
-								<label for="newClientLastName" class="label">Прізвище: <sup>*</sup></label>
-								<input type="text" class="input" required placeholder="Введіть прізвище клієнта" id="newClientLastName">
-								<div class="alert">Мін 2 символи</div>
+						<div class="col-xs-4"></div>
+						<div class="col-xs-4">
+							<div class="input-cover large-space">
+								<label for="editObjPrice" class="label spaced-bottom">Ціна: <sup>*</sup></label>
+								<input type="number" class="input" required placeholder="Введіть ціну в грн" id="editObjPrice">
+								<div class="alert">Тільки цифри</div>
 							</div>
 						</div>
-						<div class="col-xs-6">
-							<div class="input-cover with-label large-space">
-								<label for="newClientFirstName" class="label">Ім`я: <sup>*</sup></label>
-								<input type="text" class="input" required placeholder="Введіть Ім`я клієнта" id="newClientFirstName">
-								<div class="alert">Мін 2 символи</div>
-							</div>
-						</div>
-					</div>
-					<div class="row">
-						<div class="col-xs-6">
-							<div class="input-cover with-label large-space">
-								<label for="newClientSecondName" class="label">По батькові:</label>
-								<input type="text" class="input" required placeholder="Введіть по батькові клієнта" id="newClientSecondName">
-							</div>
-						</div>
-					</div>
-					<div class="row">
-						<div class="col-xs-6">
-							<div class="input-cover with-label large-space">
-								<label for="newClientBirth" class="label">Дата народження:</label>
-								<input type="date" class="input" id="newClientBirth">
-							</div>
-						</div>
-					</div>
-					<div class="row">
-						<div class="col-xs-6">
-							<div class="input-cover with-label large-space">
-								<label for="newClientPassport" class="label">Серія та номер паспорту:</label>
-								<input type="text" class="input" id="newClientPassport">
-							</div>
-						</div>
-						<div class="col-xs-6">
-							<div class="input-cover with-label large-space">
-								<label for="newClientCode" class="label">Код підрозділу:</label>
-								<input type="number" class="input" id="newClientCode">
-							</div>
-						</div>
-					</div>
-					<div class="row">
-						<div class="col-xs-6">
-							<div class="input-cover with-label large-space">
-								<label for="newClientPassportPlace" class="label">Ким виданий:</label>
-								<input type="text" class="input" id="newClientPassportPlace">
-							</div>
-						</div>
-						<div class="col-xs-6">
-							<div class="input-cover with-label large-space">
-								<label for="newClientPassportDate" class="label">Дата видачі паспорту:</label>
-								<input type="date" class="input" id="newClientPassportDate">
-							</div>
-						</div>
-					</div>
-					<div class="row">
-						<div class="col-xs-6">
-							<div class="input-cover with-label large-space">
-								<label for="newClientCitizenship" class="label">Громадянство</label>
-								<select name="newClientCitizenship" id="newClientCitizenship" class="select">
-									<option value="none" disabled selected>Оберіть опцію</option>
-									<option value="Так">Так</option>
-									<option value="Ні">Ні</option>
+						<div class="col-xs-4">
+							<div class="input-cover large-space">
+								<label for="editObjType" class="label spaced-bottom">Тип: <sup>*</sup></label>
+								<select name="editObjType" id="editObjType" class="select" data-search="true">
+									<option value="Вибрати тип об'єкту" selected disabled>Вибрати тип об'єкту</option>
+									<option value="1 км. кв.">1 км. кв.</option>
+									<option value="2 км. кв.">2 км. кв.</option>
+									<option value="3 км. кв.">3 км. кв.</option>
+									<option value="Будинок">Будинок</option>
 								</select>
 							</div>
 						</div>
-						<div class="col-xs-6">
-							<div class="input-cover with-label large-space">
-								<label for="newClientSalory" class="label">Дохід у місяць (грн):</label>
-								<input type="number" class="input" placeholder="Сума доходу" id="newClientSalory">
+					</div>
+					<div class="row">
+						<div class="col-xs-4">
+							<div class="input-cover large-space">
+								<label for="editObjCity" class="label spaced-bottom">Місто: <sup>*</sup></label>
+								<select name="editObjCity" id="editObjCity" class="select" data-search="true">
+									<option value="Вибрати місто" selected disabled>Вибрати місто</option>
+									<option value="Київ">Київ</option>
+									<option value="Львів">Львів</option>
+									<option value="Харків">Харків</option>
+									<option value="Дніпро">Дніпро</option>
+									<option value="Одеса">Одеса</option>
+								</select>
+							</div>
+						</div>
+						<div class="col-xs-4">
+							<div class="input-cover large-space">
+								<label for="editObjPlace" class="label spaced-bottom">Район: <sup>*</sup></label>
+								<select name="editObjPlace" id="editObjPlace" class="select" data-search="true">
+									<option value="Вибрати район" selected disabled>Вибрати район</option>
+									<option value="Печерський">Печерський</option>
+									<option value="Шевченківський">Шевченківський</option>
+									<option value="Голосіївський">Голосіївський</option>
+									<option value="Дарницький">Дарницький</option>
+									<option value="Солом'янський">Солом'янський</option>
+								</select>
 							</div>
 						</div>
 					</div>
 					<div class="row">
-						<div class="col-xs-6">
-							<div class="input-cover with-label large-space">
-								<label for="newClientCity" class="label">Місто проживання:</label>
-								<input type=text class="input" placeholder="Введіть місто проживання" id="newClientCity">
+						<div class="col-xs-4">
+							<div class="input-cover large-space">
+								<label for="editObjAdress" class="label spaced-bottom">Адреса: <sup>*</sup></label>
+								<input type="text" class="input" id="editObjAdress" placeholder="Введіть адресу">
 							</div>
 						</div>
-						<div class="col-xs-6">
-							<div class="input-cover with-label large-space">
-								<label for="newClientAddress" class="label">Адреса проживання:</label>
-								<input type=text class="input" placeholder="Введіть адресу проживання" id="newClientAddress">
+						<div class="col-xs-4">
+							<div class="input-cover large-space">
+								<label for="editObjFlor" class="label spaced-bottom">Поверх: <sup>*</sup></label>
+								<input type="number" class="input" id="editObjFlor" placeholder="Введіть поверх">
 							</div>
 						</div>
-					</div>
-					<div class="row">
-						<div class="col-xs-6">
-							<div class="input-cover with-label large-space">
-								<label for="newClientRegCity" class="label">Місто реєстрації:</label>
-								<input type=text class="input" placeholder="Введіть місто реєстрації" id="newClientRegCity">
-							</div>
-						</div>
-						<div class="col-xs-6">
-							<div class="input-cover with-label large-space">
-								<label for="newClientRegAddress" class="label">Адреса реєстрації:</label>
-								<input type=text class="input" placeholder="Введіть адресу реєстрації" id="newClientRegAddress">
+						<div class="col-xs-4">
+							<div class="input-cover large-space">
+								<label for="editObjMaxFlor" class="label spaced-bottom">Всього поверхів: <sup>*</sup></label>
+								<input type="number" class="input" id="editObjMaxFlor" placeholder="Введіть скільки всього поверхів">
 							</div>
 						</div>
 					</div>
 					<div class="row">
-						<div class="col-xs-6">
-							<div class="input-cover with-label large-space">
-								<label for="newClientTel" class="label">Телефон:</label>
-								<input type="tel" class="input" placeholder="0000000000" id="newClientTel">
+						<div class="col-xs-4">
+							<div class="input-cover large-space">
+								<label for="editObjSquare" class="label spaced-bottom">Загальна площа: <sup>*</sup></label>
+								<input type="number" class="input" id="editObjSquare" placeholder="Введіть загальну площу">
 							</div>
 						</div>
-						<div class="col-xs-6">
-							<div class="input-cover with-label large-space">
-								<label for="newClientEmail" class="label">Email:</label>
-								<input type="email" class="input" placeholder="Введіть Email клієнта" id="newClientEmail">
+						<div class="col-xs-4">
+							<div class="input-cover large-space">
+								<label for="editObjSquareLive" class="label spaced-bottom">Житлова площа: <sup>*</sup></label>
+								<input type="number" class="input" id="editObjSquareLive" placeholder="Введіть житлову площу">
+							</div>
+						</div>
+						<div class="col-xs-4">
+							<div class="input-cover large-space">
+								<label for="editObjSquareKitchen" class="label spaced-bottom">Площа кухні (м <sup>2</sup>): <sup>*</sup></label>
+								<input type="number" class="input" id="editObjSquareKitchen" placeholder="Введіть площу кухні">
 							</div>
 						</div>
 					</div>
 					<div class="row">
-						<div class="col-xs-6">
-							<div class="input-cover with-label large-space">
-								<label for="newClientTelCity" class="label">Міський телефон:</label>
-								<input type="tel" class="input" placeholder="0000000000" id="newClientTelCity">
+						<div class="col-xs-4">
+							<div class="input-cover large-space">
+								<label for="editObjDeposit" class="label spaced-bottom">Застава власнику (грн):</label>
+								<input type="number" class="input" id="editObjDeposit" placeholder="Введіть сумму">
+							</div>
+						</div>
+						<div class="col-xs-4">
+							<div class="input-cover large-space">
+								<label for="editObjFreeDate" class="label spaced-bottom">Об'єкт звільниться:</label>
+								<input type="date" class="input" id="editObjFreeDate">
+							</div>
+						</div>
+						<div class="col-xs-4">
+							<div class="input-cover large-space">
+								<label for="editObjShowdate" class="label spaced-bottom">Об'єкт показують:</label>
+								<input type="date" class="input" id="editObjShowdate">
 							</div>
 						</div>
 					</div>
-					<div class="row">
-						<div class="col-xs-6">
-							<div class="input-cover with-label large-space">
-								<label for="newClientSocial" class="label">Соціальна мережа:</label>
-								<input type="text" class="input" placeholder="Введіть посилання на соціальну мережу" id="newClientSocial">
-							</div>
-						</div>
+					<div class="input-cover large-space">
+						<label for="editObjTitle" class="label spaced-bottom">Заголовок: <sup>*</sup></label>
+						<input type="text" class="input" id="editObjTitle" placeholder="Введіть заголовок">
+					</div>
+					<div class="input-cover large-space">
+						<label for="editObjDescription" class="label spaced-bottom">Опис:</label>
+						<textarea class="textarea" id="editObjDescription" placeholder="Введіть короткий опис"></textarea>
+					</div>
+					<div class="input-cover large-space">
+						<label for="editObjComment" class="label spaced-bottom">Коментар:</label>
+						<textarea class="textarea" id="editObjComment" placeholder="Введіть додатковий коментар"></textarea>
 					</div>
 				</div>
 				<div class="col-xs-2 align-right">

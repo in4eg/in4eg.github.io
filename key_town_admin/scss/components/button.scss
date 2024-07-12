@@ -31,6 +31,7 @@
 
 	&.fixed-width {
 		width: 249px;
+		max-width: 100%;
 	}
 
 	&:active {
@@ -288,6 +289,11 @@
 	}
 }
 
-@media (max-width: 993px) {
+@media (max-width: 1440px) {
 
+	.button {
+		padding-left: calc(var(--padding) * 0.4);
+		padding-right: calc(var(--padding) * 0.4);
+		font-size: calc(var(--button_font-size)*0.85)
+	}
 }
