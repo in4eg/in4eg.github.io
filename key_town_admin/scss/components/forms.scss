@@ -100,7 +100,8 @@
 
 	.select {
 		@extend .input;
-		outline: none;
+		padding-top: var(--space-gap);
+		padding-bottom: var(--space-gap);
 
 		&::-ms-expand {
 			display: none;
