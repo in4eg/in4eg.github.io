@@ -3,7 +3,7 @@
 <head>
 
 	<meta charset="UTF-8">
-	<title>Key Town :: Main</title>
+	<title>Key Town :: Edit Object</title>
 
 	<link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
 	<link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
@@ -352,10 +352,7 @@
 						</li>
 						<li class="item">
 							<a href="object-add-page.html" class="button button-square nav-button" data-tooltip="Перейти на сторінку створення об'єкту">
-								<span class="icon-with-text">
-									<i class="icon icon-house-simple"></i>
-									<span class="text">+</span>
-								</span>
+								<i class="icon icon-house-add"></i>
 							</a>
 						</li>
 						<li class="item">
@@ -487,19 +484,19 @@
 					<h1 class="spaced-bottom">Власник ID: 152066</h1>
 <form action="" class="form">
 	<div class="tabs" data-tabs>
-		<div class="tab active" data-tab="0" data-tooltip="Редагувати основну інформацію">
+		<div class="tab" data-tab="0" data-tooltip="Редагувати основну інформацію">
 			Основна інформація
 		</div>
-		<div class="tab" data-tab="1" data-tooltip="Редагувати фото та відео">
+		<div class="tab active" data-tab="1" data-tooltip="Редагувати фото та відео">
 			Фото та відео об'єкту
 		</div>
-		<div class="tab-content active">
+		<div class="tab-content">
 			<div class="row">
 				<div class="col-xs-10">
 					<div class="row">
 						<div class="col-xs-8">
 							<div class="input-cover large-space">
-								<select name="objOwnerSelect" id="objOwnerSelect" class="select" data-search="true">
+								<select name="editObjOwnerSelect" id="editObjOwnerSelect" class="select" data-search="true">
 									<option value="Вибрати власника" selected disabled>Вибрати власника</option>
 									<option value="Сокіл Євген Павлович">Сокіл Євген Павлович</option>
 									<option value="Косач Ірина Петрівна">Косач Ірина Петрівна</option>
@@ -678,8 +675,16 @@
 				</div>
 			</div>
 		</div>
-		<div class="tab-content">
-			UPLOAD FILES
+		<div class="tab-content active">
+			<div class="input-cover large-space load-cover">
+				<label id="fileLoader" class="label-file" for="editObjFiles">
+					<div class="caption">
+						<i class="icon icon-cloud-upload"></i>
+						<div class="text">Завантажте файли</div>
+					</div>
+				</label>
+				<input type="file" id="editObjFiles" multiple>
+			</div>
 		</div>
 	</div>
 </form>

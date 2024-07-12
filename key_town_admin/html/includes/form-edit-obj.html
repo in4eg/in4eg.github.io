@@ -1,19 +1,19 @@
 <h1 class="spaced-bottom">Власник ID: 152066</h1>
 <form action="" class="form">
 	<div class="tabs" data-tabs>
-		<div class="tab active" data-tab="0" data-tooltip="Редагувати основну інформацію">
+		<div class="tab" data-tab="0" data-tooltip="Редагувати основну інформацію">
 			Основна інформація
 		</div>
-		<div class="tab" data-tab="1" data-tooltip="Редагувати фото та відео">
+		<div class="tab active" data-tab="1" data-tooltip="Редагувати фото та відео">
 			Фото та відео об'єкту
 		</div>
-		<div class="tab-content active">
+		<div class="tab-content">
 			<div class="row">
 				<div class="col-xs-10">
 					<div class="row">
 						<div class="col-xs-8">
 							<div class="input-cover large-space">
-								<select name="objOwnerSelect" id="objOwnerSelect" class="select" data-search="true">
+								<select name="editObjOwnerSelect" id="editObjOwnerSelect" class="select" data-search="true">
 									<option value="Вибрати власника" selected disabled>Вибрати власника</option>
 									<option value="Сокіл Євген Павлович">Сокіл Євген Павлович</option>
 									<option value="Косач Ірина Петрівна">Косач Ірина Петрівна</option>
@@ -192,8 +192,16 @@
 				</div>
 			</div>
 		</div>
-		<div class="tab-content">
-			UPLOAD FILES
+		<div class="tab-content active">
+			<div class="input-cover large-space load-cover">
+				<label id="fileLoader" class="label-file" for="editObjFiles">
+					<div class="caption">
+						<i class="icon icon-cloud-upload"></i>
+						<div class="text">Завантажте файли</div>
+					</div>
+				</label>
+				<input type="file" id="editObjFiles" multiple>
+			</div>
 		</div>
 	</div>
 </form>

@@ -111,4 +111,51 @@
 	&.spaced-top {
 		margin-top: calc(var(--margin)*2);
 	}
+
+	.load-cover {
+		position: relative;
+
+		[type="file"] {
+			opacity: 0;
+			visibility: hidden;
+			position: absolute;
+			top: 0; left: 0;
+		}
+	}
+
+	.label-file {
+		height: 200px; width: 100%;
+		border: 3px dashed $color_primary_button;
+		transition: .2s;
+		cursor: pointer;
+		position: relative;
+		display: block;
+
+		.caption {
+			position: absolute;
+			top: 50%; left: 50%;
+			transform: translate(-50%, -50%);
+			text-align: center;
+			color: $color_primary_button;
+			transition: .2s;
+
+			.icon {
+				font-size: 50px;
+				margin-bottom: var(--margin);
+			}
+
+			.text {
+				font-size: var(--h3-font-size);
+			}
+		}
+
+		&:hover,
+		&.hover {
+			border-color: $color_primary;
+
+			.caption {
+				color: $color_primary;
+			}
+		}
+	}
 }
