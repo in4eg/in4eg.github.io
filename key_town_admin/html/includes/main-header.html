@@ -213,9 +213,25 @@
 							</button>
 						</li>
 						<li class="item">
-							<button class="button button-square nav-button" data-tooltip="Фільтри" data-call="#filtersModal">
-								<i class="icon icon-filter"></i>
-							</button>
+							<div class="dropdown" data-dropdown data-origin="right">
+								<div class="anchor button not-active button-square nav-button" data-tooltip="Фільтри">
+									<i class="icon icon-filter"></i>
+								</div>
+								<div class="dropdown-content large-content ">
+									<div class="head">
+										<div class="text">
+											<i class="icon icon-filter"></i>
+											<span class="text">Фільтри</span>
+										</div>
+										<button class="button close-dropdown">
+											<i class="icon icon-close"></i>
+										</button>
+									</div>
+									<div class="bottom">
+										@@include('filters-form.html')
+									</div>
+								</div>
+							</div>
 						</li>
 						<li class="item">
 							<button class="button button-square nav-button" data-tooltip="Перевірка № ID" data-call="#checkIdModal">
@@ -246,7 +262,7 @@
 							</a>
 						</li>
 						<li class="item">
-							<a href="deals.html" class="button button-square nav-button" data-tooltip="Перейти на сторінку створення угоди">
+							<a href="deals-add.html" class="button button-square nav-button" data-tooltip="Перейти на сторінку створення угоди">
 								<i class="icon icon-key"></i>
 							</a>
 						</li>

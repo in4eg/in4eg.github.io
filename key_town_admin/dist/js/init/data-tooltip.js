@@ -69,7 +69,7 @@ $(document).ready(function() {
 
 
 
-	$('[data-tooltip]').each(function(i, tooltip) {
+	$(document).find('[data-tooltip]').each(function(i, tooltip) {
 
 		$(tooltip).mouseenter(function(e) {
 			tooltipHint.show(tooltip, e);

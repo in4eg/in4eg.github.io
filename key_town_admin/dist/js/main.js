@@ -300,7 +300,7 @@ $(document).ready(function() {
 
 
 
-	$('[data-tooltip]').each(function(i, tooltip) {
+	$(document).find('[data-tooltip]').each(function(i, tooltip) {
 
 		$(tooltip).mouseenter(function(e) {
 			tooltipHint.show(tooltip, e);
@@ -333,11 +333,25 @@ $(document).ready(function() {
 		});
 	};
 });
+function handleFiles(){
+	let files = this.files;
+	let loaderMainWrap = null;
+	for (var i = 0; i < files.length; i++) {
+		getBase64(files[i], this.parentElement);
+	}
+}
+
+function removeFiles(){
+	this.remove()
+}
+
+function hasClass(element, className) {
+	return (' ' + element.className + ' ').indexOf(' ' + className+ ' ') > -1;
+}
 
 function getBase64(file, loaderMainWrap) {
 	var reader = new FileReader();
 	reader.readAsDataURL(file);
-	console.warn(file)
 	if (file.type.startsWith("image/")) {
 		reader.onload = function () {
 			appendImage(file.name, reader.result, loaderMainWrap);
@@ -360,57 +374,63 @@ function getBase64(file, loaderMainWrap) {
 function appendImage(name, src, loaderMainWrap){
 	let coverEl = document.createElement("div");
 			coverEl.classList.add('files-cover');
+	let innerCover = document.createElement("div");
+			innerCover.classList.add('inner');
 	let imgEl = document.createElement('img');
 			imgEl.src = src;
-	coverEl.appendChild(imgEl);
+	innerCover.appendChild(imgEl);
+	coverEl.appendChild(innerCover);
 	let nameEl = document.createElement("div");
 			nameEl.classList.add('file-name');
 			nameEl.appendChild(document.createTextNode(name));
 	coverEl.appendChild(nameEl);
-	loaderMainWrap.appendChild(coverEl);
+	coverEl.addEventListener("click", removeFiles, false);
+	if (loaderMainWrap) {
+		loaderMainWrap.appendChild(coverEl);
+	}
 };
 
 function appendVideo(name, src, loaderMainWrap){
 	let coverEl = document.createElement("div");
 			coverEl.classList.add('files-cover');
+	let innerCover = document.createElement("div");
+			innerCover.classList.add('inner');
 	let videoEl = document.createElement('video')
 			videoEl.src = src
 			videoEl.controls = true;
-	coverEl.appendChild(videoEl);
+	innerCover.appendChild(videoEl);
+	coverEl.appendChild(innerCover);
 	let nameEl = document.createElement("div");
 			nameEl.classList.add('file-name');
 			nameEl.appendChild(document.createTextNode(name));
 	coverEl.appendChild(nameEl);
-	loaderMainWrap.appendChild(coverEl)
+	coverEl.addEventListener("click", removeFiles, false);
+	if (loaderMainWrap) {
+		loaderMainWrap.appendChild(coverEl);
+	}
 };
 
 function appendError(name, type, loaderMainWrap){
 	let errorStatus = {
 		load: 'Помилка завантаження',
-		type: 'Не підходящий формат для фото чи відео'
+		type: 'Тільки для .png, .jpg, .mp4'
 	}
 	let coverEl = document.createElement("div");
 			coverEl.classList.add('error-cover');
 			coverEl.classList.add('files-cover');
-			coverEl.appendChild(document.createTextNode(errorStatus[type]));
+	let textEl = document.createElement("div");
+			textEl.classList.add('error-text');
+			textEl.appendChild(document.createTextNode(errorStatus[type]));
+	coverEl.appendChild(textEl);
 	let nameEl = document.createElement("div");
 			nameEl.classList.add('file-name');
 			nameEl.appendChild(document.createTextNode(name));
 	coverEl.appendChild(nameEl);
-	loaderMainWrap.appendChild(coverEl);
-};
-
-function handleFiles(){
-	let files = this.files;
-	let loaderMainWrap = null;
-	for (var i = 0; i < files.length; i++) {
-		getBase64(files[i], this.parentElement);
+	coverEl.addEventListener("click", removeFiles, false);
+	if (loaderMainWrap) {
+		loaderMainWrap.appendChild(coverEl);
 	}
-}
-
-function hasClass(element, className) {
-	return (' ' + element.className + ' ').indexOf(' ' + className+ ' ') > -1;
-}
+};
 
 document.querySelectorAll('[data-loader]').forEach(function(loaderCover, i){
 	coverChildren = loaderCover.children;
@@ -439,7 +459,11 @@ document.querySelectorAll('[data-loader]').forEach(function(loaderCover, i){
 			appendError('type', loaderCover);
 		}
 	}
+})
 
+// delete loaded files
+document.querySelectorAll('.files-cover').forEach(function(loaderCover, i){
+	loaderCover.addEventListener("click", removeFiles, false);
 })
 
 
@@ -602,7 +626,7 @@ $(document).ready(function() {
 			hidePopups();
 		});
 		$('.popup').click(function(e) {
-			if ($(e.target).closest('.inner').length === 0) {
+			if ($(e.target).closest('.inner').length === 0 && $(e.target).closest('.files-cover').length === 0) {
 				e.preventDefault();
 				hidePopups();
 			}

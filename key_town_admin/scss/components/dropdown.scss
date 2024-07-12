@@ -63,6 +63,10 @@
 		border-radius: var(--border-radius);
 		z-index: 10;
 
+		&.large-content {
+			min-width: 1200px;
+		}
+
 		.head {
 			padding: var(--padding) calc(var(--padding)*2) var(--padding) calc(var(--padding)*0.75);
 			background-color: $color_secondary_button;
@@ -158,6 +162,17 @@
 				position: absolute;
 				right: auto; left: 52px;
 			}
+		}
+	}
+}
+
+
+@media (max-width: 1480px) {
+
+	.dropdown-content {
+
+		&.large-content {
+			min-width: 900px;
 		}
 	}
 }

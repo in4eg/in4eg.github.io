@@ -3,7 +3,7 @@
 <head>
 
 	<meta charset="UTF-8">
-	<title>Key Town :: Main</title>
+	<title>Key Town :: Deals</title>
 
 	<link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
 	<link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
@@ -336,9 +336,106 @@
 							</button>
 						</li>
 						<li class="item">
-							<button class="button button-square nav-button" data-tooltip="Фільтри" data-call="#filtersModal">
-								<i class="icon icon-filter"></i>
-							</button>
+							<div class="dropdown" data-dropdown data-origin="right">
+								<div class="anchor button not-active button-square nav-button" data-tooltip="Фільтри">
+									<i class="icon icon-filter"></i>
+								</div>
+								<div class="dropdown-content large-content ">
+									<div class="head">
+										<div class="text">
+											<i class="icon icon-filter"></i>
+											<span class="text">Фільтри</span>
+										</div>
+										<button class="button close-dropdown">
+											<i class="icon icon-close"></i>
+										</button>
+									</div>
+									<div class="bottom">
+										<form action="" class="form">
+	<div class="row">
+		<div class="col-xs-6">
+			<div class="input-cover with-label large-space">
+				<label for="filterType" class="label">Тип об'єкту:</label>
+				<select name="filterType" id="filterType" class="select" data-multiple="true" multiple>
+					<option value="Вибрати тип об'єкту" disabled selected>Вибрати тип об'єкту</option>
+					<option value="1 км. кв.">1 км. кв.</option>
+					<option value="2 км. кв.">2 км. кв.</option>
+					<option value="3 км. кв.">3 км. кв.</option>
+					<option value="Будинок">Будинок</option>
+				</select>
+			</div>
+		</div>
+		<div class="col-xs-6">
+			<div class="input-cover with-label large-space">
+				<label for="filterCity" class="label">Місто:</label>
+				<select name="filterCity" id="addClientCitrCity" class="select" data-multiple="true" multiple>
+					<option value="Вибрати місто" disabled selected>Вибрати місто</option>
+					<option value="Київ">Київ</option>
+					<option value="Львів">Львів</option>
+					<option value="Харків">Харків</option>
+					<option value="Дніпро">Дніпро</option>
+					<option value="Одеса">Одеса</option>
+				</select>
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-xs-6">
+			<div class="input-cover with-label large-space">
+				<label for="filterType" class="label">Рієлтор:</label>
+				<select name="filterType" id="filterType" class="select" data-multiple="true" multiple>
+					<option value="Вибрати власника" disabled selected>Вибрати рієлтора</option>
+					<option value="Сокіл Євген Павлович">Сокіл Євген Павлович</option>
+					<option value="Косач Ірина Петрівна">Косач Ірина Петрівна</option>
+					<option value="Ткач Василь Іванович">Ткач Василь Іванович</option>
+					<option value="Зубенко Ніна Павлівна">Зубенко Ніна Павлівна</option>
+				</select>
+			</div>
+		</div>
+		<div class="col-xs-6">
+			<div class="input-cover with-label large-space">
+				<label for="filterPlace" class="label">Район:</label>
+				<select name="filterPlace" id="filterPlace" class="select" data-multiple="true" multiple>
+					<option value="Вибрати район" disabled selected>Вибрати район</option>
+					<option value="Печерський" >Печерський</option>
+					<option value="Шевченківський">Шевченківський</option>
+					<option value="Голосіївський">Голосіївський</option>
+					<option value="Дарницький">Дарницький</option>
+					<option value="Солом'янський">Солом'янський</option>
+				</select>
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-xs-6">
+			<div class="input-cover with-label large-space">
+				<label for="filterAction" class="label">Рієлтор дії:</label>
+				<select name="filterAction" id="filterAction" class="select" data-multiple="true" multiple>
+					<option value="Вибрати дію" disabled selected>Вибрати дію</option>
+					<option value="Збережено">Збережено</option>
+					<option value="Переглянуто">Переглянуто</option>
+					<option value="Ще дія">Ще дія</option>
+					<option value="Тут ще одна">Тут ще одна</option>
+				</select>
+			</div>
+		</div>
+	</div>
+	<div class="input-cover large-space">
+		<button class="button button-info fixed-width" type="submit">
+			<span class="text">Зберегти</span>
+			<span class="fade"></span>
+		</button>
+	</div>
+	<div class="input-cover collapsed-bottom large-space">
+		<button class="button button-danger fixed-width" type="reset">
+			<span class="text">Очистити</span>
+			<span class="fade"></span>
+		</button>
+	</div>
+</form>
+									</div>
+								</div>
+							</div>
 						</li>
 						<li class="item">
 							<button class="button button-square nav-button" data-tooltip="Перевірка № ID" data-call="#checkIdModal">
@@ -369,7 +466,7 @@
 							</a>
 						</li>
 						<li class="item">
-							<a href="deals.html" class="button button-square nav-button" data-tooltip="Перейти на сторінку створення угоди">
+							<a href="deals-add.html" class="button button-square nav-button" data-tooltip="Перейти на сторінку створення угоди">
 								<i class="icon icon-key"></i>
 							</a>
 						</li>
@@ -481,7 +578,120 @@
 			<div class="side-content">
 				<main class="page-main" id="pageMain">
 					<!-- CONTENT -->
-					DEALS
+					<div class="spaced-bottom">
+						<button class="button button-primary" data-tooltip="Додати новий контакт" data-call="#addDealModal">
+							<i class="icon icon-plus"></i>
+							<span class="text">Додати нову угоду</span>
+						</button>
+					</div>
+					<div class="spaced-bottom">
+						<h1>
+							Угоди
+							<small>з 1 по 250 з 1083</small>
+						</h1>
+					</div>
+					<div class="spaced-bottom">
+						<div class="row">
+							<div class="col-xs-6">
+								<!-- pagination -->
+								<div class="pagination">
+	<div class="pagination-elements">
+		<a href="#" class="link item" data-tooltip="На початок"><i class="icon icon-cheveron-left"></i></a>
+		<a href="#" class="link item active" data-tooltip="1">1</a>
+		<a href="#" class="link item" data-tooltip="2">2</a>
+		<a href="#" class="link item" data-tooltip="3">3</a>
+		<a href="#" class="link item" data-tooltip="4">4</a>
+		<span class="empty item">...</span>
+		<a href="#" class="link item" data-tooltip="В кінець"><i class="icon icon-cheveron-right"></i></a>
+	</div>
+</div>
+								<!-- / pagination -->
+							</div>
+						</div>
+					</div>
+					<!-- DEALS TABLE -->
+					<form class="table-cover form">
+	<table class="contacts-table table simple-table">
+		<thead>
+			<tr class="primary-top">
+				<th>
+					<button class="transparent-button" data-tooltip="Сортувати по зростанню/спаданню">
+						<span class="text">
+							ID
+							<i class="icon icon-select-arrows"></i>
+						</span>
+					</button>
+				</th>
+				<th>
+					<button class="transparent-button" data-tooltip="Сортувати по зростанню/спаданню">
+						<span class="text">
+							Дата
+							<i class="icon icon-select-arrows"></i>
+						</span>
+					</button>
+				</th>
+				<th><span class="text">Загальний опис</span></th>
+				<th><span class="text">Ім`я рієлтора</span></th>
+			</tr>
+			<tr class="gray-bottom">
+				<!-- id -->
+				<th><input type="number" min="0" class="input smaller-input" data-tooltip="Введіть ID для пошуку"></th>
+				<!-- date -->
+				<th><input type="date" class="input smaller-input" data-tooltip="Виберіть дату для пошуку"></th>
+				<!-- description -->
+				<th><input type="text" class="input smaller-input" data-tooltip="Введіть ключові слова для пошуку"></th>
+				<!-- rieltor name -->
+				<th><input type="text" class="input smaller-input" data-tooltip="Введіть ім'я для пошуку"></th>
+			</tr>
+		</thead>
+		<!-- TBODY -->
+		<tbody>
+			<!-- contact element -->
+			
+			<!-- / contact element -->
+		</tbody>
+		<!-- / TBODY -->
+	</table>
+</form>
+					<!-- /DEALS TABLE -->
+					<div class="spaced-bottom spaced-top">
+						<div class="row middle-xs">
+							<div class="col-xs-7">
+								<div class="table-bottom">
+									<h3 class="bottom-title">
+										Угоди
+										<small>з 1 по 250 з 1083</small>
+									</h3>
+									<form action="" class="form">
+										<select name="newClientCitizenship" id="newClientCitizenship" class="select">
+											<option value="50" selected>50</option>
+											<option value="150">150</option>
+											<option value="250">250</option>
+											<option value="Всі">Всі</option>
+										</select>
+										<div class="caption">
+											угод на сторінку
+										</div>
+									</form>
+								</div>
+							</div>
+							<div class="col-xs-5 align-right">
+								<!-- pagination -->
+								<div class="pagination">
+	<div class="pagination-elements">
+		<a href="#" class="link item" data-tooltip="На початок"><i class="icon icon-cheveron-left"></i></a>
+		<a href="#" class="link item active" data-tooltip="1">1</a>
+		<a href="#" class="link item" data-tooltip="2">2</a>
+		<a href="#" class="link item" data-tooltip="3">3</a>
+		<a href="#" class="link item" data-tooltip="4">4</a>
+		<span class="empty item">...</span>
+		<a href="#" class="link item" data-tooltip="В кінець"><i class="icon icon-cheveron-right"></i></a>
+	</div>
+</div>
+								<!-- / pagination -->
+							</div>
+						</div>
+					</div>
 					<!-- / CONTENT -->
 				</main>
 				<!-- / main-content -->
@@ -519,7 +729,7 @@
 			<form action="" class="form">
 				<div class="input-cover with-label">
 					<label for="idSearch" class="label">№ ID:<sup>*</sup></label>
-					<input type="number" class="input" required placeholder="Ведіть номер оголошення" id="idSearch">
+					<input type="number" min="0" class="input" required placeholder="Ведіть номер оголошення" id="idSearch">
 					<div class="alert">Не правильно введено номер оголошення</div>
 				</div>
 				<div class="input-cover with-label collapsed-bottom">
@@ -623,23 +833,6 @@
 	</div>
 </div>
 	<!-- / create a reminding -->
-	<!-- filters -->
-	<div id="filtersModal" class="popup">
-	<div class="inner">
-		<div class="head">
-			<h2 class="modal-title">
-				<i class="icon icon-filter"></i>
-				Обрати фільтри
-			</h2>
-			<button type="button" class="close-popup button" data-tooltip="Закрити вікно">&times;</button>
-		</div>
-		<div class="content">
-			
-		</div>
-	</div>
-</div>
-	<!-- / filters -->
-
 
 	<script src="js/lib/jquery.min.js"></script>
 	<script src="js/plugins/jquery.selecter.js"></script>

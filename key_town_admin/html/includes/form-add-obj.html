@@ -1,10 +1,10 @@
-<h1 class="spaced-bottom">Створити об'єкт</h1>
+<h1 class="spaced-bottom">Додати новий об'єкт</h1>
 <form action="" class="form">
 	<div class="tabs" data-tabs>
-		<div class="tab active" data-tab="0" data-tooltip="Редагувати основну інформацію">
+		<div class="tab active" data-tab="0" data-tooltip="Додати основну інформацію">
 			Основна інформація
 		</div>
-		<div class="tab" data-tab="1" data-tooltip="Редагувати фото та відео">
+		<div class="tab" data-tab="1" data-tooltip="Додати фото та відео">
 			Фото та відео об'єкту
 		</div>
 		<div class="tab-content active">
@@ -40,7 +40,7 @@
 						<div class="col-xs-4">
 							<div class="input-cover large-space">
 								<label for="addObjPrice" class="label spaced-bottom">Ціна: <sup>*</sup></label>
-								<input type="number" class="input" required placeholder="Введіть ціну в грн" id="addObjPrice">
+								<input type="number" min="0" class="input" required placeholder="Введіть ціну в грн" id="addObjPrice">
 								<div class="alert">Тільки цифри</div>
 							</div>
 						</div>
@@ -95,13 +95,13 @@
 						<div class="col-xs-4">
 							<div class="input-cover large-space">
 								<label for="addObjFlor" class="label spaced-bottom">Поверх: <sup>*</sup></label>
-								<input type="number" class="input" id="addObjFlor" placeholder="Введіть поверх">
+								<input type="number" min="0" class="input" id="addObjFlor" placeholder="Введіть поверх">
 							</div>
 						</div>
 						<div class="col-xs-4">
 							<div class="input-cover large-space">
 								<label for="addObjMaxFlor" class="label spaced-bottom">Всього поверхів: <sup>*</sup></label>
-								<input type="number" class="input" id="addObjMaxFlor" placeholder="Введіть скільки всього поверхів">
+								<input type="number" min="0" class="input" id="addObjMaxFlor" placeholder="Введіть скільки всього поверхів">
 							</div>
 						</div>
 					</div>
@@ -109,19 +109,19 @@
 						<div class="col-xs-4">
 							<div class="input-cover large-space">
 								<label for="addObjSquare" class="label spaced-bottom">Загальна площа: <sup>*</sup></label>
-								<input type="number" class="input" id="addObjSquare" placeholder="Введіть загальну площу">
+								<input type="number" min="0" class="input" id="addObjSquare" placeholder="Введіть загальну площу">
 							</div>
 						</div>
 						<div class="col-xs-4">
 							<div class="input-cover large-space">
 								<label for="addObjSquareLive" class="label spaced-bottom">Житлова площа: <sup>*</sup></label>
-								<input type="number" class="input" id="addObjSquareLive" placeholder="Введіть житлову площу">
+								<input type="number" min="0" class="input" id="addObjSquareLive" placeholder="Введіть житлову площу">
 							</div>
 						</div>
 						<div class="col-xs-4">
 							<div class="input-cover large-space">
 								<label for="addObjSquareKitchen" class="label spaced-bottom">Площа кухні (м <sup>2</sup>): <sup>*</sup></label>
-								<input type="number" class="input" id="addObjSquareKitchen" placeholder="Введіть площу кухні">
+								<input type="number" min="0" class="input" id="addObjSquareKitchen" placeholder="Введіть площу кухні">
 							</div>
 						</div>
 					</div>
@@ -129,7 +129,7 @@
 						<div class="col-xs-4">
 							<div class="input-cover large-space">
 								<label for="addObjDeposit" class="label spaced-bottom">Застава власнику (грн):</label>
-								<input type="number" class="input" id="addObjDeposit" placeholder="Введіть сумму">
+								<input type="number" min="0" class="input" id="addObjDeposit" placeholder="Введіть сумму">
 							</div>
 						</div>
 						<div class="col-xs-4">
@@ -160,27 +160,27 @@
 				</div>
 				<div class="col-xs-2 align-right">
 					<div class="input-cover large-space">
-						<button class="button button-info fixed-width" type="submit" data-tooltip="Зберегти об'єкт">
-							<span class="text">Зберегти</span>
+						<button class="button button-danger fixed-width" type="reset" data-tooltip="Очистити дані">
+							<span class="text">Очистити</span>
 						</button>
 					</div>
 					<div class="input-cover large-space collapsed-bottom">
-						<button class="button button-danger fixed-width" type="reset" data-tooltip="Очистити дані">
-							<span class="text">Відміна</span>
+						<button class="button button-info fixed-width" type="submit" data-tooltip="Зберегти об'єкт">
+							<span class="text">Зберегти</span>
 						</button>
 					</div>
 				</div>
 			</div>
 		</div>
 		<div class="tab-content">
-			<div class="input-cover large-space load-cover">
-				<label id="fileLoader" class="label-file" for="addObjFiles">
+			<div class="input-cover large-space load-cover" id="addFilesLoader" data-loader>
+				<label id="addFileLoader" class="label-file" for="addObjFiles" data-label>
 					<div class="caption">
 						<i class="icon icon-cloud-upload"></i>
 						<div class="text">Завантажте файли</div>
 					</div>
 				</label>
-				<input type="file" id="addObjFiles" multiple>
+				<input type="file" id="addObjFiles" multiple data-file>
 			</div>
 		</div>
 	</div>

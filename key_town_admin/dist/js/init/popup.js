@@ -63,7 +63,7 @@ $(document).ready(function() {
 			hidePopups();
 		});
 		$('.popup').click(function(e) {
-			if ($(e.target).closest('.inner').length === 0) {
+			if ($(e.target).closest('.inner').length === 0 && $(e.target).closest('.files-cover').length === 0) {
 				e.preventDefault();
 				hidePopups();
 			}

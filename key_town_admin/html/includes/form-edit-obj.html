@@ -1,21 +1,21 @@
 <h1 class="spaced-bottom">Власник ID: 152066</h1>
 <form action="" class="form">
 	<div class="tabs" data-tabs>
-		<div class="tab" data-tab="0" data-tooltip="Редагувати основну інформацію">
+		<div class="tab active" data-tab="0" data-tooltip="Редагувати основну інформацію">
 			Основна інформація
 		</div>
-		<div class="tab active" data-tab="1" data-tooltip="Редагувати фото та відео">
+		<div class="tab" data-tab="1" data-tooltip="Редагувати фото та відео">
 			Фото та відео об'єкту
 		</div>
-		<div class="tab-content">
+		<div class="tab-content active">
 			<div class="row">
 				<div class="col-xs-10">
 					<div class="row">
 						<div class="col-xs-8">
 							<div class="input-cover large-space">
 								<select name="editObjOwnerSelect" id="editObjOwnerSelect" class="select" data-search="true">
-									<option value="Вибрати власника" selected disabled>Вибрати власника</option>
-									<option value="Сокіл Євген Павлович">Сокіл Євген Павлович</option>
+									<option value="Вибрати власника" disabled>Вибрати власника</option>
+									<option value="Сокіл Євген Павлович" selected>Сокіл Євген Павлович</option>
 									<option value="Косач Ірина Петрівна">Косач Ірина Петрівна</option>
 									<option value="Ткач Василь Іванович">Ткач Василь Іванович</option>
 									<option value="Зубенко Ніна Павлівна">Зубенко Ніна Павлівна</option>
@@ -40,7 +40,7 @@
 						<div class="col-xs-4">
 							<div class="input-cover large-space">
 								<label for="editObjPrice" class="label spaced-bottom">Ціна: <sup>*</sup></label>
-								<input type="number" class="input" required placeholder="Введіть ціну в грн" id="editObjPrice">
+								<input type="number" min="0" class="input" required placeholder="Введіть ціну в грн" id="editObjPrice" value="12000">
 								<div class="alert">Тільки цифри</div>
 							</div>
 						</div>
@@ -48,8 +48,8 @@
 							<div class="input-cover large-space">
 								<label for="editObjType" class="label spaced-bottom">Тип: <sup>*</sup></label>
 								<select name="editObjType" id="editObjType" class="select" data-search="true">
-									<option value="Вибрати тип об'єкту" selected disabled>Вибрати тип об'єкту</option>
-									<option value="1 км. кв.">1 км. кв.</option>
+									<option value="Вибрати тип об'єкту" disabled>Вибрати тип об'єкту</option>
+									<option value="1 км. кв." selected>1 км. кв.</option>
 									<option value="2 км. кв.">2 км. кв.</option>
 									<option value="3 км. кв.">3 км. кв.</option>
 									<option value="Будинок">Будинок</option>
@@ -62,8 +62,8 @@
 							<div class="input-cover large-space">
 								<label for="editObjCity" class="label spaced-bottom">Місто: <sup>*</sup></label>
 								<select name="editObjCity" id="editObjCity" class="select" data-search="true">
-									<option value="Вибрати місто" selected disabled>Вибрати місто</option>
-									<option value="Київ">Київ</option>
+									<option value="Вибрати місто" disabled>Вибрати місто</option>
+									<option value="Київ" selected>Київ</option>
 									<option value="Львів">Львів</option>
 									<option value="Харків">Харків</option>
 									<option value="Дніпро">Дніпро</option>
@@ -75,8 +75,8 @@
 							<div class="input-cover large-space">
 								<label for="editObjPlace" class="label spaced-bottom">Район: <sup>*</sup></label>
 								<select name="editObjPlace" id="editObjPlace" class="select" data-search="true">
-									<option value="Вибрати район" selected disabled>Вибрати район</option>
-									<option value="Печерський">Печерський</option>
+									<option value="Вибрати район" disabled>Вибрати район</option>
+									<option value="Печерський" selected>Печерський</option>
 									<option value="Шевченківський">Шевченківський</option>
 									<option value="Голосіївський">Голосіївський</option>
 									<option value="Дарницький">Дарницький</option>
@@ -89,19 +89,19 @@
 						<div class="col-xs-4">
 							<div class="input-cover large-space">
 								<label for="editObjAdress" class="label spaced-bottom">Адреса: <sup>*</sup></label>
-								<input type="text" class="input" id="editObjAdress" placeholder="Введіть адресу">
+								<input type="text" class="input" id="editObjAdress" placeholder="Введіть адресу" value="бул. Шевченка, буд 352">
 							</div>
 						</div>
 						<div class="col-xs-4">
 							<div class="input-cover large-space">
 								<label for="editObjFlor" class="label spaced-bottom">Поверх: <sup>*</sup></label>
-								<input type="number" class="input" id="editObjFlor" placeholder="Введіть поверх">
+								<input type="number" min="0" class="input" id="editObjFlor" placeholder="Введіть поверх" value="3">
 							</div>
 						</div>
 						<div class="col-xs-4">
 							<div class="input-cover large-space">
 								<label for="editObjMaxFlor" class="label spaced-bottom">Всього поверхів: <sup>*</sup></label>
-								<input type="number" class="input" id="editObjMaxFlor" placeholder="Введіть скільки всього поверхів">
+								<input type="number" min="0" class="input" id="editObjMaxFlor" placeholder="Введіть скільки всього поверхів" value="7">
 							</div>
 						</div>
 					</div>
@@ -109,19 +109,19 @@
 						<div class="col-xs-4">
 							<div class="input-cover large-space">
 								<label for="editObjSquare" class="label spaced-bottom">Загальна площа: <sup>*</sup></label>
-								<input type="number" class="input" id="editObjSquare" placeholder="Введіть загальну площу">
+								<input type="number" min="0" class="input" id="editObjSquare" placeholder="Введіть загальну площу" value="120">
 							</div>
 						</div>
 						<div class="col-xs-4">
 							<div class="input-cover large-space">
 								<label for="editObjSquareLive" class="label spaced-bottom">Житлова площа: <sup>*</sup></label>
-								<input type="number" class="input" id="editObjSquareLive" placeholder="Введіть житлову площу">
+								<input type="number" min="0" class="input" id="editObjSquareLive" placeholder="Введіть житлову площу" value="110">
 							</div>
 						</div>
 						<div class="col-xs-4">
 							<div class="input-cover large-space">
 								<label for="editObjSquareKitchen" class="label spaced-bottom">Площа кухні (м <sup>2</sup>): <sup>*</sup></label>
-								<input type="number" class="input" id="editObjSquareKitchen" placeholder="Введіть площу кухні">
+								<input type="number" min="0" class="input" id="editObjSquareKitchen" placeholder="Введіть площу кухні" value="40">
 							</div>
 						</div>
 					</div>
@@ -129,33 +129,33 @@
 						<div class="col-xs-4">
 							<div class="input-cover large-space">
 								<label for="editObjDeposit" class="label spaced-bottom">Застава власнику (грн):</label>
-								<input type="number" class="input" id="editObjDeposit" placeholder="Введіть сумму">
+								<input type="number" min="0" class="input" id="editObjDeposit" placeholder="Введіть сумму" value="0">
 							</div>
 						</div>
 						<div class="col-xs-4">
 							<div class="input-cover large-space">
 								<label for="editObjFreeDate" class="label spaced-bottom">Об'єкт звільниться:</label>
-								<input type="date" class="input" id="editObjFreeDate">
+								<input type="date" class="input" id="editObjFreeDate" value="2024-08-22">
 							</div>
 						</div>
 						<div class="col-xs-4">
 							<div class="input-cover large-space">
 								<label for="editObjShowdate" class="label spaced-bottom">Об'єкт показують:</label>
-								<input type="date" class="input" id="editObjShowdate">
+								<input type="date" class="input" id="editObjShowdate" value="2024-08-01">
 							</div>
 						</div>
 					</div>
 					<div class="input-cover large-space">
 						<label for="editObjTitle" class="label spaced-bottom">Заголовок: <sup>*</sup></label>
-						<input type="text" class="input" id="editObjTitle" placeholder="Введіть заголовок">
+						<input type="text" class="input" id="editObjTitle" placeholder="Введіть заголовок" value="Власник ID: 152066">
 					</div>
 					<div class="input-cover large-space">
 						<label for="editObjDescription" class="label spaced-bottom">Опис:</label>
-						<textarea class="textarea" id="editObjDescription" placeholder="Введіть короткий опис"></textarea>
+						<textarea class="textarea" id="editObjDescription" placeholder="Введіть короткий опис">Здається довгостроково 1 к квартира на Русанівській набережній Здається в довгострокову оренду охайна та світла однокімнатна квартира за адресою Русанівська набережна. Квартира знаходиться на 11 поверсі/16 пов. будинку, площею 36 м.кв для 1-2 людей. Квартира з меблями, укомплектована необхідною побутовою технікою: кондиціонер, холодильник, мікрохвильова піч, пральна машина, пилесмок, в кімнаті велика шафа купе, розкладний диван, вана, плита з духовкою. Будинок знаходиться поряд з магазинами, школою та дитячим садком, сучасним футбольним та баскетбольним полем, АТБ, Сільпо, аптеки. Хороша транспортна розв"язка: метро Лівобережная 10 хвилин пішки.</textarea>
 					</div>
 					<div class="input-cover large-space">
 						<label for="editObjComment" class="label spaced-bottom">Коментар:</label>
-						<textarea class="textarea" id="editObjComment" placeholder="Введіть додатковий коментар"></textarea>
+						<textarea class="textarea" id="editObjComment" placeholder="Введіть додатковий коментар">Тут якийсь коментар</textarea>
 					</div>
 				</div>
 				<div class="col-xs-2 align-right">
@@ -192,7 +192,8 @@
 				</div>
 			</div>
 		</div>
-		<div class="tab-content active">
+		<div class="tab-content">
+			<!-- files load -->
 			<div class="input-cover large-space load-cover" id="filesLoader" data-loader>
 				<label id="fileLoader" class="label-file" for="editObjFiles" data-label>
 					<div class="caption">
@@ -201,7 +202,45 @@
 					</div>
 				</label>
 				<input type="file" id="editObjFiles" multiple data-file>
+				<!-- thats how loaded images need to be look -->
+				<!-- 1 -->
+				<div class="files-cover">
+					<div class="inner">
+						<img src="img/temp/1.jpg">
+					</div>
+					<div class="file-name">1.jpg</div>
+				</div>
+				<!-- 2 -->
+				<div class="files-cover">
+					<div class="inner">
+						<img src="img/temp/2.jpg">
+					</div>
+					<div class="file-name">2.jpg</div>
+				</div>
+				<!-- 3 -->
+				<div class="files-cover">
+					<div class="inner">
+						<img src="img/temp/3.jpg">
+					</div>
+					<div class="file-name">3.jpg</div>
+				</div>
+				<!-- 4 -->
+				<div class="files-cover">
+					<div class="inner">
+						<img src="img/temp/4.jpg">
+					</div>
+					<div class="file-name">4.jpg</div>
+				</div>
+				<!-- 5 -->
+				<div class="files-cover">
+					<div class="inner">
+						<img src="img/temp/5.jpg">
+					</div>
+					<div class="file-name">5.jpg</div>
+				</div>
+				<!-- / thats how loaded images need to be look -->
 			</div>
+			<!-- files load -->
 		</div>
 	</div>
 </form>

@@ -1,47 +1,5 @@
-<div class="spaced-bottom">
-	<button class="button button-primary" data-tooltip="Додати новий об'єкт" data-call="#addObjectModal">
-		<i class="icon icon-plus"></i>
-		<span class="text">Додати новий об'єкт</span>
-	</button>
-</div>
-<div class="spaced-bottom">
-	<h1>
-		Актуальні об'єкти
-		<small>з 1 по 250 з 1083</small>
-	</h1>
-</div>
-<div class="spaced-bottom">
-	<div class="row">
-		<div class="col-xs-6">
-			<!-- pagination -->
-			@@include('pagination.html')
-			<!-- / pagination -->
-		</div>
-		<div class="col-xs-6 align-right">
-			<form action="" class="form">
-				<ul class="clear simple-list smaller-spaces">
-					<li class="item">
-						<input type="text" class="input" id="multySearch" placeholder="Мульти-Пошук`—`Дефіс">
-					</li>
-					<li class="item">
-						<button class="button button-gray button-square" type="button" data-tooltip="Роздрукувати" data-print="printedObjects">
-							<span class="text"><i class="icon icon-print"></i></span>
-						</button>
-					</li>
-					<li class="item">
-						<button class="button button-gray button-square" type="reset" data-tooltip="Очистити фільтри">
-							<span class="text"><i class="icon icon-close"></i></span>
-						</button>
-					</li>
-				</ul>
-			</form>
-		</div>
-	</div>
-</div>
-
-<!-- OBJECTS -->
 <form class="table-cover form">
-	<table class="objects-table table" id="printedObjects">
+	<table class="objects-table table simple-table" id="printedObjects">
 		<thead>
 			<tr class="primary-top">
 				<th>
@@ -82,7 +40,7 @@
 			</tr>
 			<tr class="gray-bottom">
 				<!-- id -->
-				<th><input type="number" class="input smaller-input" data-tooltip="Введіть ID для пошуку"></th>
+				<th><input type="number" min="0" class="input smaller-input" data-tooltip="Введіть ID для пошуку"></th>
 				<!-- date -->
 				<th><input type="date" class="input smaller-input" data-tooltip="Виберіть дату для пошуку"></th>
 				<!-- contact -->
@@ -114,32 +72,3 @@
 		<!-- / TBODY -->
 	</table>
 </form>
-<!-- /OBJECTS -->
-<div class="spaced-bottom spaced-top">
-	<div class="row middle-xs">
-		<div class="col-xs-6">
-			<div class="table-bottom">
-				<h3 class="bottom-title">
-					Актуальні об'єкти
-					<small>з 1 по 250 з 1083</small>
-				</h3>
-				<form action="" class="form">
-					<select name="newClientCitizenship" id="newClientCitizenship" class="select">
-						<option value="50" selected>50</option>
-						<option value="150">150</option>
-						<option value="250">250</option>
-						<option value="Всі">Всі</option>
-					</select>
-					<div class="caption">
-						об`єктів на сторінку
-					</div>
-				</form>
-			</div>
-		</div>
-		<div class="col-xs-6 align-right">
-			<!-- pagination -->
-			@@include('pagination.html')
-			<!-- / pagination -->
-		</div>
-	</div>
-</div>

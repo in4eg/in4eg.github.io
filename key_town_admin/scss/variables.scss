@@ -68,7 +68,9 @@ $footer-height: 122px;
 
 $squere_button_size: 42px;
 
-:root {
+:root,
+:after,
+:before {
 	--font-size: #{$font-size};
 	--font-size_small: #{$font-size_small};
 	--font-size_large: #{$font-size_large};
@@ -94,7 +96,9 @@ $squere_button_size: 42px;
 @media (max-width: 1480px) {
 	$squere_button_size: 39px;
 
-	:root {
+	:root,
+	:after,
+	:before {
 		--squere_button_size: #{$squere_button_size};
 	}
 }

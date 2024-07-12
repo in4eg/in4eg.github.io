@@ -1,8 +1,11 @@
 @import '../variables.scss';
 
-:root {
+:root,
+:after,
+:before {
 	--upload-files_height: 210px;
 	--upload-files_width: 280px;
+	--small-input_height: 29px;
 }
 
 .form {
@@ -82,12 +85,13 @@
 		background-color: transparent;
 		border: 1px solid $color_gray;
 		background-color: $color_white_clear;
-		padding: calc(var(--margin)*1.3);
+		padding: var(--margin) calc(var(--margin)*1.3);
 		border-radius: calc(var(--border-radius)/2);
+		height: var(--squere_button_size);
 
 		&.smaller-input {
 			padding: var(--space-gap) calc(var(--space-gap)*2);
-			height: 29px;
+			height: var(--small-input_height);
 		}
 
 		&:hover,
@@ -131,24 +135,44 @@
 		.files-cover {
 			display: inline-block;
 			vertical-align: top;
-			height: calc(var(--upload-files_height)/2.5);
-			width: calc(var(--upload-files_width)/2.5);
+			height: calc(var(--upload-files_height));
+			width: calc(var(--upload-files_width));
 			position: relative;
 			background-color: #d2ecff;
 			border-radius: var(--border-radius);
 			padding: 0;
-			overflow: hidden;
-			position: relative;
 			margin-right: var(--margin);
 			margin-top: calc(var(--margin)*2);
+			margin-bottom: calc(var(--margin)*2);
+			cursor: pointer;
+			border: 1px solid #d2ecff;
+			transition: .2s;
 
 			&.error-cover {
 				background-image: url(../img/picture-broken.svg);
 				background-repeat: no-repeat;
-				background-position: center;
+				background-position: top center;
 				background-size: 50%;
-				padding: var(--padding);
-				color: $color_danger;
+				padding: calc(var(--padding)/2);
+				font-size: var(--font-size);
+
+				.error-text {
+					color: $color_danger;
+					position: absolute;
+					bottom: calc(var(--padding)/2);
+					left: calc(var(--padding)/2);
+					right: calc(var(--padding)/2);
+					line-height: 1.2;
+				}
+			}
+
+			.inner {
+				overflow: hidden;
+				position: relative;
+				position: absolute;
+				top: 0; left: 0;
+				right: 0; bottom: 0;
+				border-radius: var(--border-radius);
 			}
 
 			img,
@@ -157,6 +181,39 @@
 				top: 0; left: 50%;
 				height: 100%; width: auto;
 				transform: translateX(-50%);
+			}
+
+			.file-name {
+				position: absolute;
+				left: 0; top: 100%;
+				right: 0;
+				padding: calc(var(--padding)/4) calc(var(--padding)/2);
+				font-size: var(--font-size);
+			}
+
+			&:after {
+				content: '';
+				height: var(--small-input_height); width: var(--small-input_height);
+				background-color: $color_white;
+				background-image: url(../img/trash.svg);
+				border-radius: calc(var(--border-radius)/2);
+				background-repeat: no-repeat;
+				background-position: center;
+				background-size: 50%;
+				z-index: 2;
+				top: var(--space-gap); right: var(--space-gap);
+				display: block;
+				position: absolute;
+				opacity: .7;
+				transition: .2s;
+			}
+
+			&:hover {
+				border-color: $color_danger;
+
+				&:after {
+					opacity: 1;
+				}
 			}
 		}
 	}
