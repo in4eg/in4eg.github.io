@@ -1,63 +1,75 @@
 
-function getBase64(file) {
+function getBase64(file, loaderMainWrap) {
 	var reader = new FileReader();
-	var errorStatus = {
-		errorLoad: 'Помилка завантаження',
-		errorType: 'Не підходящий формат для фото чи відео'
-	}
-
 	reader.readAsDataURL(file);
+	console.warn(file)
 	if (file.type.startsWith("image/")) {
 		reader.onload = function () {
-			appendImage(reader.result);
+			appendImage(file.name, reader.result, loaderMainWrap);
 		};
 		reader.onerror = function (error) {
 			console.error('Error: ', error);
 		};
 	} else if (file.type.startsWith("video/")) {
 		reader.onload = function () {
-			appendVideo(reader.result);
+			appendVideo(file.name, reader.result, loaderMainWrap);
 		};
 		reader.onerror = function (error) {
-			console.error('Error: ', error);
-			appendError(errorStatus.errorLoad);
+			appendError(file.name,'load', loaderMainWrap);
 		};
 	} else {
-		console.error('Error: ', errorStatus.errorType);
-		appendError(errorStatus.errorType);
+		appendError(file.name, 'type', loaderMainWrap);
 	};
 };
 
-function appendImage(src){
+function appendImage(name, src, loaderMainWrap){
 	let coverEl = document.createElement("div");
 			coverEl.classList.add('files-cover');
 	let imgEl = document.createElement('img');
 			imgEl.src = src;
 	coverEl.appendChild(imgEl);
+	let nameEl = document.createElement("div");
+			nameEl.classList.add('file-name');
+			nameEl.appendChild(document.createTextNode(name));
+	coverEl.appendChild(nameEl);
 	loaderMainWrap.appendChild(coverEl);
 };
 
-function appendVideo(src){
+function appendVideo(name, src, loaderMainWrap){
 	let coverEl = document.createElement("div");
 			coverEl.classList.add('files-cover');
 	let videoEl = document.createElement('video')
 			videoEl.src = src
 			videoEl.controls = true;
 	coverEl.appendChild(videoEl);
+	let nameEl = document.createElement("div");
+			nameEl.classList.add('file-name');
+			nameEl.appendChild(document.createTextNode(name));
+	coverEl.appendChild(nameEl);
 	loaderMainWrap.appendChild(coverEl)
 };
 
-function appendError(text){
+function appendError(name, type, loaderMainWrap){
+	let errorStatus = {
+		load: 'Помилка завантаження',
+		type: 'Не підходящий формат для фото чи відео'
+	}
 	let coverEl = document.createElement("div");
 			coverEl.classList.add('error-cover');
-			coverEl.appendChild(document.createTextNode(text));
+			coverEl.classList.add('files-cover');
+			coverEl.appendChild(document.createTextNode(errorStatus[type]));
+	let nameEl = document.createElement("div");
+			nameEl.classList.add('file-name');
+			nameEl.appendChild(document.createTextNode(name));
+	coverEl.appendChild(nameEl);
 	loaderMainWrap.appendChild(coverEl);
 };
 
 function handleFiles(){
 	let files = this.files;
+	let loaderMainWrap = null;
 	for (var i = 0; i < files.length; i++) {
-		getBase64(files[i]);
+		getBase64(files[i], this.parentElement);
 	}
 }
 
@@ -82,13 +94,14 @@ document.querySelectorAll('[data-loader]').forEach(function(loaderCover, i){
 						e.preventDefault();
 						fileLoader.classList.remove('hover');
 						for (var i = 0; i < e.dataTransfer.files.length; i++) {
-							getBase64(e.dataTransfer.files[i]);
+							getBase64(e.dataTransfer.files[i], loaderCover);
 						}
 					}
 		} else if (coverChildren[i].hasAttribute('data-file')) {
 			let inputElement = coverChildren[i];
 					inputElement.addEventListener("change", handleFiles, false);
-
+		} else {
+			appendError('type', loaderCover);
 		}
 	}
 

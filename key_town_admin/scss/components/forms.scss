@@ -1,5 +1,10 @@
 @import '../variables.scss';
 
+:root {
+	--upload-files_height: 210px;
+	--upload-files_width: 280px;
+}
+
 .form {
 
 	.input-cover {
@@ -121,6 +126,38 @@
 			visibility: hidden;
 			position: absolute;
 			top: 0; left: 0;
+		}
+
+		.files-cover {
+			display: inline-block;
+			vertical-align: top;
+			height: calc(var(--upload-files_height)/2.5);
+			width: calc(var(--upload-files_width)/2.5);
+			position: relative;
+			background-color: #d2ecff;
+			border-radius: var(--border-radius);
+			padding: 0;
+			overflow: hidden;
+			position: relative;
+			margin-right: var(--margin);
+			margin-top: calc(var(--margin)*2);
+
+			&.error-cover {
+				background-image: url(../img/picture-broken.svg);
+				background-repeat: no-repeat;
+				background-position: center;
+				background-size: 50%;
+				padding: var(--padding);
+				color: $color_danger;
+			}
+
+			img,
+			video {
+				position: absolute;
+				top: 0; left: 50%;
+				height: 100%; width: auto;
+				transform: translateX(-50%);
+			}
 		}
 	}
 
