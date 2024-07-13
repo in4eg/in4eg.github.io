@@ -2,7 +2,8 @@
 
 
 :root {
-	--label_size: 42px;
+	--label_size: 14px;
+	--default-input_height: 41px;
 }
 
 .selecter-cover .label {
@@ -19,7 +20,7 @@ select {
 	background-color: transparent;
 	padding: calc(var(--margin) * 0.1) calc(var(--margin) * 3) calc(var(--margin) * 0.2) var(--margin);
 	border-radius: calc(var(--border-radius)/2);
-	height: 40px;
+	height: var(--default-input_height);
 	border: none;
 	box-shadow: none;
 	outline: none;
@@ -43,20 +44,50 @@ select {
 	text-align: left;
 	position: relative;
 	z-index: 1;
-	transition: 0.2s;
 	border: 1px solid $color_gray;
 	padding: var(--margin) calc(var(--margin) * 3) var(--margin) var(--margin);
 	border-radius: calc(var(--border-radius)/2);
-	white-space: nowrap;
 	overflow: hidden;
 	appearance: none;
 	outline: 0;
 	background-color: transparent;
 	background-image: url(../img/select-arrows.png);
 	background-repeat: no-repeat;
-	background-size: auto 30%;
+	background-size: 6px 12px;
 	background-position: right var(--margin) center;
 	cursor: pointer;
+
+	&.collapsed-bottom {
+		padding-bottom: 0;
+	}
+}
+.selecter .anchor .tag {
+	display: inline-block;
+	background-color: #e8e8e8;
+	padding: 0 5px;
+	color: #000;
+	border-radius: 2px;
+	border: 1px solid #b6b6b6;
+	margin-right: var(--margin);
+	cursor: pointer;
+	margin-bottom: 8px;
+
+	&:last-child {
+		margin-right: 0;
+	}
+
+	.delete {
+		color: #ff5a5a;
+		height: 20px; width: 20px;
+		background-color: transparent;
+		border: 0;
+		transform: translateY(0px);
+		cursor: pointer;
+	}
+}
+
+.selecter .anchor .tag:hover {
+	border-color: #ff5a5a;
 }
 .selecter .anchor:focus,
 .selecter .anchor:hover {
@@ -67,8 +98,6 @@ select {
 	position: absolute;
 	right: calc(var(--margin) * 2);
 	top: 50%;
-	-webkit-transform: translateY(-50%);
-	-ms-transform: translateY(-50%);
 	transform: translateY(-50%);
 }
 .selecter.opened .dropdown {
@@ -128,8 +157,6 @@ select {
 	z-index: 1;
 	right: var(--margin);
 	top: 50%;
-	-webkit-transform: translateY(-50%);
-	-ms-transform: translateY(-50%);
 	transform: translateY(-50%);
 	pointer-events: none;
 }
@@ -140,8 +167,6 @@ select {
 	opacity: 1;
 }
 .selecter .dropdown ul input[type="checkbox"]:focus ~ label:before {
-	-webkit-transition: 0.1s;
-	-o-transition: 0.1s;
 	transition: 0.1s;
 	border-color: #ccc;
 }
@@ -157,46 +182,35 @@ select {
 .selecter .dropdown ul label {
 	cursor: pointer;
 	line-height: 1.1;
-	-webkit-transition: 0.2s;
-	-o-transition: 0.2s;
 	transition: 0.2s;
 	display: inline-block;
 	position: absolute;
 	z-index: 1;
-	right: var(--margin);
+	right: calc(var(--margin)*2);
 	top: 50%;
-	-webkit-transform: translateY(-50%);
-	-ms-transform: translateY(-50%);
 	transform: translateY(-50%);
 }
 .selecter .dropdown ul label:before {
 	position: absolute;
-	height: calc(var(--label_size) * 0.8);
-	width: calc(var(--label_size) * 0.8);
+	height: var(--label_size);
+	width: var(--label_size);
 	content: "";
 	border-radius: 2px;
 	border: 1px solid #ccc;
-	-webkit-transition: 0.2s;
-	-o-transition: 0.2s;
 	transition: 0.2s;
-	left: calc(var(--margin) * -1.2);
-	top: 50%;
+	top: 50%; left: 50%;
 	z-index: 2;
-	-webkit-transform: translateY(-50%);
-	-ms-transform: translateY(-50%);
-	transform: translateY(-50%);
+	transform: translate(-50%, -50%);
 }
 .selecter .dropdown ul label:after {
 	content: "";
 	position: absolute;
-	height: calc(var(--label_size) * 0.5);
-	width: calc(var(--label_size) * 0.5);
-	left: 50%;
-	top: 50%;
-	-webkit-transform: translate(calc(var(--margin) * -1), -50%);
-	-ms-transform: translate(calc(var(--margin) * -1), -50%);
-	transform: translate(calc(var(--margin) * -1), -50%);
+	height: calc(var(--label_size) - 2px);
+	width: calc(var(--label_size) - 2px);
+	left: 50%;	top: 50%;
+	transform: translate(-50%, -50%);
 	background-color: #1975f5;
+	border: 2px solid #fff;
 	border-radius: 2px;
 	z-index: 3;
 	opacity: 0;

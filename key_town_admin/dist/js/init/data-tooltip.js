@@ -63,7 +63,9 @@ $(document).ready(function() {
 			this.setText('');
 			this.setCoordinates(0, 0);
 			let tooltip = document.getElementById('tooltip');
-			document.getElementById("tooltip").remove();
+			if (tooltip) {
+				tooltip.remove();
+			}
 		}
 	};
 

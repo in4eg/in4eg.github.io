@@ -350,8 +350,8 @@
 											<i class="icon icon-close"></i>
 										</button>
 									</div>
-									<div class="bottom">
-										<form action="" class="form">
+									<div class="bottom collapsed-top">
+										<form action="" class="form filters-form">
 	<div class="row">
 		<div class="col-xs-6">
 			<div class="input-cover with-label large-space">
@@ -368,7 +368,7 @@
 		<div class="col-xs-6">
 			<div class="input-cover with-label large-space">
 				<label for="filterCity" class="label">Місто:</label>
-				<select name="filterCity" id="addClientCitrCity" class="select" data-multiple="true" multiple>
+				<select name="filterCity" id="filterCity" class="select" data-multiple="true" multiple>
 					<option value="Вибрати місто" disabled selected>Вибрати місто</option>
 					<option value="Київ">Київ</option>
 					<option value="Львів">Львів</option>
@@ -420,19 +420,161 @@
 			</div>
 		</div>
 	</div>
-	<div class="input-cover large-space">
-		<button class="button button-info fixed-width" type="submit">
-			<span class="text">Зберегти</span>
-			<span class="fade"></span>
-		</button>
+	<div class="row">
+		<div class="col-xs-6">
+			<div class="input-cover with-label large-space">
+				<label for="filterFlorFrom" class="label">Поверх від:</label>
+				<input type="number" min="0" class="input" placeholder="Введіть значення" id="filterFlorFrom">
+			</div>
+		</div>
+		<div class="col-xs-6">
+			<div class="input-cover with-label large-space">
+				<label for="filterSquareFrom" class="label">Заг площа з (м<sup>2</sup>):</label>
+				<input type="number" min="0" class="input" placeholder="Введіть значення" id="filterSquareFrom">
+			</div>
+		</div>
 	</div>
-	<div class="input-cover collapsed-bottom large-space">
-		<button class="button button-danger fixed-width" type="reset">
-			<span class="text">Очистити</span>
-			<span class="fade"></span>
-		</button>
+	<div class="row">
+		<div class="col-xs-6">
+			<div class="input-cover with-label large-space">
+				<label for="filterFlorTo" class="label">Поверх до:</label>
+				<input type="number" min="0" class="input" placeholder="Введіть значення" id="filterFlorTo">
+			</div>
+		</div>
+		<div class="col-xs-6">
+			<div class="input-cover with-label large-space">
+				<label for="filterSquareTo" class="label">Заг площа до (м<sup>2</sup>):</label>
+				<input type="number" min="0" class="input" placeholder="Введіть значення" id="filterSquareTo">
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-xs-6">
+			<div class="input-cover with-label large-space">
+				<label for="filterSumFrom" class="label">Сума від: (грн)</label>
+				<input type="number" min="0" class="input" placeholder="Введіть значення" id="filterSumFrom">
+			</div>
+		</div>
+		<div class="col-xs-6">
+			<div class="input-cover with-label large-space">
+				<label for="filterRoomsFrom" class="label">Кімнат з:</label>
+				<input type="number" min="0" class="input" placeholder="Введіть значення" id="filterRoomsFrom">
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-xs-6">
+			<div class="input-cover with-label large-space">
+				<label for="filterSumTo" class="label">Сума до: (грн)</label>
+				<input type="number" min="0" class="input" placeholder="Введіть значення" id="filterSumTo">
+			</div>
+		</div>
+		<div class="col-xs-6">
+			<div class="input-cover with-label large-space">
+				<label for="filterRoomsTo" class="label">Кімнат до:</label>
+				<input type="number" min="0" class="input" placeholder="Введіть значення" id="filterRoomsTo">
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-xs-6">
+			<div class="input-cover with-label large-space">
+				<label for="filterAttributes" class="label">Атрибути:</label>
+				<select name="filterAttributes" id="filterAttributes" class="select" data-multiple="true" multiple>
+					<option value="Вибрати атрибути" disabled selected>Вибрати атрибути</option>
+					<option value="Атрибут 1">Атрибут 1</option>
+					<option value="Атрибут 2">Атрибут 2</option>
+					<option value="Атрибут 3">Атрибут 3</option>
+					<option value="Атрибут 4">Атрибут 4</option>
+				</select>
+			</div>
+		</div>
+		<div class="col-xs-6">
+			<div class="input-cover with-label large-space">
+				<label for="filterDateFrom" class="label">Дата з:</label>
+				<input type="date" class="input" id="filterDateFrom">
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-xs-6">
+			<div class="input-cover with-label large-space">
+				<label for="filterGeneral" class="label">Заг. пошук:</label>
+				<input type="text" class="input" id="filterGeneral" placeholder="Слово для пошуку, телефон">
+			</div>
+		</div>
+		<div class="col-xs-6">
+			<div class="input-cover with-label large-space">
+				<label for="filterDateTo" class="label">Дата до:</label>
+				<input type="date" class="input" id="filterDateTo">
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-xs-6">
+			<div class="input-cover with-label large-space">
+				<label for="filterId" class="label">№ID:</label>
+				<input type="text" class="input" id="filterId" placeholder="ID власника">
+			</div>
+		</div>
+		<div class="col-xs-6">
+			<div class="input-cover with-label large-space">
+				<label for="filterStage" class="label">Етап угоди:</label>
+				<select name="filterStage" id="filterStage" class="select" data-multiple="true" multiple>
+					<option value="Вибрати етап угоди" disabled selected>Вибрати етап угоди</option>
+					<option value="Етап 1">Етап 1</option>
+					<option value="Етап 2">Етап 2</option>
+					<option value="Етап 3">Етап 3</option>
+					<option value="Етап 4">Етап 4</option>
+				</select>
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-xs-6">
+			<div class="input-cover with-label large-space collapsed-bottom">
+				<ul class="simple-list clear top half-part-list">
+					<li class="item">
+						<div class="input-cover large-space">
+							<button class="button button-info button-block" type="submit">
+								<i class="icon icon-checkmark"></i>
+								<span class="text">Застосувати фільтр</span>
+							</button>
+						</div>
+					</li>
+					<li class="item">
+						<div class="input-cover collapsed-bottom large-space">
+							<button class="button button-danger button-block" type="reset">
+								<i class="icon icon-close"></i>
+								<span class="text">Очистити фільтри</span>
+							</button>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
 	</div>
 </form>
+<div class="details dropdown-spaced-top">
+	<div class="row">
+		<div class="col-xs-6">
+			<div class="input-cover with-label large-space collapsed-bottom">
+				<ul class="simple-list clear nowrap-list">
+					<li class="item">
+						<div class="large-text bold">Зберегти фільтр:</div>
+					</li>
+					<li class="item">
+						<input type="text" class="input fixed-width" id="filterName" placeholder="Введіть назву фільтру">
+					</li>
+					<li class="item">
+						<button class="button button-info button-square" type="button" data-tooltip="Зберегти">
+							<i class="icon icon-disk"></i>
+						</button>
+					</li>
+				</div>
+		</div>
+	</div>
+</div>
 									</div>
 								</div>
 							</div>

@@ -102,43 +102,38 @@
 				$(select).find('option[disabled]').prop('selected', true).attr('selected', 'true');
 			};
 		};
-
 	// ctx - select
-	function setValue(ctx, value, result, settings){
-		// $(ctx).val(value).trigger('change');
-		change(ctx, settings, $(ctx).val());
 
-		let adaptiveWidth = 300;
+	function setValue(ctx, value, result, settings){
+		change(ctx, settings, $(ctx).val());
 		var text = $(ctx).val();
 		if (value == true) {
 			text = 'yes'
 		} else if (value == false) {
 			text = 'no'
 		}
-		if (settings && settings.multiple) {
-			$(result).find('.anchor').html('');
-			var textArray = [];
-			if ($(ctx).children('[selected]').length) {
-				$(ctx).children('[selected]').each(function(i, option){
-					textArray.push($(option).text().trim());
-				});
-				if (textArray.length == 1) {
-					$(result).find('.anchor').html(textArray.toString());
-				} else {
-					if ($(result).find('.anchor').width() <= adaptiveWidth) {
-						var htmlCount = "<span class=\"count\">+"+(textArray.length-1)+"</span>";
-						$(result).find('.anchor').html(textArray[0]+''+htmlCount)
-					} else if ($(result).find('.anchor').width() > adaptiveWidth) {
-						let slicedArray = textArray.slice(0, 3);
-						var htmlCount = textArray.length > 3 ? "<span class=\"count\">+"+(textArray.length-3)+"</span>" : "";
-						$(result).find('.anchor').html(slicedArray.toString()+''+htmlCount)
-					}
-				}
-			};
+		if ($(ctx).val().length <= 0) {
+			$(result).find('.anchor').removeClass('collapsed-bottom');
+			$(result).find('.anchor').html($(ctx).find('[selected]').text().trim());
 		} else {
-			$(result).find('.anchor').html(text);
-			close(result, settings);
+			if (settings && settings.multiple) {
+				$(result).find('.anchor').html('');
+				var textArray = [];
+				if ($(ctx).children('[selected]').length) {
+					$(ctx).children('[selected]').each(function(i, option){
+						textArray.push($(option).text().trim());
+					});
+					for (let text of textArray) {
+						$(result).find('.anchor').addClass('collapsed-bottom');
+						$(result).find('.anchor').append( '<div class="tag">'+text.trim()+'<button class="delete">X</button></div>' )
+					}
+				};
+			} else {
+				$(result).find('.anchor').html(text);
+				close(result, settings);
+			};
 		};
+
 	};
 
 	/*

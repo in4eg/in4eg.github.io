@@ -74,6 +74,14 @@ h5 {
 	}
 }
 
+.large-text {
+	font-size: var(--font-size_large);
+
+	&.bold {
+		font-weight: bold;
+	}
+}
+
 .icon-with-text {
 	position: relative;
 	display: block;

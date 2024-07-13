@@ -5,7 +5,7 @@
 	text-align: left;
 	font-size: var(--font-size);
 
-	.anchor {
+	> .anchor {
 		background-color: $color_primary_button;
 		color: $color_primary;
 		box-shadow: 0px 2px 0px $color_primary_button_shadow;

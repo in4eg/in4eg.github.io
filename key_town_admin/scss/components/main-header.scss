@@ -37,6 +37,14 @@
 		padding-top: var(--padding);
 	}
 
+	.filters-form {
+		max-height: 400px;
+		overflow: auto;
+		padding-top: var(--padding);
+		padding-right: var(--padding);
+		margin-right: calc(var(--padding) * -1);
+	}
+
 	.details.dropdown-spaced-top {
 		padding-top: var(--padding);
 		border-top: 1px solid $color_gray;

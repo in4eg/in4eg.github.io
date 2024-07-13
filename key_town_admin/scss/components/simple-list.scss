@@ -19,6 +19,24 @@
 			padding: 0 var(--space-gap);
 		}
 	}
+
+	&.top {
+
+		> .item {
+			vertical-align: top;
+		}
+	}
+
+	&.half-part-list {
+
+		> .item {
+			width: 50%;
+		}
+	}
+
+	&.nowrap-list {
+		white-space: nowrap;
+	}
 }
 
 @media (max-width: 1480px) {
