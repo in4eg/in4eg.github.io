@@ -26,7 +26,7 @@
 	background-color: transparent;
 	border: 1px solid transparent;
 	border-radius: calc(var(--border-radius)/2);
-	padding: calc(var(--space-gap)*1.6 + 3px) calc(var(--padding)*2) calc(var(--space-gap)*1.6);
+	padding: calc(var(--space-gap)*1.6 + 3px) calc(var(--padding)/2) calc(var(--space-gap)*1.6);
 	height: var(--squere_button_size);
 
 	&.fixed-width {

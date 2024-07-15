@@ -3,7 +3,7 @@
 <head>
 
 	<meta charset="UTF-8">
-	<title>Key Town :: Black list</title>
+	<title>Key Town :: Actual Objects</title>
 
 	<link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
 	<link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
@@ -34,8 +34,14 @@
 				<main class="page-main" id="pageMain">
 					<!-- CONTENT -->
 					<div class="spaced-bottom">
+						<button class="button button-primary" data-tooltip="Додати новий об'єкт" data-call="#addObjectModal">
+							<i class="icon icon-plus"></i>
+							<span class="text">Додати новий об'єкт</span>
+						</button>
+					</div>
+					<div class="spaced-bottom">
 						<h1>
-							Чорний список контактів
+							Актуальні об'єкти
 							<small>з 1 по 250 з 1083</small>
 						</h1>
 					</div>
@@ -46,77 +52,36 @@
 								@@include('./includes/pagination.html')
 								<!-- / pagination -->
 							</div>
+							<div class="col-xs-6 align-right">
+								<form action="" class="form">
+									<ul class="clear simple-list smaller-spaces">
+										<li class="item">
+											<input type="text" class="input" id="multySearch" placeholder="Мульти-Пошук`—`Дефіс">
+										</li>
+										<li class="item">
+											<button class="button button-gray button-square" type="button" data-tooltip="Роздрукувати" data-print="printedObjects">
+												<span class="text"><i class="icon icon-print"></i></span>
+											</button>
+										</li>
+										<li class="item">
+											<button class="button button-gray button-square" type="reset" data-tooltip="Очистити фільтри">
+												<span class="text"><i class="icon icon-close"></i></span>
+											</button>
+										</li>
+									</ul>
+								</form>
+							</div>
 						</div>
 					</div>
-					<!-- CONTACTS -->
-					<form class="table-cover form">
-						<table class="contacts-table table simple-table">
-							<thead>
-								<tr class="primary-top">
-									<th>
-										<button class="transparent-button" data-tooltip="Сортувати по зростанню/спаданню">
-											<span class="text">
-												ID
-												<i class="icon icon-select-arrows"></i>
-											</span>
-										</button>
-									</th>
-									<th>
-										<button class="transparent-button" data-tooltip="Сортувати по зростанню/спаданню">
-											<span class="text">
-												Дата
-												<i class="icon icon-select-arrows"></i>
-											</span>
-										</button>
-									</th>
-									<th><span class="text">Контакти</span></th>
-									<th><span class="text">Фото рієлтора</span></th>
-								</tr>
-								<tr class="gray-bottom">
-									<!-- id -->
-									<th><input type="number" min="0" class="input smaller-input" data-tooltip="Введіть ID для пошуку"></th>
-									<!-- date -->
-									<th><input type="date" class="input smaller-input" data-tooltip="Виберіть дату для пошуку"></th>
-									<!-- description -->
-									<th><input type="text" class="input smaller-input" data-tooltip="Введіть ключові слова для пошуку"></th>
-									<!-- rieltor photo -->
-									<th></th>
-								</tr>
-							</thead>
-							<!-- TBODY -->
-							<tbody>
-								<!-- contact element -->
-								@@include('./includes/contact-element-bl.html')
-								<!-- / contact element -->
-								<!-- contact element -->
-								@@include('./includes/contact-element-bl.html')
-								<!-- / contact element -->
-								<!-- contact element -->
-								@@include('./includes/contact-element-bl.html')
-								<!-- / contact element -->
-								<!-- contact element -->
-								@@include('./includes/contact-element-bl.html')
-								<!-- / contact element -->
-								<!-- contact element -->
-								@@include('./includes/contact-element-bl.html')
-								<!-- / contact element -->
-								<!-- contact element -->
-								@@include('./includes/contact-element-bl.html')
-								<!-- / contact element -->
-								<!-- contact element -->
-								@@include('./includes/contact-element-bl.html')
-								<!-- / contact element -->
-							</tbody>
-							<!-- / TBODY -->
-						</table>
-					</form>
-					<!-- / CONTACTS TABLE -->
+					<!-- OBJECTS -->
+					@@include('./includes/objects-table.html')
+					<!-- /OBJECTS -->
 					<div class="spaced-bottom spaced-top">
 						<div class="row middle-xs">
 							<div class="col-xs-7">
 								<div class="table-bottom">
 									<h3 class="bottom-title">
-										Чорний список контактів
+										Актуальні об'єкти
 										<small>з 1 по 250 з 1083</small>
 									</h3>
 									<form action="" class="form">
@@ -127,7 +92,7 @@
 											<option value="Всі">Всі</option>
 										</select>
 										<div class="caption">
-											контактів на сторінку
+											об`єктів на сторінку
 										</div>
 									</form>
 								</div>
@@ -159,9 +124,25 @@
 	<!-- create a reminding -->
 	@@include('./includes/modal-create-remind.html')
 	<!-- / create a reminding -->
+	<!-- modal search rieltors -->
+	@@include('./includes/modal-rieltors-search.html')
+	<!-- / modal search rieltors -->
+	<!-- edit obj -->
+	@@include('./includes/modal-object-edit.html')
+	<!-- / edit obj -->
+	<!-- add obj -->
+	@@include('./includes/modal-object-add.html')
+	<!-- / add obj -->
+	<!-- add client -->
+	@@include('./includes/modal-client-add.html')
+	<!-- / add client -->
+	<!-- edit client -->
+	@@include('./includes/modal-client-edit.html')
+	<!-- / edit client -->
 
 
 	<script src="js/lib/jquery.min.js"></script>
+	<script src="js/plugins/fancybox.umd.js"></script>
 	<script src="js/plugins/jquery.selecter.js"></script>
 	<script src="js/main.js"></script>
 </body>

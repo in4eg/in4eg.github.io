@@ -68,7 +68,80 @@
 						</div>
 					</div>
 					<!-- OBJECTS -->
-					@@include('./includes/objects-table.html')
+					<form class="table-cover form">
+						<table class="objects-table table simple-table" id="printedObjects">
+							<thead>
+								<tr class="primary-top">
+									<th>
+										<button class="transparent-button" data-tooltip="Сортувати по зростанню/спаданню">
+											<span class="text">
+												ID
+												<i class="icon icon-select-arrows"></i>
+											</span>
+										</button>
+									</th>
+									<th>
+										<button class="transparent-button" data-tooltip="Сортувати по зростанню/спаданню">
+											<span class="text">
+												Дата
+												<i class="icon icon-select-arrows"></i>
+											</span>
+										</button>
+									</th>
+									<th>
+										<button class="transparent-button" data-tooltip="Сортувати по зростанню/спаданню">
+											<span class="text">
+												Контакт
+												<i class="icon icon-select-arrows"></i>
+											</span>
+										</button>
+									</th>
+									<th><span class="text">Фото</span></th>
+									<th><span class="text">Загальний опис</span></th>
+									<th>
+										<button class="transparent-button" data-tooltip="Сортувати по зростанню/спаданню">
+											<span class="text">
+												Останні дії
+												<i class="icon icon-select-arrows"></i>
+											</span>
+										</button>
+									</th>
+									<th><span class="text">Ім`я рієлтора</span></th>
+								</tr>
+								<tr class="gray-bottom">
+									<!-- id -->
+									<th><input type="number" min="0" class="input smaller-input" data-tooltip="Введіть ID для пошуку"></th>
+									<!-- date -->
+									<th><input type="date" class="input smaller-input" data-tooltip="Виберіть дату для пошуку"></th>
+									<!-- contact -->
+									<th>
+										<input type="tel" class="input smaller-input" data-tooltip="Введіть телефон для пошуку" placeholder="0000000000">
+									</th>
+									<!-- photo -->
+									<th></th>
+									<!-- description -->
+									<th><input type="text" class="input smaller-input" data-tooltip="Введіть ключові слова для пошуку"></th>
+									<!-- action -->
+									<th><input type="text" class="input smaller-input" data-tooltip="Введіть ключові слова для пошуку"></th>
+									<!-- rieltor name -->
+									<th><input type="text" class="input smaller-input" data-tooltip="Введіть ім'я для пошуку"></th>
+								</tr>
+							</thead>
+							<!-- TBODY -->
+							<tbody>
+								<!-- object element -->
+								@@include('./includes/object-element-ar.html')
+								<!-- / object element -->
+								<!-- object element -->
+								@@include('./includes/object-element-ar.html')
+								<!-- / object element -->
+								<!-- object element -->
+								@@include('./includes/object-element-ar.html')
+								<!-- / object element -->
+							</tbody>
+							<!-- / TBODY -->
+						</table>
+					</form>
 					<!-- /OBJECTS -->
 					<div class="spaced-bottom spaced-top">
 						<div class="row middle-xs">

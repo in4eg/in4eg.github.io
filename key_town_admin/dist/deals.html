@@ -28,7 +28,7 @@
 			<span></span>
 		</button>
 		<div class="logo-cover">
-			<a href="index.html"><img src="img/logo.png" draggable="false"></a>
+			<a href="actual-object-page.html"><img src="img/logo.png" draggable="false"></a>
 		</div>
 	</div>
 	<div class="menu-content side-content">
@@ -46,7 +46,7 @@
 				</div>
 				<ul class="clear bullet-list">
 					<li class="item" data-fade-in>
-						<a href="index.html" class="aside-link active">Актуальні об'єкти</a>
+						<a href="actual-object-page.html" class="aside-link active">Актуальні об'єкти</a>
 					</li>
 					<li class="item" data-fade-in>
 						<a href="new-object-page.html" class="aside-link">Нові об'єкти</a>
@@ -330,10 +330,47 @@
 							</a>
 						</li>
 						<li class="item">
-							<!-- class disabled if NO filters -->
-							<button class="button button-square nav-button disabled" data-tooltip="Збережені фільтри">
-								<i class="icon icon-pin"></i>
-							</button>
+							<div class="dropdown" data-dropdown data-origin="right">
+								<!-- class disabled if NO filters -->
+								<div class="anchor button not-active button-square nav-button" data-tooltip="Збережені фільтри">
+									<i class="icon icon-pin"></i>
+									<!-- if we have saved filters -->
+									<span class="count">2</span>
+								</div>
+								<div class="dropdown-content">
+									<div class="head">
+										<div class="text">
+											<i class="icon icon-pin"></i>
+											<span class="text">Збережені фільтри</span>
+										</div>
+										<button class="button close-dropdown">
+											<i class="icon icon-close"></i>
+										</button>
+									</div>
+									<div class="bottom collapsed-top">
+										<ul class="underlined-list clear dropdown-list">
+											<!-- 1 -->
+											<li class="item">
+												<div class="text">Saved Filter 1</div>
+											</li>
+											<!-- 2 -->
+											<li class="item">
+												<div class="text">Saved Filter 2</div>
+											</li>
+										</ul>
+										<div class="details align-right dropdown-spaced-top">
+											<ul class="clear simple-list">
+												<li class="item">
+													<div class="title-with-icon" data-tooltip="Всього збережено">
+														<i class="icon icon-filter"></i>
+														<span class="text">2</span>
+													</div>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
 						</li>
 						<li class="item">
 							<div class="dropdown" data-dropdown data-origin="right">
@@ -595,7 +632,7 @@
 							</a>
 						</li>
 						<li class="item">
-							<a href="index.html" class="button button-square nav-button" data-tooltip="Перейти на сторінку актуальних об'єктів">
+							<a href="actual-object-page.html" class="button button-square nav-button" data-tooltip="Перейти на сторінку актуальних об'єктів">
 								<i class="icon icon-house-simple"></i>
 							</a>
 						</li>
@@ -789,7 +826,43 @@
 		<!-- TBODY -->
 		<tbody>
 			<!-- contact element -->
-			
+			<tr class="contact-element">
+	<!-- id -->
+	<td>
+		<div class="paragraph">151721</div>
+	</td>
+	<!-- date -->
+	<td>
+		<div class="date">2024-06-19</div>
+		<div class="time">10:26</div>
+	</td>
+	<!-- description -->
+	<td>
+		<div class="title-with-icon spaced">
+			<i class="icon icon-user"></i>
+			<span class="text">Ім'я:</span>
+			<div class="bold">Таточенко Аліна Іванівна</div>
+		</div>
+		<a class="title-with-icon" href="tel:0674947727" data-tooltip="Подзвонити">
+			<i class="icon icon-phone-square"></i>
+			<span class="text">Тел:</span>
+			<span class="bold">0674947727</span>
+		</a>
+		<div class="spaced-top">
+			<button class="button button-primary" data-call="#editClientModal" data-tooltip="Редагувати контакт">
+				<span class="text">Редагувати</span>
+			</button>
+		</div>
+	</td>
+	<!-- photo -->
+	<td>
+		<!-- with user image -->
+		<div class="image-cover user-image">
+			<!-- if we have no user image tag <img> is unnecessary-->
+			<img src="img/user.jpg" draggable="false">
+		</div>
+	</td>
+</tr>
 			<!-- / contact element -->
 		</tbody>
 		<!-- / TBODY -->

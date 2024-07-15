@@ -180,7 +180,7 @@
 
 	th:nth-child(4),
 	td:nth-child(4) {
-		width: calc(var(--min-cell_width)*6);
+		width: calc(var(--gallery_width) + var(--space-gap) * 4);
 	}
 }
 

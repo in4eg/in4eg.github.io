@@ -207,10 +207,47 @@
 							</a>
 						</li>
 						<li class="item">
-							<!-- class disabled if NO filters -->
-							<button class="button button-square nav-button disabled" data-tooltip="Збережені фільтри">
-								<i class="icon icon-pin"></i>
-							</button>
+							<div class="dropdown" data-dropdown data-origin="right">
+								<!-- class disabled if NO filters -->
+								<div class="anchor button not-active button-square nav-button" data-tooltip="Збережені фільтри">
+									<i class="icon icon-pin"></i>
+									<!-- if we have saved filters -->
+									<span class="count">2</span>
+								</div>
+								<div class="dropdown-content">
+									<div class="head">
+										<div class="text">
+											<i class="icon icon-pin"></i>
+											<span class="text">Збережені фільтри</span>
+										</div>
+										<button class="button close-dropdown">
+											<i class="icon icon-close"></i>
+										</button>
+									</div>
+									<div class="bottom collapsed-top">
+										<ul class="underlined-list clear dropdown-list">
+											<!-- 1 -->
+											<li class="item">
+												<div class="text">Saved Filter 1</div>
+											</li>
+											<!-- 2 -->
+											<li class="item">
+												<div class="text">Saved Filter 2</div>
+											</li>
+										</ul>
+										<div class="details align-right dropdown-spaced-top">
+											<ul class="clear simple-list">
+												<li class="item">
+													<div class="title-with-icon" data-tooltip="Всього збережено">
+														<i class="icon icon-filter"></i>
+														<span class="text">2</span>
+													</div>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
 						</li>
 						<li class="item">
 							<div class="dropdown" data-dropdown data-origin="right">
@@ -249,7 +286,7 @@
 							</a>
 						</li>
 						<li class="item">
-							<a href="index.html" class="button button-square nav-button" data-tooltip="Перейти на сторінку актуальних об'єктів">
+							<a href="actual-object-page.html" class="button button-square nav-button" data-tooltip="Перейти на сторінку актуальних об'єктів">
 								<i class="icon icon-house-simple"></i>
 							</a>
 						</li>
