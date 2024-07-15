@@ -39,8 +39,10 @@ $(document).ready(function() {
 			called.removeClass('active');
 			setTimeout(function() {
 				called.removeClass('showed');
-				if (called.data('onclose') && window[called.data('onclose')]) {
-					return window[called.data('onclose')](called);
+				if ($(document).find('.popup.active').length < 1) {
+					if (called.data('onclose') && window[called.data('onclose')]) {
+						return window[called.data('onclose')](called);
+					}
 				}
 			}, 300);
 		});
@@ -58,7 +60,7 @@ $(document).ready(function() {
 				}, 300);
 			});
 		};
-		$('.close-popup').click(function(e) {
+		$('.close-all-popups').click(function(e) {
 			e.preventDefault();
 			hidePopups();
 		});
