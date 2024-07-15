@@ -22,36 +22,59 @@
 	<div class="login-page">
 		<div class="verticaly-middle">
 			<div class="inner">
-				<form class="login-form form validate-form">
+				<form class="login-form form validate-form" id="loginForm">
 					<div class="header">
 						<div class="logo-cover"><img src="img/logo.png" draggable="false"></div>
 					</div>
 					<div class="content">
 						<div class="input-cover bottom-label large-space">
 							<label for="login" class="label">Логін: <sup>*</sup></label>
-							<input type="text" class="input" required placeholder="Введіть логін" id="login">
 							<div class="alert">Мін 2 символи</div>
-							<div class="right-icon">
-								<i class="icon icon-user"></i>
+							<div class="icon-cover">
+								<input type="text" class="input" placeholder="Введіть логін" id="login" data-minlength="2">
+								<div class="right-icon">
+									<i class="icon icon-user"></i>
+								</div>
 							</div>
 						</div>
-						<div class="input-cover bottom-label large-space">
+						<div class="input-cover bottom-label large-space" >
 							<label for="password" class="label">Пароль: <sup>*</sup></label>
-							<input type="password" class="input" required placeholder="Введіть пароль" id="password">
 							<div class="alert">Мін 2 символи</div>
-							<div class="right-icon" data-show="#password">
-								<i class="icon icon-lock-closed icon-show"></i>
-								<i class="icon icon-lock-open icon-hide"></i>
+							<div class="icon-cover" id="passwordCover">
+								<input type="password" class="input" placeholder="Введіть пароль" id="password" autocomplete data-minlength="2">
+								<div class="right-icon clickable" data-show="#passwordCover" data-tooltip="Показати/приховати пароль">
+									<i class="icon icon-lock-closed hide-active"></i>
+									<i class="icon icon-lock-open show-active"></i>
+								</div>
 							</div>
 						</div>
+						<button class="button button-primary button-block" type="submit">
+							<span class="large-text bold uppercase">Вхід</span>
+						</button>
 					</div>
 				</form>
 			</div>
 		</div>
 	</div>
 
-
 	<script src="js/lib/jquery.min.js"></script>
 	<script src="js/init/validator.js"></script>
+
+	<!-- this code needs to be removed after backend integration -->
+	<script>
+		let loginForm = document.getElementById("loginForm");
+		loginForm.addEventListener("submit", (e) => {
+			e.preventDefault();
+			let username = document.getElementById("login");
+			let password = document.getElementById("password");
+
+			if (username.value <= 1 || password.value <= 1) {
+				console.warn("Ensure you input a value in both fields!");
+			} else {
+				window.location.href = "actual-object-page.html";
+			}
+		});
+	</script>
+
 </body>
 </html>

@@ -25,14 +25,42 @@
 		margin-bottom: 0;
 	}
 
+	.alert-cover {
+		position: relative;
+	}
+
 	.alert {
+		background-color: $color_danger;
+		color: $color_white;
 		position: absolute;
-		color: $color_danger;
-		position: absolute;
-		right: 0; bottom: 100%;
+		top: 0; right: 0;
 		font-size: var(--font-size);
 		transform: translateY(10px);
 		opacity: 0;
+		padding: 1px 6px;
+		border-radius: calc(var(--border-radius)/2);
+	}
+
+	&.error {
+
+		.alert {
+			opacity: 1;
+		}
+
+		.input,
+		.select,
+		.textarea {
+			border-color: $color_danger;
+		}
+	}
+
+	&.success {
+
+		.input,
+		.select,
+		.textarea {
+			border-color: $color_success;
+		}
 	}
 }
 
@@ -83,7 +111,6 @@
 	white-space: nowrap;
 	position: relative;
 	z-index: 1;
-	border-radius: 0;
 	text-align: left;
 	transition: .2s;
 	text-decoration: none;
