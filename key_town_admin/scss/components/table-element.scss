@@ -5,7 +5,7 @@
 	--gallery_width: 137px;
 }
 
-.object-element {
+.table-element {
 
 	.gallery {
 		position: relative;
@@ -78,5 +78,9 @@
 
 	.image-cover.user-image {
 		margin: var(--margin) 0;
+	}
+
+	&.active {
+		background-color: #fff4dc;
 	}
 }

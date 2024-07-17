@@ -34,7 +34,7 @@
 				<main class="page-main" id="pageMain">
 					<!-- CONTENT -->
 					<div class="spaced-bottom">
-						<button class="button button-primary" data-tooltip="Додати новий контакт" data-call="#addDealModal">
+						<button class="button button-primary" data-tooltip="Додати новий контакт" data-call="#addDealsModal">
 							<i class="icon icon-plus"></i>
 							<span class="text">Додати нову угоду</span>
 						</button>
@@ -55,7 +55,7 @@
 						</div>
 					</div>
 					<!-- DEALS TABLE -->
-					@@include('./includes/deals-main.html')
+					@@include('./includes/deals-table.html')
 					<!-- /DEALS TABLE -->
 					<div class="spaced-bottom spaced-top">
 						<div class="row middle-xs">
@@ -105,6 +105,28 @@
 	<!-- create a reminding -->
 	@@include('./includes/modal-create-remind.html')
 	<!-- / create a reminding -->
+	<!-- modal search rieltors -->
+	@@include('./includes/modal-rieltors-search.html')
+	<!-- / modal search rieltors -->
+	<!-- edit obj -->
+	@@include('./includes/modal-object-edit.html')
+	<!-- / edit obj -->
+	<!-- add obj -->
+	@@include('./includes/modal-object-add.html')
+	<!-- / add obj -->
+	<!-- add client -->
+	@@include('./includes/modal-client-add.html')
+	<!-- / add client -->
+	<!-- edit client -->
+	@@include('./includes/modal-client-edit.html')
+	<!-- / edit client -->
+	<!-- add client -->
+	@@include('./includes/modal-deals-add.html')
+	<!-- / add client -->
+	<!-- edit client -->
+	@@include('./includes/modal-deals-edit.html')
+	<!-- / edit client -->
+
 
 	<script src="js/lib/jquery.min.js"></script>
 	<script src="js/plugins/jquery.selecter.js"></script>

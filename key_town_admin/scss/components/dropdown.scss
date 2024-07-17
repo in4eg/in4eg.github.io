@@ -15,10 +15,8 @@
 		height: auto;
 
 		&.button-square {
-			padding: var(--space-gap);
-			text-align: center;
-			font-size: var(--button_icon_font-size);
-			line-height: 1.4;
+			height: var(--squere_button_size); width: var(--squere_button_size);
+			padding: 0;
 
 			&.nav-button {
 				border-radius: var(--border-radius);

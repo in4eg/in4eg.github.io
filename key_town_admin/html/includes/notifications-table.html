@@ -1,0 +1,58 @@
+<form class="table-cover form">
+	<table class="notifications-table table simple-table" id="printedObjects">
+		<thead>
+			<tr class="primary-top">
+				<th>
+					<button class="transparent-button" data-tooltip="Сортувати по зростанню/спаданню">
+						<span class="text">
+							Дата
+							<i class="icon icon-select-arrows"></i>
+						</span>
+					</button>
+				</th>
+				<th>
+					<button class="transparent-button" data-tooltip="Сортувати по зростанню/спаданню">
+						<span class="text">
+							Назва об'єкту
+							<i class="icon icon-select-arrows"></i>
+						</span>
+					</button>
+				</th>
+				<th><span class="text">Повідомлення</span></th>
+				<th><span class="text">Позначити виконаним</span></th>
+			</tr>
+			<tr class="gray-bottom">
+				<!-- date -->
+				<th><input type="date" class="input smaller-input" data-tooltip="Виберіть дату для пошуку"></th>
+				<!-- object -->
+				<th><input type="text" class="input smaller-input" data-tooltip="Введіть ключові слова для пошуку"></th>
+				<!-- description -->
+				<th><input type="text" class="input smaller-input" data-tooltip="Введіть ключові слова для пошуку"></th>
+				<!-- mark as done -->
+				<th></th>
+			</tr>
+		</thead>
+		<!-- TBODY -->
+		<tbody>
+			<!-- notification element -->
+			@@include('notification-element.html')
+			<!-- / notification element -->
+			<!-- notification element -->
+			@@include('notification-element.html')
+			<!-- / notification element -->
+			<!-- notification element -->
+			@@include('notification-element2.html')
+			<!-- / notification element -->
+			<!-- notification element -->
+			@@include('notification-element2.html')
+			<!-- / notification element -->
+			<!-- notification element -->
+			@@include('notification-element2.html')
+			<!-- / notification element -->
+			<!-- notification element -->
+			@@include('notification-element2.html')
+			<!-- / notification element -->
+		</tbody>
+		<!-- / TBODY -->
+	</table>
+</form>

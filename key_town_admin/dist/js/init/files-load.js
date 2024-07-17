@@ -39,6 +39,7 @@ function getBase64(file, loaderMainWrap) {
 function appendImage(name, src, loaderMainWrap){
 	let coverEl = document.createElement("div");
 			coverEl.classList.add('files-cover');
+			coverEl.setAttribute('data-tooltip', 'Клікніть, щоб видалити')
 	let innerCover = document.createElement("div");
 			innerCover.classList.add('inner');
 	let imgEl = document.createElement('img');
@@ -58,6 +59,7 @@ function appendImage(name, src, loaderMainWrap){
 function appendVideo(name, src, loaderMainWrap){
 	let coverEl = document.createElement("div");
 			coverEl.classList.add('files-cover');
+			coverEl.setAttribute('data-tooltip', 'Клікніть, щоб видалити')
 	let innerCover = document.createElement("div");
 			innerCover.classList.add('inner');
 	let videoEl = document.createElement('video')
@@ -83,6 +85,7 @@ function appendError(name, type, loaderMainWrap){
 	let coverEl = document.createElement("div");
 			coverEl.classList.add('error-cover');
 			coverEl.classList.add('files-cover');
+			coverEl.setAttribute('data-tooltip', 'Клікніть, щоб видалити')
 	let textEl = document.createElement("div");
 			textEl.classList.add('error-text');
 			textEl.appendChild(document.createTextNode(errorStatus[type]));

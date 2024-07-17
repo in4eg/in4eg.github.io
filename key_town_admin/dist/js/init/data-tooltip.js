@@ -70,15 +70,14 @@ $(document).ready(function() {
 	};
 
 
+$(document).on('mouseenter', '[data-tooltip]', function(e){
+	let tooltip = this;
+	tooltipHint.show(tooltip, e);
+})
 
-	$(document).find('[data-tooltip]').each(function(i, tooltip) {
+$(document).on('mouseleave', '[data-tooltip]', function(e){
+	let tooltip = this;
+	tooltipHint.hide();
+})
 
-		$(tooltip).mouseenter(function(e) {
-			tooltipHint.show(tooltip, e);
-		});
-
-		$(tooltip).mouseleave(function(e) {
-			tooltipHint.hide();
-		});
-	});
 });

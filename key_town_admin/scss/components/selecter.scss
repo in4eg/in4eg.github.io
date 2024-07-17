@@ -105,7 +105,7 @@ select {
 }
 .selecter .dropdown {
 	position: absolute;
-	z-index: 5;
+	z-index: 11;
 	width: 100%;
 	display: none;
 	left: 0;
@@ -218,6 +218,7 @@ select {
 .selecter .dropdown ul label:hover:before {
 	border-color: #1975f5;
 }
+
 .selecter.dark {
 	background-color: #17202c;
 	color: #f9f7f7;

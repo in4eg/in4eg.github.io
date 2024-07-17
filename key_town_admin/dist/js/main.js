@@ -51,168 +51,6 @@ $(document).ready(function() {
 	})
 });
 
-var dropFile, formatBytes, handleImage, handleVideo, stateChange, uploadProgress;
-
-uploadProgress = function(event) {
-	var percent;
-	percent = parseInt(event.loaded / event.total * 100);
-	dropZone.text('Загрузка: ' + percent + '%');
-};
-
-stateChange = function(event) {
-	if (event.target.readyState === 4) {
-		if (event.target.status === 200) {
-			dropZone.text('Files uploaded success');
-		} else {
-			dropZone.text('Error! Try again');
-			dropZone.addClass('error');
-		}
-	}
-};
-
-dropFile = function(dropZone, type, maxSize) {
-	var maxFileSize, sizeCaption;
-	maxFileSize = maxSize;
-	if (type === 'image') {
-		sizeCaption = '5';
-	} else if (type === 'video') {
-		sizeCaption = '20';
-	}
-	if (window.FileReader) {
-		dropZone.ondragover = function() {
-			$(dropZone).addClass('hover');
-			return false;
-		};
-		dropZone.ondragleave = function() {
-			$(dropZone).removeClass('hover');
-			return false;
-		};
-		dropZone.ondrop = function(event) {
-			var file, i, j, len, parent, reader, ref;
-			event.preventDefault();
-			$(dropZone).removeClass('hover');
-			ref = event.dataTransfer.files;
-			for (i = j = 0, len = ref.length; j < len; i = ++j) {
-				file = ref[i];
-				parent = $(dropZone).next('[data-file-name]');
-				if (file.size > maxFileSize) {
-					parent.append("<div class=\"file-item \"> <div class=\"error-caption\"> <div class=\"caption-inside\"> Too Large File <div class=\"image-size error\">" + (formatBytes(file.size)) + "</div> </div> </div> </div>");
-					return false;
-				} else if (type === 'image' && file.type === 'image/png' || type === 'image' && file.type === 'image/jpeg') {
-					$(dropZone).removeClass('error').addClass('drop');
-					$(dropZone).find('.label-lead').html('Loaded success!');
-					reader = new FileReader;
-					reader.onload = function(e) {
-						parent.append("<div class=\"file-item\"> <button type=\"button\" class=\"btn btn-link remove-btn\"> <i class=\"icon icon-rubbish\"></i> </button> <figure class=\"image-cover\"><img src=\"" + e.target.result + "\" alt=\"model\"></figure> </div>");
-						if ($(window).width() > 768) {
-							parent.scrollTop(parent.prop("scrollHeight"));
-							$('.scrolled[data-xs-disabled]').perfectScrollbar();
-							$('.scrolled').perfectScrollbar('update');
-						}
-					};
-					reader.readAsDataURL(event.dataTransfer.files[i]);
-				} else if (type === 'video' && file.type === "video/mp4" || type === 'video' && file.type === "video/ogg") {
-					parent.append("<div class=\"video-item\"> <i class=\"icon icon-video-camera camera-icon\"></i> <div class=\"video-title\">" + file.name + "</div> <div class=\"video-size\">" + (formatBytes(file.size)) + "</div> <button type=\"button\" class=\"btn btn-link remove-btn\"> <i class=\"icon icon-rubbish\"></i> </button> </div>");
-					$(dropZone).removeClass('error').addClass('drop');
-					$(dropZone).find('.label-lead').html('Loaded success!');
-					if ($(window).width() > 768) {
-						parent.scrollTop(parent.prop("scrollHeight"));
-						$('.scrolled[data-xs-disabled]').perfectScrollbar();
-						$('.scrolled').perfectScrollbar('update');
-					}
-				} else {
-					$(dropZone).find('.label-lead').html('Please download the file in correct format');
-					$(dropZone).addClass('error');
-					return false;
-				}
-			}
-		};
-	} else {
-		$(dropZone).find('.label-lead').html('Click on label area');
-	}
-};
-
-$('[data-drop-file]').each(function(i, el) {
-	var maxSize, type;
-	type = $(el).data('drop-file');
-	maxSize = $(el).find('[data-file-size]').data('file-size');
-	dropFile(el, type, maxSize);
-});
-
-handleImage = function(event, parent) {
-	var file, i, j, len, maxImageSize, reader, ref;
-	maxImageSize = $(event.target).data('file-size');
-	ref = event.target.files;
-	for (i = j = 0, len = ref.length; j < len; i = ++j) {
-		file = ref[i];
-		if (file.size > maxImageSize) {
-			parent.append("<div class=\"file-item \"> <div class=\"error-caption\"> <div class=\"caption-inside\"> Too Large File <div class=\"image-size error\">" + (formatBytes(file.size)) + "</div> </div> </div> </div>");
-		} else {
-			reader = new FileReader;
-			reader.onload = function(e) {
-				parent.append("<div class=\"file-item \"> <button type=\"button\" class=\"btn btn-link remove-btn\"> <i class=\"icon icon-rubbish\"></i> </button> <figure class=\"image-cover\"><img src=\"" + e.target.result + "\" alt=\"model\"></figure> </div>");
-				if ($(window).width() > 768) {
-					parent.scrollTop(parent.prop("scrollHeight"));
-					$('.scrolled[data-xs-disabled]').perfectScrollbar();
-					$('.scrolled').perfectScrollbar('update');
-				}
-				parent.prev('[data-drop-file]').addClass('drop');
-			};
-			reader.readAsDataURL(event.target.files[i]);
-		}
-	}
-};
-
-handleVideo = function(event, parent) {
-	var file, i, j, len, maxVideoSize, ref, sizeCaption;
-	maxVideoSize = $(event.target).data('file-size');
-	sizeCaption = '20';
-	ref = event.target.files;
-	for (i = j = 0, len = ref.length; j < len; i = ++j) {
-		file = ref[i];
-		if (file.size > maxVideoSize) {
-			$(event.target).parent('.drop-file').find('.label-lead').html('File too large! Max file size ' + sizeCaption + ' MB');
-			$(event.target).parent('.drop-file').addClass('error');
-			return;
-		} else {
-			$(event.target).parent('.drop-file').removeClass('error').addClass('drop');
-			$(event.target).parent('.drop-file').find('.label-lead').html('Loaded success!');
-			parent.append("<div class=\"video-item\"> <i class=\"icon icon-video-camera camera-icon\"></i> <div class=\"video-title\">" + file.name + "</div> <div class=\"video-size\">" + (formatBytes(file.size)) + "</div> <button type=\"button\" class=\"btn btn-link remove-btn\"> <i class=\"icon icon-rubbish\"></i> </button> </div>");
-		}
-		if ($(window).width() > 768) {
-			parent.scrollTop(parent.prop("scrollHeight"));
-			$('.scrolled[data-xs-disabled]').perfectScrollbar();
-			$('.scrolled').perfectScrollbar('update');
-		}
-		parent.prev('[data-drop-file]').addClass('drop');
-	}
-};
-
-$('[data-drop-file]').each(function(i, el) {
-	var parent, type;
-	type = $(el).data('drop-file');
-	parent = $(el).next('[data-file-name]');
-	$(el).on('input', function(e) {
-		if (type === 'image') {
-			handleImage(e, parent);
-		} else if (type === 'video') {
-			handleVideo(e, parent);
-		}
-	});
-});
-
-formatBytes = function(bytes) {
-	if (bytes < 1024) {
-		return bytes + ' Bytes';
-	} else if (bytes < 1048576) {
-		return (bytes / 1024).toFixed(3) + ' KB';
-	} else if (bytes < 1073741824) {
-		return (bytes / 1048576).toFixed(3) + ' MB';
-	} else {
-		return (bytes / 1073741824).toFixed(3) + ' GB';
-	}
-};
-
 $(document).ready(function() {
 	$('[data-toggle]').each(function(i, button) {
 		$(button).click(function(e) {
@@ -301,17 +139,16 @@ $(document).ready(function() {
 	};
 
 
+$(document).on('mouseenter', '[data-tooltip]', function(e){
+	let tooltip = this;
+	tooltipHint.show(tooltip, e);
+})
 
-	$(document).find('[data-tooltip]').each(function(i, tooltip) {
+$(document).on('mouseleave', '[data-tooltip]', function(e){
+	let tooltip = this;
+	tooltipHint.hide();
+})
 
-		$(tooltip).mouseenter(function(e) {
-			tooltipHint.show(tooltip, e);
-		});
-
-		$(tooltip).mouseleave(function(e) {
-			tooltipHint.hide();
-		});
-	});
 });
 $(document).ready(function() {
 	if ($('[data-fancybox]') && typeof Fancybox === 'function') {
@@ -376,6 +213,7 @@ function getBase64(file, loaderMainWrap) {
 function appendImage(name, src, loaderMainWrap){
 	let coverEl = document.createElement("div");
 			coverEl.classList.add('files-cover');
+			coverEl.setAttribute('data-tooltip', 'Клікніть, щоб видалити')
 	let innerCover = document.createElement("div");
 			innerCover.classList.add('inner');
 	let imgEl = document.createElement('img');
@@ -395,6 +233,7 @@ function appendImage(name, src, loaderMainWrap){
 function appendVideo(name, src, loaderMainWrap){
 	let coverEl = document.createElement("div");
 			coverEl.classList.add('files-cover');
+			coverEl.setAttribute('data-tooltip', 'Клікніть, щоб видалити')
 	let innerCover = document.createElement("div");
 			innerCover.classList.add('inner');
 	let videoEl = document.createElement('video')
@@ -420,6 +259,7 @@ function appendError(name, type, loaderMainWrap){
 	let coverEl = document.createElement("div");
 			coverEl.classList.add('error-cover');
 			coverEl.classList.add('files-cover');
+			coverEl.setAttribute('data-tooltip', 'Клікніть, щоб видалити')
 	let textEl = document.createElement("div");
 			textEl.classList.add('error-text');
 			textEl.appendChild(document.createTextNode(errorStatus[type]));
@@ -526,6 +366,10 @@ $(document).ready(function(){
 					$(li).addClass('active')
 				}
 			});
+		});
+		let inputs = $(this).parents('form').find('input');
+		$(inputs).each(function(i, input){
+			$(input).attr('value',' ')
 		})
 	});
 
@@ -737,13 +581,23 @@ $('body').on('click', '[data-tabs] > .tab', function(e) {
 });
 
 $(function() {
-	var isValidEmail;
+	let isValidEmail = function(email) {
+		let reg = new RegExp(/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/);
+		return reg.test(email);
+	};
+	let isValidPhone = function(phone) {
+		let reg = new RegExp(/^[0-9]{10}$/);
+		return reg.test(phone);
+	};
 	$('.validate-form input:not(.ignored), .validate-form textarea:not(.ignored)').on('keyup keydown change', function() {
 		let input = this;
 		let i = 0;
 		let errors = [false];
-		$(input).siblings('.icon-success').removeClass('active');
-		if ($(input).hasClass('email') && !isValidEmail($(input).val().trim())) {
+		$(input).parents('.input-cover').removeClass('success');
+		if ($(input).hasClass('phone') && !isValidPhone($(input).val().trim())) {
+			errors[i] = true;
+			$(input).parents('.input-cover').addClass('error');
+		} else if ($(input).hasClass('email') && !isValidEmail($(input).val().trim())) {
 			errors[i] = true;
 			$(input).parents('.input-cover').removeClass('success').addClass('error');
 		} else if ($(input).data('mask') && ($(input).val().trim().replace(/_/gim, '').length < $(input).data('mask').length)) {
@@ -757,23 +611,22 @@ $(function() {
 			$(input).parents('.input-cover').removeClass('success').addClass('error');
 		} else if ($(input).val().trim() === "") {
 			errors[i] = true;
-			$(input).parents('.input-cover').addClass('error');
+			$(input).parents('.input-cover').removeClass('success').addClass('error');
 		} else {
 			errors[i] = false;
 			$(input).parents('.input-cover').removeClass('error').addClass('success');
 		}
 	});
-	isValidEmail = function(email) {
-		var re;
-		re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-		return re.test(email);
-	};
 	$('.validate-form').on('submit', function(e) {
 		var error, errors, hasErrors, j, len;
 		errors = [false, false];
 		$('input:not(.ignored), textarea:not(.ignored)', this).each(function(i, input) {
 			$(input).siblings('.icon-success').removeClass('active');
-			if ($(input).hasClass('email') && !isValidEmail($(input).val().trim())) {
+			if ($(input).hasClass('phone') && !isValidPhone($(input).val().trim())) {
+				errors[i] = true;
+				e.preventDefault();
+				$(input).parents('.input-cover').addClass('error');
+			} else if ($(input).hasClass('email') && !isValidEmail($(input).val().trim())) {
 				errors[i] = true;
 				e.preventDefault();
 				$(input).parents('.input-cover').addClass('error');
@@ -795,41 +648,6 @@ $(function() {
 			}
 		});
 		hasErrors = false;
-	});
-});
-
-window.addEventListener("DOMContentLoaded", function() {
-		[].forEach.call( document.querySelectorAll('.input-phone'), function(input) {
-		var keyCode;
-		function mask(event) {
-				event.keyCode && (keyCode = event.keyCode);
-				var pos = this.selectionStart;
-				if (pos < 3) event.preventDefault();
-				var matrix = "__________",
-						i = 0,
-						def = matrix.replace(/\D/g, ""),
-						val = this.value.replace(/\D/g, ""),
-						new_value = matrix.replace(/[_\d]/g, function(a) {
-								return i < val.length ? val.charAt(i++) || def.charAt(i) : a
-						});
-				i = new_value.indexOf("_");
-				if (i != -1) {
-						i < 5 && (i = 3);
-						new_value = new_value.slice(0, i)
-				}
-				var reg = matrix.substr(0, this.value.length).replace(/_+/g,
-						function(a) {
-								return "\\d{1," + a.length + "}"
-						}).replace(/[+()]/g, "\\$&");
-				reg = new RegExp("^" + reg + "$");
-				if (!reg.test(this.value) || this.value.length < 5 || keyCode > 47 && keyCode < 58) this.value = new_value;
-				if (event.type == "blur" && this.value.length < 5)  this.value = ""
-		}
-
-		input.addEventListener("input", mask, false);
-		input.addEventListener("focus", mask, false);
-		input.addEventListener("blur", mask, false);
-		input.addEventListener("keydown", mask, false)
 	});
 });
 

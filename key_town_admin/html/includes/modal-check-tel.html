@@ -8,11 +8,11 @@
 			<button type="button" class="close-popup button" data-dismiss="#checkTelModal" data-tooltip="Закрити вікно">&times;</button>
 		</div>
 		<div class="content">
-			<form action="" class="form">
-				<div class="input-cover with-label">
+			<form action="" class="form validate-form">
+				<div class="input-cover with-label spaced-top">
 					<label for="telSearch" class="label">Тел:<sup>*</sup></label>
-					<input type="tel" class="input" required placeholder="0000000000" id="telSearch">
-					<div class="alert">10 цифр! без роздільників</div>
+					<input type="tel" class="input phone" placeholder="0000000000" id="telSearch" maxlength="10">
+					<div class="alert upper-position">10 цифр! без роздільників</div>
 				</div>
 				<div class="input-cover with-label collapsed-bottom">
 					<ul class="clear simple-list smaller-spaces">
@@ -23,22 +23,19 @@
 							</button>
 						</li>
 						<li class="item">
-							<a href="client.html" class="button button-info button-square" data-tooltip="Перейти на сторінку нового клієнта">
+							<a href="client.html" class="button button-info button-square" data-call="#addClientModal" data-tooltip="Додати кліента/покупця">
 								<span class="text"><i class="icon icon icon-user-add"></i></span>
 							</a>
 						</li>
 						<li class="item">
-							<a href="object-add-page.html" class="button button-info button-square" data-tooltip="Перейти на сторінку нового об'єкту">
+							<a href="object-add-page.html" class="button button-info button-square" data-call="#addObjectModal" data-tooltip="Додати новий об'єкт">
 								<span class="text">
-									<span class="icon-with-text">
-										<i class="icon icon-house-simple"></i>
-										<span class="text color-info">+</span>
-									</span>
+									<i class="icon icon-house-add"></i>
 								</span>
 							</a>
 						</li>
 						<li class="item">
-							<a href="deals.html" class="button button-info button-square" data-tooltip="Перейти на сторінку нової угоди">
+							<a href="deals.html" class="button button-info button-square" data-call="#addDealsModal" data-tooltip="Створити нову угоду">
 								<span class="text"><i class="icon icon-bag"></i></span>
 							</a>
 						</li>

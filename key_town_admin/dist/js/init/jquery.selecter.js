@@ -43,6 +43,10 @@ $(document).ready(function(){
 					$(li).addClass('active')
 				}
 			});
+		});
+		let inputs = $(this).parents('form').find('input');
+		$(inputs).each(function(i, input){
+			$(input).attr('value',' ')
 		})
 	});
 

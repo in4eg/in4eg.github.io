@@ -61,9 +61,15 @@ h5 {
 	font-weight: bold;
 }
 
+.subheader3 {
+	font-size: var(--subheader3-font-size);
+	font-weight: bold;
+}
+
 .paragraph {
 	font-size: var(--font-size);
 	color: $text_color;
+	margin-bottom: var(--space-gap);
 
 	&.justify {
 		text-align: justify;
@@ -71,6 +77,10 @@ h5 {
 
 	&:last-child {
 		margin-bottom: 0;
+	}
+
+	.bold {
+		font-weight: bold;
 	}
 }
 

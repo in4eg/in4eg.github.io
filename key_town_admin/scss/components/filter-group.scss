@@ -1,0 +1,72 @@
+@import '../variables.scss';
+
+.filter-group {
+
+	.group-cover {
+		position: relative;
+		padding-right: calc(var(--squere_button_size)*2 + var(--padding));
+
+		.actions {
+			position: absolute;
+			right: 0; top: 0;
+		}
+	}
+
+	.edit-filter {
+		display: none;
+		margin-top: calc(var(--margin)*3);
+
+		.filters-bottom-list {
+			opacity: 0;
+			transform: translateY(5px);
+			transition: .1s;
+		}
+	}
+
+	&.active {
+
+		.edit-filter {
+			display: block;
+		}
+
+		&.animated {
+
+			.edit-filter {
+
+				.filters-bottom-list {
+					opacity: 1;
+					transform: translateY(0);
+				}
+			}
+		}
+	}
+}
+
+.filters-bottom-list {
+	display: table;
+	table-layout: fixed;
+	border-collapse: collapse;
+
+	.label-item {
+		display: table-cell;
+		width: 35%;
+		padding: 0 var(--space-gap) 0 0;
+	}
+
+	.input-item {
+		display: table-cell;
+		width: 100%;
+		padding: 0 var(--space-gap);
+
+		&:first-child {
+			padding-left: 0;
+		}
+	}
+
+	.button-item {
+		display: table-cell;
+		width: calc(var(--squere_button_size) + var(--padding));
+		padding: 0 0 0 var(--space-gap);
+
+	}
+}

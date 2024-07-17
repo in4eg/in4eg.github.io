@@ -14,7 +14,7 @@
 		function getOptionsTree(optionsList, multiple, id) {
 			var tree = "<ul>";
 			optionsList.map(function(option, i){
-				tree += "<li class=\""+(option.disabled ? 'disabled ' : '')+(option.selected ? 'active' : '')+"\" data-value=\""+option.value+"\">"+option.label+(option.disabled ? ' ' : multiple ? "<input type=\"checkbox\" id="+id+'_'+i+" name="+id+'_'+i+"><label for="+id+'_'+i+"></label>" : " ")+"</li>"
+				tree += "<li class=\""+(option.disabled ? 'disabled ' : '')+(option.selected ? 'active' : '')+"\" data-value=\""+option.value+"\">"+option.label+(option.disabled ? ' ' : multiple ? option.selected ? "<input checked type=\"checkbox\" id="+id+'_'+i+" name="+id+'_'+i+"><label for="+id+'_'+i+"></label></li>" : "<input type=\"checkbox\" id="+id+'_'+i+" name="+id+'_'+i+"><label for="+id+'_'+i+"></label>" : "")+"</li>"
 			});
 			tree += "</ul>";
 			return tree;
@@ -47,12 +47,59 @@
 			return selected;
 		}
 
+		function getMultipleValuesArray(select, optionsList){
+			var selectedValuesArray = [];
+				[].map.call(select.options, function(option, i){
+				optionsList.push({
+					label: option.label,
+					value: option.value,
+					disabled: option.disabled,
+					selected: option.selected,
+					classname: option.classname
+				});
+			})
+
+			for (let option of select.options) {
+				if (option && option.selected && !option.disabled){
+					selectedValuesArray.push(option.value)
+				}
+			}
+			return selectedValuesArray;
+		}
+
+		function getDisabledOption(select){
+			var disabledValue = '';
+			for (let option of select.options) {
+				if (option && option.disabled){
+					disabledValue = option.value;
+				}
+			}
+			return disabledValue;
+		}
+
+		function getMultipleTagsHtml(valuesArray) {
+			var tags = "";
+			valuesArray.map(function(option, i){
+				tags += "<div class=\"tag\" data-tooltip=\"Клікніть, щоб видалити\">"+option+"<button class=\"delete\"><i class=\"icon icon-close\"></i></button></div>"
+			});
+			return tags;
+		}
+
 		function generateBody(select, optionsList, multiple, classname){
 			if (!select) return;
 			var id = select.getAttribute('id') ? select.getAttribute('id') : setRandomId();
 			var body = "";
 			body += classname && classname.length ? "<div class=\"selecter "+classname+"\">" : "<div class=\"selecter\">";
-			body += "<span class=\"anchor\">"+getSelectedOption(select.options, optionsList).title+"</span>";
+			if (multiple) {
+				let multipleValuesArray = getMultipleValuesArray(select, optionsList);
+				if (multipleValuesArray.length) {
+					body += "<span class=\"anchor collapsed-bottom\">"+getMultipleTagsHtml(multipleValuesArray)+"</span>";
+				} else {
+					body += "<span class=\"anchor\">"+getDisabledOption(select)+"</span>";
+				}
+			} else {
+				body += "<span class=\"anchor\">"+getSelectedOption(select.options, optionsList).title+"</span>";
+			};
 			body += "<div class=\"dropdown\">"+getOptionsTree(optionsList, multiple, id)+"</div>";
 			body += "</div>";
 			return $(body);
@@ -80,7 +127,7 @@
 		}
 
 
-	// setting
+		// setting
 		function setSelectOptionsValue(select, value) {
 			$(select).find('option').each(function(i, option){
 				if (!$(select).attr("multiple")) {
@@ -125,7 +172,7 @@
 					});
 					for (let text of textArray) {
 						$(result).find('.anchor').addClass('collapsed-bottom');
-						$(result).find('.anchor').append( '<div class="tag">'+text.trim()+'<button class="delete">X</button></div>' )
+						$(result).find('.anchor').append( '<div class="tag" data-tooltip="Клікніть, щоб видалити">'+text.trim()+'<button class="delete"><i class=\"icon icon-close\"></i></button></div>' )
 					}
 				};
 			} else {
@@ -154,6 +201,7 @@
 				var optionsList = [];
 				$(select).hide();
 				var result = generateBody(select, optionsList, settings.multiple, settings.classname);
+
 				result.on('click', '.anchor', function(e){
 					e.preventDefault();
 					if ($(this).parent('.selecter').hasClass('opened')){

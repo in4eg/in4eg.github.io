@@ -324,18 +324,15 @@
 								</div>
 							</div>
 						</li>
-						<li class="item">
-							<a href="client.html" class="button button-square nav-button" data-tooltip="Перейти на сторінку створення кліента/покупця">
-								<i class="icon icon-user-add"></i>
-							</a>
-						</li>
+						<!-- / rieltors online -->
+						<!-- saved filters -->
 						<li class="item">
 							<div class="dropdown" data-dropdown data-origin="right">
 								<!-- class disabled if NO filters -->
 								<div class="anchor button not-active button-square nav-button" data-tooltip="Збережені фільтри">
 									<i class="icon icon-pin"></i>
 									<!-- if we have saved filters -->
-									<span class="count">2</span>
+									<span class="count">5</span>
 								</div>
 								<div class="dropdown-content">
 									<div class="head">
@@ -351,23 +348,223 @@
 										<ul class="underlined-list clear dropdown-list">
 											<!-- 1 -->
 											<li class="item">
-												<div class="title-with-icon spaced">
-													<i class="icon icon-pin"></i>
-													<span class="text">Назва фітру 1</span>
-												</div>
-												<a class="title-with-icon" href="tel:0674947727" data-tooltip="Подзвонити">
-													<i class="icon icon-calendar"></i>
-													<span class="text">2024-06-19, 10:26</span>
-												</a>
-												<div class="spaced-top">
-													<button class="button button-primary" data-tooltip="Розблокувати контакт">
-														<span class="text">Розблокувати</span>
-													</button>
+												<div class="filter-group" id="filter1">
+													<div class="group-cover">
+														<div class="title-with-icon spaced">
+															<i class="icon icon-pin"></i>
+															<span class="text bold">Назва фітру 1</span>
+														</div>
+														<div class="title-with-icon" data-tooltip="Дата створення">
+															<i class="icon icon-calendar"></i>
+															<span class="text">2024-06-19, 10:26</span>
+														</div>
+														<div class="actions">
+															<ul class="simple-list">
+																<li class="item">
+																	<button class="button button-danger button-square" data-tooltip="Видалити фільтр">
+																		<i class="icon icon-trash"></i>
+																	</button>
+																</li>
+																<li class="item">
+																	<button class="button button-info button-square" data-tooltip="Змінити назву" data-toggle="#filter1">
+																		<i class="icon icon-edit"></i>
+																	</button>
+																</li>
+															</ul>
+														</div>
+													</div>
+													<form action="" class="form edit-filter validate-form">
+														<ul class="clear filters-bottom-list">
+															<li class="item input-item">
+																<div class="input-cover collapsed-bottom">
+																	<div class="alert upper-position">Мін 2 символи</div>
+																	<input type="text" class="input" placeholder="Введіть нову назву" minlength="2">
+																</div>
+															</li>
+															<li class="item button-item">
+																<button class="button button-primary button-square" data-tooltip="Зберегти зміни" type="submit">
+																	<i class="icon icon-checkmark"></i>
+																</button>
+															</li>
+														</ul>
+													</form>
 												</div>
 											</li>
 											<!-- 2 -->
 											<li class="item">
-												<div class="text">Saved Filter 2</div>
+												<div class="filter-group" id="filter2">
+													<div class="group-cover">
+														<div class="title-with-icon spaced">
+															<i class="icon icon-pin"></i>
+															<span class="text bold">Назва фітру 2</span>
+														</div>
+														<div class="title-with-icon" data-tooltip="Дата створення">
+															<i class="icon icon-calendar"></i>
+															<span class="text">2024-06-19, 10:26</span>
+														</div>
+														<div class="actions">
+															<ul class="simple-list">
+																<li class="item">
+																	<button class="button button-danger button-square" data-tooltip="Видалити фільтр">
+																		<i class="icon icon-trash"></i>
+																	</button>
+																</li>
+																<li class="item">
+																	<button class="button button-info button-square" data-tooltip="Змінити назву" data-toggle="#filter2">
+																		<i class="icon icon-edit"></i>
+																	</button>
+																</li>
+															</ul>
+														</div>
+													</div>
+													<form action="" class="form edit-filter validate-form">
+														<ul class="clear filters-bottom-list">
+															<li class="item input-item">
+																<div class="input-cover collapsed-bottom">
+																	<div class="alert upper-position">Мін 2 символи</div>
+																	<input type="text" class="input" placeholder="Введіть нову назву" minlength="2">
+																</div>
+															</li>
+															<li class="item button-item">
+																<button class="button button-primary button-square" data-tooltip="Зберегти зміни" type="submit">
+																	<i class="icon icon-checkmark"></i>
+																</button>
+															</li>
+														</ul>
+													</form>
+												</div>
+											</li>
+											<!-- 3 -->
+											<li class="item">
+												<div class="filter-group" id="filter3">
+													<div class="group-cover">
+														<div class="title-with-icon spaced">
+															<i class="icon icon-pin"></i>
+															<span class="text bold">Назва фітру 3</span>
+														</div>
+														<div class="title-with-icon" data-tooltip="Дата створення">
+															<i class="icon icon-calendar"></i>
+															<span class="text">2024-06-19, 10:26</span>
+														</div>
+														<div class="actions">
+															<ul class="simple-list">
+																<li class="item">
+																	<button class="button button-danger button-square" data-tooltip="Видалити фільтр">
+																		<i class="icon icon-trash"></i>
+																	</button>
+																</li>
+																<li class="item">
+																	<button class="button button-info button-square" data-tooltip="Змінити назву" data-toggle="#filter3">
+																		<i class="icon icon-edit"></i>
+																	</button>
+																</li>
+															</ul>
+														</div>
+													</div>
+													<form action="" class="form edit-filter validate-form">
+														<ul class="clear filters-bottom-list">
+															<li class="item input-item">
+																<div class="input-cover collapsed-bottom">
+																	<div class="alert upper-position">Мін 2 символи</div>
+																	<input type="text" class="input" placeholder="Введіть нову назву" minlength="2">
+																</div>
+															</li>
+															<li class="item button-item">
+																<button class="button button-primary button-square" data-tooltip="Зберегти зміни" type="submit">
+																	<i class="icon icon-checkmark"></i>
+																</button>
+															</li>
+														</ul>
+													</form>
+												</div>
+											</li>
+											<!-- 4 -->
+											<li class="item">
+												<div class="filter-group" id="filter4">
+													<div class="group-cover">
+														<div class="title-with-icon spaced">
+															<i class="icon icon-pin"></i>
+															<span class="text bold">Назва фітру 4</span>
+														</div>
+														<div class="title-with-icon" data-tooltip="Дата створення">
+															<i class="icon icon-calendar"></i>
+															<span class="text">2024-06-19, 10:26</span>
+														</div>
+														<div class="actions">
+															<ul class="simple-list">
+																<li class="item">
+																	<button class="button button-danger button-square" data-tooltip="Видалити фільтр">
+																		<i class="icon icon-trash"></i>
+																	</button>
+																</li>
+																<li class="item">
+																	<button class="button button-info button-square" data-tooltip="Змінити назву" data-toggle="#filter4">
+																		<i class="icon icon-edit"></i>
+																	</button>
+																</li>
+															</ul>
+														</div>
+													</div>
+													<form action="" class="form edit-filter validate-form">
+														<ul class="clear filters-bottom-list">
+															<li class="item input-item">
+																<div class="input-cover collapsed-bottom">
+																	<div class="alert upper-position">Мін 2 символи</div>
+																	<input type="text" class="input" placeholder="Введіть нову назву" minlength="2">
+																</div>
+															</li>
+															<li class="item button-item">
+																<button class="button button-primary button-square" data-tooltip="Зберегти зміни" type="submit">
+																	<i class="icon icon-checkmark"></i>
+																</button>
+															</li>
+														</ul>
+													</form>
+												</div>
+											</li>
+											<!-- 5 -->
+											<li class="item">
+												<div class="filter-group" id="filter5">
+													<div class="group-cover">
+														<div class="title-with-icon spaced">
+															<i class="icon icon-pin"></i>
+															<span class="text bold">Назва фітру 5</span>
+														</div>
+														<div class="title-with-icon" data-tooltip="Дата створення">
+															<i class="icon icon-calendar"></i>
+															<span class="text">2024-06-19, 10:26</span>
+														</div>
+														<div class="actions">
+															<ul class="simple-list">
+																<li class="item">
+																	<button class="button button-danger button-square" data-tooltip="Видалити фільтр">
+																		<i class="icon icon-trash"></i>
+																	</button>
+																</li>
+																<li class="item">
+																	<button class="button button-info button-square" data-tooltip="Змінити назву" data-toggle="#filter5">
+																		<i class="icon icon-edit"></i>
+																	</button>
+																</li>
+															</ul>
+														</div>
+													</div>
+													<form action="" class="form edit-filter validate-form">
+														<ul class="clear filters-bottom-list">
+															<li class="item input-item">
+																<div class="input-cover collapsed-bottom">
+																	<div class="alert upper-position">Мін 2 символи</div>
+																	<input type="text" class="input" placeholder="Введіть нову назву" minlength="2">
+																</div>
+															</li>
+															<li class="item button-item">
+																<button class="button button-primary button-square" data-tooltip="Зберегти зміни" type="submit">
+																	<i class="icon icon-checkmark"></i>
+																</button>
+															</li>
+														</ul>
+													</form>
+												</div>
 											</li>
 										</ul>
 										<div class="details align-right dropdown-spaced-top">
@@ -375,7 +572,7 @@
 												<li class="item">
 													<div class="title-with-icon" data-tooltip="Всього збережено">
 														<i class="icon icon-filter"></i>
-														<span class="text">2</span>
+														<span class="text">5</span>
 													</div>
 												</li>
 											</ul>
@@ -384,6 +581,8 @@
 								</div>
 							</div>
 						</li>
+						<!-- / saved filters -->
+						<!-- filters form -->
 						<li class="item">
 							<div class="dropdown" data-dropdown data-origin="right">
 								<div class="anchor button not-active button-square nav-button" data-tooltip="Фільтри">
@@ -608,14 +807,14 @@
 	<div class="row">
 		<div class="col-xs-6">
 			<div class="input-cover with-label large-space collapsed-bottom">
-				<ul class="simple-list clear nowrap-list">
-					<li class="item">
+				<ul class="clear filters-bottom-list">
+					<li class="item label-item">
 						<div class="large-text bold">Зберегти фільтр:</div>
 					</li>
-					<li class="item">
-						<input type="text" class="input fixed-width" id="filterName" placeholder="Введіть назву фільтру">
+					<li class="item input-item">
+						<input type="text" class="input input-block" id="filterName" placeholder="Введіть назву фільтру">
 					</li>
-					<li class="item">
+					<li class="item button-item">
 						<button class="button button-info button-square" type="button" data-tooltip="Зберегти">
 							<i class="icon icon-disk"></i>
 						</button>
@@ -628,6 +827,7 @@
 								</div>
 							</div>
 						</li>
+						<!-- / filters form -->
 						<li class="item">
 							<button class="button button-square nav-button" data-tooltip="Перевірка № ID" data-call="#checkIdModal">
 								<i class="icon icon-lamp"></i>
@@ -638,27 +838,34 @@
 								<i class="icon icon-phone-call"></i>
 							</button>
 						</li>
+						<!-- add new client link -->
+						<li class="item">
+							<a href="client.html" class="button button-square nav-button" data-tooltip="Перейти на сторінку створення кліента/покупця">
+								<i class="icon icon-user-add"></i>
+							</a>
+						</li>
+						<!-- / add new client link -->
 						<li class="item">
 							<a href="object-add-page.html" class="button button-square nav-button" data-tooltip="Перейти на сторінку створення об'єкту">
 								<i class="icon icon-house-add"></i>
 							</a>
 						</li>
-						<li class="item">
+<!-- 						<li class="item">
 							<a href="actual-object-page.html" class="button button-square nav-button" data-tooltip="Перейти на сторінку актуальних об'єктів">
 								<i class="icon icon-house-simple"></i>
 							</a>
-						</li>
-						<li class="item">
+						</li> -->
+		<!-- 				<li class="item">
 							<a href="new-object-page.html" class="button button-square nav-button" data-tooltip="Перейти на сторінку нових об'єктів">
 								<span class="icon-with-text">
 									<i class="icon icon-house-simple"></i>
 									<span class="text">new</span>
 								</span>
 							</a>
-						</li>
+						</li> -->
 						<li class="item">
 							<a href="deals-add.html" class="button button-square nav-button" data-tooltip="Перейти на сторінку створення угоди">
-								<i class="icon icon-key"></i>
+								<i class="icon icon-bag"></i>
 							</a>
 						</li>
 					</ul>
@@ -668,12 +875,12 @@
 				<nav>
 					<ul class="clear simple-list">
 						<li class="item">
-							<button class="button button-square nav-button" data-tooltip="Створити нагадування" data-call="#createRemindModal">
+							<button class="button button-square nav-button" data-tooltip="Додати нагадування" data-call="#createRemindModal">
 								<i class="icon icon-file-add"></i>
 							</button>
 						</li>
 						<li class="item">
-							<a href="notifications.html" class="button button-square nav-button" data-tooltip="Перейти на сторінку нагадувань">
+							<a href="notifications.html" class="button button-square nav-button" data-tooltip="Переглянути всі нагадування">
 								<i class="icon icon-file"></i>
 							</a>
 						</li>
@@ -685,7 +892,7 @@
 										<!-- if we have no user image tag <img> is unnecessary-->
 										<img src="img/user.jpg" draggable="false">
 									</div>
-									<div class="text">Василь Іванович</div>
+									<div class="text">Ірина Петрівна</div>
 									<i class="icon anchor-icon icon-triangle-down"></i>
 								</div>
 								<div class="dropdown-content">
@@ -710,7 +917,7 @@
 														<div class="title-with-icon">
 															<i class="icon icon-user"></i>
 															<span class="bold">ПІБ:</span>
-															<span class="text">Ткаченко Василь Іванович</span>
+															<span class="text">Косач Ірина Петрівна</span>
 														</div>
 													</li>
 													<li class="item">
@@ -724,7 +931,7 @@
 														<div class="title-with-icon">
 															<i class="icon icon-logout"></i>
 															<span class="bold">Логін:</span>
-															<span class="text">Василь Іванович</span>
+															<span class="text">Ірина Петрівна</span>
 														</div>
 													</li>
 													<li class="item">
@@ -769,7 +976,406 @@
 			<div class="side-content">
 				<main class="page-main" id="pageMain">
 					<!-- CONTENT -->
-					PROFILE
+					<h1 class="spaced-bottom">Косач Ірина Петрівна</h1>
+<form action="" class="form">
+	<div class="tabs" data-tabs>
+		<div class="tab active" data-tab="0" data-tooltip="Редагувати основну інформацію">
+			Основна інформація
+		</div>
+		<div class="tab" data-tab="1" data-tooltip="Дивитись системні повідомлення">
+			Системні повідомлення
+			<span class="count">21</span>
+		</div>
+		<div class="tab-content active">
+			<div class="row">
+				<div class="col-xs-2">
+					<!-- files load -->
+					<div class="input-cover large-space load-cover" id="photoLoader" data-loader>
+						<label id="photoLoaderLabel" class="label-file" for="editPhoto" data-label>
+							<div class="caption">
+								<i class="icon icon-cloud-upload"></i>
+								<div class="text">Завантажте файли</div>
+							</div>
+						</label>
+						<input type="file" id="editPhoto" data-file>
+						<!-- thats how loaded images need to be look -->
+						<!-- photo -->
+						<div class="files-cover" data-tooltip="Клікніть, щоб видалити">
+							<div class="inner">
+								<img src="img/user.jpg">
+							</div>
+							<div class="file-name">1.jpg</div>
+						</div>
+						<!-- / thats how loaded images need to be look -->
+					</div>
+					<!-- files load -->
+				</div>
+				<div class="col-xs-8">
+					<div class="row">
+						<div class="col-xs-6">
+							<div class="input-cover bottom-label large-space">
+								<label for="editProfileLastName" class="label">Прізвище: <sup>*</sup></label>
+								<input type="text" class="input" required placeholder="Введіть своє прізвище" id="editProfileLastName" value="Косач">
+								<div class="alert">Мін 2 символи</div>
+							</div>
+						</div>
+						<div class="col-xs-6">
+							<div class="input-cover bottom-label large-space">
+								<label for="editProfileFirstName" class="label">Ім`я: <sup>*</sup></label>
+								<input type="text" class="input" required placeholder="Введіть своє Ім`я" id="editProfileFirstName" value="Ірина">
+								<div class="alert">Мін 2 символи</div>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-xs-6">
+							<div class="input-cover bottom-label large-space">
+								<label for="editProfileSecondName" class="label">По батькові:</label>
+								<input type="text" class="input" required placeholder="Введіть по батькові клієнта" id="editProfileSecondName" value="Петрівна">
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-xs-6">
+							<div class="input-cover bottom-label large-space">
+								<label for="editProfileBirth" class="label">Дата народження:</label>
+								<input type="date" class="input" id="editProfileBirth" value="1999-08-22">
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-xs-6">
+							<div class="input-cover bottom-label large-space">
+								<label for="editProfilePassport" class="label">Серія та номер паспорту:</label>
+								<input type="text" class="input" id="editProfilePassport" value="HE29929">
+							</div>
+						</div>
+						<div class="col-xs-6">
+							<div class="input-cover bottom-label large-space">
+								<label for="editProfileCode" class="label">Код підрозділу:</label>
+								<input type="number" min="0" class="input" id="editProfileCode" value="7172">
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-xs-6">
+							<div class="input-cover bottom-label large-space">
+								<label for="editProfilePassportPlace" class="label">Ким виданий:</label>
+								<input type="text" class="input" id="editProfilePassportPlace" value="Харківським РВ УМВС">
+							</div>
+						</div>
+						<div class="col-xs-6">
+							<div class="input-cover bottom-label large-space">
+								<label for="editProfilePassportDate" class="label">Дата видачі паспорту:</label>
+								<input type="date" class="input" id="editProfilePassportDate" value="2010-08-22">
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-xs-6">
+							<div class="input-cover bottom-label large-space">
+								<label for="editProfileCitizenship" class="label">Громадянство</label>
+								<select name="editProfileCitizenship" id="editProfileCitizenship" class="select">
+									<option value="none" disabled>Оберіть опцію</option>
+									<option value="Так" selected>Так</option>
+									<option value="Ні">Ні</option>
+								</select>
+							</div>
+						</div>
+						<div class="col-xs-6">
+							<div class="input-cover bottom-label large-space">
+								<label for="editProfileSalory" class="label">Дохід у місяць (грн):</label>
+								<input type="number" min="0" class="input" placeholder="Сума доходу" id="editProfileSalory" value="88000">
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-xs-6">
+							<div class="input-cover bottom-label large-space">
+								<label for="editProfileCity" class="label">Місто проживання:</label>
+								<input type=text class="input" placeholder="Введіть місто проживання" id="editProfileCity" value="Одеса">
+							</div>
+						</div>
+						<div class="col-xs-6">
+							<div class="input-cover bottom-label large-space">
+								<label for="editProfileAddress" class="label">Адреса проживання:</label>
+								<input type=text class="input" placeholder="Введіть адресу проживання" id="editProfileAddress" value="вул. Мала Арнаутська, буд 57">
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-xs-6">
+							<div class="input-cover bottom-label large-space">
+								<label for="editProfileRegCity" class="label">Місто реєстрації:</label>
+								<input type=text class="input" placeholder="Введіть місто реєстрації" id="editProfileRegCity" value="Одеса">
+							</div>
+						</div>
+						<div class="col-xs-6">
+							<div class="input-cover bottom-label large-space">
+								<label for="editProfileRegAddress" class="label">Адреса реєстрації:</label>
+								<input type=text class="input" placeholder="Введіть адресу реєстрації" id="editProfileRegAddress" value="вул. Мала Арнаутська, буд 57">
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-xs-6">
+							<div class="input-cover bottom-label large-space">
+								<label for="editProfileTel" class="label">Телефон:</label>
+								<input type="tel" class="input" placeholder="0000000000" id="editProfileTel" value="0993334455">
+							</div>
+						</div>
+						<div class="col-xs-6">
+							<div class="input-cover bottom-label large-space">
+								<label for="editProfileEmail" class="label">Email:</label>
+								<input type="email" class="input" placeholder="Введіть Email клієнта" id="editProfileEmail" value="email.mail@ukr.net">
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-xs-6">
+							<div class="input-cover bottom-label large-space">
+								<label for="editProfileTelCity" class="label">Міський телефон:</label>
+								<input type="tel" class="input" placeholder="0000000000" id="editProfileTelCity" value="">
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-xs-6">
+							<div class="input-cover bottom-label large-space">
+								<label for="editProfileSocial" class="label">Соціальна мережа:</label>
+								<input type="text" class="input" placeholder="Введіть посилання на соціальну мережу" id="editProfileSocial" value="">
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-xs-2">
+					<div class="input-cover large-space">
+						<button class="button button-info fixed-width" type="submit">
+							<span class="text">Зберегти</span>
+							<span class="fade"></span>
+						</button>
+					</div>
+					<div class="input-cover collapsed-bottom large-space">
+						<button class="button button-danger fixed-width" type="reset">
+							<span class="text">Очистити</span>
+							<span class="fade"></span>
+						</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="tab-content">
+			<!-- if NO notification -->
+			<!-- <h2>Системних повідомлень немає</h2> -->
+			<!-- if NO notification -->
+
+			<!-- if we have notifitation -->
+			<div class="table-cover">
+				<form class="table-cover form">
+	<table class="notifications-table table simple-table" id="printedObjects">
+		<thead>
+			<tr class="primary-top">
+				<th>
+					<button class="transparent-button" data-tooltip="Сортувати по зростанню/спаданню">
+						<span class="text">
+							Дата
+							<i class="icon icon-select-arrows"></i>
+						</span>
+					</button>
+				</th>
+				<th>
+					<button class="transparent-button" data-tooltip="Сортувати по зростанню/спаданню">
+						<span class="text">
+							Назва об'єкту
+							<i class="icon icon-select-arrows"></i>
+						</span>
+					</button>
+				</th>
+				<th><span class="text">Повідомлення</span></th>
+				<th><span class="text">Позначити виконаним</span></th>
+			</tr>
+			<tr class="gray-bottom">
+				<!-- date -->
+				<th><input type="date" class="input smaller-input" data-tooltip="Виберіть дату для пошуку"></th>
+				<!-- object -->
+				<th><input type="text" class="input smaller-input" data-tooltip="Введіть ключові слова для пошуку"></th>
+				<!-- description -->
+				<th><input type="text" class="input smaller-input" data-tooltip="Введіть ключові слова для пошуку"></th>
+				<!-- mark as done -->
+				<th></th>
+			</tr>
+		</thead>
+		<!-- TBODY -->
+		<tbody>
+			<!-- notification element -->
+			<tr class="table-element active">
+	<!-- date -->
+	<td>
+		<div class="date">2024-06-19</div>
+		<div class="time">10:26</div>
+	</td>
+	<!-- object -->
+	<td>
+		<div class="title-with-icon spaced">
+			<i class="icon icon-user"></i>
+			<span class="text">Власник, ID-151062</span>
+		</div>
+	</td>
+	<!-- description -->
+	<td>
+		<div class="text">
+			Готова знімати з 5 квітня, зараз грошей немає. Подзвонити
+		</div>
+	</td>
+	<!-- mark as done/Status -->
+	<td>
+		<button class="button button-primary button-block">
+			<span class="text">ОК</span>
+		</button>
+	</td>
+</tr>
+			<!-- / notification element -->
+			<!-- notification element -->
+			<tr class="table-element active">
+	<!-- date -->
+	<td>
+		<div class="date">2024-06-19</div>
+		<div class="time">10:26</div>
+	</td>
+	<!-- object -->
+	<td>
+		<div class="title-with-icon spaced">
+			<i class="icon icon-user"></i>
+			<span class="text">Власник, ID-151062</span>
+		</div>
+	</td>
+	<!-- description -->
+	<td>
+		<div class="text">
+			Готова знімати з 5 квітня, зараз грошей немає. Подзвонити
+		</div>
+	</td>
+	<!-- mark as done/Status -->
+	<td>
+		<button class="button button-primary button-block">
+			<span class="text">ОК</span>
+		</button>
+	</td>
+</tr>
+			<!-- / notification element -->
+			<!-- notification element -->
+			<tr class="table-element">
+	<!-- date -->
+	<td>
+		<div class="date">2024-06-19</div>
+		<div class="time">10:26</div>
+	</td>
+	<!-- object -->
+	<td>
+		<div class="title-with-icon spaced">
+			<i class="icon icon-user"></i>
+			<span class="text">Власник, ID-151062</span>
+		</div>
+	</td>
+	<!-- description -->
+	<td>
+		<div class="text">
+			Підтвердити перегляд на 19:00, с МТС !!! Кл ТЮ Офтутович
+		</div>
+	</td>
+	<!-- mark as done/Status -->
+	<td>
+		<div class="text">Завершено</div>
+	</td>
+</tr>
+			<!-- / notification element -->
+			<!-- notification element -->
+			<tr class="table-element">
+	<!-- date -->
+	<td>
+		<div class="date">2024-06-19</div>
+		<div class="time">10:26</div>
+	</td>
+	<!-- object -->
+	<td>
+		<div class="title-with-icon spaced">
+			<i class="icon icon-user"></i>
+			<span class="text">Власник, ID-151062</span>
+		</div>
+	</td>
+	<!-- description -->
+	<td>
+		<div class="text">
+			Підтвердити перегляд на 19:00, с МТС !!! Кл ТЮ Офтутович
+		</div>
+	</td>
+	<!-- mark as done/Status -->
+	<td>
+		<div class="text">Завершено</div>
+	</td>
+</tr>
+			<!-- / notification element -->
+			<!-- notification element -->
+			<tr class="table-element">
+	<!-- date -->
+	<td>
+		<div class="date">2024-06-19</div>
+		<div class="time">10:26</div>
+	</td>
+	<!-- object -->
+	<td>
+		<div class="title-with-icon spaced">
+			<i class="icon icon-user"></i>
+			<span class="text">Власник, ID-151062</span>
+		</div>
+	</td>
+	<!-- description -->
+	<td>
+		<div class="text">
+			Підтвердити перегляд на 19:00, с МТС !!! Кл ТЮ Офтутович
+		</div>
+	</td>
+	<!-- mark as done/Status -->
+	<td>
+		<div class="text">Завершено</div>
+	</td>
+</tr>
+			<!-- / notification element -->
+			<!-- notification element -->
+			<tr class="table-element">
+	<!-- date -->
+	<td>
+		<div class="date">2024-06-19</div>
+		<div class="time">10:26</div>
+	</td>
+	<!-- object -->
+	<td>
+		<div class="title-with-icon spaced">
+			<i class="icon icon-user"></i>
+			<span class="text">Власник, ID-151062</span>
+		</div>
+	</td>
+	<!-- description -->
+	<td>
+		<div class="text">
+			Підтвердити перегляд на 19:00, с МТС !!! Кл ТЮ Офтутович
+		</div>
+	</td>
+	<!-- mark as done/Status -->
+	<td>
+		<div class="text">Завершено</div>
+	</td>
+</tr>
+			<!-- / notification element -->
+		</tbody>
+		<!-- / TBODY -->
+	</table>
+</form>
+			</div>
+			<!-- / if we have notifitation -->
+		</div>
+	</div>
+</form>
 					<!-- / CONTENT -->
 				</main>
 				<!-- / main-content -->
@@ -832,11 +1438,11 @@
 			<button type="button" class="close-popup button" data-dismiss="#checkTelModal" data-tooltip="Закрити вікно">&times;</button>
 		</div>
 		<div class="content">
-			<form action="" class="form">
-				<div class="input-cover with-label">
+			<form action="" class="form validate-form">
+				<div class="input-cover with-label spaced-top">
 					<label for="telSearch" class="label">Тел:<sup>*</sup></label>
-					<input type="tel" class="input" required placeholder="0000000000" id="telSearch">
-					<div class="alert">10 цифр! без роздільників</div>
+					<input type="tel" class="input phone" placeholder="0000000000" id="telSearch" maxlength="10">
+					<div class="alert upper-position">10 цифр! без роздільників</div>
 				</div>
 				<div class="input-cover with-label collapsed-bottom">
 					<ul class="clear simple-list smaller-spaces">
@@ -847,22 +1453,19 @@
 							</button>
 						</li>
 						<li class="item">
-							<a href="client.html" class="button button-info button-square" data-tooltip="Перейти на сторінку нового клієнта">
+							<a href="client.html" class="button button-info button-square" data-call="#addClientModal" data-tooltip="Додати кліента/покупця">
 								<span class="text"><i class="icon icon icon-user-add"></i></span>
 							</a>
 						</li>
 						<li class="item">
-							<a href="object-add-page.html" class="button button-info button-square" data-tooltip="Перейти на сторінку нового об'єкту">
+							<a href="object-add-page.html" class="button button-info button-square" data-call="#addObjectModal" data-tooltip="Додати новий об'єкт">
 								<span class="text">
-									<span class="icon-with-text">
-										<i class="icon icon-house-simple"></i>
-										<span class="text color-info">+</span>
-									</span>
+									<i class="icon icon-house-add"></i>
 								</span>
 							</a>
 						</li>
 						<li class="item">
-							<a href="deals.html" class="button button-info button-square" data-tooltip="Перейти на сторінку нової угоди">
+							<a href="deals.html" class="button button-info button-square" data-call="#addDealsModal" data-tooltip="Створити нову угоду">
 								<span class="text"><i class="icon icon-bag"></i></span>
 							</a>
 						</li>
@@ -879,7 +1482,7 @@
 		<div class="head">
 			<h2 class="modal-title">
 				<i class="icon icon-file-add"></i>
-				Створити нагадування
+				Додати нагадування
 			</h2>
 			<button type="button" class="close-popup button" data-dismiss="#createRemindModal" data-tooltip="Закрити вікно">&times;</button>
 		</div>

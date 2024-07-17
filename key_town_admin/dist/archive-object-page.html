@@ -324,18 +324,15 @@
 								</div>
 							</div>
 						</li>
-						<li class="item">
-							<a href="client.html" class="button button-square nav-button" data-tooltip="Перейти на сторінку створення кліента/покупця">
-								<i class="icon icon-user-add"></i>
-							</a>
-						</li>
+						<!-- / rieltors online -->
+						<!-- saved filters -->
 						<li class="item">
 							<div class="dropdown" data-dropdown data-origin="right">
 								<!-- class disabled if NO filters -->
 								<div class="anchor button not-active button-square nav-button" data-tooltip="Збережені фільтри">
 									<i class="icon icon-pin"></i>
 									<!-- if we have saved filters -->
-									<span class="count">2</span>
+									<span class="count">5</span>
 								</div>
 								<div class="dropdown-content">
 									<div class="head">
@@ -351,23 +348,223 @@
 										<ul class="underlined-list clear dropdown-list">
 											<!-- 1 -->
 											<li class="item">
-												<div class="title-with-icon spaced">
-													<i class="icon icon-pin"></i>
-													<span class="text">Назва фітру 1</span>
-												</div>
-												<a class="title-with-icon" href="tel:0674947727" data-tooltip="Подзвонити">
-													<i class="icon icon-calendar"></i>
-													<span class="text">2024-06-19, 10:26</span>
-												</a>
-												<div class="spaced-top">
-													<button class="button button-primary" data-tooltip="Розблокувати контакт">
-														<span class="text">Розблокувати</span>
-													</button>
+												<div class="filter-group" id="filter1">
+													<div class="group-cover">
+														<div class="title-with-icon spaced">
+															<i class="icon icon-pin"></i>
+															<span class="text bold">Назва фітру 1</span>
+														</div>
+														<div class="title-with-icon" data-tooltip="Дата створення">
+															<i class="icon icon-calendar"></i>
+															<span class="text">2024-06-19, 10:26</span>
+														</div>
+														<div class="actions">
+															<ul class="simple-list">
+																<li class="item">
+																	<button class="button button-danger button-square" data-tooltip="Видалити фільтр">
+																		<i class="icon icon-trash"></i>
+																	</button>
+																</li>
+																<li class="item">
+																	<button class="button button-info button-square" data-tooltip="Змінити назву" data-toggle="#filter1">
+																		<i class="icon icon-edit"></i>
+																	</button>
+																</li>
+															</ul>
+														</div>
+													</div>
+													<form action="" class="form edit-filter validate-form">
+														<ul class="clear filters-bottom-list">
+															<li class="item input-item">
+																<div class="input-cover collapsed-bottom">
+																	<div class="alert upper-position">Мін 2 символи</div>
+																	<input type="text" class="input" placeholder="Введіть нову назву" minlength="2">
+																</div>
+															</li>
+															<li class="item button-item">
+																<button class="button button-primary button-square" data-tooltip="Зберегти зміни" type="submit">
+																	<i class="icon icon-checkmark"></i>
+																</button>
+															</li>
+														</ul>
+													</form>
 												</div>
 											</li>
 											<!-- 2 -->
 											<li class="item">
-												<div class="text">Saved Filter 2</div>
+												<div class="filter-group" id="filter2">
+													<div class="group-cover">
+														<div class="title-with-icon spaced">
+															<i class="icon icon-pin"></i>
+															<span class="text bold">Назва фітру 2</span>
+														</div>
+														<div class="title-with-icon" data-tooltip="Дата створення">
+															<i class="icon icon-calendar"></i>
+															<span class="text">2024-06-19, 10:26</span>
+														</div>
+														<div class="actions">
+															<ul class="simple-list">
+																<li class="item">
+																	<button class="button button-danger button-square" data-tooltip="Видалити фільтр">
+																		<i class="icon icon-trash"></i>
+																	</button>
+																</li>
+																<li class="item">
+																	<button class="button button-info button-square" data-tooltip="Змінити назву" data-toggle="#filter2">
+																		<i class="icon icon-edit"></i>
+																	</button>
+																</li>
+															</ul>
+														</div>
+													</div>
+													<form action="" class="form edit-filter validate-form">
+														<ul class="clear filters-bottom-list">
+															<li class="item input-item">
+																<div class="input-cover collapsed-bottom">
+																	<div class="alert upper-position">Мін 2 символи</div>
+																	<input type="text" class="input" placeholder="Введіть нову назву" minlength="2">
+																</div>
+															</li>
+															<li class="item button-item">
+																<button class="button button-primary button-square" data-tooltip="Зберегти зміни" type="submit">
+																	<i class="icon icon-checkmark"></i>
+																</button>
+															</li>
+														</ul>
+													</form>
+												</div>
+											</li>
+											<!-- 3 -->
+											<li class="item">
+												<div class="filter-group" id="filter3">
+													<div class="group-cover">
+														<div class="title-with-icon spaced">
+															<i class="icon icon-pin"></i>
+															<span class="text bold">Назва фітру 3</span>
+														</div>
+														<div class="title-with-icon" data-tooltip="Дата створення">
+															<i class="icon icon-calendar"></i>
+															<span class="text">2024-06-19, 10:26</span>
+														</div>
+														<div class="actions">
+															<ul class="simple-list">
+																<li class="item">
+																	<button class="button button-danger button-square" data-tooltip="Видалити фільтр">
+																		<i class="icon icon-trash"></i>
+																	</button>
+																</li>
+																<li class="item">
+																	<button class="button button-info button-square" data-tooltip="Змінити назву" data-toggle="#filter3">
+																		<i class="icon icon-edit"></i>
+																	</button>
+																</li>
+															</ul>
+														</div>
+													</div>
+													<form action="" class="form edit-filter validate-form">
+														<ul class="clear filters-bottom-list">
+															<li class="item input-item">
+																<div class="input-cover collapsed-bottom">
+																	<div class="alert upper-position">Мін 2 символи</div>
+																	<input type="text" class="input" placeholder="Введіть нову назву" minlength="2">
+																</div>
+															</li>
+															<li class="item button-item">
+																<button class="button button-primary button-square" data-tooltip="Зберегти зміни" type="submit">
+																	<i class="icon icon-checkmark"></i>
+																</button>
+															</li>
+														</ul>
+													</form>
+												</div>
+											</li>
+											<!-- 4 -->
+											<li class="item">
+												<div class="filter-group" id="filter4">
+													<div class="group-cover">
+														<div class="title-with-icon spaced">
+															<i class="icon icon-pin"></i>
+															<span class="text bold">Назва фітру 4</span>
+														</div>
+														<div class="title-with-icon" data-tooltip="Дата створення">
+															<i class="icon icon-calendar"></i>
+															<span class="text">2024-06-19, 10:26</span>
+														</div>
+														<div class="actions">
+															<ul class="simple-list">
+																<li class="item">
+																	<button class="button button-danger button-square" data-tooltip="Видалити фільтр">
+																		<i class="icon icon-trash"></i>
+																	</button>
+																</li>
+																<li class="item">
+																	<button class="button button-info button-square" data-tooltip="Змінити назву" data-toggle="#filter4">
+																		<i class="icon icon-edit"></i>
+																	</button>
+																</li>
+															</ul>
+														</div>
+													</div>
+													<form action="" class="form edit-filter validate-form">
+														<ul class="clear filters-bottom-list">
+															<li class="item input-item">
+																<div class="input-cover collapsed-bottom">
+																	<div class="alert upper-position">Мін 2 символи</div>
+																	<input type="text" class="input" placeholder="Введіть нову назву" minlength="2">
+																</div>
+															</li>
+															<li class="item button-item">
+																<button class="button button-primary button-square" data-tooltip="Зберегти зміни" type="submit">
+																	<i class="icon icon-checkmark"></i>
+																</button>
+															</li>
+														</ul>
+													</form>
+												</div>
+											</li>
+											<!-- 5 -->
+											<li class="item">
+												<div class="filter-group" id="filter5">
+													<div class="group-cover">
+														<div class="title-with-icon spaced">
+															<i class="icon icon-pin"></i>
+															<span class="text bold">Назва фітру 5</span>
+														</div>
+														<div class="title-with-icon" data-tooltip="Дата створення">
+															<i class="icon icon-calendar"></i>
+															<span class="text">2024-06-19, 10:26</span>
+														</div>
+														<div class="actions">
+															<ul class="simple-list">
+																<li class="item">
+																	<button class="button button-danger button-square" data-tooltip="Видалити фільтр">
+																		<i class="icon icon-trash"></i>
+																	</button>
+																</li>
+																<li class="item">
+																	<button class="button button-info button-square" data-tooltip="Змінити назву" data-toggle="#filter5">
+																		<i class="icon icon-edit"></i>
+																	</button>
+																</li>
+															</ul>
+														</div>
+													</div>
+													<form action="" class="form edit-filter validate-form">
+														<ul class="clear filters-bottom-list">
+															<li class="item input-item">
+																<div class="input-cover collapsed-bottom">
+																	<div class="alert upper-position">Мін 2 символи</div>
+																	<input type="text" class="input" placeholder="Введіть нову назву" minlength="2">
+																</div>
+															</li>
+															<li class="item button-item">
+																<button class="button button-primary button-square" data-tooltip="Зберегти зміни" type="submit">
+																	<i class="icon icon-checkmark"></i>
+																</button>
+															</li>
+														</ul>
+													</form>
+												</div>
 											</li>
 										</ul>
 										<div class="details align-right dropdown-spaced-top">
@@ -375,7 +572,7 @@
 												<li class="item">
 													<div class="title-with-icon" data-tooltip="Всього збережено">
 														<i class="icon icon-filter"></i>
-														<span class="text">2</span>
+														<span class="text">5</span>
 													</div>
 												</li>
 											</ul>
@@ -384,6 +581,8 @@
 								</div>
 							</div>
 						</li>
+						<!-- / saved filters -->
+						<!-- filters form -->
 						<li class="item">
 							<div class="dropdown" data-dropdown data-origin="right">
 								<div class="anchor button not-active button-square nav-button" data-tooltip="Фільтри">
@@ -608,14 +807,14 @@
 	<div class="row">
 		<div class="col-xs-6">
 			<div class="input-cover with-label large-space collapsed-bottom">
-				<ul class="simple-list clear nowrap-list">
-					<li class="item">
+				<ul class="clear filters-bottom-list">
+					<li class="item label-item">
 						<div class="large-text bold">Зберегти фільтр:</div>
 					</li>
-					<li class="item">
-						<input type="text" class="input fixed-width" id="filterName" placeholder="Введіть назву фільтру">
+					<li class="item input-item">
+						<input type="text" class="input input-block" id="filterName" placeholder="Введіть назву фільтру">
 					</li>
-					<li class="item">
+					<li class="item button-item">
 						<button class="button button-info button-square" type="button" data-tooltip="Зберегти">
 							<i class="icon icon-disk"></i>
 						</button>
@@ -628,6 +827,7 @@
 								</div>
 							</div>
 						</li>
+						<!-- / filters form -->
 						<li class="item">
 							<button class="button button-square nav-button" data-tooltip="Перевірка № ID" data-call="#checkIdModal">
 								<i class="icon icon-lamp"></i>
@@ -638,27 +838,34 @@
 								<i class="icon icon-phone-call"></i>
 							</button>
 						</li>
+						<!-- add new client link -->
+						<li class="item">
+							<a href="client.html" class="button button-square nav-button" data-tooltip="Перейти на сторінку створення кліента/покупця">
+								<i class="icon icon-user-add"></i>
+							</a>
+						</li>
+						<!-- / add new client link -->
 						<li class="item">
 							<a href="object-add-page.html" class="button button-square nav-button" data-tooltip="Перейти на сторінку створення об'єкту">
 								<i class="icon icon-house-add"></i>
 							</a>
 						</li>
-						<li class="item">
+<!-- 						<li class="item">
 							<a href="actual-object-page.html" class="button button-square nav-button" data-tooltip="Перейти на сторінку актуальних об'єктів">
 								<i class="icon icon-house-simple"></i>
 							</a>
-						</li>
-						<li class="item">
+						</li> -->
+		<!-- 				<li class="item">
 							<a href="new-object-page.html" class="button button-square nav-button" data-tooltip="Перейти на сторінку нових об'єктів">
 								<span class="icon-with-text">
 									<i class="icon icon-house-simple"></i>
 									<span class="text">new</span>
 								</span>
 							</a>
-						</li>
+						</li> -->
 						<li class="item">
 							<a href="deals-add.html" class="button button-square nav-button" data-tooltip="Перейти на сторінку створення угоди">
-								<i class="icon icon-key"></i>
+								<i class="icon icon-bag"></i>
 							</a>
 						</li>
 					</ul>
@@ -668,12 +875,12 @@
 				<nav>
 					<ul class="clear simple-list">
 						<li class="item">
-							<button class="button button-square nav-button" data-tooltip="Створити нагадування" data-call="#createRemindModal">
+							<button class="button button-square nav-button" data-tooltip="Додати нагадування" data-call="#createRemindModal">
 								<i class="icon icon-file-add"></i>
 							</button>
 						</li>
 						<li class="item">
-							<a href="notifications.html" class="button button-square nav-button" data-tooltip="Перейти на сторінку нагадувань">
+							<a href="notifications.html" class="button button-square nav-button" data-tooltip="Переглянути всі нагадування">
 								<i class="icon icon-file"></i>
 							</a>
 						</li>
@@ -685,7 +892,7 @@
 										<!-- if we have no user image tag <img> is unnecessary-->
 										<img src="img/user.jpg" draggable="false">
 									</div>
-									<div class="text">Василь Іванович</div>
+									<div class="text">Ірина Петрівна</div>
 									<i class="icon anchor-icon icon-triangle-down"></i>
 								</div>
 								<div class="dropdown-content">
@@ -710,7 +917,7 @@
 														<div class="title-with-icon">
 															<i class="icon icon-user"></i>
 															<span class="bold">ПІБ:</span>
-															<span class="text">Ткаченко Василь Іванович</span>
+															<span class="text">Косач Ірина Петрівна</span>
 														</div>
 													</li>
 													<li class="item">
@@ -724,7 +931,7 @@
 														<div class="title-with-icon">
 															<i class="icon icon-logout"></i>
 															<span class="bold">Логін:</span>
-															<span class="text">Василь Іванович</span>
+															<span class="text">Ірина Петрівна</span>
 														</div>
 													</li>
 													<li class="item">
@@ -765,8 +972,8 @@
 	</div>
 </header>
 			<!-- /header -->
-			<!-- main-content -->
 			<div class="side-content">
+				<!-- main-content -->
 				<main class="page-main" id="pageMain">
 					<!-- CONTENT -->
 					<div class="spaced-bottom">
@@ -876,7 +1083,7 @@
 							<!-- TBODY -->
 							<tbody>
 								<!-- object element -->
-								<tr class="object-element">
+								<tr class="table-element">
 	<!-- id -->
 	<td>
 		<div class="paragraph">151721</div>
@@ -1080,7 +1287,7 @@
 </tr>
 								<!-- / object element -->
 								<!-- object element -->
-								<tr class="object-element">
+								<tr class="table-element">
 	<!-- id -->
 	<td>
 		<div class="paragraph">151721</div>
@@ -1284,7 +1491,7 @@
 </tr>
 								<!-- / object element -->
 								<!-- object element -->
-								<tr class="object-element">
+								<tr class="table-element">
 	<!-- id -->
 	<td>
 		<div class="paragraph">151721</div>
@@ -1592,11 +1799,11 @@
 			<button type="button" class="close-popup button" data-dismiss="#checkTelModal" data-tooltip="Закрити вікно">&times;</button>
 		</div>
 		<div class="content">
-			<form action="" class="form">
-				<div class="input-cover with-label">
+			<form action="" class="form validate-form">
+				<div class="input-cover with-label spaced-top">
 					<label for="telSearch" class="label">Тел:<sup>*</sup></label>
-					<input type="tel" class="input" required placeholder="0000000000" id="telSearch">
-					<div class="alert">10 цифр! без роздільників</div>
+					<input type="tel" class="input phone" placeholder="0000000000" id="telSearch" maxlength="10">
+					<div class="alert upper-position">10 цифр! без роздільників</div>
 				</div>
 				<div class="input-cover with-label collapsed-bottom">
 					<ul class="clear simple-list smaller-spaces">
@@ -1607,22 +1814,19 @@
 							</button>
 						</li>
 						<li class="item">
-							<a href="client.html" class="button button-info button-square" data-tooltip="Перейти на сторінку нового клієнта">
+							<a href="client.html" class="button button-info button-square" data-call="#addClientModal" data-tooltip="Додати кліента/покупця">
 								<span class="text"><i class="icon icon icon-user-add"></i></span>
 							</a>
 						</li>
 						<li class="item">
-							<a href="object-add-page.html" class="button button-info button-square" data-tooltip="Перейти на сторінку нового об'єкту">
+							<a href="object-add-page.html" class="button button-info button-square" data-call="#addObjectModal" data-tooltip="Додати новий об'єкт">
 								<span class="text">
-									<span class="icon-with-text">
-										<i class="icon icon-house-simple"></i>
-										<span class="text color-info">+</span>
-									</span>
+									<i class="icon icon-house-add"></i>
 								</span>
 							</a>
 						</li>
 						<li class="item">
-							<a href="deals.html" class="button button-info button-square" data-tooltip="Перейти на сторінку нової угоди">
+							<a href="deals.html" class="button button-info button-square" data-call="#addDealsModal" data-tooltip="Створити нову угоду">
 								<span class="text"><i class="icon icon-bag"></i></span>
 							</a>
 						</li>
@@ -1639,7 +1843,7 @@
 		<div class="head">
 			<h2 class="modal-title">
 				<i class="icon icon-file-add"></i>
-				Створити нагадування
+				Додати нагадування
 			</h2>
 			<button type="button" class="close-popup button" data-dismiss="#createRemindModal" data-tooltip="Закрити вікно">&times;</button>
 		</div>
@@ -1671,6 +1875,1647 @@
 	</div>
 </div>
 	<!-- / create a reminding -->
+	<!-- modal search rieltors -->
+	<div id="searchRieltorsModal" class="popup">
+	<div class="inner">
+		<div class="head">
+			<h2 class="modal-title">
+				<i class="icon icon-edit"></i>
+				Вибрати рієлтора
+			</h2>
+			<button type="button" class="close-popup button" data-dismiss="#searchRieltorsModal" data-tooltip="Закрити вікно">&times;</button>
+		</div>
+		<div class="content">
+			<form action="" class="form">
+				<div class="input-cover">
+					<select name="rieltorsSelect" id="rieltorsSelect" class="select" data-search="true">
+						<option value="Вибрати рієлтора" selected disabled>Вибрати рієлтора</option>
+						<option value="Коржик Андрій Іванович">Коржик Андрій Іванович</option>
+						<option value="Таточенко Аліна Іванівна">Таточенко Аліна Іванівна</option>
+						<option value="Ткач Василь Іванович">Ткач Василь Іванович</option>
+						<option value="Зубенко Ніна Павлівна">Зубенко Ніна Павлівна</option>
+					</select>
+				</div>
+				<button class="button button-info fixed-width" type="submit">
+					<span class="text">Зберегти</span>
+				</button>
+			</form>
+		</div>
+	</div>
+</div>
+	<!-- / modal search rieltors -->
+	<!-- edit obj -->
+	<div id="editObjectModal" class="popup middle-popup">
+	<div class="inner">
+		<div class="head">
+			<h2 class="modal-title">
+				<span class="icon-with-text">
+					<i class="icon icon-edit"></i>
+				</span>
+				Редагувати об'єкт
+			</h2>
+			<button type="button" class="close-popup button" data-dismiss="#editObjectModal" data-tooltip="Закрити вікно">&times;</button>
+		</div>
+		<div class="content">
+			<!-- EDIT OBJECT FORM -->
+			<h1 class="spaced-bottom">Власник ID: 152066</h1>
+<form action="" class="form">
+	<div class="tabs" data-tabs>
+		<div class="tab active" data-tab="0" data-tooltip="Редагувати основну інформацію">
+			Основна інформація
+		</div>
+		<div class="tab" data-tab="1" data-tooltip="Редагувати фото та відео">
+			Фото та відео об'єкту
+		</div>
+		<div class="tab-content active">
+			<div class="row">
+				<div class="col-xs-10">
+					<div class="row">
+						<div class="col-xs-8">
+							<div class="input-cover large-space">
+								<select name="editObjOwnerSelect" id="editObjOwnerSelect" class="select" data-search="true">
+									<option value="Вибрати власника" disabled>Вибрати власника</option>
+									<option value="Сокіл Євген Павлович" selected>Сокіл Євген Павлович</option>
+									<option value="Косач Ірина Петрівна">Косач Ірина Петрівна</option>
+									<option value="Ткач Василь Іванович">Ткач Василь Іванович</option>
+									<option value="Зубенко Ніна Павлівна">Зубенко Ніна Павлівна</option>
+								</select>
+							</div>
+						</div>
+						<div class="col-xs-2">
+							<button class="button button-primary fixed-width" type="button" data-tooltip="Редагувати клієнта" data-call="#editClientModal">
+								<i class="icon icon icon-edit"></i>
+								<span class="text">Редагувати клієнта</span>
+							</button>
+						</div>
+						<div class="col-xs-2">
+							<button class="button button-primary fixed-width" type="button" data-tooltip="Додати клієнта"data-call="#addClientModal">
+								<i class="icon icon icon-user-add"></i>
+								<span class="text">Додати клієнта</span>
+							</button>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-xs-4"></div>
+						<div class="col-xs-4">
+							<div class="input-cover large-space">
+								<label for="editObjPrice" class="label spaced-bottom">Ціна: <sup>*</sup></label>
+								<input type="number" min="0" class="input" required placeholder="Введіть ціну в грн" id="editObjPrice" value="12000">
+								<div class="alert">Тільки цифри</div>
+							</div>
+						</div>
+						<div class="col-xs-4">
+							<div class="input-cover large-space">
+								<label for="editObjType" class="label spaced-bottom">Тип: <sup>*</sup></label>
+								<select name="editObjType" id="editObjType" class="select" data-search="true">
+									<option value="Вибрати тип об'єкту" disabled>Вибрати тип об'єкту</option>
+									<option value="1 км. кв." selected>1 км. кв.</option>
+									<option value="2 км. кв.">2 км. кв.</option>
+									<option value="3 км. кв.">3 км. кв.</option>
+									<option value="Будинок">Будинок</option>
+								</select>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-xs-4">
+							<div class="input-cover large-space">
+								<label for="editObjCity" class="label spaced-bottom">Місто: <sup>*</sup></label>
+								<select name="editObjCity" id="editObjCity" class="select" data-search="true">
+									<option value="Вибрати місто" disabled>Вибрати місто</option>
+									<option value="Київ" selected>Київ</option>
+									<option value="Львів">Львів</option>
+									<option value="Харків">Харків</option>
+									<option value="Дніпро">Дніпро</option>
+									<option value="Одеса">Одеса</option>
+								</select>
+							</div>
+						</div>
+						<div class="col-xs-4">
+							<div class="input-cover large-space">
+								<label for="editObjPlace" class="label spaced-bottom">Район: <sup>*</sup></label>
+								<select name="editObjPlace" id="editObjPlace" class="select" data-search="true">
+									<option value="Вибрати район" disabled>Вибрати район</option>
+									<option value="Печерський" selected>Печерський</option>
+									<option value="Шевченківський">Шевченківський</option>
+									<option value="Голосіївський">Голосіївський</option>
+									<option value="Дарницький">Дарницький</option>
+									<option value="Солом'янський">Солом'янський</option>
+								</select>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-xs-4">
+							<div class="input-cover large-space">
+								<label for="editObjAdress" class="label spaced-bottom">Адреса: <sup>*</sup></label>
+								<input type="text" class="input" id="editObjAdress" placeholder="Введіть адресу" value="бул. Шевченка, буд 352">
+							</div>
+						</div>
+						<div class="col-xs-4">
+							<div class="input-cover large-space">
+								<label for="editObjFlor" class="label spaced-bottom">Поверх: <sup>*</sup></label>
+								<input type="number" min="0" class="input" id="editObjFlor" placeholder="Введіть поверх" value="3">
+							</div>
+						</div>
+						<div class="col-xs-4">
+							<div class="input-cover large-space">
+								<label for="editObjMaxFlor" class="label spaced-bottom">Всього поверхів: <sup>*</sup></label>
+								<input type="number" min="0" class="input" id="editObjMaxFlor" placeholder="Введіть скільки всього поверхів" value="7">
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-xs-4">
+							<div class="input-cover large-space">
+								<label for="editObjSquare" class="label spaced-bottom">Загальна площа: <sup>*</sup></label>
+								<input type="number" min="0" class="input" id="editObjSquare" placeholder="Введіть загальну площу" value="120">
+							</div>
+						</div>
+						<div class="col-xs-4">
+							<div class="input-cover large-space">
+								<label for="editObjSquareLive" class="label spaced-bottom">Житлова площа: <sup>*</sup></label>
+								<input type="number" min="0" class="input" id="editObjSquareLive" placeholder="Введіть житлову площу" value="110">
+							</div>
+						</div>
+						<div class="col-xs-4">
+							<div class="input-cover large-space">
+								<label for="editObjSquareKitchen" class="label spaced-bottom">Площа кухні (м <sup>2</sup>): <sup>*</sup></label>
+								<input type="number" min="0" class="input" id="editObjSquareKitchen" placeholder="Введіть площу кухні" value="40">
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-xs-4">
+							<div class="input-cover large-space">
+								<label for="editObjDeposit" class="label spaced-bottom">Застава власнику (грн):</label>
+								<input type="number" min="0" class="input" id="editObjDeposit" placeholder="Введіть сумму" value="0">
+							</div>
+						</div>
+						<div class="col-xs-4">
+							<div class="input-cover large-space">
+								<label for="editObjFreeDate" class="label spaced-bottom">Об'єкт звільниться:</label>
+								<input type="date" class="input" id="editObjFreeDate" value="2024-08-22">
+							</div>
+						</div>
+						<div class="col-xs-4">
+							<div class="input-cover large-space">
+								<label for="editObjShowdate" class="label spaced-bottom">Об'єкт показують:</label>
+								<input type="date" class="input" id="editObjShowdate" value="2024-08-01">
+							</div>
+						</div>
+					</div>
+					<div class="input-cover large-space">
+						<label for="editObjTitle" class="label spaced-bottom">Заголовок: <sup>*</sup></label>
+						<input type="text" class="input" id="editObjTitle" placeholder="Введіть заголовок" value="Власник ID: 152066">
+					</div>
+					<div class="input-cover large-space">
+						<label for="editObjDescription" class="label spaced-bottom">Опис:</label>
+						<textarea class="textarea" id="editObjDescription" placeholder="Введіть короткий опис">Здається довгостроково 1 к квартира на Русанівській набережній Здається в довгострокову оренду охайна та світла однокімнатна квартира за адресою Русанівська набережна. Квартира знаходиться на 11 поверсі/16 пов. будинку, площею 36 м.кв для 1-2 людей. Квартира з меблями, укомплектована необхідною побутовою технікою: кондиціонер, холодильник, мікрохвильова піч, пральна машина, пилесмок, в кімнаті велика шафа купе, розкладний диван, вана, плита з духовкою. Будинок знаходиться поряд з магазинами, школою та дитячим садком, сучасним футбольним та баскетбольним полем, АТБ, Сільпо, аптеки. Хороша транспортна розв"язка: метро Лівобережная 10 хвилин пішки.</textarea>
+					</div>
+					<div class="input-cover large-space">
+						<label for="editObjComment" class="label spaced-bottom">Коментар:</label>
+						<textarea class="textarea" id="editObjComment" placeholder="Введіть додатковий коментар">Тут якийсь коментар</textarea>
+					</div>
+				</div>
+				<div class="col-xs-2 align-right">
+					<div class="input-cover large-space">
+						<button class="button button-secondary fixed-width" type="button" data-tooltip="Відправити в архів">
+							<span class="text">В архів</span>
+						</button>
+					</div>
+					<div class="input-cover large-space">
+						<button class="button button-gray fixed-width" type="button" data-tooltip="Не додзвонитись">
+							<span class="text">Не додзвонитись (0)</span>
+						</button>
+					</div>
+					<div class="input-cover large-space">
+						<button class="button button-danger fixed-width" type="button" data-tooltip="Клікніть, щоб видалити об'єкт">
+							<span class="text">Клікніть, щоб видалити</span>
+						</button>
+					</div>
+					<div class="input-cover large-space">
+						<button class="button button-black fixed-width" type="button" data-tooltip="Відправити в чорний список">
+							<span class="text">В чорний список</span>
+						</button>
+					</div>
+					<div class="input-cover large-space">
+						<button class="button button-primary fixed-width" type="button" data-tooltip="Створити нагадування" data-call="#createRemindModal">
+							<span class="text">Створити нагадування</span>
+						</button>
+					</div>
+					<div class="input-cover large-space collapsed-bottom">
+						<button class="button button-info fixed-width" type="submit" data-tooltip="Зберегти об'єкт">
+							<span class="text">Зберегти</span>
+						</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="tab-content">
+			<!-- files load -->
+			<div class="input-cover large-space load-cover" id="filesLoader" data-loader>
+				<label id="fileLoader" class="label-file" for="editObjFiles" data-label>
+					<div class="caption">
+						<i class="icon icon-cloud-upload"></i>
+						<div class="text">Завантажте файли</div>
+					</div>
+				</label>
+				<input type="file" id="editObjFiles" multiple data-file>
+				<!-- thats how loaded images need to be look -->
+				<!-- 1 -->
+				<div class="files-cover" data-tooltip="Клікніть, щоб видалити">
+					<div class="inner">
+						<img src="img/temp/1.jpg">
+					</div>
+					<div class="file-name">1.jpg</div>
+				</div>
+				<!-- 2 -->
+				<div class="files-cover" data-tooltip="Клікніть, щоб видалити">
+					<div class="inner">
+						<img src="img/temp/2.jpg">
+					</div>
+					<div class="file-name">2.jpg</div>
+				</div>
+				<!-- 3 -->
+				<div class="files-cover" data-tooltip="Клікніть, щоб видалити">
+					<div class="inner">
+						<img src="img/temp/3.jpg">
+					</div>
+					<div class="file-name">3.jpg</div>
+				</div>
+				<!-- 4 -->
+				<div class="files-cover" data-tooltip="Клікніть, щоб видалити">
+					<div class="inner">
+						<img src="img/temp/4.jpg">
+					</div>
+					<div class="file-name">4.jpg</div>
+				</div>
+				<!-- 5 -->
+				<div class="files-cover" data-tooltip="Клікніть, щоб видалити">
+					<div class="inner">
+						<img src="img/temp/5.jpg">
+					</div>
+					<div class="file-name">5.jpg</div>
+				</div>
+				<!-- / thats how loaded images need to be look -->
+			</div>
+			<!-- files load -->
+		</div>
+	</div>
+</form>
+			<!-- / EDIT OBJECT FORM -->
+		</div>
+	</div>
+</div>
+	<!-- / edit obj -->
+	<!-- add obj -->
+	<div id="addObjectModal" class="popup middle-popup">
+	<div class="inner">
+		<div class="head">
+			<h2 class="modal-title">
+				<i class="icon icon-house-add"></i>
+				Додати об'єкт
+			</h2>
+			<button type="button" class="close-popup button" data-dismiss="#addObjectModal" data-tooltip="Закрити вікно">&times;</button>
+		</div>
+		<div class="content">
+			<!-- ADD OBJECT FORM -->
+			<h1 class="spaced-bottom">Додати новий об'єкт</h1>
+<form action="" class="form">
+	<div class="tabs" data-tabs>
+		<div class="tab active" data-tab="0" data-tooltip="Додати основну інформацію">
+			Основна інформація
+		</div>
+		<div class="tab" data-tab="1" data-tooltip="Додати фото та відео">
+			Фото та відео об'єкту
+		</div>
+		<div class="tab-content active">
+			<div class="row">
+				<div class="col-xs-10">
+					<div class="row">
+						<div class="col-xs-8">
+							<div class="input-cover large-space">
+								<select name="addObjOwnerSelect" id="addObjOwnerSelect" class="select" data-search="true">
+									<option value="Вибрати власника" selected disabled>Вибрати власника</option>
+									<option value="Сокіл Євген Павлович">Сокіл Євген Павлович</option>
+									<option value="Косач Ірина Петрівна">Косач Ірина Петрівна</option>
+									<option value="Ткач Василь Іванович">Ткач Василь Іванович</option>
+									<option value="Зубенко Ніна Павлівна">Зубенко Ніна Павлівна</option>
+								</select>
+							</div>
+						</div>
+						<div class="col-xs-2">
+							<button class="button button-primary fixed-width" type="button" data-tooltip="Редагувати клієнта" data-call="#editClientModal">
+								<i class="icon icon icon-edit"></i>
+								<span class="text">Редагувати клієнта</span>
+							</button>
+						</div>
+						<div class="col-xs-2">
+							<button class="button button-primary fixed-width" type="button" data-tooltip="Додати клієнта"data-call="#addClientModal">
+								<i class="icon icon icon-user-add"></i>
+								<span class="text">Додати клієнта</span>
+							</button>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-xs-4"></div>
+						<div class="col-xs-4">
+							<div class="input-cover large-space">
+								<label for="addObjPrice" class="label spaced-bottom">Ціна: <sup>*</sup></label>
+								<input type="number" min="0" class="input" required placeholder="Введіть ціну в грн" id="addObjPrice">
+								<div class="alert">Тільки цифри</div>
+							</div>
+						</div>
+						<div class="col-xs-4">
+							<div class="input-cover large-space">
+								<label for="addObjType" class="label spaced-bottom">Тип: <sup>*</sup></label>
+								<select name="addObjType" id="addObjType" class="select" data-search="true">
+									<option value="Вибрати тип об'єкту" selected disabled>Вибрати тип об'єкту</option>
+									<option value="1 км. кв.">1 км. кв.</option>
+									<option value="2 км. кв.">2 км. кв.</option>
+									<option value="3 км. кв.">3 км. кв.</option>
+									<option value="Будинок">Будинок</option>
+								</select>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-xs-4">
+							<div class="input-cover large-space">
+								<label for="addObjCity" class="label spaced-bottom">Місто: <sup>*</sup></label>
+								<select name="addObjCity" id="addObjCity" class="select" data-search="true">
+									<option value="Вибрати місто" selected disabled>Вибрати місто</option>
+									<option value="Київ">Київ</option>
+									<option value="Львів">Львів</option>
+									<option value="Харків">Харків</option>
+									<option value="Дніпро">Дніпро</option>
+									<option value="Одеса">Одеса</option>
+								</select>
+							</div>
+						</div>
+						<div class="col-xs-4">
+							<div class="input-cover large-space">
+								<label for="addObjPlace" class="label spaced-bottom">Район: <sup>*</sup></label>
+								<select name="addObjPlace" id="addObjPlace" class="select" data-search="true">
+									<option value="Вибрати район" selected disabled>Вибрати район</option>
+									<option value="Печерський">Печерський</option>
+									<option value="Шевченківський">Шевченківський</option>
+									<option value="Голосіївський">Голосіївський</option>
+									<option value="Дарницький">Дарницький</option>
+									<option value="Солом'янський">Солом'янський</option>
+								</select>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-xs-4">
+							<div class="input-cover large-space">
+								<label for="addObjAdress" class="label spaced-bottom">Адреса: <sup>*</sup></label>
+								<input type="text" class="input" id="addObjAdress" placeholder="Введіть адресу">
+							</div>
+						</div>
+						<div class="col-xs-4">
+							<div class="input-cover large-space">
+								<label for="addObjFlor" class="label spaced-bottom">Поверх: <sup>*</sup></label>
+								<input type="number" min="0" class="input" id="addObjFlor" placeholder="Введіть поверх">
+							</div>
+						</div>
+						<div class="col-xs-4">
+							<div class="input-cover large-space">
+								<label for="addObjMaxFlor" class="label spaced-bottom">Всього поверхів: <sup>*</sup></label>
+								<input type="number" min="0" class="input" id="addObjMaxFlor" placeholder="Введіть скільки всього поверхів">
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-xs-4">
+							<div class="input-cover large-space">
+								<label for="addObjSquare" class="label spaced-bottom">Загальна площа: <sup>*</sup></label>
+								<input type="number" min="0" class="input" id="addObjSquare" placeholder="Введіть загальну площу">
+							</div>
+						</div>
+						<div class="col-xs-4">
+							<div class="input-cover large-space">
+								<label for="addObjSquareLive" class="label spaced-bottom">Житлова площа: <sup>*</sup></label>
+								<input type="number" min="0" class="input" id="addObjSquareLive" placeholder="Введіть житлову площу">
+							</div>
+						</div>
+						<div class="col-xs-4">
+							<div class="input-cover large-space">
+								<label for="addObjSquareKitchen" class="label spaced-bottom">Площа кухні (м <sup>2</sup>): <sup>*</sup></label>
+								<input type="number" min="0" class="input" id="addObjSquareKitchen" placeholder="Введіть площу кухні">
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-xs-4">
+							<div class="input-cover large-space">
+								<label for="addObjDeposit" class="label spaced-bottom">Застава власнику (грн):</label>
+								<input type="number" min="0" class="input" id="addObjDeposit" placeholder="Введіть сумму">
+							</div>
+						</div>
+						<div class="col-xs-4">
+							<div class="input-cover large-space">
+								<label for="addObjFreeDate" class="label spaced-bottom">Об'єкт звільниться:</label>
+								<input type="date" class="input" id="addObjFreeDate">
+							</div>
+						</div>
+						<div class="col-xs-4">
+							<div class="input-cover large-space">
+								<label for="addObjShowdate" class="label spaced-bottom">Об'єкт показують:</label>
+								<input type="date" class="input" id="addObjShowdate">
+							</div>
+						</div>
+					</div>
+					<div class="input-cover large-space">
+						<label for="addObjTitle" class="label spaced-bottom">Заголовок: <sup>*</sup></label>
+						<input type="text" class="input" id="addObjTitle" placeholder="Введіть заголовок">
+					</div>
+					<div class="input-cover large-space">
+						<label for="addObjDescription" class="label spaced-bottom">Опис:</label>
+						<textarea class="textarea" id="addObjDescription" placeholder="Введіть короткий опис"></textarea>
+					</div>
+					<div class="input-cover large-space">
+						<label for="addObjComment" class="label spaced-bottom">Коментар:</label>
+						<textarea class="textarea" id="addObjComment" placeholder="Введіть додатковий коментар"></textarea>
+					</div>
+				</div>
+				<div class="col-xs-2 align-right">
+					<div class="input-cover large-space">
+						<button class="button button-danger fixed-width" type="reset" data-tooltip="Очистити дані">
+							<span class="text">Очистити</span>
+						</button>
+					</div>
+					<div class="input-cover large-space collapsed-bottom">
+						<button class="button button-info fixed-width" type="submit" data-tooltip="Зберегти об'єкт">
+							<span class="text">Зберегти</span>
+						</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="tab-content">
+			<div class="input-cover large-space load-cover" id="addFilesLoader" data-loader>
+				<label id="addFileLoader" class="label-file" for="addObjFiles" data-label>
+					<div class="caption">
+						<i class="icon icon-cloud-upload"></i>
+						<div class="text">Завантажте файли</div>
+					</div>
+				</label>
+				<input type="file" id="addObjFiles" multiple data-file>
+			</div>
+		</div>
+	</div>
+</form>
+			<!-- / ADD OBJECT FORM -->
+		</div>
+	</div>
+</div>
+	<!-- / add obj -->
+	<!-- add client -->
+	<div id="addClientModal" class="popup middle-popup">
+	<div class="inner">
+		<div class="head">
+			<h2 class="modal-title">
+				<i class="icon icon icon-user-add"></i>
+				Додати кліента/покупця
+			</h2>
+			<button type="button" class="close-popup button" data-dismiss="#addClientModal" data-tooltip="Закрити вікно">&times;</button>
+		</div>
+		<div class="content">
+			<!-- ADD CONTACT FORM -->
+			<h1 class="spaced-bottom">Додати кліента/покупця</h1>
+<form action="" class="form">
+	<div class="tabs" data-tabs>
+		<div class="tab active" data-tab="0" data-tooltip="Редагувати основну інформацію">
+			Фізична особа
+		</div>
+		<div class="tab-content active">
+			<div class="row">
+				<div class="col-xs-10">
+					<div class="row">
+						<div class="col-xs-6">
+							<div class="input-cover bottom-label large-space">
+								<label for="addClientLastName" class="label">Прізвище: <sup>*</sup></label>
+								<input type="text" class="input" required placeholder="Введіть прізвище клієнта" id="addClientLastName">
+								<div class="alert">Мін 2 символи</div>
+							</div>
+						</div>
+						<div class="col-xs-6">
+							<div class="input-cover bottom-label large-space">
+								<label for="addClientFirstName" class="label">Ім`я: <sup>*</sup></label>
+								<input type="text" class="input" required placeholder="Введіть Ім`я клієнта" id="addClientFirstName">
+								<div class="alert">Мін 2 символи</div>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-xs-6">
+							<div class="input-cover bottom-label large-space">
+								<label for="addClientSecondName" class="label">По батькові:</label>
+								<input type="text" class="input" required placeholder="Введіть по батькові клієнта" id="addClientSecondName">
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-xs-6">
+							<div class="input-cover bottom-label large-space">
+								<label for="addClientBirth" class="label">Дата народження:</label>
+								<input type="date" class="input" id="addClientBirth">
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-xs-6">
+							<div class="input-cover bottom-label large-space">
+								<label for="addClientPassport" class="label">Серія та номер паспорту:</label>
+								<input type="text" class="input" id="addClientPassport">
+							</div>
+						</div>
+						<div class="col-xs-6">
+							<div class="input-cover bottom-label large-space">
+								<label for="addClientCode" class="label">Код підрозділу:</label>
+								<input type="number" min="0" class="input" id="addClientCode">
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-xs-6">
+							<div class="input-cover bottom-label large-space">
+								<label for="addClientPassportPlace" class="label">Ким виданий:</label>
+								<input type="text" class="input" id="addClientPassportPlace">
+							</div>
+						</div>
+						<div class="col-xs-6">
+							<div class="input-cover bottom-label large-space">
+								<label for="addClientPassportDate" class="label">Дата видачі паспорту:</label>
+								<input type="date" class="input" id="addClientPassportDate">
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-xs-6">
+							<div class="input-cover bottom-label large-space">
+								<label for="addClientCitizenship" class="label">Громадянство</label>
+								<select name="addClientCitizenship" id="addClientCitizenship" class="select">
+									<option value="none" disabled selected>Оберіть опцію</option>
+									<option value="Так">Так</option>
+									<option value="Ні">Ні</option>
+								</select>
+							</div>
+						</div>
+						<div class="col-xs-6">
+							<div class="input-cover bottom-label large-space">
+								<label for="addClientSalory" class="label">Дохід у місяць (грн):</label>
+								<input type="number" min="0" class="input" placeholder="Сума доходу" id="addClientSalory">
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-xs-6">
+							<div class="input-cover bottom-label large-space">
+								<label for="addClientCity" class="label">Місто проживання:</label>
+								<input type=text class="input" placeholder="Введіть місто проживання" id="addClientCity">
+							</div>
+						</div>
+						<div class="col-xs-6">
+							<div class="input-cover bottom-label large-space">
+								<label for="addClientAddress" class="label">Адреса проживання:</label>
+								<input type=text class="input" placeholder="Введіть адресу проживання" id="addClientAddress">
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-xs-6">
+							<div class="input-cover bottom-label large-space">
+								<label for="addClientRegCity" class="label">Місто реєстрації:</label>
+								<input type=text class="input" placeholder="Введіть місто реєстрації" id="addClientRegCity">
+							</div>
+						</div>
+						<div class="col-xs-6">
+							<div class="input-cover bottom-label large-space">
+								<label for="addClientRegAddress" class="label">Адреса реєстрації:</label>
+								<input type=text class="input" placeholder="Введіть адресу реєстрації" id="addClientRegAddress">
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-xs-6">
+							<div class="input-cover bottom-label large-space">
+								<label for="addClientTel" class="label">Телефон:</label>
+								<input type="tel" class="input" placeholder="0000000000" id="addClientTel">
+							</div>
+						</div>
+						<div class="col-xs-6">
+							<div class="input-cover bottom-label large-space">
+								<label for="addClientEmail" class="label">Email:</label>
+								<input type="email" class="input" placeholder="Введіть Email клієнта" id="addClientEmail">
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-xs-6">
+							<div class="input-cover bottom-label large-space">
+								<label for="addClientTelCity" class="label">Міський телефон:</label>
+								<input type="tel" class="input" placeholder="0000000000" id="addClientTelCity">
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-xs-6">
+							<div class="input-cover bottom-label large-space">
+								<label for="addClientSocial" class="label">Соціальна мережа:</label>
+								<input type="text" class="input" placeholder="Введіть посилання на соціальну мережу" id="addClientSocial">
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-xs-2">
+					<div class="input-cover large-space">
+						<button class="button button-danger fixed-width" type="reset">
+							<span class="text">Очистити</span>
+							<span class="fade"></span>
+						</button>
+					</div>
+					<div class="input-cover collapsed-bottom large-space">
+						<button class="button button-info fixed-width" type="submit">
+							<span class="text">Зберегти</span>
+							<span class="fade"></span>
+						</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</form>
+			<!-- / ADD CONTACT FORM -->
+		</div>
+	</div>
+</div>
+	<!-- / add client -->
+	<!-- edit client -->
+	<div id="editClientModal" class="popup middle-popup">
+	<div class="inner">
+		<div class="head">
+			<h2 class="modal-title">
+				<i class="icon icon icon-edit"></i>
+				Редагувати кліента/покупця
+			</h2>
+			<button type="button" class="close-popup button" data-dismiss="#editClientModal" data-tooltip="Закрити вікно">&times;</button>
+		</div>
+		<div class="content">
+			<!-- EDIT CONTACT FORM -->
+			<h1 class="spaced-bottom">Сокіл Євген Павлович</h1>
+<form action="" class="form">
+	<div class="row">
+		<div class="col-xs-10">
+			<div class="row">
+				<div class="col-xs-6">
+					<div class="input-cover bottom-label large-space">
+						<label for="editClientLastName" class="label">Прізвище: <sup>*</sup></label>
+						<input type="text" class="input" required placeholder="Введіть прізвище клієнта" id="editClientLastName" value="Сокіл">
+						<div class="alert">Мін 2 символи</div>
+					</div>
+				</div>
+				<div class="col-xs-6">
+					<div class="input-cover bottom-label large-space">
+						<label for="editClientFirstName" class="label">Ім`я: <sup>*</sup></label>
+						<input type="text" class="input" required placeholder="Введіть Ім`я клієнта" id="editClientFirstName" value="Євген">
+						<div class="alert">Мін 2 символи</div>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-xs-6">
+					<div class="input-cover bottom-label large-space">
+						<label for="editClientSecondName" class="label">По батькові:</label>
+						<input type="text" class="input" required placeholder="Введіть по батькові клієнта" id="editClientSecondName" value="Павлович">
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-xs-6">
+					<div class="input-cover bottom-label large-space">
+						<label for="editClientBirth" class="label">Дата народження:</label>
+						<input type="date" class="input" id="editClientBirth" value="1999-08-22">
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-xs-6">
+					<div class="input-cover bottom-label large-space">
+						<label for="editClientPassport" class="label">Серія та номер паспорту:</label>
+						<input type="text" class="input" id="editClientPassport" value="HE29929">
+					</div>
+				</div>
+				<div class="col-xs-6">
+					<div class="input-cover bottom-label large-space">
+						<label for="editClientCode" class="label">Код підрозділу:</label>
+						<input type="number" min="0" class="input" id="editClientCode" value="7172">
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-xs-6">
+					<div class="input-cover bottom-label large-space">
+						<label for="editClientPassportPlace" class="label">Ким виданий:</label>
+						<input type="text" class="input" id="editClientPassportPlace" value="Харківським РВ УМВС">
+					</div>
+				</div>
+				<div class="col-xs-6">
+					<div class="input-cover bottom-label large-space">
+						<label for="editClientPassportDate" class="label">Дата видачі паспорту:</label>
+						<input type="date" class="input" id="editClientPassportDate" value="2010-08-22">
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-xs-6">
+					<div class="input-cover bottom-label large-space">
+						<label for="editClientCitizenship" class="label">Громадянство</label>
+						<select name="editClientCitizenship" id="editClientCitizenship" class="select">
+							<option value="none" disabled>Оберіть опцію</option>
+							<option value="Так" selected>Так</option>
+							<option value="Ні">Ні</option>
+						</select>
+					</div>
+				</div>
+				<div class="col-xs-6">
+					<div class="input-cover bottom-label large-space">
+						<label for="editClientSalory" class="label">Дохід у місяць (грн):</label>
+						<input type="number" min="0" class="input" placeholder="Сума доходу" id="editClientSalory" value="88000">
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-xs-6">
+					<div class="input-cover bottom-label large-space">
+						<label for="editClientCity" class="label">Місто проживання:</label>
+						<input type=text class="input" placeholder="Введіть місто проживання" id="editClientCity" value="Одеса">
+					</div>
+				</div>
+				<div class="col-xs-6">
+					<div class="input-cover bottom-label large-space">
+						<label for="editClientAddress" class="label">Адреса проживання:</label>
+						<input type=text class="input" placeholder="Введіть адресу проживання" id="editClientAddress" value="вул. Мала Арнаутська, буд 57">
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-xs-6">
+					<div class="input-cover bottom-label large-space">
+						<label for="editClientRegCity" class="label">Місто реєстрації:</label>
+						<input type=text class="input" placeholder="Введіть місто реєстрації" id="editClientRegCity" value="Одеса">
+					</div>
+				</div>
+				<div class="col-xs-6">
+					<div class="input-cover bottom-label large-space">
+						<label for="editClientRegAddress" class="label">Адреса реєстрації:</label>
+						<input type=text class="input" placeholder="Введіть адресу реєстрації" id="editClientRegAddress" value="вул. Мала Арнаутська, буд 57">
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-xs-6">
+					<div class="input-cover bottom-label large-space">
+						<label for="editClientTel" class="label">Телефон:</label>
+						<input type="tel" class="input" placeholder="0000000000" id="editClientTel" value="0993334455">
+					</div>
+				</div>
+				<div class="col-xs-6">
+					<div class="input-cover bottom-label large-space">
+						<label for="editClientEmail" class="label">Email:</label>
+						<input type="email" class="input" placeholder="Введіть Email клієнта" id="editClientEmail" value="email.mail@ukr.net">
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-xs-6">
+					<div class="input-cover bottom-label large-space">
+						<label for="editClientTelCity" class="label">Міський телефон:</label>
+						<input type="tel" class="input" placeholder="0000000000" id="editClientTelCity" value="">
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-xs-6">
+					<div class="input-cover bottom-label large-space">
+						<label for="editClientSocial" class="label">Соціальна мережа:</label>
+						<input type="text" class="input" placeholder="Введіть посилання на соціальну мережу" id="editClientSocial" value="">
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="col-xs-2">
+			<div class="input-cover large-space">
+				<button class="button button-info fixed-width" type="submit">
+					<span class="text">Зберегти</span>
+					<span class="fade"></span>
+				</button>
+			</div>
+			<div class="input-cover collapsed-bottom large-space">
+				<button class="button button-danger fixed-width" type="reset">
+					<span class="text">Очистити</span>
+					<span class="fade"></span>
+				</button>
+			</div>
+		</div>
+	</div>
+</form>
+			<!-- / EDIT CONTACT FORM -->
+		</div>
+	</div>
+</div>
+	<!-- / edit client -->
+	<!-- add client -->
+	<div id="addDealsModal" class="popup middle-popup">
+	<div class="inner">
+		<div class="head">
+			<h2 class="modal-title">
+				<i class="icon icon icon-user-add"></i>
+				Додати угоду
+			</h2>
+			<button type="button" class="close-popup button" data-dismiss="#addDealsModal" data-tooltip="Закрити вікно">&times;</button>
+		</div>
+		<div class="content">
+			<!-- ADD CONTACT FORM -->
+			<h1 class="spaced-bottom">Додати нову угоду</h1>
+<form action="" class="form">
+	<div class="tabs" data-tabs>
+		<div class="tab active" data-tab="0" data-tooltip="Додати основну інформацію">
+			Основна інформація
+		</div>
+		<div class="tab" data-tab="1" data-tooltip="Додати фото та відео">
+			Фото та відео
+		</div>
+		<div class="tab-content active">
+			<div class="row">
+				<div class="col-xs-8">
+					<ul class="underlined-list clear">
+						<!-- section 1 -->
+						<li class="item">
+							<div class="row">
+								<div class="col-xs-6">
+									<div class="input-cover large-space">
+										<select name="addDealsOwnerSelect" id="addDealsOwnerSelect" class="select" data-search="true">
+											<option value="Вибрати власника" selected disabled>Вибрати власника</option>
+											<option value="Сокіл Євген Павлович">Сокіл Євген Павлович</option>
+											<option value="Косач Ірина Петрівна">Косач Ірина Петрівна</option>
+											<option value="Ткач Василь Іванович">Ткач Василь Іванович</option>
+											<option value="Зубенко Ніна Павлівна">Зубенко Ніна Павлівна</option>
+										</select>
+									</div>
+								</div>
+								<div class="col-xs-3">
+									<button class="button button-primary fixed-width" type="button" data-tooltip="Редагувати клієнта" data-call="#editClientModal">
+										<i class="icon icon icon-edit"></i>
+										<span class="text">Редагувати клієнта</span>
+									</button>
+								</div>
+								<div class="col-xs-3">
+									<button class="button button-primary fixed-width" type="button" data-tooltip="Додати клієнта"data-call="#addClientModal">
+										<i class="icon icon icon-user-add"></i>
+										<span class="text">Додати клієнта</span>
+									</button>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-xs-4">
+									<div class="input-cover large-space">
+										<label for="addDealsOffice" class="label spaced-bottom">Офіс:</label>
+										<input type="text" class="input" placeholder="Введіть адресу" id="addDealsOffice">
+									</div>
+								</div>
+								<div class="col-xs-4">
+									<div class="input-cover large-space">
+										<label for="addDealsEmploye" class="label spaced-bottom">Відповідальний співробітник:</label>
+										<input type="text" class="input" placeholder="Введіть ім'я та прізвище" id="addDealsEmploye">
+									</div>
+								</div>
+								<div class="col-xs-4">
+									<div class="input-cover large-space">
+										<label for="addDealsPrice" class="label spaced-bottom">Сумма (грн):</label>
+										<input type="number" min="0" class="input" placeholder="Введіть сумму в грн" id="addDealsPrice">
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-xs-4">
+									<div class="input-cover large-space">
+										<label for="addDealsTarif" class="label spaced-bottom">Тариф (грн):</label>
+										<input type="number" min="0" class="input" placeholder="Введіть сумму в грн" id="addDealsTarif">
+									</div>
+								</div>
+								<div class="col-xs-4">
+									<div class="input-cover large-space">
+										<label for="addDealsTarifSum" class="label spaced-bottom">Сумма тарифу (грн):</label>
+										<input type="number" min="0" class="input" placeholder="Введіть сумму в грн" id="addDealsTarifSum">
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-xs-4">
+									<div class="input-cover large-space">
+										<label for="addDealsAdditionsl" class="label spaced-bottom">Додаткові послуги:</label>
+										<select name="addDealsAdditionsl" id="addDealsAdditionsl" class="select" data-multiple="true" multiple>
+											<option value="Вибрати місто" disabled selected>Вибрати послуги</option>
+											<option value="Послуга 1">Послуга 1</option>
+											<option value="Послуга 2">Послуга 2</option>
+											<option value="Послуга 3">Послуга 3</option>
+											<option value="Послуга 4">Послуга 4</option>
+											<option value="Послуга 5">Послуга 5</option>
+										</select>
+									</div>
+								</div>
+								<div class="col-xs-4">
+									<div class="input-cover large-space">
+										<label for="addDealsCost" class="label spaced-bottom">Вартість (грн):</label>
+										<input type="number" min="0" class="input" placeholder="Введіть сумму в грн" id="addDealsCost">
+									</div>
+								</div>
+							</div>
+						</li>
+						<!-- section 2 -->
+						<li class="item">
+							<div class="subheader3 spaced-bottom">Параметри пошуку</div>
+							<div class="row">
+								<div class="col-xs-4">
+									<div class="input-cover large-space">
+										<label for="addDealsCity" class="label spaced-bottom">Місто:</label>
+										<select name="addDealsCity" id="addDealsCity" class="select" data-multiple="true" multiple>
+											<option value="Вибрати місто" disabled selected>Вибрати місто</option>
+											<option value="Київ">Київ</option>
+											<option value="Львів">Львів</option>
+											<option value="Харків">Харків</option>
+											<option value="Дніпро">Дніпро</option>
+											<option value="Одеса">Одеса</option>
+										</select>
+									</div>
+								</div>
+								<div class="col-xs-4">
+									<div class="input-cover large-space">
+										<label for="addDealsPlace" class="label spaced-bottom">Район:</label>
+										<select name="addDealsPlace" id="addDealsPlace" class="select" data-multiple="true" multiple>
+											<option value="Вибрати район" disabled selected>Вибрати район</option>
+											<option value="Печерський" >Печерський</option>
+											<option value="Шевченківський">Шевченківський</option>
+											<option value="Голосіївський">Голосіївський</option>
+											<option value="Дарницький">Дарницький</option>
+											<option value="Солом'янський">Солом'янський</option>
+										</select>
+									</div>
+								</div>
+								<div class="col-xs-4">
+									<div class="input-cover large-space">
+										<label for="addDealsAdress" class="label spaced-bottom">Адреса:</label>
+										<input type="text" class="input" id="addDealsAdress" placeholder="Введіть адресу">
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-xs-4">
+									<div class="input-cover large-space">
+										<label for="addDealsType" class="label spaced-bottom">Тип:</label>
+										<select name="addDealsType" id="addDealsType" class="select" data-multiple="true" multiple>
+											<option value="Вибрати тип об'єкту" selected disabled>Вибрати тип об'єкту</option>
+											<option value="1 км. кв.">1 км. кв.</option>
+											<option value="2 км. кв.">2 км. кв.</option>
+											<option value="3 км. кв.">3 км. кв.</option>
+											<option value="Будинок">Будинок</option>
+										</select>
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-xs-4">
+									<div class="input-cover large-space">
+										<label for="addDealsCostFrom" class="label spaced-bottom">Вартість від (грн):</label>
+										<input type="number" min="0" class="input" placeholder="Введіть сумму в грн" id="addDealsCostFrom">
+									</div>
+								</div>
+								<div class="col-xs-4">
+									<div class="input-cover large-space">
+										<label for="addDealsCostTo" class="label spaced-bottom">Вартість до(грн):</label>
+										<input type="number" min="0" class="input" placeholder="Введіть сумму в грн" id="addDealsCostTo">
+									</div>
+								</div>
+								<div class="col-xs-4">
+									<div class="input-cover large-space">
+										<label for="addDealsMaterial" class="label spaced-bottom">Матеріал:</label>
+										<select name="addDealsMaterial" id="addDealsMaterial" class="select" data-multiple="true" multiple>
+											<option value="Вибрати тип об'єкту" selected disabled>Вибрати тип об'єкту</option>
+											<option value="Матеріал 1">Матеріал 1</option>
+											<option value="Матеріал 2">Матеріал 2</option>
+											<option value="Матеріал 3">Матеріал 3</option>
+										</select>
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-xs-4">
+									<div class="input-cover large-space">
+										<label for="addClientRenovation" class="label spaced-bottom">Ремонт</label>
+										<select name="addClientRenovation" id="addClientRenovation" class="select">
+											<option value="none" disabled selected>Оберіть опцію</option>
+											<option value="Так">Так</option>
+											<option value="Ні">Ні</option>
+										</select>
+									</div>
+								</div>
+								<div class="col-xs-4">
+									<div class="input-cover large-space">
+										<label for="addDealsFurniture" class="label spaced-bottom">Меблі</label>
+										<select name="addDealsFurniture" id="addDealsFurniture" class="select">
+											<option value="none" disabled selected>Оберіть опцію</option>
+											<option value="Так">Так</option>
+											<option value="Ні">Ні</option>
+										</select>
+									</div>
+								</div>
+								<div class="col-xs-2">
+									<div class="input-cover large-space">
+										<label for="addDealsSquareFrom" class="label spaced-bottom">Площа від (м<sup>2</sup>):</label>
+										<input type="number" min="0" class="input" placeholder="Введіть значення" id="addDealsSquareFrom">
+									</div>
+								</div>
+								<div class="col-xs-2">
+									<div class="input-cover large-space">
+										<label for="addDealsSquareTo" class="label spaced-bottom">Площа до (м<sup>2</sup>):</label>
+										<input type="number" min="0" class="input" placeholder="Введіть значення" id="addDealsSquareTo">
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-xs-2">
+									<div class="input-cover large-space">
+										<label for="addDealsFlorFrom" class="label spaced-bottom">Поверх від:</label>
+										<input type="number" min="0" class="input" placeholder="Введіть значення" id="addDealsFlorFrom">
+									</div>
+								</div>
+								<div class="col-xs-2">
+									<div class="input-cover large-space">
+										<label for="addDealsFlorTo" class="label spaced-bottom">Поверх до:</label>
+										<input type="number" min="0" class="input" placeholder="Введіть значення" id="addDealsFlorTo">
+									</div>
+								</div>
+								<div class="col-xs-4">
+									<div class="input-cover checkbox-cover large-space">
+										<input type="checkbox" class="checkbox" id="addDealsFilterNotFistFlor">
+										<label for="addDealsFilterNotFistFlor" class="checkbox-label"></label>
+										<label for="addDealsFilterNotFistFlor" class="label">Не перший поверх</label>
+									</div>
+								</div>
+								<div class="col-xs-4">
+									<div class="input-cover checkbox-cover large-space">
+										<input type="checkbox" class="checkbox" id="addDealsFilterNotlastFlor">
+										<label for="addDealsFilterNotlastFlor" class="checkbox-label"></label>
+										<label for="addDealsFilterNotlastFlor" class="label">Не останній поверх</label>
+									</div>
+								</div>
+							</div>
+						</li>
+						<!-- section 3 -->
+						<li class="item">
+							<div class="subheader3 spaced-bottom">Додатково</div>
+							<div class="row">
+								<div class="col-xs-4">
+									<div class="input-cover large-space">
+										<label for="addDealsWhoLives" class="label spaced-bottom">Хто проживає:</label>
+										<input type="text" class="input" placeholder="Введіть значення" id="addDealsWhoLives">
+									</div>
+								</div>
+								<div class="col-xs-4">
+									<div class="input-cover large-space">
+										<label for="addDealsLinkTo" class="label spaced-bottom">Прив'язка:</label>
+										<input type="text" class="input" placeholder="Введіть значення" id="addDealsLinkTo">
+									</div>
+								</div>
+								<div class="col-xs-4">
+									<div class="input-cover large-space">
+										<label for="addDealsFilled" class="label spaced-bottom">Наповненість житла:</label>
+										<input type="text" class="input" placeholder="Введіть значення" id="addDealsFilled">
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-xs-6">
+									<div class="input-cover large-space">
+										<label for="addDealsReasons" class="label spaced-bottom">Попереднє житло/Причини переїзду:</label>
+										<input type="text" class="input" placeholder="Введіть значення" id="addDealsReasons">
+									</div>
+								</div>
+								<div class="col-xs-6">
+									<div class="input-cover large-space">
+										<label for="addDealsAdditionInfo" class="label spaced-bottom">Додаткова інформація:</label>
+										<input type="text" class="input" placeholder="Введіть значення" id="addDealsAdditionInfo">
+									</div>
+								</div>
+							</div>
+							<div class="input-cover large-space">
+								<label for="addDealsComment" class="label spaced-bottom">Коментар:</label>
+								<textarea class="textarea" id="addDealsComment" placeholder="Введіть додатковий коментар"></textarea>
+							</div>
+						</li>
+					</ul>
+				</div>
+				<div class="col-xs-2 align-right">
+					<div class="input-cover large-space">
+						<button class="button button-danger fixed-width" type="reset" data-tooltip="Очистити дані">
+							<span class="text">Очистити</span>
+						</button>
+					</div>
+					<div class="info-block">
+						<div class="info-title primary">Етап угоди</div>
+						<div class="info-box">
+							<select name="addDealsStage" id="addDealsStage" class="select">
+								<option value="none" disabled selected>Оберіть опцію</option>
+								<option value="Етап 1">Етап 1</option>
+								<option value="Етап 2">Етап 2</option>
+								<option value="Етап 3">Етап 3</option>
+								<option value="Етап 4">Етап 4</option>
+								<option value="Етап 5">Етап 5</option>
+								<option value="Етап 6">Етап 6</option>
+							</select>
+						</div>
+					</div>
+					<div class="row paddless-row spaced-bottom">
+						<div class="col-xs-9">
+							<button class="button button-info button-block" type="submit" data-tooltip="Зберегти угоду">
+								<span class="text">Зберегти</span>
+							</button>
+						</div>
+						<div class="col-xs-3">
+							<button class="button button-info button-square" type="button" data-tooltip="Оновити">
+								<i class="icon icon-update"></i>
+							</button>
+						</div>
+					</div>
+				</div>
+				<div class="col-xs-2 align-right">
+					<div class="info-block">
+						<div class="info-title primary-invert">Логи</div>
+						<div class="info-box">
+							Немає жодного сповіщення
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="tab-content">
+			<div class="input-cover large-space load-cover" id="addDealsFilesLoader" data-loader>
+				<label id="addDealsFileLoader" class="label-file" for="addDealsFiles" data-label>
+					<div class="caption">
+						<i class="icon icon-cloud-upload"></i>
+						<div class="text">Завантажте файли</div>
+					</div>
+				</label>
+				<input type="file" id="addDealsFiles" multiple data-file>
+			</div>
+		</div>
+	</div>
+</form>
+			<!-- / ADD CONTACT FORM -->
+		</div>
+	</div>
+</div>
+	<!-- / add client -->
+	<!-- edit client -->
+	<div id="editDealsModal" class="popup middle-popup">
+	<div class="inner">
+		<div class="head">
+			<h2 class="modal-title">
+				<i class="icon icon icon-edit"></i>
+				Редагувати угоду
+			</h2>
+			<button type="button" class="close-popup button" data-dismiss="#editDealsModal" data-tooltip="Закрити вікно">&times;</button>
+		</div>
+		<div class="content">
+			<!-- EDIT CONTACT FORM -->
+			<h1 class="spaced-bottom">Редагувати угоду</h1>
+<form action="" class="form">
+	<div class="tabs" data-tabs>
+		<div class="tab active" data-tab="0" data-tooltip="Додати основну інформацію">
+			Основна інформація
+		</div>
+		<div class="tab" data-tab="1" data-tooltip="Додати фото та відео">
+			Фото та відео
+		</div>
+		<div class="tab-content active">
+			<div class="row">
+				<div class="col-xs-8">
+					<ul class="underlined-list clear">
+						<!-- section 1 -->
+						<li class="item">
+							<div class="row">
+								<div class="col-xs-6">
+									<div class="input-cover large-space">
+										<select name="editDealsOwnerSelect" id="editDealsOwnerSelect" class="select" data-search="true">
+											<option value="Вибрати власника" disabled>Вибрати власника</option>
+											<option value="Сокіл Євген Павлович" selected>Сокіл Євген Павлович</option>
+											<option value="Косач Ірина Петрівна">Косач Ірина Петрівна</option>
+											<option value="Ткач Василь Іванович">Ткач Василь Іванович</option>
+											<option value="Зубенко Ніна Павлівна">Зубенко Ніна Павлівна</option>
+										</select>
+									</div>
+								</div>
+								<div class="col-xs-3">
+									<button class="button button-primary fixed-width" type="button" data-tooltip="Редагувати клієнта" data-call="#editClientModal">
+										<i class="icon icon icon-edit"></i>
+										<span class="text">Редагувати клієнта</span>
+									</button>
+								</div>
+								<div class="col-xs-3">
+									<button class="button button-primary fixed-width" type="button" data-tooltip="Додати клієнта"data-call="#addClientModal">
+										<i class="icon icon icon-user-add"></i>
+										<span class="text">Додати клієнта</span>
+									</button>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-xs-4">
+									<div class="input-cover large-space">
+										<label for="editDealsOffice" class="label spaced-bottom">Офіс:</label>
+										<input type="text" class="input" placeholder="Введіть адресу" id="editDealsOffice" value="Київ, Хрещатик, 7/11">
+									</div>
+								</div>
+								<div class="col-xs-4">
+									<div class="input-cover large-space">
+										<label for="editDealsEmploye" class="label spaced-bottom">Відповідальний співробітник:</label>
+										<input type="text" class="input" placeholder="Введіть ім'я та прізвище" id="editDealsEmploye" value="Лазарєва Тетяна Юріївна">
+									</div>
+								</div>
+								<div class="col-xs-4">
+									<div class="input-cover large-space">
+										<label for="editDealsPrice" class="label spaced-bottom">Сумма (грн):</label>
+										<input type="number" min="0" class="input" placeholder="Введіть сумму в грн" id="editDealsPrice" value="3000">
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-xs-4">
+									<div class="input-cover large-space">
+										<label for="editDealsTarif" class="label spaced-bottom">Тариф (грн):</label>
+										<input type="number" min="0" class="input" placeholder="Введіть сумму в грн" id="editDealsTarif" value="200">
+									</div>
+								</div>
+								<div class="col-xs-4">
+									<div class="input-cover large-space">
+										<label for="editDealsTarifSum" class="label spaced-bottom">Сумма тарифу (грн):</label>
+										<input type="number" min="0" class="input" placeholder="Введіть сумму в грн" id="editDealsTarifSum" value="5000">
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-xs-4">
+									<div class="input-cover large-space">
+										<label for="editDealsAdditionsl" class="label spaced-bottom">Додаткові послуги:</label>
+										<select name="editDealsAdditionsl" id="editDealsAdditionsl" class="select" data-multiple="true" multiple>
+											<option value="Вибрати місто" disabled>Вибрати послуги</option>
+											<option value="Послуга 1" selected>Послуга 1</option>
+											<option value="Послуга 2" selected>Послуга 2</option>
+											<option value="Послуга 3">Послуга 3</option>
+											<option value="Послуга 4">Послуга 4</option>
+											<option value="Послуга 5">Послуга 5</option>
+										</select>
+									</div>
+								</div>
+								<div class="col-xs-4">
+									<div class="input-cover large-space">
+										<label for="editDealsCost" class="label spaced-bottom">Вартість (грн):</label>
+										<input type="number" min="0" class="input" placeholder="Введіть сумму в грн" id="editDealsCost" value="20000">
+									</div>
+								</div>
+							</div>
+						</li>
+						<!-- section 2 -->
+						<li class="item">
+							<div class="subheader3 spaced-bottom">Параметри пошуку</div>
+							<div class="row">
+								<div class="col-xs-4">
+									<div class="input-cover large-space">
+										<label for="editDealsCity" class="label spaced-bottom">Місто:</label>
+										<select name="editDealsCity" id="editDealsCity" class="select" data-multiple="true" multiple>
+											<option value="Вибрати місто" disabled>Вибрати місто</option>
+											<option value="Київ" selected>Київ</option>
+											<option value="Львів" selected>Львів</option>
+											<option value="Харків" selected>Харків</option>
+											<option value="Дніпро">Дніпро</option>
+											<option value="Одеса">Одеса</option>
+										</select>
+									</div>
+								</div>
+								<div class="col-xs-4">
+									<div class="input-cover large-space">
+										<label for="editDealsPlace" class="label spaced-bottom">Район:</label>
+										<select name="editDealsPlace" id="editDealsPlace" class="select" data-multiple="true" multiple>
+											<option value="Вибрати район" disabled>Вибрати район</option>
+											<option value="Печерський" selected>Печерський</option>
+											<option value="Шевченківський">Шевченківський</option>
+											<option value="Голосіївський">Голосіївський</option>
+											<option value="Дарницький">Дарницький</option>
+											<option value="Солом'янський">Солом'янський</option>
+										</select>
+									</div>
+								</div>
+								<div class="col-xs-4">
+									<div class="input-cover large-space">
+										<label for="editDealsAdress" class="label spaced-bottom">Адреса:</label>
+										<input type="text" class="input" id="editDealsAdress" placeholder="Введіть адресу" value="Саксаганського, 100">
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-xs-4">
+									<div class="input-cover large-space">
+										<label for="editDealsType" class="label spaced-bottom">Тип:</label>
+										<select name="editDealsType" id="editDealsType" class="select" data-multiple="true" multiple>
+											<option value="Вибрати тип об'єкту" disabled>Вибрати тип об'єкту</option>
+											<option value="1 км. кв." selected>1 км. кв.</option>
+											<option value="2 км. кв.">2 км. кв.</option>
+											<option value="3 км. кв.">3 км. кв.</option>
+											<option value="Будинок">Будинок</option>
+										</select>
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-xs-4">
+									<div class="input-cover large-space">
+										<label for="editDealsCostFrom" class="label spaced-bottom">Вартість від (грн):</label>
+										<input type="number" min="0" class="input" placeholder="Введіть сумму в грн" id="editDealsCostFrom" value="2000">
+									</div>
+								</div>
+								<div class="col-xs-4">
+									<div class="input-cover large-space">
+										<label for="editDealsCostTo" class="label spaced-bottom">Вартість до(грн):</label>
+										<input type="number" min="0" class="input" placeholder="Введіть сумму в грн" id="editDealsCostTo" value="9000">
+									</div>
+								</div>
+								<div class="col-xs-4">
+									<div class="input-cover large-space">
+										<label for="editDealsMaterial" class="label spaced-bottom">Матеріал:</label>
+										<select name="editDealsMaterial" id="editDealsMaterial" class="select" data-multiple="true" multiple>
+											<option value="Вибрати тип об'єкту" disabled>Вибрати тип об'єкту</option>
+											<option value="Матеріал 1" selected>Матеріал 1</option>
+											<option value="Матеріал 2">Матеріал 2</option>
+											<option value="Матеріал 3">Матеріал 3</option>
+										</select>
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-xs-4">
+									<div class="input-cover large-space">
+										<label for="addClientRenovation" class="label spaced-bottom">Ремонт</label>
+										<select name="addClientRenovation" id="addClientRenovation" class="select">
+											<option value="none" disabled>Оберіть опцію</option>
+											<option value="Так" selected>Так</option>
+											<option value="Ні">Ні</option>
+										</select>
+									</div>
+								</div>
+								<div class="col-xs-4">
+									<div class="input-cover large-space">
+										<label for="editDealsFurniture" class="label spaced-bottom">Меблі</label>
+										<select name="editDealsFurniture" id="editDealsFurniture" class="select">
+											<option value="none" disabled>Оберіть опцію</option>
+											<option value="Так" selected>Так</option>
+											<option value="Ні">Ні</option>
+										</select>
+									</div>
+								</div>
+								<div class="col-xs-2">
+									<div class="input-cover large-space">
+										<label for="editDealsSquareFrom" class="label spaced-bottom">Площа від (м<sup>2</sup>):</label>
+										<input type="number" min="0" class="input" placeholder="Введіть значення" id="editDealsSquareFrom" value="54">
+									</div>
+								</div>
+								<div class="col-xs-2">
+									<div class="input-cover large-space">
+										<label for="editDealsSquareTo" class="label spaced-bottom">Площа до (м<sup>2</sup>):</label>
+										<input type="number" min="0" class="input" placeholder="Введіть значення" id="editDealsSquareTo" value="120">
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-xs-2">
+									<div class="input-cover large-space">
+										<label for="editDealsFlorFrom" class="label spaced-bottom">Поверх від:</label>
+										<input type="number" min="0" class="input" placeholder="Введіть значення" id="editDealsFlorFrom" value="2">
+									</div>
+								</div>
+								<div class="col-xs-2">
+									<div class="input-cover large-space">
+										<label for="editDealsFlorTo" class="label spaced-bottom">Поверх до:</label>
+										<input type="number" min="0" class="input" placeholder="Введіть значення" id="editDealsFlorTo" value="7">
+									</div>
+								</div>
+								<div class="col-xs-4">
+									<div class="input-cover checkbox-cover large-space">
+										<input type="checkbox" checked class="checkbox" id="editDealsFilterNotFistFlor">
+										<label for="editDealsFilterNotFistFlor" class="checkbox-label"></label>
+										<label class="label" for="editDealsFilterNotFistFlor">Не перший поверх</label>
+									</div>
+								</div>
+								<div class="col-xs-4">
+									<div class="input-cover checkbox-cover large-space">
+										<input type="checkbox" class="checkbox" id="editDealsFilterNotlastFlor">
+										<label for="editDealsFilterNotlastFlor" class="checkbox-label"></label>
+										<label class="label" for="editDealsFilterNotlastFlor">Не останній поверх</label>
+									</div>
+								</div>
+							</div>
+						</li>
+						<!-- section 3 -->
+						<li class="item">
+							<div class="subheader3 spaced-bottom">Додатково</div>
+							<div class="row">
+								<div class="col-xs-4">
+									<div class="input-cover large-space">
+										<label for="editDealsWhoLives" class="label spaced-bottom">Хто проживає:</label>
+										<input type="text" class="input" placeholder="Введіть значення" id="editDealsWhoLives" value="Не відомо">
+									</div>
+								</div>
+								<div class="col-xs-4">
+									<div class="input-cover large-space">
+										<label for="editDealsLinkTo" class="label spaced-bottom">Прив'язка:</label>
+										<input type="text" class="input" placeholder="Введіть значення" id="editDealsLinkTo" value="Немає">
+									</div>
+								</div>
+								<div class="col-xs-4">
+									<div class="input-cover large-space">
+										<label for="editDealsFilled" class="label spaced-bottom">Наповненість житла:</label>
+										<input type="text" class="input" placeholder="Введіть значення" id="editDealsFilled" value="Не відомо">
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-xs-6">
+									<div class="input-cover large-space">
+										<label for="editDealsReasons" class="label spaced-bottom">Попереднє житло/Причини переїзду:</label>
+										<input type="text" class="input" placeholder="Введіть значення" id="editDealsReasons" value="Замала житлова площа">
+									</div>
+								</div>
+								<div class="col-xs-6">
+									<div class="input-cover large-space">
+										<label for="editDealsAdditionInfo" class="label spaced-bottom">Додаткова інформація:</label>
+										<input type="text" class="input" placeholder="Введіть значення" id="editDealsAdditionInfo" value="Додатково ще щось">
+									</div>
+								</div>
+							</div>
+							<div class="input-cover large-space">
+								<label for="editDealsComment" class="label spaced-bottom">Коментар:</label>
+								<textarea class="textarea" id="editDealsComment" placeholder="Введіть додатковий коментар">Тут якийсь короткий коментар</textarea>
+							</div>
+						</li>
+					</ul>
+				</div>
+				<div class="col-xs-2 align-right">
+					<div class="row paddless-row spaced-bottom">
+						<div class="col-xs-9">
+							<button class="button button-info-light button-block" type="button" data-tooltip="Платіж">
+								<span class="text">Платіж</span>
+							</button>
+						</div>
+						<div class="col-xs-3">
+							<button class="button button-info-light button-square" type="button" data-tooltip="Оновити">
+								<i class="icon icon-timer"></i>
+							</button>
+						</div>
+					</div>
+					<div class="input-cover large-space">
+						<button class="button button-primary fixed-width" type="button" data-call="Додати нагадування" data-call="#createRemindModal">
+							<span class="text">Додати нагадування</span>
+						</button>
+					</div>
+					<div class="input-cover large-space">
+						<button class="button button-gray fixed-width" type="button" data-tooltip="Не додзвонитись">
+							<span class="text">Не додзвонитись (0)</span>
+						</button>
+					</div>
+					<div class="input-cover large-space">
+						<button class="button button-secondary fixed-width" type="button" data-tooltip="Відправити клієнту пароль">
+							<span class="text">Відправити пароль</span>
+						</button>
+					</div>
+					<div class="info-block">
+						<div class="info-title info">Платежі</div>
+						<div class="info-box">
+							<div class="paragraph">21.06.2024 - 8000 грн.</div>
+							<div class="paragraph">Разом: <span class="bold">21000 грн.</span></div>
+						</div>
+					</div>
+					<div class="input-cover large-space">
+						<button class="button button-gray fixed-width" type="button" data-tooltip="Не додзвонитись">
+							<span class="text">Не додзвонитись (0)</span>
+						</button>
+					</div>
+					<div class="input-cover large-space">
+						<button class="button button-primary-light fixed-width" type="button" data-tooltip="Авторизація клієнта">
+							<span class="text">Авторизація</span>
+						</button>
+					</div>
+					<div class="input-cover large-space">
+						<button class="button button-primary-light fixed-width" type="button" data-tooltip="Переглянуті клієнтом об'єкти">
+							<span class="text">Переглянуті об'єкти</span>
+						</button>
+					</div>
+					<div class="info-block">
+						<div class="info-title primary">Етап угоди</div>
+						<div class="info-box">
+							<select name="editDealsStage" id="editDealsStage" class="select">
+								<option value="none" disabled>Оберіть опцію</option>
+								<option value="Етап 1" selected>Етап 1</option>
+								<option value="Етап 2">Етап 2</option>
+								<option value="Етап 3">Етап 3</option>
+								<option value="Етап 4">Етап 4</option>
+								<option value="Етап 5">Етап 5</option>
+								<option value="Етап 6">Етап 6</option>
+							</select>
+						</div>
+					</div>
+					<div class="input-cover large-space">
+						<button class="button button-danger fixed-width" type="reset" data-tooltip="Очистити дані">
+							<span class="text">Очистити</span>
+						</button>
+					</div>
+					<div class="row paddless-row spaced-bottom">
+						<div class="col-xs-9">
+							<button class="button button-info button-block" type="submit" data-tooltip="Зберегти угоду">
+								<span class="text">Зберегти</span>
+							</button>
+						</div>
+						<div class="col-xs-3">
+							<button class="button button-info button-square" type="button" data-tooltip="Оновити">
+								<i class="icon icon-update"></i>
+							</button>
+						</div>
+					</div>
+				</div>
+				<div class="col-xs-2 align-right">
+					<div class="info-block">
+						<div class="info-title primary-invert">Логи</div>
+						<div class="info-box">
+							<ul class="clear underlined-list">
+								<!-- 1 -->
+								<li class="item">
+									<div class="small-notification" data-tooltip="Клікніть, щоб видалити">
+										<button class="button" data-delete><i class="icon icon-close"></i></button>
+										<div class="name color-primary">Герасименко Наталія МиколаЇвна</div>
+										<div class="date">24-06-2024 - 12:57</div>
+										<div class="text">
+											154212 - Не зовсім те, що я хотів би (розташування ще далі від метро ніж інші немає дуже прямого транспорту до метро немає ліжка Але я все таки хотів би подивитись, можливо мені дуже сподобається
+										</div>
+									</div>
+								</li>
+								<!-- 2 -->
+								<li class="item">
+									<div class="small-notification" data-tooltip="Клікніть, щоб видалити">
+										<button class="button" data-delete><i class="icon icon-close"></i></button>
+										<div class="name color-primary">Герасименко Наталія МиколаЇвна</div>
+										<div class="date">24-06-2024 - 12:57</div>
+										<div class="text">
+											154212 - вл але не можу поставити перегляд
+										</div>
+									</div>
+								</li>
+								<!-- 3 -->
+								<li class="item">
+									<div class="small-notification" data-tooltip="Клікніть, щоб видалити">
+										<button class="button" data-delete><i class="icon icon-close"></i></button>
+										<div class="name color-primary">Герасименко Наталія МиколаЇвна</div>
+										<div class="date">24-06-2024 - 12:57</div>
+										<div class="text">
+											154104 - запропонувала на сьогодні
+										</div>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="tab-content">
+			<div class="input-cover large-space load-cover" id="editDealsFilesLoader" data-loader>
+				<label id="editDealsFileLoader" class="label-file" for="editDealsFiles" data-label>
+					<div class="caption">
+						<i class="icon icon-cloud-upload"></i>
+						<div class="text">Завантажте файли</div>
+					</div>
+				</label>
+				<input type="file" id="editDealsFiles" multiple data-file>
+			</div>
+		</div>
+	</div>
+</form>
+			<!-- / EDIT CONTACT FORM -->
+		</div>
+	</div>
+</div>
+	<!-- / edit client -->
+
 
 
 	<script src="js/lib/jquery.min.js"></script>

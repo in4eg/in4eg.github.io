@@ -1,0 +1,108 @@
+@import '../variables.scss';
+
+:root {
+
+}
+
+.info-block {
+	border-radius: calc(var(--border-radius)/2);
+	margin-bottom: calc(var(--margin) * 2);
+
+	.info-title {
+		text-align: center;
+		border-radius: calc(var(--border-radius)/2);
+		padding: calc(var(--space-gap)*1.6 + 3px) calc(var(--padding)/2) calc(var(--space-gap)*1.6);
+		height: var(--squere_button_size);
+		position: relative;
+		z-index: 1;
+
+		&.primary {
+			background-color: $color_primary_button;
+			color: $color_primary;
+			box-shadow: 0px 2px 0px $color_primary_button_shadow;
+		}
+
+		&.primary-invert {
+			background-color: $color_primary_button_hover;
+			color: $color_primary;
+			box-shadow: 0px 2px 0px $color_primary_button_shadow;
+		}
+
+		&.secondary {
+			color: $color_secondary_text;
+			box-shadow: 0px 2px 0px $color_secondary_text;
+		}
+
+		&.info {
+			background-color: $color_info;
+			color: $color_white;
+			box-shadow: 0px 2px 0px $color_info_dark;
+		}
+
+		&.danger {
+			background-color: $color_danger;
+			color: $color_white;
+			box-shadow: 0px 2px 0px $color_danger_dark;
+		}
+	}
+
+	.info-box {
+		border: 1px solid $color_gray;
+		border-top: 0;
+		background-color: $color_white_clear;
+		border-radius: 0 0 calc(var(--border-radius)/2) calc(var(--border-radius)/2);
+		padding: calc(var(--space-gap)*3);
+		text-align: left;
+
+		.underlined-list>.item:last-child {
+			padding-bottom: 0;
+		}
+
+		.small-notification {
+			position: relative;
+			padding-right: var(--small-input_height);
+			cursor: pointer;
+
+			&:after {
+				position: absolute;
+				content: '';
+				left: calc(var(--space-gap)*3*-1);
+				right: calc(var(--space-gap)*3*-1);
+				bottom: calc(var(--space-gap)*3*-1);
+				top: calc(var(--space-gap)*3*-1);
+				background-color: rgba($color_danger, 0.05);
+				transform: scale(0.9);
+				opacity: 0;
+				transition: .2s;
+			}
+
+			.button {
+				color: $color_danger;
+				position: absolute;
+				height: var(--small-input_height); width: var(--small-input_height);
+				z-index: 2;
+				top: 0; right: 0;
+				padding: 0;
+				transform: translate(5px, -5px);
+			}
+
+			.name,
+			.date {
+				margin-bottom: var(--space-gap);
+				font-weight: bold;
+			}
+
+			&:hover {
+
+				.button {
+					color: $color_danger_hover;
+				}
+
+				&:after {
+					transform: scale(1);
+					opacity: 1;
+				}
+			}
+		}
+	}
+}

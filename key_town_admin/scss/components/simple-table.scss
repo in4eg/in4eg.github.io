@@ -184,6 +184,84 @@
 	}
 }
 
+.simple-table.deals-table {
+
+	th:nth-child(1),
+	td:nth-child(1) {
+		width: calc(var(--min-cell_width)*2);
+	}
+
+	th:nth-child(2),
+	td:nth-child(2) {
+		width: calc(var(--min-cell_width)*3);
+	}
+
+	th:nth-child(3),
+	td:nth-child(3) {
+		width: calc(var(--min-cell_width)*3);
+	}
+
+	th:nth-child(4),
+	td:nth-child(4) {
+		width: 100%;
+	}
+
+	th:nth-child(5),
+	td:nth-child(5) {
+		width: calc(var(--min-cell_width)*3.5);
+	}
+
+	th:nth-child(6),
+	td:nth-child(6) {
+		width: calc(var(--min-cell_width)*5);
+	}
+
+	th:nth-child(7),
+	td:nth-child(7) {
+		width: calc(var(--min-cell_width)*5);
+	}
+
+	th:nth-child(8),
+	td:nth-child(8) {
+		width: calc(var(--min-cell_width)*3.5);
+	}
+}
+.simple-table.notifications-table {
+
+	th:nth-child(1),
+	td:nth-child(1) {
+		width: calc(var(--min-cell_width)*4);
+	}
+
+	th:nth-child(2),
+	td:nth-child(2) {
+		width: calc(var(--min-cell_width)*5);
+	}
+
+	th:nth-child(3),
+	td:nth-child(3) {
+		width: 100%;
+	}
+
+	th:nth-child(4),
+	td:nth-child(4) {
+		width: calc(var(--min-cell_width)*6);
+	}
+
+	.table-element:nth-child(even):not(.active) {
+		background-color: #f5fbff;
+	}
+
+	.table-element:nth-child(odd):not(.active) {
+		background-color: #color_white_clear;
+	}
+
+	td {
+		vertical-align: middle;
+	}
+}
+
+
 @media (max-width: 1480px) {
 
 	:root {

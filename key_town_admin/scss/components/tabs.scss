@@ -24,6 +24,25 @@
 			border-bottom-color: $color_white_clear;
 			color: $text_color;
 		}
+
+		&.disabled {
+			opacity: .3;
+			pointer-events: none;
+			user-select: none;
+		}
+
+		.count {
+			position: absolute;
+			font-size: var(--font-size);
+			color: $color_white_clear;
+			background-color: $color_secondary_dark;
+			border-radius: 3px;
+			z-index: 2;
+			line-height: 1;
+			padding: calc(var(--space-gap)*0.6);
+			left: 100%; bottom: 100%;
+			transform: translate(-60%, 60%);
+		}
 	}
 
 	.tab-content {

@@ -1,1 +1,201 @@
-PROFILE
+<h1 class="spaced-bottom">Косач Ірина Петрівна</h1>
+<form action="" class="form">
+	<div class="tabs" data-tabs>
+		<div class="tab active" data-tab="0" data-tooltip="Редагувати основну інформацію">
+			Основна інформація
+		</div>
+		<div class="tab" data-tab="1" data-tooltip="Дивитись системні повідомлення">
+			Системні повідомлення
+			<span class="count">21</span>
+		</div>
+		<div class="tab-content active">
+			<div class="row">
+				<div class="col-xs-2">
+					<!-- files load -->
+					<div class="input-cover large-space load-cover" id="photoLoader" data-loader>
+						<label id="photoLoaderLabel" class="label-file" for="editPhoto" data-label>
+							<div class="caption">
+								<i class="icon icon-cloud-upload"></i>
+								<div class="text">Завантажте файли</div>
+							</div>
+						</label>
+						<input type="file" id="editPhoto" data-file>
+						<!-- thats how loaded images need to be look -->
+						<!-- photo -->
+						<div class="files-cover" data-tooltip="Клікніть, щоб видалити">
+							<div class="inner">
+								<img src="img/user.jpg">
+							</div>
+							<div class="file-name">1.jpg</div>
+						</div>
+						<!-- / thats how loaded images need to be look -->
+					</div>
+					<!-- files load -->
+				</div>
+				<div class="col-xs-8">
+					<div class="row">
+						<div class="col-xs-6">
+							<div class="input-cover bottom-label large-space">
+								<label for="editProfileLastName" class="label">Прізвище: <sup>*</sup></label>
+								<input type="text" class="input" required placeholder="Введіть своє прізвище" id="editProfileLastName" value="Косач">
+								<div class="alert">Мін 2 символи</div>
+							</div>
+						</div>
+						<div class="col-xs-6">
+							<div class="input-cover bottom-label large-space">
+								<label for="editProfileFirstName" class="label">Ім`я: <sup>*</sup></label>
+								<input type="text" class="input" required placeholder="Введіть своє Ім`я" id="editProfileFirstName" value="Ірина">
+								<div class="alert">Мін 2 символи</div>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-xs-6">
+							<div class="input-cover bottom-label large-space">
+								<label for="editProfileSecondName" class="label">По батькові:</label>
+								<input type="text" class="input" required placeholder="Введіть по батькові клієнта" id="editProfileSecondName" value="Петрівна">
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-xs-6">
+							<div class="input-cover bottom-label large-space">
+								<label for="editProfileBirth" class="label">Дата народження:</label>
+								<input type="date" class="input" id="editProfileBirth" value="1999-08-22">
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-xs-6">
+							<div class="input-cover bottom-label large-space">
+								<label for="editProfilePassport" class="label">Серія та номер паспорту:</label>
+								<input type="text" class="input" id="editProfilePassport" value="HE29929">
+							</div>
+						</div>
+						<div class="col-xs-6">
+							<div class="input-cover bottom-label large-space">
+								<label for="editProfileCode" class="label">Код підрозділу:</label>
+								<input type="number" min="0" class="input" id="editProfileCode" value="7172">
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-xs-6">
+							<div class="input-cover bottom-label large-space">
+								<label for="editProfilePassportPlace" class="label">Ким виданий:</label>
+								<input type="text" class="input" id="editProfilePassportPlace" value="Харківським РВ УМВС">
+							</div>
+						</div>
+						<div class="col-xs-6">
+							<div class="input-cover bottom-label large-space">
+								<label for="editProfilePassportDate" class="label">Дата видачі паспорту:</label>
+								<input type="date" class="input" id="editProfilePassportDate" value="2010-08-22">
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-xs-6">
+							<div class="input-cover bottom-label large-space">
+								<label for="editProfileCitizenship" class="label">Громадянство</label>
+								<select name="editProfileCitizenship" id="editProfileCitizenship" class="select">
+									<option value="none" disabled>Оберіть опцію</option>
+									<option value="Так" selected>Так</option>
+									<option value="Ні">Ні</option>
+								</select>
+							</div>
+						</div>
+						<div class="col-xs-6">
+							<div class="input-cover bottom-label large-space">
+								<label for="editProfileSalory" class="label">Дохід у місяць (грн):</label>
+								<input type="number" min="0" class="input" placeholder="Сума доходу" id="editProfileSalory" value="88000">
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-xs-6">
+							<div class="input-cover bottom-label large-space">
+								<label for="editProfileCity" class="label">Місто проживання:</label>
+								<input type=text class="input" placeholder="Введіть місто проживання" id="editProfileCity" value="Одеса">
+							</div>
+						</div>
+						<div class="col-xs-6">
+							<div class="input-cover bottom-label large-space">
+								<label for="editProfileAddress" class="label">Адреса проживання:</label>
+								<input type=text class="input" placeholder="Введіть адресу проживання" id="editProfileAddress" value="вул. Мала Арнаутська, буд 57">
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-xs-6">
+							<div class="input-cover bottom-label large-space">
+								<label for="editProfileRegCity" class="label">Місто реєстрації:</label>
+								<input type=text class="input" placeholder="Введіть місто реєстрації" id="editProfileRegCity" value="Одеса">
+							</div>
+						</div>
+						<div class="col-xs-6">
+							<div class="input-cover bottom-label large-space">
+								<label for="editProfileRegAddress" class="label">Адреса реєстрації:</label>
+								<input type=text class="input" placeholder="Введіть адресу реєстрації" id="editProfileRegAddress" value="вул. Мала Арнаутська, буд 57">
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-xs-6">
+							<div class="input-cover bottom-label large-space">
+								<label for="editProfileTel" class="label">Телефон:</label>
+								<input type="tel" class="input" placeholder="0000000000" id="editProfileTel" value="0993334455">
+							</div>
+						</div>
+						<div class="col-xs-6">
+							<div class="input-cover bottom-label large-space">
+								<label for="editProfileEmail" class="label">Email:</label>
+								<input type="email" class="input" placeholder="Введіть Email клієнта" id="editProfileEmail" value="email.mail@ukr.net">
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-xs-6">
+							<div class="input-cover bottom-label large-space">
+								<label for="editProfileTelCity" class="label">Міський телефон:</label>
+								<input type="tel" class="input" placeholder="0000000000" id="editProfileTelCity" value="">
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-xs-6">
+							<div class="input-cover bottom-label large-space">
+								<label for="editProfileSocial" class="label">Соціальна мережа:</label>
+								<input type="text" class="input" placeholder="Введіть посилання на соціальну мережу" id="editProfileSocial" value="">
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-xs-2">
+					<div class="input-cover large-space">
+						<button class="button button-info fixed-width" type="submit">
+							<span class="text">Зберегти</span>
+							<span class="fade"></span>
+						</button>
+					</div>
+					<div class="input-cover collapsed-bottom large-space">
+						<button class="button button-danger fixed-width" type="reset">
+							<span class="text">Очистити</span>
+							<span class="fade"></span>
+						</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="tab-content">
+			<!-- if NO notification -->
+			<!-- <h2>Системних повідомлень немає</h2> -->
+			<!-- if NO notification -->
+
+			<!-- if we have notifitation -->
+			<div class="table-cover">
+				@@include('notifications-table.html')
+			</div>
+			<!-- / if we have notifitation -->
+		</div>
+	</div>
+</form>
