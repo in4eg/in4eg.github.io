@@ -1,5 +1,5 @@
 <h1 class="spaced-bottom">Косач Ірина Петрівна</h1>
-<form action="" class="form">
+<form action="" class="form validate-form">
 	<div class="tabs" data-tabs>
 		<div class="tab active" data-tab="0" data-tooltip="Редагувати основну інформацію">
 			Основна інформація
@@ -34,14 +34,15 @@
 						<div class="col-xs-6">
 							<div class="input-cover bottom-label large-space">
 								<label for="editProfileLastName" class="label">Прізвище: <sup>*</sup></label>
-								<input type="text" class="input" required placeholder="Введіть своє прізвище" id="editProfileLastName" value="Косач">
 								<div class="alert">Мін 2 символи</div>
+								<input type="text" class="input" placeholder="Введіть своє прізвище" id="editProfileLastName" value="Косач" data-minlength="2">
 							</div>
 						</div>
 						<div class="col-xs-6">
 							<div class="input-cover bottom-label large-space">
 								<label for="editProfileFirstName" class="label">Ім`я: <sup>*</sup></label>
-								<input type="text" class="input" required placeholder="Введіть своє Ім`я" id="editProfileFirstName" value="Ірина">
+								<div class="alert">Мін 2 символи</div>
+								<input type="text" class="input" placeholder="Введіть своє Ім`я" id="editProfileFirstName" value="Ірина" data-minlength="2">
 								<div class="alert">Мін 2 символи</div>
 							</div>
 						</div>
@@ -49,8 +50,9 @@
 					<div class="row">
 						<div class="col-xs-6">
 							<div class="input-cover bottom-label large-space">
-								<label for="editProfileSecondName" class="label">По батькові:</label>
-								<input type="text" class="input" required placeholder="Введіть по батькові клієнта" id="editProfileSecondName" value="Петрівна">
+								<label for="editProfileSecondName" class="label">По батькові: <sup>*</sup></label>
+								<div class="alert">Мін 2 символи</div>
+								<input type="text" class="input" placeholder="Введіть по батькові клієнта" id="editProfileSecondName" value="Петрівна" data-minlength="2">
 							</div>
 						</div>
 					</div>
@@ -65,8 +67,9 @@
 					<div class="row">
 						<div class="col-xs-6">
 							<div class="input-cover bottom-label large-space" data-cloned>
+								<div class="alert">10 цифр! без роздільників</div>
 								<label for="editProfileTel" class="label">Телефон:</label>
-								<input type="tel" class="input" placeholder="0000000000" id="editProfileTel" value="0993334455">
+								<input type="tel" class="input phone" placeholder="0000000000" id="editProfileTel" value="0993334455" maxlength="10">
 								<button type="button" class="button button-danger button-square">
 									<i class="icon icon-plus"></i>
 								</button>
@@ -74,8 +77,9 @@
 						</div>
 						<div class="col-xs-6">
 							<div class="input-cover bottom-label large-space" data-cloned>
+								<div class="alert">Введіть дійсну адресу електронної пошти</div>
 								<label for="editProfileEmail" class="label">Email:</label>
-								<input type="email" class="input" placeholder="Введіть Email" id="editProfileEmail" value="email.mail@ukr.net">
+								<input type="email" class="input email" placeholder="Введіть Email" id="editProfileEmail" value="email.mail@ukr.net">
 								<button type="button" class="button button-danger button-square">
 									<i class="icon icon-plus"></i>
 								</button>
@@ -86,7 +90,7 @@
 						<div class="col-xs-6">
 							<div class="input-cover bottom-label large-space">
 								<label for="editProfileCompamy" class="label">Компанія:</label>
-								<input type="text" class="input" required placeholder="Введіть назву" id="editProfileCompamy" value="Home City">
+								<input type="text" class="input" placeholder="Введіть назву" id="editProfileCompamy" value="Home City">
 							</div>
 						</div>
 					</div>

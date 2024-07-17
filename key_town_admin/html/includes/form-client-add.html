@@ -1,5 +1,5 @@
 <h1 class="spaced-bottom">Додати кліента/покупця</h1>
-<form action="" class="form">
+<form action="" class="form validate-form">
 	<div class="tabs" data-tabs>
 		<div class="tab active" data-tab="0" data-tooltip="Редагувати основну інформацію">
 			Фізична особа
@@ -11,14 +11,14 @@
 						<div class="col-xs-6">
 							<div class="input-cover bottom-label large-space">
 								<label for="addClientLastName" class="label">Прізвище: <sup>*</sup></label>
-								<input type="text" class="input" required placeholder="Введіть прізвище клієнта" id="addClientLastName">
+								<input type="text" class="input" placeholder="Введіть прізвище клієнта" id="addClientLastName" data-minlength="2">
 								<div class="alert">Мін 2 символи</div>
 							</div>
 						</div>
 						<div class="col-xs-6">
 							<div class="input-cover bottom-label large-space">
 								<label for="addClientFirstName" class="label">Ім`я: <sup>*</sup></label>
-								<input type="text" class="input" required placeholder="Введіть Ім`я клієнта" id="addClientFirstName">
+								<input type="text" class="input" placeholder="Введіть Ім`я клієнта" id="addClientFirstName" data-minlength="2">
 								<div class="alert">Мін 2 символи</div>
 							</div>
 						</div>
@@ -27,7 +27,7 @@
 						<div class="col-xs-6">
 							<div class="input-cover bottom-label large-space">
 								<label for="addClientSecondName" class="label">По батькові:</label>
-								<input type="text" class="input" required placeholder="Введіть по батькові клієнта" id="addClientSecondName">
+								<input type="text" class="input ignored" placeholder="Введіть по батькові клієнта" id="addClientSecondName">
 							</div>
 						</div>
 					</div>
@@ -35,7 +35,7 @@
 						<div class="col-xs-6">
 							<div class="input-cover bottom-label large-space">
 								<label for="addClientBirth" class="label">Дата народження:</label>
-								<input type="date" class="input" id="addClientBirth">
+								<input type="date" class="input ignored" id="addClientBirth">
 							</div>
 						</div>
 					</div>
@@ -43,13 +43,13 @@
 						<div class="col-xs-6">
 							<div class="input-cover bottom-label large-space">
 								<label for="addClientPassport" class="label">Серія та номер паспорту:</label>
-								<input type="text" class="input" id="addClientPassport">
+								<input type="text" class="input ignored" id="addClientPassport">
 							</div>
 						</div>
 						<div class="col-xs-6">
 							<div class="input-cover bottom-label large-space">
 								<label for="addClientCode" class="label">Код підрозділу:</label>
-								<input type="number" min="0" class="input" id="addClientCode">
+								<input type="number" min="0" class="input ignored" id="addClientCode">
 							</div>
 						</div>
 					</div>
@@ -57,13 +57,13 @@
 						<div class="col-xs-6">
 							<div class="input-cover bottom-label large-space">
 								<label for="addClientPassportPlace" class="label">Ким виданий:</label>
-								<input type="text" class="input" id="addClientPassportPlace">
+								<input type="text" class="input ignored" id="addClientPassportPlace">
 							</div>
 						</div>
 						<div class="col-xs-6">
 							<div class="input-cover bottom-label large-space">
 								<label for="addClientPassportDate" class="label">Дата видачі паспорту:</label>
-								<input type="date" class="input" id="addClientPassportDate">
+								<input type="date" class="input ignored" id="addClientPassportDate">
 							</div>
 						</div>
 					</div>
@@ -81,7 +81,7 @@
 						<div class="col-xs-6">
 							<div class="input-cover bottom-label large-space">
 								<label for="addClientSalory" class="label">Дохід у місяць (грн):</label>
-								<input type="number" min="0" class="input" placeholder="Сума доходу" id="addClientSalory">
+								<input type="number" min="0" class="input ignored" placeholder="Сума доходу" id="addClientSalory">
 							</div>
 						</div>
 					</div>
@@ -89,13 +89,13 @@
 						<div class="col-xs-6">
 							<div class="input-cover bottom-label large-space">
 								<label for="addClientCity" class="label">Місто проживання:</label>
-								<input type=text class="input" placeholder="Введіть місто проживання" id="addClientCity">
+								<input type=text class="input ignored" placeholder="Введіть місто проживання" id="addClientCity">
 							</div>
 						</div>
 						<div class="col-xs-6">
 							<div class="input-cover bottom-label large-space">
 								<label for="addClientAddress" class="label">Адреса проживання:</label>
-								<input type=text class="input" placeholder="Введіть адресу проживання" id="addClientAddress">
+								<input type=text class="input ignored" placeholder="Введіть адресу проживання" id="addClientAddress">
 							</div>
 						</div>
 					</div>
@@ -103,21 +103,22 @@
 						<div class="col-xs-6">
 							<div class="input-cover bottom-label large-space">
 								<label for="addClientRegCity" class="label">Місто реєстрації:</label>
-								<input type=text class="input" placeholder="Введіть місто реєстрації" id="addClientRegCity">
+								<input type=text class="input ignored" placeholder="Введіть місто реєстрації" id="addClientRegCity">
 							</div>
 						</div>
 						<div class="col-xs-6">
 							<div class="input-cover bottom-label large-space">
 								<label for="addClientRegAddress" class="label">Адреса реєстрації:</label>
-								<input type=text class="input" placeholder="Введіть адресу реєстрації" id="addClientRegAddress">
+								<input type=text class="input ignored" placeholder="Введіть адресу реєстрації" id="addClientRegAddress">
 							</div>
 						</div>
 					</div>
 					<div class="row">
 						<div class="col-xs-6">
 							<div class="input-cover bottom-label large-space" data-cloned>
-								<label for="addClientTel" class="label">Телефон:</label>
-								<input type="tel" class="input" placeholder="0000000000" id="addClientTel">
+								<label for="addClientTel" class="label">Телефон:<sup>*</sup></label>
+								<div class="alert">10 цифр! без роздільників</div>
+								<input type="tel" class="input phone" placeholder="0000000000" id="addClientTel">
 								<button type="button" class="button button-danger button-square">
 									<i class="icon icon-plus"></i>
 								</button>
@@ -126,7 +127,8 @@
 						<div class="col-xs-6">
 							<div class="input-cover bottom-label large-space" data-cloned>
 								<label for="addClientEmail" class="label">Email:</label>
-								<input type="email" class="input" placeholder="Введіть Email клієнта" id="addClientEmail">
+								<div class="alert">Введіть дійсну адресу електронної пошти</div>
+								<input type="email" class="input email ignored" placeholder="Введіть Email клієнта" id="addClientEmail">
 								<button type="button" class="button button-danger button-square">
 									<i class="icon icon-plus"></i>
 								</button>
@@ -137,7 +139,7 @@
 						<div class="col-xs-6">
 							<div class="input-cover bottom-label large-space" data-cloned>
 								<label for="addClientTelCity" class="label">Міський телефон:</label>
-								<input type="tel" class="input" placeholder="0000000000" id="addClientTelCity">
+								<input type="tel" class="input ignored" placeholder="0000000000" id="addClientTelCity">
 								<button type="button" class="button button-danger button-square">
 									<i class="icon icon-plus"></i>
 								</button>
@@ -148,7 +150,7 @@
 						<div class="col-xs-6">
 							<div class="input-cover bottom-label large-space" data-cloned>
 								<label for="addClientSocial" class="label">Соціальна мережа:</label>
-								<input type="text" class="input" placeholder="Введіть посилання на соціальну мережу" id="addClientSocial">
+								<input type="text" class="input ignored" placeholder="Введіть посилання на соціальну мережу" id="addClientSocial">
 								<button type="button" class="button button-danger button-square">
 									<i class="icon icon-plus"></i>
 								</button>

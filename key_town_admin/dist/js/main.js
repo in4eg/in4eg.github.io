@@ -30,18 +30,45 @@ $(document).ready(function() {
 		return confirmationCode;
 	}
 
-
 	$(document).on('click', '[data-cloned] > .button', function(){
 		let element = $(this).parents('[data-cloned]');
 		let cloned = $(element).clone(true);
+		$(cloned).find('.selecter').remove();
 		let inputId = $(element).find('input, select').attr('id')+getRandom(3);
-		$(cloned).find('input, select').attr('id', inputId).val('');
+		$(cloned).find('input, select').attr('id', inputId).val('').attr('name', inputId);
 		$(cloned).find('label').remove();
 		$(cloned).insertAfter(element);
 		$(element).removeAttr('data-cloned');
 		$(element).find('.button').remove();
+		window.tooltipHint.hide();
+
+		// selecter reinit
+		if ($(cloned).find('select')){
+
+			let data = $(cloned).find('select').data();
+			$(cloned).find('select').selecter({
+				multiple: data && data.multiple === true ? true : false,
+				search: data && data.search === true ? true : false,
+				classname: data && data.classname ? data.classname : null,
+				onOpen: function(){ },
+				onChange: function(select){
+					window.getSelectChangedOption(select);
+				},
+				onClose: function(){ },
+			});
+		}
 	});
 });
+$(document).ready(function() {
+	$(document).on('click', '[data-delete]', function(e){
+		if ($(this).siblings('[data-delete]').length == 0) {
+			$(this).parent().addClass('empty');
+		}
+		$(this).remove();
+		window.tooltipHint.hide();
+	})
+});
+
 $(document).ready(function() {
 
 	function closeAllDropdowns(dropdown){
@@ -355,7 +382,7 @@ document.querySelectorAll('.files-cover').forEach(function(loaderCover, i){
 
 $(document).ready(function(){
 
-	function getSelectChangedOption(select){
+	window.getSelectChangedOption = function(select){
 		let id = $(select).attr('id');
 		filterArray = [];
 		$(select).find('option').each(function(i, option){
@@ -375,7 +402,7 @@ $(document).ready(function(){
 			classname: data && data.classname ? data.classname : null,
 			onOpen: function(){ },
 			onChange: function(select){
-				getSelectChangedOption(select);
+				window.getSelectChangedOption(select);
 			},
 			onClose: function(){ },
 		});
@@ -383,7 +410,6 @@ $(document).ready(function(){
 
 	$(document).on('click', '[type="reset"]', function(e){
 		let selectors = $(this).parents('form').find('select');
-		if (!selectors.length) return;
 		$(selectors).each(function(i, select){
 			$(select).find('option').each(function(i, option){
 				$(option).prop('selected', false).removeAttr('selected');
@@ -574,19 +600,18 @@ $(document).ready(function() {
 
 
 $(document).ready(function() {
-	function printDiv(divName) {
+
+	function printDiv(divName){
 		var printContents = document.getElementById(divName).innerHTML;
-		w=window.open();
-		w.document.write(printContents);
-		w.print();
-		w.close();
+		var originalContents = document.body.innerHTML;
+		document.body.innerHTML = printContents;
+		window.print();
+		document.body.innerHTML = originalContents;
 	}
 
-	$('[data-print]').each(function(i, elem) {
-		$(elem).click(function(e) {
-			e.preventDefault();
-			printDiv($(elem).data('print'));
-		});
+	$(document).on('click', '[data-print]', function(e){
+		e.preventDefault();
+		printDiv($(this).data('print'));
 	});
 });
 $(document).ready(function() {

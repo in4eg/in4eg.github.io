@@ -1,16 +1,15 @@
 $(document).ready(function() {
-	function printDiv(divName) {
+
+	function printDiv(divName){
 		var printContents = document.getElementById(divName).innerHTML;
-		w=window.open();
-		w.document.write(printContents);
-		w.print();
-		w.close();
+		var originalContents = document.body.innerHTML;
+		document.body.innerHTML = printContents;
+		window.print();
+		document.body.innerHTML = originalContents;
 	}
 
-	$('[data-print]').each(function(i, elem) {
-		$(elem).click(function(e) {
-			e.preventDefault();
-			printDiv($(elem).data('print'));
-		});
+	$(document).on('click', '[data-print]', function(e){
+		e.preventDefault();
+		printDiv($(this).data('print'));
 	});
 });

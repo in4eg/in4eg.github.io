@@ -1,5 +1,5 @@
 <h1 class="spaced-bottom">Додати новий об'єкт</h1>
-<form action="" class="form">
+<form action="" class="form validate-form">
 	<div class="tabs" data-tabs>
 		<div class="tab active" data-tab="0" data-tooltip="Додати основну інформацію">
 			Основна інформація
@@ -40,7 +40,7 @@
 						<div class="col-xs-4">
 							<div class="input-cover large-space">
 								<label for="addObjPrice" class="label spaced-bottom">Ціна: <sup>*</sup></label>
-								<input type="number" min="0" class="input" required placeholder="Введіть ціну в грн" id="addObjPrice">
+								<input type="number" min="0" class="input" placeholder="Введіть ціну в грн" id="addObjPrice">
 								<div class="alert">Тільки цифри</div>
 							</div>
 						</div>
@@ -90,17 +90,20 @@
 							<div class="input-cover large-space">
 								<label for="addObjAdress" class="label spaced-bottom">Адреса: <sup>*</sup></label>
 								<input type="text" class="input" id="addObjAdress" placeholder="Введіть адресу">
+								<div class="alert">Мін 2 символи</div>
 							</div>
 						</div>
 						<div class="col-xs-4">
 							<div class="input-cover large-space">
 								<label for="addObjFlor" class="label spaced-bottom">Поверх: <sup>*</sup></label>
+								<div class="alert">Тільки цифри</div>
 								<input type="number" min="0" class="input" id="addObjFlor" placeholder="Введіть поверх">
 							</div>
 						</div>
 						<div class="col-xs-4">
 							<div class="input-cover large-space">
 								<label for="addObjMaxFlor" class="label spaced-bottom">Всього поверхів: <sup>*</sup></label>
+								<div class="alert">Тільки цифри</div>
 								<input type="number" min="0" class="input" id="addObjMaxFlor" placeholder="Введіть скільки всього поверхів">
 							</div>
 						</div>
@@ -109,19 +112,19 @@
 						<div class="col-xs-4">
 							<div class="input-cover large-space">
 								<label for="addObjSquare" class="label spaced-bottom">Загальна площа: <sup>*</sup></label>
-								<input type="number" min="0" class="input" id="addObjSquare" placeholder="Введіть загальну площу">
+								<input type="number" min="0" class="input ignored" id="addObjSquare" placeholder="Введіть загальну площу">
 							</div>
 						</div>
 						<div class="col-xs-4">
 							<div class="input-cover large-space">
 								<label for="addObjSquareLive" class="label spaced-bottom">Житлова площа: <sup>*</sup></label>
-								<input type="number" min="0" class="input" id="addObjSquareLive" placeholder="Введіть житлову площу">
+								<input type="number" min="0" class="input ignored" id="addObjSquareLive" placeholder="Введіть житлову площу">
 							</div>
 						</div>
 						<div class="col-xs-4">
 							<div class="input-cover large-space">
 								<label for="addObjSquareKitchen" class="label spaced-bottom">Площа кухні (м <sup>2</sup>): <sup>*</sup></label>
-								<input type="number" min="0" class="input" id="addObjSquareKitchen" placeholder="Введіть площу кухні">
+								<input type="number" min="0" class="input ignored" id="addObjSquareKitchen" placeholder="Введіть площу кухні">
 							</div>
 						</div>
 					</div>
@@ -129,33 +132,35 @@
 						<div class="col-xs-4">
 							<div class="input-cover large-space">
 								<label for="addObjDeposit" class="label spaced-bottom">Застава власнику (грн):</label>
-								<input type="number" min="0" class="input" id="addObjDeposit" placeholder="Введіть сумму">
+								<input type="number" min="0" class="input ignored" id="addObjDeposit" placeholder="Введіть сумму">
 							</div>
 						</div>
 						<div class="col-xs-4">
 							<div class="input-cover large-space">
 								<label for="addObjFreeDate" class="label spaced-bottom">Об'єкт звільниться:</label>
-								<input type="date" class="input" id="addObjFreeDate">
+								<input type="date" class="input ignored" id="addObjFreeDate">
 							</div>
 						</div>
 						<div class="col-xs-4">
 							<div class="input-cover large-space">
 								<label for="addObjShowdate" class="label spaced-bottom">Об'єкт показують:</label>
-								<input type="date" class="input" id="addObjShowdate">
+								<input type="date" class="input ignored" id="addObjShowdate">
 							</div>
 						</div>
 					</div>
 					<div class="input-cover large-space">
 						<label for="addObjTitle" class="label spaced-bottom">Заголовок: <sup>*</sup></label>
-						<input type="text" class="input" id="addObjTitle" placeholder="Введіть заголовок">
+						<div class="alert">Мін 2 символи</div>
+						<input type="text" class="input" id="addObjTitle" placeholder="Введіть заголовок" data-minlength="2">
 					</div>
 					<div class="input-cover large-space">
-						<label for="addObjDescription" class="label spaced-bottom">Опис:</label>
+						<label for="addObjDescription" class="label spaced-bottom">Опис:<sup>*</sup></label>
+						<div class="alert">Мін 2 символи</div>
 						<textarea class="textarea" id="addObjDescription" placeholder="Введіть короткий опис"></textarea>
 					</div>
 					<div class="input-cover large-space">
 						<label for="addObjComment" class="label spaced-bottom">Коментар:</label>
-						<textarea class="textarea" id="addObjComment" placeholder="Введіть додатковий коментар"></textarea>
+						<textarea class="textarea ignored" id="addObjComment" placeholder="Введіть додатковий коментар"></textarea>
 					</div>
 				</div>
 				<div class="col-xs-2 align-right">

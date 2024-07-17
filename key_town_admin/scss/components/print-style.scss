@@ -1,0 +1,32 @@
+@media print {
+
+	@page {
+		margin: 1in; /* 1 inch margin for all sides */
+	}
+
+	/* Specific margins for different sides */
+	@page {
+		margin-top: 0.5in;
+		margin-bottom: 0.75in;
+		margin-left: 1.25in;
+		margin-right: 1in;
+	}
+
+	input, button, select {
+		display: none;
+	}
+
+	h1 {
+		page-break-before: always; /* Start a new page before <h1> elements */
+	}
+
+	section {
+		page-break-after: always; /* Start a new page after <section> elements */
+	}
+
+	table, figure {
+		page-break-inside: avoid; /* Prevent the table from breaking across pages */
+	}
+
+
+}

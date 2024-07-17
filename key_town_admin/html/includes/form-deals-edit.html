@@ -26,13 +26,13 @@
 									</div>
 								</div>
 								<div class="col-xs-3">
-									<button class="button button-primary fixed-width" type="button" data-tooltip="Редагувати клієнта" data-call="#editClientModal">
+									<button class="button button-primary button-block" type="button" data-tooltip="Редагувати клієнта" data-call="#editClientModal">
 										<i class="icon icon icon-edit"></i>
 										<span class="text">Редагувати клієнта</span>
 									</button>
 								</div>
 								<div class="col-xs-3">
-									<button class="button button-primary fixed-width" type="button" data-tooltip="Додати клієнта"data-call="#addClientModal">
+									<button class="button button-primary button-block" type="button" data-tooltip="Додати клієнта"data-call="#addClientModal">
 										<i class="icon icon icon-user-add"></i>
 										<span class="text">Додати клієнта</span>
 									</button>
@@ -74,9 +74,9 @@
 							</div>
 							<div class="row">
 								<div class="col-xs-4">
-									<div class="input-cover large-space" data-cloned>
-										<label for="editDealsAdditionsl" class="label spaced-bottom">Додаткові послуги:</label>
-										<select name="editDealsAdditionsl" id="editDealsAdditionsl" class="select">
+									<div class="input-cover large-space">
+										<label for="editDealsAdditionService" class="label spaced-bottom">Додаткові послуги:</label>
+										<select name="editDealsAdditionService" id="editDealsAdditionService" class="select">
 											<option value="Вибрати місто" disabled>Вибрати послуги</option>
 											<option value="Послуга 1" selected>Послуга 1</option>
 											<option value="Послуга 2">Послуга 2</option>
@@ -84,9 +84,6 @@
 											<option value="Послуга 4">Послуга 4</option>
 											<option value="Послуга 5">Послуга 5</option>
 										</select>
-								<button type="button" class="button button-danger button-square">
-									<i class="icon icon-plus"></i>
-								</button>
 									</div>
 								</div>
 								<div class="col-xs-4">
@@ -95,6 +92,30 @@
 										<input type="number" min="0" class="input" placeholder="Введіть сумму в грн" id="editDealsCost" value="20000">
 									</div>
 								</div>
+							</div>
+							<div class="row" data-cloned>
+								<div class="col-xs-4">
+									<div class="input-cover large-space">
+										<label for="editDealsAdditionsl" class="label spaced-bottom">Додаткові послуги:</label>
+										<select name="editDealsAdditionsl" id="editDealsAdditionsl" class="select">
+											<option value="Вибрати місто" disabled>Вибрати послуги</option>
+											<option value="Послуга 1">Послуга 1</option>
+											<option value="Послуга 2">Послуга 2</option>
+											<option value="Послуга 3" selected>Послуга 3</option>
+											<option value="Послуга 4">Послуга 4</option>
+											<option value="Послуга 5">Послуга 5</option>
+										</select>
+									</div>
+								</div>
+								<div class="col-xs-4">
+									<div class="input-cover large-space">
+										<label for="editDealsTotalCost" class="label spaced-bottom">Вартість (грн):</label>
+										<input type="number" min="0" class="input" placeholder="Введіть сумму в грн" id="editDealsTotalCost" value="85000">
+									</div>
+								</div>
+								<button type="button" class="button button-danger button-square" data-tooltip="Додати ще послугу">
+									<i class="icon icon-plus"></i>
+								</button>
 							</div>
 						</li>
 						<!-- section 2 -->
@@ -294,17 +315,17 @@
 						</div>
 					</div>
 					<div class="input-cover large-space">
-						<button class="button button-primary fixed-width" type="button" data-call="Додати нагадування" data-call="#createRemindModal">
+						<button class="button button-primary button-block" type="button" data-call="Додати нагадування" data-call="#createRemindModal">
 							<span class="text">Додати нагадування</span>
 						</button>
 					</div>
 					<div class="input-cover large-space">
-						<button class="button button-gray fixed-width" type="button" data-tooltip="Не додзвонитись">
+						<button class="button button-gray button-block" type="button" data-tooltip="Не додзвонитись">
 							<span class="text">Не додзвонитись (0)</span>
 						</button>
 					</div>
 					<div class="input-cover large-space">
-						<button class="button button-secondary fixed-width" type="button" data-tooltip="Відправити клієнту пароль">
+						<button class="button button-secondary button-block" type="button" data-tooltip="Відправити клієнту пароль">
 							<span class="text">Відправити пароль</span>
 						</button>
 					</div>
@@ -316,17 +337,17 @@
 						</div>
 					</div>
 					<div class="input-cover large-space">
-						<button class="button button-gray fixed-width" type="button" data-tooltip="Не додзвонитись">
+						<button class="button button-gray button-block" type="button" data-tooltip="Не додзвонитись">
 							<span class="text">Не додзвонитись (0)</span>
 						</button>
 					</div>
 					<div class="input-cover large-space">
-						<button class="button button-primary-light fixed-width" type="button" data-tooltip="Авторизація клієнта">
+						<button class="button button-primary-light button-block" type="button" data-tooltip="Авторизація клієнта">
 							<span class="text">Авторизація</span>
 						</button>
 					</div>
 					<div class="input-cover large-space">
-						<button class="button button-primary-light fixed-width" type="button" data-tooltip="Переглянуті клієнтом об'єкти">
+						<button class="button button-primary-light button-block" type="button" data-tooltip="Переглянуті клієнтом об'єкти">
 							<span class="text">Переглянуті об'єкти</span>
 						</button>
 					</div>
@@ -345,7 +366,7 @@
 						</div>
 					</div>
 					<div class="input-cover large-space">
-						<button class="button button-danger fixed-width" type="reset" data-tooltip="Очистити дані">
+						<button class="button button-danger button-block" type="reset" data-tooltip="Очистити дані">
 							<span class="text">Очистити</span>
 						</button>
 					</div>
@@ -367,10 +388,11 @@
 						<div class="info-title primary-invert">Логи</div>
 						<div class="info-box">
 							<ul class="clear underlined-list">
+								<li class="emty-message item">Немає жодного сповіщення</li>
 								<!-- 1 -->
-								<li class="item">
+								<li class="item" data-delete>
 									<div class="small-notification" data-tooltip="Клікніть, щоб видалити">
-										<button class="button" data-delete><i class="icon icon-close"></i></button>
+										<button class="button"><i class="icon icon-close"></i></button>
 										<div class="name color-primary">Герасименко Наталія МиколаЇвна</div>
 										<div class="date">24-06-2024 - 12:57</div>
 										<div class="text">
@@ -379,9 +401,9 @@
 									</div>
 								</li>
 								<!-- 2 -->
-								<li class="item">
+								<li class="item" data-delete>
 									<div class="small-notification" data-tooltip="Клікніть, щоб видалити">
-										<button class="button" data-delete><i class="icon icon-close"></i></button>
+										<button class="button"><i class="icon icon-close"></i></button>
 										<div class="name color-primary">Герасименко Наталія МиколаЇвна</div>
 										<div class="date">24-06-2024 - 12:57</div>
 										<div class="text">
@@ -390,9 +412,9 @@
 									</div>
 								</li>
 								<!-- 3 -->
-								<li class="item">
+								<li class="item" data-delete>
 									<div class="small-notification" data-tooltip="Клікніть, щоб видалити">
-										<button class="button" data-delete><i class="icon icon-close"></i></button>
+										<button class="button"><i class="icon icon-close"></i></button>
 										<div class="name color-primary">Герасименко Наталія МиколаЇвна</div>
 										<div class="date">24-06-2024 - 12:57</div>
 										<div class="text">

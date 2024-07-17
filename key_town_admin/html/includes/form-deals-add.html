@@ -1,5 +1,5 @@
 <h1 class="spaced-bottom">Додати нову угоду</h1>
-<form action="" class="form">
+<form action="" class="form validate-form">
 	<div class="tabs" data-tabs>
 		<div class="tab active" data-tab="0" data-tooltip="Додати основну інформацію">
 			Основна інформація
@@ -26,13 +26,13 @@
 									</div>
 								</div>
 								<div class="col-xs-3">
-									<button class="button button-primary fixed-width" type="button" data-tooltip="Редагувати клієнта" data-call="#editClientModal">
+									<button class="button button-primary button-block" type="button" data-tooltip="Редагувати клієнта" data-call="#editClientModal">
 										<i class="icon icon icon-edit"></i>
 										<span class="text">Редагувати клієнта</span>
 									</button>
 								</div>
 								<div class="col-xs-3">
-									<button class="button button-primary fixed-width" type="button" data-tooltip="Додати клієнта"data-call="#addClientModal">
+									<button class="button button-primary button-block" type="button" data-tooltip="Додати клієнта"data-call="#addClientModal">
 										<i class="icon icon icon-user-add"></i>
 										<span class="text">Додати клієнта</span>
 									</button>
@@ -41,19 +41,22 @@
 							<div class="row">
 								<div class="col-xs-4">
 									<div class="input-cover large-space">
-										<label for="addDealsOffice" class="label spaced-bottom">Офіс:</label>
-										<input type="text" class="input" placeholder="Введіть адресу" id="addDealsOffice">
+										<label for="addDealsOffice" class="label spaced-bottom">Офіс:<sup>*</sup></label>
+										<div class="alert">Мін 2 символи</div>
+										<input type="text" class="input" placeholder="Введіть адресу" id="addDealsOffice" data-minlength="2">
 									</div>
 								</div>
 								<div class="col-xs-4">
 									<div class="input-cover large-space">
 										<label for="addDealsEmploye" class="label spaced-bottom">Відповідальний співробітник:</label>
-										<input type="text" class="input" placeholder="Введіть ім'я та прізвище" id="addDealsEmploye">
+										<div class="alert">Мін 2 символи</div>
+										<input type="text" class="input" placeholder="Введіть ім'я та прізвище" id="addDealsEmploye" data-minlength="2">
 									</div>
 								</div>
 								<div class="col-xs-4">
 									<div class="input-cover large-space">
 										<label for="addDealsPrice" class="label spaced-bottom">Сумма (грн):</label>
+										<div class="alert">Тільки цифри</div>
 										<input type="number" min="0" class="input" placeholder="Введіть сумму в грн" id="addDealsPrice">
 									</div>
 								</div>
@@ -62,12 +65,14 @@
 								<div class="col-xs-4">
 									<div class="input-cover large-space">
 										<label for="addDealsTarif" class="label spaced-bottom">Тариф (грн):</label>
+										<div class="alert">Тільки цифри</div>
 										<input type="number" min="0" class="input" placeholder="Введіть сумму в грн" id="addDealsTarif">
 									</div>
 								</div>
 								<div class="col-xs-4">
 									<div class="input-cover large-space">
 										<label for="addDealsTarifSum" class="label spaced-bottom">Сумма тарифу (грн):</label>
+										<div class="alert">Тільки цифри</div>
 										<input type="number" min="0" class="input" placeholder="Введіть сумму в грн" id="addDealsTarifSum">
 									</div>
 								</div>
@@ -89,6 +94,7 @@
 								<div class="col-xs-4">
 									<div class="input-cover large-space">
 										<label for="addDealsCost" class="label spaced-bottom">Вартість (грн):</label>
+										<div class="alert">Тільки цифри</div>
 										<input type="number" min="0" class="input" placeholder="Введіть сумму в грн" id="addDealsCost">
 									</div>
 								</div>
@@ -126,8 +132,9 @@
 								</div>
 								<div class="col-xs-4">
 									<div class="input-cover large-space">
-										<label for="addDealsAdress" class="label spaced-bottom">Адреса:</label>
-										<input type="text" class="input" id="addDealsAdress" placeholder="Введіть адресу">
+										<label for="addDealsAdress" class="label spaced-bottom">Адреса:<sup>*</sup></label>
+										<div class="alert">Мін 2 символи</div>
+										<input type="text" class="input " id="addDealsAdress" placeholder="Введіть адресу" data-minlength="2">
 									</div>
 								</div>
 							</div>
@@ -149,13 +156,13 @@
 								<div class="col-xs-4">
 									<div class="input-cover large-space">
 										<label for="addDealsCostFrom" class="label spaced-bottom">Вартість від (грн):</label>
-										<input type="number" min="0" class="input" placeholder="Введіть сумму в грн" id="addDealsCostFrom">
+										<input type="number" min="0" class="input ignored" placeholder="Введіть сумму в грн" id="addDealsCostFrom">
 									</div>
 								</div>
 								<div class="col-xs-4">
 									<div class="input-cover large-space">
 										<label for="addDealsCostTo" class="label spaced-bottom">Вартість до(грн):</label>
-										<input type="number" min="0" class="input" placeholder="Введіть сумму в грн" id="addDealsCostTo">
+										<input type="number" min="0" class="input ignored" placeholder="Введіть сумму в грн" id="addDealsCostTo">
 									</div>
 								</div>
 								<div class="col-xs-4">
@@ -194,13 +201,13 @@
 								<div class="col-xs-2">
 									<div class="input-cover large-space">
 										<label for="addDealsSquareFrom" class="label spaced-bottom">Площа від (м<sup>2</sup>):</label>
-										<input type="number" min="0" class="input" placeholder="Введіть значення" id="addDealsSquareFrom">
+										<input type="number" min="0" class="input ignored" placeholder="Введіть значення" id="addDealsSquareFrom">
 									</div>
 								</div>
 								<div class="col-xs-2">
 									<div class="input-cover large-space">
 										<label for="addDealsSquareTo" class="label spaced-bottom">Площа до (м<sup>2</sup>):</label>
-										<input type="number" min="0" class="input" placeholder="Введіть значення" id="addDealsSquareTo">
+										<input type="number" min="0" class="input ignored" placeholder="Введіть значення" id="addDealsSquareTo">
 									</div>
 								</div>
 							</div>
@@ -208,13 +215,13 @@
 								<div class="col-xs-2">
 									<div class="input-cover large-space">
 										<label for="addDealsFlorFrom" class="label spaced-bottom">Поверх від:</label>
-										<input type="number" min="0" class="input" placeholder="Введіть значення" id="addDealsFlorFrom">
+										<input type="number" min="0" class="input ignored" placeholder="Введіть значення" id="addDealsFlorFrom">
 									</div>
 								</div>
 								<div class="col-xs-2">
 									<div class="input-cover large-space">
 										<label for="addDealsFlorTo" class="label spaced-bottom">Поверх до:</label>
-										<input type="number" min="0" class="input" placeholder="Введіть значення" id="addDealsFlorTo">
+										<input type="number" min="0" class="input ignored" placeholder="Введіть значення" id="addDealsFlorTo">
 									</div>
 								</div>
 								<div class="col-xs-4">
@@ -240,19 +247,19 @@
 								<div class="col-xs-4">
 									<div class="input-cover large-space">
 										<label for="addDealsWhoLives" class="label spaced-bottom">Хто проживає:</label>
-										<input type="text" class="input" placeholder="Введіть значення" id="addDealsWhoLives">
+										<input type="text" class="input ignored" placeholder="Введіть значення" id="addDealsWhoLives">
 									</div>
 								</div>
 								<div class="col-xs-4">
 									<div class="input-cover large-space">
 										<label for="addDealsLinkTo" class="label spaced-bottom">Прив'язка:</label>
-										<input type="text" class="input" placeholder="Введіть значення" id="addDealsLinkTo">
+										<input type="text" class="input ignored" placeholder="Введіть значення" id="addDealsLinkTo">
 									</div>
 								</div>
 								<div class="col-xs-4">
 									<div class="input-cover large-space">
 										<label for="addDealsFilled" class="label spaced-bottom">Наповненість житла:</label>
-										<input type="text" class="input" placeholder="Введіть значення" id="addDealsFilled">
+										<input type="text" class="input ignored" placeholder="Введіть значення" id="addDealsFilled">
 									</div>
 								</div>
 							</div>
@@ -260,26 +267,26 @@
 								<div class="col-xs-6">
 									<div class="input-cover large-space">
 										<label for="addDealsReasons" class="label spaced-bottom">Попереднє житло/Причини переїзду:</label>
-										<input type="text" class="input" placeholder="Введіть значення" id="addDealsReasons">
+										<input type="text" class="input ignored" placeholder="Введіть значення" id="addDealsReasons">
 									</div>
 								</div>
 								<div class="col-xs-6">
 									<div class="input-cover large-space">
 										<label for="addDealsAdditionInfo" class="label spaced-bottom">Додаткова інформація:</label>
-										<input type="text" class="input" placeholder="Введіть значення" id="addDealsAdditionInfo">
+										<input type="text" class="input ignored" placeholder="Введіть значення" id="addDealsAdditionInfo">
 									</div>
 								</div>
 							</div>
 							<div class="input-cover large-space">
 								<label for="addDealsComment" class="label spaced-bottom">Коментар:</label>
-								<textarea class="textarea" id="addDealsComment" placeholder="Введіть додатковий коментар"></textarea>
+								<textarea class="textarea ignored" id="addDealsComment" placeholder="Введіть додатковий коментар"></textarea>
 							</div>
 						</li>
 					</ul>
 				</div>
 				<div class="col-xs-2 align-right">
 					<div class="input-cover large-space">
-						<button class="button button-danger fixed-width" type="reset" data-tooltip="Очистити дані">
+						<button class="button button-danger button-block" type="reset" data-tooltip="Очистити дані">
 							<span class="text">Очистити</span>
 						</button>
 					</div>
@@ -314,7 +321,9 @@
 					<div class="info-block">
 						<div class="info-title primary-invert">Логи</div>
 						<div class="info-box">
-							Немає жодного сповіщення
+							<ul class="clear underlined-list">
+								<li class="emty-message item">Немає жодного сповіщення</li>
+							</ul>
 						</div>
 					</div>
 				</div>

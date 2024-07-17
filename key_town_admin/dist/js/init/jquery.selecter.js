@@ -1,6 +1,6 @@
 $(document).ready(function(){
 
-	function getSelectChangedOption(select){
+	window.getSelectChangedOption = function(select){
 		let id = $(select).attr('id');
 		filterArray = [];
 		$(select).find('option').each(function(i, option){
@@ -20,7 +20,7 @@ $(document).ready(function(){
 			classname: data && data.classname ? data.classname : null,
 			onOpen: function(){ },
 			onChange: function(select){
-				getSelectChangedOption(select);
+				window.getSelectChangedOption(select);
 			},
 			onClose: function(){ },
 		});
@@ -28,7 +28,6 @@ $(document).ready(function(){
 
 	$(document).on('click', '[type="reset"]', function(e){
 		let selectors = $(this).parents('form').find('select');
-		if (!selectors.length) return;
 		$(selectors).each(function(i, select){
 			$(select).find('option').each(function(i, option){
 				$(option).prop('selected', false).removeAttr('selected');

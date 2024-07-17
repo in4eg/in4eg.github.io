@@ -8,13 +8,25 @@
 		margin-bottom: var(--padding);
 		padding-bottom: var(--padding);
 
-		&:last-child {
+		&:last-child,
+		&.emty-message {
 			margin-bottom: 0;
 			border-bottom: 0;
 		}
 
 		.user-data {
 			margin-bottom: 0;
+		}
+	}
+
+	.emty-message {
+		display: none;
+	}
+
+	&.empty {
+
+		.emty-message {
+			display: block;
 		}
 	}
 }

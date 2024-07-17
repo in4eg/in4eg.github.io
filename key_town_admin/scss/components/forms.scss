@@ -74,7 +74,6 @@
 	}
 
 	&[data-cloned] {
-		position: relative;
 
 		.input {
 			padding-right: var(--squere_button_size);
@@ -84,13 +83,28 @@
 			margin-right: var(--squere_button_size);
 		}
 
+		.alert {
+			top: -4px;
+		}
+	}
+}
+
+	[data-cloned] {
+		position: relative;
+
 		.button-square {
 			position: absolute;
 			bottom: 2px; right: 0;
 			z-index: 1;
 		}
+
+		&.row {
+
+			.button-square {
+				bottom: calc(var(--margin)*2 + 2px); right: 30%;
+			}
+		}
 	}
-}
 
 .label {
 	font-weight: bold;
