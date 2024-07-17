@@ -19,6 +19,29 @@ $(document).ready(function() {
 		})(this), 600);
 	});
 });
+
+$(document).ready(function() {
+
+	function getRandom(size){
+		let zeros = '0'.repeat(size - 1);
+		let x = parseFloat('1' + zeros);
+		let y = parseFloat('9' + zeros);
+		let confirmationCode = String(Math.floor(x + Math.random() * y));
+		return confirmationCode;
+	}
+
+
+	$(document).on('click', '[data-cloned] > .button', function(){
+		let element = $(this).parents('[data-cloned]');
+		let cloned = $(element).clone(true);
+		let inputId = $(element).find('input, select').attr('id')+getRandom(3);
+		$(cloned).find('input, select').attr('id', inputId).val('');
+		$(cloned).find('label').remove();
+		$(cloned).insertAfter(element);
+		$(element).removeAttr('data-cloned');
+		$(element).find('.button').remove();
+	});
+});
 $(document).ready(function() {
 
 	function closeAllDropdowns(dropdown){
@@ -69,7 +92,7 @@ $(document).ready(function() {
 });
 $(document).ready(function() {
 
-	var tooltipHint = {
+	window.tooltipHint = {
 		x: 0,
 		y: 0,
 		newTooltip: null,
@@ -141,12 +164,12 @@ $(document).ready(function() {
 
 $(document).on('mouseenter', '[data-tooltip]', function(e){
 	let tooltip = this;
-	tooltipHint.show(tooltip, e);
+	window.tooltipHint.show(tooltip, e);
 })
 
 $(document).on('mouseleave', '[data-tooltip]', function(e){
 	let tooltip = this;
-	tooltipHint.hide();
+	window.tooltipHint.hide();
 })
 
 });
@@ -176,13 +199,20 @@ function handleFiles(){
 	let files = this.files;
 	let loaderMainWrap = null;
 	let uploadBox = this.parentElement.querySelectorAll('[data-upload]')[0];
+	if (uploadBox.classList.contains('single-load')) {
+		oldPhoto = uploadBox.children;
+		for (var i = 0; i < oldPhoto.length; i++) {
+			oldPhoto[i].remove();
+		}
+	}
 	for (var i = 0; i < files.length; i++) {
 		getBase64(files[i], uploadBox);
 	}
 }
 
 function removeFiles(){
-	this.remove()
+	this.remove();
+	window.tooltipHint.hide();
 }
 
 function hasClass(element, className) {
@@ -190,8 +220,6 @@ function hasClass(element, className) {
 }
 
 function getBase64(file, loaderMainWrap) {
-	console.warn(loaderMainWrap)
-
 	var reader = new FileReader();
 	reader.readAsDataURL(file);
 	if (file.type.startsWith("image/")) {

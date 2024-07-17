@@ -72,6 +72,24 @@
 			border-color: $color_success;
 		}
 	}
+
+	&[data-cloned] {
+		position: relative;
+
+		.input {
+			padding-right: var(--squere_button_size);
+		}
+
+		.selecter {
+			margin-right: var(--squere_button_size);
+		}
+
+		.button-square {
+			position: absolute;
+			bottom: 2px; right: 0;
+			z-index: 1;
+		}
+	}
 }
 
 .label {
@@ -182,6 +200,7 @@
 	.photo-cover {
 		height: calc(var(--upload-files_height));
 		width: calc(var(--upload-files_width));
+		max-width: 100%;
 		border: 1px solid #d2ecff;
 		position: relative;
 		background-color: lighten(#d2ecff, 7%);
@@ -191,11 +210,19 @@
 		background-size: 50%;
 		margin-bottom: calc(var(--margin)*3);
 		background-position: center;
+		border-radius: var(--border-radius);
 
 		.files-cover {
 			margin: 0;
 			position: absolute;
 			top: 0; left: 0;
+
+			.file-name {
+				font-size: var(--font-size_small);
+				white-space: nowrap;
+				overflow: hidden;
+				text-overflow: ellipsis;
+			}
 		}
 	}
 

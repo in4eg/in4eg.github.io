@@ -2,13 +2,20 @@ function handleFiles(){
 	let files = this.files;
 	let loaderMainWrap = null;
 	let uploadBox = this.parentElement.querySelectorAll('[data-upload]')[0];
+	if (uploadBox.classList.contains('single-load')) {
+		oldPhoto = uploadBox.children;
+		for (var i = 0; i < oldPhoto.length; i++) {
+			oldPhoto[i].remove();
+		}
+	}
 	for (var i = 0; i < files.length; i++) {
 		getBase64(files[i], uploadBox);
 	}
 }
 
 function removeFiles(){
-	this.remove()
+	this.remove();
+	window.tooltipHint.hide();
 }
 
 function hasClass(element, className) {
@@ -16,8 +23,6 @@ function hasClass(element, className) {
 }
 
 function getBase64(file, loaderMainWrap) {
-	console.warn(loaderMainWrap)
-
 	var reader = new FileReader();
 	reader.readAsDataURL(file);
 	if (file.type.startsWith("image/")) {

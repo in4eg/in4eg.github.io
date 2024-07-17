@@ -1,6 +1,6 @@
 $(document).ready(function() {
 
-	var tooltipHint = {
+	window.tooltipHint = {
 		x: 0,
 		y: 0,
 		newTooltip: null,
@@ -72,12 +72,12 @@ $(document).ready(function() {
 
 $(document).on('mouseenter', '[data-tooltip]', function(e){
 	let tooltip = this;
-	tooltipHint.show(tooltip, e);
+	window.tooltipHint.show(tooltip, e);
 })
 
 $(document).on('mouseleave', '[data-tooltip]', function(e){
 	let tooltip = this;
-	tooltipHint.hide();
+	window.tooltipHint.hide();
 })
 
 });

@@ -13,7 +13,7 @@
 				<div class="col-xs-2">
 					<div class="input-cover large-space load-cover" id="photoLoader" data-loader>
 						<!-- photo -->
-						<div class="photo-cover" data-upload>
+						<div class="photo-cover single-load" data-upload>
 							<div class="files-cover" data-tooltip="Клікніть, щоб видалити">
 								<div class="inner">
 									<img src="img/user.jpg">
@@ -64,97 +64,29 @@
 					</div>
 					<div class="row">
 						<div class="col-xs-6">
-							<div class="input-cover bottom-label large-space">
-								<label for="editProfilePassport" class="label">Серія та номер паспорту:</label>
-								<input type="text" class="input" id="editProfilePassport" value="HE29929">
-							</div>
-						</div>
-						<div class="col-xs-6">
-							<div class="input-cover bottom-label large-space">
-								<label for="editProfileCode" class="label">Код підрозділу:</label>
-								<input type="number" min="0" class="input" id="editProfileCode" value="7172">
-							</div>
-						</div>
-					</div>
-					<div class="row">
-						<div class="col-xs-6">
-							<div class="input-cover bottom-label large-space">
-								<label for="editProfilePassportPlace" class="label">Ким виданий:</label>
-								<input type="text" class="input" id="editProfilePassportPlace" value="Харківським РВ УМВС">
-							</div>
-						</div>
-						<div class="col-xs-6">
-							<div class="input-cover bottom-label large-space">
-								<label for="editProfilePassportDate" class="label">Дата видачі паспорту:</label>
-								<input type="date" class="input" id="editProfilePassportDate" value="2010-08-22">
-							</div>
-						</div>
-					</div>
-					<div class="row">
-						<div class="col-xs-6">
-							<div class="input-cover bottom-label large-space">
-								<label for="editProfileCitizenship" class="label">Громадянство</label>
-								<select name="editProfileCitizenship" id="editProfileCitizenship" class="select">
-									<option value="none" disabled>Оберіть опцію</option>
-									<option value="Так" selected>Так</option>
-									<option value="Ні">Ні</option>
-								</select>
-							</div>
-						</div>
-						<div class="col-xs-6">
-							<div class="input-cover bottom-label large-space">
-								<label for="editProfileSalory" class="label">Дохід у місяць (грн):</label>
-								<input type="number" min="0" class="input" placeholder="Сума доходу" id="editProfileSalory" value="88000">
-							</div>
-						</div>
-					</div>
-					<div class="row">
-						<div class="col-xs-6">
-							<div class="input-cover bottom-label large-space">
-								<label for="editProfileCity" class="label">Місто проживання:</label>
-								<input type=text class="input" placeholder="Введіть місто проживання" id="editProfileCity" value="Одеса">
-							</div>
-						</div>
-						<div class="col-xs-6">
-							<div class="input-cover bottom-label large-space">
-								<label for="editProfileAddress" class="label">Адреса проживання:</label>
-								<input type=text class="input" placeholder="Введіть адресу проживання" id="editProfileAddress" value="вул. Мала Арнаутська, буд 57">
-							</div>
-						</div>
-					</div>
-					<div class="row">
-						<div class="col-xs-6">
-							<div class="input-cover bottom-label large-space">
-								<label for="editProfileRegCity" class="label">Місто реєстрації:</label>
-								<input type=text class="input" placeholder="Введіть місто реєстрації" id="editProfileRegCity" value="Одеса">
-							</div>
-						</div>
-						<div class="col-xs-6">
-							<div class="input-cover bottom-label large-space">
-								<label for="editProfileRegAddress" class="label">Адреса реєстрації:</label>
-								<input type=text class="input" placeholder="Введіть адресу реєстрації" id="editProfileRegAddress" value="вул. Мала Арнаутська, буд 57">
-							</div>
-						</div>
-					</div>
-					<div class="row">
-						<div class="col-xs-6">
-							<div class="input-cover bottom-label large-space">
+							<div class="input-cover bottom-label large-space" data-cloned>
 								<label for="editProfileTel" class="label">Телефон:</label>
 								<input type="tel" class="input" placeholder="0000000000" id="editProfileTel" value="0993334455">
+								<button type="button" class="button button-danger button-square">
+									<i class="icon icon-plus"></i>
+								</button>
 							</div>
 						</div>
 						<div class="col-xs-6">
-							<div class="input-cover bottom-label large-space">
+							<div class="input-cover bottom-label large-space" data-cloned>
 								<label for="editProfileEmail" class="label">Email:</label>
-								<input type="email" class="input" placeholder="Введіть Email клієнта" id="editProfileEmail" value="email.mail@ukr.net">
+								<input type="email" class="input" placeholder="Введіть Email" id="editProfileEmail" value="email.mail@ukr.net">
+								<button type="button" class="button button-danger button-square">
+									<i class="icon icon-plus"></i>
+								</button>
 							</div>
 						</div>
 					</div>
 					<div class="row">
 						<div class="col-xs-6">
 							<div class="input-cover bottom-label large-space">
-								<label for="editProfileTelCity" class="label">Міський телефон:</label>
-								<input type="tel" class="input" placeholder="0000000000" id="editProfileTelCity" value="">
+								<label for="editProfileCompamy" class="label">Компанія:</label>
+								<input type="text" class="input" required placeholder="Введіть назву" id="editProfileCompamy" value="Home City">
 							</div>
 						</div>
 					</div>
