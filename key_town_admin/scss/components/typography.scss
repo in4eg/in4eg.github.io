@@ -1,5 +1,18 @@
 @import '../variables.scss';
 
+.section {
+	margin-bottom: calc(var(--margin)*2);
+
+	&:last-child {
+		margin-bottom: 0;
+	}
+}
+
+.spaced-section {
+	padding-top: calc(var(--padding)*2);
+	padding-bottom: calc(var(--padding)*2);
+}
+
 h1, h2, h3, h4 {
 	font-weight: normal;
 	font-weight: 100;
@@ -26,6 +39,12 @@ div, a, p {
 		color: $color_white;
 		background-color: $color_primary;
 	}
+}
+
+.section-title {
+	font-size: var(--h1-font-size);
+	font-weight: bold;
+	margin-bottom: calc(var(--margin)*2);
 }
 
 h1 {

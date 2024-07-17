@@ -1,6 +1,5 @@
 $(document).ready(function() {
 	$(function() {
-		var CallPopup, hidePopups;
 		$('[data-call]').click(function(e) {
 			var called;
 			e.preventDefault();
@@ -16,7 +15,7 @@ $(document).ready(function() {
 				}, 100);
 			}
 		});
-		CallPopup = function(selector) {
+		window.CallPopup = function(selector) {
 			var called;
 			called = $(selector);
 			if (!called.hasClass('active')) {
@@ -46,7 +45,7 @@ $(document).ready(function() {
 				}
 			}, 300);
 		});
-		hidePopups = function() {
+		let hidePopups = function() {
 			$('.popup').each(function(i, popup) {
 				var called;
 				called = $(popup);

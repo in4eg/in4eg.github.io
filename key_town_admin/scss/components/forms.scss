@@ -179,6 +179,26 @@
 		top: 0; left: 0;
 	}
 
+	.photo-cover {
+		height: calc(var(--upload-files_height));
+		width: calc(var(--upload-files_width));
+		border: 1px solid #d2ecff;
+		position: relative;
+		background-color: lighten(#d2ecff, 7%);
+		background-image: url(../img/picture.svg);
+		background-repeat: no-repeat;
+		background-position: top center;
+		background-size: 50%;
+		margin-bottom: calc(var(--margin)*3);
+		background-position: center;
+
+		.files-cover {
+			margin: 0;
+			position: absolute;
+			top: 0; left: 0;
+		}
+	}
+
 	.files-cover {
 		display: inline-block;
 		vertical-align: top;

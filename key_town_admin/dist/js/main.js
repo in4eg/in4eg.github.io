@@ -175,8 +175,9 @@ $(document).ready(function() {
 function handleFiles(){
 	let files = this.files;
 	let loaderMainWrap = null;
+	let uploadBox = this.parentElement.querySelectorAll('[data-upload]')[0];
 	for (var i = 0; i < files.length; i++) {
-		getBase64(files[i], this.parentElement);
+		getBase64(files[i], uploadBox);
 	}
 }
 
@@ -189,6 +190,8 @@ function hasClass(element, className) {
 }
 
 function getBase64(file, loaderMainWrap) {
+	console.warn(loaderMainWrap)
+
 	var reader = new FileReader();
 	reader.readAsDataURL(file);
 	if (file.type.startsWith("image/")) {
@@ -275,6 +278,7 @@ function appendError(name, type, loaderMainWrap){
 };
 
 document.querySelectorAll('[data-loader]').forEach(function(loaderCover, i){
+	let uploadBox = loaderCover.querySelectorAll('[data-upload]')[0];
 	coverChildren = loaderCover.children;
 	for (var i = 0; i < coverChildren.length; i++) {
 		if (coverChildren[i].hasAttribute('data-label')) {
@@ -291,14 +295,14 @@ document.querySelectorAll('[data-loader]').forEach(function(loaderCover, i){
 						e.preventDefault();
 						fileLoader.classList.remove('hover');
 						for (var i = 0; i < e.dataTransfer.files.length; i++) {
-							getBase64(e.dataTransfer.files[i], loaderCover);
+							getBase64(e.dataTransfer.files[i], uploadBox);
 						}
 					}
 		} else if (coverChildren[i].hasAttribute('data-file')) {
 			let inputElement = coverChildren[i];
 					inputElement.addEventListener("change", handleFiles, false);
 		} else {
-			appendError('type', loaderCover);
+			appendError('type', uploadBox);
 		}
 	}
 })
@@ -468,7 +472,6 @@ $(document).ready(function(){
 });
 $(document).ready(function() {
 	$(function() {
-		var CallPopup, hidePopups;
 		$('[data-call]').click(function(e) {
 			var called;
 			e.preventDefault();
@@ -484,7 +487,7 @@ $(document).ready(function() {
 				}, 100);
 			}
 		});
-		CallPopup = function(selector) {
+		window.CallPopup = function(selector) {
 			var called;
 			called = $(selector);
 			if (!called.hasClass('active')) {
@@ -514,7 +517,7 @@ $(document).ready(function() {
 				}
 			}, 300);
 		});
-		hidePopups = function() {
+		let hidePopups = function() {
 			$('.popup').each(function(i, popup) {
 				var called;
 				called = $(popup);

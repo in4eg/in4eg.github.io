@@ -8,7 +8,7 @@
 			<button type="button" class="close-popup button" data-dismiss="#checkTelModal" data-tooltip="Закрити вікно">&times;</button>
 		</div>
 		<div class="content">
-			<form action="" class="form validate-form">
+			<form action="" class="form validate-form" onsubmit="showResutModal(this)">
 				<div class="input-cover with-label spaced-top">
 					<label for="telSearch" class="label">Тел:<sup>*</sup></label>
 					<input type="tel" class="input phone" placeholder="0000000000" id="telSearch" maxlength="10">
@@ -45,3 +45,14 @@
 		</div>
 	</div>
 </div>
+
+<!-- REMOVE THIS SCRIPT -->
+<script>
+	function showResutModal(form){
+		let telInput = $(form).find('#telSearch')[0];
+		if (telInput.value.length > 1) {
+			window.CallPopup('#searchResultModal')
+		}
+	}
+</script>
+<!-- REMOVE THIS SCRIPT -->

@@ -1307,6 +1307,7 @@
 					</div>
 				</label>
 				<input type="file" id="addDealsFiles" multiple data-file>
+				<div data-upload></div>
 			</div>
 		</div>
 	</div>
@@ -1373,7 +1374,7 @@
 			<button type="button" class="close-popup button" data-dismiss="#checkTelModal" data-tooltip="Закрити вікно">&times;</button>
 		</div>
 		<div class="content">
-			<form action="" class="form validate-form">
+			<form action="" class="form validate-form" onsubmit="showResutModal(this)">
 				<div class="input-cover with-label spaced-top">
 					<label for="telSearch" class="label">Тел:<sup>*</sup></label>
 					<input type="tel" class="input phone" placeholder="0000000000" id="telSearch" maxlength="10">
@@ -1410,6 +1411,17 @@
 		</div>
 	</div>
 </div>
+
+<!-- REMOVE THIS SCRIPT -->
+<script>
+	function showResutModal(form){
+		let telInput = $(form).find('#telSearch')[0];
+		if (telInput.value.length > 1) {
+			window.CallPopup('#searchResultModal')
+		}
+	}
+</script>
+<!-- REMOVE THIS SCRIPT -->
 	<!-- / check tel number -->
 	<!-- create a reminding -->
 	<div id="createRemindModal" class="popup">
@@ -1696,43 +1708,45 @@
 					</div>
 				</label>
 				<input type="file" id="editObjFiles" multiple data-file>
-				<!-- thats how loaded images need to be look -->
-				<!-- 1 -->
-				<div class="files-cover" data-tooltip="Клікніть, щоб видалити">
-					<div class="inner">
-						<img src="img/temp/1.jpg">
+				<!-- thats how loaded images need to be look like -->
+				<div data-upload>
+					<!-- 1 -->
+					<div class="files-cover" data-tooltip="Клікніть, щоб видалити">
+						<div class="inner">
+							<img src="img/temp/1.jpg">
+						</div>
+						<div class="file-name">1.jpg</div>
 					</div>
-					<div class="file-name">1.jpg</div>
-				</div>
-				<!-- 2 -->
-				<div class="files-cover" data-tooltip="Клікніть, щоб видалити">
-					<div class="inner">
-						<img src="img/temp/2.jpg">
+					<!-- 2 -->
+					<div class="files-cover" data-tooltip="Клікніть, щоб видалити">
+						<div class="inner">
+							<img src="img/temp/2.jpg">
+						</div>
+						<div class="file-name">2.jpg</div>
 					</div>
-					<div class="file-name">2.jpg</div>
-				</div>
-				<!-- 3 -->
-				<div class="files-cover" data-tooltip="Клікніть, щоб видалити">
-					<div class="inner">
-						<img src="img/temp/3.jpg">
+					<!-- 3 -->
+					<div class="files-cover" data-tooltip="Клікніть, щоб видалити">
+						<div class="inner">
+							<img src="img/temp/3.jpg">
+						</div>
+						<div class="file-name">3.jpg</div>
 					</div>
-					<div class="file-name">3.jpg</div>
-				</div>
-				<!-- 4 -->
-				<div class="files-cover" data-tooltip="Клікніть, щоб видалити">
-					<div class="inner">
-						<img src="img/temp/4.jpg">
+					<!-- 4 -->
+					<div class="files-cover" data-tooltip="Клікніть, щоб видалити">
+						<div class="inner">
+							<img src="img/temp/4.jpg">
+						</div>
+						<div class="file-name">4.jpg</div>
 					</div>
-					<div class="file-name">4.jpg</div>
-				</div>
-				<!-- 5 -->
-				<div class="files-cover" data-tooltip="Клікніть, щоб видалити">
-					<div class="inner">
-						<img src="img/temp/5.jpg">
+					<!-- 5 -->
+					<div class="files-cover" data-tooltip="Клікніть, щоб видалити">
+						<div class="inner">
+							<img src="img/temp/5.jpg">
+						</div>
+						<div class="file-name">5.jpg</div>
 					</div>
-					<div class="file-name">5.jpg</div>
 				</div>
-				<!-- / thats how loaded images need to be look -->
+				<!-- / thats how loaded images need to be look like -->
 			</div>
 			<!-- files load -->
 		</div>
@@ -1938,6 +1952,7 @@
 					</div>
 				</label>
 				<input type="file" id="addObjFiles" multiple data-file>
+				<div data-upload></div>
 			</div>
 		</div>
 	</div>
@@ -2645,6 +2660,7 @@
 					</div>
 				</label>
 				<input type="file" id="addDealsFiles" multiple data-file>
+				<div data-upload></div>
 			</div>
 		</div>
 	</div>
@@ -3080,6 +3096,7 @@
 					</div>
 				</label>
 				<input type="file" id="editDealsFiles" multiple data-file>
+				<div data-upload></div>
 			</div>
 		</div>
 	</div>
@@ -3089,7 +3106,1504 @@
 	</div>
 </div>
 	<!-- / edit client -->
-
+	<!-- search result -->
+	<div id="searchResultModal" class="popup middle-popup">
+	<div class="inner">
+		<div class="head">
+			<h2 class="modal-title">
+				<i class="icon icon-phone-call"></i>
+				Результати перевірки № телефону
+			</h2>
+			<button type="button" class="close-popup button" data-dismiss="#searchResultModal" data-tooltip="Закрити вікно">&times;</button>
+		</div>
+		<div class="content">
+			<!-- /////// search result ////// -->
+			<!-- do not show section if we have 0 array length -->
+			<!-- CONTACTS -->
+			<section class="section">
+				<h2 class="section-title">Контакти</h2>
+				<div class="table-cover">
+					<table class="contacts-table table simple-table">
+						<thead>
+							<tr class="primary-top">
+								<th>
+									<button class="transparent-button" data-tooltip="Сортувати по зростанню/спаданню">
+										<span class="text">
+											ID
+											<i class="icon icon-select-arrows"></i>
+										</span>
+									</button>
+								</th>
+								<th>
+									<button class="transparent-button" data-tooltip="Сортувати по зростанню/спаданню">
+										<span class="text">
+											Дата
+											<i class="icon icon-select-arrows"></i>
+										</span>
+									</button>
+								</th>
+								<th><span class="text">Контакти</span></th>
+								<th><span class="text">Фото</span></th>
+							</tr>
+							<tr class="gray-bottom">
+								<!-- id -->
+								<th><input type="number" min="0" class="input smaller-input" data-tooltip="Введіть ID для пошуку"></th>
+								<!-- date -->
+								<th><input type="date" class="input smaller-input" data-tooltip="Виберіть дату для пошуку"></th>
+								<!-- description -->
+								<th><input type="text" class="input smaller-input" data-tooltip="Введіть ключові слова для пошуку"></th>
+								<!-- rieltor photo -->
+								<th></th>
+							</tr>
+						</thead>
+						<!-- TBODY -->
+						<tbody>
+							<!-- contact element -->
+								<tr class="table-element">
+									<!-- id -->
+									<td>
+										<div class="paragraph">151721</div>
+									</td>
+									<!-- date -->
+									<td>
+										<div class="date">2024-06-19</div>
+										<div class="time">10:26</div>
+									</td>
+									<!-- description -->
+									<td>
+										<div class="title-with-icon spaced">
+											<i class="icon icon-user"></i>
+											<span class="text">Ім'я:</span>
+											<div class="bold">Таточенко Аліна Іванівна</div>
+										</div>
+										<a class="title-with-icon" href="tel:0674947727" data-tooltip="Подзвонити">
+											<i class="icon icon-phone-square"></i>
+											<span class="text">Тел:</span>
+											<span class="bold">0674947727</span>
+										</a>
+									</td>
+									<!-- photo -->
+									<td>
+										<!-- with user image -->
+										<div class="image-cover user-image collapsed">
+											<!-- if we have no user image tag <img> is unnecessary-->
+											<img src="img/user.jpg" draggable="false">
+										</div>
+									</td>
+								</tr>
+							<!-- / contact element -->
+						</tbody>
+						<!-- / TBODY -->
+					</table>
+				</div>
+			</section>
+			<!-- /CONTACTS -->
+			<!-- ACTUAL OBJECTS -->
+			<section class="section">
+				<h2 class="section-title">Актуальні об'єкти</h2>
+				<div class="table-cover">
+					<table class="objects-table table simple-table">
+						<thead>
+							<tr class="primary-top">
+								<th>
+									<button class="transparent-button" data-tooltip="Сортувати по зростанню/спаданню">
+										<span class="text">
+											ID
+											<i class="icon icon-select-arrows"></i>
+										</span>
+									</button>
+								</th>
+								<th>
+									<button class="transparent-button" data-tooltip="Сортувати по зростанню/спаданню">
+										<span class="text">
+											Дата
+											<i class="icon icon-select-arrows"></i>
+										</span>
+									</button>
+								</th>
+								<th>
+									<button class="transparent-button" data-tooltip="Сортувати по зростанню/спаданню">
+										<span class="text">
+											Контакт
+											<i class="icon icon-select-arrows"></i>
+										</span>
+									</button>
+								</th>
+								<th><span class="text">Фото</span></th>
+								<th><span class="text">Загальний опис</span></th>
+								<th>
+									<button class="transparent-button" data-tooltip="Сортувати по зростанню/спаданню">
+										<span class="text">
+											Останні дії
+											<i class="icon icon-select-arrows"></i>
+										</span>
+									</button>
+								</th>
+								<th><span class="text">Ім`я рієлтора</span></th>
+							</tr>
+							<tr class="gray-bottom">
+								<!-- id -->
+								<th><input type="number" min="0" class="input smaller-input" data-tooltip="Введіть ID для пошуку"></th>
+								<!-- date -->
+								<th><input type="date" class="input smaller-input" data-tooltip="Виберіть дату для пошуку"></th>
+								<!-- contact -->
+								<th>
+									<input type="tel" class="input smaller-input" data-tooltip="Введіть телефон для пошуку" placeholder="0000000000">
+								</th>
+								<!-- photo -->
+								<th></th>
+								<!-- description -->
+								<th><input type="text" class="input smaller-input" data-tooltip="Введіть ключові слова для пошуку"></th>
+								<!-- action -->
+								<th><input type="text" class="input smaller-input" data-tooltip="Введіть ключові слова для пошуку"></th>
+								<!-- rieltor name -->
+								<th><input type="text" class="input smaller-input" data-tooltip="Введіть ім'я для пошуку"></th>
+							</tr>
+						</thead>
+						<!-- TBODY -->
+						<tbody>
+							<!-- object element -->
+							<tr class="table-element">
+								<!-- id -->
+								<td>
+									<div class="paragraph">151721</div>
+									<div class="buton-cover spaced-top">
+										<a href="https://keytown.in.ua/" class="transparent-button button color-primary" data-tooltip="Відкриється в новому вікні" target="_blank" rel="noopener noreferrer">
+											<span class="text">
+												<i class="icon icon-eye-open"></i>
+												<div class="text">Сайт</div>
+											</span>
+										</a>
+									</div>
+								</td>
+								<!-- date -->
+								<td>
+									<div class="date">2024-06-19</div>
+									<div class="time">10:26</div>
+								</td>
+								<!-- contact -->
+								<td>
+									<div class="title-with-icon spaced">
+										<i class="icon icon-user"></i>
+										<span class="text">Власник</span>
+									</div>
+									<a class="title-with-icon" href="tel:0674947727" data-tooltip="Подзвонити">
+										<i class="icon icon-phone-square"></i>
+										<span class="text">0674947727</span>
+									</a>
+								</td>
+								<!-- photo -->
+								<td>
+									<div class="paragraph">Публічні фото</div>
+									<div class="gallery">
+									<!-- if we have no photo .image-cover needs to be empty -->
+										<!-- <div class="image-cover gallery-cover"></div> -->
+										<div class="gallery-cover" data-tooltip="Подивитись усі фото">
+											<!-- first photo is main -->
+											<img src="img/temp/1.jpg" class="gallery-image" graggable="false" data-fancybox="gallery">
+											<img src="img/temp/2.jpg" class="gallery-image" graggable="false" data-fancybox="gallery">
+											<img src="img/temp/3.jpg" class="gallery-image" graggable="false" data-fancybox="gallery">
+											<img src="img/temp/4.jpg" class="gallery-image" graggable="false" data-fancybox="gallery">
+											<img src="img/temp/5.jpg" class="gallery-image" graggable="false" data-fancybox="gallery">
+										</div>
+										<div class="count" data-tooltip="Всього 5 фото">5</div>
+									</div>
+								</td>
+								<!-- description -->
+								<td>
+									<div class="title-with-icon spaced">
+										<i class="icon icon-money"></i>
+										<span class="text">Ціна:</span>
+										<span class="bold">14 000</span>
+									</div>
+									<ul class="simple-list smaller-spaces">
+										<li class="item">
+											<div class="title-with-icon">
+												<i class="icon icon-tower"></i>
+												<span class="text">1 к.кв.</span>
+											</div>
+										</li>
+										<li class="item">
+											<div class="title-with-icon">
+												<i class="icon icon-location"></i>
+												<span class="text">р-н: Дніпровський</span>
+											</div>
+										</li>
+										<li class="item">
+											<div class="title-with-icon">
+												<i class="icon icon-location"></i>
+												<span class="text">Русанівска Набережна</span>
+												<span class="bold">14 000</span>
+											</div>
+										</li>
+										<li class="item">
+											<div class="title-with-icon">
+												<i class="icon icon-scale"></i>
+												<span class="text">11/16/18&nbsp;36/40/15м<sup>2</sup></span>
+											</div>
+										</li>
+										<li class="item">
+											<div class="title-with-icon">
+												<i class="icon icon-subway"></i>
+												<span class="text">Метро Лівобережная 10 хвилин пішки</span>
+											</div>
+										</li>
+									</ul>
+									<div class="hidden-details" id="elDetails1">
+										<div class="description">
+											<h5 class="description-title">Загальний опис:</h5>
+											<div class="text">
+												Здається довгостроково 1 к квартира на Русанівській набережній Здається в довгострокову оренду охайна та світла однокімнатна квартира за адресою Русанівська набережна. Квартира знаходиться на 11 поверсі/16 пов. будинку, площею 36 м.кв для 1-2 людей. Квартира з меблями, укомплектована необхідною побутовою технікою: кондиціонер, холодильник, мікрохвильова піч, пральна машина, пилесмок, в кімнаті велика шафа купе, розкладний диван, вана, плита з духовкою. Будинок знаходиться поряд з магазинами, школою та дитячим садком, сучасним футбольним та баскетбольним полем, АТБ, Сільпо, аптеки. Хороша транспортна розв"язка: метро Лівобережная 10 хвилин пішки.
+											</div>
+										</div>
+										<ul class="simple-list smaller-spaces">
+											<li class="item">
+												<div class="title-with-icon">
+													<i class="icon icon-calendar"></i>
+													<span class="bold text">Об'єкт звільниться:</span>
+													<span class="text">15.06.2024</span>
+												</div>
+											</li>
+											<li class="item">
+												<div class="title-with-icon">
+													<i class="icon icon-calendar"></i>
+													<span class="bold text">Об'єкт показують:</span>
+													<span class="text">15.06.2024</span>
+												</div>
+											</li>
+											<li class="item">
+												<div class="title-with-icon">
+													<i class="icon icon-list"></i>
+													<span class="bold text">Деталі:</span>
+													<ul class="crumbs-list">
+														<li class="list-item">
+															<a href="#" class="link color-primary" target="_blank" rel="noopener noreferrer" data-tooltip="Перейти на OLX">OLX</a>
+														</li>
+														<li class="list-item">
+															<a href="#" class="link color-primary" target="_blank" rel="noopener noreferrer" data-tooltip="Перейти на dom.ria.ua">dom.ria.ua</a>
+														</li>
+														<li class="list-item">
+															<a href="#" class="link color-primary" target="_blank" rel="noopener noreferrer" data-tooltip="Перейти на domik.net">domik.net</a>
+														</li>
+													</ul>
+												</div>
+											</li>
+										</ul>
+										<div class="spaced-top">
+											<ul class="simple-list smaller-spaces">
+												<li class="item">
+													<button class="button button-primary smaller" data-tooltip="Редагувати у вікні" data-call="#editObjectModal">
+														<i class="icon icon-edit"></i>
+														<span class="text">Редагувати</span>
+													</button>
+												</li>
+												<li class="item">
+													<a href="object-edit-page.html" data-tooltip="Редагувати у новій вкладці" target="_blank" rel="noopener noreferrer" class="button smaller button-primary">
+														<i class="icon icon-edit"></i>
+														<span class="text">Редагувати у новій вкладці</span>
+													</a>
+												</li>
+												<li class="item">
+													<button class="button smaller button-square button-primary" data-tooltip="Створити нагадування" data-call="#createRemindModal">
+														<i class="icon icon-file-add"></i>
+													</button>
+												</li>
+												<li class="item">
+													<button class="button smaller button-secondary" data-tooltip="В архів">
+														<i class="icon icon-archive"></i>
+														<span class="text">В архів</span>
+													</button>
+												</li>
+												<li class="item">
+													<button class="button smaller button-gray" data-tooltip="Не додзвонитись">
+														<i class="icon icon-phone-call"></i>
+														<span class="text">Не додзвонитись (0)</span>
+													</button>
+												</li>
+												<li class="item">
+													<button class="button smaller button-info" data-tooltip="Зберегти">
+														<i class="icon icon-like"></i>
+														<span class="text">Зберегти</span>
+													</button>
+												</li>
+											</ul>
+										</div>
+									</div>
+									<div class="spaced-top">
+										<button class="button button-primary smaller" type="button" data-toggle="#elDetails1">
+											<i class="icon icon-cheveron-down"></i>
+											Детальніше
+										</button>
+									</div>
+								</td>
+								<!-- action -->
+								<td>
+									<div class="title-with-icon spaced">
+										<i class="icon icon-user"></i>
+										<span class="text">Коржик Андрій Іванович</span>
+									</div>
+									<a class="title-with-icon spaced" href="tel:0674947727" data-tooltip="Подзвонити">
+										<i class="icon icon-phone-square"></i>
+										<span class="text">0674947727</span>
+									</a>
+									<!-- NO user image -->
+									<div class="image-cover user-image">
+										<!-- <img src="img/user.jpg" draggable="false"> -->
+									</div>
+									<div class="text status">Не додзвонились</div>
+								</td>
+								<!-- rieltor name -->
+								<td>
+									<div class="title-with-icon spaced">
+										<i class="icon icon-user"></i>
+										<span class="text">Таточенко Аліна Іванівна</span>
+									</div>
+									<a class="title-with-icon spaced" href="tel:0674947727" data-tooltip="Подзвонити">
+										<i class="icon icon-phone-square"></i>
+										<span class="text">0674947727</span>
+									</a>
+									<!-- with user image -->
+									<div class="image-cover user-image">
+										<!-- if we have no user image tag <img> is unnecessary-->
+										<img src="img/user.jpg" draggable="false">
+									</div>
+									<button class="button button-link color-primary" data-call="#searchRieltorsModal" data-tooltip="Змінити відповідального">
+										<i class="icon icon-edit"></i>
+										<span class="text">Змінити відповідального</span>
+									</button>
+								</td>
+							</tr>
+							<!-- / object element -->
+						</tbody>
+						<!-- / TBODY -->
+					</table>
+				</div>
+			</section>
+			<!-- /ACTUAL OBJECTS -->
+			<!-- NEW OBJECTS -->
+			<section class="section">
+				<h2 class="section-title">Нові об'єкти</h2>
+				<div class="table-cover">
+					<table class="objects-table table simple-table">
+						<thead>
+							<tr class="primary-top">
+								<th>
+									<button class="transparent-button" data-tooltip="Сортувати по зростанню/спаданню">
+										<span class="text">
+											ID
+											<i class="icon icon-select-arrows"></i>
+										</span>
+									</button>
+								</th>
+								<th>
+									<button class="transparent-button" data-tooltip="Сортувати по зростанню/спаданню">
+										<span class="text">
+											Дата
+											<i class="icon icon-select-arrows"></i>
+										</span>
+									</button>
+								</th>
+								<th>
+									<button class="transparent-button" data-tooltip="Сортувати по зростанню/спаданню">
+										<span class="text">
+											Контакт
+											<i class="icon icon-select-arrows"></i>
+										</span>
+									</button>
+								</th>
+								<th><span class="text">Фото</span></th>
+								<th><span class="text">Загальний опис</span></th>
+								<th>
+									<button class="transparent-button" data-tooltip="Сортувати по зростанню/спаданню">
+										<span class="text">
+											Останні дії
+											<i class="icon icon-select-arrows"></i>
+										</span>
+									</button>
+								</th>
+								<th><span class="text">Ім`я рієлтора</span></th>
+							</tr>
+							<tr class="gray-bottom">
+								<!-- id -->
+								<th><input type="number" min="0" class="input smaller-input" data-tooltip="Введіть ID для пошуку"></th>
+								<!-- date -->
+								<th><input type="date" class="input smaller-input" data-tooltip="Виберіть дату для пошуку"></th>
+								<!-- contact -->
+								<th>
+									<input type="tel" class="input smaller-input" data-tooltip="Введіть телефон для пошуку" placeholder="0000000000">
+								</th>
+								<!-- photo -->
+								<th></th>
+								<!-- description -->
+								<th><input type="text" class="input smaller-input" data-tooltip="Введіть ключові слова для пошуку"></th>
+								<!-- action -->
+								<th><input type="text" class="input smaller-input" data-tooltip="Введіть ключові слова для пошуку"></th>
+								<!-- rieltor name -->
+								<th><input type="text" class="input smaller-input" data-tooltip="Введіть ім'я для пошуку"></th>
+							</tr>
+						</thead>
+						<!-- TBODY -->
+						<tbody>
+							<!-- object element -->
+							<tr class="table-element">
+								<!-- id -->
+								<td>
+									<div class="paragraph">151721</div>
+									<div class="buton-cover spaced-top">
+										<a href="https://keytown.in.ua/" class="transparent-button button color-primary" data-tooltip="Відкриється в новому вікні" target="_blank" rel="noopener noreferrer">
+											<span class="text">
+												<i class="icon icon-eye-open"></i>
+												<div class="text">Сайт</div>
+											</span>
+										</a>
+									</div>
+								</td>
+								<!-- date -->
+								<td>
+									<div class="date">2024-06-19</div>
+									<div class="time">10:26</div>
+								</td>
+								<!-- contact -->
+								<td>
+									<div class="title-with-icon spaced">
+										<i class="icon icon-user"></i>
+										<span class="text">Власник</span>
+									</div>
+									<a class="title-with-icon" href="tel:0674947727" data-tooltip="Подзвонити">
+										<i class="icon icon-phone-square"></i>
+										<span class="text">0674947727</span>
+									</a>
+								</td>
+								<!-- photo -->
+								<td>
+									<div class="paragraph">Публічні фото</div>
+									<div class="gallery">
+									<!-- if we have no photo .image-cover needs to be empty -->
+										<!-- <div class="image-cover gallery-cover"></div> -->
+										<div class="gallery-cover" data-tooltip="Подивитись усі фото">
+											<!-- first photo is main -->
+											<img src="img/temp/1.jpg" class="gallery-image" graggable="false" data-fancybox="gallery">
+											<img src="img/temp/2.jpg" class="gallery-image" graggable="false" data-fancybox="gallery">
+											<img src="img/temp/3.jpg" class="gallery-image" graggable="false" data-fancybox="gallery">
+											<img src="img/temp/4.jpg" class="gallery-image" graggable="false" data-fancybox="gallery">
+											<img src="img/temp/5.jpg" class="gallery-image" graggable="false" data-fancybox="gallery">
+										</div>
+										<div class="count" data-tooltip="Всього 5 фото">5</div>
+									</div>
+								</td>
+								<!-- description -->
+								<td>
+									<div class="title-with-icon spaced">
+										<i class="icon icon-money"></i>
+										<span class="text">Ціна:</span>
+										<span class="bold">14 000</span>
+									</div>
+									<ul class="simple-list smaller-spaces">
+										<li class="item">
+											<div class="title-with-icon">
+												<i class="icon icon-tower"></i>
+												<span class="text">1 к.кв.</span>
+											</div>
+										</li>
+										<li class="item">
+											<div class="title-with-icon">
+												<i class="icon icon-location"></i>
+												<span class="text">р-н: Дніпровський</span>
+											</div>
+										</li>
+										<li class="item">
+											<div class="title-with-icon">
+												<i class="icon icon-location"></i>
+												<span class="text">Русанівска Набережна</span>
+												<span class="bold">14 000</span>
+											</div>
+										</li>
+										<li class="item">
+											<div class="title-with-icon">
+												<i class="icon icon-scale"></i>
+												<span class="text">11/16/18&nbsp;36/40/15м<sup>2</sup></span>
+											</div>
+										</li>
+										<li class="item">
+											<div class="title-with-icon">
+												<i class="icon icon-subway"></i>
+												<span class="text">Метро Лівобережная 10 хвилин пішки</span>
+											</div>
+										</li>
+									</ul>
+									<div class="hidden-details" id="newElDetails1">
+										<div class="description">
+											<h5 class="description-title">Загальний опис:</h5>
+											<div class="text">
+												Здається довгостроково 1 к квартира на Русанівській набережній Здається в довгострокову оренду охайна та світла однокімнатна квартира за адресою Русанівська набережна. Квартира знаходиться на 11 поверсі/16 пов. будинку, площею 36 м.кв для 1-2 людей. Квартира з меблями, укомплектована необхідною побутовою технікою: кондиціонер, холодильник, мікрохвильова піч, пральна машина, пилесмок, в кімнаті велика шафа купе, розкладний диван, вана, плита з духовкою. Будинок знаходиться поряд з магазинами, школою та дитячим садком, сучасним футбольним та баскетбольним полем, АТБ, Сільпо, аптеки. Хороша транспортна розв"язка: метро Лівобережная 10 хвилин пішки.
+											</div>
+										</div>
+										<ul class="simple-list smaller-spaces">
+											<li class="item">
+												<div class="title-with-icon">
+													<i class="icon icon-calendar"></i>
+													<span class="bold text">Об'єкт звільниться:</span>
+													<span class="text">15.06.2024</span>
+												</div>
+											</li>
+											<li class="item">
+												<div class="title-with-icon">
+													<i class="icon icon-calendar"></i>
+													<span class="bold text">Об'єкт показують:</span>
+													<span class="text">15.06.2024</span>
+												</div>
+											</li>
+											<li class="item">
+												<div class="title-with-icon">
+													<i class="icon icon-list"></i>
+													<span class="bold text">Деталі:</span>
+													<ul class="crumbs-list">
+														<li class="list-item">
+															<a href="#" class="link color-primary" target="_blank" rel="noopener noreferrer" data-tooltip="Перейти на OLX">OLX</a>
+														</li>
+														<li class="list-item">
+															<a href="#" class="link color-primary" target="_blank" rel="noopener noreferrer" data-tooltip="Перейти на dom.ria.ua">dom.ria.ua</a>
+														</li>
+														<li class="list-item">
+															<a href="#" class="link color-primary" target="_blank" rel="noopener noreferrer" data-tooltip="Перейти на domik.net">domik.net</a>
+														</li>
+													</ul>
+												</div>
+											</li>
+										</ul>
+										<div class="spaced-top">
+											<ul class="simple-list smaller-spaces">
+												<li class="item">
+													<button class="button button-primary smaller" data-tooltip="Редагувати у вікні" data-call="#editObjectModal">
+														<i class="icon icon-edit"></i>
+														<span class="text">Редагувати</span>
+													</button>
+												</li>
+												<li class="item">
+													<a href="object-edit-page.html" data-tooltip="Редагувати у новій вкладці" target="_blank" rel="noopener noreferrer" class="button smaller button-primary">
+														<i class="icon icon-edit"></i>
+														<span class="text">Редагувати у новій вкладці</span>
+													</a>
+												</li>
+												<li class="item">
+													<button class="button smaller button-square button-primary" data-tooltip="Створити нагадування" data-call="#createRemindModal">
+														<i class="icon icon-file-add"></i>
+													</button>
+												</li>
+												<li class="item">
+													<button class="button smaller button-secondary" data-tooltip="В архів">
+														<i class="icon icon-archive"></i>
+														<span class="text">В архів</span>
+													</button>
+												</li>
+												<li class="item">
+													<button class="button smaller button-gray" data-tooltip="Не додзвонитись">
+														<i class="icon icon-phone-call"></i>
+														<span class="text">Не додзвонитись (0)</span>
+													</button>
+												</li>
+												<li class="item">
+													<button class="button smaller button-info" data-tooltip="Зберегти">
+														<i class="icon icon-like"></i>
+														<span class="text">Зберегти</span>
+													</button>
+												</li>
+											</ul>
+										</div>
+									</div>
+									<div class="spaced-top">
+										<button class="button button-primary smaller" type="button" data-toggle="#newElDetails1">
+											<i class="icon icon-cheveron-down"></i>
+											Детальніше
+										</button>
+									</div>
+								</td>
+								<!-- action -->
+								<td>
+									<div class="title-with-icon spaced">
+										<i class="icon icon-user"></i>
+										<span class="text">Коржик Андрій Іванович</span>
+									</div>
+									<a class="title-with-icon spaced" href="tel:0674947727" data-tooltip="Подзвонити">
+										<i class="icon icon-phone-square"></i>
+										<span class="text">0674947727</span>
+									</a>
+									<!-- NO user image -->
+									<div class="image-cover user-image">
+										<!-- <img src="img/user.jpg" draggable="false"> -->
+									</div>
+									<div class="text status">Не додзвонились</div>
+								</td>
+								<!-- rieltor name -->
+								<td>
+									<div class="title-with-icon spaced">
+										<i class="icon icon-user"></i>
+										<span class="text">Таточенко Аліна Іванівна</span>
+									</div>
+									<a class="title-with-icon spaced" href="tel:0674947727" data-tooltip="Подзвонити">
+										<i class="icon icon-phone-square"></i>
+										<span class="text">0674947727</span>
+									</a>
+									<!-- with user image -->
+									<div class="image-cover user-image">
+										<!-- if we have no user image tag <img> is unnecessary-->
+										<img src="img/user.jpg" draggable="false">
+									</div>
+									<button class="button button-link color-primary" data-call="#searchRieltorsModal" data-tooltip="Змінити відповідального">
+										<i class="icon icon-edit"></i>
+										<span class="text">Змінити відповідального</span>
+									</button>
+								</td>
+							</tr>
+							<!-- / object element -->
+						</tbody>
+						<!-- / TBODY -->
+					</table>
+				</div>
+			</section>
+			<!-- /NEW OBJECTS -->
+			<!-- ARCHIVE OBJECTS -->
+			<section class="section">
+				<h2 class="section-title">Архівні об'єкти</h2>
+				<div class="table-cover">
+					<table class="objects-table table simple-table">
+						<thead>
+							<tr class="primary-top">
+								<th>
+									<button class="transparent-button" data-tooltip="Сортувати по зростанню/спаданню">
+										<span class="text">
+											ID
+											<i class="icon icon-select-arrows"></i>
+										</span>
+									</button>
+								</th>
+								<th>
+									<button class="transparent-button" data-tooltip="Сортувати по зростанню/спаданню">
+										<span class="text">
+											Дата
+											<i class="icon icon-select-arrows"></i>
+										</span>
+									</button>
+								</th>
+								<th>
+									<button class="transparent-button" data-tooltip="Сортувати по зростанню/спаданню">
+										<span class="text">
+											Контакт
+											<i class="icon icon-select-arrows"></i>
+										</span>
+									</button>
+								</th>
+								<th><span class="text">Фото</span></th>
+								<th><span class="text">Загальний опис</span></th>
+								<th>
+									<button class="transparent-button" data-tooltip="Сортувати по зростанню/спаданню">
+										<span class="text">
+											Останні дії
+											<i class="icon icon-select-arrows"></i>
+										</span>
+									</button>
+								</th>
+								<th><span class="text">Ім`я рієлтора</span></th>
+							</tr>
+							<tr class="gray-bottom">
+								<!-- id -->
+								<th><input type="number" min="0" class="input smaller-input" data-tooltip="Введіть ID для пошуку"></th>
+								<!-- date -->
+								<th><input type="date" class="input smaller-input" data-tooltip="Виберіть дату для пошуку"></th>
+								<!-- contact -->
+								<th>
+									<input type="tel" class="input smaller-input" data-tooltip="Введіть телефон для пошуку" placeholder="0000000000">
+								</th>
+								<!-- photo -->
+								<th></th>
+								<!-- description -->
+								<th><input type="text" class="input smaller-input" data-tooltip="Введіть ключові слова для пошуку"></th>
+								<!-- action -->
+								<th><input type="text" class="input smaller-input" data-tooltip="Введіть ключові слова для пошуку"></th>
+								<!-- rieltor name -->
+								<th><input type="text" class="input smaller-input" data-tooltip="Введіть ім'я для пошуку"></th>
+							</tr>
+						</thead>
+						<!-- TBODY -->
+						<tbody>
+							<!-- object element -->
+							<tr class="table-element">
+								<!-- id -->
+								<td>
+									<div class="paragraph">151721</div>
+									<div class="buton-cover spaced-top">
+										<a href="https://keytown.in.ua/" class="transparent-button button color-primary" data-tooltip="Відкриється в новому вікні" target="_blank" rel="noopener noreferrer">
+											<span class="text">
+												<i class="icon icon-eye-open"></i>
+												<div class="text">Сайт</div>
+											</span>
+										</a>
+									</div>
+								</td>
+								<!-- date -->
+								<td>
+									<div class="date">2024-06-19</div>
+									<div class="time">10:26</div>
+								</td>
+								<!-- contact -->
+								<td>
+									<div class="title-with-icon spaced">
+										<i class="icon icon-user"></i>
+										<span class="text">Власник</span>
+									</div>
+									<a class="title-with-icon" href="tel:0674947727" data-tooltip="Подзвонити">
+										<i class="icon icon-phone-square"></i>
+										<span class="text">0674947727</span>
+									</a>
+								</td>
+								<!-- photo -->
+								<td>
+									<div class="paragraph">Публічні фото</div>
+									<div class="gallery">
+									<!-- if we have no photo .image-cover needs to be empty -->
+										<!-- <div class="image-cover gallery-cover"></div> -->
+										<div class="gallery-cover" data-tooltip="Подивитись усі фото">
+											<!-- first photo is main -->
+											<img src="img/temp/1.jpg" class="gallery-image" graggable="false" data-fancybox="gallery">
+											<img src="img/temp/2.jpg" class="gallery-image" graggable="false" data-fancybox="gallery">
+											<img src="img/temp/3.jpg" class="gallery-image" graggable="false" data-fancybox="gallery">
+											<img src="img/temp/4.jpg" class="gallery-image" graggable="false" data-fancybox="gallery">
+											<img src="img/temp/5.jpg" class="gallery-image" graggable="false" data-fancybox="gallery">
+										</div>
+										<div class="count" data-tooltip="Всього 5 фото">5</div>
+									</div>
+								</td>
+								<!-- description -->
+								<td>
+									<div class="title-with-icon spaced">
+										<i class="icon icon-money"></i>
+										<span class="text">Ціна:</span>
+										<span class="bold">14 000</span>
+									</div>
+									<ul class="simple-list smaller-spaces">
+										<li class="item">
+											<div class="title-with-icon">
+												<i class="icon icon-tower"></i>
+												<span class="text">1 к.кв.</span>
+											</div>
+										</li>
+										<li class="item">
+											<div class="title-with-icon">
+												<i class="icon icon-location"></i>
+												<span class="text">р-н: Дніпровський</span>
+											</div>
+										</li>
+										<li class="item">
+											<div class="title-with-icon">
+												<i class="icon icon-location"></i>
+												<span class="text">Русанівска Набережна</span>
+												<span class="bold">14 000</span>
+											</div>
+										</li>
+										<li class="item">
+											<div class="title-with-icon">
+												<i class="icon icon-scale"></i>
+												<span class="text">11/16/18&nbsp;36/40/15м<sup>2</sup></span>
+											</div>
+										</li>
+										<li class="item">
+											<div class="title-with-icon">
+												<i class="icon icon-subway"></i>
+												<span class="text">Метро Лівобережная 10 хвилин пішки</span>
+											</div>
+										</li>
+									</ul>
+									<div class="hidden-details" id="archiveElDetails1">
+										<div class="description">
+											<h5 class="description-title">Загальний опис:</h5>
+											<div class="text">
+												Здається довгостроково 1 к квартира на Русанівській набережній Здається в довгострокову оренду охайна та світла однокімнатна квартира за адресою Русанівська набережна. Квартира знаходиться на 11 поверсі/16 пов. будинку, площею 36 м.кв для 1-2 людей. Квартира з меблями, укомплектована необхідною побутовою технікою: кондиціонер, холодильник, мікрохвильова піч, пральна машина, пилесмок, в кімнаті велика шафа купе, розкладний диван, вана, плита з духовкою. Будинок знаходиться поряд з магазинами, школою та дитячим садком, сучасним футбольним та баскетбольним полем, АТБ, Сільпо, аптеки. Хороша транспортна розв"язка: метро Лівобережная 10 хвилин пішки.
+											</div>
+										</div>
+										<ul class="simple-list smaller-spaces">
+											<li class="item">
+												<div class="title-with-icon">
+													<i class="icon icon-calendar"></i>
+													<span class="bold text">Об'єкт звільниться:</span>
+													<span class="text">15.06.2024</span>
+												</div>
+											</li>
+											<li class="item">
+												<div class="title-with-icon">
+													<i class="icon icon-calendar"></i>
+													<span class="bold text">Об'єкт показують:</span>
+													<span class="text">15.06.2024</span>
+												</div>
+											</li>
+											<li class="item">
+												<div class="title-with-icon">
+													<i class="icon icon-list"></i>
+													<span class="bold text">Деталі:</span>
+													<ul class="crumbs-list">
+														<li class="list-item">
+															<a href="#" class="link color-primary" target="_blank" rel="noopener noreferrer" data-tooltip="Перейти на OLX">OLX</a>
+														</li>
+														<li class="list-item">
+															<a href="#" class="link color-primary" target="_blank" rel="noopener noreferrer" data-tooltip="Перейти на dom.ria.ua">dom.ria.ua</a>
+														</li>
+														<li class="list-item">
+															<a href="#" class="link color-primary" target="_blank" rel="noopener noreferrer" data-tooltip="Перейти на domik.net">domik.net</a>
+														</li>
+													</ul>
+												</div>
+											</li>
+										</ul>
+										<div class="spaced-top">
+											<ul class="simple-list smaller-spaces">
+												<li class="item">
+													<button class="button button-primary smaller" data-tooltip="Редагувати у вікні" data-call="#editObjectModal">
+														<i class="icon icon-edit"></i>
+														<span class="text">Редагувати</span>
+													</button>
+												</li>
+												<li class="item">
+													<a href="object-edit-page.html" data-tooltip="Редагувати у новій вкладці" target="_blank" rel="noopener noreferrer" class="button smaller button-primary">
+														<i class="icon icon-edit"></i>
+														<span class="text">Редагувати у новій вкладці</span>
+													</a>
+												</li>
+												<li class="item">
+													<button class="button smaller button-square button-primary" data-tooltip="Створити нагадування" data-call="#createRemindModal">
+														<i class="icon icon-file-add"></i>
+													</button>
+												</li>
+												<li class="item">
+													<button class="button smaller button-secondary" data-tooltip="В архів">
+														<i class="icon icon-archive"></i>
+														<span class="text">В архів</span>
+													</button>
+												</li>
+												<li class="item">
+													<button class="button smaller button-gray" data-tooltip="Не додзвонитись">
+														<i class="icon icon-phone-call"></i>
+														<span class="text">Не додзвонитись (0)</span>
+													</button>
+												</li>
+												<li class="item">
+													<button class="button smaller button-info" data-tooltip="Зберегти">
+														<i class="icon icon-like"></i>
+														<span class="text">Зберегти</span>
+													</button>
+												</li>
+											</ul>
+										</div>
+									</div>
+									<div class="spaced-top">
+										<button class="button button-primary smaller" type="button" data-toggle="#archiveElDetails1">
+											<i class="icon icon-cheveron-down"></i>
+											Детальніше
+										</button>
+									</div>
+								</td>
+								<!-- action -->
+								<td>
+									<div class="title-with-icon spaced">
+										<i class="icon icon-user"></i>
+										<span class="text">Коржик Андрій Іванович</span>
+									</div>
+									<a class="title-with-icon spaced" href="tel:0674947727" data-tooltip="Подзвонити">
+										<i class="icon icon-phone-square"></i>
+										<span class="text">0674947727</span>
+									</a>
+									<!-- NO user image -->
+									<div class="image-cover user-image">
+										<!-- <img src="img/user.jpg" draggable="false"> -->
+									</div>
+									<div class="text status">Не додзвонились</div>
+								</td>
+								<!-- rieltor name -->
+								<td>
+									<div class="title-with-icon spaced">
+										<i class="icon icon-user"></i>
+										<span class="text">Таточенко Аліна Іванівна</span>
+									</div>
+									<a class="title-with-icon spaced" href="tel:0674947727" data-tooltip="Подзвонити">
+										<i class="icon icon-phone-square"></i>
+										<span class="text">0674947727</span>
+									</a>
+									<!-- with user image -->
+									<div class="image-cover user-image">
+										<!-- if we have no user image tag <img> is unnecessary-->
+										<img src="img/user.jpg" draggable="false">
+									</div>
+									<button class="button button-link color-primary" data-call="#searchRieltorsModal" data-tooltip="Змінити відповідального">
+										<i class="icon icon-edit"></i>
+										<span class="text">Змінити відповідального</span>
+									</button>
+								</td>
+							</tr>
+							<!-- / object element -->
+						</tbody>
+						<!-- / TBODY -->
+					</table>
+				</div>
+			</section>
+			<!-- /ARCHIVE OBJECTS -->
+			<!-- REMOVED OBJECTS -->
+			<section class="section">
+				<h2 class="section-title">Видалені об'єкти</h2>
+				<div class="table-cover">
+					<table class="objects-table table simple-table">
+						<thead>
+							<tr class="primary-top">
+								<th>
+									<button class="transparent-button" data-tooltip="Сортувати по зростанню/спаданню">
+										<span class="text">
+											ID
+											<i class="icon icon-select-arrows"></i>
+										</span>
+									</button>
+								</th>
+								<th>
+									<button class="transparent-button" data-tooltip="Сортувати по зростанню/спаданню">
+										<span class="text">
+											Дата
+											<i class="icon icon-select-arrows"></i>
+										</span>
+									</button>
+								</th>
+								<th>
+									<button class="transparent-button" data-tooltip="Сортувати по зростанню/спаданню">
+										<span class="text">
+											Контакт
+											<i class="icon icon-select-arrows"></i>
+										</span>
+									</button>
+								</th>
+								<th><span class="text">Фото</span></th>
+								<th><span class="text">Загальний опис</span></th>
+								<th>
+									<button class="transparent-button" data-tooltip="Сортувати по зростанню/спаданню">
+										<span class="text">
+											Останні дії
+											<i class="icon icon-select-arrows"></i>
+										</span>
+									</button>
+								</th>
+								<th><span class="text">Ім`я рієлтора</span></th>
+							</tr>
+							<tr class="gray-bottom">
+								<!-- id -->
+								<th><input type="number" min="0" class="input smaller-input" data-tooltip="Введіть ID для пошуку"></th>
+								<!-- date -->
+								<th><input type="date" class="input smaller-input" data-tooltip="Виберіть дату для пошуку"></th>
+								<!-- contact -->
+								<th>
+									<input type="tel" class="input smaller-input" data-tooltip="Введіть телефон для пошуку" placeholder="0000000000">
+								</th>
+								<!-- photo -->
+								<th></th>
+								<!-- description -->
+								<th><input type="text" class="input smaller-input" data-tooltip="Введіть ключові слова для пошуку"></th>
+								<!-- action -->
+								<th><input type="text" class="input smaller-input" data-tooltip="Введіть ключові слова для пошуку"></th>
+								<!-- rieltor name -->
+								<th><input type="text" class="input smaller-input" data-tooltip="Введіть ім'я для пошуку"></th>
+							</tr>
+						</thead>
+						<!-- TBODY -->
+						<tbody>
+							<!-- object element -->
+							<tr class="table-element">
+								<!-- id -->
+								<td>
+									<div class="paragraph">151721</div>
+									<div class="buton-cover spaced-top">
+										<a href="https://keytown.in.ua/" class="transparent-button button color-primary" data-tooltip="Відкриється в новому вікні" target="_blank" rel="noopener noreferrer">
+											<span class="text">
+												<i class="icon icon-eye-open"></i>
+												<div class="text">Сайт</div>
+											</span>
+										</a>
+									</div>
+								</td>
+								<!-- date -->
+								<td>
+									<div class="date">2024-06-19</div>
+									<div class="time">10:26</div>
+								</td>
+								<!-- contact -->
+								<td>
+									<div class="title-with-icon spaced">
+										<i class="icon icon-user"></i>
+										<span class="text">Власник</span>
+									</div>
+									<a class="title-with-icon" href="tel:0674947727" data-tooltip="Подзвонити">
+										<i class="icon icon-phone-square"></i>
+										<span class="text">0674947727</span>
+									</a>
+								</td>
+								<!-- photo -->
+								<td>
+									<div class="paragraph">Публічні фото</div>
+									<div class="gallery">
+									<!-- if we have no photo .image-cover needs to be empty -->
+										<!-- <div class="image-cover gallery-cover"></div> -->
+										<div class="gallery-cover" data-tooltip="Подивитись усі фото">
+											<!-- first photo is main -->
+											<img src="img/temp/1.jpg" class="gallery-image" graggable="false" data-fancybox="gallery">
+											<img src="img/temp/2.jpg" class="gallery-image" graggable="false" data-fancybox="gallery">
+											<img src="img/temp/3.jpg" class="gallery-image" graggable="false" data-fancybox="gallery">
+											<img src="img/temp/4.jpg" class="gallery-image" graggable="false" data-fancybox="gallery">
+											<img src="img/temp/5.jpg" class="gallery-image" graggable="false" data-fancybox="gallery">
+										</div>
+										<div class="count" data-tooltip="Всього 5 фото">5</div>
+									</div>
+								</td>
+								<!-- description -->
+								<td>
+									<div class="title-with-icon spaced">
+										<i class="icon icon-money"></i>
+										<span class="text">Ціна:</span>
+										<span class="bold">14 000</span>
+									</div>
+									<ul class="simple-list smaller-spaces">
+										<li class="item">
+											<div class="title-with-icon">
+												<i class="icon icon-tower"></i>
+												<span class="text">1 к.кв.</span>
+											</div>
+										</li>
+										<li class="item">
+											<div class="title-with-icon">
+												<i class="icon icon-location"></i>
+												<span class="text">р-н: Дніпровський</span>
+											</div>
+										</li>
+										<li class="item">
+											<div class="title-with-icon">
+												<i class="icon icon-location"></i>
+												<span class="text">Русанівска Набережна</span>
+												<span class="bold">14 000</span>
+											</div>
+										</li>
+										<li class="item">
+											<div class="title-with-icon">
+												<i class="icon icon-scale"></i>
+												<span class="text">11/16/18&nbsp;36/40/15м<sup>2</sup></span>
+											</div>
+										</li>
+										<li class="item">
+											<div class="title-with-icon">
+												<i class="icon icon-subway"></i>
+												<span class="text">Метро Лівобережная 10 хвилин пішки</span>
+											</div>
+										</li>
+									</ul>
+									<div class="hidden-details" id="removedEletails1">
+										<div class="description">
+											<h5 class="description-title">Загальний опис:</h5>
+											<div class="text">
+												Здається довгостроково 1 к квартира на Русанівській набережній Здається в довгострокову оренду охайна та світла однокімнатна квартира за адресою Русанівська набережна. Квартира знаходиться на 11 поверсі/16 пов. будинку, площею 36 м.кв для 1-2 людей. Квартира з меблями, укомплектована необхідною побутовою технікою: кондиціонер, холодильник, мікрохвильова піч, пральна машина, пилесмок, в кімнаті велика шафа купе, розкладний диван, вана, плита з духовкою. Будинок знаходиться поряд з магазинами, школою та дитячим садком, сучасним футбольним та баскетбольним полем, АТБ, Сільпо, аптеки. Хороша транспортна розв"язка: метро Лівобережная 10 хвилин пішки.
+											</div>
+										</div>
+										<ul class="simple-list smaller-spaces">
+											<li class="item">
+												<div class="title-with-icon">
+													<i class="icon icon-calendar"></i>
+													<span class="bold text">Об'єкт звільниться:</span>
+													<span class="text">15.06.2024</span>
+												</div>
+											</li>
+											<li class="item">
+												<div class="title-with-icon">
+													<i class="icon icon-calendar"></i>
+													<span class="bold text">Об'єкт показують:</span>
+													<span class="text">15.06.2024</span>
+												</div>
+											</li>
+											<li class="item">
+												<div class="title-with-icon">
+													<i class="icon icon-list"></i>
+													<span class="bold text">Деталі:</span>
+													<ul class="crumbs-list">
+														<li class="list-item">
+															<a href="#" class="link color-primary" target="_blank" rel="noopener noreferrer" data-tooltip="Перейти на OLX">OLX</a>
+														</li>
+														<li class="list-item">
+															<a href="#" class="link color-primary" target="_blank" rel="noopener noreferrer" data-tooltip="Перейти на dom.ria.ua">dom.ria.ua</a>
+														</li>
+														<li class="list-item">
+															<a href="#" class="link color-primary" target="_blank" rel="noopener noreferrer" data-tooltip="Перейти на domik.net">domik.net</a>
+														</li>
+													</ul>
+												</div>
+											</li>
+										</ul>
+										<div class="spaced-top">
+											<ul class="simple-list smaller-spaces">
+												<li class="item">
+													<button class="button button-primary smaller" data-tooltip="Редагувати у вікні" data-call="#editObjectModal">
+														<i class="icon icon-edit"></i>
+														<span class="text">Редагувати</span>
+													</button>
+												</li>
+												<li class="item">
+													<a href="object-edit-page.html" data-tooltip="Редагувати у новій вкладці" target="_blank" rel="noopener noreferrer" class="button smaller button-primary">
+														<i class="icon icon-edit"></i>
+														<span class="text">Редагувати у новій вкладці</span>
+													</a>
+												</li>
+												<li class="item">
+													<button class="button smaller button-square button-primary" data-tooltip="Створити нагадування" data-call="#createRemindModal">
+														<i class="icon icon-file-add"></i>
+													</button>
+												</li>
+												<li class="item">
+													<button class="button smaller button-secondary" data-tooltip="В архів">
+														<i class="icon icon-archive"></i>
+														<span class="text">В архів</span>
+													</button>
+												</li>
+												<li class="item">
+													<button class="button smaller button-gray" data-tooltip="Не додзвонитись">
+														<i class="icon icon-phone-call"></i>
+														<span class="text">Не додзвонитись (0)</span>
+													</button>
+												</li>
+												<li class="item">
+													<button class="button smaller button-info" data-tooltip="Зберегти">
+														<i class="icon icon-like"></i>
+														<span class="text">Зберегти</span>
+													</button>
+												</li>
+											</ul>
+										</div>
+									</div>
+									<div class="spaced-top">
+										<button class="button button-primary smaller" type="button" data-toggle="#removedEletails1">
+											<i class="icon icon-cheveron-down"></i>
+											Детальніше
+										</button>
+									</div>
+								</td>
+								<!-- action -->
+								<td>
+									<div class="title-with-icon spaced">
+										<i class="icon icon-user"></i>
+										<span class="text">Коржик Андрій Іванович</span>
+									</div>
+									<a class="title-with-icon spaced" href="tel:0674947727" data-tooltip="Подзвонити">
+										<i class="icon icon-phone-square"></i>
+										<span class="text">0674947727</span>
+									</a>
+									<!-- NO user image -->
+									<div class="image-cover user-image">
+										<!-- <img src="img/user.jpg" draggable="false"> -->
+									</div>
+									<div class="text status">Не додзвонились</div>
+								</td>
+								<!-- rieltor name -->
+								<td>
+									<div class="title-with-icon spaced">
+										<i class="icon icon-user"></i>
+										<span class="text">Таточенко Аліна Іванівна</span>
+									</div>
+									<a class="title-with-icon spaced" href="tel:0674947727" data-tooltip="Подзвонити">
+										<i class="icon icon-phone-square"></i>
+										<span class="text">0674947727</span>
+									</a>
+									<!-- with user image -->
+									<div class="image-cover user-image">
+										<!-- if we have no user image tag <img> is unnecessary-->
+										<img src="img/user.jpg" draggable="false">
+									</div>
+									<button class="button button-link color-primary" data-call="#searchRieltorsModal" data-tooltip="Змінити відповідального">
+										<i class="icon icon-edit"></i>
+										<span class="text">Змінити відповідального</span>
+									</button>
+								</td>
+							</tr>
+							<!-- / object element -->
+						</tbody>
+						<!-- / TBODY -->
+					</table>
+				</div>
+			</section>
+			<!-- /REMOVED OBJECTS -->
+			<!-- DEALS -->
+			<section class="section">
+				<h2 class="section-title">Угоди</h2>
+				<div class="table-cover">
+					<table class="deals-table table simple-table">
+						<thead>
+							<tr class="primary-top">
+								<!-- id -->
+								<th>
+									<button class="transparent-button" data-tooltip="Сортувати по зростанню/спаданню">
+										<span class="text">
+											ID
+											<i class="icon icon-select-arrows"></i>
+										</span>
+									</button>
+								</th>
+								<!-- date -->
+								<th>
+									<button class="transparent-button" data-tooltip="Сортувати по зростанню/спаданню">
+										<span class="text">
+											Дата
+											<i class="icon icon-select-arrows"></i>
+										</span>
+									</button>
+								</th>
+								<!-- contact -->
+								<th>
+									<button class="transparent-button" data-tooltip="Сортувати по зростанню/спаданню">
+										<span class="text">
+											Контакт
+											<i class="icon icon-select-arrows"></i>
+										</span>
+									</button>
+								</th>
+								<!-- description -->
+								<th><span class="text">Загальний опис</span></th>
+								<!-- comment -->
+								<th><span class="text">Коментар</span></th>
+								<!-- actions -->
+								<th>
+									<button class="transparent-button" data-tooltip="Сортувати по зростанню/спаданню">
+										<span class="text">
+											Останні дії
+											<i class="icon icon-select-arrows"></i>
+										</span>
+									</button>
+								</th>
+								<!-- rieltor -->
+								<th><span class="text">Ім`я рієлтора</span></th>
+								<!-- notification -->
+								<th><span class="text">Нагадування</span></th>
+							</tr>
+							<tr class="gray-bottom">
+								<!-- id -->
+								<th><input type="number" min="0" class="input smaller-input" data-tooltip="Введіть ID для пошуку"></th>
+								<!-- date -->
+								<th><input type="date" class="input smaller-input" data-tooltip="Виберіть дату для пошуку"></th>
+								<!-- contact -->
+								<th>
+									<input type="tel" class="input smaller-input" data-tooltip="Введіть телефон для пошуку" placeholder="0000000000">
+								</th>
+								<!-- description -->
+								<th><input type="text" class="input smaller-input" data-tooltip="Введіть ключові слова для пошуку"></th>
+								<!-- comment -->
+								<th><input type="text" class="input smaller-input" data-tooltip="Введіть ключові слова для пошуку"></th>
+								<!-- action -->
+								<th><input type="text" class="input smaller-input" data-tooltip="Введіть ключові слова для пошуку"></th>
+								<!-- rieltor name -->
+								<th><input type="text" class="input smaller-input" data-tooltip="Введіть ім'я для пошуку"></th>
+								<!-- notification -->
+								<th><input type="text" class="input smaller-input" data-tooltip="Введіть ключові слова для пошуку"></th>
+							</tr>
+						</thead>
+						<!-- TBODY -->
+						<tbody>
+							<!-- deals element -->
+							<tr class="table-element">
+	<!-- id -->
+	<td>
+		<div class="paragraph">151721</div>
+	</td>
+	<!-- date -->
+	<td>
+		<div class="date">2024-06-19</div>
+		<div class="time">10:26</div>
+	</td>
+	<!-- contact -->
+	<td>
+		<div class="title-with-icon spaced">
+			<i class="icon icon-user"></i>
+			<span class="text">Власник</span>
+		</div>
+		<a class="title-with-icon" href="tel:0674947727" data-tooltip="Подзвонити">
+			<i class="icon icon-phone-square"></i>
+			<span class="text">0674947727</span>
+		</a>
+	</td>
+	<!-- description -->
+	<td>
+		<div class="title-with-icon spaced">
+			<i class="icon icon-money"></i>
+			<span class="text">Ціна:</span>
+			<span class="bold">14 000</span>
+		</div>
+		<ul class="simple-list smaller-spaces">
+			<li class="item">
+				<div class="title-with-icon">
+					<i class="icon icon-tower"></i>
+					<span class="text">1 к.кв.</span>
+				</div>
+			</li>
+			<li class="item">
+				<div class="title-with-icon">
+					<i class="icon icon-location"></i>
+					<span class="text">р-н: Дніпровський</span>
+				</div>
+			</li>
+			<li class="item">
+				<div class="title-with-icon">
+					<i class="icon icon-location"></i>
+					<span class="text">Русанівска Набережна</span>
+					<span class="bold">14 000</span>
+				</div>
+			</li>
+			<li class="item">
+				<div class="title-with-icon">
+					<i class="icon icon-scale"></i>
+					<span class="text">11/16/18&nbsp;36/40/15м<sup>2</sup></span>
+				</div>
+			</li>
+			<li class="item">
+				<div class="title-with-icon">
+					<i class="icon icon-subway"></i>
+					<span class="text">Метро Лівобережная 10 хвилин пішки</span>
+				</div>
+			</li>
+		</ul>
+		<div class="spaced-top">
+			<ul class="simple-list smaller-spaces">
+				<li class="item">
+					<button class="button button-primary smaller" data-tooltip="Редагувати у вікні" data-call="#editDealsModal">
+						<i class="icon icon-edit"></i>
+						<span class="text">Редагувати</span>
+					</button>
+				</li>
+				<li class="item">
+					<a href="deals-edit.html" data-tooltip="Редагувати у новій вкладці" target="_blank" rel="noopener noreferrer" class="button smaller button-primary">
+						<i class="icon icon-edit"></i>
+						<span class="text">Редагувати у новій вкладці</span>
+					</a>
+				</li>
+				<li class="item">
+					<button class="button smaller button-square button-primary" data-tooltip="Створити нагадування" data-call="#createRemindModal">
+						<i class="icon icon-file-add"></i>
+					</button>
+				</li>
+				<li class="item">
+					<button class="button smaller button-gray" data-tooltip="Не додзвонитись">
+						<i class="icon icon-phone-call"></i>
+						<span class="text">Не додзвонитись (0)</span>
+					</button>
+				</li>
+				<li class="item">
+					<button class="button smaller button-info" data-tooltip="Зберегти">
+						<i class="icon icon-like"></i>
+						<span class="text">Зберегти</span>
+					</button>
+				</li>
+			</ul>
+		</div>
+	</td>
+	<!-- comment -->
+	<td>
+		<div class="title-with-icon spaced">
+			<i class="icon icon-message"></i>
+			<span class="bold">Останній коментар</span>
+			<div class="text">152884 перегляд машина</div>
+		</div>
+	</td>
+	<!-- action -->
+	<td>
+		<div class="title-with-icon spaced">
+			<i class="icon icon-user"></i>
+			<span class="text">Коржик Андрій Іванович</span>
+		</div>
+		<a class="title-with-icon spaced" href="tel:0674947727" data-tooltip="Подзвонити">
+			<i class="icon icon-phone-square"></i>
+			<span class="text">0674947727</span>
+		</a>
+		<!-- NO user image -->
+		<div class="image-cover user-image">
+			<!-- <img src="img/user.jpg" draggable="false"> -->
+		</div>
+		<div class="text status">Не додзвонились</div>
+	</td>
+	<!-- rieltor name -->
+	<td>
+		<div class="title-with-icon spaced">
+			<i class="icon icon-user"></i>
+			<span class="text">Таточенко Аліна Іванівна</span>
+		</div>
+		<a class="title-with-icon spaced" href="tel:0674947727" data-tooltip="Подзвонити">
+			<i class="icon icon-phone-square"></i>
+			<span class="text">0674947727</span>
+		</a>
+		<!-- with user image -->
+		<div class="image-cover user-image">
+			<!-- if we have no user image tag <img> is unnecessary-->
+			<img src="img/user.jpg" draggable="false">
+		</div>
+		<button class="button button-link color-primary" data-call="#searchRieltorsModal" data-tooltip="Змінити відповідального">
+			<i class="icon icon-edit"></i>
+			<span class="text">Змінити відповідального</span>
+		</button>
+	</td>
+	<!-- notification -->
+	<td>
+		<div class="date">2024-06-19</div>
+		<div class="time">10:26</div>
+		<div class="text">Короткий текст нагадування</div>
+	</td>
+</tr>
+							<!-- / deals element -->
+						</tbody>
+						<!-- / TBODY -->
+					</table>
+				</div>
+			</section>
+			<!-- /DEALS -->
+			<!-- ////// BOTTOM /////// -->
+			<!-- search form -->
+			<div class="spaced-section">
+				<form action="" class="form validate-form">
+					<div class="row middle-xs">
+						<div class="col-xs-4">
+							<div class="input-cover with-label collapsed-bottom">
+								<label for="telSearch2" class="label">Тел:<sup>*</sup></label>
+								<input type="tel" class="input phone input-block" placeholder="0000000000" id="telSearch2" maxlength="10">
+								<div class="alert upper-position">10 цифр! без роздільників</div>
+							</div>
+						</div>
+						<div class="col-xs-4">
+							<div class="input-cover collapsed-bottom">
+								<ul class="clear simple-list smaller-spaces">
+									<li class="item">
+										<button class="button button-info fixed-width" type="submit">
+											<span class="text">Перевірити</span>
+											<span class="fade"></span>
+										</button>
+									</li>
+									<li class="item">
+										<a href="client.html" class="button button-info button-square" data-call="#addClientModal" data-tooltip="Додати кліента/покупця" data-dismiss="#searchResultModal">
+											<span class="text"><i class="icon icon icon-user-add"></i></span>
+										</a>
+									</li>
+									<li class="item">
+										<a href="object-add-page.html" class="button button-info button-square" data-call="#addObjectModal" data-tooltip="Додати новий об'єкт" data-dismiss="#searchResultModal">
+											<span class="text">
+												<i class="icon icon-house-add"></i>
+											</span>
+										</a>
+									</li>
+									<li class="item">
+										<a href="deals.html" class="button button-info button-square" data-call="#addDealsModal" data-tooltip="Створити нову угоду" data-dismiss="#searchResultModal">
+											<span class="text"><i class="icon icon-bag"></i></span>
+										</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</form>
+			</div>
+			<!-- /search form -->
+		</div>
+	</div>
+</div>
+	<!-- search result -->
 
 	<script src="js/lib/jquery.min.js"></script>
 	<script src="js/plugins/jquery.selecter.js"></script>

@@ -11,24 +11,21 @@
 		<div class="tab-content active">
 			<div class="row">
 				<div class="col-xs-2">
-					<!-- files load -->
 					<div class="input-cover large-space load-cover" id="photoLoader" data-loader>
-						<label id="photoLoaderLabel" class="label-file" for="editPhoto" data-label>
-							<div class="caption">
-								<i class="icon icon-cloud-upload"></i>
-								<div class="text">Завантажте файли</div>
+						<!-- photo -->
+						<div class="photo-cover" data-upload>
+							<div class="files-cover" data-tooltip="Клікніть, щоб видалити">
+								<div class="inner">
+									<img src="img/user.jpg">
+								</div>
+								<div class="file-name">1.jpg</div>
 							</div>
+						</div>
+						<!-- / photo -->
+						<label id="photoLoaderLabel" class="button-primary button button-block spaced-top" for="editPhoto" data-label>
+							<span class="text">Завантажте фото</span>
 						</label>
 						<input type="file" id="editPhoto" data-file>
-						<!-- thats how loaded images need to be look -->
-						<!-- photo -->
-						<div class="files-cover" data-tooltip="Клікніть, щоб видалити">
-							<div class="inner">
-								<img src="img/user.jpg">
-							</div>
-							<div class="file-name">1.jpg</div>
-						</div>
-						<!-- / thats how loaded images need to be look -->
 					</div>
 					<!-- files load -->
 				</div>
