@@ -85,8 +85,11 @@
 			return tags;
 		}
 
-		function generateBody(select, optionsList, multiple, classname){
+		function generateBody(select, optionsList, settings){
 			if (!select) return;
+			let multiple = settings.multiple;
+			let classname = settings.classname;
+			let search = settings.search;
 			var id = select.getAttribute('id') ? select.getAttribute('id') : setRandomId();
 			var body = "";
 			body += classname && classname.length ? "<div class=\"selecter "+classname+"\">" : "<div class=\"selecter\">";
@@ -100,7 +103,12 @@
 			} else {
 				body += "<span class=\"anchor\">"+getSelectedOption(select.options, optionsList).title+"</span>";
 			};
-			body += "<div class=\"dropdown\">"+getOptionsTree(optionsList, multiple, id)+"</div>";
+			if (search) {
+				body += "<div class=\"dropdown\"><div class=\"input-cover\"><input type=\"text\" class=\"input\" placeholder=\"Пошук...\"></div>"+getOptionsTree(optionsList, multiple, id)+"</div>";
+			} else {
+				body += "<div class=\"dropdown\">"+getOptionsTree(optionsList, multiple, id)+"</div>";
+			}
+			
 			body += "</div>";
 			return $(body);
 		}
@@ -125,7 +133,6 @@
 				settings.onChange(ctx, settings, value);
 			}
 		}
-
 
 		// setting
 		function setSelectOptionsValue(select, value) {
@@ -200,7 +207,7 @@
 			this.each(function(i, select){
 				var optionsList = [];
 				$(select).hide();
-				var result = generateBody(select, optionsList, settings.multiple, settings.classname);
+				var result = generateBody(select, optionsList, settings);
 
 				result.on('click', '.anchor', function(e){
 					e.preventDefault();
@@ -241,10 +248,36 @@
 						$(this).addClass('active');
 						$(this).siblings().removeClass('active');
 					};
-
 					setSelectOptionsValue(select, $(this).data('value')); // for select element
 					setValue(select, $(this).data('value'), result, settings); // created list
+				});
 
+				result.on('keyup keydown change', 'input', function(e){
+					let input = this;
+					let inputValue = $(input).val().trim();
+					let optionsList = $(result).find('li');
+					for (var i = 0; i < optionsList.length; i++) {
+						if (!$(optionsList[i]).hasClass('disabled')) {
+							let optionValue = $(optionsList[i]).text().trim();
+							let savedText = optionValue;
+							if (optionValue.match(inputValue)) {
+								$(optionsList[i]).removeClass('hidden');
+								$(optionsList[i]).html(optionValue.replace(inputValue, '<span class="color-primary bold">'+inputValue+'</span>'));
+							} else {
+								$(optionsList[i]).addClass('hidden');
+								$(optionsList[i]).html(savedText);
+							}
+						}
+						if ($(result).find('.hidden').length+1 >= optionsList.length) {
+							if (!$(result).hasClass('empty')) {
+								$(result).find('.dropdown').append('<div class="empty-item">За заданими параметрами немає результатів</div>');
+							}
+							$(result).addClass('empty');
+						} else {
+							$(result).removeClass('empty');
+							$(result).find('.dropdown').find('.empty-item').remove();
+						}
+					}
 				});
 
 				result.insertAfter($(select));
