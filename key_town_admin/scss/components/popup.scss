@@ -15,8 +15,16 @@
 	display: none;
 	padding: 15px 0;
 
-	&#searchRieltorsModal {
+	&[data-index="21"] {
 		z-index: 21;
+	}
+
+	&[data-index="22"] {
+		z-index: 22;
+	}
+
+	&[data-index="23"] {
+		z-index: 23;
 	}
 
 	&:after {

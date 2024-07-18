@@ -1,9 +1,15 @@
 $('body').on('click', '[data-tabs] > .tab', function(e) {
 	let container = $(this).closest('[data-tabs]')[0];
-	if ($(this).hasClass('disabled')) {
+	let tabIndex = $(this).index();
+	window.setActiveTab(container, tabIndex);
+});
+
+window.setActiveTab = function(container, tabIndex){
+	let clickedTab = $(container).find('.tab').eq(tabIndex);
+	if (clickedTab.hasClass('disabled')) {
 		return;
 	}
-	$(this).siblings().removeClass('active');
-	$(this).addClass('active');
-	$('> .tab-content', container).removeClass('active').eq($(this).index()).addClass('active');
-});
+	$(clickedTab).siblings().removeClass('active');
+	$(clickedTab).addClass('active');
+	$('> .tab-content', container).removeClass('active').eq(tabIndex).addClass('active');
+}

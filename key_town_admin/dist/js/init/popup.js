@@ -43,6 +43,10 @@ $(document).ready(function() {
 						return window[called.data('onclose')](called);
 					}
 				}
+				let tabs = called.find('[data-tabs]')[0];
+				if (tabs) {
+					window.setActiveTab(tabs, 0);
+				}
 			}, 300);
 		});
 		let hidePopups = function() {

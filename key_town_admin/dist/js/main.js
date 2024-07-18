@@ -516,6 +516,10 @@ $(document).ready(function() {
 						return window[called.data('onclose')](called);
 					}
 				}
+				let tabs = called.find('[data-tabs]')[0];
+				if (tabs) {
+					window.setActiveTab(tabs, 0);
+				}
 			}, 300);
 		});
 		let hidePopups = function() {
@@ -575,14 +579,19 @@ $(document).ready(function() {
 });
 $('body').on('click', '[data-tabs] > .tab', function(e) {
 	let container = $(this).closest('[data-tabs]')[0];
-	if ($(this).hasClass('disabled')) {
-		return;
-	}
-	$(this).siblings().removeClass('active');
-	$(this).addClass('active');
-	$('> .tab-content', container).removeClass('active').eq($(this).index()).addClass('active');
+	let tabIndex = $(this).index();
+	window.setActiveTab(container, tabIndex);
 });
 
+window.setActiveTab = function(container, tabIndex){
+	let clickedTab = $(container).find('.tab').eq(tabIndex);
+	if (clickedTab.hasClass('disabled')) {
+		return;
+	}
+	$(clickedTab).siblings().removeClass('active');
+	$(clickedTab).addClass('active');
+	$('> .tab-content', container).removeClass('active').eq(tabIndex).addClass('active');
+}
 $(function() {
 	let isValidEmail = function(email) {
 		let reg = new RegExp(/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/);

@@ -77,7 +77,8 @@
 		}
 
 		&.active,
-		&:hover {
+		&:hover,
+		&.selected {
 			background-color: $color_primary_dark_hover;
 
 			.text {

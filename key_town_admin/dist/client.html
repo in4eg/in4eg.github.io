@@ -34,7 +34,7 @@
 	<div class="menu-content side-content">
 		<!-- 1 -->
 		<div class="dropdown static aside-dropdown" data-dropdown>
-			<div class="anchor button button-transparent main-button">
+			<div class="anchor button button-transparent main-button selected">
 				<div class="cover-icon"><i class="icon icon-house-open button-icon"></i></div>
 				<div class="text">Об'єкти аренди</div>
 				<i class="icon anchor-icon icon-triangle-down"></i>
@@ -140,7 +140,7 @@
 											<i class="icon icon-users"></i>
 											<span class="text">Рієлтори OnLine</span>
 										</div>
-										<button class="button close-dropdown">
+										<button class="button close-dropdown" data-tooltip="Закрити">
 											<i class="icon icon-close"></i>
 										</button>
 									</div>
@@ -340,7 +340,7 @@
 											<i class="icon icon-pin"></i>
 											<span class="text">Збережені фільтри</span>
 										</div>
-										<button class="button close-dropdown">
+										<button class="button close-dropdown" data-tooltip="Закрити">
 											<i class="icon icon-close"></i>
 										</button>
 									</div>
@@ -594,7 +594,7 @@
 											<i class="icon icon-filter"></i>
 											<span class="text">Фільтри</span>
 										</div>
-										<button class="button close-dropdown">
+										<button class="button close-dropdown" data-tooltip="Закрити">
 											<i class="icon icon-close"></i>
 										</button>
 									</div>
@@ -901,7 +901,7 @@
 											<i class="icon icon-users"></i>
 											<span class="text">Профіль</span>
 										</div>
-										<button class="button close-dropdown">
+										<button class="button close-dropdown" data-tooltip="Закрити">
 											<i class="icon icon-close"></i>
 										</button>
 									</div>
@@ -1266,7 +1266,7 @@
 <!-- REMOVE THIS SCRIPT -->
 	<!-- / check tel number -->
 	<!-- create a reminding -->
-	<div id="createRemindModal" class="popup">
+	<div id="createRemindModal" class="popup" data-index="23">
 	<div class="inner">
 		<div class="head">
 			<h2 class="modal-title">
@@ -1304,7 +1304,7 @@
 </div>
 	<!-- / create a reminding -->
 	<!-- modal search rieltors -->
-	<div id="searchRieltorsModal" class="popup">
+	<div id="searchRieltorsModal" class="popup" data-index="22">
 	<div class="inner">
 		<div class="head">
 			<h2 class="modal-title">
@@ -1333,7 +1333,7 @@
 </div>
 	<!-- / modal search rieltors -->
 	<!-- edit obj -->
-	<div id="editObjectModal" class="popup middle-popup">
+	<div id="editObjectModal" class="popup middle-popup" data-index="22">
 	<div class="inner">
 		<div class="head">
 			<h2 class="modal-title">
@@ -1818,7 +1818,7 @@
 </div>
 	<!-- / add obj -->
 	<!-- add client -->
-	<div id="addClientModal" class="popup middle-popup">
+	<div id="addClientModal" class="popup middle-popup" data-index="23">
 	<div class="inner">
 		<div class="head">
 			<h2 class="modal-title">
@@ -2013,7 +2013,7 @@
 </div>
 	<!-- / add client -->
 	<!-- edit client -->
-	<div id="editClientModal" class="popup middle-popup">
+	<div id="editClientModal" class="popup middle-popup" data-index="22">
 	<div class="inner">
 		<div class="head">
 			<h2 class="modal-title">
@@ -2565,7 +2565,7 @@
 </div>
 	<!-- / add client -->
 	<!-- edit client -->
-	<div id="editDealsModal" class="popup middle-popup">
+	<div id="editDealsModal" class="popup middle-popup" data-index="22">
 	<div class="inner">
 		<div class="head">
 			<h2 class="modal-title">
@@ -2893,7 +2893,7 @@
 						</div>
 					</div>
 					<div class="input-cover large-space">
-						<button class="button button-primary button-block" type="button" data-call="Додати нагадування" data-call="#createRemindModal">
+						<button class="button button-primary button-block" type="button" data-tooltip="Додати нагадування" data-call="#createRemindModal">
 							<span class="text">Додати нагадування</span>
 						</button>
 					</div>
@@ -3026,7 +3026,7 @@
 </div>
 	<!-- / edit client -->
 	<!-- search result -->
-	<div id="searchResultModal" class="popup middle-popup">
+	<div id="searchResultModal" class="popup middle-popup" data-index="21">
 	<div class="inner">
 		<div class="head">
 			<h2 class="modal-title">
@@ -3317,7 +3317,7 @@
 										<div class="spaced-top">
 											<ul class="simple-list smaller-spaces">
 												<li class="item">
-													<button class="button button-primary smaller" data-tooltip="Редагувати у вікні" data-dismiss="#searchResultModal" data-call="#editObjectModal">
+													<button class="button button-primary smaller" data-tooltip="Редагувати у вікні" data-call="#editObjectModal">
 														<i class="icon icon-edit"></i>
 														<span class="text">Редагувати</span>
 													</button>
@@ -3599,7 +3599,7 @@
 										<div class="spaced-top">
 											<ul class="simple-list smaller-spaces">
 												<li class="item">
-													<button class="button button-primary smaller" data-tooltip="Редагувати у вікні" data-dismiss="#searchResultModal" data-call="#editObjectModal">
+													<button class="button button-primary smaller" data-tooltip="Редагувати у вікні" data-call="#editObjectModal">
 														<i class="icon icon-edit"></i>
 														<span class="text">Редагувати</span>
 													</button>
@@ -3881,7 +3881,7 @@
 										<div class="spaced-top">
 											<ul class="simple-list smaller-spaces">
 												<li class="item">
-													<button class="button button-primary smaller" data-tooltip="Редагувати у вікні" data-dismiss="#searchResultModal" data-call="#editObjectModal">
+													<button class="button button-primary smaller" data-tooltip="Редагувати у вікні" data-call="#editObjectModal">
 														<i class="icon icon-edit"></i>
 														<span class="text">Редагувати</span>
 													</button>
@@ -4163,7 +4163,7 @@
 										<div class="spaced-top">
 											<ul class="simple-list smaller-spaces">
 												<li class="item">
-													<button class="button button-primary smaller" data-tooltip="Редагувати у вікні" data-dismiss="#searchResultModal" data-call="#editObjectModal">
+													<button class="button button-primary smaller" data-tooltip="Редагувати у вікні" data-call="#editObjectModal">
 														<i class="icon icon-edit"></i>
 														<span class="text">Редагувати</span>
 													</button>
