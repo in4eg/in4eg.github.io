@@ -15,6 +15,10 @@
 	display: none;
 	padding: 15px 0;
 
+	&#searchRieltorsModal {
+		z-index: 21;
+	}
+
 	&:after {
 		content: '';
 		display: inline-block;
