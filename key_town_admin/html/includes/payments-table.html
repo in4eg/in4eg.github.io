@@ -1,0 +1,28 @@
+<form class="table-cover form">
+	<table class="payments-table table simple-table">
+		<thead>
+			<tr class="primary-top">
+				<th class="date"><span class="text">Дата виставлення</span></th>
+				<th class="payment-date"><span class="text">Оплатити до</span></th>
+				<th class="summary"><span class="text">Сума платежу</span></th>
+				<th class="employee"><span class="text">Співробітник</span></th>
+				<th class="type"><span class="text">Тип оплати</span></th>
+				<th class="payment-type"><span class="text">Тип платежу</span></th>
+				<th class="state"><span class="text">Статус</span></th>
+			</tr>
+		</thead>
+		<!-- TBODY -->
+		<tbody>
+			<!-- payments element -->
+			@@include('payments-element.html')
+			<!-- / payments element -->
+			<!-- payments element -->
+			@@include('payments-element.html')
+			<!-- / payments element -->
+			<!-- payments element -->
+			@@include('payments-element.html')
+			<!-- / payments element -->
+		</tbody>
+		<!-- / TBODY -->
+	</table>
+</form>

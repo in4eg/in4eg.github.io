@@ -2145,17 +2145,19 @@
 					</div>
 				</div>
 				<div class="col-xs-2">
-					<div class="input-cover large-space">
-						<button class="button button-danger fixed-width" type="reset">
-							<span class="text">Очистити</span>
-							<span class="fade"></span>
-						</button>
-					</div>
-					<div class="input-cover collapsed-bottom large-space">
-						<button class="button button-info fixed-width" type="submit">
-							<span class="text">Зберегти</span>
-							<span class="fade"></span>
-						</button>
+					<div class="buttons-cover spaced-top">
+						<div class="input-cover large-space">
+							<button class="button button-danger fixed-width" type="reset">
+								<span class="text">Очистити</span>
+								<span class="fade"></span>
+							</button>
+						</div>
+						<div class="input-cover collapsed-bottom large-space">
+							<button class="button button-info fixed-width" type="submit">
+								<span class="text">Зберегти</span>
+								<span class="fade"></span>
+							</button>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -2337,17 +2339,19 @@
 			</div>
 		</div>
 		<div class="col-xs-2">
-			<div class="input-cover large-space">
-				<button class="button button-info fixed-width" type="submit">
-					<span class="text">Зберегти</span>
-					<span class="fade"></span>
-				</button>
-			</div>
-			<div class="input-cover collapsed-bottom large-space">
-				<button class="button button-danger fixed-width" type="reset">
-					<span class="text">Очистити</span>
-					<span class="fade"></span>
-				</button>
+			<div class="buttons-cover spaced-top">
+				<div class="input-cover large-space">
+					<button class="button button-info fixed-width" type="submit">
+						<span class="text">Зберегти</span>
+						<span class="fade"></span>
+					</button>
+				</div>
+				<div class="input-cover collapsed-bottom large-space">
+					<button class="button button-danger fixed-width" type="reset">
+						<span class="text">Очистити</span>
+						<span class="fade"></span>
+					</button>
+				</div>
 			</div>
 		</div>
 	</div>
@@ -2368,7 +2372,7 @@
 			<button type="button" class="close-popup button" data-dismiss="#addDealsModal" data-tooltip="Закрити вікно">&times;</button>
 		</div>
 		<div class="content">
-			<!-- ADD CONTACT FORM -->
+			<!-- ADD DEALS FORM -->
 			<h1 class="spaced-bottom">Додати нову угоду</h1>
 <form action="" class="form validate-form">
 	<div class="tabs" data-tabs>
@@ -2692,7 +2696,8 @@
 					<div class="info-block">
 						<div class="info-title primary-invert">Логи</div>
 						<div class="info-box">
-							<ul class="clear underlined-list">
+							<!-- add class .empty if NO logs -->
+							<ul class="clear underlined-list empty">
 								<li class="emty-message item">Немає жодного сповіщення</li>
 							</ul>
 						</div>
@@ -2714,7 +2719,7 @@
 		</div>
 	</div>
 </form>
-			<!-- / ADD CONTACT FORM -->
+			<!-- / ADD DEALS FORM -->
 		</div>
 	</div>
 </div>
@@ -3037,7 +3042,7 @@
 				<div class="col-xs-2 align-right">
 					<div class="row paddless-row spaced-bottom">
 						<div class="col-xs-9">
-							<button class="button button-info-light button-block" type="button" data-tooltip="Платіж">
+							<button class="button button-info-light button-block" type="button" data-tooltip="Платіж" data-call="#paymentModal">
 								<span class="text">Платіж</span>
 							</button>
 						</div>
@@ -3063,10 +3068,19 @@
 						</button>
 					</div>
 					<div class="info-block">
-						<div class="info-title info">Платежі</div>
+						<div class="info-title info" data-tooltip="Останні платежі угоди">Платежі</div>
 						<div class="info-box">
-							<div class="paragraph">21.06.2024 - 8000 грн.</div>
-							<div class="paragraph">Разом: <span class="bold">21000 грн.</span></div>
+							<ul class="clear underlined-list">
+								<li class="item">
+									<div class="paragraph">21.06.2024 - 8000 грн.</div>
+									<div class="paragraph">Разом: <span class="bold">21000 грн.</span></div>
+								</li>
+								<li class="item">
+									<div class="paragraph">21.06.2024 - 8000 грн.</div>
+									<div class="paragraph">Разом: <span class="bold">21000 грн.</span></div>
+								</li>
+							</ul>
+							<button class="button button-link color-primary" data-call="#paymentsAllModal" data-tooltip="Подивитись усі платежі угоди">Усі платежі</button>
 						</div>
 					</div>
 					<div class="input-cover large-space">

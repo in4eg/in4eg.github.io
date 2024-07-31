@@ -74,6 +74,8 @@ $(document).ready(function(){
 
 		$(tag).remove();
 
+		window.tooltipHint.hide();
+
 		if ($(selecter).find('.anchor').find('.tag').length < 1) {
 			let text = $(select).find('option[disabled]').text().trim();
 			$(select).find('option[disabled]').prop('selected', true).attr('selected', 'true');

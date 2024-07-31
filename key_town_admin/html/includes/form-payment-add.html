@@ -1,0 +1,125 @@
+<form action="" class="form validate-form">
+	<div class="row">
+		<div class="col-xs-10">
+			<ul class="underlined-list clear">
+				<!-- section 1 -->
+				<li class="item">
+					<div class="row">
+						<div class="col-xs-4">
+							<div class="input-cover large-space">
+								<label for="addPaymentPrice" class="label spaced-bottom">Сумма платежу(грн):</label>
+								<div class="alert">Тільки цифри</div>
+								<input type="number" min="0" class="input" placeholder="Введіть сумму в грн" id="addPaymentPrice">
+							</div>
+						</div>
+						<div class="col-xs-4">
+							<div class="input-cover large-space">
+								<label for="addPaymentType" class="label spaced-bottom">Тип оплати:</label>
+								<select name="addPaymentType" id="addPaymentType" class="select">
+									<option value="Вибрати тип" disabled selected>Вибрати тип</option>
+									<option value="Тип 1">Тип 1</option>
+									<option value="Тип 2">Тип 2</option>
+									<option value="Тип 3">Тип 3</option>
+									<option value="Тип 4">Тип 4</option>
+									<option value="Тип 5">Тип 5</option>
+								</select>
+							</div>
+						</div>
+						<div class="col-xs-4">
+							<div class="input-cover large-space">
+								<label for="addPaymentOffice" class="label spaced-bottom">Офіс:<sup>*</sup></label>
+								<div class="alert">Мін 2 символи</div>
+								<input type="text" class="input" placeholder="Введіть адресу" id="addPaymentOffice" data-minlength="2">
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-xs-4">
+							<div class="input-cover large-space">
+								<label for="addPaymentEmploye" class="label spaced-bottom">Відповідальний співробітник:</label>
+								<select name="addPaymentEmploye" id="addPaymentEmploye" class="select" data-search="true">
+									<option value="Вибрати співробітника" disabled selected>Вибрати співробітника</option>
+									<option value="Сокіл Євген Павлович">Сокіл Євген Павлович</option>
+									<option value="Косач Ірина Петрівна">Косач Ірина Петрівна</option>
+									<option value="Ткач Василь Іванович">Ткач Василь Іванович</option>
+									<option value="Зубенко Ніна Павлівна">Зубенко Ніна Павлівна</option>
+								</select>
+							</div>
+						</div>
+						<div class="col-xs-4">
+							<div class="input-cover large-space">
+								<label for="addPaymentState" class="label spaced-bottom">Стан платежу:</label>
+								<select name="addPaymentState" id="addPaymentState" class="select">
+									<option value="Вибрати стан платежу" disabled selected>Вибрати стан платежу</option>
+									<option value="Проведено">Проведено</option>
+									<option value="В процесі">В процесі</option>
+									<option value="Передано в бухалтерію">Передано в бухалтерію</option>
+								</select>
+							</div>
+						</div>
+						<div class="col-xs-4">
+							<div class="input-cover large-space">
+								<label for="addPaymentPurpose" class="label spaced-bottom">Призначення:</label>
+								<select name="addPaymentPurpose" id="addPaymentPurpose" class="select">
+									<option value="Вибрати призначенння платежу" disabled selected>Вибрати призначенння платежу</option>
+									<option value="Призначення 1">Призначення 1</option>
+									<option value="Призначення 2">Призначення 2</option>
+									<option value="Призначення 3">Призначення 3</option>
+								</select>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-xs-4">
+							<div class="input-cover large-space">
+								<label for="addPaymentWay" class="label spaced-bottom">Спосіб оплати:</label>
+								<select name="addPaymentWay" id="addPaymentWay" class="select">
+									<option value="Вибрати спосіб оплати" disabled selected>Вибрати спосіб оплати</option>
+									<option value="Готівкою">Готівкою</option>
+									<option value="Безготівково">Безготівково</option>
+								</select>
+							</div>
+						</div>
+						<div class="col-xs-4">
+							<div class="input-cover large-space">
+								<label for="addPaymentTo" class="label spaced-bottom">Виставити рахунок:</label>
+								<select name="addPaymentTo" id="addPaymentTo" class="select" data-search="true">
+									<option value="Вибрати кому виставити рахунок" disabled selected>Вибрати кому виставити рахунок</option>
+									<option value="ТОВ Компанія 1">ТОВ Компанія 1</option>
+									<option value="ФОП Назва 1">ФОП Назва 1</option>
+									<option value="ТОВ Компанія 2">ТОВ Компанія 2</option>
+									<option value="ФОП Назва 2">ФОП Назва 2</option>
+								</select>
+							</div>
+						</div>
+					</div>
+				</li>
+				<!-- section 2 -->
+				<li class="item">
+					<div class="input-cover large-space">
+						<label for="addPaymentComment" class="label spaced-bottom">Коментар:</label>
+						<textarea class="textarea ignored" id="addPaymentComment" placeholder="Введіть додатковий коментар"></textarea>
+					</div>
+					<div class="input-cover large-space">
+						<label for="addPaymentComment" class="label spaced-bottom">Коментар до рахунку:</label>
+						<textarea class="textarea ignored" id="addPaymentComment" placeholder="Введіть коментар до рахунку"></textarea>
+					</div>
+				</li>
+			</ul>
+		</div>
+		<div class="col-xs-2 align-right">
+			<div class="buttons-cover spaced-top">
+				<div class="input-cover large-space">
+					<button class="button button-info button-block" type="submit" data-tooltip="Зберегти угоду">
+						<span class="text">Зберегти</span>
+					</button>
+				</div>
+				<div class="input-cover large-space collapsed-bottom">
+					<button class="button button-danger button-block" type="reset" data-tooltip="Очистити дані">
+						<span class="text">Очистити</span>
+					</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</form>

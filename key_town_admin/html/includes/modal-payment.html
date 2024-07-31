@@ -1,0 +1,33 @@
+<div id="paymentModal" class="popup middle-popup" data-index="23">
+	<div class="inner">
+		<div class="head">
+			<h2 class="modal-title">
+				<i class="icon icon icon-money"></i>
+				Додати платіж
+			</h2>
+			<button type="button" class="close-popup button" data-dismiss="#paymentModal" data-tooltip="Закрити вікно">&times;</button>
+		</div>
+		<div class="content">
+			<h1 class="spaced-bottom">Додати платіж до угоди № 212333</h1>
+			<!-- payment details -->
+			<div class="spaced-bottom">
+				<div class="row">
+					<div class="col-xs-2">
+						<div class="alert-primary alert-block">
+							Сума угоди: 0
+						</div>
+					</div>
+					<div class="col-xs-2">
+						<div class="alert-info alert-block">
+							Оплата: 7000 грн
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- / payment details -->
+			<!-- ADD PAYMENT FORM -->
+			@@include('form-payment-add.html')
+			<!-- / ADD PAYMENT FORM -->
+		</div>
+	</div>
+</div>

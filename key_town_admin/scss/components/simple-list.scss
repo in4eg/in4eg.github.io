@@ -2,7 +2,7 @@
 
 .simple-list {
 	font-size: 0;
-	margin: 0 calc(var(--space-gap)*2*-1);
+	margin: 0 calc(var(--space-gap)*2*-2);
 	padding: 0 calc(var(--space-gap)*2);
 
 	> .item {
@@ -36,6 +36,13 @@
 
 	&.nowrap-list {
 		white-space: nowrap;
+	}
+
+	&.spaced-side {
+
+		> .item {
+			padding: var(--space-gap);
+		}
 	}
 }
 

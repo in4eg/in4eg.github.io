@@ -29,7 +29,7 @@ $(document).ready(function() {
 				}, 100);
 			}
 		};
-		// CallPopup('#classDetail');
+		// window.CallPopup('#paymentModal');
 		$('[data-dismiss]').click(function(e) {
 			var called;
 			e.preventDefault();

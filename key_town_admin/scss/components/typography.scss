@@ -193,6 +193,12 @@ h5 {
 	}
 }
 
+.link {
+	font-size: var(--font-size);
+	display: inline-block;
+	vertical-align: middle;
+}
+
 @media (max-width: 1480px) {
 
 

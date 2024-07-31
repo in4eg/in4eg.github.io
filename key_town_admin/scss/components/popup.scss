@@ -66,6 +66,7 @@
 		transition: .3s;
 		opacity: 0;
 		transform: translateY(-50px);
+		box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 
 		&:before {
 			content: '';
@@ -144,6 +145,10 @@
 					height: var(--button_font-size);
 					vertical-align: middle;
 					margin-right: var(--space-gap);
+				}
+
+				.icon-money {
+					transform: translateY(2px);
 				}
 			}
 

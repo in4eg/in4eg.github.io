@@ -10,7 +10,7 @@
 
 	.header-top {
 		background-color: $color_white;
-		padding: calc(var(--padding)*0.7) calc(var(--padding) + var(--scroll-size)) calc(var(--padding)*0.7) var(--padding);
+		padding: calc(var(--padding)*0.7) calc(var(--padding) + var(--scroll-size)) calc(var(--padding)*0.7) calc(var(--padding)*1.5);
 	}
 
 	nav {

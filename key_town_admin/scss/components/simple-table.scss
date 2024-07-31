@@ -85,6 +85,28 @@
 					display: none;
 				}
 			}
+
+			&.gray-inner {
+
+				td {
+					padding: var(--padding) var(--padding) 0;
+
+					&:after {
+						display: none;
+					}
+
+					.cell {
+						background-color: $color_white;
+					}
+				}
+
+				&:last-child {
+
+					td {
+						padding-bottom: var(--padding);
+					}
+				}
+			}
 		}
 	}
 }
@@ -258,6 +280,121 @@
 
 	td {
 		vertical-align: middle;
+	}
+}
+
+.simple-table.payments-table {
+
+	thead {
+
+		.primary-top {
+
+			th:first-child {
+				padding-left: 0;
+			}
+		}
+	}
+
+	th {
+
+		&:first-child {
+
+			.text {
+				padding-left: calc(var(--padding)*2.1);
+			}
+		}
+	}
+
+	.date,
+	.payment-date,
+	.summary {
+		width: calc(var(--min-cell_width)*5);
+	}
+
+	.employee {
+		width: calc(var(--min-cell_width)*5);
+	}
+
+	.type {
+		width: calc(var(--min-cell_width)*4);
+	}
+
+	.payment-type {
+		width: calc(var(--min-cell_width)*4);
+	}
+
+	.state {
+		width: calc(var(--min-cell_width)*5);
+	}
+
+	.top,
+	.bottom {
+		display: table;
+		width: 100%;
+		border-bottom: 1px solid $color_gray;
+
+		.cell {
+			display: table-cell;
+			vertical-align: middle;
+		}
+	}
+
+	.bottom {
+		border-bottom: none;
+
+		.cell {
+			border-right: 1px solid $color_gray;
+
+			&:last-child {
+				border-right: 0;
+			}
+		}
+	}
+
+	.grid-cell {
+
+		.cell {
+			transition: background-color .2s;
+
+			.text {
+				padding: calc(var(--padding)/2) var(--padding);
+			}
+
+			&.date {
+				width: calc(var(--min-cell_width)*5 - var(--padding));
+			}
+
+			&.contact {
+				width: calc(var(--min-cell_width)*10);
+			}
+
+			&.comment {
+				width: calc(var(--min-cell_width)*5);
+			}
+
+			&.office {
+				width: calc(var(--min-cell_width)*8);
+				border-right: none;
+			}
+
+			&.buttons {
+				width: calc(var(--min-cell_width)*5);
+			}
+		}
+
+		&:hover {
+
+			.cell {
+				background-color: #f2f3f3;
+			}
+		}
+	}
+
+	.simple-list.smaller-spaces {
+
+		> .item {
+			margin-bottom: 0;
+		}
 	}
 }
 

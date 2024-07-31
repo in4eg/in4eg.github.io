@@ -7,7 +7,7 @@
 	background-color: darken($color_primary_dark, 25%);
 	border-radius: calc(var(--border-radius)/2);
 	color: $color_white;
-	z-index: 20;
+	z-index: 25;
 	opacity: 0;
 	transform: translate(5px, 0);
 	transition: .2s;

@@ -16,6 +16,13 @@
 	&.spaced-top {
 		margin-top: calc(var(--margin)*2);
 	}
+
+	.buttons-cover {
+
+		&.spaced-top {
+			margin-top: calc(var(--margin)*3.5);
+		}
+	}
 }
 
 .input-cover {
