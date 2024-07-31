@@ -6237,6 +6237,10 @@ select {
 .simple-table.notifications-table td {
   vertical-align: middle
 }
+.popup .simple-table.payments-table {
+  width: auto;
+  min-width: 100%
+}
 .simple-table.payments-table thead .primary-top th:first-child {
   padding-left: 0
 }
