@@ -25,55 +25,59 @@
 <body id="innerBody">
 	<!-- header -->
 	<header class="main-header" id="mainHeader">
-	<nav class="uk-navbar-container uk-navbar-transparent">
-			<div class="uk-container uk-container-xlarge">
-					<div uk-navbar>
-						<div class="uk-navbar-left">
-							<ul class="uk-navbar-nav">
-								<li class="uk-navbar-item">
-									<button uk-toggle="target: #catalogMenuHeader; animation: uk-animation-fade; cls: active" type="button" class="button button-menu toggle-button uk-button">
-										<span></span>
-									</button>
-								</li>
-								<li class="uk-navbar-item">
-									<a class=" uk-logo" href="index.html" aria-label="Back to Home">
-										<img src="img/logo_white.png" alt="logo">
-									</a>
-								</li>
-								<li class="uk-navbar-item uk-active"><a class="link" href="services.html">Послуги</a></li>
-								<li class="uk-navbar-item"><a class="link" href="news.html">Статті та Новини</a></li>
-								<li class="uk-navbar-item"><a class="link" href="gallery.html">Галерея</a></li>
-								<li class="uk-navbar-item"><a class="link" href="partners.html">Партнери</a></li>
-								<li class="uk-navbar-item"><a class="link" href="delivery.html">Доставка/Оплата</a></li>
-								<li class="uk-navbar-item"><a class="link" href="contacts.html">Контакти</a></li>
-								<li class="uk-navbar-item"><a class="link" href="career.html">Вакансії</a></li>
-							</ul>
-						</div>
-						<div class="uk-navbar-right">
-							<ul class="uk-navbar-nav">
-								<li class="uk-navbar-item">
-									<form action="javascript:void(0)" class="form">
-										<div class="form-element">
-											<i class="icon icon-search"></i>
-											<input class="uk-input input" type="text" placeholder="Я шукаю..." aria-label="Я шукаю...">
-										</div>
-									</form>
-								</li>
-								<li class="uk-navbar-item">
-									<a class="uk-button uk-button-secondary uk-button-large button" href="#loginModal" uk-toggle>
-										Вхід/Реєстрація
-										<span class="fade"></span>
-									</a>
-								</li>
-								<li class="uk-navbar-item">
-									<a class="uk-button button-square button uk-button-transparent" href="blank.pdf" download><i class="icon icon-download"></i></a>
-									<a class="uk-button button-square button uk-button-transparent" href="#">RU</a>
-								</li>
-							</ul>
-						</div>
-					</div>
+	<div class="uk-container uk-container-xlarge">
+		<div class="navbar-cover">
+			<div class="catalog-menu">
+				<button uk-toggle="target: #catalogMenuHeader; animation: uk-animation-fade; cls: active" type="button" class="button button-menu toggle-button uk-button">
+					<span></span>
+				</button>
+				<a class=" uk-logo" href="index.html" aria-label="Back to Home">
+					<img src="img/logo_white.png" alt="logo">
+				</a>
 			</div>
-	</nav>
+			<nav class="uk-nav">
+				<ul class="uk-navbar-nav">
+					<li class="uk-navbar-item uk-active"><a class="link" href="services.html">Послуги</a></li>
+					<li class="uk-navbar-item"><a class="link" href="news.html">Статті та Новини</a></li>
+					<li class="uk-navbar-item"><a class="link" href="gallery.html">Галерея</a></li>
+					<li class="uk-navbar-item"><a class="link" href="partners.html">Партнери</a></li>
+					<li class="uk-navbar-item"><a class="link" href="delivery.html">Доставка/Оплата</a></li>
+					<li class="uk-navbar-item"><a class="link" href="contacts.html">Контакти</a></li>
+					<li class="uk-navbar-item"><a class="link" href="career.html">Вакансії</a></li>
+				</ul>
+			</nav>
+			<div class="user-menu">
+				<div class="menu-inner">
+					<form action="javascript:void(0)" class="form search-form">
+						<div class="form-element">
+							<i class="icon icon-search"></i>
+							<input class="uk-input input" type="text" placeholder="Я шукаю..." aria-label="Я шукаю...">
+						</div>
+					</form>
+					<div class="login-button">
+						<!-- sign in button -->
+						<a class="uk-button uk-button-secondary uk-button-large button " href="#loginModal" uk-toggle>
+							Вхід/Реєстрація
+							<span class="fade"></span>
+						</a>
+						<!-- / sign in button -->
+						<!-- if user logged -->
+						<!-- / if user logged -->
+						<!-- <a class="uk-button button-square button uk-button-transparent" href="blank.pdf" download>
+							<i class="icon icon-download"></i>
+						</a>
+						<a class="uk-button button-square button uk-button-transparent" href="#">RU</a> -->
+					</div>
+				</div>
+			</div>
+			<div class="user-options">
+				<a class="uk-button button-square button uk-button-transparent spaced-right" href="blank.pdf" download>
+					<i class="icon icon-download"></i>
+				</a>
+				<a class="uk-button button-square button uk-button-transparent" href="#">RU</a>
+			</div>
+		</div>
+	</div>
 	<!-- catalog menu -->
 	<div class="catalog-menu header-menu" id="catalogMenuHeader">
 		<div class="uk-card uk-card-default uk-card-body">

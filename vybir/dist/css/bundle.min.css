@@ -7,7 +7,7 @@
   --subheader1-font-size: 24px;
   --subheader2-font-size: 20px;
   --subheader3-font-size: 16px;
-  --header_height: 72px;
+  --header_height: 73px;
   --footer_height: 448px
 }
 @media (max-width:1200px) {
@@ -564,7 +564,7 @@ img.adaptive {
   --subheader1-font-size: 24px;
   --subheader2-font-size: 20px;
   --subheader3-font-size: 16px;
-  --header_height: 72px;
+  --header_height: 73px;
   --footer_height: 448px
 }
 @media (max-width:1200px) {
@@ -588,7 +588,7 @@ img.adaptive {
   --subheader1-font-size: 24px;
   --subheader2-font-size: 20px;
   --subheader3-font-size: 16px;
-  --header_height: 72px;
+  --header_height: 73px;
   --footer_height: 448px
 }
 @media (max-width:1200px) {
@@ -629,7 +629,9 @@ img.adaptive {
   display: inline-block;
   padding: 6px 22px;
   height: 55px;
-  line-height: 40px
+  text-transform: none;
+  line-height: 40px;
+  font-weight: 600
 }
 .button.uk-button:focus,
 .button.uk-button:hover {
@@ -761,7 +763,27 @@ img.adaptive {
   width: 42px;
   height: 42px;
   padding: 7px;
-  line-height: 2
+  line-height: 2;
+  position: relative;
+  overflow: visible
+}
+.button.button-square .icon {
+  font-size: 24px
+}
+.button.button-square .count {
+  position: absolute;
+  background-color: #d24539;
+  border-radius: 50%;
+  font-size: 10px;
+  right: 0;
+  top: 0;
+  z-index: 1;
+  -webkit-transition: .2s;
+  transition: .2s
+}
+.button.button-square:hover .count {
+  background-color: #a93040;
+  color: #fff
 }
 :root {
   --font-size: 15px;
@@ -772,7 +794,7 @@ img.adaptive {
   --subheader1-font-size: 24px;
   --subheader2-font-size: 20px;
   --subheader3-font-size: 16px;
-  --header_height: 72px;
+  --header_height: 73px;
   --footer_height: 448px
 }
 @media (max-width:1200px) {
@@ -806,7 +828,7 @@ img.adaptive {
   --subheader1-font-size: 24px;
   --subheader2-font-size: 20px;
   --subheader3-font-size: 16px;
-  --header_height: 72px;
+  --header_height: 73px;
   --footer_height: 448px
 }
 @media (max-width:1200px) {
@@ -832,7 +854,7 @@ img.adaptive {
   position: relative
 }
 .form .form-element .input {
-  padding-left: 30px;
+  padding-left: 50px;
   color: #324a61
 }
 .form .form-element .input::-webkit-input-placeholder {
@@ -857,7 +879,8 @@ img.adaptive {
   -webkit-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
-  color: #324a61
+  color: #324a61;
+  font-size: 24px
 }
 .form .form-element.error .input {
   color: #a93040
@@ -910,7 +933,7 @@ img.adaptive {
   --subheader1-font-size: 24px;
   --subheader2-font-size: 20px;
   --subheader3-font-size: 16px;
-  --header_height: 72px;
+  --header_height: 73px;
   --footer_height: 448px
 }
 @media (max-width:1200px) {
@@ -1070,7 +1093,7 @@ img.adaptive {
   --subheader1-font-size: 24px;
   --subheader2-font-size: 20px;
   --subheader3-font-size: 16px;
-  --header_height: 72px;
+  --header_height: 73px;
   --footer_height: 448px
 }
 @media (max-width:1200px) {
@@ -1098,7 +1121,7 @@ img.adaptive {
   --subheader1-font-size: 24px;
   --subheader2-font-size: 20px;
   --subheader3-font-size: 16px;
-  --header_height: 72px;
+  --header_height: 73px;
   --footer_height: 448px
 }
 @media (max-width:1200px) {
@@ -1120,7 +1143,22 @@ img.adaptive {
   position: relative
 }
 .main-header .uk-logo {
-  margin-right: 28px
+  width: 170px
+}
+.main-header .navbar-cover {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between
 }
 .main-header .uk-navbar-nav > li > .link {
   font-size: 15px;
@@ -1128,11 +1166,39 @@ img.adaptive {
   padding: 0 15px
 }
 .main-header .button.button-menu {
-  width: 40px;
-  padding: 0
+  width: 34px;
+  min-width: auto;
+  padding: 0;
+  margin-right: 20px
 }
-.main-header .form {
-  width: 396px
+.main-header .button-square {
+  color: #fff
+}
+.main-header .button-square.spaced-right {
+  margin-right: 10px
+}
+.main-header .button-square:hover {
+  color: #b79c90
+}
+.main-header .user-menu {
+  width: 540px
+}
+.main-header .menu-inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 10px
+}
+.main-header .menu-inner .search-form {
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1
 }
 @media (min-width:960px) {
   .main-header .uk-navbar-nav {
@@ -1148,7 +1214,7 @@ img.adaptive {
   --subheader1-font-size: 24px;
   --subheader2-font-size: 20px;
   --subheader3-font-size: 16px;
-  --header_height: 72px;
+  --header_height: 73px;
   --footer_height: 448px
 }
 @media (max-width:1200px) {
@@ -1176,7 +1242,7 @@ img.adaptive {
   --subheader1-font-size: 24px;
   --subheader2-font-size: 20px;
   --subheader3-font-size: 16px;
-  --header_height: 72px;
+  --header_height: 73px;
   --footer_height: 448px
 }
 @media (max-width:1200px) {

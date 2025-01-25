@@ -14,7 +14,7 @@
 		position: relative;
 
 		.input {
-			padding-left: 30px;
+			padding-left: 50px;
 			color: $color_primary;
 
 			&::placeholder {
@@ -27,6 +27,7 @@
 			left: 10px; top: 50%;
 			transform: translateY(-50%);
 			color: $color_primary;
+			font-size: 24px;
 		}
 
 		&.error {

@@ -7,7 +7,14 @@
 	position: relative;
 
 	.uk-logo {
-		margin-right: 28px;
+		width:170px;
+	}
+
+	.navbar-cover {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: space-between;
 	}
 
 	.uk-navbar-nav > li > .link {
@@ -17,12 +24,37 @@
 	}
 
 	.button.button-menu {
-		width: 40px;
+		width: 34px;
+		min-width: auto;
 		padding: 0;
+		margin-right: 20px;
 	}
 
-	.form {
-		width: 396px;
+	.button-square {
+		color: $color_white;
+
+		&.spaced-right {
+			margin-right: 10px;
+		}
+
+		&:hover {
+			color: $color_primary_hover;
+		}
+	}
+
+	.user-menu {
+		width: 540px;
+	}
+
+	.menu-inner {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		gap: 10px;
+
+		.search-form {
+			flex: 1;
+		}
 	}
 }
 
