@@ -1,0 +1,160 @@
+@import '../variables.scss';
+
+.button.uk-button {
+	display: inline-block;
+	font-size: var(--font-size);
+	font-family: $font;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	vertical-align: middle;
+	white-space: nowrap;
+	position: relative;
+	z-index: 1;
+	border: none;
+	text-align: center;
+	transition: .2s;
+	text-decoration: none;
+	border: none;
+	max-width: 100%;
+	white-space: nowrap;
+	cursor: pointer;
+	background-color: transparent;
+	border: 1px solid transparent;
+	min-width: 40px; min-height: 40px;
+	display: inline-block;
+	padding: 6px 22px;
+	height: 55px;
+	line-height: 40px;
+
+	&:hover,
+	&:focus {
+		color: $color_white;
+	}
+	&:active {
+		color: $color_white;
+	}
+
+	.fade {
+		position: absolute;
+		z-index: 2;
+		top: 50%; left: 50%;
+		display: block;
+		width: 200%;
+		padding-top: 200%;
+		border-radius: 50%;
+		opacity: 1;
+		background: rgba(255,255,255,.5);
+		transform: translate3d(-50%,-50%,0) scale(0);
+
+		&.active {
+			animation: btn-fade .6s forwards;
+		}
+	}
+
+	@keyframes btn-fade {
+		0% {
+			opacity: 1;
+			transform: translate3d(-50%,-50%,0) scale(0);
+		}
+		100% {
+			opacity: 0;
+			transform: translate3d(-50%,-50%,0) scale(1);
+		}
+	}
+
+	&.spaced-top {
+		margin-top: calc(var(--margin)*2);
+	}
+}
+
+.button.disabled {
+	opacity: .3;
+	pointer-events: none;
+	user-select: none;
+}
+
+.button.button-menu {
+
+	span {
+		width: 100%;
+		height: 2px;
+		background-color: $color_white;
+		border-radius: 12px;
+		display: block;
+		transition: background-color .5s ease-in-out;
+
+		&:after,
+		&:before {
+			content: "";
+			width: 100%;
+			background-color: $color_white;
+			display: block;
+			transition: all .5s ease-in-out;
+			border-radius: 12px;
+			height: 2px;
+		}
+
+		&:before {
+			transform: translateY(-10px);
+		}
+
+		&:after {
+			transform: translateY(10px);
+			margin-top: -2px;
+		}
+	}
+
+	&.active {
+
+		span {
+			background-color: transparent;
+
+			&:after {
+				transform: rotateZ(-45deg) translateY(0);
+			}
+
+			&:before {
+				transform: rotateZ(45deg) translateY(0);
+			}
+		}
+	}
+}
+
+.button.uk-button-primary {
+	background-color: $color_primary;
+	color: $color_white;
+
+	&:hover {
+		background-color: $color_primary_hover;
+		color: $color_white;
+	}
+}
+
+.button.uk-button-secondary {
+	background-color: $color_secondary;
+	color: $color_white;
+
+	&:hover {
+		background-color: $color_secondary_hover;
+		color: $color_white;
+	}
+}
+
+.button.uk-button-transparent {
+	font-weight: 600;
+
+	&:hover {
+		color: $color_secondary_hover;
+	}
+}
+
+.button.button-square {
+	width: 42px; height: 42px;
+	padding: 7px;
+	line-height: 2;
+}
+
+@media (max-width: 993px) {
+
+
+}

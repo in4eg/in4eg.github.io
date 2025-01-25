@@ -1,0 +1,62 @@
+@import '../variables.scss';
+
+.form {
+
+	.input {
+		display: inline-block;
+		padding: 6px 22px;
+		height: 55px;
+		line-height: 40px;
+		font-size: var(--font-size);
+	}
+
+	.form-element {
+		position: relative;
+
+		.input {
+			padding-left: 30px;
+			color: $color_primary;
+
+			&::placeholder {
+				color: $color_primary;
+			}
+		}
+
+		.icon {
+			position: absolute;
+			left: 10px; top: 50%;
+			transform: translateY(-50%);
+			color: $color_primary;
+		}
+
+		&.error {
+
+			.input {
+				color: $color_error;
+
+				&::placeholder {
+					color: $color_error;
+				}
+			}
+
+			.icon {
+				color: $color_error;
+			}
+		}
+
+		&:hover {
+
+			.input {
+				color: $color_dark;
+
+				&::placeholder {
+					color: $color_dark;
+				}
+			}
+
+			.icon {
+				color: $color_dark;
+			}
+		}
+	}
+}

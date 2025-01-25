@@ -1,0 +1,71 @@
+<header class="main-header" id="mainHeader">
+	<nav class="uk-navbar-container uk-navbar-transparent">
+			<div class="uk-container uk-container-xlarge">
+					<div uk-navbar>
+						<div class="uk-navbar-left">
+							<ul class="uk-navbar-nav">
+								<li class="uk-navbar-item">
+									<button uk-toggle="target: #catalogMenuHeader; animation: uk-animation-fade; cls: active" type="button" class="button button-menu toggle-button uk-button">
+										<span></span>
+									</button>
+								</li>
+								<li class="uk-navbar-item">
+									<a class=" uk-logo" href="index.html" aria-label="Back to Home">
+										<img src="img/logo_white.png" alt="logo">
+									</a>
+								</li>
+								<li class="uk-navbar-item uk-active"><a class="link" href="services.html">Послуги</a></li>
+								<li class="uk-navbar-item"><a class="link" href="news.html">Статті та Новини</a></li>
+								<li class="uk-navbar-item"><a class="link" href="gallery.html">Галерея</a></li>
+								<li class="uk-navbar-item"><a class="link" href="partners.html">Партнери</a></li>
+								<li class="uk-navbar-item"><a class="link" href="delivery.html">Доставка/Оплата</a></li>
+								<li class="uk-navbar-item"><a class="link" href="contacts.html">Контакти</a></li>
+								<li class="uk-navbar-item"><a class="link" href="career.html">Вакансії</a></li>
+							</ul>
+						</div>
+						<div class="uk-navbar-right">
+							<ul class="uk-navbar-nav">
+								<li class="uk-navbar-item">
+									<form action="javascript:void(0)" class="form">
+										<div class="form-element">
+											<i class="icon icon-search"></i>
+											<input class="uk-input input" type="text" placeholder="Я шукаю..." aria-label="Я шукаю...">
+										</div>
+									</form>
+								</li>
+								<li class="uk-navbar-item">
+									<a class="uk-button uk-button-secondary uk-button-large button" href="#loginModal" uk-toggle>
+										Вхід/Реєстрація
+										<span class="fade"></span>
+									</a>
+								</li>
+								<li class="uk-navbar-item">
+									<a class="uk-button button-square button uk-button-transparent" href="blank.pdf" download><i class="icon icon-download"></i></a>
+									<a class="uk-button button-square button uk-button-transparent" href="#">RU</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+			</div>
+	</nav>
+	<!-- catalog menu -->
+	<div class="catalog-menu header-menu" id="catalogMenuHeader">
+		@@include('catalog-menu.html')
+	</div>
+	<!-- / catalog menu -->
+</header>
+
+<!-- header modals -->
+<!-- login -->
+<div id="loginModal" uk-modal>
+	<div class="uk-modal-dialog uk-modal-body">
+		<button class="uk-modal-close-default" type="button" aria-label="Close" uk-close></button>
+		<h2 class="uk-modal-title">Headline</h2>
+		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+		<p class="uk-text-right">
+				<button class="uk-button uk-button-default uk-modal-close" type="button">Cancel</button>
+				<button class="uk-button uk-button-primary" type="button">Save</button>
+		</p>
+	</div>
+</div>
+<!-- / login -->

@@ -1,0 +1,15 @@
+@import '../variables.scss';
+
+.catalog-menu {
+
+	&.header-menu {
+		position: absolute;
+		top: 100%; left: 0;
+		width: 100%;
+		display: none;
+
+		&.active {
+			display: block;
+		}
+	}
+}

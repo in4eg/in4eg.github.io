@@ -1,0 +1,38 @@
+@import '../variables.scss';
+
+.uk-container-xlarge {
+	max-width: 1753px;
+}
+
+.uk-navbar-item,
+.uk-navbar-nav > li > a,
+.uk-navbar-toggle {
+	min-height: auto;
+	text-transform: none;
+	color: $color_white;
+
+	&.active {
+		color: $color_primary_hover;
+	}
+}
+
+.uk-navbar-nav > li > .button {
+	min-height: 40px;
+
+	&.uk-button-transparent:hover {
+		color: $color_primary_hover;
+	}
+}
+
+.uk-navbar-nav > li:hover {
+
+	.uk-button-transparent {
+		color: $color_white;
+	}
+}
+
+.uk-navbar-nav > li.uk-active > .link,
+.uk-navbar-nav > li:hover > .link,
+.uk-navbar-nav > li > .link[aria-expanded=true] {
+	color: $color_primary_hover;
+}

@@ -1,0 +1,114 @@
+@font-face {
+  font-family: 'icomoon';
+  src:  url('fonts/icomoon.eot?cv5rw0');
+  src:  url('fonts/icomoon.eot?cv5rw0#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?cv5rw0') format('truetype'),
+    url('fonts/icomoon.woff?cv5rw0') format('woff'),
+    url('fonts/icomoon.svg?cv5rw0#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-filter:before {
+  content: "\e906";
+}
+.icon-download:before {
+  content: "\e907";
+}
+.icon-calendar:before {
+  content: "\e900";
+}
+.icon-caret_bottom:before {
+  content: "\e901";
+}
+.icon-caret_top:before {
+  content: "\e902";
+}
+.icon-caret_right:before {
+  content: "\e903";
+}
+.icon-caret_left:before {
+  content: "\e904";
+}
+.icon-cart:before {
+  content: "\e905";
+}
+.icon-delivery:before {
+  content: "\e914";
+}
+.icon-error:before {
+  content: "\e916";
+}
+.icon-id:before {
+  content: "\e91c";
+}
+.icon-info:before {
+  content: "\e91d";
+}
+.icon-location:before {
+  content: "\e91e";
+}
+.icon-location_full:before {
+  content: "\e91f";
+}
+.icon-mail:before {
+  content: "\e920";
+}
+.icon-minus:before {
+  content: "\e921";
+}
+.icon-phone:before {
+  content: "\e922";
+}
+.icon-phone_full:before {
+  content: "\e923";
+}
+.icon-plus:before {
+  content: "\e925";
+}
+.icon-search:before {
+  content: "\e92a";
+}
+.icon-send:before {
+  content: "\e92b";
+}
+.icon-social_facebook:before {
+  content: "\e92c";
+}
+.icon-social_instagram:before {
+  content: "\e92d";
+}
+.icon-social_telegram:before {
+  content: "\e92e";
+}
+.icon-social_youtube:before {
+  content: "\e92f";
+}
+.icon-sort:before {
+  content: "\e930";
+}
+.icon-support:before {
+  content: "\e931";
+}
+.icon-time_full:before {
+  content: "\e932";
+}
+.icon-user:before {
+  content: "\e933";
+}

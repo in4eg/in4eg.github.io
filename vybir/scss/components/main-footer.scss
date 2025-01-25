@@ -1,0 +1,6 @@
+@import '../variables.scss';
+
+.main-footer {
+	background-color: $color-white;
+	height: var(--footer_height);
+}

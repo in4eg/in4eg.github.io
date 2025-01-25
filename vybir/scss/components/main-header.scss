@@ -1,0 +1,36 @@
+@import '../variables.scss';
+
+.main-header {
+	background-color: $color-primary;
+	height: var(--header_height);
+	padding: 9px 0;
+	position: relative;
+
+	.uk-logo {
+		margin-right: 28px;
+	}
+
+	.uk-navbar-nav > li > .link {
+		font-size: 15px;
+		font-weight: 600;
+		padding: 0 15px;
+	}
+
+	.button.button-menu {
+		width: 40px;
+		padding: 0;
+	}
+
+	.form {
+		width: 396px;
+	}
+}
+
+@media (min-width: 960px) {
+
+	.main-header {
+		.uk-navbar-nav {
+			gap: 15px;
+		}
+	}
+}
