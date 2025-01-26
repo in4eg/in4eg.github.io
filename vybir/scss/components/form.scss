@@ -14,11 +14,14 @@
 		position: relative;
 
 		.input {
-			padding-left: 50px;
 			color: $color_primary;
 
 			&::placeholder {
 				color: $color_primary;
+			}
+
+			&.with-icon {
+				padding-left: 50px;
 			}
 		}
 
@@ -57,6 +60,40 @@
 
 			.icon {
 				color: $color_dark;
+			}
+		}
+	}
+}
+
+@media (max-width: 1768px) {
+
+	.form {
+
+		.form-element {
+
+			.input {
+				height: 45px;
+			}
+		}
+	}
+}
+
+@media (max-width: 640px) {
+
+	.form {
+
+		.form-element {
+
+			.icon {
+				font-size: 16px;
+			}
+
+			.input {
+				height: 34px;
+
+				&.with-icon {
+					padding-left: 35px;
+				}
 			}
 		}
 	}

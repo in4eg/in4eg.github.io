@@ -22,7 +22,7 @@
 	border: 1px solid transparent;
 	min-width: 40px; min-height: 40px;
 	display: inline-block;
-	padding: 6px 22px;
+	padding: 6px 28px;
 	height: 55px;
 	text-transform: none;
 	line-height: 40px;
@@ -84,6 +84,8 @@
 		border-radius: 12px;
 		display: block;
 		transition: background-color .5s ease-in-out;
+		z-index: 2;
+		position: relative;
 
 		&:after,
 		&:before {
@@ -137,8 +139,8 @@
 	color: $color_white;
 
 	&:hover {
-		background-color: $color_secondary_hover;
-		color: $color_white;
+		background-color: $color_primary_hover;
+		color: $color_black;
 	}
 }
 
@@ -169,18 +171,86 @@
 		right: 0; top: 0;
 		z-index: 1;
 		transition: .2s;
+		height: 1.7em;
+		line-height: 1.9;
+	}
+}
+
+.button.button-round {
+	$canvas_color: #000000;
+
+	height: 42px; width: 42px;
+	padding: 5px;
+	font-size: 24px;
+	position: relative;
+	text-align: center;
+	line-height: 30px;
+	border-radius: 50%;
+	border: 1px solid transparent;
+	background-color: $color_white;
+	color: $canvas_color;
+
+	.canvas {
+		position: absolute;
+		top: 0; left: 0;
+		width: 100%; height: 100%;
 	}
 
-	&:hover {
+	svg {
+		top: -3px;
+		position: relative;
+	}
+
+	&.filled {
+		border: 1px solid $canvas_color;
+	}
+}
+
+.button.button-light {
+	background-color: $color_white;
+	color: $color_black;
+
+	&:hover,
+	&:focus {
+		background-color: $color_secondary;
+		color: $color_white;
+	}
+}
+
+
+@media (max-width: 1768px) {
+
+	.button.uk-button {
+		height: 45px;
+		line-height: 32px;
+	}
+
+	.button.button-square {
+
+		.icon {
+			font-size: 18px;
+		}
 
 		.count {
-			background-color: $color_error;
-			color: $color_white;
+			top: 6px;
 		}
 	}
 }
 
-@media (max-width: 993px) {
+@media (max-width: 640px) {
 
+	.button.uk-button {
+		height: 36px;
+		min-height: 36px;
+		line-height: 22px;
+		padding-left: 10px;
+		padding-right: 10px;
+	}
 
+	.button.button-square {
+
+		.count {
+			top: 0;
+		}
+	}
 }

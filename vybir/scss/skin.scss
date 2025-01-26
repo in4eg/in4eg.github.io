@@ -1,6 +1,5 @@
 @import 'variables.scss';
 
-
 *,
 :before,
 :after {
@@ -127,30 +126,6 @@ img.adaptive {
 
 	&.large {
 		padding-top: 125%;
-	}
-}
-
-
-.image-cover.with-hover {
-
-	.main-image,
-	.hover-image {
-		transition: opacity 0.3s;
-	}
-
-	.hover-image {
-		opacity: 0;
-	}
-
-	&:hover {
-
-		.hover-image {
-			opacity: 1;
-		}
-
-		.main-image {
-			opacity: 0;
-		}
 	}
 }
 

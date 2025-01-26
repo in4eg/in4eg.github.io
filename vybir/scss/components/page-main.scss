@@ -1,6 +1,6 @@
 @import '../variables.scss';
 
 .page-main {
-	min-height: calc(100vh - var(--footer_height) - var(--header_height));
+	min-height: calc(100vh - var(--footer_height) + var(--header_height));
 	background-color: $color_whitesmoke;
 }

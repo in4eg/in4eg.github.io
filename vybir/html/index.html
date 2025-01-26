@@ -24,10 +24,27 @@
 </head>
 <body id="innerBody">
 	<!-- header -->
-	@@include('./includes/header_authorized.html')
-
+	@@include('./includes/header-authorized.html')
+	<!-- / header -->
 	<main class="page-main" id="pageMain">
-
+		<!-- slider section -->
+		<section class="slider-section">
+			<div class="uk-container uk-container-xlarge">
+				<div class="uk-grid-collapse uk-grid uk-child-width-expand@s">
+					<div class="uk-width-1-6@m">
+						<!-- catalog menu -->
+						<div class="catalog-menu">
+							@@include('./includes/catalog-menu.html')
+						</div>
+						<!-- / catalog menu -->
+					</div>
+					<div class="slider-cover">
+						@@include('./includes/main-slider.html')
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- / slider section-->
 	</main>
 
 	<!-- footer -->

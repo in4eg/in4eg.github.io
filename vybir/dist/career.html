@@ -31,12 +31,13 @@
 				<button uk-toggle="target: #catalogMenuHeader; animation: uk-animation-fade; cls: active" type="button" class="button button-menu toggle-button uk-button">
 					<span></span>
 				</button>
-				<a class=" uk-logo" href="index.html" aria-label="Back to Home">
-					<img src="img/logo_white.png" alt="logo">
+				<a class="uk-logo" href="index.html" aria-label="Back to Home">
+					<img src="img/logo_white.png" alt="logo" class="desktop-logo">
+					<img src="img/logo_white_small.png" alt="logo" class="mobile-logo">
 				</a>
 			</div>
-			<nav class="uk-nav">
-				<ul class="uk-navbar-nav">
+			<nav class="uk-nav main-nav" id="navbarNav">
+				<ul class="uk-navbar-nav" data-tablet="catalogMenuHeader" data-desktop="navbarNav">
 					<li class="uk-navbar-item uk-active"><a class="link" href="services.html">Послуги</a></li>
 					<li class="uk-navbar-item"><a class="link" href="news.html">Статті та Новини</a></li>
 					<li class="uk-navbar-item"><a class="link" href="gallery.html">Галерея</a></li>
@@ -51,7 +52,7 @@
 					<form action="javascript:void(0)" class="form search-form">
 						<div class="form-element">
 							<i class="icon icon-search"></i>
-							<input class="uk-input input" type="text" placeholder="Я шукаю..." aria-label="Я шукаю...">
+							<input class="uk-input input with-icon" type="text" placeholder="Я шукаю..." aria-label="Я шукаю...">
 						</div>
 					</form>
 					<div class="login-button">
@@ -61,12 +62,6 @@
 							<span class="fade"></span>
 						</a>
 						<!-- / sign in button -->
-						<!-- if user logged -->
-						<!-- / if user logged -->
-						<!-- <a class="uk-button button-square button uk-button-transparent" href="blank.pdf" download>
-							<i class="icon icon-download"></i>
-						</a>
-						<a class="uk-button button-square button uk-button-transparent" href="#">RU</a> -->
 					</div>
 				</div>
 			</div>
@@ -74,65 +69,107 @@
 				<a class="uk-button button-square button uk-button-transparent spaced-right" href="blank.pdf" download>
 					<i class="icon icon-download"></i>
 				</a>
-				<a class="uk-button button-square button uk-button-transparent" href="#">RU</a>
+				<a class="uk-button button-square button uk-button-transparent" href="#">
+					<span class="text">RU</span>
+				</a>
 			</div>
 		</div>
 	</div>
 	<!-- catalog menu -->
 	<div class="catalog-menu header-menu" id="catalogMenuHeader">
-		<div class="uk-card uk-card-default uk-card-body">
-	<div class="uk-container uk-container-xlarge">
-		<ul class="uk-nav uk-navbar-nav">
-			<li>
-				<a href="#">Parent</a>
-				<div class="uk-navbar uk-navbar-width-4">
-					<div class="uk-drop-grid uk-child-width-1-4" uk-grid>
-						<div>
-							<ul class="uk-nav uk-navbar-nav">
-								<li class="uk-active"><a href="#">Active</a></li>
-								<li><a href="#">Item</a></li>
-								<li class="uk-nav-header">Header</li>
-								<li><a href="#">Item</a></li>
-								<li><a href="#">Item</a></li>
-								<li><a href="#">Item</a></li>
-							</ul>
-						</div>
-						<div>
-							<ul class="uk-nav uk-navbar-nav">
-								<li class="uk-active"><a href="#">Active</a></li>
-								<li><a href="#">Item</a></li>
-								<li class="uk-nav-header">Header</li>
-								<li><a href="#">Item</a></li>
-								<li><a href="#">Item</a></li>
-								<li><a href="#">Item</a></li>
-							</ul>
-						</div>
-						<div>
-							<ul class="uk-nav uk-navbar-nav">
-								<li class="uk-active"><a href="#">Active</a></li>
-								<li><a href="#">Item</a></li>
-								<li class="uk-nav-header">Header</li>
-								<li><a href="#">Item</a></li>
-								<li><a href="#">Item</a></li>
-								<li><a href="#">Item</a></li>
-							</ul>
-						</div>
-						<div>
-							<ul class="uk-nav uk-navbar-nav">
-								<li class="uk-active"><a href="#">Active</a></li>
-								<li><a href="#">Item</a></li>
-								<li class="uk-nav-header">Header</li>
-								<li><a href="#">Item</a></li>
-								<li><a href="#">Item</a></li>
-								<li><a href="#">Item</a></li>
-							</ul>
-						</div>
-					</div>
-				</div>
-			</li>
-		</ul>
-	</div>
+		<div class="uk-container uk-container-xlarge">
+			<div class="uk-grid-collapse uk-grid uk-child-width-expand@s">
+				<div class="uk-width-1-5@m">
+					<div class="catalog-card">
+	<ul class="clear catalog-tabs uk-card-default">
+		<li class="tab-item">
+			<a href="#" class="cover">
+				<i class="icon icon-calendar title-icon"></i>
+				<span class="text">Меблева фурнітура</span>
+				<i class="icon icon-caret_right caret"></i>
+			</a>
+		</li>
+		<li class="tab-item">
+			<a href="#" class="cover">
+				<i class="icon icon-calendar title-icon"></i>
+				<span class="text">Матеріали для меблів</span>
+				<i class="icon icon-caret_right caret"></i>
+			</a>
+		</li>
+		<li class="tab-item">
+			<a href="#" class="cover">
+				<i class="icon icon-calendar title-icon"></i>
+				<span class="text">Кухонна фурнітура</span>
+				<i class="icon icon-caret_right caret"></i>
+			</a>
+		</li>
+		<li class="tab-item">
+			<a href="#" class="cover">
+				<i class="icon icon-calendar title-icon"></i>
+				<span class="text">Освітлення та електротовари</span>
+				<i class="icon icon-caret_right caret"></i>
+			</a>
+		</li>
+		<li class="tab-item">
+			<a href="#" class="cover">
+				<i class="icon icon-calendar title-icon"></i>
+				<span class="text">Ванна кімната</span>
+				<i class="icon icon-caret_right caret"></i>
+			</a>
+		</li>
+		<li class="tab-item">
+			<a href="#" class="cover">
+				<i class="icon icon-calendar title-icon"></i>
+				<span class="text">Наповнення для меблів</span>
+				<i class="icon icon-caret_right caret"></i>
+			</a>
+		</li>
+		<li class="tab-item">
+			<a href="#" class="cover">
+				<i class="icon icon-calendar title-icon"></i>
+				<span class="text">Дверна фурнітура</span>
+				<i class="icon icon-caret_right caret"></i>
+			</a>
+		</li>
+		<li class="tab-item">
+			<a href="#" class="cover">
+				<i class="icon icon-calendar title-icon"></i>
+				<span class="text">Готові меблі</span>
+				<i class="icon icon-caret_right caret"></i>
+			</a>
+		</li>
+		<li class="tab-item">
+			<a href="#" class="cover">
+				<i class="icon icon-calendar title-icon"></i>
+				<span class="text">Декор</span>
+				<i class="icon icon-caret_right caret"></i>
+			</a>
+		</li>
+		<li class="tab-item">
+			<a href="#" class="cover">
+				<i class="icon icon-calendar title-icon"></i>
+				<span class="text">Спеціальні пропозиції</span>
+				<i class="icon icon-caret_right caret"></i>
+			</a>
+		</li>
+	</ul>
 </div>
+
+<!-- 			<div class="uk-switcher uk-width-expand@m tab-content uk-card uk-card-body uk-card-default">
+				<div class="catalog-element">Hello!1</div>
+				<div class="catalog-element">Hello again!2</div>
+				<div class="catalog-element">Bazinga!2</div>
+				<div class="catalog-element">Hello!1</div>
+				<div class="catalog-element">Hello again!2</div>
+				<div class="catalog-element">Bazinga!2</div>
+				<div class="catalog-element">Hello!1</div>
+				<div class="catalog-element">Hello again!2</div>
+				<div class="catalog-element">Bazinga!2</div>
+				<div class="catalog-element">Bazinga!2</div>
+			</div> -->
+				</div>
+			</div>
+		</div>
 	</div>
 	<!-- / catalog menu -->
 </header>
@@ -141,16 +178,29 @@
 <!-- login -->
 <div id="loginModal" uk-modal>
 	<div class="uk-modal-dialog uk-modal-body">
-		<button class="uk-modal-close-default" type="button" aria-label="Close" uk-close></button>
-		<h2 class="uk-modal-title">Headline</h2>
-		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-		<p class="uk-text-right">
-				<button class="uk-button uk-button-default uk-modal-close" type="button">Cancel</button>
-				<button class="uk-button uk-button-primary" type="button">Save</button>
-		</p>
-	</div>
+	<button class="uk-modal-close-default" type="button" aria-label="Close" uk-close></button>
+	<h2 class="uk-modal-title">Вхід/Реєстрація</h2>
+	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+	<p class="uk-text-right">
+			<button class="uk-button uk-button-default uk-modal-close" type="button">Cancel</button>
+			<button class="uk-button uk-button-primary" type="button">Save</button>
+	</p>
+</div>
 </div>
 <!-- / login -->
+<!-- cart -->
+<div id="cartModal" class="uk-modal-container" uk-modal>
+	<div class="uk-modal-dialog uk-modal-body">
+	<button class="uk-modal-close-default" type="button" aria-label="Close" uk-close></button>
+	<h2 class="uk-modal-title">Кошик</h2>
+	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+	<p class="uk-text-right">
+			<button class="uk-button uk-button-default uk-modal-close" type="button">Cancel</button>
+			<button class="uk-button uk-button-primary" type="button">Save</button>
+	</p>
+</div>
+</div>
+<!-- / cart -->
 
 	<main class="page-main" id="pageMain">
 
@@ -158,8 +208,11 @@
 
 	<!-- footer -->
 	<footer class="main-footer">
-
-
+	<!-- scroll top -->
+	<a href="#" class="button button-round" uk-totop uk-scroll>
+		<canvas class="canvas" id="roundCanvas" data-stroke="#000000"></canvas>
+		<span class="fade"></span>
+	</a>
 </footer>
 
 

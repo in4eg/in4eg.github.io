@@ -24,10 +24,15 @@ $color_dark: #0D1220;
 
 $color_white: #ffffff;
 $color_whitesmoke: #f5f5f5;
+$color_black: #000000;
 
 $color_error: #A93040;
 $color_red: #D24539;
 $text_color: $color_primary;
+
+$color_secondary_transparent: rgba($color_secondary, 0.2);
+
+$global-link-color: $color_primary;
 
 
 /* elements */
@@ -63,13 +68,31 @@ $footer_height: 448px;
 	$subheader3-font-size: 18px;
 
 	:root {
-	--font-size: #{$font-size};
-	--h1-font-size: #{$h1-font-size};
-	--h2-font-size: #{$h2-font-size};
-	--h3-font-size: #{$h3-font-size};
-	--h4-font-size: #{$h4-font-size};
-	--subheader1-font-size: #{$subheader1-font-size};
-	--subheader2-font-size: #{$subheader2-font-size};
-	--subheader3-font-size: #{$subheader3-font-size};
+		--font-size: #{$font-size};
+		--h1-font-size: #{$h1-font-size};
+		--h2-font-size: #{$h2-font-size};
+		--h3-font-size: #{$h3-font-size};
+		--h4-font-size: #{$h4-font-size};
+		--subheader1-font-size: #{$subheader1-font-size};
+		--subheader2-font-size: #{$subheader2-font-size};
+		--subheader3-font-size: #{$subheader3-font-size};
+	}
+}
+
+@media (max-width: 1768px) {
+
+	$header_height: 64px;
+
+	:root {
+		--header_height: #{$header_height};
+	}
+}
+
+@media (max-width: 640px) {
+
+	$header_height: 60px;
+
+	:root {
+		--header_height: #{$header_height};
 	}
 }

@@ -1,7 +1,7 @@
 @import '../variables.scss';
 
 .uk-container-xlarge {
-	max-width: 1753px;
+	max-width: 1768px;
 }
 
 .uk-navbar-item,
@@ -35,4 +35,8 @@
 .uk-navbar-nav > li:hover > .link,
 .uk-navbar-nav > li > .link[aria-expanded=true] {
 	color: $color_primary_hover;
+}
+
+.uk-card-default {
+	box-shadow: none;
 }

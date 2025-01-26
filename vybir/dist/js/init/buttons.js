@@ -18,13 +18,11 @@ document.addEventListener("DOMContentLoaded", function() {
 			};
 		})(button), 610);
 	}
-
 	// find all buttons
 	let buttons = document.querySelectorAll('.button');
 	for (let i = 0, element; element = buttons[i]; i++) {
 		buttons[i].addEventListener("click", showButtonFader)
 	};
-
 	//find all toggle buttons
 	let toggleButtons = document.querySelectorAll('.toggle-button');
 	for (let i = 0, element; element = toggleButtons[i]; i++) {
@@ -32,8 +30,4 @@ document.addEventListener("DOMContentLoaded", function() {
 			toggleButtons[i].classList.toggle("active");
 		}
 	};
-
-
-	
-
 });
