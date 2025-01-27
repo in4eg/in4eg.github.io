@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Vybir :: Services</title>
+	<title>Vybir :: Detail Page</title>
 
 	<link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
 	<link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
@@ -40,7 +40,7 @@
 			</div>
 			<nav class="uk-nav main-nav" id="navbarNav">
 				<ul class="uk-navbar-nav" data-tablet="catalogMenuHeader" data-desktop="navbarNav">
-					<li class="uk-navbar-item uk-active">
+					<li class="uk-navbar-item">
 						<a class="link" href="services.html"><span class="text">Послуги</span></a>
 					</li>
 					<li class="uk-navbar-item">
@@ -72,12 +72,33 @@
 						</div>
 					</form>
 					<div class="login-button">
-						<!-- sign in button -->
-						<a class="uk-button uk-button-secondary uk-button-large button " href="#loginModal" uk-toggle>
-							Вхід/Реєстрація
-							<span class="fade"></span>
+						<!-- if user logged -->
+						<div class="uk-inline">
+							<button class="button uk-button button-square button uk-button-transparent spaced-right" type="button">
+								<i class="icon icon-user"></i>
+							</button>
+							<div class="uk-card uk-card-small uk-card-body uk-card-default user-menu-card" uk-drop="mode: click">
+								<button class="button uk-button button uk-button-transparent button-square logout-button" type="button">
+									<i class="icon icon-logout"></i>
+								</button>
+								<ul class="uk-nav-default user-menu-list" uk-nav>
+									<li class="uk-active">
+										<div class="text">
+											<div class="name">Василь П.</div>
+											<div class="marked currency">Курс 44,35</div>
+										</div>
+									</li>
+									<li><a href="#" class="text">Особисті дані</a></li>
+									<li><a href="#" class="text">Мої замовлення</a></li>
+									<li><a href="#" class="text">Мій кабінет</a></li>
+								</ul>
+							</div>
+						</div>
+						<a class="uk-button button button-square" href="#cartModal" uk-toggle>
+							<i class="icon icon-cart"></i>
+							<span class="count">199</span>
 						</a>
-						<!-- / sign in button -->
+					<!-- / if user logged -->
 					</div>
 				</div>
 			</div>

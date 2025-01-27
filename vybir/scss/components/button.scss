@@ -28,13 +28,14 @@
 	line-height: 40px;
 	font-weight: 600;
 
-	&:hover,
-	&:focus {
-		color: $color_white;
+	&.spaced-top {
+		margin-top: calc(var(--margin)*2);
 	}
-	&:active {
-		color: $color_white;
-	}
+}
+
+
+.button {
+	position: relative;
 
 	.fade {
 		position: absolute;
@@ -159,8 +160,15 @@
 	position: relative;
 	overflow: visible;
 
+	.icon,
+	.text {
+		position: relative;
+		z-index: 2;
+	}
+
 	.icon {
 		font-size: 24px;
+		top: -2px;
 	}
 
 	.count {
@@ -172,7 +180,45 @@
 		z-index: 1;
 		transition: .2s;
 		height: 1.7em;
+		min-width: 1.7em;
 		line-height: 1.9;
+	}
+
+	&:after {
+		content: '';
+		position: absolute;
+		top: 50%; left: 50%;
+		height: 100%; width: 100%;
+		border-radius: 50%;
+		background-color: $color_secondary_transparent;
+		transform: translate(-50%, -50%) scale(0);
+		transition: .2s;
+	}
+
+	&:focus,
+	&:hover {
+
+		.icon,
+		.text {
+			color: $color_white;
+		}
+
+		&:after {
+			transform: translate(-50%, -50%) scale(1);
+		}
+	}
+
+	&.active {
+
+		.icon,
+		.text {
+			color: $color_white;
+		}
+
+		&:after {
+			background-color: $color_secondary;
+			transform: translate(-50%, -50%) scale(1);
+		}
 	}
 }
 

@@ -3,7 +3,6 @@
 .main-header {
 	background-color: $color-primary;
 	height: var(--header_height);
-	padding: 9px 0;
 	position: relative;
 	z-index: 2;
 
@@ -34,7 +33,47 @@
 	.uk-navbar-nav > li > .link {
 		font-size: 15px;
 		font-weight: 600;
-		padding: 0 15px;
+		padding: 26px 20px;
+		color: $color_white;
+		display: block;
+		position: relative;
+
+		&:before {
+			content: '';
+			position: absolute;
+			top: 0; left: 0;
+			height: 100%; width: 100%;
+			background-color: $hover_transparent;
+			transition: .2s;
+			transform: scaleY(0.7);
+			opacity: 0;
+		}
+
+		.text {
+			position: relative;
+			z-index: 2;
+		}
+
+		&:hover {
+			color: $color_white;
+
+			&:before {
+				transform: scaleY(1);
+				opacity: 1;
+			}
+		}
+	}
+
+	.uk-navbar-nav > li.uk-active > {
+
+		.link {
+			color: $color_white;
+
+			&:before {
+				transform: scaleY(1);
+				opacity: 1;
+			}
+		}
 	}
 
 	.button.button-menu {
@@ -45,13 +84,19 @@
 		margin-left: 18px;
 		overflow: visible;
 
+		.lines {
+			transition: .2s;
+			position: relative;
+			z-index: 1;
+		}
+
 		&:after {
 			content: '';
 			position: absolute;
 			top: 50%; left: 50%;
 			height: 55px; width: 55px;
 			border-radius: 50%;
-			background-color: $color_secondary_transparent;
+			background-color: $hover_transparent;
 			transform: translate(-50%, -50%) scale(0);
 			transition: .2s;
 		}
@@ -61,6 +106,10 @@
 
 			&:after {
 				transform: translate(-50%, -50%) scale(1);
+			}
+
+			.lines {
+				transform: scale(0.9);
 			}
 		}
 	}
@@ -86,7 +135,7 @@
 			top: 50%; left: 50%;
 			height: 100%; width: 100%;
 			border-radius: 50%;
-			background-color: $color_secondary_transparent;
+			background-color: $hover_transparent;
 			transform: translate(-50%, -50%) scale(0);
 			transition: .2s;
 		}
@@ -168,7 +217,7 @@
 	.main-header {
 
 		.uk-navbar-nav {
-			gap: 15px;
+			gap: 0;
 		}
 	}
 }
@@ -196,10 +245,10 @@
 		}
 
 		.uk-navbar-nav {
-			gap: 5px;
+			gap: 0;
 
 			> li > .link {
-				padding: 0 10px;
+				padding: 21px 10px;
 			}
 		}
 	}
@@ -208,12 +257,14 @@
 @media (max-width: 1440px) {
 
 	.main-header {
+		padding: 8px 0;
 
 		.uk-logo {
 			width: 120px;
 		}
 
 		.uk-navbar-nav {
+			gap: 0;
 
 			> li > .link {
 				padding: 0 5px;
@@ -250,7 +301,7 @@
 @media (max-width: 640px) {
 
 	.main-header {
-		padding: 8px 0;
+		padding: 10px 0;
 
 		.user-menu {
 			margin-left: 18px;
@@ -282,4 +333,23 @@
 
 		}
 	}
+}
+
+@media (max-width: 340px) {
+
+	.main-header {
+
+		.button.button-menu {
+			margin: 0 5px;
+		}
+
+		.menu-inner {
+			gap: 0;
+		}
+
+		.user-menu {
+			margin: 0 5px 0 10px;
+		}
+	}
+
 }

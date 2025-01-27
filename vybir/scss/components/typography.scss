@@ -5,6 +5,11 @@ h1, h2, h3, h4 {
 	font-weight: 500;
 	line-height: 1.42;
 	color: $color_primary;
+
+	&::selection {
+		color: $color_white;
+		background-color: $color_primary;
+	}
 }
 
 div, a, p {
@@ -17,6 +22,7 @@ div, a, p {
 
 h1 {
 	font-size: var(--h1-font-size);
+	letter-spacing: 2.8px;
 }
 
 h2 {
@@ -38,6 +44,27 @@ h4 {
 	&.active {
 		color: $color_secondary_hover;
 	}
+}
+
+.subheader1 {
+	font-size: var(--subheader1-font-size);
+	color: $color_primary;
+	text-transform: none;
+	font-weight: 600;
+}
+
+.subheader2 {
+	font-size: var(--subheader2-font-size);
+	color: $color_primary;
+	text-transform: none;
+	font-weight: 600;
+}
+
+.subheader3 {
+	font-size: var(--subheader3-font-size);
+	color: $color_primary;
+	text-transform: none;
+	font-weight: 600;
 }
 
 

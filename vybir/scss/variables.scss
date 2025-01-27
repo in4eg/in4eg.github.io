@@ -3,6 +3,7 @@ $font: 'Wix Madefor Display', serif;
 
 /* typography */
 $font-size: 15px;
+$font-size_smaller: 14px;
 
 $h1-font-size: 72px;
 $h2-font-size: 64px;
@@ -30,6 +31,7 @@ $color_error: #A93040;
 $color_red: #D24539;
 $text_color: $color_primary;
 
+$hover_transparent: rgba(#B79C9033, 0.2);
 $color_secondary_transparent: rgba($color_secondary, 0.2);
 
 $global-link-color: $color_primary;
@@ -42,6 +44,7 @@ $footer_height: 448px;
 /*document*/
 :root {
 	--font-size: #{$font-size};
+	--font-size_smaller: #{$font-size_smaller};
 	--h1-font-size: #{$h1-font-size};
 	--h2-font-size: #{$h2-font-size};
 	--h3-font-size: #{$h3-font-size};

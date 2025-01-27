@@ -1,9 +1,11 @@
-<header class="main-header" id="mainHeader">
+<header class="main-header" id="mainHeader" uk-sticky>
 	<div class="uk-container uk-container-xlarge">
 		<div class="navbar-cover">
 			<div class="catalog-menu">
 				<button uk-toggle="target: #catalogMenuHeader; animation: uk-animation-fade; cls: active" type="button" class="button button-menu toggle-button uk-button">
-					<span></span>
+					<div class="lines">
+						<span></span>
+					</div>
 				</button>
 				<a class="uk-logo" href="index.html" aria-label="Back to Home">
 					<img src="img/logo_white.png" alt="logo" class="desktop-logo">
@@ -12,13 +14,27 @@
 			</div>
 			<nav class="uk-nav main-nav" id="navbarNav">
 				<ul class="uk-navbar-nav" data-tablet="catalogMenuHeader" data-desktop="navbarNav">
-					<li class="uk-navbar-item"><a class="link" href="services.html">Послуги</a></li>
-					<li class="uk-navbar-item"><a class="link" href="news.html">Статті та Новини</a></li>
-					<li class="uk-navbar-item"><a class="link" href="gallery.html">Галерея</a></li>
-					<li class="uk-navbar-item"><a class="link" href="partners.html">Партнери</a></li>
-					<li class="uk-navbar-item"><a class="link" href="delivery.html">Доставка/Оплата</a></li>
-					<li class="uk-navbar-item"><a class="link" href="contacts.html">Контакти</a></li>
-					<li class="uk-navbar-item"><a class="link" href="career.html">Вакансії</a></li>
+					<li class="uk-navbar-item">
+						<a class="link" href="services.html"><span class="text">Послуги</span></a>
+					</li>
+					<li class="uk-navbar-item">
+						<a class="link" href="news.html"><span class="text">Статті та Новини</span></a>
+					</li>
+					<li class="uk-navbar-item">
+						<a class="link" href="gallery.html"><span class="text">Галерея</span></a>
+					</li>
+					<li class="uk-navbar-item">
+						<a class="link" href="partners.html"><span class="text">Партнери</span></a>
+					</li>
+					<li class="uk-navbar-item">
+						<a class="link" href="delivery.html"><span class="text">Доставка/Оплата</span></a>
+					</li>
+					<li class="uk-navbar-item">
+						<a class="link" href="contacts.html"><span class="text">Контакти</span></a>
+					</li>
+					<li class="uk-navbar-item">
+						<a class="link" href="career.html"><span class="text">Вакансії</span></a>
+					</li>
 				</ul>
 			</nav>
 			<div class="user-menu">
