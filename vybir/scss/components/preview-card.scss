@@ -13,7 +13,7 @@
 
 		.image-cover,
 		.image-full {
-			padding-top: 73%;
+			padding-top: 73.3%;
 			margin-bottom: 0;
 			font-size: 0;
 		}
@@ -79,6 +79,8 @@
 			font-size: var(--font-size_smaller);
 			font-weight: 600;
 			z-index: 1;
+			opacity: 0;
+			transition: .3s;
 		}
 	}
 
@@ -114,21 +116,9 @@
 		position: absolute;
 		bottom: 16px; left: 21px;
 		color: $color_secondary;
-		font-size: var(--font-size);
-		font-weight: 600;
-		line-height: 1;
-
-		.digit {
-			font-size: var(--subheader2-font-size);
-			margin-right: 3px;
-		}
 
 		.old {
 			color: $color_primary;
-			font-size: var(--font-size_smaller);
-			display: block;
-			font-weight: 500;
-			text-decoration: line-through;
 		}
 	}
 
@@ -137,6 +127,13 @@
 
 		.details {
 			transform: translateY(0);
+		}
+
+		.image-inner {
+
+			.count {
+				opacity: 1;
+			}
 		}
 	}
 

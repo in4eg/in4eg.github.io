@@ -51,6 +51,11 @@
 			cursor: pointer;
 			line-height: 1.4;
 			margin-right: 29px;
+			color: $color_primary;
+
+			a {
+				color: $color_primary;
+			}
 
 			&:after {
 				content: '';
@@ -68,11 +73,12 @@
 				height: 100%; width: 100%;
 				background-color: $hover_transparent;
 				transition: .2s;
-				transform: scaleY(0.7);
+				transform: scaleY(0.8);
 				opacity: 0;
 			}
 
-			&.active {
+			&.active,
+			&.filter-active {
 				border: 2px solid $color_secondary;
 			}
 

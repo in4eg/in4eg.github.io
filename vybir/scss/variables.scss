@@ -4,13 +4,13 @@ $font: 'Wix Madefor Display', serif;
 /* typography */
 $font-size: 15px;
 $font-size_smaller: 14px;
+$font-size_middle: 28px;
 
 $h1-font-size: 72px;
 $h2-font-size: 64px;
 $h3-font-size: 48px;
 $h4-font-size: 40px;
 $h5-font-size: 36px;
-
 
 $subheader1-font-size: 24px;
 $subheader2-font-size: 20px;
@@ -45,10 +45,12 @@ $footer_height: 448px;
 :root {
 	--font-size: #{$font-size};
 	--font-size_smaller: #{$font-size_smaller};
+	--font-size_middle: #{$font-size_middle};
 	--h1-font-size: #{$h1-font-size};
 	--h2-font-size: #{$h2-font-size};
 	--h3-font-size: #{$h3-font-size};
 	--h4-font-size: #{$h4-font-size};
+	--h5-font-size: #{$h5-font-size};
 	--subheader1-font-size: #{$subheader1-font-size};
 	--subheader2-font-size: #{$subheader2-font-size};
 	--subheader3-font-size: #{$subheader3-font-size};
@@ -66,6 +68,7 @@ $footer_height: 448px;
 	$h2-font-size: 30px;
 	$h3-font-size: 22px;
 	$h4-font-size: 16px;
+	$h5-font-size: 16px;
 	$subheader1-font-size: 32px;
 	$subheader2-font-size: 24px;
 	$subheader3-font-size: 18px;
@@ -76,6 +79,7 @@ $footer_height: 448px;
 		--h2-font-size: #{$h2-font-size};
 		--h3-font-size: #{$h3-font-size};
 		--h4-font-size: #{$h4-font-size};
+		--h5-font-size: #{$h5-font-size};
 		--subheader1-font-size: #{$subheader1-font-size};
 		--subheader2-font-size: #{$subheader2-font-size};
 		--subheader3-font-size: #{$subheader3-font-size};

@@ -1,0 +1,19 @@
+@import '../variables.scss';
+
+.price {
+	font-size: var(--font-size);
+	font-weight: 600;
+	line-height: 1;
+
+	.digit {
+		font-size: var(--subheader2-font-size);
+		margin-right: 3px;
+	}
+
+	.old {
+		font-size: var(--font-size_smaller);
+		display: block;
+		font-weight: 500;
+		text-decoration: line-through;
+	}
+}

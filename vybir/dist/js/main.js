@@ -11,7 +11,6 @@ document.addEventListener("DOMContentLoaded", function() {
 			document.querySelector('.fade', _this).classList.add('active');
 		})(button), 1);
 		setTimeout((function(_this) {
-			console.warn(document.querySelector('.fade', _this))
 			document.querySelector('.fade', _this).classList.remove('active');
 		})(button), 610);
 	}
@@ -108,3 +107,18 @@ document.addEventListener("DOMContentLoaded", function() {
 	})();
 	window.onresize = teleport;
 })
+document.addEventListener("DOMContentLoaded", function() {
+	let toggleButtons = document.querySelectorAll('[uk-filter-control]');
+	for (let i = 0, element; element = toggleButtons[i]; i++) {
+		toggleButtons[i].onclick = function(){
+			for (let button of toggleButtons[i].parentNode.childNodes) {
+				if (button.classList) {
+					button.classList.remove('filter-active');
+				}
+			}
+			toggleButtons[i].classList.add("filter-active");
+		};
+	};
+});
+
+

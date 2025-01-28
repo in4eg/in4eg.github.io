@@ -11,7 +11,6 @@ document.addEventListener("DOMContentLoaded", function() {
 			document.querySelector('.fade', _this).classList.add('active');
 		})(button), 1);
 		setTimeout((function(_this) {
-			console.warn(document.querySelector('.fade', _this))
 			document.querySelector('.fade', _this).classList.remove('active');
 		})(button), 610);
 	}

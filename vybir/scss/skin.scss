@@ -116,6 +116,7 @@ img.adaptive {
 		top: 0; left: 50%;
 		height: 100%; width: auto;
 		transform: translateX(-50%);
+		max-width: none;
 
 		&.vertical {
 			top: 50%; left: 0;

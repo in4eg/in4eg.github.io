@@ -67,6 +67,16 @@ h4 {
 	font-weight: 600;
 }
 
+.icon-line {
+	width: 20px;
+	height: 1px;
+	background-color: $color_primary;
+	display: inline-block;
+	vertical-align: middle;
+	margin-left: 5px;
+	transition: .2s;
+}
+
 
 @media (max-width: 768px) {
 

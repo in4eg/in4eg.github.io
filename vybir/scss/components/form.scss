@@ -8,30 +8,14 @@
 		height: 55px;
 		line-height: 40px;
 		font-size: var(--font-size);
+		color: $color_primary;
+
+		&::placeholder {
+			color: $color_primary;
+		}
 	}
 
-	.form-element {
-		position: relative;
-
-		.input {
-			color: $color_primary;
-
-			&::placeholder {
-				color: $color_primary;
-			}
-
-			&.with-icon {
-				padding-left: 50px;
-			}
-		}
-
-		.icon {
-			position: absolute;
-			left: 10px; top: 50%;
-			transform: translateY(-50%);
-			color: $color_primary;
-			font-size: 24px;
-		}
+	.form-group {
 
 		&.error {
 
@@ -63,17 +47,38 @@
 			}
 		}
 	}
+
+	.form-group.form-icon-group {
+		position: relative;
+
+		.input {
+			padding-left: 50px;
+		}
+
+		&.with-icon {
+			padding-left: 50px;
+		}
+
+		.icon {
+			position: absolute;
+			left: 10px; top: 50%;
+			transform: translateY(-50%);
+			color: $color_primary;
+			font-size: 24px;
+		}
+	}
+}
+
+.form.inline-form {
+	display: flex;
 }
 
 @media (max-width: 1768px) {
 
 	.form {
 
-		.form-element {
-
-			.input {
-				height: 45px;
-			}
+		.input {
+			height: 45px;
 		}
 	}
 }
@@ -82,18 +87,18 @@
 
 	.form {
 
-		.form-element {
+		.input {
+			height: 34px;
+
+			&.with-icon {
+				padding-left: 35px;
+			}
+		}
+
+		.form-group.form-icon-group {
 
 			.icon {
 				font-size: 16px;
-			}
-
-			.input {
-				height: 34px;
-
-				&.with-icon {
-					padding-left: 35px;
-				}
 			}
 		}
 	}
