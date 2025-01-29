@@ -1,0 +1,48 @@
+@import '../variables.scss';
+
+	.social-list {
+		font-size: 0;
+		margin: 0 -5px;
+
+		.list-item {
+			display: inline-block;
+			vertical-align: middle;
+			padding: 5px;
+		}
+	}
+
+	.social-link {
+		color: $color_secondary;
+		margin-top: 2px;
+		font-size: 21px;
+		height: 24px; width: 24px;
+		line-height: 24px;
+		position: relative;
+		text-align: center;
+
+		&:before {
+			content: '';
+			position: absolute;
+			top: 50%; left: 50%;
+			height: 30px; width: 30px;
+			background-color: $hover_transparent;
+			transition: .2s;
+			transform: translate(-50%, -50%) scaleY(0.7);
+			opacity: 0;
+			border-radius: 50%;
+		}
+
+		.icon {
+			position: relative;
+			top: -3px;
+		}
+
+		&:hover {
+			color: $color_secondary_hover;
+
+			&:before {
+				transform: translate(-50%, -50%)  scaleY(1);
+				opacity: 1;
+			}
+		}
+	}

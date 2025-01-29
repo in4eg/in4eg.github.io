@@ -1,0 +1,84 @@
+@import '../variables.scss';
+
+h1, h2, h3, h4, h5 {
+	text-transform: none;
+	font-weight: 500;
+	line-height: 1.42;
+	color: $color_primary;
+
+	&::selection {
+		color: $color_white;
+		background-color: $color_primary;
+	}
+}
+
+div, a, p, span {
+
+	&::selection {
+		color: $color_white;
+		background-color: $color_primary;
+	}
+}
+
+h1 {
+	font-size: var(--h1-font-size);
+	letter-spacing: 2.8px;
+}
+
+h2 {
+	font-size: var(--h2-font-size);
+}
+
+h3 {
+	font-size: var(--h3-font-size);
+}
+
+h4 {
+	font-size: var(--h4-font-size);
+}
+
+.link {
+	color: $color_primary;
+
+	&:hover,
+	&.active {
+		color: $color_secondary_hover;
+	}
+}
+
+.subheader1 {
+	font-size: var(--subheader1-font-size);
+	color: $color_primary;
+	text-transform: none;
+	font-weight: 600;
+}
+
+.subheader2 {
+	font-size: var(--subheader2-font-size);
+	color: $color_primary;
+	text-transform: none;
+	font-weight: 600;
+}
+
+.subheader3 {
+	font-size: var(--subheader3-font-size);
+	color: $color_primary;
+	text-transform: none;
+	font-weight: 600;
+}
+
+.icon-line {
+	width: 20px;
+	height: 1px;
+	background-color: $color_primary;
+	display: inline-block;
+	vertical-align: middle;
+	margin-left: 5px;
+	transition: .2s;
+}
+
+
+@media (max-width: 768px) {
+
+
+}

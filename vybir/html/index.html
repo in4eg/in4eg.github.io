@@ -19,8 +19,8 @@
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Wix+Madefor+Display:wght@400..800&display=swap" rel="stylesheet">
 
-	<link rel="stylesheet" href="uikit/css/uikit.min.css">
-	<link rel="stylesheet" href="css/bundle.min.css">
+	<link rel="stylesheet" href="css/ui-kit.css">
+	<link rel="stylesheet" href="css/theme.css">
 </head>
 <body id="innerBody">
 	<!-- header -->
@@ -30,19 +30,27 @@
 		<!-- slider section -->
 		<section class="slider-section">
 			<div class="uk-container uk-container-xlarge">
-				<div class="uk-grid-collapse uk-grid uk-child-width-expand@s">
-					<div class="uk-width-1-6@m">
-						<!-- catalog menu -->
-						<div class="catalog-menu">
-							@@include('./includes/catalog-menu.html')
+				<div class="menu-cover-page">
+					<div class="uk-grid-collapse uk-grid uk-child-width-expand@s">
+						<div class="uk-width-1-6@m">
+							<!-- catalog menu -->
+							<div class="catalog-menu">
+								@@include('./includes/catalog-menu-page.html')
+							</div>
+							<!-- / catalog menu -->
 						</div>
-						<!-- / catalog menu -->
-					</div>
-					<div class="slider-cover">
-						@@include('./includes/main-slider.html')
+						<!-- catalog inner navigation -->
+						<div class="catalog-submenu-page">
+							<!-- ('./includes/catalog-menu-submenu-page.html') -->
+						</div>
+						<!-- / catalog inner navigation -->
+						<div class="slider-cover">
+							@@include('./includes/main-slider.html')
+						</div>
 					</div>
 				</div>
 			</div>
+
 		</section>
 		<!-- / slider section-->
 		<!-- partners -->

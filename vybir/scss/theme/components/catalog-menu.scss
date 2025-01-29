@@ -1,0 +1,119 @@
+@import '../variables.scss';
+
+.catalog-menu {
+	max-height: calc(100vh - var(--header_height));
+	overflow: auto;
+
+	.catalog-card {
+		background-color: $color_white;
+	}
+
+	&.header-menu {
+		position: absolute;
+		top: 100%; left: 0;
+		width: 100%;
+		display: none;
+		z-index: 10;
+		height: calc(100vh - var(--header_height));
+
+		&.active {
+			display: block;
+		}
+
+		.catalog-menu-submenu {
+			height: calc(100vh - var(--header_height));
+		}
+
+		.catalog-card {
+			background-color: transparent;
+		}
+	}
+
+	.menu-light-cover {
+		background-color: $color_white;
+	}
+
+	.catalog-tabs {
+
+		.tab-item {
+
+			&.uk-active,
+			&.active {
+
+				.cover {
+					background-color: rgba($color_secondary, 0.08);
+					color: $color_secondary;
+				}
+			}
+		}
+
+		.cover {
+			font-size: 16px;
+			color: $color_primary;
+			padding: 15px 45px 16px 65px;
+			font-weight: 600;
+			position: relative;
+			display: block;
+			line-height: 1.2;
+
+			.title-icon {
+				position: absolute;
+				top: 50%; left: 30px;
+				transform: translateY(-50%);
+			}
+
+			.caret {
+				position: absolute;
+				top: 50%; right: 30px;
+				transform: translateY(-50%);
+				font-size: 10px;
+				margin-top: 2px;
+			}
+
+			&:hover {
+				color: $color_secondary;
+			}
+		}
+	}
+
+	.tab-content {
+		background-image: url(../img/logo-mask.png);
+		background-repeat: no-repeat;
+		background-position: right bottom;
+		padding: 10px 15px;
+		height: 100%;
+	}
+
+	.header-catalog {
+		background-color: $hover_transparent;
+		height: 100%;
+		padding-left: 0;
+		padding-right: 0;
+	}
+
+	.uk-navbar-nav {
+		background-color: red;
+	}
+}
+
+
+.catalog-menu-submenu {
+	height: 100%;
+	max-height: calc(100vh - var(--header_height));
+	overflow: auto;
+
+	> .uk-card-body {
+		height: 100%;
+	}
+}
+
+@media (min-width: 1440px) {
+
+	.catalog-menu {
+
+		.uk-navbar-nav {
+			display: none;
+		}
+	}
+}
+

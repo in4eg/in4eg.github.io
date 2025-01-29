@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'icomoon';
-  src:  url('fonts/icomoon.eot?c9rcpe');
-  src:  url('fonts/icomoon.eot?c9rcpe#iefix') format('embedded-opentype'),
-    url('fonts/icomoon.ttf?c9rcpe') format('truetype'),
-    url('fonts/icomoon.woff?c9rcpe') format('woff'),
-    url('fonts/icomoon.svg?c9rcpe#icomoon') format('svg');
+  src:  url('fonts/icomoon.eot?sp9gka');
+  src:  url('fonts/icomoon.eot?sp9gka#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?sp9gka') format('truetype'),
+    url('fonts/icomoon.woff?sp9gka') format('woff'),
+    url('fonts/icomoon.svg?sp9gka#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -25,21 +25,6 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-support:before {
-  content: "\e909";
-}
-.icon-telegram:before {
-  content: "\e90a";
-}
-.icon-youtube:before {
-  content: "\e90b";
-}
-.icon-instagram:before {
-  content: "\e90c";
-}
-.icon-facebook:before {
-  content: "\e90d";
-}
 .icon-logout:before {
   content: "\e908";
 }
@@ -114,4 +99,64 @@
 }
 .icon-user:before {
   content: "\e933";
+}
+.icon-gallery_all:before {
+  content: "\e909";
+}
+.icon-gallery_photo:before {
+  content: "\e90e";
+}
+.icon-gallery_video:before {
+  content: "\e90f";
+}
+.icon-facebook:before {
+  content: "\e90a";
+}
+.icon-instagram:before {
+  content: "\e90b";
+}
+.icon-telegram:before {
+  content: "\e90c";
+}
+.icon-youtube:before {
+  content: "\e90d";
+}
+.icon-support:before {
+  content: "\e918";
+}
+.icon-catalog_bath:before {
+  content: "\e919";
+}
+.icon-catalog_chair:before {
+  content: "\e91a";
+}
+.icon-catalog_decor:before {
+  content: "\e91b";
+}
+.icon-catalog_doors:before {
+  content: "\e924";
+}
+.icon-catalog_furniture:before {
+  content: "\e926";
+}
+.icon-catalog_inner:before {
+  content: "\e927";
+}
+.icon-catalog_kitchen:before {
+  content: "\e928";
+}
+.icon-catalog_lights:before {
+  content: "\e929";
+}
+.icon-catalog_matherials:before {
+  content: "\e92c";
+}
+.icon-catalog_tag:before {
+  content: "\e92d";
+}
+.icon-cross:before {
+  content: "\e92e";
+}
+.icon-gallery_albums:before {
+  content: "\e934";
 }

@@ -1,0 +1,60 @@
+@import '../variables.scss';
+
+.main-footer {
+	background-color: $color-white;
+	height: var(--footer_height);
+	color: $color_black;
+	padding: 43px 0;
+
+	.subheader2 {
+		color: $color_black;
+		font-weight: 700;
+		margin-top: 0;
+		margin-bottom: 5px;
+	}
+
+	.uk-list {
+		margin-top: 9px;
+
+		.list-item {
+			margin-top: 8px;
+		}
+	}
+
+	.link {
+		font-size: var(--subheader3-font-size);
+		color: rgba($color_black, 0.6);
+	}
+
+
+	.nav-item {
+		margin-top: 16px;
+
+		.link {
+			color: rgba($color_black, 0.4);
+			font-size: var(--subheader2-font-size);
+			font-weight: 700;
+
+			&:hover {
+				color: $color_secondary;
+			}
+		}
+	}
+
+	.bordered-box {
+		border-top: 1px solid rgba($color_black, 0.1);
+		margin-top: 33px;
+		padding-top: 29px;
+	}
+
+	.title {
+		font-size: var(--subheader3-font-size);
+		color: rgba($color_black, 0.8);
+		padding-right: 28px;
+		padding-top: 10px;
+
+		.copy {
+			margin-right: 15px;
+		}
+	}
+}

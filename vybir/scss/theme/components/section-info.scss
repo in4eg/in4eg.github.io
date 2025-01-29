@@ -1,0 +1,30 @@
+@import '../variables.scss';
+
+.section-info {
+	padding-top: 73px;
+	padding-bottom: 48px;
+
+	.section-title {
+		margin-bottom: 23px;
+	}
+
+	.description {
+		max-width: 66%;
+		margin: 0 auto;
+		display: block;
+		line-height: 1.67;
+		font-size: var(--font-size_smaller);
+	}
+
+	.uk-grid {
+		margin-top: 58px;
+
+		> div:not(.uk-first-column) {
+			padding-left: 20px;
+		}
+
+		> .uk-grid-margin {
+			margin-top: 20px;
+		}
+	}
+}

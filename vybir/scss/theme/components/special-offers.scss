@@ -1,0 +1,21 @@
+@import '../variables.scss';
+
+.special-offers {
+	padding-top: 51px;
+	padding-bottom: 48px;
+
+	.section-title {
+		margin-bottom: 25px;
+	}
+
+	.uk-grid-small {
+
+		> div:nth-child(even) {
+			padding-left: 20px;
+		}
+
+		> .uk-grid-margin {
+			margin-top: 25px;
+		}
+	}
+}
