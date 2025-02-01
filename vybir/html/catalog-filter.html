@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="ua">
+<head>
+	<meta charset="UTF-8">
+	<title>Vybir :: Catalog Filter</title>
+
+	<link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
+	<link rel="manifest" href="/favicon/site.webmanifest">
+	<link rel="mask-icon" href="/favicon/safari-pinned-tab.svg" color="#314961">
+	<meta name="msapplication-TileColor" content="#314961">
+	<meta name="theme-color" content="#314961">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+	<meta name="format-detection" content="telephone=no">
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Wix+Madefor+Display:wght@400..800&display=swap" rel="stylesheet">
+
+	<link rel="stylesheet" href="css/ui-kit.css">
+	<link rel="stylesheet" href="css/theme.css">
+</head>
+<body id="innerBody">
+	<!-- header -->
+	@@include('./includes/header.html')
+
+	<main class="page-main" id="pageMain">
+		<!-- breadcrumbs -->
+		<div class="breadcrumbs">
+			<div class="uk-container uk-container-xlarge">
+				<nav aria-label="Breadcrumb">
+					<ul class="uk-breadcrumb">
+						<li><a href="catalog.html">Каталог</a></li>
+						<li><a href="catalog-category.html">Меблева фурнітура</a></li>
+						<li><a href="catalog-subcategory.html">Меблеві ручки та гачки</a></li>
+						<li><span>Ручки Giusti</span></li>
+					</ul>
+				</nav>
+			</div>
+		</div>
+		<!-- / breadcrumbs -->
+		<div class="main-menu-grid">
+			<div class="uk-container uk-container-xlarge">
+				<div class="menu-cover-page">
+					<div class="uk-grid-collapse uk-grid uk-child-width-expand@s">
+						<div class="uk-width-1-6 menu-cover">
+							<div uk-sticky="end: !.menu-cover-page; offset: 73">
+								<!-- catalog filters -->
+								<div class="catalog-filters" >
+									@@include('./includes/filters.html')
+								</div>
+								<!-- / catalog filters -->
+								<!-- special offers -->
+								<div class="uk-margin-small-top">
+									<!-- 1 -->
+									<div class="offer-item offer-item-vertical offer-item-primary">
+										<div class="item-inner">
+											<figure class="element-figure image-cover">
+												<img src="img/temp/offer1.png" alt="offer" draggable="false" class="vertical">
+												<figcaption class="image-caption caption-secondary">-20% до 11/02/2025</figcaption>
+											</figure>
+											<div class="text-cover">
+												<div class="verticaly-middle">
+													<div class="inner">
+														<h5 class="element-title">Замовлення дверей зі знижкою</h5>
+														<div class="button-cover">
+															<a href="catalog.html" class="button uk-button button-light">
+																<span class="text">Дивитися</span>
+																<span class="fade"></span>
+															</a>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<!-- 2 -->
+									<div class="offer-item offer-item-vertical offer-item-primary">
+										<div class="item-inner">
+											<figure class="element-figure image-cover">
+												<img src="img/temp/offer1.png" alt="offer" draggable="false" class="vertical">
+												<figcaption class="image-caption caption-secondary">-20% до 11/02/2025</figcaption>
+											</figure>
+											<div class="text-cover">
+												<div class="verticaly-middle">
+													<div class="inner">
+														<h5 class="element-title">Замовлення дверей зі знижкою</h5>
+														<div class="button-cover">
+															<a href="catalog.html" class="button uk-button button-light">
+																<span class="text">Дивитися</span>
+																<span class="fade"></span>
+															</a>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<!-- /special offers -->
+							</div>
+						</div>
+						<!-- page content column -->
+						<div class="page-cover">
+							<div class="uk-card-small uk-card-body uk-card-collapsed-top uk-card-transparent">
+								<div class="header-filter uk-grid-collapse" uk-grid>
+									<div>
+										<a href="catalog-subcategory.html" class="uk-button filter-back-button" uk-tooltip="Повернутись назад">
+											<i class="icon icon-caret_left"></i>
+										</a>
+									</div>
+									<div class="uk-width-auto">
+										<h1 class="h4-header-font filter-title">Ручки Giusti</h1>
+									</div>
+									<div class="uk-width-expand uk-text-right">
+										<a href="blank.pdf" download uk-tooltip="Завантажити прайс" class="download-link">
+											<i class="icon icon-download"></i>
+											<span class="text">Прайс</span>
+										</a>
+									</div>
+								</div>
+								<!-- selected tags -->
+								<div class="selected-tags">
+									<!-- 1 -->
+									<div class="tag-cover">
+										<div class="tag-item uk-button uk-tag-button" uk-tooltip="Видалити фільтр"
+										>
+											<div class="text">HPL</div>
+											<i class="icon icon-close uk-tag-remove-icon"></i>
+										</div>
+									</div>
+									<!-- 2 -->
+									<div class="tag-cover">
+										<div class="tag-item uk-button uk-tag-button" uk-tooltip="Видалити фільтр"
+										>
+											<div class="text">Feelwood</div>
+											<i class="icon icon-close uk-tag-remove-icon"></i>
+										</div>
+									</div>
+									<!-- 3 -->
+									<div class="tag-cover">
+										<div class="tag-item uk-button uk-tag-button" uk-tooltip="Видалити фільтр"
+										>
+											<div class="text">Деревоподібні</div>
+											<i class="icon icon-close uk-tag-remove-icon"></i>
+										</div>
+									</div>
+									<!-- 4 -->
+									<div class="tag-cover">
+										<div class="tag-item uk-button uk-tag-button" uk-tooltip="Видалити фільтр"
+										>
+											<div class="text">Однокольорові (unicolor)</div>
+											<i class="icon icon-close uk-tag-remove-icon"></i>
+										</div>
+									</div>
+									<!-- 5 -->
+									<div class="tag-cover">
+										<div class="tag-item uk-button uk-tag-button" uk-tooltip="Видалити фільтр"
+										>
+											<div class="text">Довжина: 4100 мм</div>
+											<i class="icon icon-close uk-tag-remove-icon"></i>
+										</div>
+									</div>
+									<!-- 6 -->
+									<div class="tag-cover">
+										<div class="tag-item uk-button uk-tag-button" uk-tooltip="Видалити фільтр"
+										>
+											<div class="text">Довжина: 4200 мм</div>
+											<i class="icon icon-close uk-tag-remove-icon"></i>
+										</div>
+									</div>
+									<!-- 7 -->
+									<div class="tag-cover">
+										<div class="tag-item uk-button uk-tag-button" uk-tooltip="Видалити фільтр"
+										>
+											<div class="text">Ширина: 650 мм</div>
+											<i class="icon icon-close uk-tag-remove-icon"></i>
+										</div>
+									</div>
+									<!-- 8 -->
+									<div class="tag-cover">
+										<div class="tag-item uk-button uk-tag-button" uk-tooltip="Видалити фільтр"
+										>
+											<div class="text">Ширина: 900 мм</div>
+											<i class="icon icon-close uk-tag-remove-icon"></i>
+										</div>
+									</div>
+									<!-- 9 -->
+									<div class="tag-cover">
+										<div class="tag-item uk-button uk-tag-button" uk-tooltip="Видалити фільтр"
+										>
+											<div class="text">Товщина: 38 мм</div>
+											<i class="icon icon-close uk-tag-remove-icon"></i>
+										</div>
+									</div>
+									<!-- 10 -->
+									<div class="tag-cover">
+										<div class="tag-item uk-button uk-tag-button" uk-tooltip="Видалити фільтр"
+										>
+											<div class="text">Товщина: 39 мм</div>
+											<i class="icon icon-close uk-tag-remove-icon"></i>
+										</div>
+									</div>
+									<!-- 11 -->
+									<div class="tag-cover">
+										<div class="tag-item uk-button uk-tag-button" uk-tooltip="Видалити фільтр"
+										>
+											<div class="text">LuxeForm</div>
+											<i class="icon icon-close uk-tag-remove-icon"></i>
+										</div>
+									</div>
+									<!-- 12 -->
+									<div class="tag-cover">
+										<div class="tag-item uk-button uk-tag-button" uk-tooltip="Видалити фільтр"
+										>
+											<div class="text">Westag & Getalit AG</div>
+											<i class="icon icon-close uk-tag-remove-icon"></i>
+										</div>
+									</div>
+									<!-- 13 -->
+									<div class="tag-cover">
+										<div class="tag-item uk-button uk-tag-button" uk-tooltip="Видалити фільтр"
+										>
+											<div class="text">2017-2019</div>
+											<i class="icon icon-close uk-tag-remove-icon"></i>
+										</div>
+									</div>
+									<!-- 14 -->
+									<div class="tag-cover">
+										<div class="tag-item uk-button uk-tag-button" uk-tooltip="Видалити фільтр"
+										>
+											<div class="text">2020-2022</div>
+											<i class="icon icon-close uk-tag-remove-icon"></i>
+										</div>
+									</div>
+									<!-- 15 -->
+									<div class="tag-cover">
+										<div class="tag-item uk-button uk-tag-button" uk-tooltip="Видалити фільтр"
+										>
+											<div class="text">під замовлення</div>
+											<i class="icon icon-close uk-tag-remove-icon"></i>
+										</div>
+									</div>
+									<!-- remove all -->
+									<div class="tag-cover">
+										<div class="tag-item uk-button uk-tag-button" uk-tooltip="Видалити всі фільтри"
+										>
+											<div class="text">Видалити всі фільтри</div>
+											<i class="icon icon-close uk-tag-remove-icon"></i>
+										</div>
+									</div>
+								</div>
+								<!-- / selected tags -->
+								<!-- sorting + pagination -->
+								<div class="elements-sorting">
+									<div class="uk-grid-collapse" uk-grid>
+										<div class="uk-width-auto"><!-- pagination -->
+											@@include('./includes/pagination.html')
+										</div><!-- /pagination -->
+										<div class="uk-width-expand uk-text-right">
+											<!-- sorting -->
+											<div class="selecter-cover">
+												<label for="sortBy" class="select-label">Сортувати по:</label>
+												<select name="sortBy" id="sortBy" class="select">
+													<option value="Останні данні" selected>Останні данні</option>
+													<option value="Новинки">Новинки</option>
+													<option value="Відсоток знижки">Відсоток знижки</option>
+													<option value="Вартість за зростанням">Вартість за зростанням</option>
+													<option value="Вартість за спаданням">Вартість за спаданням</option>
+													<option value="Популярні товари">Популярні товари</option>
+												</select>
+											</div>
+											<!-- /sorting -->
+											<!-- pages -->
+											<div class="selecter-cover">
+												<label for="pageCount" class="select-label">Товарів на сторінці:</label>
+												<select name="pageCount" id="pageCount" class="select">
+													<option value="24" selected>24</option>
+													<option value="50">50</option>
+													<option value="100">100</option>
+													<option value="150">150</option>
+													<option value="Всі">Всі</option>
+												</select>
+											</div>
+										</div><!-- /pages -->
+									</div>
+								</div>
+								<!-- / sorting + pagination -->
+								<!-- elements -->
+								<div class="uk-grid-small uk-child-width-1-2@s uk-child-width-1-2@m uk-child-width-1-3@l uk-child-width-1-4@xl" uk-grid>
+									<!-- 1 -->
+									<div>
+										@@include('./includes/element-card1.html')
+									</div>
+									<!-- 2 -->
+									<div>
+										@@include('./includes/element-card1_1.html')
+									</div>
+									<!-- 3 -->
+									<div>
+										@@include('./includes/element-card2.html')
+									</div>
+									<!-- 4 -->
+									<div>
+										@@include('./includes/element-card2_1.html')
+									</div>
+									<!-- 5 -->
+									<div>
+										@@include('./includes/element-card3.html')
+									</div>
+									<!-- 6 -->
+									<div>
+										@@include('./includes/element-card3_1.html')
+									</div>
+									<!-- 1 -->
+									<div>
+										@@include('./includes/element-card1.html')
+									</div>
+									<!-- 2 -->
+									<div>
+										@@include('./includes/element-card1_1.html')
+									</div>
+									<!-- 3 -->
+									<div>
+										@@include('./includes/element-card2.html')
+									</div>
+									<!-- 4 -->
+									<div>
+										@@include('./includes/element-card2_1.html')
+									</div>
+									<!-- 5 -->
+									<div>
+										@@include('./includes/element-card3.html')
+									</div>
+									<!-- 6 -->
+									<div>
+										@@include('./includes/element-card3_1.html')
+									</div>
+									<!-- 1 -->
+									<div>
+										@@include('./includes/element-card1.html')
+									</div>
+									<!-- 2 -->
+									<div>
+										@@include('./includes/element-card1_1.html')
+									</div>
+									<!-- 3 -->
+									<div>
+										@@include('./includes/element-card2.html')
+									</div>
+									<!-- 4 -->
+									<div>
+										@@include('./includes/element-card2_1.html')
+									</div>
+									<!-- 5 -->
+									<div>
+										@@include('./includes/element-card3.html')
+									</div>
+									<!-- 6 -->
+									<div>
+										@@include('./includes/element-card3_1.html')
+									</div>
+								</div>
+								<!-- / elements -->
+								<!-- pagination -->
+								<div class="uk-margin-medium-top">
+									@@include('./includes/pagination.html')
+								</div>
+								<!-- /pagination -->
+								<!-- description -->
+								<div class="uk-text-meta uk-margin-large-top">
+									<p>
+										Стільниці від компанії Еггер виготовляються з ДСП, покритого паперово-шаровим пластиком. Їхня міцність робить їх ідеальним вибором для кухонних поверхонь, що витримують значні навантаження. У нашому асортименті ви знайдете стільниці, виготовлені із застосуванням технології постформінгу, а також нові моделі із прямими крайками у двох довжинах: 4100мм та 3050мм.
+									</p>
+									<p>
+										Вибирайте стільниці EGGER, створені спеціально для кухонних просторів. Придбати можна у ВКФ Вибір як цілими, так і в порізці у Києві, Одесі, Дніпрі, Львові, з доставкою по всій Україні за найвигіднішими цінами. Для кожної стільниці передбачена крайка, що ідеально підходить по декору. Створіть привабливий простір з нашими кухонними стільницями за доступними цінами.
+									</p> 
+								</div>
+								<!-- /description -->
+							</div>
+						</div>
+						<!-- / page content column -->
+					</div>
+				</div>
+			</div>
+		</div>
+	</main>
+
+	<!-- footer -->
+	@@include('./includes/footer.html')
+
+
+	<script src="js/uikit/uikit.min.js"></script>
+	<!-- custom js -->
+	<script src="js/main.js"></script>
+</body>
+</html>

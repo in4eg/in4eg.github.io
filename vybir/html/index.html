@@ -28,11 +28,11 @@
 	<!-- / header -->
 	<main class="page-main" id="pageMain">
 		<!-- slider section -->
-		<section class="slider-section">
+		<section class="slider-section main-menu-grid">
 			<div class="uk-container uk-container-xlarge">
 				<div class="menu-cover-page">
 					<div class="uk-grid-collapse uk-grid uk-child-width-expand@s">
-						<div class="uk-width-1-6@m">
+						<div class="uk-width-1-6 menu-cover">
 							<!-- catalog menu -->
 							<div class="catalog-menu">
 								@@include('./includes/catalog-menu-page.html')
@@ -41,7 +41,7 @@
 						</div>
 						<!-- catalog inner navigation -->
 						<div class="catalog-submenu-page">
-							<!-- ('./includes/catalog-menu-submenu-page.html') -->
+							@@include('./includes/catalog-menu-submenu-page.html')
 						</div>
 						<!-- / catalog inner navigation -->
 						<div class="slider-cover">
@@ -50,7 +50,6 @@
 					</div>
 				</div>
 			</div>
-
 		</section>
 		<!-- / slider section-->
 		<!-- partners -->
@@ -83,9 +82,8 @@
 	@@include('./includes/footer.html')
 
 
-	<script src="uikit/js/uikit.min.js"></script>
+	<script src="js/uikit/uikit.min.js"></script>
 	<!-- custom js -->
 	<script src="js/main.js"></script>
-	<!-- <script src="uikit/js/uikit-icons.min.js"></script> -->
 </body>
 </html>

@@ -43,3 +43,12 @@
 // @mixin hook-inverse-breadcrumb-item-active(){}
 
 // @mixin hook-inverse-breadcrumb-divider(){}
+
+
+.breadcrumbs {
+	padding: $global-margin 0;
+}
+.breadcrumbs .uk-breadcrumb > :last-child > span,
+.breadcrumbs .uk-breadcrumb > :last-child > a:not([href]) {
+	color: $global-muted-color;
+}

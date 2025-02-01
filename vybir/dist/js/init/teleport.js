@@ -14,7 +14,12 @@ document.addEventListener("DOMContentLoaded", function() {
 			let parent = elem.dataset.desktop;
 			let destination = elem.dataset.tablet;
 			if (window.innerWidth <= tabletBrakepoint) {
-				document.getElementById(destination).prepend(elem);
+				if (elem.dataset.tabletBefore) {
+					let before = elem.dataset.tabletBefore;
+					document.getElementById(destination).insertBefore(elem, document.getElementById(before));
+				} else {
+					document.getElementById(destination).append(elem);
+				}
 			} else {
 				document.getElementById(parent).append(elem);
 			}
@@ -25,7 +30,7 @@ document.addEventListener("DOMContentLoaded", function() {
 			let parent = elem.dataset.desktop;
 			let destination = elem.dataset.mobile;
 			if (window.innerWidth <= tabletBrakepoint) {
-				document.getElementById(destination).prepend(elem);
+				document.getElementById(destination).append(elem);
 			} else {
 				document.getElementById(parent).append(elem);
 			}

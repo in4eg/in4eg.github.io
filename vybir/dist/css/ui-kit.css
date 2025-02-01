@@ -1,7 +1,144 @@
 @charset "UTF-8";
+:root {
+  --font-size: 15px;
+  --font-size_smaller: 14px;
+  --font-size_middle: 28px;
+  --h1-font-size: 72px;
+  --h2-font-size: 64px;
+  --h3-font-size: 48px;
+  --h4-font-size: 40px;
+  --h5-font-size: 36px;
+  --subheader1-font-size: 24px;
+  --subheader2-font-size: 20px;
+  --subheader3-font-size: 16px
+}
+@media (max-width:1810px) {
+  :root {
+    --subheader2-font-size: 18px
+  }
+}
+@media (max-width:1650px) {
+  :root {
+    --h1-font-size: 64px
+  }
+}
+@media (max-width:1520px) {
+  :root {
+    --h1-font-size: 62px;
+    --subheader2-font-size: 16px
+  }
+}
+@media (max-width:1440px) {
+  :root {
+    --h1-font-size: 50px;
+    --h4-font-size: 38px;
+    --h5-font-size: 30px;
+    --font-size_middle: 24px;
+    --subheader1-font-size: 20px;
+    --subheader3-font-size: 14px;
+    --font-size_smaller: 10px
+  }
+}
+.uk-button {
+  background: 0 0;
+  border: 1px solid transparent;
+  white-space: nowrap
+}
+.uk-button.uk-button-light {
+  background-color: #fff;
+  border: 1px solid rgba(183,156,144,.2);
+  color: #000
+}
+.uk-button.uk-button-light:hover {
+  border-color: #a24f35;
+  color: #fff;
+  background-color: #a24f35
+}
+.uk-button.uk-tag-button {
+  background-color: #fff;
+  border: 1px solid rgba(183,156,144,.2);
+  color: #000;
+  position: relative;
+  padding: 2.5px 40px 2.5px 10px;
+  font-size: 16px
+}
+.uk-button.uk-tag-button .uk-tag-remove-icon {
+  font-size: 10px;
+  height: 20px;
+  width: 20px;
+  line-height: 20px;
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%)
+}
+.uk-button.uk-tag-button:hover {
+  border-color: #324a61;
+  color: #324a61;
+  background-color: #fff
+}
+.uk-button.uk-tag-button:hover .uk-tag-remove-icon {
+  color: #d24539
+}
+.uk-button.uk-button-small {
+  font-size: 16px
+}
+.uk-button.uk-button-secondary {
+  font-weight: 600;
+  font-size: 16px;
+  font-family: "Wix Madefor Display",serif;
+  padding: 10px 28px
+}
+.uk-card-small.uk-card-body.uk-card-collapsed-top {
+  padding-top: 0
+}
+.uk-card-small.uk-card-body.uk-card-collapsed-bottom {
+  padding-bottom: 0
+}
+.uk-accordion-title {
+  font-weight: 500;
+  background-color: #fff;
+  padding: 12px 20px
+}
+.uk-accordion-content {
+  background-color: #fbfbfb;
+  padding: 12px 20px
+}
+.uk-accordion .uk-accordion-title::before {
+  background-image: url(../img/accordeon_arrow_close.png)
+}
+.uk-accordion .uk-open > .uk-accordion-title::before {
+  background-image: url(../img/accordeon_arrow_open.png);
+  opacity: .6
+}
+.breadcrumbs {
+  padding: 20px 0
+}
+.breadcrumbs .uk-breadcrumb > :last-child > a:not([href]),
+.breadcrumbs .uk-breadcrumb > :last-child > span {
+  color: #999
+}
+.uk-pagination > * > * {
+  height: 42px;
+  width: 42px;
+  border-radius: 50%;
+  text-align: center;
+  -webkit-column-gap: 0;
+  -moz-column-gap: 0;
+  column-gap: 0;
+  font-weight: 600
+}
+.uk-pagination > .uk-active > * {
+  background-color: #fff
+}
+.uk-pagination > * > :hover {
+  background-color: rgba(183,156,144,.2)
+}
 html {
   font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
-  font-size: 16px;
+  font-size: 15px;
   font-weight: 400;
   line-height: 1.5;
   -webkit-text-size-adjust: 100%;
@@ -21,7 +158,7 @@ a {
 .uk-link:hover,
 a:hover {
   color: #a24f35;
-  text-decoration: underline
+  text-decoration: none
 }
 abbr[title] {
   -webkit-text-decoration: underline dotted;
@@ -163,27 +300,27 @@ h6 {
 }
 .uk-h1,
 h1 {
-  font-size: 2.23125rem;
+  font-size: 72px;
   line-height: 1.2
 }
 .uk-h2,
 h2 {
-  font-size: 1.7rem;
+  font-size: 64px;
   line-height: 1.3
 }
 .uk-h3,
 h3 {
-  font-size: 1.5rem;
+  font-size: 48px;
   line-height: 1.4
 }
 .uk-h4,
 h4 {
-  font-size: 1.25rem;
+  font-size: 40px;
   line-height: 1.4
 }
 .uk-h5,
 h5 {
-  font-size: 16px;
+  font-size: 36px;
   line-height: 1.4
 }
 .uk-h6,
@@ -194,7 +331,7 @@ h6 {
 @media (min-width:960px) {
   .uk-h1,
   h1 {
-    font-size: 2.625rem
+    font-size: 72px
   }
   .uk-h2,
   h2 {
@@ -234,7 +371,7 @@ address {
 }
 blockquote {
   margin: 0 0 20px 0;
-  font-size: 1.25rem;
+  font-size: 40px;
   line-height: 1.5;
   font-style: italic;
   color: #324a61
@@ -1048,7 +1185,7 @@ textarea.uk-form-small {
   line-height: 28px
 }
 .uk-form-large {
-  font-size: 1.25rem
+  font-size: 40px
 }
 .uk-form-large:not(textarea):not([multiple]):not([size]) {
   height: 55px;
@@ -1125,8 +1262,8 @@ select.uk-form-width-xsmall {
 .uk-checkbox,
 .uk-radio {
   display: inline-block;
-  height: 16px;
-  width: 16px;
+  height: 20px;
+  width: 20px;
   overflow: hidden;
   margin-top: -4px;
   vertical-align: middle;
@@ -1285,13 +1422,13 @@ select.uk-form-width-xsmall {
   display: inline-block;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
-  padding: 0 30px;
+  padding: 0 28px;
   vertical-align: middle;
-  font-size: .875rem;
+  font-size: 16px;
   line-height: 38px;
   text-align: center;
   text-decoration: none;
-  text-transform: uppercase;
+  text-transform: none;
   -webkit-transition: .1s ease-in-out;
   transition: .1s ease-in-out;
   -webkit-transition-property: color,background-color,border-color;
@@ -1343,8 +1480,8 @@ select.uk-form-width-xsmall {
   border: 1px solid transparent
 }
 .uk-button-secondary:hover {
-  background-color: #8f462f;
-  color: #fff
+  background-color: #b79c90;
+  color: #000
 }
 .uk-button-secondary.uk-active,
 .uk-button-secondary:active {
@@ -1376,7 +1513,7 @@ select.uk-form-width-xsmall {
 .uk-button-small {
   padding: 0 15px;
   line-height: 28px;
-  font-size: .875rem
+  font-size: 16px
 }
 .uk-button-large {
   padding: 0 40px;
@@ -1419,7 +1556,7 @@ select.uk-form-width-xsmall {
   color: #324a61
 }
 .uk-button-link:hover {
-  color: #999;
+  color: #a24f35;
   text-decoration: none
 }
 .uk-button-link:disabled {
@@ -1570,7 +1707,7 @@ select.uk-form-width-xsmall {
   max-width: 1400px
 }
 .uk-container-xlarge {
-  max-width: 1600px
+  max-width: 1768px
 }
 .uk-container-expand {
   max-width: none
@@ -1610,7 +1747,7 @@ select.uk-form-width-xsmall {
   }
   .uk-container-expand-left.uk-container-xlarge,
   .uk-container-expand-right.uk-container-xlarge {
-    max-width: calc(50% + (1600px / 2) - 40px)
+    max-width: calc(50% + (1768px / 2) - 40px)
   }
 }
 .uk-container-item-padding-remove-left,
@@ -2170,12 +2307,12 @@ select.uk-form-width-xsmall {
   margin-top: 70px
 }
 .uk-article-title {
-  font-size: 2.23125rem;
+  font-size: 61.2px;
   line-height: 1.2
 }
 @media (min-width:960px) {
   .uk-article-title {
-    font-size: 2.625rem
+    font-size: 72px
   }
 }
 .uk-article-meta {
@@ -2204,7 +2341,7 @@ select.uk-form-width-xsmall {
   margin-bottom: 0
 }
 .uk-comment-title {
-  font-size: 1.25rem;
+  font-size: 40px;
   line-height: 1.4
 }
 .uk-comment-meta {
@@ -2387,7 +2524,7 @@ select.uk-form-width-xsmall {
   padding-left: 20px;
   padding-right: 20px;
   background: 0 0;
-  font-size: 2.625rem;
+  font-size: 72px;
   border: 1px solid #e5e5e5
 }
 .uk-search-large .uk-search-input:focus {
@@ -2415,11 +2552,11 @@ select.uk-form-width-xsmall {
   list-style: none
 }
 .uk-accordion > :nth-child(n+2) {
-  margin-top: 20px
+  margin-top: 0
 }
 .uk-accordion-title {
   display: block;
-  font-size: 1.25rem;
+  font-size: 16px;
   line-height: 1.4;
   color: #324a61;
   overflow: hidden
@@ -2438,12 +2575,12 @@ select.uk-form-width-xsmall {
   background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2213%22%20height%3D%2213%22%20viewBox%3D%220%200%2013%2013%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%20%20%20%20%3Crect%20fill%3D%22%23324A61%22%20width%3D%2213%22%20height%3D%221%22%20x%3D%220%22%20y%3D%226%22%20%2F%3E%0A%3C%2Fsvg%3E")
 }
 .uk-accordion-title:hover {
-  color: #324a61;
+  color: #a24f35;
   text-decoration: none
 }
 .uk-accordion-content {
   display: flow-root;
-  margin-top: 20px
+  margin-top: 0
 }
 .uk-accordion-content > :last-child {
   margin-bottom: 0
@@ -2975,9 +3112,9 @@ select.uk-form-width-xsmall {
 .uk-notification-message {
   position: relative;
   padding: 15px;
-  background: #f8f8f8;
+  background: #fff;
   color: #324a61;
-  font-size: 1.25rem;
+  font-size: 24px;
   line-height: 1.4;
   cursor: pointer
 }
@@ -3016,7 +3153,7 @@ select.uk-form-width-xsmall {
   box-sizing: border-box;
   max-width: 200px;
   padding: 3px 6px;
-  background: #666;
+  background: #324a61;
   border-radius: 2px;
   color: #fff;
   font-size: 12px
@@ -3564,7 +3701,7 @@ ul.uk-nav-sub {
   color: #324a61
 }
 .uk-nav-primary .uk-nav-subtitle {
-  font-size: 1.25rem
+  font-size: 40px
 }
 .uk-nav-primary .uk-nav-header {
   color: #324a61
@@ -3573,7 +3710,7 @@ ul.uk-nav-sub {
   border-top: 1px solid #e5e5e5
 }
 .uk-nav-primary .uk-nav-sub {
-  font-size: 1.25rem;
+  font-size: 40px;
   line-height: 1.5
 }
 .uk-nav-primary .uk-nav-sub a {
@@ -3586,7 +3723,7 @@ ul.uk-nav-sub {
   color: #324a61
 }
 .uk-nav-secondary {
-  font-size: 16px;
+  font-size: 15px;
   line-height: 1.5
 }
 .uk-nav-secondary > :not(.uk-nav-divider) + :not(.uk-nav-header,.uk-nav-divider) {
@@ -4066,11 +4203,11 @@ ul.uk-nav-sub {
   display: contents
 }
 .uk-breadcrumb > * > * {
-  font-size: .875rem;
-  color: #999
+  font-size: 15px;
+  color: #324a61
 }
 .uk-breadcrumb > * > :hover {
-  color: #324a61;
+  color: #a24f35;
   text-decoration: none
 }
 .uk-breadcrumb > :last-child > a:not([href]),
@@ -4078,10 +4215,10 @@ ul.uk-nav-sub {
   color: #324a61
 }
 .uk-breadcrumb > :nth-child(n+2):not(.uk-first-column)::before {
-  content: "/";
+  content: "❯";
   display: inline-block;
   margin: 0 20px;
-  font-size: .875rem;
+  font-size: 14px;
   color: #999
 }
 .uk-pagination {
@@ -4114,8 +4251,8 @@ ul.uk-nav-sub {
   -webkit-column-gap: .25em;
   -moz-column-gap: .25em;
   column-gap: .25em;
-  padding: 5px 10px;
-  color: #999;
+  padding: 10px 16px;
+  color: #324a61;
   -webkit-transition: color .1s ease-in-out;
   transition: color .1s ease-in-out
 }
@@ -5645,12 +5782,12 @@ ul.uk-nav-sub {
   color: #324a61
 }
 .uk-text-meta {
-  font-size: .875rem;
-  line-height: 1.4;
-  color: #999
+  font-size: 15px;
+  line-height: 1.67;
+  color: #324a61
 }
 .uk-text-meta > a {
-  color: #999
+  color: #324a61
 }
 .uk-text-meta > a:hover {
   color: #324a61;
@@ -5665,7 +5802,7 @@ ul.uk-nav-sub {
   line-height: 1.5
 }
 .uk-text-default {
-  font-size: 16px;
+  font-size: 15px;
   line-height: 1.5
 }
 .uk-text-light {

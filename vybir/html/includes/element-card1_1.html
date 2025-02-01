@@ -1,5 +1,5 @@
 <div class="preview-card uk-card uk-card-default">
-	<a href="detail.html" class="image-inner">
+	<a href="detail.html" uk-tooltip="Дивитись детальніше" class="image-inner">
 		<figure class="image-cover">
 			<img src="img/temp/card2.png" alt="card" class="vertical">
 		</figure>
@@ -24,11 +24,11 @@
 	<div class="caption-inner">
 		<!-- add to cart -->
 		<!-- class .active if item already in cart -->
-		<button class="uk-button button button-square active cart-button" type="button">
+		<button class="uk-button cart-button round-hover active" type="button" uk-tooltip="Вже у кошику" onclick="UIkit.notification({message: 'Товар видалено з кошика', pos: 'top-right'})">
 			<i class="icon icon-cart"></i>
 		</button>
 		<!-- / add to cart -->
-		<a href="detail.html" class="subheader3">Стільниця Swiss Krono 38 мм 1085 SM Камінь чарівний 4100x600мм R3</a>
+		<a href="detail.html" uk-tooltip="Дивитись детальніше" class="subheader3">Стільниця Swiss Krono 38 мм 1085 SM Камінь чарівний 4100x600мм R3</a>
 	</div>
 	<div class="price"><span class="digit">3496</span> ₴/шт.</div>
 </div>

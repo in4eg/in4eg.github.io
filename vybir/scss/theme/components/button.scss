@@ -1,32 +1,25 @@
-@import '../variables.scss';
-
-.button.uk-button {
-	display: inline-block;
-	font-size: var(--font-size);
+.button {
+	font-size: var(--button-font-size_small);
 	font-family: $font;
 	overflow: hidden;
 	text-overflow: ellipsis;
-	vertical-align: middle;
 	white-space: nowrap;
 	position: relative;
 	z-index: 1;
 	border: none;
-	text-align: center;
-	transition: .2s;
-	text-decoration: none;
-	border: none;
 	max-width: 100%;
-	white-space: nowrap;
 	cursor: pointer;
-	background-color: transparent;
-	border: 1px solid transparent;
 	min-width: 40px; min-height: 40px;
-	display: inline-block;
-	padding: 6px 28px;
 	height: 55px;
-	text-transform: none;
-	line-height: 40px;
+	line-height: 33px;
 	font-weight: 600;
+
+	.visible-m {
+		display: block;
+	}
+	.hidden-m {
+		display: none;
+	}
 
 	&.spaced-top {
 		margin-top: calc(var(--margin)*2);
@@ -41,7 +34,8 @@
 }
 
 
-.button {
+.button,
+.uk-button {
 	position: relative;
 
 	.text {
@@ -50,6 +44,7 @@
 
 		&.larger-text {
 			font-size: var(--subheader2-font-size);
+			display: block;
 		}
 	}
 
@@ -137,38 +132,6 @@
 			&:before {
 				transform: rotateZ(45deg) translateY(0);
 			}
-		}
-	}
-}
-
-.button.uk-button-primary {
-	background-color: $color_primary;
-	color: $color_white;
-
-	.icon-line {
-		background-color: $color_white;
-	}
-
-	&:hover {
-		background-color: $color_primary_hover;
-		color: $color_white;
-
-		.icon-line {
-			background-color: $color_white;
-		}
-	}
-}
-
-.button.uk-button-secondary {
-	background-color: $color_secondary;
-	color: $color_white;
-
-	&:hover {
-		background-color: $color_primary_hover;
-		color: $color_black;
-
-		.icon-line {
-			background-color: $color_black;
 		}
 	}
 }
@@ -315,12 +278,11 @@
 	}
 }
 
-
 @media (max-width: 1768px) {
 
 	.button.uk-button {
 		height: 45px;
-		line-height: 32px;
+		line-height: 23px;
 	}
 
 	.button.button-square {
@@ -334,6 +296,25 @@
 		}
 	}
 }
+
+@media (max-width: 1440px) {
+
+	.button.button-icon-m {
+		height: 45px; width: 45px;
+		line-height: 23px;
+		padding: 10px;
+		font-size: 22px;
+
+		.visible-m {
+			display: none;
+		}
+		.hidden-m {
+			display: block;
+		}
+	}
+}
+
+
 
 @media (max-width: 640px) {
 

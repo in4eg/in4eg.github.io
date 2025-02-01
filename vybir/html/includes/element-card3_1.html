@@ -1,5 +1,5 @@
 <div class="preview-card uk-card uk-card-default">
-	<a href="detail.html" class="image-inner">
+	<a href="detail.html" uk-tooltip="Дивитись детальніше" class="image-inner">
 		<figure class="image-cover">
 			<img src="img/no_photo.png" alt="card" class="horizontal">
 		</figure>
@@ -24,11 +24,11 @@
 	<div class="caption-inner">
 		<!-- add to cart -->
 		<!-- class .active if item already in cart -->
-		<button class="uk-button button button-square cart-button" type="button">
+		<button class="uk-button cart-button round-hover" type="button" uk-tooltip="Додати у кошик" onclick="UIkit.notification({message: 'Товар додано у кошик', pos: 'top-right'})">
 			<i class="icon icon-cart"></i>
 		</button>
 		<!-- / add to cart -->
-		<a href="detail.html" class="subheader3">Стільниця з компакт-плити Egger 12мм H3730 ST10 Гікорі натуральний з чорним...</a>
+		<a href="detail.html" uk-tooltip="Дивитись детальніше" class="subheader3">Стільниця з компакт-плити Egger 12мм H3730 ST10 Гікорі натуральний з чорним...</a>
 	</div>
 	<div class="price">
 		<div class="old">5996 ₴/шт.</div>

@@ -12,6 +12,31 @@
 //
 
 
+.uk-accordion-title {
+	font-weight: 500;
+	background-color: $accordion-title-background-color;
+	padding: $accordion-padding-vertical $accordion-padding-horizontal;
+}
+
+
+
+.uk-accordion-content {
+	background-color: $accordion-content-background-color;
+	padding: $accordion-padding-vertical $accordion-padding-horizontal;
+}
+
+.uk-accordion {
+
+	.uk-accordion-title::before {
+		background-image: $accordion-close-icon-url;
+	}
+
+	.uk-open > .uk-accordion-title::before {
+		background-image: $accordion-open-icon-url;
+		opacity: .6;
+	}
+}
+
 
 // Component
 // ========================================================================

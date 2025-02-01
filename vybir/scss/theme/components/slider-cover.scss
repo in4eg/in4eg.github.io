@@ -1,5 +1,3 @@
-@import '../variables.scss';
-
 .slider-cover {
 
 	.uk-dotnav {
@@ -62,6 +60,13 @@
 				}
 			}
 		}
+
+		.uk-active {
+
+			a {
+				background-color: transparent;
+			}
+		}
 	}
 
 	.element-title,
@@ -69,4 +74,17 @@
 		pointer-events: none;
 	}
 
+	.element-title {
+		letter-spacing: 2.8px;
+	}
+}
+
+@media (max-width: 1440px) {
+
+	.slider-cover {
+
+		.uk-dotnav {
+			left: 50px;
+		}
+	}
 }

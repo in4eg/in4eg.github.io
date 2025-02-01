@@ -1,8 +1,5 @@
-@import '../variables.scss';
-
 .catalog-menu {
 	max-height: calc(100vh - var(--header_height));
-	overflow: auto;
 
 	.catalog-card {
 		background-color: $color_white;
@@ -27,6 +24,10 @@
 		.catalog-card {
 			background-color: transparent;
 		}
+
+		.header-social {
+			display: none;
+		}
 	}
 
 	.menu-light-cover {
@@ -50,7 +51,7 @@
 		.cover {
 			font-size: 16px;
 			color: $color_primary;
-			padding: 15px 45px 16px 65px;
+			padding: 15px 42px 16px 60px;
 			font-weight: 600;
 			position: relative;
 			display: block;
@@ -58,13 +59,13 @@
 
 			.title-icon {
 				position: absolute;
-				top: 50%; left: 30px;
+				top: 50%; left: 27px;
 				transform: translateY(-50%);
 			}
 
 			.caret {
 				position: absolute;
-				top: 50%; right: 30px;
+				top: 50%; right: 25px;
 				transform: translateY(-50%);
 				font-size: 10px;
 				margin-top: 2px;
@@ -89,10 +90,22 @@
 		height: 100%;
 		padding-left: 0;
 		padding-right: 0;
+		padding-top: 20px;
+		padding-bottom: 20px;
+	}
+}
+
+.tab-content {
+
+	.subheader2 {
+		margin-bottom: 0;
 	}
 
-	.uk-navbar-nav {
-		background-color: red;
+	a:hover {
+
+		.subheader2 {
+			color: $color_secondary;
+		}
 	}
 }
 
@@ -117,3 +130,68 @@
 	}
 }
 
+@media (max-width: 1440px) {
+
+	.catalog-menu {
+
+		.catalog-tabs {
+
+			.cover {
+				padding: 10px 42px 9px 60px;
+			}
+		}
+
+		&.header-menu {
+
+			.header-social {
+				display: block;
+				margin-top: 15px;
+				padding: 15px 42px 0 26px;
+				border-top: 1px solid $border_color;
+
+				.subheader2 {
+					margin-bottom: 5px;
+				}
+			}
+		}
+
+		.header-catalog {
+			overflow: auto;
+			max-height: calc(100vh - var(--header_height));
+
+			.main-nav {
+				display: block;
+				padding: 0;
+				margin-top: 15px;
+				padding-top: 10px;
+				border-top: 1px solid $border_color;
+
+				.uk-navbar-nav {
+					display: block;
+
+					.link {
+						color: $color_primary;
+						text-align: left;
+						display: block;
+						padding: 10px 42px 9px 26px;
+
+						&:hover {
+							color: $color_secondary;
+						}
+					}
+
+					.uk-navbar-item {
+						display: block;
+
+						&.uk-active {
+
+							.link {
+								color: $color_secondary;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

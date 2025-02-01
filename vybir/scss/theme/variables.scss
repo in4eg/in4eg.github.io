@@ -1,10 +1,11 @@
-/*primary font*/
+/* 1. Your custom variables and variable overwrites.*/
 $font: 'Wix Madefor Display', serif;
 
 /* typography */
 $font-size: 15px;
 $font-size_smaller: 14px;
 $font-size_middle: 28px;
+$font-size_icon: 10px;
 
 $h1-font-size: 72px;
 $h2-font-size: 64px;
@@ -16,11 +17,15 @@ $subheader1-font-size: 24px;
 $subheader2-font-size: 20px;
 $subheader3-font-size: 16px;
 
+$button-font-size-initial: 20px;
+$button-font-size_small: 16px;
+$button-font-size_medium: 18px;
+
 /*colors theme*/
 $color_primary: #324A61;
 $color_primary_hover: #B79C90;
 $color_secondary: #A24F35;
-$color_secondary_hover: #A85A42;
+$color_secondary_hover: #B79C90;
 $color_dark: #0D1220;
 
 $color_white: #ffffff;
@@ -33,15 +38,11 @@ $text_color: $color_primary;
 
 $hover_transparent: rgba(#B79C9033, 0.2);
 $color_secondary_transparent: rgba($color_secondary, 0.2);
+$border_color: rgba($color_black, 0.1);
 
-$global-link-color: $color_primary;
+$accordion-padding-vertical: 12px;
+$accordion-padding-horizontal: 20px;
 
-
-/* elements */
-$header_height: 73px;
-$footer_height: 448px;
-
-/*document*/
 :root {
 	--font-size: #{$font-size};
 	--font-size_smaller: #{$font-size_smaller};
@@ -54,20 +55,55 @@ $footer_height: 448px;
 	--subheader1-font-size: #{$subheader1-font-size};
 	--subheader2-font-size: #{$subheader2-font-size};
 	--subheader3-font-size: #{$subheader3-font-size};
-
-	/* elements */
-
-	--header_height: #{$header_height};
-	--footer_height: #{$footer_height};
 }
+
+@media (max-width: 1810px) {
+
+	$subheader2-font-size: 18px;
+
+	:root {
+		--subheader2-font-size: #{$subheader2-font-size};
+	}
+}
+
 
 @media (max-width: 1650px) {
 
 	$h1-font-size: 64px;
 
+	:root {
+		--h1-font-size: #{$h1-font-size};
+	}
+}
+
+@media (max-width: 1520px) {
+
+	$h1-font-size: 62px;
+	$subheader2-font-size: 16px;
 
 	:root {
 		--h1-font-size: #{$h1-font-size};
+		--subheader2-font-size: #{$subheader2-font-size};
+	}
+}
 
+@media (max-width: 1440px) {
+
+	$h1-font-size: 50px;
+	$h4-font-size: 38px;
+	$h5-font-size: 30px;
+	$font-size_middle: 24px;
+	$subheader1-font-size: 20px;
+	$subheader3-font-size: 14px;
+	$font-size_smaller: 10px;
+
+	:root {
+		--h1-font-size: #{$h1-font-size};
+		--h4-font-size: #{$h4-font-size};
+		--h5-font-size: #{$h5-font-size};
+		--font-size_middle: #{$font-size_middle};
+		--subheader1-font-size: #{$subheader1-font-size};
+		--subheader3-font-size: #{$subheader3-font-size};
+		--font-size_smaller: #{$font-size_smaller};
 	}
 }

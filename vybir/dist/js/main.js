@@ -29,6 +29,7 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 document.addEventListener("DOMContentLoaded", function() {
 	const ACTIVE_TAB_CLASS = 'active';
+	const ACTIVE_MENU_CLASS = 'active';
 
 	let select = function(selector, parent){
 		return (parent || document).querySelector(selector);
@@ -36,32 +37,48 @@ document.addEventListener("DOMContentLoaded", function() {
 	let selectAll = function(selector, parent){
 		return [].slice.call((parent || document).querySelectorAll(selector));
 	};
-	let navigation = select('[data-hover-show]');
-	let buttons = selectAll('li', navigation);
+	let navigations = selectAll('[data-hover-show]');
+	for (let i = 0; i < navigations.length; i++) {
+		let navigation = navigations[i];
 
-	let targetId = navigation.dataset.hoverShow;
-	let tabs = selectAll(`#${targetId} .tab-content`);
+		let escapeContainer = select(navigation.dataset.escapeContainer);
+		let buttons = selectAll('li', navigation);
 
-	let hideAll = function(collection){
-		collection.forEach(function(item){
-			item.classList.remove(ACTIVE_TAB_CLASS);
-		});
-	};
+		let targetId = navigation.dataset.hoverShow;
 
-	let show = function(collection, index) {
-		collection[index].classList.add(ACTIVE_TAB_CLASS);
-	};
+		let tabsContainer = select(targetId);
 
-	for (let i = 0; i < buttons.length; i++) {
-		let button = buttons[i];
-		button.addEventListener('mouseenter', function(e){
-			e.preventDefault();
-			hideAll(buttons);
-			show(buttons, i);
-			hideAll(tabs);
-			show(tabs, i);
-		});
-	};
+		if (escapeContainer) {
+			escapeContainer.addEventListener('mouseleave', function(){
+				tabsContainer.classList.remove(ACTIVE_MENU_CLASS);
+			});
+		}
+
+		let tabs = selectAll(`${targetId} .tab-content`);
+
+		let hideAll = function(collection){
+			collection.forEach(function(item){
+				item.classList.remove(ACTIVE_TAB_CLASS);
+			});
+		};
+
+		let show = function(collection, index) {
+			tabsContainer.classList.add(ACTIVE_MENU_CLASS);
+			collection[index].classList.add(ACTIVE_TAB_CLASS);
+		};
+
+		for (let i = 0; i < buttons.length; i++) {
+			let button = buttons[i];
+			button.addEventListener('mouseenter', function(e){
+				e.preventDefault();
+				hideAll(buttons);
+				show(buttons, i);
+				hideAll(tabs);
+				show(tabs, i);
+			});
+		};
+	}
+
 });
 document.addEventListener("DOMContentLoaded", function() {
 	function drawRound(id, persent, useDarkTheme) {
@@ -124,7 +141,12 @@ document.addEventListener("DOMContentLoaded", function() {
 			let parent = elem.dataset.desktop;
 			let destination = elem.dataset.tablet;
 			if (window.innerWidth <= tabletBrakepoint) {
-				document.getElementById(destination).prepend(elem);
+				if (elem.dataset.tabletBefore) {
+					let before = elem.dataset.tabletBefore;
+					document.getElementById(destination).insertBefore(elem, document.getElementById(before));
+				} else {
+					document.getElementById(destination).append(elem);
+				}
 			} else {
 				document.getElementById(parent).append(elem);
 			}
@@ -135,7 +157,7 @@ document.addEventListener("DOMContentLoaded", function() {
 			let parent = elem.dataset.desktop;
 			let destination = elem.dataset.mobile;
 			if (window.innerWidth <= tabletBrakepoint) {
-				document.getElementById(destination).prepend(elem);
+				document.getElementById(destination).append(elem);
 			} else {
 				document.getElementById(parent).append(elem);
 			}

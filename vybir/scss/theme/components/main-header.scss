@@ -1,10 +1,16 @@
-@import '../variables.scss';
+$header_height: 73px;
+
+/*document*/
+:root {
+	--header_height: #{$header_height};
+}
+
 
 .main-header {
 	background-color: $color-primary;
 	height: var(--header_height);
 	position: relative;
-	z-index: 2;
+	z-index: 999;
 
 	.uk-logo {
 		width:170px;
@@ -169,6 +175,9 @@
 
 	.user-menu-card {
 		width: 170px;
+		position: absolute;
+		right: 0; left: auto !important;
+		top: var(--header_height) !important;
 
 		.logout-button {
 			position: absolute;
@@ -241,6 +250,11 @@
 }
 
 @media (max-width: 1768px) {
+	$header_height: 63px;
+
+	:root {
+		--header_height: #{$header_height};
+	}
 
 	.main-header {
 
@@ -262,10 +276,10 @@
 	}
 }
 
+
 @media (max-width: 1440px) {
 
 	.main-header {
-		padding: 8px 0;
 
 		.uk-logo {
 			width: 120px;
@@ -284,11 +298,8 @@
 			max-width: none;
 		}
 
-		.navbar-cover {
-
-			.main-nav {
-				display: none;
-			}
+		.main-nav {
+			display: none;
 		}
 	}
 }

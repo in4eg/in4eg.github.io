@@ -1,5 +1,3 @@
-@import '../variables.scss';
-
 .form {
 
 	.input {
@@ -67,10 +65,59 @@
 			font-size: 24px;
 		}
 	}
+
+	.checkbox-cover {
+		margin-bottom: 10px;
+		color: $color_black;
+
+		label {
+			cursor: pointer;
+			display: block;
+		}
+
+		input {
+			margin-right: 10px;
+		}
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+
+		&:hover {
+			color: $color_secondary;
+		}
+	}
 }
 
 .form.inline-form {
 	display: flex;
+}
+
+.selecter-cover {
+	display: inline-block;
+	margin-right: 10px;
+
+	&:last-child {
+		margin-right: 0;
+	}
+
+	.select-label {
+		margin-right: 10px;
+		color: rgba($color_black, 0.6);
+	}
+
+	.select {
+		border: 0;
+		height: 42px;
+		padding: 5px 10px;
+		font-family: $font;
+		font-size: $font-size;
+		cursor: pointer;
+
+		&:hover {
+			// background-color: $hover_transparent;
+		}
+	}
 }
 
 @media (max-width: 1768px) {

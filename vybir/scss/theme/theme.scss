@@ -1,4 +1,4 @@
-@import 'variables.scss';
+@import "variables.scss";
 
 *,
 :before,
@@ -84,6 +84,9 @@ img.adaptive {
 }
 .color-white {
 	color: $color-white;
+}
+.color-black {
+	color: $color_black;
 }
 
 .margin-top { margin-top: var(--margin); }

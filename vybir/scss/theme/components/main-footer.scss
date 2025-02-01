@@ -1,5 +1,3 @@
-@import '../variables.scss';
-
 .main-footer {
 	background-color: $color-white;
 	height: var(--footer_height);
@@ -26,7 +24,6 @@
 		color: rgba($color_black, 0.6);
 	}
 
-
 	.nav-item {
 		margin-top: 16px;
 
@@ -42,7 +39,7 @@
 	}
 
 	.bordered-box {
-		border-top: 1px solid rgba($color_black, 0.1);
+		border-top: 1px solid $border_color;
 		margin-top: 33px;
 		padding-top: 29px;
 	}

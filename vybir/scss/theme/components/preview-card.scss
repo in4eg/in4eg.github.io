@@ -1,10 +1,9 @@
-@import '../variables.scss';
-
 .preview-card {
 	border: 1px solid transparent;
 	padding: 21px 21px 55px;
 	height: 100%;
 	position: relative;
+	margin-bottom: 1px;
 
 	.image-inner {
 		position: relative;
@@ -91,6 +90,29 @@
 		.cart-button {
 			position: absolute;
 			top: 1px; right: 5px;
+			font-size: 24px;
+			height: 42px; width: 42px;
+			border-radius: 50%;
+			background-color: transparent;
+			padding: 0;
+			z-index: 3;
+
+			.icon {
+				position: relative;
+				top: -2px;
+			}
+
+			&:hover {
+				color: $color_white;
+			}
+
+			&.round-hover.active {
+				color: $color_white;
+
+				&:before {
+					background-color: $color_secondary;
+				}
+			}
 		}
 
 		.subheader3 {
@@ -136,5 +158,15 @@
 			}
 		}
 	}
+}
 
+@media (max-width: 1440px) {
+
+	.preview-card {
+		padding: 15px 15px 55px;
+
+		.price {
+			left: 15px;
+		}
+	}
 }
