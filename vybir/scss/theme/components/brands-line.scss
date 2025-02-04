@@ -74,3 +74,43 @@ $duration: 30s;
 		min-width: 150%;
 	}
 }
+
+@media (max-width: 960px) {
+
+	.brands-line {
+		margin-top: 0;
+	}
+
+	.animation-line { 
+		min-width: 200%;
+	}
+}
+
+@media (max-width: 760px) {
+
+	.animation-line { 
+		min-width: 250%;
+	}
+}
+
+
+@media (max-width: 640px) {
+
+	.brands-line {
+		margin-top: 0;
+
+		.brands-cover {
+
+			.translate-inner {
+
+				.image-item {
+					padding: 10px;
+				}
+			}
+		}
+	}
+
+	.animation-line { 
+		min-width: 300%;
+	}
+}

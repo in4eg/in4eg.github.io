@@ -12,13 +12,11 @@ import postcss from 'gulp-postcss';
 
 function styles() {
 	return gulp
-	.src(['scss/ui-kit.scss', 'scss/theme/theme.scss']) // Выбираем источник
+	.src(['scss/ui-kit.scss', 'scss/theme/theme.scss'])
 	.pipe(sass({outputStyle: 'expanded'}).on('error', sass.logError))
-	.pipe(postcss([ autoprefixer({ overrideBrowserslist: ['last 10 versions'], grid: true }) ]))
-	// .pipe(autoprefixer({ overrideBrowserslist: ['last 10 versions'], grid: true })) // Создадим префиксы с помощью Autoprefixer
-	.pipe(cleancss( { level: { 1: { specialComments: 0 } } , format: 'beautify'  } )) // Минифицируем стили
-	// .pipe(concat('bundle.min.css')) // Обьеденяем в файл app.min.css
-	.pipe(gulp.dest('dist/css/')) // Выгрузим результат в папку "dist/css/"
+	.pipe(cleancss( { level: { 1: { specialComments: 0 } } } ))
+	.pipe(concat('vybir-theme.min.css'))
+	.pipe(gulp.dest('dist/css/'))
 	.pipe(browserSync.stream())
 
 }

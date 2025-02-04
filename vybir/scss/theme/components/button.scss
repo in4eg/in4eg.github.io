@@ -10,7 +10,6 @@
 	max-width: 100%;
 	cursor: pointer;
 	min-width: 40px; min-height: 40px;
-	height: 55px;
 	line-height: 33px;
 	font-weight: 600;
 
@@ -87,55 +86,6 @@
 	user-select: none;
 }
 
-.button.button-menu {
-
-	span {
-		width: 100%;
-		height: 2px;
-		background-color: $color_white;
-		border-radius: 12px;
-		display: block;
-		transition: background-color .5s ease-in-out;
-		z-index: 2;
-		position: relative;
-
-		&:after,
-		&:before {
-			content: "";
-			width: 100%;
-			background-color: $color_white;
-			display: block;
-			transition: all .5s ease-in-out;
-			border-radius: 12px;
-			height: 2px;
-		}
-
-		&:before {
-			transform: translateY(-10px);
-		}
-
-		&:after {
-			transform: translateY(10px);
-			margin-top: -2px;
-		}
-	}
-
-	&.active {
-
-		span {
-			background-color: transparent;
-
-			&:after {
-				transform: rotateZ(-45deg) translateY(0);
-			}
-
-			&:before {
-				transform: rotateZ(45deg) translateY(0);
-			}
-		}
-	}
-}
-
 .button.uk-button-transparent {
 	font-weight: 600;
 
@@ -171,17 +121,10 @@
 		display: inline-block;
 	}
 
-	.count {
+	.button-count {
 		position: absolute;
-		background-color: $color_red;
-		border-radius: 50%;
-		font-size: 10px;
 		right: -9px; top: -4px;
 		z-index: 1;
-		transition: .2s;
-		height: 1.7em;
-		min-width: 1.7em;
-		line-height: 1.9;
 	}
 
 	&:after {
@@ -278,12 +221,56 @@
 	}
 }
 
-@media (max-width: 1768px) {
+.button.button-menu {
 
-	.button.uk-button {
-		height: 45px;
-		line-height: 23px;
+	span {
+		width: 100%;
+		height: 2px;
+		background-color: $color_white;
+		border-radius: 12px;
+		display: block;
+		transition: background-color .5s ease-in-out;
+		z-index: 2;
+		position: relative;
+
+		&:after,
+		&:before {
+			content: "";
+			width: 100%;
+			background-color: $color_white;
+			display: block;
+			transition: all .5s ease-in-out;
+			border-radius: 12px;
+			height: 2px;
+		}
+
+		&:before {
+			transform: translateY(-10px);
+		}
+
+		&:after {
+			transform: translateY(10px);
+			margin-top: -2px;
+		}
 	}
+}
+
+.button-count {
+	background-color: $color_red;
+	border-radius: 50%;
+	font-size: 10px;
+	z-index: 1;
+	transition: .2s;
+	height: 1.7em;
+	min-width: 1.7em;
+	line-height: 1.7;
+	color: $color_white;
+	font-weight: 500;
+	display: inline-block;
+	text-align: center;
+}
+
+@media (max-width: 1768px) {
 
 	.button.button-square {
 
@@ -291,7 +278,7 @@
 			font-size: 18px;
 		}
 
-		.count {
+		.button-count {
 			top: 6px;
 		}
 	}
@@ -316,20 +303,23 @@
 
 
 
-@media (max-width: 640px) {
+@media (min-width: 961px) {
 
-	.button.uk-button {
-		height: 36px;
-		min-height: 36px;
-		line-height: 22px;
-		padding-left: 10px;
-		padding-right: 10px;
-	}
+	.button.button-menu {
 
-	.button.button-square {
+		&.active {
 
-		.count {
-			top: 0;
+			span {
+				background-color: transparent;
+
+				&:after {
+					transform: rotateZ(-45deg) translateY(0);
+				}
+
+				&:before {
+					transform: rotateZ(45deg) translateY(0);
+				}
+			}
 		}
 	}
 }

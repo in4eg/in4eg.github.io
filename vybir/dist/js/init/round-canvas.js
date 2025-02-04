@@ -10,6 +10,7 @@ document.addEventListener("DOMContentLoaded", function() {
 			setCanvasSize(canvas, pixelRatio);
 			let i = persent;
 			let strokeColor = canvas.dataset.stroke;
+			if (!ctx) return;
 			ctx.beginPath()
 			ctx.lineWidth = lineWidth*pixelRatio;
 			ctx.arc(canvas.width/2, canvas.height/2, canvas.height/2 - (lineWidth * pixelRatio / 2), -Math.PI/2, -Math.PI * (2 * (1 - i))-Math.PI/2);
@@ -34,7 +35,9 @@ document.addEventListener("DOMContentLoaded", function() {
 	function drawRadialIndicator(){
 		let totalHeight = document.body.scrollHeight - window.innerHeight ;
 		let scrollTop = document.documentElement.scrollTop;
-		drawRound('roundCanvas', scrollTop/totalHeight, false);
+		if (document.getElementById('roundCanvas').length) {
+			drawRound('roundCanvas', scrollTop/totalHeight, false);
+		}
 	};
 	drawRadialIndicator();
 	window.addEventListener("scroll", drawRadialIndicator);

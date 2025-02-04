@@ -30,6 +30,18 @@
 	}
 }
 
+.uk-button.uk-button-light-invert {
+	background-color: $button-light-background;
+	border: 1px solid $button-light-border-color;
+	color: $button-light-color;
+
+	&:hover {
+		border-color: $button-light-invert-border-color-hover;
+		color: $button-light-invert-color-hover;
+		background-color: $button-light-invert-background-hover;
+	}
+}
+
 .uk-button.uk-tag-button {
 	background-color: $tag-button-background;
 	border: 1px solid $tag-button-border-color;
@@ -68,6 +80,17 @@
 	font-family: $button-font-family;
 	padding: $button-padding-vertical $button-padding-horizontal;
 }
+
+
+@media (max-width: 1440px) {
+	$button-padding-vertical: 6px;
+	$button-padding-horizontal: 17px;
+
+	.uk-button.uk-button-secondary {
+		padding: $button-padding-vertical $button-padding-horizontal;
+	}
+}
+
 
 
 // Component

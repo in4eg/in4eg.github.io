@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ua">
+<head>
+	<meta charset="UTF-8">
+	<title>Vybir :: Detail Service</title>
+
+	<link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
+	<link rel="manifest" href="/favicon/site.webmanifest">
+	<link rel="mask-icon" href="/favicon/safari-pinned-tab.svg" color="#314961">
+	<meta name="msapplication-TileColor" content="#314961">
+	<meta name="theme-color" content="#314961">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+	<meta name="format-detection" content="telephone=no">
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Wix+Madefor+Display:wght@400..800&display=swap" rel="stylesheet">
+
+	<link rel="stylesheet" href="css/vybir-theme.min.css">
+</head>
+<body id="innerBody">
+	<!-- header -->
+	@@include('./includes/header-authorized.html')
+
+	<main class="page-main" id="pageMain">
+		<!-- breadcrumbs -->
+		<div class="breadcrumbs">
+			<div class="uk-container uk-container-xlarge">
+				<nav aria-label="Breadcrumb">
+					<ul class="uk-breadcrumb">
+						<li><a href="catalog.html">Каталог</a></li>
+						<li><a href="catalog-category.html">Меблева фурнітура</a></li>
+						<li><a href="catalog-subcategory.html">Меблеві ручки та гачки</a></li>
+						<li><a href="catalog-filter.html">Ручки Giusti</a></li>
+						<li><span>Меблева ручка Giusti РГ 663 WMN833.096.00H4 вінтажний нікель</span></li>
+					</ul>
+				</nav>
+			</div>
+		</div>
+		<!-- details -->
+		<div class="uk-container uk-container-xlarge">
+			<div class="uk-grid-match" uk-grid>
+				<div class="uk-width-2-5@l">
+					<!-- main image slider -->
+					<div class="uk-position-relative" uk-slideshow="animation: fade">
+						<div class="uk-slideshow-items">
+							<div>
+								<img src="img/temp/detail1.jpg" draggable="false" alt="detail" uk-cover>
+							</div>
+							<div>
+								<img src="img/temp/detail2.jpg" draggable="false" alt="detail" uk-cover>
+							</div>
+							<div>
+								<img src="img/temp/detail3.jpg" draggable="false" alt="detail" uk-cover>
+							</div>
+						</div>
+						<!-- slider arrow nav -->
+						<a class="uk-position-center-left uk-position-small uk-hidden-hover" href uk-slidenav-previous uk-slideshow-item="previous"></a>
+						<a class="uk-position-center-right uk-position-small uk-hidden-hover" href uk-slidenav-next uk-slideshow-item="next"></a>
+						<!-- slider arrow nav -->
+						<!-- thumbnav -->
+						<div class="thumbnav-cover uk-margin-top">
+							<ul class="uk-thumbnav">
+								<li uk-slideshow-item="0"><a href="#"><img src="img/temp/detail1.jpg" width="140" height="109" draggable="false" alt="detail"></a></li>
+								<li uk-slideshow-item="1"><a href="#"><img src="img/temp/detail2.jpg" width="140" height="109" draggable="false" alt="detail"></a></li>
+								<li uk-slideshow-item="2"><a href="#"><img src="img/temp/detail3.jpg" width="140" height="109" draggable="false" alt="detail"></a></li>
+							</ul>
+						</div>
+						<!-- / thumbnav -->
+					</div>
+					<!-- main image slider -->
+				</div>
+				<div class="uk-width-2-5@l">
+					<h1 class="subheader1">Меблева ручка GTV GRAVEL L=1200мм золото світле (UA-GRAVEL-1200-22)</h1>
+				</div>
+			</div>
+		</div>
+		<!-- / details -->
+		<!-- similar products -->
+		@@include('./includes/section-similar.html')
+		<!-- /similar products -->
+		<!-- special offers-->
+		@@include('./includes/special-offers.html')
+		<!-- /special offers-->
+	</main>
+
+	<!-- footer -->
+	@@include('./includes/footer.html')
+
+
+	<script src="js/uikit/uikit.min.js"></script>
+	<!-- custom js -->
+	<script src="js/main.js"></script>
+</body>
+</html>

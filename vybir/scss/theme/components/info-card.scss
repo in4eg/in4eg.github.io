@@ -89,6 +89,31 @@
 			.smaller {
 				height: 100%;
 			}
+
+			.image-caption {
+				line-height: 1.1;
+			}
 		}
 	}
+}
+
+@media (max-width: 960px) {
+
+	.info-card.info-card-smaller {
+
+		.element-figure {
+			padding-top: 41.7%;
+
+				img,
+				video {
+					position: absolute;
+					top: 0; left: 50%;
+					min-height: 120%; min-width: 100%;
+					max-width: 160%;
+					transform: translate(-50%, 0);
+				}
+		}
+	}
+
+
 }

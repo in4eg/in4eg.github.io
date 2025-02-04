@@ -1,154 +1,192 @@
 <footer class="main-footer">
+	<!-- scroll top -->
+	<a href="#" class="button button-scroll-top uk-hidden@s" uk-totop uk-scroll uk-tooltip="Вгору">
+		<canvas class="canvas" id="roundCanvas" data-stroke="#000000"></canvas>
+		<span class="fade"></span>
+	</a>
 	<div class="uk-container uk-container-xlarge">
-	<div uk-grid class="uk-grid-small">
-		<div class="uk-width-1-6@m">
-			<h4 class="subheader2">Допомога</h4>
-			<ul class="uk-list uk-footer-nav">
-				<li class="nav-item">
-					<a class="link" uk-tooltip="Перейти на сторінку" href="services.html"><span class="text">Послуги</span></a>
+		<div uk-grid class="uk-grid-small">
+			<div class="uk-width-1-3@s uk-width-1-3@m uk-width-1-6@l">
+				<ul uk-accordion class="uk-accordion-mobile">
+					<li>
+						<a class="uk-accordion-title" href><h4 class="subheader2">Допомога</h4></a>
+						<div class="uk-accordion-content">
+							<h4 class="subheader2 uk-visible@s">Допомога</h4>
+							<ul class="uk-list uk-footer-nav">
+								<li class="nav-item">
+									<a class="link" uk-tooltip="Перейти на сторінку" href="services.html"><span class="text">Послуги</span></a>
+								</li>
+								<li class="nav-item">
+									<a class="link" uk-tooltip="Перейти на сторінку" href="delivery.html"><span class="text">Доставка/Оплата</span></a>
+								</li>
+								<li class="nav-item">
+									<a class="link" uk-tooltip="Перейти на сторінку" href="price.html"><span class="text">Завантажити</span></a>
+								</li>
+								<li class="nav-item">
+									<a class="link" uk-tooltip="Перейти на сторінку" href="gallery.html"><span class="text">Галерея</span></a>
+								</li>
+								<li class="nav-item">
+									<a class="link" uk-tooltip="Перейти на сторінку" href="contacts.html"><span class="text">Контакти</span></a>
+								</li>
+							</ul>
+						</div>
+					</li>
+				</ul>
+			</div>
+			<div class="uk-width-2-3@s uk-width-2-3@m uk-width-5-6@l">
+				<ul uk-accordion class="uk-accordion-mobile">
+					<li>
+						<a class="uk-accordion-title" href><h4 class="subheader2">Контакти</h4></a>
+						<div class="uk-accordion-content">
+							<div uk-grid class="uk-grid-small">
+								<div class="uk-width-1-2 uk-width-1-2@s uk-width-1-3@m uk-width-1-6@l">
+									<h4 class="subheader2">Одеса</h4>
+									<ul class="uk-list">
+										<li class="list-item">
+											<a class="link" uk-tooltip="Зателефонувати" href="tel:+380487346434"><span class="text">+38-048-734-64-34</span></a>
+										</li>
+										<li class="list-item">
+											<a class="link" uk-tooltip="Зателефонувати" href="tel:+380671346434"><span class="text">+38-067-134-64-34</span></a>
+										</li>
+										<li class="list-item">
+											<a class="link" uk-tooltip="Зателефонувати" href="tel:+380991346434"><span class="text">+38-099-134-64-34</span></a>
+										</li>
+										<li class="list-item">
+											<a class="link" uk-tooltip="Зателефонувати" href="tel:+380731346434"><span class="text">+38-073-134-64-34</span></a>
+										</li>
+									</ul>
+								</div>
+								<div class="uk-width-1-2 uk-width-1-2@s uk-width-1-3@m uk-width-1-6@l">
+									<h4 class="subheader2">Київ</h4>
+									<ul class="uk-list">
+										<li class="list-item">
+											<a class="link" uk-tooltip="Зателефонувати" href="tel:+380445850930"><span class="text">+38-044-585-09-30</span></a>
+										</li>
+										<li class="list-item">
+											<a class="link" uk-tooltip="Зателефонувати" href="tel:+380445850931"><span class="text">+38-044-585-09-31</span></a>
+										</li>
+										<li class="list-item">
+											<a class="link" uk-tooltip="Зателефонувати" href="tel:+380445850932"><span class="text">+38-044-585-09-32</span></a>
+										</li>
+										<li class="list-item">
+											<a class="link" uk-tooltip="Зателефонувати" href="tel:+380672471889"><span class="text">+38-067-247-18-89</span></a>
+										</li>
+										<li class="list-item">
+											<a class="link" uk-tooltip="Зателефонувати" href="tel:+380955046710"><span class="text">+38-095-504-67-10</span></a>
+										</li>
+										<li class="list-item">
+											<a class="link" uk-tooltip="Написати листа" href="mailto:office@vybor.com.ua"><span class="text">office@vybor.com.ua</span></a>
+										</li>
+									</ul>
+								</div>
+								<div class="uk-width-1-2 uk-width-1-2@s uk-width-1-3@m uk-width-1-6@l">
+									<h4 class="subheader2">Дніпро</h4>
+									<ul class="uk-list">
+										<li class="list-item">
+											<a class="link" uk-tooltip="Зателефонувати" href="tel:+380677894686"><span class="text">+38-067-789-46-86</span></a>
+										</li>
+										<li class="list-item">
+											<a class="link" uk-tooltip="Написати листа" href="mailto:sale@vybor.dp.ua"><span class="text">sale@vybor.dp.ua</span></a>
+										</li>
+									</ul>
+								</div>
+								<div class="uk-width-1-2 uk-width-1-2@s uk-width-1-3@m uk-width-1-6@l">
+									<h4 class="subheader2">Львів</h4>
+									<ul class="uk-list">
+										<li class="list-item">
+											<a class="link" uk-tooltip="Зателефонувати" href="tel:+380322420588"><span class="text">+38-032-242-05-88</span></a>
+										</li>
+										<li class="list-item">
+											<a class="link" uk-tooltip="Зателефонувати" href="tel:+380676304262"><span class="text">+38-067-630-42-62</span></a>
+										</li>
+										<li class="list-item">
+											<a class="link" uk-tooltip="Зателефонувати" href="tel:+380676506969"><span class="text">+38-067-650-69-69</span></a>
+										</li>
+										<li class="list-item">
+											<a class="link" uk-tooltip="Написати листа" href="mailto:manager@vybor.lviv.ua"><span class="text">manager@vybor.lviv.ua</span></a>
+										</li>
+									</ul>
+								</div>
+								<div class="uk-width-1-2 uk-width-1-2@s uk-width-1-3@m uk-width-1-6@l">
+									<h4 class="subheader2">Відділ регіонів</h4>
+									<ul class="uk-list">
+										<li class="list-item">
+											<a class="link" uk-tooltip="Зателефонувати" href="tel:+380487346436"><span class="text">+38-048-734-64-36</span></a>
+										</li>
+										<li class="list-item">
+											<a class="link" uk-tooltip="Зателефонувати" href="tel:+380671346436"><span class="text">+38-067-134-64-36</span></a>
+										</li>
+										<li class="list-item">
+											<a class="link" uk-tooltip="Написати листа" href="mailto:sale@vybor.biz.ua"><span class="text">sale@vybor.biz.ua</span></a>
+										</li>
+									</ul>
+								</div>
+								<div class="uk-width-1-2 uk-width-1-2@s uk-width-1-3@m uk-width-1-6@l">
+									<h4 class="subheader2">Відділ прийому замовлень</h4>
+									<ul class="uk-list">
+										<li class="list-item">
+											<a class="link" uk-tooltip="Зателефонувати" href="tel:+380487346435"><span class="text">+38-048-734-64-35</span></a>
+										</li>
+										<li class="list-item">
+											<a class="link" uk-tooltip="Зателефонувати" href="tel:+380671346435"><span class="text">+38-067-134-64-35</span></a>
+										</li>
+									</ul>
+									<div class="uk-visible@s">
+										<h4 class="subheader2">Соцмережі</h4>
+										<ul class="social-list clear">
+											<li class="list-item" uk-tooltip="Facebook">
+												<a class="social-link" href="https://www.facebook.com/"><i class="icon icon-facebook"></i></a>
+											</li>
+											<li class="list-item" uk-tooltip="Telegram">
+												<a class="social-link" href="https://web.telegram.org/a/"><i class="icon icon-telegram"></i></a>
+											</li>
+											<li class="list-item" uk-tooltip="Instagram">
+												<a class="social-link" href="https://www.instagram.com/"><i class="icon icon-instagram"></i></a>
+											</li>
+											<li class="list-item" uk-tooltip="Youtube">
+												<a class="social-link" href="https://www.youtube.com/"><i class="icon icon-youtube"></i></a>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="uk-hidden@s social-link-bordered">
+			<h4 class="subheader2">Соцмережі</h4>
+			<ul class="social-list clear">
+				<li class="list-item" uk-tooltip="Facebook">
+					<a class="social-link" href="https://www.facebook.com/"><i class="icon icon-facebook"></i></a>
 				</li>
-				<li class="nav-item">
-					<a class="link" uk-tooltip="Перейти на сторінку" href="delivery.html"><span class="text">Доставка/Оплата</span></a>
+				<li class="list-item" uk-tooltip="Telegram">
+					<a class="social-link" href="https://web.telegram.org/a/"><i class="icon icon-telegram"></i></a>
 				</li>
-				<li class="nav-item">
-					<a class="link" uk-tooltip="Перейти на сторінку" href="price.html"><span class="text">Завантажити</span></a>
+				<li class="list-item" uk-tooltip="Instagram">
+					<a class="social-link" href="https://www.instagram.com/"><i class="icon icon-instagram"></i></a>
 				</li>
-				<li class="nav-item">
-					<a class="link" uk-tooltip="Перейти на сторінку" href="gallery.html"><span class="text">Галерея</span></a>
-				</li>
-				<li class="nav-item">
-					<a class="link" uk-tooltip="Перейти на сторінку" href="contacts.html"><span class="text">Контакти</span></a>
+				<li class="list-item" uk-tooltip="Youtube">
+					<a class="social-link" href="https://www.youtube.com/"><i class="icon icon-youtube"></i></a>
 				</li>
 			</ul>
 		</div>
-		<div class="uk-width-5-6@m">
-			<div uk-grid class="uk-grid-small">
-				<div class="uk-width-1-6@m">
-					<h4 class="subheader2">Одеса</h4>
-					<ul class="uk-list">
-						<li class="list-item">
-							<a class="link" uk-tooltip="Зателефонувати" href="tel:+380487346434"><span class="text">+38-048-734-64-34</span></a>
-						</li>
-						<li class="list-item">
-							<a class="link" uk-tooltip="Зателефонувати" href="tel:+380671346434"><span class="text">+38-067-134-64-34</span></a>
-						</li>
-						<li class="list-item">
-							<a class="link" uk-tooltip="Зателефонувати" href="tel:+380991346434"><span class="text">+38-099-134-64-34</span></a>
-						</li>
-						<li class="list-item">
-							<a class="link" uk-tooltip="Зателефонувати" href="tel:+380731346434"><span class="text">+38-073-134-64-34</span></a>
-						</li>
-					</ul>
-				</div>
-				<div class="uk-width-1-6@m">
-					<h4 class="subheader2">Київ</h4>
-					<ul class="uk-list">
-						<li class="list-item">
-							<a class="link" uk-tooltip="Зателефонувати" href="tel:+380445850930"><span class="text">+38-044-585-09-30</span></a>
-						</li>
-						<li class="list-item">
-							<a class="link" uk-tooltip="Зателефонувати" href="tel:+380445850931"><span class="text">+38-044-585-09-31</span></a>
-						</li>
-						<li class="list-item">
-							<a class="link" uk-tooltip="Зателефонувати" href="tel:+380445850932"><span class="text">+38-044-585-09-32</span></a>
-						</li>
-						<li class="list-item">
-							<a class="link" uk-tooltip="Зателефонувати" href="tel:+380672471889"><span class="text">+38-067-247-18-89</span></a>
-						</li>
-						<li class="list-item">
-							<a class="link" uk-tooltip="Зателефонувати" href="tel:+380955046710"><span class="text">+38-095-504-67-10</span></a>
-						</li>
-						<li class="list-item">
-							<a class="link" uk-tooltip="Написати листа" href="mailto:office@vybor.com.ua"><span class="text">office@vybor.com.ua</span></a>
-						</li>
-					</ul>
-				</div>
-				<div class="uk-width-1-6@m">
-					<h4 class="subheader2">Дніпро</h4>
-					<ul class="uk-list">
-						<li class="list-item">
-							<a class="link" uk-tooltip="Зателефонувати" href="tel:+380677894686"><span class="text">+38-067-789-46-86</span></a>
-						</li>
-						<li class="list-item">
-							<a class="link" uk-tooltip="Написати листа" href="mailto:sale@vybor.dp.ua"><span class="text">sale@vybor.dp.ua</span></a>
-						</li>
-					</ul>
-				</div>
-				<div class="uk-width-1-6@m">
-					<h4 class="subheader2">Львів</h4>
-					<ul class="uk-list">
-						<li class="list-item">
-							<a class="link" uk-tooltip="Зателефонувати" href="tel:+380322420588"><span class="text">+38-032-242-05-88</span></a>
-						</li>
-						<li class="list-item">
-							<a class="link" uk-tooltip="Зателефонувати" href="tel:+380676304262"><span class="text">+38-067-630-42-62</span></a>
-						</li>
-						<li class="list-item">
-							<a class="link" uk-tooltip="Зателефонувати" href="tel:+380676506969"><span class="text">+38-067-650-69-69</span></a>
-						</li>
-						<li class="list-item">
-							<a class="link" uk-tooltip="Написати листа" href="mailto:manager@vybor.lviv.ua"><span class="text">manager@vybor.lviv.ua</span></a>
-						</li>
-					</ul>
-				</div>
-				<div class="uk-width-1-6@m">
-					<h4 class="subheader2">Відділ регіонів</h4>
-					<ul class="uk-list">
-						<li class="list-item">
-							<a class="link" uk-tooltip="Зателефонувати" href="tel:+380487346436"><span class="text">+38-048-734-64-36</span></a>
-						</li>
-						<li class="list-item">
-							<a class="link" uk-tooltip="Зателефонувати" href="tel:+380671346436"><span class="text">+38-067-134-64-36</span></a>
-						</li>
-						<li class="list-item">
-							<a class="link" uk-tooltip="Написати листа" href="mailto:sale@vybor.biz.ua"><span class="text">sale@vybor.biz.ua</span></a>
-						</li>
-					</ul>
-				</div>
-				<div class="uk-width-1-6@m">
-					<h4 class="subheader2">Відділ прийому замовлень</h4>
-					<ul class="uk-list">
-						<li class="list-item">
-							<a class="link" uk-tooltip="Зателефонувати" href="tel:+380487346435"><span class="text">+38-048-734-64-35</span></a>
-						</li>
-						<li class="list-item">
-							<a class="link" uk-tooltip="Зателефонувати" href="tel:+380671346435"><span class="text">+38-067-134-64-35</span></a>
-						</li>
-					</ul>
-					<h4 class="subheader2">Соцмережі</h4>
-					<ul class="social-list clear">
-						<li class="list-item" uk-tooltip="Facebook">
-							<a class="social-link" href="https://www.facebook.com/"><i class="icon icon-facebook"></i></a>
-						</li>
-						<li class="list-item" uk-tooltip="Telegram">
-							<a class="social-link" href="https://web.telegram.org/a/"><i class="icon icon-telegram"></i></a>
-						</li>
-						<li class="list-item" uk-tooltip="Instagram">
-							<a class="social-link" href="https://www.instagram.com/"><i class="icon icon-instagram"></i></a>
-						</li>
-						<li class="list-item" uk-tooltip="Youtube">
-							<a class="social-link" href="https://www.youtube.com/"><i class="icon icon-youtube"></i></a>
-						</li>
-					</ul>
-				</div>
-			</div>
-		</div>
-	</div>
 		<div class="bordered-box">
 			<div uk-grid class="uk-grid-small">
-				<div class="uk-width-1-3@m align-left">
+				<div class="uk-width-1-2 uk-width-1-3@s uk-width-1-3@m align-left">
 					<a class="uk-logo" href="index.html" aria-label="Back to Home">
-						<img src="img/logo_colored.png" alt="logo" draggable="false">
+						<img src="img/logo_colored.png" alt="logo" draggable="false" class="uk-visible@s">
+						<img src="img/logo_dark_small.png" alt="logo" draggable="false" class="uk-hidden@s">
 					</a>
 				</div>
-				<div class="uk-width-1-3@m align-center">
+				<div class="uk-width-1-2 uk-width-1-3@s uk-width-1-3@m align-center uk-visible@s">
 					<!-- scroll top -->
-					<a href="#" class="button button-scroll-top" uk-totop uk-scroll uk-tooltip="Вгору">
-						<canvas class="canvas" id="roundCanvas" data-stroke="#000000"></canvas>
+					<a href="#" class="button button-scroll-top filled" uk-totop uk-scroll uk-tooltip="Вгору">
 						<span class="fade"></span>
 					</a>
 				</div>
-				<div class="uk-width-1-3@m align-right">
+				<div class="uk-width-1-2 uk-width-1-3@s uk-width-1-3@m align-right">
 					<div class="title"><span class="copy">&copy;2024</span>ВКФ Вибір</div>
 				</div>
 			</div>

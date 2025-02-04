@@ -2,11 +2,11 @@
 
 	.input {
 		display: inline-block;
-		padding: 6px 22px;
-		height: 55px;
+		padding: 5px 22px;
 		line-height: 40px;
 		font-size: var(--font-size);
 		color: $color_primary;
+		height: auto;
 
 		&::placeholder {
 			color: $color_primary;
@@ -120,12 +120,13 @@
 	}
 }
 
-@media (max-width: 1768px) {
+@media (max-width: 1440px) {
 
 	.form {
 
 		.input {
-			height: 45px;
+			padding-top: 1px;
+			padding-bottom: 2px;
 		}
 	}
 }
@@ -135,7 +136,6 @@
 	.form {
 
 		.input {
-			height: 34px;
 
 			&.with-icon {
 				padding-left: 35px;

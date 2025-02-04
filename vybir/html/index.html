@@ -19,8 +19,7 @@
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Wix+Madefor+Display:wght@400..800&display=swap" rel="stylesheet">
 
-	<link rel="stylesheet" href="css/ui-kit.css">
-	<link rel="stylesheet" href="css/theme.css">
+	<link rel="stylesheet" href="css/vybir-theme.min.css">
 </head>
 <body id="innerBody">
 	<!-- header -->
@@ -32,13 +31,6 @@
 			<div class="uk-container uk-container-xlarge">
 				<div class="menu-cover-page">
 					<div class="uk-grid-collapse uk-grid uk-child-width-expand@s">
-						<div class="uk-width-1-6 menu-cover">
-							<!-- catalog menu -->
-							<div class="catalog-menu">
-								@@include('./includes/catalog-menu-page.html')
-							</div>
-							<!-- / catalog menu -->
-						</div>
 						<!-- catalog inner navigation -->
 						<div class="catalog-submenu-page">
 							@@include('./includes/catalog-menu-submenu-page.html')
@@ -46,6 +38,13 @@
 						<!-- / catalog inner navigation -->
 						<div class="slider-cover">
 							@@include('./includes/main-slider.html')
+						</div>
+						<div class="uk-width-1-6 menu-cover uk-flex-first@m">
+							<!-- catalog menu -->
+							<div class="catalog-menu">
+								@@include('./includes/catalog-menu-page.html')
+							</div>
+							<!-- / catalog menu -->
 						</div>
 					</div>
 				</div>

@@ -46,7 +46,11 @@
 
 
 .breadcrumbs {
-	padding: $global-margin 0;
+	padding: calc($global-margin*1.4) 0;
+
+	.uk-breadcrumb {
+		margin-bottom: 0;
+	}
 }
 .breadcrumbs .uk-breadcrumb > :last-child > span,
 .breadcrumbs .uk-breadcrumb > :last-child > a:not([href]) {

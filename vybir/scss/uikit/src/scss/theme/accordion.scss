@@ -37,6 +37,35 @@
 	}
 }
 
+.uk-accordion.uk-accordion-mobile {
+	border-bottom: 1px solid $accordion-border-color;
+
+	.uk-accordion-title {
+		padding: $accordion-padding-mobile 0;
+	}
+
+	.uk-accordion-content {
+		padding: 0 0 $accordion-padding-mobile;
+		background-color: transparent;
+	}
+}
+
+@media (min-width: 641px) {
+
+	.uk-accordion.uk-accordion-mobile {
+		border-bottom: none;
+
+		.uk-accordion-title {
+			display: none;
+		}
+
+		.uk-accordion-content {
+			display: block !important;
+			background-color: transparent;
+		}
+	}
+}
+
 
 // Component
 // ========================================================================

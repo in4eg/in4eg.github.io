@@ -90,15 +90,19 @@ $accordion-padding-horizontal: 20px;
 @media (max-width: 1440px) {
 
 	$h1-font-size: 50px;
+	$h2-font-size: 48px;
+	$h3-font-size: 42px;
 	$h4-font-size: 38px;
-	$h5-font-size: 30px;
-	$font-size_middle: 24px;
+	$h5-font-size: 28px;
+	$font-size_middle: 22px;
 	$subheader1-font-size: 20px;
 	$subheader3-font-size: 14px;
 	$font-size_smaller: 10px;
 
 	:root {
 		--h1-font-size: #{$h1-font-size};
+		--h2-font-size: #{$h2-font-size};
+		--h3-font-size: #{$h3-font-size};
 		--h4-font-size: #{$h4-font-size};
 		--h5-font-size: #{$h5-font-size};
 		--font-size_middle: #{$font-size_middle};
@@ -106,4 +110,33 @@ $accordion-padding-horizontal: 20px;
 		--subheader3-font-size: #{$subheader3-font-size};
 		--font-size_smaller: #{$font-size_smaller};
 	}
+}
+
+@media (max-width: 1200px) {
+
+	$h1-font-size: 36px;
+	$h2-font-size: 32px;
+	$h3-font-size: 30px;
+	$h4-font-size: 26px;
+	$h5-font-size: 20px;
+	$font-size: 14px;
+	$font-size_middle: 18px;
+	$subheader1-font-size: 18px;
+	$subheader2-font-size: 16px;
+
+	:root {
+		--h1-font-size: #{$h1-font-size};
+		--h2-font-size: #{$h2-font-size};
+		--h3-font-size: #{$h3-font-size};
+		--h4-font-size: #{$h4-font-size};
+		--h5-font-size: #{$h5-font-size};
+		--font-size: #{$font-size};
+		--font-size_middle: #{$font-size_middle};
+		--subheader1-font-size: #{$subheader1-font-size};
+		--subheader2-font-size: #{$subheader2-font-size};
+	}
+}
+
+@media (max-width: 640px) {
+	
 }

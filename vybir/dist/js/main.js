@@ -31,6 +31,9 @@ document.addEventListener("DOMContentLoaded", function() {
 	const ACTIVE_TAB_CLASS = 'active';
 	const ACTIVE_MENU_CLASS = 'active';
 
+	const TOUCH_ACTIVE_TAB_CLASS = 'touch-active';
+	const TOUCH_ACTIVE_MENU_CLASS = 'touch-active';
+
 	let select = function(selector, parent){
 		return (parent || document).querySelector(selector);
 	};
@@ -76,10 +79,23 @@ document.addEventListener("DOMContentLoaded", function() {
 				hideAll(tabs);
 				show(tabs, i);
 			});
+			button.addEventListener('touchstart', function(e){
+				e.preventDefault();
+				e.stopPropagation();
+				e.stopImmediatePropagation();
+				console.log(e);
+				hideAll(buttons);
+				show(buttons, i);
+				hideAll(tabs);
+				show(tabs, i);
+				navigation.classList.add(TOUCH_ACTIVE_MENU_CLASS);
+				tabsContainer.classList.add(TOUCH_ACTIVE_MENU_CLASS);
+			});
 		};
 	}
 
 });
+
 document.addEventListener("DOMContentLoaded", function() {
 	function drawRound(id, persent, useDarkTheme) {
 		let pixelRatio = window.devicePixelRatio || 1;
@@ -92,6 +108,7 @@ document.addEventListener("DOMContentLoaded", function() {
 			setCanvasSize(canvas, pixelRatio);
 			let i = persent;
 			let strokeColor = canvas.dataset.stroke;
+			if (!ctx) return;
 			ctx.beginPath()
 			ctx.lineWidth = lineWidth*pixelRatio;
 			ctx.arc(canvas.width/2, canvas.height/2, canvas.height/2 - (lineWidth * pixelRatio / 2), -Math.PI/2, -Math.PI * (2 * (1 - i))-Math.PI/2);
@@ -116,7 +133,9 @@ document.addEventListener("DOMContentLoaded", function() {
 	function drawRadialIndicator(){
 		let totalHeight = document.body.scrollHeight - window.innerHeight ;
 		let scrollTop = document.documentElement.scrollTop;
-		drawRound('roundCanvas', scrollTop/totalHeight, false);
+		if (document.getElementById('roundCanvas').length) {
+			drawRound('roundCanvas', scrollTop/totalHeight, false);
+		}
 	};
 	drawRadialIndicator();
 	window.addEventListener("scroll", drawRadialIndicator);

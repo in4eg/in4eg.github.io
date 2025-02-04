@@ -2,6 +2,9 @@ document.addEventListener("DOMContentLoaded", function() {
 	const ACTIVE_TAB_CLASS = 'active';
 	const ACTIVE_MENU_CLASS = 'active';
 
+	const TOUCH_ACTIVE_TAB_CLASS = 'touch-active';
+	const TOUCH_ACTIVE_MENU_CLASS = 'touch-active';
+
 	let select = function(selector, parent){
 		return (parent || document).querySelector(selector);
 	};
@@ -46,6 +49,18 @@ document.addEventListener("DOMContentLoaded", function() {
 				show(buttons, i);
 				hideAll(tabs);
 				show(tabs, i);
+			});
+			button.addEventListener('touchstart', function(e){
+				e.preventDefault();
+				e.stopPropagation();
+				e.stopImmediatePropagation();
+				console.log(e);
+				hideAll(buttons);
+				show(buttons, i);
+				hideAll(tabs);
+				show(tabs, i);
+				navigation.classList.add(TOUCH_ACTIVE_MENU_CLASS);
+				tabsContainer.classList.add(TOUCH_ACTIVE_MENU_CLASS);
 			});
 		};
 	}
