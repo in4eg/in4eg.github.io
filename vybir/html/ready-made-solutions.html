@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="ua">
+<head>
+	<meta charset="UTF-8">
+	<title>Vybir :: News</title>
+
+	<link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
+	<link rel="manifest" href="/favicon/site.webmanifest">
+	<link rel="mask-icon" href="/favicon/safari-pinned-tab.png" color="#314961">
+	<meta name="msapplication-TileColor" content="#314961">
+	<meta name="theme-color" content="#314961">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+	<meta name="format-detection" content="telephone=no">
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Wix+Madefor+Display:wght@400..800&display=swap" rel="stylesheet">
+
+	<link rel="stylesheet" href="css/vybir-theme.min.css">
+</head>
+<body id="innerBody">
+	<!-- header -->
+	@@include('./includes/header.html')
+
+	<main class="page-main" id="pageMain">
+		<div class="uk-container uk-container-xlarge" uk-filter="target: .catalog-elements">
+			<h1 class="h4-header-font centered-title">Готові рішення</h1>
+			<!-- tabs navigation -->
+			<div class="tabs-navigation align-center visible-mobile">
+				<!-- all -->
+				<div class="tab-item filter-active uk-active" uk-filter-control>
+					<a href="#" aria-hidden="true">всі</a>
+				</div>
+				<!-- 1 -->
+				<div class="tab-item" uk-filter-control=".tag-kitchen">
+					<a href="#" aria-hidden="true">Кухні</a>
+				</div>
+				<!-- 2 -->
+				<div class="tab-item last-element" uk-filter-control=".tag-cabinets">
+					<a href="#" aria-hidden="true">Шафи</a>
+				</div>
+				<!-- 3 -->
+				<div class="tab-item last-element" uk-filter-control=".tag-bedrooms">
+					<a href="#" aria-hidden="true">спальні</a>
+				</div>
+				<!-- 4 -->
+				<div class="tab-item last-element" uk-filter-control=".tag-children">
+					<a href="#" aria-hidden="true">дитячі</a>
+				</div>
+				<!-- 5 -->
+				<div class="tab-item last-element" uk-filter-control=".tag-bath">
+					<a href="#" aria-hidden="true">ванни</a>
+				</div>
+				<!-- 6 -->
+				<div class="tab-item last-element" uk-filter-control=".tag-chests">
+					<a href="#" aria-hidden="true">комоди</a>
+				</div>
+				<!-- 7 -->
+				<div class="tab-item last-element" uk-filter-control=".tag-living">
+					<a href="#" aria-hidden="true">вітальні</a>
+				</div>
+				<!-- 8 -->
+				<div class="tab-item last-element" uk-filter-control=".tag-hall">
+					<a href="#" aria-hidden="true">прихожі</a>
+				</div>
+			</div>
+			<!-- / tabs navigation -->
+			<div uk-filter="target: .catalog-filter">
+				<!-- Filter controls -->
+				<div class="bordered-tags selected-tags collapsed-s collapsed-mobile align-center">
+					<div class="uk-button uk-tag-button uk-tag-small uk-active" uk-filter-control><a href="#">Всі</a></div>
+					<div class="uk-button uk-tag-button uk-tag-small" uk-filter-control=".tag-tag1"><a href="#">Шафи <span class="button-count secondary">2</span></a></div>
+					<div class="uk-button uk-tag-button uk-tag-small" uk-filter-control=".tag-tag2"><a href="#">Вітальні<span class="button-count secondary">1</span></a></div>
+					<div class="uk-button uk-tag-button uk-tag-small" uk-filter-control=".tag-tag3"><a href="#">Спальні<span class="button-count secondary">2</span></a></div>
+					<div class="uk-button uk-tag-button uk-tag-small" uk-filter-control=".tag-tag4"><a href="#">Кухні<span class="button-count secondary">1</span></a></div>
+					<div class="uk-button uk-tag-button uk-tag-small" uk-filter-control=".tag-tag5"><a href="#">Інше<span class="button-count secondary">2</span></a></div>
+					<!-- show more -->
+					<button class="uk-button uk-button-link tab-button">
+						<span class="closed">Більше <i class="icon icon-caret_bottom"></i></span>
+						<span class="opened">Менше <i class="icon icon-caret_top"></i></span>
+					</button>
+				</div>
+				<!-- / Filter controls -->
+				<!-- Layout items -->
+				<section class="uk-margin-top">
+					<div class="catalog-elements catalog-filter">
+						<div class="uk-margin-large-top tag-kitchen tag-tag1">
+							@@include('./includes/ready-made_item1.html')
+						</div>
+						<div class="uk-margin-large-top tag-cabinets tag-tag2">
+							@@include('./includes/ready-made_item2.html')
+						</div>
+						<div class="uk-margin-large-top tag-bedrooms tag-tag3">
+							@@include('./includes/ready-made_item3.html')
+						</div>
+						<div class="uk-margin-large-top tag-children tag-tag4">
+							@@include('./includes/ready-made_item4.html')
+						</div>
+						<div class="uk-margin-large-top tag-bath tag-tag5">
+							@@include('./includes/ready-made_item1.html')
+						</div>
+						<div class="uk-margin-large-top tag-chests tag-tag1">
+							@@include('./includes/ready-made_item2.html')
+						</div>
+						<div class="uk-margin-large-top tag-living tag-tag2">
+							@@include('./includes/ready-made_item3.html')
+						</div>
+						<div class="uk-margin-large-top tag-hall tag-tag3">
+							@@include('./includes/ready-made_item4.html')
+						</div>
+						<div class="uk-margin-large-top tag-kitchen tag-tag4">
+							@@include('./includes/ready-made_item1.html')
+						</div>
+						<div class="uk-margin-large-top tag-cabinets tag-tag5">
+							@@include('./includes/ready-made_item2.html')
+						</div>
+						<div class="uk-margin-large-top tag-bedrooms tag-tag1">
+							@@include('./includes/ready-made_item3.html')
+						</div>
+						<div class="uk-margin-large-top tag-children tag-tag2">
+							@@include('./includes/ready-made_item4.html')
+						</div>
+						<div class="uk-margin-large-top tag-bath tag-tag3">
+							@@include('./includes/ready-made_item1.html')
+						</div>
+						<div class="uk-margin-large-top tag-chests tag-tag4">
+							@@include('./includes/ready-made_item2.html')
+						</div>
+						<div class="uk-margin-large-top tag-living tag-tag5">
+							@@include('./includes/ready-made_item3.html')
+						</div>
+						<div class="uk-margin-large-top tag-hall tag-tag1">
+							@@include('./includes/ready-made_item4.html')
+						</div>
+					</div>
+					<!-- pagination -->
+					<div class="align-center uk-margin-large-top">
+						@@include('./includes/pagination.html')
+					</div>
+					<!-- / pagination -->
+				</section>
+			</div>
+		</div>
+	</main>
+
+	<!-- footer -->
+	@@include('./includes/footer.html')
+
+
+	<script src="js/uikit/uikit.min.js"></script>
+	<!-- custom js -->
+	<script src="js/main.js"></script>
+</body>
+</html>

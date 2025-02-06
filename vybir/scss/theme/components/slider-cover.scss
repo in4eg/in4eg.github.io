@@ -1,0 +1,165 @@
+.slider-cover {
+
+	.uk-dotnav {
+		position: absolute;
+		left: 104px; bottom: 44px;
+	}
+
+	.uk-dotnav {
+
+		>* {
+
+			>* {
+				height: 18px; width: 18px;
+				background-color: transparent;
+				border: 0;
+				border-radius: unset;
+				position: relative;
+
+				&:before {
+					content: '';
+					position: absolute;
+					top: 50%; left: 50%;
+					height: 4px; width: 4px;
+					border-radius: 50%;
+					transform: translate(-50%, -50%);
+					background-color: $color_primary;
+				}
+
+				&:after {
+					content: '';
+					position: absolute;
+					top: 50%; left: 50%;
+					height: 100%; width: 100%;
+					border-radius: 50%;
+					border: 1px solid $color_primary;
+					transform: translate(-50%, -50%) scale(0);
+					transition: .2s;
+				}
+
+				&:hover {
+
+					&:before {
+						background-color: $color_secondary;
+					}
+
+					&:after {
+						border-color: $color_secondary;
+						transform: translate(-50%, -50%) scale(1);
+					}
+				}
+			}
+
+			&.uk-active {
+
+				>* {
+
+					&:after {
+						transform: translate(-50%, -50%) scale(1);
+					}
+				}
+			}
+		}
+
+		.uk-active {
+
+			a {
+				background-color: transparent;
+			}
+		}
+	}
+
+	.element-title,
+	.subtitle {
+		pointer-events: none;
+	}
+
+	.element-title {
+		letter-spacing: 2.8px;
+	}
+}
+
+@media (max-width: 1520px) {
+
+	.slider-cover {
+
+		.uk-dotnav {
+			left: 38px; bottom: 38px;
+		}
+	}
+}
+
+
+@media (max-width: 960px) {
+
+	.slider-cover {
+		height: 360px;
+	}
+}
+
+@media (max-width: 640px) {
+
+	.slider-cover {
+		margin-left: -15px;
+		margin-right: -15px;
+		height: 490px;
+
+		.uk-dotnav {
+			bottom: 240px;
+			left: 41px;
+		}
+
+		.uk-dotnav >* {
+			padding-left: 6px;
+		}
+
+		.offer-item {
+
+			.text-cover {
+				width: 100%;
+				height: 270px;
+				position: absolute;
+				top: 0; left: 0;
+				padding: 30px 35px 50px;
+
+				.element-title {
+					margin-bottom: 25px;
+					margin-top: 5px;
+					max-height: 72px;
+					overflow: hidden;
+				}
+
+				.subtitle {
+					font-size: 12px;
+				}
+
+				.button-cover {
+					margin-bottom: 30px;
+
+					.button.button-light {
+						padding: 3px 15px;
+						height: 36px;
+					}
+				}
+
+				.inner:after {
+					top: 0; right: 0;
+				}
+			}
+
+			.element-figure {
+				position: absolute;
+				width: 100%; height: 220px;
+				bottom: 0; left: 0;
+				top: auto;
+
+				img,
+				video {
+					top: 50%; left: 50%;
+					max-width: 110%;
+					transform: translate(-50%, -50%);
+				}
+			}
+		}
+	}
+}

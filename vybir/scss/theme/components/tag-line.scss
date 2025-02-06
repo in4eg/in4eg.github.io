@@ -1,0 +1,65 @@
+.tag-line {
+	white-space: nowrap;
+	display: table;
+	width: 100%;
+	border-bottom: 1px solid $border_color;
+
+	&.header-line {
+		border-bottom: none;
+	}
+
+	&.header-line {
+
+		div {
+			color: $color_primary;
+		}
+	}
+
+	div {
+		display: table-cell;
+		font-size: 18px;
+		color: $color_black;
+		line-height: 1;
+		width: calc(48% - 150px);
+		padding: 16px 20px;
+		white-space: normal;
+		vertical-align: middle;
+
+		&:first-child {
+			width: 52%;
+		}
+
+		&:last-child {
+			text-align: right;
+			width: 150px;
+		}
+	}
+
+	.download-button {
+		color: $color_secondary;
+		height: 40px; width: 40px;
+		line-height: 40px;
+	}
+}
+
+@media (max-width: 1440px) {
+
+	.tag-line {
+
+		div {
+			padding: 8px 15px;
+			font-size: 16px;
+			line-height: 1.2;
+		}
+	}
+}
+
+@media (max-width: 960px) {
+
+	.tag-line {
+
+		div {
+			font-size: 14px;
+		}
+	}
+}

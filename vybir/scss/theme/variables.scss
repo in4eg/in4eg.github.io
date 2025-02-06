@@ -1,0 +1,152 @@
+/* 1. Your custom variables and variable overwrites.*/
+$font: 'Wix Madefor Display', serif;
+
+/* typography */
+$font-size: 15px;
+$font-size_smaller: 14px;
+$font-size_middle: 28px;
+$font-size_icon: 10px;
+
+$h1-font-size: 72px;
+$h2-font-size: 64px;
+$h3-font-size: 48px;
+$h4-font-size: 40px;
+$h5-font-size: 36px;
+$h6-font-size: 20px;
+
+$subheader1-font-size: 24px;
+$subheader2-font-size: 20px;
+$subheader3-font-size: 16px;
+
+$button-font-size-initial: 20px;
+$button-font-size_small: 16px;
+$button-font-size_medium: 18px;
+
+/*colors theme*/
+$color_primary: #324A61;
+$color_primary_hover: #B79C90;
+$color_secondary: #A24F35;
+$color_secondary_hover: #B79C90;
+$color_dark: #0D1220;
+
+$color_white: #ffffff;
+$color_whitesmoke: #f5f5f5;
+$color_black: #000000;
+
+$color_error: #A93040;
+$color_red: #D24539;
+$text_color: $color_primary;
+
+$hover_transparent: rgba(#B79C9033, 0.2);
+$color_secondary_transparent: rgba($color_secondary, 0.2);
+$border_color: rgba($color_black, 0.1);
+
+$accordion-padding-vertical: 12px;
+$accordion-padding-horizontal: 20px;
+
+:root {
+	--font-size: #{$font-size};
+	--font-size_smaller: #{$font-size_smaller};
+	--font-size_middle: #{$font-size_middle};
+	--h1-font-size: #{$h1-font-size};
+	--h2-font-size: #{$h2-font-size};
+	--h3-font-size: #{$h3-font-size};
+	--h4-font-size: #{$h4-font-size};
+	--h5-font-size: #{$h5-font-size};
+	--h6-font-size: #{$h6-font-size};
+	--subheader1-font-size: #{$subheader1-font-size};
+	--subheader2-font-size: #{$subheader2-font-size};
+	--subheader3-font-size: #{$subheader3-font-size};
+}
+
+@media (max-width: 1810px) {
+
+	$subheader2-font-size: 18px;
+
+	:root {
+		--subheader2-font-size: #{$subheader2-font-size};
+	}
+}
+
+
+@media (max-width: 1650px) {
+
+	$h1-font-size: 64px;
+	$h2-font-size: 60px;
+	$h3-font-size: 46px;
+
+	:root {
+		--h1-font-size: #{$h1-font-size};
+		--h2-font-size: #{$h2-font-size};
+		--h3-font-size: #{$h3-font-size};
+	}
+}
+
+@media (max-width: 1520px) {
+
+	$h1-font-size: 62px;
+	$h2-font-size: 58px;
+	$h3-font-size: 44px;
+	$subheader2-font-size: 16px;
+
+	:root {
+		--h1-font-size: #{$h1-font-size};
+		--h2-font-size: #{$h2-font-size};
+		--h3-font-size: #{$h3-font-size};
+		--subheader2-font-size: #{$subheader2-font-size};
+	}
+}
+
+@media (max-width: 1440px) {
+
+	$h1-font-size: 50px;
+	$h2-font-size: 48px;
+	$h3-font-size: 42px;
+	$h4-font-size: 38px;
+	$h5-font-size: 28px;
+	$font-size_middle: 22px;
+	$subheader1-font-size: 20px;
+	$subheader3-font-size: 14px;
+	$font-size_smaller: 10px;
+
+	:root {
+		--h1-font-size: #{$h1-font-size};
+		--h2-font-size: #{$h2-font-size};
+		--h3-font-size: #{$h3-font-size};
+		--h4-font-size: #{$h4-font-size};
+		--h5-font-size: #{$h5-font-size};
+		--font-size_middle: #{$font-size_middle};
+		--subheader1-font-size: #{$subheader1-font-size};
+		--subheader3-font-size: #{$subheader3-font-size};
+		--font-size_smaller: #{$font-size_smaller};
+	}
+}
+
+@media (max-width: 1200px) {
+
+	$h1-font-size: 36px;
+	$h2-font-size: 32px;
+	$h3-font-size: 30px;
+	$h4-font-size: 26px;
+	$h5-font-size: 20px;
+	$font-size: 14px;
+	$font-size_middle: 18px;
+	$subheader1-font-size: 18px;
+	$subheader2-font-size: 16px;
+
+	:root {
+		--h1-font-size: #{$h1-font-size};
+		--h2-font-size: #{$h2-font-size};
+		--h3-font-size: #{$h3-font-size};
+		--h4-font-size: #{$h4-font-size};
+		--h5-font-size: #{$h5-font-size};
+		--font-size: #{$font-size};
+		--font-size_middle: #{$font-size_middle};
+		--subheader1-font-size: #{$subheader1-font-size};
+		--subheader2-font-size: #{$subheader2-font-size};
+	}
+}
+
+@media (max-width: 640px) {
+	
+}

@@ -1,0 +1,146 @@
+<!-- mobile header -->
+<div class="uk-hidden@m mobile-header">
+	<div uk-grid class="uk-grid-small">
+		<div class="uk-width-1-2"><h4>Фільтри</h4></div>
+		<div class="uk-width-1-2 align-right">
+			<button uk-toggle="target: #catalogFilters; animation: uk-animation-fade; cls: active" type="button" class="uk-button button-link-icon uk-button-toggle" uk-tooltip="Закрити фільтри">
+				<span class="text"><i class="icon icon-close"></i></span>
+			</button>
+		</div>
+	</div>
+</div>
+<!-- / mobile header -->
+<form action="#" class="form">
+	<div class="header-title">
+		<div uk-grid class="uk-grid-collapse">
+			<div class="subheader2 color-black">Фільтри</div>
+			<div class="uk-text-right uk-width-expand">
+				<button class="uk-button uk-button-link uk-button-small" type="reset" uk-tooltip="Скинути фільтри">Скинути</button>
+			</div>
+		</div>
+	</div>
+	<ul uk-accordion="multiple: true">
+		<li class="uk-open">
+			<a class="uk-accordion-title" href>Основа</a>
+			<div class="uk-accordion-content">
+				<div class="checkbox-cover">
+					<label><input class="uk-checkbox" type="checkbox">HPL</label>
+				</div>
+				<div class="checkbox-cover">
+					<label><input class="uk-checkbox" type="checkbox">MDF</label>
+				</div>
+				<div class="checkbox-cover">
+					<label><input class="uk-checkbox" type="checkbox">ДСП</label>
+				</div>
+				<div class="checkbox-cover">
+					<label><input class="uk-checkbox" type="checkbox">Каталог</label>
+				</div>
+			</div>
+		</li>
+		<li class="uk-open">
+			<a class="uk-accordion-title" href>Декор</a>
+			<div class="uk-accordion-content">
+				<div class="checkbox-cover">
+					<label><input class="uk-checkbox" type="checkbox">Feelwood</label>
+				</div>
+				<div class="checkbox-cover">
+					<label><input class="uk-checkbox" type="checkbox">Деревоподібні</label>
+				</div>
+				<div class="checkbox-cover">
+					<label><input class="uk-checkbox" type="checkbox">Однокольорові (unicolor)</label>
+				</div>
+			</div>
+		</li>
+		<li>
+			<a class="uk-accordion-title" href>Довжина</a>
+			<div class="uk-accordion-content">
+				<div class="checkbox-cover">
+					<label><input class="uk-checkbox" type="checkbox">3050 мм</label>
+				</div>
+				<div class="checkbox-cover">
+					<label><input class="uk-checkbox" type="checkbox">4100 мм</label>
+				</div>
+				<div class="checkbox-cover">
+					<label><input class="uk-checkbox" type="checkbox">4200 мм</label>
+				</div>
+			</div>
+		</li>
+		<li>
+			<a class="uk-accordion-title" href>Ширина</a>
+			<div class="uk-accordion-content">
+				<div class="checkbox-cover">
+					<label><input class="uk-checkbox" type="checkbox">600 мм</label>
+				</div>
+				<div class="checkbox-cover">
+					<label><input class="uk-checkbox" type="checkbox">650 мм</label>
+				</div>
+				<div class="checkbox-cover">
+					<label><input class="uk-checkbox" type="checkbox">900 мм</label>
+				</div>
+				<div class="checkbox-cover">
+					<label><input class="uk-checkbox" type="checkbox">920 мм</label>
+				</div>
+			</div>
+		</li>
+		<li>
+			<a class="uk-accordion-title" href>Товщина</a>
+			<div class="uk-accordion-content">
+				<div class="checkbox-cover">
+					<label><input class="uk-checkbox" type="checkbox">12 мм</label>
+				</div>
+				<div class="checkbox-cover">
+					<label><input class="uk-checkbox" type="checkbox">16 мм</label>
+				</div>
+				<div class="checkbox-cover">
+					<label><input class="uk-checkbox" type="checkbox">38 мм</label>
+				</div>
+				<div class="checkbox-cover">
+					<label><input class="uk-checkbox" type="checkbox">39 мм</label>
+				</div>
+			</div>
+		</li>
+		<li>
+			<a class="uk-accordion-title" href>Виробник</a>
+			<div class="uk-accordion-content">
+				<div class="checkbox-cover">
+					<label><input class="uk-checkbox" type="checkbox">Egger</label>
+				</div>
+				<div class="checkbox-cover">
+					<label><input class="uk-checkbox" type="checkbox">LuxeForm</label>
+				</div>
+				<div class="checkbox-cover">
+					<label><input class="uk-checkbox" type="checkbox">Westag & Getalit AG</label>
+				</div>
+			</div>
+		</li>
+		<li>
+			<a class="uk-accordion-title" href>Колекція</a>
+			<div class="uk-accordion-content">
+				<div class="checkbox-cover">
+					<label><input class="uk-checkbox" type="checkbox">24+</label>
+				</div>
+				<div class="checkbox-cover">
+					<label><input class="uk-checkbox" type="checkbox">2017-2019</label>
+				</div>
+				<div class="checkbox-cover">
+					<label><input class="uk-checkbox" type="checkbox">2020-2022</label>
+				</div>
+			</div>
+		</li>
+		<li>
+			<a class="uk-accordion-title" href>Складська програма</a>
+			<div class="uk-accordion-content">
+				<div class="checkbox-cover">
+					<label><input class="uk-checkbox" type="checkbox">Так</label>
+				</div>
+				<div class="checkbox-cover">
+					<label><input class="uk-checkbox" type="checkbox">Під замовлення</label>
+				</div>
+			</div>
+		</li>
+	</ul>
+	<button class="uk-button uk-button-secondary uk-width-1-1" type="submit" uk-tooltip="Застосувати фільтри">
+		<span class="text">Застосувати</span>
+		<span class="fade"></span>
+	</button>
+</form>

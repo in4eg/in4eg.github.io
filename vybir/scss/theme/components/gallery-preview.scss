@@ -1,0 +1,56 @@
+.gallery-cover {
+
+}
+
+.gallery-preview {
+	cursor: pointer;
+
+	.link-cover {
+		display: block;
+	}
+
+	a:not(.link-cover) {
+		display: none;
+	}
+
+	&.info-card {
+
+		.element-figure {
+			padding-top: 74%;
+		}
+	}
+
+	.gallery-icon {
+		position: absolute;
+	}
+
+	&.albums {
+
+		.gallery-icon {
+			top: 15px; left: 15px;
+		}
+	}
+
+	&.video {
+
+		.gallery-icon {
+			top: 50%; left: 50%;
+			transform: translate(-50%, -50%);
+		}
+	}
+
+	&.photo {
+
+		.gallery-icon {
+			left: 15px; bottom: 15px;
+		}
+	}
+
+}
+
+@media (min-width: 640px) {
+
+	.gallery-cover {
+		padding-left: 20px;
+	}
+}

@@ -1,0 +1,76 @@
+//
+// Component: Pagination
+//
+// ========================================================================
+
+
+// Variables
+// ========================================================================
+
+
+// Component
+// ========================================================================
+
+// @mixin hook-pagination(){}
+
+
+// Items
+// ========================================================================
+
+.pagination {
+	display: inline-block;
+}
+
+.uk-pagination > * > * {
+	height: $pagination-item-size; width: $pagination-item-size;
+	border-radius: 50%;
+	text-align: center;
+	column-gap: 0;
+	font-weight: 600;
+}
+
+.uk-pagination > .uk-active > * {
+	background-color: $pagination-item-background-active;
+}
+
+.uk-pagination > * > :hover {
+	background-color: $pagination-item-background-hover;
+}
+
+
+
+@media (max-width: 1440px) {
+
+	.pagination {
+
+		.uk-pagination > * {
+			padding-left: calc($pagination-margin-horizontal*.8);
+		}
+
+		.uk-pagination > * > * {
+			padding: calc($pagination-item-padding-vertical*0.8) calc($pagination-item-padding-horizontal*0.8);
+			height: calc($pagination-item-size*.8); width: calc($pagination-item-size*.8);
+		}
+	}
+}
+
+// @mixin hook-pagination-item-hover(){}
+
+// @mixin hook-pagination-item-active(){}
+
+// @mixin hook-pagination-item-disabled(){}
+
+
+// Miscellaneous
+// ========================================================================
+
+// @mixin hook-pagination-misc(){}
+
+
+// Inverse
+// ========================================================================
+
+// @mixin hook-inverse-pagination-item(){}
+// @mixin hook-inverse-pagination-item-hover(){}
+// @mixin hook-inverse-pagination-item-active(){}
+// @mixin hook-inverse-pagination-item-disabled(){}

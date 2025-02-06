@@ -1,0 +1,222 @@
+//
+// Component: Button
+//
+// ========================================================================
+
+
+// Variables
+// ========================================================================
+
+
+//
+// New
+//
+
+.uk-button {
+	background: transparent;
+	border: 1px solid transparent;
+	white-space: nowrap;
+}
+
+.uk-button.uk-button-light {
+	background-color: $button-light-background;
+	border: 1px solid $button-light-border-color;
+	color: $button-light-color;
+
+	&:hover {
+		border-color: $button-light-border-color-hover;
+		color: $button-light-color-hover;
+		background-color: $button-light-background-hover;
+	}
+}
+
+.uk-button.uk-button-light-invert {
+	background-color: $button-light-background;
+	border: 1px solid $button-light-border-color;
+	color: $button-light-color;
+
+	&:hover {
+		border-color: $button-light-invert-border-color-hover;
+		color: $button-light-invert-color-hover;
+		background-color: $button-light-invert-background-hover;
+	}
+}
+
+.uk-button.uk-tag-button {
+	background-color: $tag-button-background;
+	border: 1px solid $tag-button-border-color;
+	color: $tag-button-color;
+	position: relative;
+	padding: calc($tag-button-padding*0.5) calc($tag-remove-size*2) calc($tag-button-padding*0.5) calc($tag-button-padding*2);
+	font-size: $tag-button-font-size;
+
+	.uk-tag-remove-icon {
+		font-size: $tag-remove-icon-font-size;
+		height: $tag-remove-size; width: $tag-remove-size;
+		line-height: $tag-remove-size;
+		position: absolute;
+		right: calc($tag-remove-size/2); top: 50%;
+		transform: translateY(-50%);
+	}
+
+	&:hover {
+		border-color: $tag-button-border-color-hover;
+		color: $tag-button-color-hover;
+		background-color: $tag-button-background-hover;
+
+		.uk-tag-remove-icon {
+			color: $tag-remove-icon-color-hover;
+		}
+	}
+}
+
+.uk-button.uk-tag-button.uk-tag-small {
+	padding: calc($tag-button-padding*0.2) calc($tag-button-padding*2) calc($tag-button-padding*0.2) calc($tag-button-padding*2);
+	font-size: $uk-tag-small-font-size;
+	line-height: $uk-tag-small-line-height;
+
+	&.filter-active,
+	&.uk-active {
+		border-color: $tag-button-border-active;
+		color: $tag-button-color-active;
+
+		a {
+			color: $tag-button-color-active;
+		}
+	}
+
+	.button-count {
+		margin-left: 5px;
+	}
+}
+
+.uk-button.uk-button-small {
+	font-size: $button-small-font-size;
+}
+
+.uk-button.uk-button-secondary {
+	font-weight: $button-font-weight;
+	font-size: $button-font-size;
+	font-family: $button-font-family;
+	padding: $button-padding-vertical $button-padding-horizontal;
+}
+
+
+@media (max-width: 1440px) {
+	$button-padding-vertical: 6px;
+	$button-padding-horizontal: 17px;
+
+	.uk-button.uk-button-secondary {
+		padding: $button-padding-vertical $button-padding-horizontal;
+	}
+}
+
+
+// Component
+// ========================================================================
+
+
+
+// @mixin hook-button-hover(){}
+
+// @mixin hook-button-active(){}
+
+
+// Style modifiers
+// ========================================================================
+
+
+
+
+
+
+
+//
+// Primary
+//
+
+
+
+// @mixin hook-button-primary-hover(){}
+
+// @mixin hook-button-primary-active(){}
+
+//
+// Secondary
+//
+
+
+
+// @mixin hook-button-secondary-hover(){}
+
+// @mixin hook-button-secondary-active(){}
+
+//
+// Danger
+//
+
+
+
+// @mixin hook-button-danger-hover(){}
+
+// @mixin hook-button-danger-active(){}
+
+
+// Disabled
+// ========================================================================
+
+
+
+
+// Size modifiers
+// ========================================================================
+
+// @mixin hook-button-small(){}
+
+// @mixin hook-button-large(){}
+
+
+// Text modifier
+// ========================================================================
+
+
+
+
+
+
+
+
+// Link modifier
+// ========================================================================
+
+// @mixin hook-button-link(){}
+
+
+// Miscellaneous
+// ========================================================================
+
+
+
+
+// Inverse
+// ========================================================================
+
+
+
+
+
+
+
+// @mixin hook-inverse-button-primary(){}
+// @mixin hook-inverse-button-primary-hover(){}
+// @mixin hook-inverse-button-primary-active(){}
+
+// @mixin hook-inverse-button-secondary(){}
+// @mixin hook-inverse-button-secondary-hover(){}
+// @mixin hook-inverse-button-secondary-active(){}
+
+
+// @mixin hook-inverse-button-text-hover(){}
+// @mixin hook-inverse-button-text-disabled(){}
+
+// @mixin hook-inverse-button-link(){}

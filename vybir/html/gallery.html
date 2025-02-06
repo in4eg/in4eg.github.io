@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="ua">
+<head>
+	<meta charset="UTF-8">
+	<title>Vybir :: Gallery List</title>
+
+	<link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
+	<link rel="manifest" href="/favicon/site.webmanifest">
+	<link rel="mask-icon" href="/favicon/safari-pinned-tab.png" color="#314961">
+	<meta name="msapplication-TileColor" content="#314961">
+	<meta name="theme-color" content="#314961">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+	<meta name="format-detection" content="telephone=no">
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Wix+Madefor+Display:wght@400..800&display=swap" rel="stylesheet">
+
+	<link rel="stylesheet" href="css/vybir-theme.min.css">
+</head>
+<body id="innerBody">
+	<!-- header -->
+	@@include('./includes/header.html')
+
+	<main class="page-main" id="pageMain">
+		<div class="main-menu-grid">
+			<div class="uk-container uk-container-xlarge">
+				<div class="menu-cover-page uk-margin-medium-top">
+					<div class="uk-grid-collapse uk-grid" uk-filter="target: .switcher-type">
+						<!-- type filters desktop -->
+						<div class="uk-width-1-1 uk-width-2-5@s uk-width-1-4@m uk-width-1-6@l uk-visible@m">
+							<ul class="collapsed-mobile page-switcher">
+								<!-- 1 -->
+								<li class="tab-button" uk-filter-control>
+									<a href="#">
+										<i class="icon icon-main icon-gallery_all icon-main text-icon"></i>
+										Все
+										<i class="icon icon-caret_right caret"></i>
+									</a>
+								</li>
+								<!-- 2 -->
+								<li class="tab-button" uk-filter-control=".tag-albums">
+									<a href="#">
+										<img class="icon-main hover-hidden" src="img/framed-picture.png" draggable="false">
+										<img class="icon-main hover-visible" src="img/framed-picture-full.png" draggable="false">
+										Фотоальбоми
+										<i class="icon icon-caret_right caret"></i>
+									</a>
+								</li>
+								<!-- 3 -->
+								<li class="tab-button" uk-filter-control=".tag-photo">
+									<a href="#">
+										<i class="icon icon-main icon-gallery_photo icon-main text-icon"></i>
+										Фотографії
+										<i class="icon icon-caret_right caret"></i>
+									</a>
+								</li>
+								<!-- 4 -->
+								<li class="tab-button" uk-filter-control=".tag-video">
+									<a href="#">
+										<i class="icon icon-main icon-gallery_video icon-main text-icon"></i>
+										Відео
+										<i class="icon icon-caret_right caret"></i>
+									</a>
+								</li>
+							</ul>
+							<!-- last -->
+							<ul uk-accordion class="uk-visible@s uk-accordion-mobile news-preview">
+								<li>
+									<a class="uk-accordion-title" href><h4 class="subheader2">Найсвіженьке</h4></a>
+									<div class="uk-accordion-content">
+										<h4 class="subheader2 uk-visible@s">Найсвіженьке</h4>
+										<ul class="news-preview-list uk-list">
+											<!-- 1 -->
+											<li class="item">
+												<a href="article.html">
+													<figure class="image-full">
+														<img src="img/temp/news1.png" draggable="false">
+													</figure>
+													<div class="caption">
+														<div class="title">Виставка iSaloni 2024</div>
+														<div class="date">2024-06-14 13:01:25</div>
+													</div>
+												</a>
+											</li>
+											<!-- 2 -->
+											<li class="item">
+												<a href="article.html">
+													<figure class="image-full">
+														<img src="img/temp/news2.png" draggable="false">
+													</figure>
+													<div class="caption">
+														<div class="title">Підсумки розіграшу GTV</div>
+														<div class="date">2024-06-14 13:01:25</div>
+													</div>
+												</a>
+											</li>
+											<!-- 3 -->
+											<li class="item">
+												<a href="article.html">
+													<figure class="image-full">
+														<img src="img/temp/news2.png" draggable="false">
+													</figure>
+													<div class="caption">
+														<div class="title">Компакт-плита: високоякісний матеріал для сучасного меблевого виробництва</div>
+														<div class="date">2024-06-14 13:01:25</div>
+													</div>
+												</a>
+											</li>
+										</ul>
+									</div>
+								</li>
+							</ul>
+							<!-- / last -->
+						</div>
+						<!-- / type filters desktop -->
+						<!-- page content column -->
+						<div class="uk-width-1-1 uk-width-1-1@s uk-width-3-4@m uk-width-5-6@l gallery-cover">
+							<!-- 1 -->
+							<div class="tab-cover">
+								<h1 class="h4-header-font filter-title">Галерея</h1>
+								<!-- search form -->
+								<div class="uk-margin-small-bottom">
+									<form action="javascript:void(0)" class="form search-form">
+										<div class="form-group form-icon-group">
+											<i class="icon icon-search"></i>
+											<input class="uk-input input with-icon" type="text" placeholder="Пошук" aria-label="Пошук">
+										</div>
+									</form>
+								</div>
+								<!-- /search form -->
+								<!-- selected tags -->
+								<div uk-filter="target: .switcher-filter">
+									<div class="bordered-tags selected-tags collapsed-s collapsed-mobile">
+										<div class="uk-button uk-tag-button uk-tag-small" uk-filter-control><a href="#">Всі</a></div>
+										<div class="uk-button uk-tag-button uk-tag-small" uk-filter-control=".tag-white"><a href="#">Alvic</a></div>
+										<div class="uk-button uk-tag-button uk-tag-small" uk-filter-control=".tag-blue"><a href="#">ВКФ Вибір</a></div>
+										<div class="uk-button uk-tag-button uk-tag-small" uk-filter-control=".tag-black"><a href="#">Меблеві ролики</a></div>
+										<div class="uk-button uk-tag-button uk-tag-small" uk-filter-control=".tag-black2"><a href="#">Металеві вироби Вибір</a></div>
+										<div class="uk-button uk-tag-button uk-tag-small" uk-filter-control=".tag-black3"><a href="#">Настінна система Zobal</a></div>
+										<!-- show more -->
+										<button class="uk-button uk-button-link tab-button">
+											<span class="closed">Більше <i class="icon icon-caret_bottom"></i></span>
+											<span class="opened">Менше <i class="icon icon-caret_top"></i></span>
+										</button>
+									</div>
+									<!-- sorting + pagination -->
+									<div class="elements-sorting">
+										<div class="uk-grid-collapse" uk-grid>
+											<!-- pagination -->
+											<div class="uk-width-1-1 uk-visible@l uk-width-3-5@l">
+												@@include('./includes/pagination.html')
+											</div>
+											<!-- /pagination -->
+											<!-- type filters mobile -->
+											<div class="uk-width-1-2 uk-width-1-2@s uk-hidden@m">
+												<ul class="collapsed-mobile page-switcher">
+													<!-- 1 -->
+													<li class="tab-button" uk-filter-control>
+														<a href="#">
+															<i class="icon icon-main icon-gallery_all icon-main text-icon"></i>
+															Все
+															<i class="icon icon-caret_right caret"></i>
+														</a>
+													</li>
+													<!-- 2 -->
+													<li class="tab-button" uk-filter-control=".tag-albums">
+														<a href="#">
+															<img class="icon-main hover-hidden" src="img/framed-picture.png" draggable="false">
+															<img class="icon-main hover-visible" src="img/framed-picture-full.png" draggable="false">
+															Фотоальбоми
+															<i class="icon icon-caret_right caret"></i>
+														</a>
+													</li>
+													<!-- 3 -->
+													<li class="tab-button" uk-filter-control=".tag-photo">
+														<a href="#">
+															<i class="icon icon-main icon-gallery_photo icon-main text-icon"></i>
+															Фотографії
+															<i class="icon icon-caret_right caret"></i>
+														</a>
+													</li>
+													<!-- 4 -->
+													<li class="tab-button" uk-filter-control=".tag-video">
+														<a href="#">
+															<i class="icon icon-main icon-gallery_video icon-main text-icon"></i>
+															Відео
+															<i class="icon icon-caret_right caret"></i>
+														</a>
+													</li>
+												</ul>
+											</div>
+											<!-- / type filters mobile -->
+											<div class="uk-width-1-2 uk-width-1-2@s uk-width-1-1@m uk-width-2-5@l uk-text-right">
+												<!-- sorting -->
+												<div class="selecter-cover uk-width-full-small">
+													<label for="sortBy" class="select-label">Сортувати по:</label>
+													<select name="sortBy" id="sortBy" class="select">
+														<option value="Даті" selected>Даті</option>
+														<option value="Популярності">Популярності</option>
+														<option value="Типу">Типу</option>
+													</select>
+												</div>
+												<!-- /sorting -->
+											</div>
+										</div>
+									</div>
+									<!-- / sorting + pagination -->
+									<div class="switcher-filter switcher-type uk-grid-small uk-child-width-1-1 uk-child-width-1-1@s uk-child-width-1-2@m uk-child-width-1-4@l" uk-grid>
+										<div class="tag-white tag-video">
+											@@include('./includes/gallery-video.html')
+										</div>
+										<div class="tag-blue tag-video">
+											@@include('./includes/gallery-video.html')
+										</div>
+										<div class="tag-white tag-photo">
+											@@include('./includes/gallery-photo.html')
+										</div>
+										<div class="tag-white tag-video">
+											@@include('./includes/gallery-video.html')
+										</div>
+										<div class="tag-black3 tag-video">
+											@@include('./includes/gallery-video.html')
+										</div>
+										<div class="tag-black2 tag-video">
+											@@include('./includes/gallery-video.html')
+										</div>
+										<div class="tag-black3 tag-photo">
+											@@include('./includes/gallery-photo.html')
+										</div>
+										<div class="tag-black2 tag-albums">
+											@@include('./includes/gallery-albums.html')
+										</div>
+										<div class="tag-black tag-albums">
+											@@include('./includes/gallery-albums.html')
+										</div>
+										<div class="tag-black tag-albums">
+											@@include('./includes/gallery-albums.html')
+										</div>
+										<div class="tag-blue tag-albums">
+											@@include('./includes/gallery-albums.html')
+										</div>
+										<div class="tag-black tag-video">
+											@@include('./includes/gallery-video.html')
+										</div>
+										<div class="tag-black3 tag-photo">
+											@@include('./includes/gallery-photo.html')
+										</div>
+										<div class="tag-black2 tag-photo">
+											@@include('./includes/gallery-photo.html')
+										</div>
+										<div class="tag-blue tag-photo">
+											@@include('./includes/gallery-photo.html')
+										</div>
+										<div class="tag-white tag-video">
+											@@include('./includes/gallery-video.html')
+										</div>
+										<div class="tag-blue tag-albums">
+											@@include('./includes/gallery-albums.html')
+										</div>
+										<div class="tag-black tag-albums">
+											@@include('./includes/gallery-albums.html')
+										</div>
+									</div>
+								</div>
+								<!-- / selected tags -->
+								<!-- pagination -->
+								@@include('./includes/pagination.html')
+								<!-- / pagination -->
+							</div>
+						</div>
+						<!-- / page content column -->
+					</div>
+				</div>
+			</div>
+		</div>
+	</main>
+
+	<!-- footer -->
+	@@include('./includes/footer.html')
+
+
+	<script src="js/uikit/uikit.min.js"></script>
+	<!-- custom js -->
+	<script src="js/main.js"></script>
+</body>
+</html>

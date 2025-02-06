@@ -1,0 +1,42 @@
+//
+// Component: Lightbox
+//
+// ========================================================================
+
+.uk-lightbox {
+
+	.uk-position-small {
+		border-radius: 0;
+		top: $close-lightbox-position; right: $close-lightbox-position;
+		left: auto;
+		transform: none;
+		background-color: transparent;
+	}
+}
+
+// Variables
+// ========================================================================
+
+
+// Component
+// ========================================================================
+
+// @mixin hook-lightbox(){}
+
+
+// Item
+// ========================================================================
+
+// @mixin hook-lightbox-item(){}
+
+
+// Caption
+// ========================================================================
+
+// @mixin hook-lightbox-caption(){}
+
+
+// Miscellaneous
+// ========================================================================
+
+// @mixin hook-lightbox-misc(){}

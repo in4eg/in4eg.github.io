@@ -1,0 +1,1429 @@
+<!DOCTYPE html>
+<html lang="ua">
+<head>
+	<meta charset="UTF-8">
+	<title>Vybir :: Price List</title>
+
+	<link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
+	<link rel="manifest" href="/favicon/site.webmanifest">
+	<link rel="mask-icon" href="/favicon/safari-pinned-tab.png" color="#314961">
+	<meta name="msapplication-TileColor" content="#314961">
+	<meta name="theme-color" content="#314961">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+	<meta name="format-detection" content="telephone=no">
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Wix+Madefor+Display:wght@400..800&display=swap" rel="stylesheet">
+
+	<link rel="stylesheet" href="css/vybir-theme.min.css">
+</head>
+<body id="innerBody">
+	<!-- header -->
+	@@include('./includes/header.html')
+
+	<main class="page-main" id="pageMain">
+		<div class="main-menu-grid">
+			<div class="uk-container uk-container-xlarge">
+				<div class="menu-cover-page uk-margin-medium-top">
+					<div class="uk-grid-collapse uk-grid">
+						<!-- type filters -->
+						<ul class="collapsed-mobile page-switcher uk-width-1-1 uk-width-1-1@s uk-width-1-4@m uk-width-1-6@l" uk-switcher>
+							<!-- 1 -->
+							<li class="tab-button">
+								<a href="#">
+									<img class="icon-main hover-hidden" src="img/framed-picture.png" draggable="false">
+									<img class="icon-main hover-visible" src="img/framed-picture-full.png" draggable="false">
+									Прайс листи
+									<i class="icon icon-caret_right caret"></i>
+								</a>
+							</li>
+							<!-- 2 -->
+							<li class="tab-button">
+								<a href="#">
+									<img class="icon-main hover-hidden" src="img/framed-picture.png" draggable="false">
+									<img class="icon-main hover-visible" src="img/framed-picture-full.png" draggable="false">
+									Інструкції
+									<i class="icon icon-caret_right caret"></i>
+								</a>
+							</li>
+							<!-- 3 -->
+							<li class="tab-button">
+								<a href="#">
+									<img class="icon-main hover-hidden" src="img/framed-picture.png" draggable="false">
+									<img class="icon-main hover-visible" src="img/framed-picture-full.png" draggable="false">
+									Сертифікати
+									<i class="icon icon-caret_right caret"></i>
+								</a>
+							</li>
+							<!-- 4 -->
+							<li class="tab-button">
+								<a href="#">
+									<img class="icon-main hover-hidden" src="img/framed-picture.png" draggable="false">
+									<img class="icon-main hover-visible" src="img/framed-picture-full.png" draggable="false">
+									Каталоги Вибір
+									<i class="icon icon-caret_right caret"></i>
+								</a>
+							</li>
+							<!-- 5 -->
+							<li class="tab-button">
+								<a href="#">
+									<img class="icon-main hover-hidden" src="img/framed-picture.png" draggable="false">
+									<img class="icon-main hover-visible" src="img/framed-picture-full.png" draggable="false">
+									Каталоги
+									<i class="icon icon-caret_right caret"></i>
+								</a>
+							</li>
+							<!-- 6 -->
+							<li class="tab-button">
+								<a href="#">
+									<img class="icon-main hover-hidden" src="img/framed-picture.png" draggable="false">
+									<img class="icon-main hover-visible" src="img/framed-picture-full.png" draggable="false">
+									Розрахунки
+									<i class="icon icon-caret_right caret"></i>
+								</a>
+							</li>
+							<!-- 7 -->
+							<li class="tab-button">
+								<a href="#">
+									<img class="icon-main hover-hidden" src="img/framed-picture.png" draggable="false">
+									<img class="icon-main hover-visible" src="img/framed-picture-full.png" draggable="false">
+									Бланки
+									<i class="icon icon-caret_right caret"></i>
+								</a>
+							</li>
+						</ul>
+						<!-- / type filters -->
+						<!-- page content column -->
+						<div class="uk-width-1-1 uk-width-1-1@s uk-width-3-4@m uk-width-5-6@l switcher-cover uk-switcher">
+							<!-- 1 -->
+							<div class="tab-cover">
+								<h1 class="h4-header-font filter-title">Прайс листи: </h1>
+								<!-- selected tags -->
+								<div uk-filter="target: .switcher-filter">
+									<div class="bordered-tags selected-tags collapsed-s collapsed-mobile">
+										<div class="uk-button uk-tag-button uk-tag-small" uk-filter-control><a href="#">Всі</a></div>
+										<div class="uk-button uk-tag-button uk-tag-small" uk-filter-control=".tag-white"><a href="#">Алюмінієві фасади</a></div>
+										<div class="uk-button uk-tag-button uk-tag-small" uk-filter-control=".tag-blue"><a href="#">ВКФ Вибір</a></div>
+										<div class="uk-button uk-tag-button uk-tag-small" uk-filter-control=".tag-black"><a href="#">Меблеві ролики</a></div>
+										<div class="uk-button uk-tag-button uk-tag-small" uk-filter-control=".tag-black2"><a href="#">Металеві вироби Вибір</a></div>
+										<div class="uk-button uk-tag-button uk-tag-small" uk-filter-control=".tag-black3"><a href="#">Настінна система Zobal</a></div>
+										<!-- show more -->
+										<button class="uk-button uk-button-link tab-button">
+											<span class="closed">Більше <i class="icon icon-caret_bottom"></i></span>
+											<span class="opened">Менше <i class="icon icon-caret_top"></i></span>
+										</button>
+									</div>
+									<div class="tag-line header-line">
+										<div>Назва</div>
+										<div>Теги</div>
+										<div>Завантажити</div>
+									</div>
+									<ul class="switcher-wrap switcher-filter">
+										<li class="tag-line tag-white">
+											<div>Прайс листи: Euro Orvel</div>
+											<div>Меблева фурнітура</div>
+											<div>
+												<a class="uk-button uk-button-link download-button" href="blank.pdf" download>
+													<i class="icon icon-download"></i>
+												</a>
+											</div>
+										</li>
+										<li class="tag-line tag-blue">
+											<div>Прайс листи: GTV Меблева фурнитура</div>
+											<div>Меблева фурнітура</div>
+											<div>
+												<a class="uk-button uk-button-link download-button" href="blank.pdf" download>
+													<i class="icon icon-download"></i>
+												</a>
+											</div>
+										</li>
+										<li class="tag-line tag-white">
+											<div>Прайс листи: Euro Orvel</div>
+											<div>Меблева фурнітура</div>
+											<div>
+												<a class="uk-button uk-button-link download-button" href="blank.pdf" download>
+													<i class="icon icon-download"></i>
+												</a>
+											</div>
+										</li>
+										<li class="tag-line tag-white">
+											<div>Прайс листи: Euro Orvel</div>
+											<div>Меблева фурнітура</div>
+											<div>
+												<a class="uk-button uk-button-link download-button" href="blank.pdf" download>
+													<i class="icon icon-download"></i>
+												</a>
+											</div>
+										</li>
+										<li class="tag-line tag-black3">
+											<div>Прайс листи: GTV Петлі, направляючі, ящики</div>
+											<div>Меблева фурнітура</div>
+											<div>
+												<a class="uk-button uk-button-link download-button" href="blank.pdf" download>
+													<i class="icon icon-download"></i>
+												</a>
+											</div>
+										</li>
+										<li class="tag-line tag-black2">
+											<div>Прайс листи: GTV Петлі, направляючі, ящики</div>
+											<div>Меблева фурнітура</div>
+											<div>
+												<a class="uk-button uk-button-link download-button" href="blank.pdf" download>
+													<i class="icon icon-download"></i>
+												</a>
+											</div>
+										</li>
+										<li class="tag-line tag-black3">
+											<div>Прайс листи: GTV Петлі, направляючі, ящики</div>
+											<div>Меблева фурнітура</div>
+											<div>
+												<a class="uk-button uk-button-link download-button" href="blank.pdf" download>
+													<i class="icon icon-download"></i>
+												</a>
+											</div>
+										</li>
+										<li class="tag-line tag-black2">
+											<div>Прайс листи: GTV Петлі, направляючі, ящики</div>
+											<div>Меблева фурнітура</div>
+											<div>
+												<a class="uk-button uk-button-link download-button" href="blank.pdf" download>
+													<i class="icon icon-download"></i>
+												</a>
+											</div>
+										</li>
+										<li class="tag-line tag-black">
+											<div>Прайс листи: GTV Петлі, направляючі, ящики</div>
+											<div>Меблева фурнітура</div>
+											<div>
+												<a class="uk-button uk-button-link download-button" href="blank.pdf" download>
+													<i class="icon icon-download"></i>
+												</a>
+											</div>
+										</li>
+										<li class="tag-line tag-black">
+											<div>Прайс листи: GTV Петлі, направляючі, ящики</div>
+											<div>Меблева фурнітура</div>
+											<div>
+												<a class="uk-button uk-button-link download-button" href="blank.pdf" download>
+													<i class="icon icon-download"></i>
+												</a>
+											</div>
+										</li>
+										<li class="tag-line tag-blue">
+											<div>Прайс листи: GTV Меблева фурнитура</div>
+											<div>Меблева фурнітура</div>
+											<div>
+												<a class="uk-button uk-button-link download-button" href="blank.pdf" download>
+													<i class="icon icon-download"></i>
+												</a>
+											</div>
+										</li>
+										<li class="tag-line tag-black">
+											<div>Прайс листи: GTV Петлі, направляючі, ящики</div>
+											<div>Меблева фурнітура</div>
+											<div>
+												<a class="uk-button uk-button-link download-button" href="blank.pdf" download>
+													<i class="icon icon-download"></i>
+												</a>
+											</div>
+										</li>
+										<li class="tag-line tag-black3">
+											<div>Прайс листи: GTV Петлі, направляючі, ящики</div>
+											<div>Меблева фурнітура</div>
+											<div>
+												<a class="uk-button uk-button-link download-button" href="blank.pdf" download>
+													<i class="icon icon-download"></i>
+												</a>
+											</div>
+										</li>
+										<li class="tag-line tag-black2">
+											<div>Прайс листи: GTV Петлі, направляючі, ящики</div>
+											<div>Меблева фурнітура</div>
+											<div>
+												<a class="uk-button uk-button-link download-button" href="blank.pdf" download>
+													<i class="icon icon-download"></i>
+												</a>
+											</div>
+										</li>
+										<li class="tag-line tag-blue">
+											<div>Прайс листи: GTV Меблева фурнитура</div>
+											<div>Меблева фурнітура</div>
+											<div>
+												<a class="uk-button uk-button-link download-button" href="blank.pdf" download>
+													<i class="icon icon-download"></i>
+												</a>
+											</div>
+										</li>
+										<li class="tag-line tag-white">
+											<div>Прайс листи: Euro Orvel</div>
+											<div>Меблева фурнітура</div>
+											<div>
+												<a class="uk-button uk-button-link download-button" href="blank.pdf" download>
+													<i class="icon icon-download"></i>
+												</a>
+											</div>
+										</li>
+										<li class="tag-line tag-blue">
+											<div>Прайс листи: GTV Меблева фурнитура</div>
+											<div>Меблева фурнітура</div>
+											<div>
+												<a class="uk-button uk-button-link download-button" href="blank.pdf" download>
+													<i class="icon icon-download"></i>
+												</a>
+											</div>
+										</li>
+										<li class="tag-line tag-black">
+											<div>Прайс листи: GTV Петлі, направляючі, ящики</div>
+											<div>Меблева фурнітура</div>
+											<div>
+												<a class="uk-button uk-button-link download-button" href="blank.pdf" download>
+													<i class="icon icon-download"></i>
+												</a>
+											</div>
+										</li>
+									</ul>
+								</div>
+								<!-- / selected tags -->
+								<!-- pagination -->
+								@@include('./includes/pagination.html')
+								<!-- / pagination -->
+							</div>
+							<!-- 2 -->
+							<div class="tab-cover">
+								<h1 class="h4-header-font filter-title">Інструкції</h1>
+								<!-- selected tags -->
+								<div uk-filter="target: .switcher-filter2">
+									<div class="bordered-tags selected-tags collapsed-s">
+										<div class="uk-button uk-tag-button uk-tag-small" uk-filter-control><a href="#">Всі</a></div>
+										<div class="uk-button uk-tag-button uk-tag-small" uk-filter-control=".tag-white"><a href="#">HPL пластик</a></div>
+										<div class="uk-button uk-tag-button uk-tag-small" uk-filter-control=".tag-blue"><a href="#">Hettich</a></div>
+										<div class="uk-button uk-tag-button uk-tag-small" uk-filter-control=".tag-black"><a href="#">Ferramenta</a></div>
+										<div class="uk-button uk-tag-button uk-tag-small" uk-filter-control=".tag-red"><a href="#">LuxeForm</a></div>
+										<!-- show more -->
+										<button class="uk-button uk-button-link tab-button">
+											<span class="closed">Більше <i class="icon icon-caret_bottom"></i></span>
+											<span class="opened">Менше <i class="icon icon-caret_top"></i></span>
+										</button>
+									</div>
+									<div class="tag-line header-line">
+										<div>Назва</div>
+										<div>Теги</div>
+										<div>Завантажити</div>
+									</div>
+									<ul class="switcher-wrap switcher-filter2">
+										<li class="tag-line tag-white">
+											<div>Інструкції: Euro Orvel</div>
+											<div>Меблева фурнітура</div>
+											<div>
+												<a class="uk-button uk-button-link download-button" href="blank.pdf" download>
+													<i class="icon icon-download"></i>
+												</a>
+											</div>
+										</li>
+										<li class="tag-line tag-red">
+											<div>Інструкції: Клея, герметики, засоби для чищення	</div>
+											<div>Меблева фурнітура</div>
+											<div>
+												<a class="uk-button uk-button-link download-button" href="blank.pdf" download>
+													<i class="icon icon-download"></i>
+												</a>
+											</div>
+										</li>
+										<li class="tag-line tag-red">
+											<div>Інструкції: Клея, герметики, засоби для чищення	</div>
+											<div>Меблева фурнітура</div>
+											<div>
+												<a class="uk-button uk-button-link download-button" href="blank.pdf" download>
+													<i class="icon icon-download"></i>
+												</a>
+											</div>
+										</li>
+										<li class="tag-line tag-blue">
+											<div>Інструкції: GTV Меблева фурнитура</div>
+											<div>Меблева фурнітура</div>
+											<div>
+												<a class="uk-button uk-button-link download-button" href="blank.pdf" download>
+													<i class="icon icon-download"></i>
+												</a>
+											</div>
+										</li>
+										<li class="tag-line tag-white">
+											<div>Інструкції: Euro Orvel</div>
+											<div>Меблева фурнітура</div>
+											<div>
+												<a class="uk-button uk-button-link download-button" href="blank.pdf" download>
+													<i class="icon icon-download"></i>
+												</a>
+											</div>
+										</li>
+										<li class="tag-line tag-white">
+											<div>Інструкції: Euro Orvel</div>
+											<div>Меблева фурнітура</div>
+											<div>
+												<a class="uk-button uk-button-link download-button" href="blank.pdf" download>
+													<i class="icon icon-download"></i>
+												</a>
+											</div>
+										</li>
+										<li class="tag-line tag-black">
+											<div>Інструкції: GTV Петлі, направляючі, ящики</div>
+											<div>Меблева фурнітура</div>
+											<div>
+												<a class="uk-button uk-button-link download-button" href="blank.pdf" download>
+													<i class="icon icon-download"></i>
+												</a>
+											</div>
+										</li>
+										<li class="tag-line tag-black">
+											<div>Інструкції: GTV Петлі, направляючі, ящики</div>
+											<div>Меблева фурнітура</div>
+											<div>
+												<a class="uk-button uk-button-link download-button" href="blank.pdf" download>
+													<i class="icon icon-download"></i>
+												</a>
+											</div>
+										</li>
+										<li class="tag-line tag-blue">
+											<div>Інструкції: GTV Меблева фурнитура</div>
+											<div>Меблева фурнітура</div>
+											<div>
+												<a class="uk-button uk-button-link download-button" href="blank.pdf" download>
+													<i class="icon icon-download"></i>
+												</a>
+											</div>
+										</li>
+										<li class="tag-line tag-black">
+											<div>Інструкції: GTV Петлі, направляючі, ящики</div>
+											<div>Меблева фурнітура</div>
+											<div>
+												<a class="uk-button uk-button-link download-button" href="blank.pdf" download>
+													<i class="icon icon-download"></i>
+												</a>
+											</div>
+										</li>
+										<li class="tag-line tag-blue">
+											<div>Інструкції: GTV Меблева фурнитура</div>
+											<div>Меблева фурнітура</div>
+											<div>
+												<a class="uk-button uk-button-link download-button" href="blank.pdf" download>
+													<i class="icon icon-download"></i>
+												</a>
+											</div>
+										</li>
+										<li class="tag-line tag-white">
+											<div>Інструкції: Euro Orvel</div>
+											<div>Меблева фурнітура</div>
+											<div>
+												<a class="uk-button uk-button-link download-button" href="blank.pdf" download>
+													<i class="icon icon-download"></i>
+												</a>
+											</div>
+										</li>
+										<li class="tag-line tag-blue">
+											<div>Інструкції: GTV Меблева фурнитура</div>
+											<div>Меблева фурнітура</div>
+											<div>
+												<a class="uk-button uk-button-link download-button" href="blank.pdf" download>
+													<i class="icon icon-download"></i>
+												</a>
+											</div>
+										</li>
+										<li class="tag-line tag-black">
+											<div>Інструкції: GTV Петлі, направляючі, ящики</div>
+											<div>Меблева фурнітура</div>
+											<div>
+												<a class="uk-button uk-button-link download-button" href="blank.pdf" download>
+													<i class="icon icon-download"></i>
+												</a>
+											</div>
+										</li>
+									</ul>
+								</div>
+								<!-- / selected tags -->
+								<!-- / selected tags -->
+								<!-- pagination -->
+								@@include('./includes/pagination.html')
+								<!-- / pagination -->
+							</div>
+							<!-- 3 -->
+							<div class="tab-cover">
+								<h1 class="h4-header-font filter-title">Сертифікати</h1>
+								<!-- selected tags -->
+								<div uk-filter="target: .switcher-filter3">
+									<div class="bordered-tags selected-tags collapsed-s">
+										<div class="uk-button uk-tag-button uk-tag-small" uk-filter-control><a href="#">Всі</a></div>
+										<div class="uk-button uk-tag-button uk-tag-small" uk-filter-control=".tag-white"><a href="#">Компакт-плита</a></div>
+										<div class="uk-button uk-tag-button uk-tag-small" uk-filter-control=".tag-blue"><a href="#">Hettich</a></div>
+										<div class="uk-button uk-tag-button uk-tag-small" uk-filter-control=".tag-black"><a href="#">Алюмінієві фасади</a></div>
+										<div class="uk-button uk-tag-button uk-tag-small" uk-filter-control=".tag-red"><a href="#">Умивальники</a></div>
+										<!-- show more -->
+										<button class="uk-button uk-button-link tab-button">
+											<span class="closed">Більше <i class="icon icon-caret_bottom"></i></span>
+											<span class="opened">Менше <i class="icon icon-caret_top"></i></span>
+										</button>
+									</div>
+									<div class="tag-line header-line">
+										<div>Назва</div>
+										<div>Теги</div>
+										<div>Завантажити</div>
+									</div>
+									<ul class="switcher-wrap switcher-filter3">
+										<li class="tag-line tag-white">
+											<div>Сертифікати: Euro Orvel</div>
+											<div>Меблева фурнітура</div>
+											<div>
+												<a class="uk-button uk-button-link download-button" href="blank.pdf" download>
+													<i class="icon icon-download"></i>
+												</a>
+											</div>
+										</li>
+										<li class="tag-line tag-red">
+											<div>Сертифікати: Клея, герметики, засоби для чищення	</div>
+											<div>Меблева фурнітура</div>
+											<div>
+												<a class="uk-button uk-button-link download-button" href="blank.pdf" download>
+													<i class="icon icon-download"></i>
+												</a>
+											</div>
+										</li>
+										<li class="tag-line tag-red">
+											<div>Сертифікати: Клея, герметики, засоби для чищення	</div>
+											<div>Меблева фурнітура</div>
+											<div>
+												<a class="uk-button uk-button-link download-button" href="blank.pdf" download>
+													<i class="icon icon-download"></i>
+												</a>
+											</div>
+										</li>
+										<li class="tag-line tag-blue">
+											<div>Сертифікати: GTV Меблева фурнитура</div>
+											<div>Меблева фурнітура</div>
+											<div>
+												<a class="uk-button uk-button-link download-button" href="blank.pdf" download>
+													<i class="icon icon-download"></i>
+												</a>
+											</div>
+										</li>
+										<li class="tag-line tag-white">
+											<div>Сертифікати: Euro Orvel</div>
+											<div>Меблева фурнітура</div>
+											<div>
+												<a class="uk-button uk-button-link download-button" href="blank.pdf" download>
+													<i class="icon icon-download"></i>
+												</a>
+											</div>
+										</li>
+										<li class="tag-line tag-white">
+											<div>Сертифікати: Euro Orvel</div>
+											<div>Меблева фурнітура</div>
+											<div>
+												<a class="uk-button uk-button-link download-button" href="blank.pdf" download>
+													<i class="icon icon-download"></i>
+												</a>
+											</div>
+										</li>
+										<li class="tag-line tag-black">
+											<div>Сертифікати: GTV Петлі, направляючі, ящики</div>
+											<div>Меблева фурнітура</div>
+											<div>
+												<a class="uk-button uk-button-link download-button" href="blank.pdf" download>
+													<i class="icon icon-download"></i>
+												</a>
+											</div>
+										</li>
+										<li class="tag-line tag-black">
+											<div>Сертифікати: GTV Петлі, направляючі, ящики</div>
+											<div>Меблева фурнітура</div>
+											<div>
+												<a class="uk-button uk-button-link download-button" href="blank.pdf" download>
+													<i class="icon icon-download"></i>
+												</a>
+											</div>
+										</li>
+										<li class="tag-line tag-blue">
+											<div>Сертифікати: GTV Меблева фурнитура</div>
+											<div>Меблева фурнітура</div>
+											<div>
+												<a class="uk-button uk-button-link download-button" href="blank.pdf" download>
+													<i class="icon icon-download"></i>
+												</a>
+											</div>
+										</li>
+										<li class="tag-line tag-black">
+											<div>Сертифікати: GTV Петлі, направляючі, ящики</div>
+											<div>Меблева фурнітура</div>
+											<div>
+												<a class="uk-button uk-button-link download-button" href="blank.pdf" download>
+													<i class="icon icon-download"></i>
+												</a>
+											</div>
+										</li>
+										<li class="tag-line tag-blue">
+											<div>Сертифікати: GTV Меблева фурнитура</div>
+											<div>Меблева фурнітура</div>
+											<div>
+												<a class="uk-button uk-button-link download-button" href="blank.pdf" download>
+													<i class="icon icon-download"></i>
+												</a>
+											</div>
+										</li>
+										<li class="tag-line tag-white">
+											<div>Сертифікати: Euro Orvel</div>
+											<div>Меблева фурнітура</div>
+											<div>
+												<a class="uk-button uk-button-link download-button" href="blank.pdf" download>
+													<i class="icon icon-download"></i>
+												</a>
+											</div>
+										</li>
+										<li class="tag-line tag-blue">
+											<div>Сертифікати: GTV Меблева фурнитура</div>
+											<div>Меблева фурнітура</div>
+											<div>
+												<a class="uk-button uk-button-link download-button" href="blank.pdf" download>
+													<i class="icon icon-download"></i>
+												</a>
+											</div>
+										</li>
+										<li class="tag-line tag-white">
+											<div>Сертифікати: Euro Orvel</div>
+											<div>Меблева фурнітура</div>
+											<div>
+												<a class="uk-button uk-button-link download-button" href="blank.pdf" download>
+													<i class="icon icon-download"></i>
+												</a>
+											</div>
+										</li>
+										<li class="tag-line tag-blue">
+											<div>Сертифікати: GTV Меблева фурнитура</div>
+											<div>Меблева фурнітура</div>
+											<div>
+												<a class="uk-button uk-button-link download-button" href="blank.pdf" download>
+													<i class="icon icon-download"></i>
+												</a>
+											</div>
+										</li>
+										<li class="tag-line tag-black">
+											<div>Сертифікати: GTV Петлі, направляючі, ящики</div>
+											<div>Меблева фурнітура</div>
+											<div>
+												<a class="uk-button uk-button-link download-button" href="blank.pdf" download>
+													<i class="icon icon-download"></i>
+												</a>
+											</div>
+										</li>
+									</ul>
+								</div>
+								<!-- / selected tags -->
+								<!-- pagination -->
+								@@include('./includes/pagination.html')
+								<!-- / pagination -->
+							</div>
+							<!-- 4 -->
+							<div class="tab-cover">
+								<h1 class="h4-header-font filter-title">Каталоги Вибір</h1>
+								<!-- selected tags -->
+								<div uk-filter="target: .switcher-filter4">
+									<div class="bordered-tags selected-tags collapsed-s">
+										<div class="uk-button uk-tag-button uk-tag-small" uk-filter-control><a href="#">Всі</a></div>
+										<div class="uk-button uk-tag-button uk-tag-small" uk-filter-control=".tag-green"><a href="#">Настінна система Zobal</a></div>
+										<div class="uk-button uk-tag-button uk-tag-small" uk-filter-control=".tag-white"><a href="#">Компакт-плита</a></div>
+										<div class="uk-button uk-tag-button uk-tag-small" uk-filter-control=".tag-blue"><a href="#">Hettich</a></div>
+										<div class="uk-button uk-tag-button uk-tag-small" uk-filter-control=".tag-black"><a href="#">Алюмінієві фасади</a></div>
+										<div class="uk-button uk-tag-button uk-tag-small" uk-filter-control=".tag-red"><a href="#">Умивальники</a></div>
+										<!-- show more -->
+										<button class="uk-button uk-button-link tab-button">
+											<span class="closed">Більше <i class="icon icon-caret_bottom"></i></span>
+											<span class="opened">Менше <i class="icon icon-caret_top"></i></span>
+										</button>
+									</div>
+									<div class="tag-line header-line">
+										<div>Назва</div>
+										<div>Теги</div>
+										<div>Завантажити</div>
+									</div>
+									<ul class="switcher-wrap switcher-filter4">
+										<li class="tag-line tag-green">
+											<div>Каталоги Вибір: Euro Orvel</div>
+											<div>Меблева фурнітура</div>
+											<div>
+												<a class="uk-button uk-button-link download-button" href="blank.pdf" download>
+													<i class="icon icon-download"></i>
+												</a>
+											</div>
+										</li>
+										<li class="tag-line tag-red">
+											<div>Каталоги Вибір: Клея, герметики, засоби для чищення	</div>
+											<div>Меблева фурнітура</div>
+											<div>
+												<a class="uk-button uk-button-link download-button" href="blank.pdf" download>
+													<i class="icon icon-download"></i>
+												</a>
+											</div>
+										</li>
+										<li class="tag-line tag-green">
+											<div>Каталоги Вибір: Клея, герметики, засоби для чищення	</div>
+											<div>Меблева фурнітура</div>
+											<div>
+												<a class="uk-button uk-button-link download-button" href="blank.pdf" download>
+													<i class="icon icon-download"></i>
+												</a>
+											</div>
+										</li>
+										<li class="tag-line tag-blue">
+											<div>Каталоги Вибір: GTV Меблева фурнитура</div>
+											<div>Меблева фурнітура</div>
+											<div>
+												<a class="uk-button uk-button-link download-button" href="blank.pdf" download>
+													<i class="icon icon-download"></i>
+												</a>
+											</div>
+										</li>
+										<li class="tag-line tag-white">
+											<div>Каталоги Вибір: Euro Orvel</div>
+											<div>Меблева фурнітура</div>
+											<div>
+												<a class="uk-button uk-button-link download-button" href="blank.pdf" download>
+													<i class="icon icon-download"></i>
+												</a>
+											</div>
+										</li>
+										<li class="tag-line tag-greengreen">
+											<div>Каталоги Вибір: Euro Orvel</div>
+											<div>Меблева фурнітура</div>
+											<div>
+												<a class="uk-button uk-button-link download-button" href="blank.pdf" download>
+													<i class="icon icon-download"></i>
+												</a>
+											</div>
+										</li>
+										<li class="tag-line tag-black">
+											<div>Каталоги Вибір: GTV Петлі, направляючі, ящики</div>
+											<div>Меблева фурнітура</div>
+											<div>
+												<a class="uk-button uk-button-link download-button" href="blank.pdf" download>
+													<i class="icon icon-download"></i>
+												</a>
+											</div>
+										</li>
+										<li class="tag-line tag-green">
+											<div>Каталоги Вибір: GTV Петлі, направляючі, ящики</div>
+											<div>Меблева фурнітура</div>
+											<div>
+												<a class="uk-button uk-button-link download-button" href="blank.pdf" download>
+													<i class="icon icon-download"></i>
+												</a>
+											</div>
+										</li>
+										<li class="tag-line tag-blue">
+											<div>Каталоги Вибір: GTV Меблева фурнитура</div>
+											<div>Меблева фурнітура</div>
+											<div>
+												<a class="uk-button uk-button-link download-button" href="blank.pdf" download>
+													<i class="icon icon-download"></i>
+												</a>
+											</div>
+										</li>
+										<li class="tag-line tag-black">
+											<div>Каталоги Вибір: GTV Петлі, направляючі, ящики</div>
+											<div>Меблева фурнітура</div>
+											<div>
+												<a class="uk-button uk-button-link download-button" href="blank.pdf" download>
+													<i class="icon icon-download"></i>
+												</a>
+											</div>
+										</li>
+										<li class="tag-line tag-blue">
+											<div>Каталоги Вибір: GTV Меблева фурнитура</div>
+											<div>Меблева фурнітура</div>
+											<div>
+												<a class="uk-button uk-button-link download-button" href="blank.pdf" download>
+													<i class="icon icon-download"></i>
+												</a>
+											</div>
+										</li>
+										<li class="tag-line tag-white">
+											<div>Каталоги Вибір: Euro Orvel</div>
+											<div>Меблева фурнітура</div>
+											<div>
+												<a class="uk-button uk-button-link download-button" href="blank.pdf" download>
+													<i class="icon icon-download"></i>
+												</a>
+											</div>
+										</li>
+										<li class="tag-line tag-blue">
+											<div>Каталоги Вибір: GTV Меблева фурнитура</div>
+											<div>Меблева фурнітура</div>
+											<div>
+												<a class="uk-button uk-button-link download-button" href="blank.pdf" download>
+													<i class="icon icon-download"></i>
+												</a>
+											</div>
+										</li>
+										<li class="tag-line tag-white">
+											<div>Каталоги Вибір: Euro Orvel</div>
+											<div>Меблева фурнітура</div>
+											<div>
+												<a class="uk-button uk-button-link download-button" href="blank.pdf" download>
+													<i class="icon icon-download"></i>
+												</a>
+											</div>
+										</li>
+										<li class="tag-line tag-blue">
+											<div>Каталоги Вибір: GTV Меблева фурнитура</div>
+											<div>Меблева фурнітура</div>
+											<div>
+												<a class="uk-button uk-button-link download-button" href="blank.pdf" download>
+													<i class="icon icon-download"></i>
+												</a>
+											</div>
+										</li>
+										<li class="tag-line tag-black">
+											<div>Каталоги Вибір: GTV Петлі, направляючі, ящики</div>
+											<div>Меблева фурнітура</div>
+											<div>
+												<a class="uk-button uk-button-link download-button" href="blank.pdf" download>
+													<i class="icon icon-download"></i>
+												</a>
+											</div>
+										</li>
+									</ul>
+								</div>
+								<!-- / selected tags -->
+								<!-- pagination -->
+								@@include('./includes/pagination.html')
+								<!-- / pagination -->
+							</div>
+							<!-- 5 -->
+							<div class="tab-cover">
+								<h1 class="h4-header-font filter-title">Каталоги</h1>
+								<!-- selected tags -->
+								<div uk-filter="target: .switcher-filter5">
+									<div class="bordered-tags selected-tags collapsed-s">
+										<div class="uk-button uk-tag-button uk-tag-small" uk-filter-control><a href="#">Всі</a></div>
+										<div class="uk-button uk-tag-button uk-tag-small" uk-filter-control=".tag-green"><a href="#">Настінна система Zobal</a></div>
+										<div class="uk-button uk-tag-button uk-tag-small" uk-filter-control=".tag-white"><a href="#">Компакт-плита</a></div>
+										<div class="uk-button uk-tag-button uk-tag-small" uk-filter-control=".tag-blue"><a href="#">Hettich</a></div>
+										<div class="uk-button uk-tag-button uk-tag-small" uk-filter-control=".tag-black"><a href="#">Алюмінієві фасади</a></div>
+										<div class="uk-button uk-tag-button uk-tag-small" uk-filter-control=".tag-red"><a href="#">Умивальники</a></div>
+										<!-- show more -->
+										<button class="uk-button uk-button-link tab-button">
+											<span class="closed">Більше <i class="icon icon-caret_bottom"></i></span>
+											<span class="opened">Менше <i class="icon icon-caret_top"></i></span>
+										</button>
+									</div>
+									<div class="tag-line header-line">
+										<div>Назва</div>
+										<div>Теги</div>
+										<div>Завантажити</div>
+									</div>
+									<ul class="switcher-wrap switcher-filter5">
+										<li class="tag-line tag-green">
+											<div>Каталоги: Euro Orvel</div>
+											<div>Меблева фурнітура</div>
+											<div>
+												<a class="uk-button uk-button-link download-button" href="blank.pdf" download>
+													<i class="icon icon-download"></i>
+												</a>
+											</div>
+										</li>
+										<li class="tag-line tag-red">
+											<div>Каталоги: Клея, герметики, засоби для чищення	</div>
+											<div>Меблева фурнітура</div>
+											<div>
+												<a class="uk-button uk-button-link download-button" href="blank.pdf" download>
+													<i class="icon icon-download"></i>
+												</a>
+											</div>
+										</li>
+										<li class="tag-line tag-green">
+											<div>Каталоги: Клея, герметики, засоби для чищення	</div>
+											<div>Меблева фурнітура</div>
+											<div>
+												<a class="uk-button uk-button-link download-button" href="blank.pdf" download>
+													<i class="icon icon-download"></i>
+												</a>
+											</div>
+										</li>
+										<li class="tag-line tag-blue">
+											<div>Каталоги: GTV Меблева фурнитура</div>
+											<div>Меблева фурнітура</div>
+											<div>
+												<a class="uk-button uk-button-link download-button" href="blank.pdf" download>
+													<i class="icon icon-download"></i>
+												</a>
+											</div>
+										</li>
+										<li class="tag-line tag-white">
+											<div>Каталоги: Euro Orvel</div>
+											<div>Меблева фурнітура</div>
+											<div>
+												<a class="uk-button uk-button-link download-button" href="blank.pdf" download>
+													<i class="icon icon-download"></i>
+												</a>
+											</div>
+										</li>
+										<li class="tag-line tag-greengreen">
+											<div>Каталоги: Euro Orvel</div>
+											<div>Меблева фурнітура</div>
+											<div>
+												<a class="uk-button uk-button-link download-button" href="blank.pdf" download>
+													<i class="icon icon-download"></i>
+												</a>
+											</div>
+										</li>
+										<li class="tag-line tag-black">
+											<div>Каталоги: GTV Петлі, направляючі, ящики</div>
+											<div>Меблева фурнітура</div>
+											<div>
+												<a class="uk-button uk-button-link download-button" href="blank.pdf" download>
+													<i class="icon icon-download"></i>
+												</a>
+											</div>
+										</li>
+										<li class="tag-line tag-green">
+											<div>Каталоги: GTV Петлі, направляючі, ящики</div>
+											<div>Меблева фурнітура</div>
+											<div>
+												<a class="uk-button uk-button-link download-button" href="blank.pdf" download>
+													<i class="icon icon-download"></i>
+												</a>
+											</div>
+										</li>
+										<li class="tag-line tag-blue">
+											<div>Каталоги: GTV Меблева фурнитура</div>
+											<div>Меблева фурнітура</div>
+											<div>
+												<a class="uk-button uk-button-link download-button" href="blank.pdf" download>
+													<i class="icon icon-download"></i>
+												</a>
+											</div>
+										</li>
+										<li class="tag-line tag-black">
+											<div>Каталоги: GTV Петлі, направляючі, ящики</div>
+											<div>Меблева фурнітура</div>
+											<div>
+												<a class="uk-button uk-button-link download-button" href="blank.pdf" download>
+													<i class="icon icon-download"></i>
+												</a>
+											</div>
+										</li>
+										<li class="tag-line tag-blue">
+											<div>Каталоги: GTV Меблева фурнитура</div>
+											<div>Меблева фурнітура</div>
+											<div>
+												<a class="uk-button uk-button-link download-button" href="blank.pdf" download>
+													<i class="icon icon-download"></i>
+												</a>
+											</div>
+										</li>
+										<li class="tag-line tag-white">
+											<div>Каталоги: Euro Orvel</div>
+											<div>Меблева фурнітура</div>
+											<div>
+												<a class="uk-button uk-button-link download-button" href="blank.pdf" download>
+													<i class="icon icon-download"></i>
+												</a>
+											</div>
+										</li>
+										<li class="tag-line tag-blue">
+											<div>Каталоги: GTV Меблева фурнитура</div>
+											<div>Меблева фурнітура</div>
+											<div>
+												<a class="uk-button uk-button-link download-button" href="blank.pdf" download>
+													<i class="icon icon-download"></i>
+												</a>
+											</div>
+										</li>
+										<li class="tag-line tag-white">
+											<div>Каталоги: Euro Orvel</div>
+											<div>Меблева фурнітура</div>
+											<div>
+												<a class="uk-button uk-button-link download-button" href="blank.pdf" download>
+													<i class="icon icon-download"></i>
+												</a>
+											</div>
+										</li>
+										<li class="tag-line tag-blue">
+											<div>Каталоги: GTV Меблева фурнитура</div>
+											<div>Меблева фурнітура</div>
+											<div>
+												<a class="uk-button uk-button-link download-button" href="blank.pdf" download>
+													<i class="icon icon-download"></i>
+												</a>
+											</div>
+										</li>
+										<li class="tag-line tag-black">
+											<div>Каталоги: GTV Петлі, направляючі, ящики</div>
+											<div>Меблева фурнітура</div>
+											<div>
+												<a class="uk-button uk-button-link download-button" href="blank.pdf" download>
+													<i class="icon icon-download"></i>
+												</a>
+											</div>
+										</li>
+										<li class="tag-line tag-white">
+											<div>Каталоги: Euro Orvel</div>
+											<div>Меблева фурнітура</div>
+											<div>
+												<a class="uk-button uk-button-link download-button" href="blank.pdf" download>
+													<i class="icon icon-download"></i>
+												</a>
+											</div>
+										</li>
+										<li class="tag-line tag-blue">
+											<div>Каталоги: GTV Меблева фурнитура</div>
+											<div>Меблева фурнітура</div>
+											<div>
+												<a class="uk-button uk-button-link download-button" href="blank.pdf" download>
+													<i class="icon icon-download"></i>
+												</a>
+											</div>
+										</li>
+										<li class="tag-line tag-black">
+											<div>Каталоги: GTV Петлі, направляючі, ящики</div>
+											<div>Меблева фурнітура</div>
+											<div>
+												<a class="uk-button uk-button-link download-button" href="blank.pdf" download>
+													<i class="icon icon-download"></i>
+												</a>
+											</div>
+										</li>
+									</ul>
+								</div>
+								<!-- / selected tags -->
+								<!-- pagination -->
+								@@include('./includes/pagination.html')
+								<!-- / pagination -->
+							</div>
+							<!-- 6 -->
+							<div class="tab-cover">
+								<h1 class="h4-header-font filter-title">Розрахунки</h1>
+								<!-- selected tags -->
+								<div uk-filter="target: .switcher-filter6">
+									<div class="bordered-tags selected-tags collapsed-s">
+										<div class="uk-button uk-tag-button uk-tag-small" uk-filter-control><a href="#">Всі</a></div>
+										<div class="uk-button uk-tag-button uk-tag-small" uk-filter-control=".tag-green"><a href="#">Настінна система Zobal</a></div>
+										<div class="uk-button uk-tag-button uk-tag-small" uk-filter-control=".tag-white"><a href="#">Компакт-плита</a></div>
+										<div class="uk-button uk-tag-button uk-tag-small" uk-filter-control=".tag-blue"><a href="#">Hettich</a></div>
+										<div class="uk-button uk-tag-button uk-tag-small" uk-filter-control=".tag-black"><a href="#">Алюмінієві фасади</a></div>
+										<div class="uk-button uk-tag-button uk-tag-small" uk-filter-control=".tag-red"><a href="#">Умивальники</a></div>
+										<!-- show more -->
+										<button class="uk-button uk-button-link tab-button">
+											<span class="closed">Більше <i class="icon icon-caret_bottom"></i></span>
+											<span class="opened">Менше <i class="icon icon-caret_top"></i></span>
+										</button>
+									</div>
+									<div class="tag-line header-line">
+										<div>Назва</div>
+										<div>Теги</div>
+										<div>Завантажити</div>
+									</div>
+									<ul class="switcher-wrap switcher-filter6">
+										<li class="tag-line tag-green">
+											<div>Розрахунки: Euro Orvel</div>
+											<div>Меблева фурнітура</div>
+											<div>
+												<a class="uk-button uk-button-link download-button" href="blank.pdf" download>
+													<i class="icon icon-download"></i>
+												</a>
+											</div>
+										</li>
+										<li class="tag-line tag-red">
+											<div>Розрахунки: Клея, герметики, засоби для чищення	</div>
+											<div>Меблева фурнітура</div>
+											<div>
+												<a class="uk-button uk-button-link download-button" href="blank.pdf" download>
+													<i class="icon icon-download"></i>
+												</a>
+											</div>
+										</li>
+										<li class="tag-line tag-green">
+											<div>Розрахунки: Клея, герметики, засоби для чищення</div>
+											<div>Меблева фурнітура</div>
+											<div>
+												<a class="uk-button uk-button-link download-button" href="blank.pdf" download>
+													<i class="icon icon-download"></i>
+												</a>
+											</div>
+										</li>
+										<li class="tag-line tag-blue">
+											<div>Розрахунки: GTV Меблева фурнитура</div>
+											<div>Меблева фурнітура</div>
+											<div>
+												<a class="uk-button uk-button-link download-button" href="blank.pdf" download>
+													<i class="icon icon-download"></i>
+												</a>
+											</div>
+										</li>
+										<li class="tag-line tag-white">
+											<div>Розрахунки: Euro Orvel</div>
+											<div>Меблева фурнітура</div>
+											<div>
+												<a class="uk-button uk-button-link download-button" href="blank.pdf" download>
+													<i class="icon icon-download"></i>
+												</a>
+											</div>
+										</li>
+										<li class="tag-line tag-greengreen">
+											<div>Розрахунки: Euro Orvel</div>
+											<div>Меблева фурнітура</div>
+											<div>
+												<a class="uk-button uk-button-link download-button" href="blank.pdf" download>
+													<i class="icon icon-download"></i>
+												</a>
+											</div>
+										</li>
+										<li class="tag-line tag-black">
+											<div>Розрахунки: GTV Петлі, направляючі, ящики</div>
+											<div>Меблева фурнітура</div>
+											<div>
+												<a class="uk-button uk-button-link download-button" href="blank.pdf" download>
+													<i class="icon icon-download"></i>
+												</a>
+											</div>
+										</li>
+										<li class="tag-line tag-green">
+											<div>Розрахунки: GTV Петлі, направляючі, ящики</div>
+											<div>Меблева фурнітура</div>
+											<div>
+												<a class="uk-button uk-button-link download-button" href="blank.pdf" download>
+													<i class="icon icon-download"></i>
+												</a>
+											</div>
+										</li>
+										<li class="tag-line tag-blue">
+											<div>Розрахунки: GTV Меблева фурнитура</div>
+											<div>Меблева фурнітура</div>
+											<div>
+												<a class="uk-button uk-button-link download-button" href="blank.pdf" download>
+													<i class="icon icon-download"></i>
+												</a>
+											</div>
+										</li>
+										<li class="tag-line tag-black">
+											<div>Розрахунки: GTV Петлі, направляючі, ящики</div>
+											<div>Меблева фурнітура</div>
+											<div>
+												<a class="uk-button uk-button-link download-button" href="blank.pdf" download>
+													<i class="icon icon-download"></i>
+												</a>
+											</div>
+										</li>
+										<li class="tag-line tag-blue">
+											<div>Розрахунки: GTV Меблева фурнитура</div>
+											<div>Меблева фурнітура</div>
+											<div>
+												<a class="uk-button uk-button-link download-button" href="blank.pdf" download>
+													<i class="icon icon-download"></i>
+												</a>
+											</div>
+										</li>
+										<li class="tag-line tag-white">
+											<div>Розрахунки: Euro Orvel</div>
+											<div>Меблева фурнітура</div>
+											<div>
+												<a class="uk-button uk-button-link download-button" href="blank.pdf" download>
+													<i class="icon icon-download"></i>
+												</a>
+											</div>
+										</li>
+										<li class="tag-line tag-blue">
+											<div>Розрахунки: GTV Меблева фурнитура</div>
+											<div>Меблева фурнітура</div>
+											<div>
+												<a class="uk-button uk-button-link download-button" href="blank.pdf" download>
+													<i class="icon icon-download"></i>
+												</a>
+											</div>
+										</li>
+										<li class="tag-line tag-white">
+											<div>Розрахунки: Euro Orvel</div>
+											<div>Меблева фурнітура</div>
+											<div>
+												<a class="uk-button uk-button-link download-button" href="blank.pdf" download>
+													<i class="icon icon-download"></i>
+												</a>
+											</div>
+										</li>
+										<li class="tag-line tag-blue">
+											<div>Розрахунки: GTV Меблева фурнитура</div>
+											<div>Меблева фурнітура</div>
+											<div>
+												<a class="uk-button uk-button-link download-button" href="blank.pdf" download>
+													<i class="icon icon-download"></i>
+												</a>
+											</div>
+										</li>
+										<li class="tag-line tag-black">
+											<div>Розрахунки: GTV Петлі, направляючі, ящики</div>
+											<div>Меблева фурнітура</div>
+											<div>
+												<a class="uk-button uk-button-link download-button" href="blank.pdf" download>
+													<i class="icon icon-download"></i>
+												</a>
+											</div>
+										</li>
+										<li class="tag-line tag-white">
+											<div>Розрахунки: Euro Orvel</div>
+											<div>Меблева фурнітура</div>
+											<div>
+												<a class="uk-button uk-button-link download-button" href="blank.pdf" download>
+													<i class="icon icon-download"></i>
+												</a>
+											</div>
+										</li>
+										<li class="tag-line tag-blue">
+											<div>Розрахунки: GTV Меблева фурнитура</div>
+											<div>Меблева фурнітура</div>
+											<div>
+												<a class="uk-button uk-button-link download-button" href="blank.pdf" download>
+													<i class="icon icon-download"></i>
+												</a>
+											</div>
+										</li>
+										<li class="tag-line tag-black">
+											<div>Розрахунки: GTV Петлі, направляючі, ящики</div>
+											<div>Меблева фурнітура</div>
+											<div>
+												<a class="uk-button uk-button-link download-button" href="blank.pdf" download>
+													<i class="icon icon-download"></i>
+												</a>
+											</div>
+										</li>
+									</ul>
+								</div>
+								<!-- / selected tags -->
+								<!-- pagination -->
+								@@include('./includes/pagination.html')
+								<!-- / pagination -->
+							</div>
+							<!-- 7 -->
+							<div class="tab-cover">
+								<h1 class="h4-header-font filter-title">Бланки</h1>
+								<!-- selected tags -->
+								<div uk-filter="target: .switcher-filter7">
+									<div class="bordered-tags selected-tags collapsed-s">
+										<div class="uk-button uk-tag-button uk-tag-small" uk-filter-control><a href="#">Всі</a></div>
+										<div class="uk-button uk-tag-button uk-tag-small" uk-filter-control=".tag-green"><a href="#">Настінна система Zobal</a></div>
+										<div class="uk-button uk-tag-button uk-tag-small" uk-filter-control=".tag-white"><a href="#">Компакт-плита</a></div>
+										<div class="uk-button uk-tag-button uk-tag-small" uk-filter-control=".tag-blue"><a href="#">Hettich</a></div>
+										<div class="uk-button uk-tag-button uk-tag-small" uk-filter-control=".tag-black"><a href="#">Алюмінієві фасади</a></div>
+										<div class="uk-button uk-tag-button uk-tag-small" uk-filter-control=".tag-red"><a href="#">Умивальники</a></div>
+										<div class="uk-button uk-tag-button uk-tag-small" uk-filter-control=".tag-yellow"><a href="#">Семінари Вибір</a></div>
+										<!-- show more -->
+										<button class="uk-button uk-button-link tab-button">
+											<span class="closed">Більше <i class="icon icon-caret_bottom"></i></span>
+											<span class="opened">Менше <i class="icon icon-caret_top"></i></span>
+										</button>
+									</div>
+									<div class="tag-line header-line">
+										<div>Назва</div>
+										<div>Теги</div>
+										<div>Завантажити</div>
+									</div>
+									<ul class="switcher-wrap switcher-filter7">
+										<li class="tag-line tag-green">
+											<div>Бланки: Euro Orvel</div>
+											<div>Меблева фурнітура</div>
+											<div>
+												<a class="uk-button uk-button-link download-button" href="blank.pdf" download>
+													<i class="icon icon-download"></i>
+												</a>
+											</div>
+										</li>
+										<li class="tag-line tag-yellow">
+											<div>Бланки: Клея, герметики, засоби для чищення	</div>
+											<div>Меблева фурнітура</div>
+											<div>
+												<a class="uk-button uk-button-link download-button" href="blank.pdf" download>
+													<i class="icon icon-download"></i>
+												</a>
+											</div>
+										</li>
+										<li class="tag-line tag-green">
+											<div>Бланки: Клея, герметики, засоби для чищення</div>
+											<div>Меблева фурнітура</div>
+											<div>
+												<a class="uk-button uk-button-link download-button" href="blank.pdf" download>
+													<i class="icon icon-download"></i>
+												</a>
+											</div>
+										</li>
+										<li class="tag-line tag-blue">
+											<div>Бланки: GTV Меблева фурнитура</div>
+											<div>Меблева фурнітура</div>
+											<div>
+												<a class="uk-button uk-button-link download-button" href="blank.pdf" download>
+													<i class="icon icon-download"></i>
+												</a>
+											</div>
+										</li>
+										<li class="tag-line tag-white">
+											<div>Бланки: Euro Orvel</div>
+											<div>Меблева фурнітура</div>
+											<div>
+												<a class="uk-button uk-button-link download-button" href="blank.pdf" download>
+													<i class="icon icon-download"></i>
+												</a>
+											</div>
+										</li>
+										<li class="tag-line tag-greengreen">
+											<div>Бланки: Euro Orvel</div>
+											<div>Меблева фурнітура</div>
+											<div>
+												<a class="uk-button uk-button-link download-button" href="blank.pdf" download>
+													<i class="icon icon-download"></i>
+												</a>
+											</div>
+										</li>
+										<li class="tag-line tag-black">
+											<div>Бланки: GTV Петлі, направляючі, ящики</div>
+											<div>Меблева фурнітура</div>
+											<div>
+												<a class="uk-button uk-button-link download-button" href="blank.pdf" download>
+													<i class="icon icon-download"></i>
+												</a>
+											</div>
+										</li>
+										<li class="tag-line tag-green">
+											<div>Бланки: GTV Петлі, направляючі, ящики</div>
+											<div>Меблева фурнітура</div>
+											<div>
+												<a class="uk-button uk-button-link download-button" href="blank.pdf" download>
+													<i class="icon icon-download"></i>
+												</a>
+											</div>
+										</li>
+										<li class="tag-line tag-blue">
+											<div>Бланки: GTV Меблева фурнитура</div>
+											<div>Меблева фурнітура</div>
+											<div>
+												<a class="uk-button uk-button-link download-button" href="blank.pdf" download>
+													<i class="icon icon-download"></i>
+												</a>
+											</div>
+										</li>
+										<li class="tag-line tag-black">
+											<div>Бланки: GTV Петлі, направляючі, ящики</div>
+											<div>Меблева фурнітура</div>
+											<div>
+												<a class="uk-button uk-button-link download-button" href="blank.pdf" download>
+													<i class="icon icon-download"></i>
+												</a>
+											</div>
+										</li>
+										<li class="tag-line tag-blue">
+											<div>Бланки: GTV Меблева фурнитура</div>
+											<div>Меблева фурнітура</div>
+											<div>
+												<a class="uk-button uk-button-link download-button" href="blank.pdf" download>
+													<i class="icon icon-download"></i>
+												</a>
+											</div>
+										</li>
+										<li class="tag-line tag-white">
+											<div>Бланки: Euro Orvel</div>
+											<div>Меблева фурнітура</div>
+											<div>
+												<a class="uk-button uk-button-link download-button" href="blank.pdf" download>
+													<i class="icon icon-download"></i>
+												</a>
+											</div>
+										</li>
+										<li class="tag-line tag-blue">
+											<div>Бланки: GTV Меблева фурнитура</div>
+											<div>Меблева фурнітура</div>
+											<div>
+												<a class="uk-button uk-button-link download-button" href="blank.pdf" download>
+													<i class="icon icon-download"></i>
+												</a>
+											</div>
+										</li>
+										<li class="tag-line tag-white">
+											<div>Бланки: Euro Orvel</div>
+											<div>Меблева фурнітура</div>
+											<div>
+												<a class="uk-button uk-button-link download-button" href="blank.pdf" download>
+													<i class="icon icon-download"></i>
+												</a>
+											</div>
+										</li>
+										<li class="tag-line tag-blue">
+											<div>Бланки: GTV Меблева фурнитура</div>
+											<div>Меблева фурнітура</div>
+											<div>
+												<a class="uk-button uk-button-link download-button" href="blank.pdf" download>
+													<i class="icon icon-download"></i>
+												</a>
+											</div>
+										</li>
+										<li class="tag-line tag-black">
+											<div>Бланки: GTV Петлі, направляючі, ящики</div>
+											<div>Меблева фурнітура</div>
+											<div>
+												<a class="uk-button uk-button-link download-button" href="blank.pdf" download>
+													<i class="icon icon-download"></i>
+												</a>
+											</div>
+										</li>
+										<li class="tag-line tag-yellow">
+											<div>Бланки: Euro Orvel</div>
+											<div>Меблева фурнітура</div>
+											<div>
+												<a class="uk-button uk-button-link download-button" href="blank.pdf" download>
+													<i class="icon icon-download"></i>
+												</a>
+											</div>
+										</li>
+										<li class="tag-line tag-yellow">
+											<div>Бланки: GTV Меблева фурнитура</div>
+											<div>Меблева фурнітура</div>
+											<div>
+												<a class="uk-button uk-button-link download-button" href="blank.pdf" download>
+													<i class="icon icon-download"></i>
+												</a>
+											</div>
+										</li>
+										<li class="tag-line tag-black">
+											<div>Бланки: GTV Петлі, направляючі, ящики</div>
+											<div>Меблева фурнітура</div>
+											<div>
+												<a class="uk-button uk-button-link download-button" href="blank.pdf" download>
+													<i class="icon icon-download"></i>
+												</a>
+											</div>
+										</li>
+									</ul>
+								</div>
+								<!-- / selected tags -->
+								<!-- pagination -->
+								@@include('./includes/pagination.html')
+								<!-- / pagination -->
+							</div>
+							<!-- pagination -->
+							<div class="uk-margin-medium-top">
+								@@include('./includes/pagination.html')
+							</div>
+							<!-- /pagination -->
+						</div>
+						<!-- / page content column -->
+					</div>
+				</div>
+			</div>
+		</div>
+	</main>
+
+	<!-- footer -->
+	@@include('./includes/footer.html')
+
+
+	<script src="js/uikit/uikit.min.js"></script>
+	<!-- custom js -->
+	<script src="js/main.js"></script>
+</body>
+</html>

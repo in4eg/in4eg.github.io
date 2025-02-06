@@ -1,0 +1,71 @@
+.uk-navbar-item,
+.uk-navbar-nav > li > a,
+.uk-navbar-toggle {
+	min-height: auto;
+	text-transform: none;
+	color: $color_white;
+
+	&.active {
+		color: $color_primary_hover;
+	}
+}
+
+.uk-navbar-nav > li > .button {
+	min-height: 40px;
+
+	&.uk-button-transparent:hover {
+		color: $color_primary_hover;
+	}
+}
+
+.uk-navbar-nav > li:hover {
+
+	.uk-button-transparent {
+		color: $color_white;
+	}
+}
+
+.uk-navbar-nav > li.uk-active > .link,
+.uk-navbar-nav > li:hover > .link,
+.uk-navbar-nav > li > .link[aria-expanded=true] {
+	color: $color_primary_hover;
+}
+
+.uk-card-default {
+	box-shadow: none;
+}
+
+.uk-slider {
+	position: relative;
+}
+
+.uk-position-small {
+	margin: 0;
+	padding: 0;
+	height: 40px; width: 40px;
+	line-height: 40px;
+	top: 50%;
+	transform: translateY(-50%);
+	background-color: $color_whitesmoke;
+	text-align: center;
+	border-radius: 50%;
+	color: $color_black;
+
+	svg {
+		height: 15px; width: 15px;
+	}
+
+	&.uk-position-center-right {
+
+		svg {
+			transform: translateX(2px);
+		}
+	}
+
+	&.uk-position-center-left {
+
+		svg {
+			transform: translateX(-1px);
+		}
+	}
+}

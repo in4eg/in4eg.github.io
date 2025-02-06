@@ -1,0 +1,169 @@
+.parner-list-small {
+	padding: 15px;
+
+	.tab-button {
+		margin: 0;
+
+		a, span.toggle { padding: 5px 0; }
+
+		.caret {
+			display: none;
+		}
+	}
+	.parner-item {
+		white-space: nowrap;
+		cursor: pointer;
+
+
+		img {
+			filter: grayscale(0.9);
+			opacity: 0.3;
+			width: 38px;
+			display: inline-block;
+			margin-right: 15px;
+			transition: .2s;
+		}
+		figcaption {
+			display: inline-block;
+			vertical-align: middle;
+			font-weight: 600;
+			font-size: var(--subheader3-font-size);
+		}
+
+		&:hover {
+
+			img {
+				filter: grayscale(0);
+				opacity: 1;
+			}
+
+			figcaption {
+				color: $color_secondary;
+			}
+		}
+	}
+
+	.filter-active,
+	.uk-active {
+
+		img {
+			filter: grayscale(0);
+			opacity: 1;
+		}
+
+		figcaption {
+			color: $color_secondary;
+		}
+	}
+}
+
+.parner-element {
+
+	.logo-cover {
+		position: absolute;
+		background-color: $color_white;
+		top: 50%; left: 50%;
+		transform: translate(-50%, -50%);
+		text-align: center;
+		z-index: 1;
+		width: 60%; height: 34%;
+		max-width: 210px;
+
+		.logo {
+			filter: grayscale(0.9);
+			opacity: 0.5;
+			position: absolute;
+			top: 5px; left: 5px;
+			bottom: 5px; right: 5px;
+			margin: auto;
+			max-width: calc(100% - 10px);
+			max-height: calc(100% - 10px);
+			transition: .2s;
+		}
+	}
+
+	&.header-element {
+
+		.element-figure {
+			padding-top: 180px;
+
+			&:after {
+				display: none;
+			}
+		}
+
+		.logo-cover {
+
+			.logo {
+				filter: grayscale(0);
+				opacity: 1;
+			}
+		}
+
+	}
+
+	&:hover {
+
+		.logo-cover {
+
+			.logo {
+				filter: grayscale(0);
+				opacity: 1;
+			}
+		}
+	}
+}
+
+@media (max-width: 1640px) {
+
+	.info-card.parner-element {
+
+		.element-figure {
+			padding-top: 73%;
+		}
+	}
+
+	.parner-element.header-element {
+
+		.element-figure {
+			padding-top: 180px;
+		}
+	}
+}
+
+@media (max-width: 1440px) {
+
+	.info-card.parner-element {
+
+		.element-figure {
+			padding-top: 80%;
+		}
+	}
+
+	.parner-element.header-element {
+
+		.element-figure {
+			padding-top: 180px;
+		}
+	}
+}
+
+@media (max-width: 960px) {
+
+	.parner-list-small {
+		padding: 5px 10px;
+
+		.tab-button { 
+
+			.caret {
+				display: block;
+			}
+		}
+	}
+	.parner-element.header-element {
+
+		.element-figure {
+			padding-top: 180px;
+		}
+	}
+}

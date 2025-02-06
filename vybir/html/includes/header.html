@@ -1,0 +1,103 @@
+<header class="main-header" id="mainHeader" uk-sticky>
+	<div class="uk-container uk-container-xlarge">
+		<div class="navbar-cover">
+			<div class="catalog-menu">
+				<button uk-toggle="target: #catalogMenuHeader, #catalogFader; animation: uk-animation-fade; cls: active" type="button" class="button button-menu toggle-button uk-button" uk-tooltip="Відкрити меню">
+					<div class="lines">
+						<span></span>
+					</div>
+				</button>
+				<a class="uk-logo" href="index.html" aria-label="Back to Home">
+					<img src="img/logo_white.png" alt="logo" class="desktop-logo">
+					<img src="img/logo_white_small.png" alt="logo" class="mobile-logo">
+				</a>
+			</div>
+			<div class="main-nav" id="navbarNav">
+				<nav class="uk-nav main-nav uk-navbar-container uk-navbar-transparent" uk-navbar data-tablet="headerCatalog" data-desktop="navbarNav" data-tablet-before="headerSocail">
+					<ul class="uk-navbar-nav">
+						<li class="uk-navbar-item">
+							<a class="link" href="services.html"><span class="text">Послуги</span></a>
+						</li>
+						<li class="uk-navbar-item">
+							<a class="link" href="news.html"><span class="text">Статті та Новини</span></a>
+						</li>
+						<li class="uk-navbar-item">
+							<a class="link" href="gallery.html"><span class="text">Галерея</span></a>
+						</li>
+						<li class="uk-navbar-item">
+							<a class="link" href="partners.html"><span class="text">Партнери</span></a>
+						</li>
+						<li class="uk-navbar-item">
+							<a class="link" href="delivery.html"><span class="text">Доставка/Оплата</span></a>
+						</li>
+						<li class="uk-navbar-item">
+							<a class="link" href="contacts.html"><span class="text">Контакти</span></a>
+						</li>
+						<li class="uk-navbar-item">
+							<a class="link" href="career.html"><span class="text">Вакансії</span></a>
+						</li>
+					</ul>
+				</nav>
+			</div>
+			<div class="user-menu">
+				<div class="menu-inner">
+					<form action="javascript:void(0)" class="form search-form">
+						<div class="form-group form-icon-group">
+							<i class="icon icon-search"></i>
+							<input class="uk-input input with-icon" type="text" placeholder="Я шукаю..." aria-label="Я шукаю...">
+						</div>
+					</form>
+					<div class="login-button">
+						<!-- sign in button -->
+						<a class="uk-button uk-button-secondary button spaced-right button-icon-m" href="#loginModal" uk-toggle uk-tooltip="Вхід/Реєстрація">
+							<span class="visible-m">Вхід/Реєстрація</span>
+							<i class="icon icon-logout hidden-m"></i>
+						</a>
+						<!-- / sign in button -->
+					</div>
+				</div>
+			</div>
+			<div class="user-options">
+				<a class="uk-button button-link button-link-icon uk-button-transparent" href="price.html" uk-tooltip="Перейти до завантажень">
+					<i class="icon icon-download"></i>
+				</a>
+				<a class="uk-button button-link button-link-icon uk-button-transparent" href="#" uk-tooltip="Меню мови">
+					<span class="text">EN</span>
+				</a>
+			</div>
+		</div>
+	</div>
+	<!-- catalog menu -->
+	<div class="catalog-menu header-menu main-menu-grid" id="catalogMenuHeader">
+		<div class="uk-container uk-container-xlarge">
+			<div class="uk-grid-collapse uk-grid uk-child-width-expand@s menu-light-cover">
+				<div class="uk-width-1-6 menu-cover">
+					<div class="uk-card uk-card-body uk-card-default header-catalog" id="headerCatalog">
+						@@include('catalog-menu.html')
+					</div>
+				</div>
+				<div class="catalog-menu-main">
+					<div class="catalog-menu-submenu">
+						<div class="uk-card uk-card-body uk-card-default uk-card-small">
+							@@include('catalog-menu-submenu.html')
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="catalogFader" class="menu-fader"></div>
+	<!-- / catalog menu -->
+</header>
+
+<!-- header modals -->
+<!-- login -->
+<div id="loginModal" uk-modal>
+	@@include('modal-login.html')
+</div>
+<!-- / login -->
+<!-- cart -->
+<div id="cartModal" class="uk-modal-container" uk-modal>
+	@@include('modal-cart.html')
+</div>
+<!-- / cart -->

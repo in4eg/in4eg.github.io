@@ -1,0 +1,37 @@
+.calculator {
+	$calculator_height: 56px;
+
+	display: inline-block;
+	border: 1px solid $border_color;
+	white-space: nowrap;
+	font-size: 0;
+
+	.action-button {
+		display: inline-block;
+		vertical-align: middle;
+		height: $calculator_height; width: $calculator_height;
+		font-size: var(--subheader2-font-size);
+		cursor: pointer;
+		color: rgba($color_primary, 0.7);
+		border: 0;
+		background-color: transparent;
+		transition: .2s;
+
+		&:hover {
+			color: $color_primary;
+			background-color: $hover_transparent;
+		}
+	}
+
+	input {
+		display: inline-block;
+		vertical-align: middle;
+		width: 94px; height: $calculator_height;
+		padding: 15px 5px 15px 20px;
+		text-align: center;
+		font-size: var(--subheader1-font-size);
+		color: rgba($color_primary, 0.7);
+		border: 0;
+		background-color: transparent;
+	}
+}
