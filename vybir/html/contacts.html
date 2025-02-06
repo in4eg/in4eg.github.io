@@ -25,16 +25,246 @@
 	<!-- header -->
 	@@include('./includes/header.html')
 
+
 	<main class="page-main" id="pageMain">
+
+		<section class="section section-elements">
+			<div class="uk-container uk-container-xlarge" uk-filter="target: .contacts">
+				<div class="title-cover">
+					<h4 class="section-title">Контакти</h4>
+				</div>
+				<!-- tabs slider navigation -->
+				<div class="tabs-navigation">
+				<!-- <div uk-slider class="tabs-slider"> -->
+					<div class="uk-slider-items align-center">
+						<div class="tab-item uk-active filter-active" uk-tooltip="Переглянути" uk-filter-control=".tag-hotline">
+							<a href="#" aria-hidden="true"><i class="icon icon-support tab-icon"></i>Гаряча<br class="uk-show@mobile"> лінія</a>
+						</div>
+						<!-- 2 -->
+						<div class="tab-item" uk-tooltip="Переглянути" uk-filter-control=".tag-odesa">
+							<a href="#" aria-hidden="true"><i class="icon icon-location tab-icon"></i>Одеса</a>
+						</div>
+						<!-- 3 -->
+						<div class="tab-item" uk-tooltip="Переглянути" uk-filter-control=".tag-kyiv">
+							<a href="#" aria-hidden="true"><i class="icon icon-location tab-icon"></i>Київ</a>
+						</div>
+						<!-- 4 -->
+						<div class="tab-item" uk-tooltip="Переглянути" uk-filter-control=".tag-lviv">
+							<a href="#" aria-hidden="true"><i class="icon icon-location tab-icon"></i>Львів</a>
+						</div>
+					</div>
+				<!-- </div> -->
+				</div>
+				<!-- / tabs slider navigation -->
+				<!-- cards slider -->
+				<div uk-slider class="contacts-switcher">
+					<div class="uk-slider-items uk-child-width-1 uk-grid-small contacts" uk-grid>
+
+						<div class="tag-hotline uk-active">
+							<div uk-grid class="uk-grid-column-collapse uk-grid-row-collapse contact-form">
+								<div class="uk-width-1-2@m">
+									<div class="description">
+										<div>
+											<h6 style="text-transform: uppercase">Дякуємо за Ваш відгук</h6>
+											<h2>Гаряча лінія</h2>
+											<h5>Пишить нам. Ми відкриті <br> для критики</h5>
+											Якщо при співпраці з нами у Вас:
+											<ul>
+												<li>виникли питання, непорозуміння або проблеми</li>
+												<li>є пропозиції і коментарії</li>
+											</ul>
+											<br>
+											Заповнення контактних даних (емейл або телефон) допоможе нам відповісти Вам на Ваше питання.
+										</div>
+									</div>
+								</div>
+								<div class="uk-width-1-2@m">
+									<div class="contact-form">
+										<div class="form-container">
+											<form action="" class="form">
+
+												<div class="form-group form-icon-group">
+													<i class="icon icon-id"></i>
+													<input class="uk-input input uk-width-1-1" type="text" placeholder="Ваше Ім’я">
+												</div>
+
+												<div uk-grid class="uk-grid-small">
+													<div class="uk-width-1-2@m">
+														<div class="form-group form-icon-group" style="margin: 0">
+															<i class="icon icon-mail"></i>
+															<input class="uk-input input uk-width-1-1" type="text" placeholder="Електронна пошта">
+														</div>
+													</div>
+													<div class="uk-width-1-2@m">
+														<div class="form-group form-icon-group">
+															<i class="icon icon-phone"></i>
+															<input class="uk-input input uk-width-1-1" type="text" placeholder="+38 0">
+														</div>
+													</div>
+												</div>
+
+												<div class="form-group">
+													<select name="" id="" class="uk-input input uk-width-1-1">
+														<option value="" disabled selected>Місто *</option>
+														<option value="">Одеса</option>
+														<option value="">Київ</option>
+														<option value="">Львів</option>
+													</select>
+												</div>
+
+												<div class="form-group">
+													<input class="uk-input input uk-width-1-1" type="text" placeholder="Тема повідомлення *">
+												</div>
+
+												<div class="form-group">
+													<textarea name="" id="" rows="4" class="uk-input input uk-width-1-1" placeholder="Повідомлення *"></textarea>
+												</div>
+
+												<!-- remove inline styles, it's only for demo -->
+												<div class="captcha" style="background: rgba(255,255,255,.2); width: 200px">
+													CAPTCHA HERE
+												</div>
+
+												<p style="line-height: 1"><small>*Заповнюючи цю форму Ви даєте згоду на обробку персональных Даних</small></p>
+
+												<button class="button uk-button button-light uk-width-1-1" type="submit">
+													Відправити
+												</button>
+											</form>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="tag-odesa">
+
+							<!-- contacts -->
+							<div uk-grid class="uk-grid-column-medium map-contacts">
+								<div class="uk-width-1-4@m">
+									<div class="map-address">
+										<h5>Адреса</h5>
+										<hr class="hr-short">
+										ВКФ Вибір Одеса <br>
+										Одеса, 65013 вул. <br>
+										Миколаївська дорога, 253/1 <br>
+										e-mail: sale@vybor.biz.ua
+									</div>
+								</div>
+								<div class="uk-width-1-2@m">
+									<div class="map-phones">
+										<h5>Телефони</h5>
+										<hr class="hr-short">
+										<div class="uk-grid-small" uk-grid>
+											<div class="uk-width-1-3@m">
+												<a href="tel:+38-048-734-64-34">+38-048-734-64-34</a><br>
+												<a href="tel:+38-067-134-64-34">+38-067-134-64-34</a><br>
+												<a href="tel:+38-099-134-64-34">+38-099-134-64-34</a><br>
+												<a href="tel:+38-073-134-64-34">+38-073-134-64-34</a>
+											</div>
+											<div class="uk-width-1-3@m">
+												<small>Відділ прийому замовлень:</small><br>
+												<a href="tel:+38-048-734-64-35">+38-048-734-64-35</a><br>
+												<a href="tel:+38-067-134-64-35">+38-067-134-64-35</a>
+											</div>
+											<div class="uk-width-1-3@m">
+												<small>Відділ регіонів:</small><br>
+												<a href="tel:+38-048-734-64-36">+38-048-734-64-36</a><br>
+												<a href="tel:+38-067-134-64-36">+38-067-134-64-36</a>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="uk-width-1-4@m">
+									<div class="map-working-hours">
+										<h5>Графік роботи</h5>
+										<hr class="hr-short">
+										Пн-Пт 8:00-17:00 <br>
+										Сб 8:00-15:00 <br>
+										Нд вихідний
+									</div>
+								</div>
+							</div>
+
+							<!-- map -->
+							<div class="uk-container uk-container-xlarge">
+								<div class="map">
+									<div id="map" class="map-container"></div>
+									<div class="marker"></div>
+									<div class="map-card">
+										<h5>ВКФ Вибір Одеса</h5>
+										<hr class="hr-short">
+										Одеса, 65013 вул.<br>	
+										Миколаївська дорога, 253/1<br>
+										e-mail: sale@vybir.biz.ua
+									</div>
+								</div>
+							</div>
+
+						</div>
+
+						<div class="tag-kyiv">
+							empty slot 3
+						</div>
+
+						<div class="tag-lviv">
+							empty slot 4
+						</div>
+
+					</div>
+					<!-- slider nav -->
+<!-- 					<a class="uk-position-center-left uk-position-small uk-hidden-hover" href uk-slidenav-previous uk-slider-item="previous" uk-tooltip="Попередній"></a>
+					<a class="uk-position-center-right uk-position-small uk-hidden-hover" href uk-slidenav-next uk-slider-item="next" uk-tooltip="Наступний"></a> -->
+				</div>
+			</div>
+		</section>
+
 
 	</main>
 
 	<!-- footer -->
 	@@include('./includes/footer.html')
 
-	<script src="uikit/js/uikit.min.js"></script>
+	<script src="js/uikit/uikit.min.js"></script>
 	<!-- custom js -->
 	<script src="js/main.js"></script>
+	
+<!-- 	<script>
+		(g=>{var h,a,k,p="The Google Maps JavaScript API",c="google",l="importLibrary",q="__ib__",m=document,b=window;b=b[c]||(b[c]={});var d=b.maps||(b.maps={}),r=new Set,e=new URLSearchParams,u=()=>h||(h=new Promise(async(f,n)=>{await (a=m.createElement("script"));e.set("libraries",[...r]+"");for(k in g)e.set(k.replace(/[A-Z]/g,t=>"_"+t[0].toLowerCase()),g[k]);e.set("callback",c+".maps."+q);a.src=`https://maps.${c}apis.com/maps/api/js?`+e;d[q]=f;a.onerror=()=>h=n(Error(p+" could not load."));a.nonce=m.querySelector("script[nonce]")?.nonce||"";m.head.append(a)}));d[l]?console.warn(p+" only loads once. Ignoring:",g):d[l]=(f,...n)=>r.add(f)&&u().then(()=>d[l](f,...n))})({
+			key: "<<API KEY>>",
+			v: "weekly",
+		});
+	</script>
+	<script>
+		let map;
+
+		async function initMap() {
+			const { Map } = await google.maps.importLibrary("maps");
+			const { AdvancedMarkerElement } = await google.maps.importLibrary("marker");
+			// const {ColorScheme} = await google.maps.importLibrary("core")
+
+			map = new Map(document.getElementById("map"), {
+				center: { lat: 46.5446718, lng: 30.74707 },
+				zoom: 16.8,
+				// colorScheme: ColorScheme.DARK
+				styles: [{"featureType": "all","stylers": [{"saturation": 0},{"hue": "#e7ecf0"}]},{"featureType": "road","stylers": [{"saturation": -70}]},{"featureType": "transit","stylers": [{"visibility": "off"}]},{"featureType": "poi","stylers": [{"visibility": "off"}]},{"featureType": "water","stylers": [{"visibility": "simplified"},{"saturation": -60}]}]
+			});
+
+			// A marker with a with a URL pointing to a PNG.
+			const icon = document.createElement("img");
+			icon.src = "img/pin.png";
+
+			const beachFlagMarkerView = new AdvancedMarkerElement({
+				map,
+				position: { lat: 46.5446718, lng: 30.74707 },
+				content: icon,
+				title: "",
+			});
+		}
+
+		initMap();
+
+	</script>  -->
 	<!-- <script src="uikit/js/uikit-icons.min.js"></script> -->
 </body>
 </html>
