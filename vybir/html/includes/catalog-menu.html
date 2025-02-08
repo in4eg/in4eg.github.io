@@ -1,134 +1,72 @@
 <div class="catalog-card">
-	<!-- mobile header -->
-	<div class="uk-hidden@m mobile-header">
-		<div uk-grid class="uk-grid-small">
-			<div class="uk-width-1-2">
-				<a class="mobile-logo" href="index.html" aria-label="Back to Home">
-					<img src="img/logo_dark.png" alt="logo" draggable="false">
-				</a>
-			</div>
-			<div class="uk-width-1-2 align-right">
-				<a class="uk-button button-link button-link-icon uk-button-transparent" href="#" uk-tooltip="EN">
-					<span class="text">EN</span>
-				</a>
-				<a class="uk-button button-link button-link-icon uk-button-transparent" href="#" uk-tooltip="RU">
-					<span class="text">RU</span>
-				</a>
-				<button uk-toggle="target: #catalogMenuHeader, #catalogFader; animation: uk-animation-fade; cls: active" type="button" class="uk-button button-link-icon uk-button-toggle" uk-tooltip="Закрити меню">
-					<span class="text"><i class="icon icon-close"></i></span>
-				</button>
-			</div>
-		</div>
-	</div>
-	<!-- / mobile header -->
-	<!-- mobile catalog button -->
-	<div class="uk-margin-bottom uk-hidden@m catalog-button-cover">
-		<button class="uk-button uk-button-secondary uk-width-1-1 button-toggle" tabindex="0" 
-		uk-toggle="target: #catalogMenuMobile; animation: uk-animation-fade; cls: active" id="menuToggle">
-			<i class="icon icon-catalog-button"></i>
-			Каталог товарів
-		</button>
-	</div>
-	<!-- / mobile catalog button -->
-	<!-- mobile user options -->
-	<div class="uk-margin-bottom uk-hidden@m catalog-user-options">
-		<ul class="clear user-mobile-navigation">
-			<li class="list-item">
-				<a href="catalog-category.html" uk-tooltip="title: Кабінет; pos: top-left" class="cover">
-					<i class="icon icon-user title-icon"></i>
-					<span class="text">Кабінет</span>
-					<i class="icon icon-caret_right caret"></i>
-				</a>
-			</li>
-			<li class="list-item">
-				<a href="catalog-category.html" uk-tooltip="title: Кошик; pos: top-left" class="cover">
-					<i class="icon icon-cart title-icon"></i>
-					<span class="text">Кошик</span>
-					<span class="button-count">9</span>
-				</a>
-			</li>
-			<li class="list-item">
-				<a href="catalog-category.html" uk-tooltip="title: Завантажити; pos: top-left" class="cover">
-					<i class="icon icon-download title-icon"></i>
-					<span class="text">Завантажити</span>
-				</a>
-			</li>
-			<li class="list-item">
-				<a href="tel:+380487346436" uk-tooltip="title: Гаряча лінія; pos: top-left" class="cover bordered-cover">
-					<i class="icon icon-support title-icon"></i>
-					<span class="text">Гаряча лінія</span>
-				</a>
-			</li>
-		</ul>
-	</div>
 	<!-- / mobile user options -->
-	<div class="uk-visible@m">
+	<div>
 		<ul class="clear catalog-tabs" data-hover-show="#catalogSubmenu">
 			<li class="tab-item active">
-				<a href="catalog-category.html" uk-tooltip="Перейти до каталогу" class="cover">
+				<a href="catalog-category.html" class="cover">
 					<i class="icon icon-catalog_furniture title-icon"></i>
 					<span class="text">Меблева фурнітура</span>
 					<i class="icon icon-caret_right caret"></i>
 				</a>
 			</li>
 			<li class="tab-item">
-				<a href="catalog-category.html" uk-tooltip="Перейти до каталогу" class="cover">
+				<a href="catalog-category.html" class="cover">
 					<i class="icon icon-catalog_matherials title-icon"></i>
 					<span class="text">Матеріали для меблів</span>
 					<i class="icon icon-caret_right caret"></i>
 				</a>
 			</li>
 			<li class="tab-item">
-				<a href="catalog-category.html" uk-tooltip="Перейти до каталогу" class="cover">
+				<a href="catalog-category.html" class="cover">
 					<i class="icon icon-catalog_kitchen title-icon"></i>
 					<span class="text">Кухонна фурнітура</span>
 					<i class="icon icon-caret_right caret"></i>
 				</a>
 			</li>
 			<li class="tab-item">
-				<a href="catalog-category.html" uk-tooltip="Перейти до каталогу" class="cover">
+				<a href="catalog-category.html" class="cover">
 					<i class="icon icon-catalog_lights title-icon"></i>
 					<span class="text">Освітлення та електротовари</span>
 					<i class="icon icon-caret_right caret"></i>
 				</a>
 			</li>
 			<li class="tab-item">
-				<a href="catalog-category.html" uk-tooltip="Перейти до каталогу" class="cover">
+				<a href="catalog-category.html" class="cover">
 					<i class="icon icon-catalog_bath title-icon"></i>
 					<span class="text">Ванна кімната</span>
 					<i class="icon icon-caret_right caret"></i>
 				</a>
 			</li>
 			<li class="tab-item">
-				<a href="catalog-category.html" uk-tooltip="Перейти до каталогу" class="cover">
+				<a href="catalog-category.html" class="cover">
 					<i class="icon icon-catalog_inner title-icon"></i>
 					<span class="text">Наповнення для меблів</span>
 					<i class="icon icon-caret_right caret"></i>
 				</a>
 			</li>
 			<li class="tab-item">
-				<a href="catalog-category.html" uk-tooltip="Перейти до каталогу" class="cover">
+				<a href="catalog-category.html" class="cover">
 					<i class="icon icon-catalog_doors title-icon"></i>
 					<span class="text">Дверна фурнітура</span>
 					<i class="icon icon-caret_right caret"></i>
 				</a>
 			</li>
 			<li class="tab-item">
-				<a href="ready-made-solutions.html" uk-tooltip="Перейти до каталогу" class="cover">
+				<a href="ready-made-solutions.html" class="cover">
 					<i class="icon icon-catalog_chair title-icon"></i>
 					<span class="text">Готові меблі</span>
 					<i class="icon icon-caret_right caret"></i>
 				</a>
 			</li>
 			<li class="tab-item">
-				<a href="catalog-category.html" uk-tooltip="Перейти до каталогу" class="cover">
+				<a href="catalog-category.html" class="cover">
 					<i class="icon icon-catalog_decor title-icon"></i>
 					<span class="text">Декор</span>
 					<i class="icon icon-caret_right caret"></i>
 				</a>
 			</li>
 			<li class="tab-item">
-				<a href="catalog-category.html" uk-tooltip="Перейти до каталогу" class="cover">
+				<a href="catalog-category.html" class="cover">
 					<i class="icon icon-catalog_tag title-icon"></i>
 					<span class="text">Спеціальні пропозиції</span>
 					<i class="icon icon-caret_right caret"></i>
@@ -136,23 +74,4 @@
 			</li>
 		</ul>
 	</div>
-</div>
-
-<!-- social links for mobile menu -->
-<div class="header-social" id="headerSocail">
-	<h4 class="subheader2">Ми в соцмережах</h4>
-	<ul class="social-list clear">
-		<li class="list-item" uk-tooltip="Facebook">
-			<a class="social-link" href="https://www.facebook.com/"><i class="icon icon-facebook"></i></a>
-		</li>
-		<li class="list-item" uk-tooltip="Telegram">
-			<a class="social-link" href="https://web.telegram.org/a/"><i class="icon icon-telegram"></i></a>
-		</li>
-		<li class="list-item" uk-tooltip="Instagram">
-			<a class="social-link" href="https://www.instagram.com/"><i class="icon icon-instagram"></i></a>
-		</li>
-		<li class="list-item" uk-tooltip="Youtube">
-			<a class="social-link" href="https://www.youtube.com/"><i class="icon icon-youtube"></i></a>
-		</li>
-	</ul>
 </div>

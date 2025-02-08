@@ -1,0 +1,31 @@
+<div class="catalog-menu header-menu main-menu-grid" id="catalogMainMenu">
+	<div class="uk-container uk-container-xlarge">
+		<!-- mobile header -->
+		<div class="uk-hidden@m mobile-header">
+			<div uk-grid class="uk-grid-small">
+				<div class="uk-width-1-2"><h4>Каталог</h4></div>
+				<div class="uk-width-1-2 align-right">
+					<button type="button" class="uk-button button-link-icon uk-button-toggle main-catalog-close">
+						<span class="text"><i class="icon icon-close"></i></span>
+					</button>
+				</div>
+			</div>
+		</div>
+		<!-- / mobile header -->
+		<div class="uk-grid-collapse uk-grid uk-child-width-expand@s menu-light-cover" main-menu-container>
+			<div class="uk-width-1-6 menu-cover">
+				<div class="uk-card uk-card-body uk-card-default header-catalog" id="headerCatalog">
+					@@include('catalog-menu.html')
+				</div>
+			</div>
+			<div class="">
+				<div class="catalog-menu-submenu">
+					<div class="uk-card uk-card-body uk-card-default uk-card-small">
+						@@include('catalog-menu-submenu.html')
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- <div id="catalogFader" class="menu-fader"></div> -->

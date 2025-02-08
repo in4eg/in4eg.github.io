@@ -47,32 +47,9 @@
 		}
 	}
 
-	.fade {
-		position: absolute;
-		z-index: 2;
-		top: 50%; left: 50%;
-		display: block;
-		width: 200%;
-		padding-top: 200%;
-		border-radius: 50%;
-		opacity: 1;
-		background: rgba(255,255,255,.5);
-		transform: translate3d(-50%,-50%,0) scale(0);
-
-		&.active {
-			animation: btn-fade .6s forwards;
-		}
-	}
-
-	@keyframes btn-fade {
-		0% {
-			opacity: 1;
-			transform: translate3d(-50%,-50%,0) scale(0);
-		}
-		100% {
-			opacity: 0;
-			transform: translate3d(-50%,-50%,0) scale(1);
-		}
+	.button-icon {
+		transform: translateY(-2px);
+		font-size: calc(var(--button-font-size_small)*1.5);
 	}
 
 	&.spaced-top {

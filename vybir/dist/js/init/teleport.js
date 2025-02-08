@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function() {
 	let lastWindowWidth = 0;
 	let tabletBrakepoint = 1440;
-	let mobileBrakepoint = 768;
+	let mobileBrakepoint = 640;
 	(teleport = function() {
 		if (window.innerWidth === lastWindowWidth){
 			return;
@@ -13,6 +13,8 @@ document.addEventListener("DOMContentLoaded", function() {
 			let elem = tabletElemens[i];
 			let parent = elem.dataset.desktop;
 			let destination = elem.dataset.tablet;
+			if (!parent) console.warn("no desktop container for teleport", parent); return;
+			if (!destination) console.warn("no tablet container for teleport", destination); return;
 			if (window.innerWidth <= tabletBrakepoint) {
 				if (elem.dataset.tabletBefore) {
 					let before = elem.dataset.tabletBefore;
@@ -29,12 +31,15 @@ document.addEventListener("DOMContentLoaded", function() {
 			let elem = mobileElements[i];
 			let parent = elem.dataset.desktop;
 			let destination = elem.dataset.mobile;
-			if (window.innerWidth <= tabletBrakepoint) {
+			if (window.innerWidth <= mobileBrakepoint) {
 				document.getElementById(destination).append(elem);
 			} else {
 				document.getElementById(parent).append(elem);
 			}
 		};
 	})();
-	window.onresize = teleport;
+
+	window.addEventListener("resize", function(){
+		teleport();
+	});
 })

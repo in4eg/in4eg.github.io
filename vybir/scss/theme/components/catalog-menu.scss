@@ -6,15 +6,20 @@
 	}
 
 	&.header-menu {
-		position: absolute;
-		top: 100%; left: 0;
+		position: fixed;
+		top: var(--header_height);
+		left: 0; right: 0;
 		width: 100%;
-		display: none;
-		z-index: 10;
+		z-index: 11;
 		height: calc(100vh - var(--header_height));
+		display: none;
 
 		&.active {
 			display: block;
+		}
+
+		.menu-light-cover {
+			box-shadow: 0 0 1000px 1000px rgba($color_black, 0.2);
 		}
 
 		.catalog-menu-submenu {
@@ -246,6 +251,10 @@
 
 @media (max-width: 960px) {
 
+	:root {
+		--mobile-header-height: 80px;
+	}
+
 	.catalog-menu {
 
 		.button-toggle {
@@ -255,16 +264,27 @@
 			}
 		}
 
+		[main-menu-container]{
+			transition: transform .3s;
+		}
+
+		&.touch-offset {
+
+			[main-menu-container]{
+				transform: translateX(-100%);
+			}
+		}
+
 		.header-catalog {
 			padding: 0;
+			max-height: 100%;
 		}
 
 		.mobile-header {
-			padding: 10px 0 0;
+			padding: 30px 10px 0 20px;
+			height: var(--mobile-header-height);
 
-			.uk-grid {
-				align-items: end;
-			}
+			h1, h2, h3, h4, h5 { color: #000; }
 
 			.button-link-icon,
 			.uk-button-toggle.uk-button {
@@ -365,20 +385,68 @@
 		.catalog-tabs {
 
 			.cover {
-				font-size: var(--subheader2-font-size);
+				padding-top: 10px;
+				padding-bottom: 10px;
+				font-weight: 500;
+				font-size: var(--subheader1-font-size);
 			}
 		}
 	}
 
 	.catalog-menu.header-menu {
-		position: fixed;
-		top: 0; left: 0;
 		background-color: $color_white;
 		height: 100%;
-		max-height: none;
+		max-height: 100%;
+		top: 0; left: 0;
+		z-index: 30;
+
+		.menu-light-cover {
+			box-shadow: none;
+		}
+
+
+		.uk-container.uk-container-xlarge {
+			display: block;
+			position: relative;
+			width: 100%; height: 100%;
+			margin: 0; padding: 0;
+			overflow: hidden;
+
+			> .uk-grid {
+				position: relative;
+				height: calc(100% - var(--mobile-header-height));
+
+				> * {
+					position: absolute;
+					top: 0; left: 0;
+					display: block;
+					width: 100%; height: 100%;
+				}
+				> *:nth-child(2){
+					left: 100%;
+				}
+			}
+		}
 
 		.catalog-menu-submenu {
-			display: none;
+			/*display: none;*/
+			height: 100%;
+			max-height: 100%;
+			overflow-x: hidden;
+			overflow-y: scroll;
+			padding-left: 15px;
+
+
+			> .uk-card-body {
+				height: auto;
+			}
+			.uk-card-small .uk-card-body,
+			.uk-card-small.uk-card-body {
+				padding-top: 0;
+			}
+			.tab-content {
+				padding-top: 0;
+			}
 		}
 
 		.header-catalog {

@@ -51,6 +51,8 @@ $button-light-color: $color_black;
 $button-light-border-color-hover: $color_secondary;
 $button-light-color-hover: $color_white;
 $button-light-background-hover: $color_secondary;
+$button-secondary-hover-background: $color_primary_hover;
+$button-secondary-hover-color: $color_black;
 
 
 $button-light-invert-border-color-hover: $color_primary;
@@ -121,7 +123,7 @@ $alert-success-color: $color_black;
 $alert-primary-color: $color_black;
 
 $modal-dialog-width-xmall: 393px;
-$modal-dialog-width-small: 820px;
+$modal-dialog-width-small: 890px;
 $modal-dialog-width-medium: 1172px;
 $modal-dialog-width-large: 1400px;
 $modal-dialog-background: $color_whitesmoke;

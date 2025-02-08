@@ -9,7 +9,7 @@ $header_height: 73px;
 	background-color: $color-primary;
 	height: var(--header_height);
 	position: relative;
-	z-index: 900;
+	z-index: 20;
 
 	.uk-logo {
 		width:170px;
@@ -220,7 +220,7 @@ $header_height: 73px;
 		}
 	}
 
-	.menu-fader {
+/*	.menu-fader {
 		background-color: rgba($color_black, 0.2);
 		transition: .3s;
 		position: fixed;
@@ -234,7 +234,7 @@ $header_height: 73px;
 		&.active {
 			opacity: 1;
 		}
-	}
+	}*/
 }
 
 .main-header {

@@ -101,6 +101,18 @@
 	padding: $button-padding-vertical $button-padding-horizontal;
 }
 
+.uk-button.uk-button-primary {
+	font-weight: $button-font-weight;
+	font-size: $button-font-size;
+	font-family: $button-font-family;
+	padding: $button-padding-vertical $button-padding-horizontal;
+
+	&:hover {
+		background-color: $button-secondary-hover-background;
+		color: $button-secondary-hover-color;
+	}
+}
+
 
 @media (max-width: 1440px) {
 	$button-padding-vertical: 6px;

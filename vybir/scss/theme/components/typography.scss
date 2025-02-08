@@ -9,7 +9,7 @@ h1, h2, h3, h4, h5, h6 {
 	}
 }
 
-div, a, p, span, ul, sub, sup, label, input, textarea {
+div, a, p, span, ul, sub, sup, label, input, textarea, li, button, select {
 
 	&::selection {
 		color: $color_white;

@@ -2,7 +2,12 @@
 	<div class="uk-container uk-container-xlarge">
 		<div class="navbar-cover">
 			<div class="catalog-menu">
-				<button uk-toggle="target: #catalogMenuHeader, #catalogFader; animation: uk-animation-fade; cls: active" type="button" class="button button-menu toggle-button uk-button" uk-tooltip="Відкрити меню">
+				<button type="button" class="button button-menu toggle-button uk-button main-catalog-toggle uk-visible@m" uk-tooltip="Відкрити меню">
+					<div class="lines">
+						<span></span>
+					</div>
+				</button>
+				<button type="button" class="button button-menu toggle-button uk-button mobile-menu-toggle uk-hidden@m">
 					<div class="lines">
 						<span></span>
 					</div>
@@ -13,7 +18,7 @@
 				</a>
 			</div>
 			<div class="main-nav" id="navbarNav">
-				<nav class="uk-nav main-nav uk-navbar-container uk-navbar-transparent" uk-navbar data-tablet="headerCatalog" data-desktop="navbarNav" data-tablet-before="headerSocail">
+				<nav class="uk-nav main-nav uk-navbar-container uk-navbar-transparent" uk-navbar data-tablet="headerCatalog" data-desktop="navbarNav" data-tablet-before="headerSocail" data-mobile="mobileMainMenuContainer">
 					<ul class="uk-navbar-nav">
 						<li class="uk-navbar-item">
 							<a class="link" href="services.html"><span class="text">Послуги</span></a>
@@ -90,27 +95,6 @@
 			</div>
 		</div>
 	</div>
-	<!-- catalog menu -->
-	<div class="catalog-menu header-menu main-menu-grid" id="catalogMenuHeader">
-		<div class="uk-container uk-container-xlarge">
-			<div class="uk-grid-collapse uk-grid uk-child-width-expand@s menu-light-cover">
-				<div class="uk-width-1-6 menu-cover">
-					<div class="uk-card uk-card-body uk-card-default header-catalog" id="headerCatalog">
-						@@include('catalog-menu.html')
-					</div>
-				</div>
-				<div class="">
-					<div class="catalog-menu-submenu">
-						<div class="uk-card uk-card-body uk-card-default uk-card-small">
-							@@include('catalog-menu-submenu.html')
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	<div id="catalogFader" class="menu-fader"></div>
-	<!-- / catalog menu -->
 </header>
 
 <!-- header modals -->
@@ -124,3 +108,10 @@
 	@@include('modal-cart.html')
 </div>
 <!-- / cart -->
+
+
+<!-- catalog menu -->
+@@include('main-menu.html')
+<!-- / catalog menu -->
+
+@@include('mobile-menu.html')
