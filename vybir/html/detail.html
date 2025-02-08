@@ -264,7 +264,7 @@
 
 
 	<!-- cart -->
-	<div id="orderCutModal" class="uk-modal-container" uk-modal>
+	<div id="orderCutModal" class="uk-modal-container uk-modal-small" uk-modal>
 		<div class="uk-modal-dialog">
 			<!-- header -->
 			<div class="uk-modal-header">
@@ -280,17 +280,71 @@
 			<!-- / header -->
 			<!-- body -->
 			<div class="uk-modal-body uk-body-collapsed-vertical">
-				<form action="#" class="form lined-form">
+				<form action="#" class="form lined-form primary-line">
+					<table class="uk-table order-table">
+						<thead>
+							<tr>
+									<th>Розмір, мм</th>
+									<th>Операція</th>
+									<th>Кількість</th>
+									<th>Сума, грн</th>
+									<th></th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+									<td>1000</td>
+									<td>90° з обох сторін</td>
+									<td>1</td>
+									<td>256</td>
+									<td>
+										<button class="uk-button uk-button-transparent button-order" type="button">
+											Видалити
+											<i class="icon icon-close"></i>
+										</button>
+									</td>
+							</tr>
+							<tr>
+								<td><input class="input small" type="text" value="1000"></td>
+								<td>
+									<div class="selecter-cover uk-width-1-1">
+										<select name="operation" id="operation" class="select">
+											<option value="90° з обох сторін" selected>90° з обох сторін</option>
+											<option value="180° з обох сторін">180° з обох сторін</option>
+											<option value="270° з обох сторін">270° з обох сторін</option>
+										</select>
+									</div>
+								</td>
+								<td><input class="input small" type="number" value="1"></td>
+								<td><input class="input small" type="number" value="256"></td>
+								<td>
+									<button class="uk-button uk-button-primary button-order" type="button">
+										до кошика
+										<i class="icon icon-plus"></i>
+									</button>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+
 					<div class="uk-alert-danger" uk-alert>
 						<p>
-							<span class="bold">Увага!</span> При замовленні доставки враховуйте обмеження перевізника на довжину посилки
+							<span class="bold">
+								<span class="color-error"><i class="icon icon-error"></i></span>
+								Увага!
+							</span>
+							При замовленні доставки враховуйте обмеження перевізника на довжину посилки
 							Нова Пошта - до 3 метрів, вантажне відділення! САТ, Делівері - без обмежень
 							В замовлення влючається плата за пакування 3% від суми замовлення, за вийнятком самовивозу замовлення з Одеси
 						</p>
 					</div>
 					<div class="uk-alert-danger" uk-alert>
 						<p>
-							<span class="bold">Увага!</span> Порізка профілю та комплектування такого замовлення відбувається в Одесі.
+							<span class="bold">
+								<span class="color-error"><i class="icon icon-error"></i></span>
+								Увага!
+							</span>
+							Порізка профілю та комплектування такого замовлення відбувається в Одесі.
 						</p>
 					</div>
 				</form>

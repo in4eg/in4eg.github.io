@@ -9,7 +9,7 @@ h1, h2, h3, h4, h5, h6 {
 	}
 }
 
-div, a, p, span, ul, sub, sup {
+div, a, p, span, ul, sub, sup, label, input, textarea {
 
 	&::selection {
 		color: $color_white;
@@ -17,6 +17,24 @@ div, a, p, span, ul, sub, sup {
 	}
 }
 
+.help {
+	color: $color_primary_hover;
+	font-size: 18px;
+	display: inline-block;
+	margin: 0 5px;
+
+	.icon {
+		color: $color_primary_hover;
+	}
+
+	&:hover {
+		color: $color_secondary;
+
+		.icon {
+			color: $color_secondary;
+		}
+	}
+}
 
 .underlined {
 	text-decoration: underline;
@@ -207,6 +225,14 @@ ul, ol {
 	color: $color_primary;
 	line-height: 1.67;
 	font-size: var(--font-size);
+}
+
+[uk-alert] {
+
+	.icon:before {
+		position: relative;
+		top: -2px;
+	}
 }
 
 @media (max-width: 960px) {

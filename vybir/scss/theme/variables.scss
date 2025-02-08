@@ -62,9 +62,11 @@ $accordion-padding-horizontal: 20px;
 @media (max-width: 1810px) {
 
 	$subheader2-font-size: 18px;
+	$h4-font-size: 36px;
 
 	:root {
 		--subheader2-font-size: #{$subheader2-font-size};
+		--h4-font-size: #{$h4-font-size};
 	}
 }
 
@@ -74,6 +76,7 @@ $accordion-padding-horizontal: 20px;
 	$h1-font-size: 64px;
 	$h2-font-size: 60px;
 	$h3-font-size: 46px;
+	$h4-font-size: 34px;
 
 	:root {
 		--h1-font-size: #{$h1-font-size};

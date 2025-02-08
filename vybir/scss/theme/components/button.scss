@@ -102,6 +102,38 @@
 	overflow: visible;
 }
 
+
+.button-order {
+	color: $color_primary;
+	text-transform: uppercase;
+	font-size: var(--font-size_smaller);
+	letter-spacing: 2px;
+	padding: 5px 7px;
+	height: auto;
+	min-height: auto;
+	line-height: 1;
+
+	&:hover {
+		color: $color_red;
+	}
+
+	.icon {
+		font-size: calc(var(--font-size_smaller)*0.9);
+		transform: translateY(-1px);
+	}
+
+	&.uk-button-primary {
+		background-color: $color_primary;
+		color: $color_white;
+
+		&:hover {
+			background-color: $color_primary_hover;
+		}
+	}
+}
+
+
+
 .uk-button.button-link-icon {
 
 	.icon,

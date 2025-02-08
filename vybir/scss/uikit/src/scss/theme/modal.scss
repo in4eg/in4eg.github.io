@@ -12,7 +12,33 @@
 // New
 //
 
+.uk-modal-container.uk-modal-xmall {
 
+	.uk-modal-dialog {
+		width: $modal-dialog-width-xmall;
+	}
+}
+
+.uk-modal-container.uk-modal-small {
+
+	.uk-modal-dialog {
+		width: $modal-dialog-width-small;
+	}
+}
+
+.uk-modal-container.uk-modal-medium {
+
+	.uk-modal-dialog {
+		width: $modal-dialog-width-medium;
+	}
+}
+
+.uk-modal-container.uk-modal-large {
+
+	.uk-modal-dialog {
+		width: $modal-dialog-width-large;
+	}
+}
 
 .uk-modal-body.uk-body-collapsed-vertical {
 	padding-top: 0;

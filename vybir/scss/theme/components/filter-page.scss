@@ -30,13 +30,14 @@
 	}
 }
 
-.header-filter {
+.header-filter,
+.section-header {
 	margin-bottom: 20px;
 
 	.filter-back-button {
 		padding: 0;
 		height: 42px; width: 42px;
-		transform: translateY(4px);
+		transform: translateY(8px);
 	}
 
 	.filter-title {
@@ -103,9 +104,26 @@
 			transform: translateY(-4px);
 		}
 	}
+
+	.section-header {
+
+		.filter-back-button {
+			transform: translateY(-3px);
+		}
+	}
 }
 
 @media (max-width: 960px) {
+
+	.section-header {
+
+		.filter-back-button {
+			transform: translateY(-2px);
+		}
+		.header-filter {
+			margin: 0;
+		}
+	}
 
 	.header-filter {
 		margin-bottom: 20px;

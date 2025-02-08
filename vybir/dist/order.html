@@ -1445,7 +1445,7 @@
 	<!-- 1 -->
 	<li class="order-item">
 		<div class="align-right">
-			<button class="uk-button uk-button-transparent remove-item" uk-tooltip="Видалити з кошика">
+			<button class="uk-button uk-button-transparent button-order">
 				Видалити
 				<i class="icon icon-close"></i>
 			</button>
@@ -1481,7 +1481,7 @@
 	<!-- 2 -->
 	<li class="order-item">
 		<div class="align-right">
-			<button class="uk-button uk-button-transparent remove-item" uk-tooltip="Видалити з кошика">
+			<button class="uk-button uk-button-transparent remove-item">
 				Видалити
 				<i class="icon icon-close"></i>
 			</button>
@@ -1518,7 +1518,7 @@
 	<!-- 3 -->
 	<li class="order-item">
 		<div class="align-right">
-			<button class="uk-button uk-button-transparent remove-item" uk-tooltip="Видалити з кошика">
+			<button class="uk-button uk-button-transparent button-order">
 				Видалити
 				<i class="icon icon-close"></i>
 			</button>
@@ -1581,7 +1581,475 @@
 <!-- / cart -->
 	<!-- / header -->
 	<main class="page-main" id="pageMain">
+		<section class="section section-elements">
+			<div class="uk-container uk-container-xlarge">
+				<!-- header -->
+				<div class="section-header uk-grid-collapse" uk-grid>
+					<div class="uk-width-auto">
+						<a href="detail.html" class="uk-button filter-back-button" uk-tooltip="title: Повернутись назад; pos: bottom-left">
+							<i class="icon icon-caret_left"></i>
+						</a>
+					</div>
+					<div class="uk-width-expand">
+						<h1 class="h4-header-font align-left header-filter">Оформлення замовлення</h1>
+					</div>
+				</div>
+				<!-- / header -->
+				<form action="#" class="form order-form">
+					<div class="uk-grid">
+						<div class="uk-width-1-1@s uk-width-2-3@m">
+							<!-- 1 -->
+							<div class="detail-box">
+								<div class="header">
+									<i class="icon icon-info"></i>
+									Ваші контактні дані
+								</div>
+								<div uk-grid class="uk-grid-small">
+									<div class="uk-width-1-2@m">
+										<div class="group-title">Мобільний телефон</div>
+										<div class="form-group form-icon-group">
+											<i class="icon icon-mail"></i>
+											<input class="uk-input input uk-width-1-1" type="text" placeholder="Мобільний телефон">
+										</div>
+									</div>
+									<div class="uk-width-1-2@m">
+										<div class="group-title">Електронна пошта</div>
+										<div class="form-group form-icon-group">
+											<i class="icon icon-phone"></i>
+											<input class="uk-input input uk-width-1-1" type="email" placeholder="+38 0">
+										</div>
+									</div>
+								</div>
+								<div class="group-title">Ім’я або назва підприємства</div>
+								<div class="form-group form-icon-group">
+									<i class="icon icon-id"></i>
+									<input class="uk-input input uk-width-1-1" type="text" placeholder="Ім’я або назва підприємства">
+								</div>
+							</div>
+							<!-- 2 -->
+							<div class="detail-box">
+								<div class="header">
+									<i class="icon icon-delivery"></i>
+									Доставка
+								</div>
 
+								<ul uk-switcher class="checkbox-tabs">
+									<li class="uk-active"><a href="#">Нова Пошта</a></li>
+									<li><a href="#">Самовивіз</a></li>
+									<li><a href="#">САТ</a></li>
+								</ul>
+								<div class="uk-switcher">
+									<!-- tab 1 -->
+									<div>
+										<div class="subcategory">
+											<div class="subheader1">Страхування</div>
+											<div class="radio-cover">
+												<label>
+													<input class="uk-radio" type="radio" name="radio2" checked>
+													Мінімальне (згідно тарифів перевізника)
+												</label>
+											</div>
+											<div class="radio-cover">
+												<label>
+													<input class="uk-radio" type="radio" name="radio2">
+													На повну суму замовлення
+												</label>
+											</div>
+										</div>
+										<div class="detail-box bordered">
+											<div class="header">
+												<i class="icon icon-calendar"></i>
+												Відправка замовлень перевізником вібдувається щодня(крім вихідних) до 12:00.
+											</div>
+											<div uk-grid class="uk-grid-small">
+												<div class="uk-width-1-4@m">
+													<div class="group-title">Область</div>
+													<div class="selecter-cover uk-width-1-1">
+														<select name="operation" id="operation" class="select uk-width-1-1">
+															<option value="Одеська" selected>Одеська</option>
+															<option value="Київська">Київська</option>
+															<option value="Харківська">Харківська</option>
+															<option value="Запорізька">Запорізька</option>
+															<option value="Миколаївська">Миколаївська</option>
+														</select>
+													</div>
+												</div>
+												<div class="uk-width-1-4@m">
+													<div class="group-title">Місто</div>
+													<div class="selecter-cover uk-width-1-1">
+														<select name="operation" id="operation" class="select uk-width-1-1">
+															<option value="Одеська" selected>Одеса</option>
+															<option value="Київська">Київ</option>
+															<option value="Харківська">Харків</option>
+															<option value="Запорізька">Запоріжжя</option>
+															<option value="Миколаївська">Миколаїв</option>
+														</select>
+													</div>
+												</div>
+											</div>
+											<ul uk-switcher class="checkbox-tabs">
+												<li class="uk-active"><a href="#">У відділення</a></li>
+												<li><a href="#">На адресу</a></li>
+											</ul>
+											<div class="uk-switcher">
+												<!-- У відділення -->
+												<div>
+													<div uk-grid class="uk-grid-small">
+														<div class="uk-width-1-1@s uk-width-1-3@m">
+															<div class="group-title">Номер відділення</div>
+															<div class="selecter-cover uk-width-1-1">
+																<select name="operation" id="operation" class="select uk-width-1-1">
+																	<option value="Номер 1" selected>Номер 1</option>
+																	<option value="Номер 2">Номер 2</option>
+																	<option value="Номер 3">Номер 3</option>
+																	<option value="Номер 4">Номер 4</option>
+																	<option value="Номер 5">Номер 5</option>
+																</select>
+															</div>
+														</div>
+													</div>
+													<div uk-grid class="uk-grid-small">
+														<div class="uk-width-1-1@s uk-width-1-3@m">
+															<div class="group-title">Вулиця</div>
+															<div class="selecter-cover uk-width-1-1">
+																<select name="operation" id="operation" class="select uk-width-1-1">
+																	<option value="Вулиця номер 1" selected>Вулиця номер 1</option>
+																	<option value="Вулиця номер 2">Вулиця номер 2</option>
+																	<option value="Вулиця номер 3">Вулиця номер 3</option>
+																	<option value="Вулиця номер 4">Вулиця номер 4</option>
+																	<option value="Вулиця номер 5">Вулиця номер 5</option>
+																</select>
+															</div>
+														</div>
+														<div class="uk-width-1-1@s uk-width-1-3@m">
+															<div uk-grid class="uk-grid-small">
+																<div class="uk-width-1-3@s">
+																	<div class="group-title">Будинок</div>
+																	<div class="form-group">
+																		<input class="uk-input input uk-width-1-1" type="text" placeholder="№">
+																	</div>
+																</div>
+																<div class="uk-width-1-3@s">
+																	<div class="group-title">Під’їзд</div>
+																	<div class="form-group">
+																		<input class="uk-input input uk-width-1-1" type="text" placeholder="№">
+																	</div>
+																</div>
+																<div class="uk-width-1-3@s">
+																	<div class="group-title">Квартира</div>
+																	<div class="form-group">
+																		<input class="uk-input input uk-width-1-1" type="text" placeholder="№">
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+												<!-- На адресу -->
+												<div>
+													<div uk-grid class="uk-grid-small">
+														<div class="uk-width-1-2@s uk-width-1-3@m">
+															<div class="group-title">Вулиця</div>
+															<div class="form-group">
+																<input class="uk-input input uk-width-1-1" type="text" placeholder="Вулиця">
+															</div>
+														</div>
+														<div class="uk-width-1-2@s uk-width-1-3@m">
+															<div uk-grid class="uk-grid-small">
+																<div class="uk-width-1-2@s uk-width-1-3@m">
+																	<div class="group-title">Будинок</div>
+																	<div class="form-group">
+																		<input class="uk-input input uk-width-1-1" type="text" placeholder="№">
+																	</div>
+																</div>
+																<div class="uk-width-1-2@s uk-width-1-3@m">
+																	<div class="group-title">Під’їзд</div>
+																	<div class="form-group">
+																		<input class="uk-input input uk-width-1-1" type="text" placeholder="№">
+																	</div>
+																</div>
+																<div class="uk-width-1-2@s uk-width-1-3@m">
+																	<div class="group-title">Квартира</div>
+																	<div class="form-group">
+																		<input class="uk-input input uk-width-1-1" type="text" placeholder="№">
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<!-- tab 2 -->
+									<div>
+										<div class="subcategory">
+											<div class="radio-cover">
+												<label>
+													<input class="uk-radio" type="radio" name="del1" checked>
+													м. Одеса, вул. Миколаївська дорога, 253/1
+												</label>
+											</div>
+											<div class="radio-cover">
+												<label>
+													<input class="uk-radio" type="radio" name="del1">
+													м. Київ, с. Петропавліська Борщагівка, вул. Оксамитова, 11
+												</label>
+											</div>
+											<div class="radio-cover">
+												<label>
+													<input class="uk-radio" type="radio" name="del1">
+													м. Дніпро, вул. Бердянська, 61Б
+												</label>
+											</div>
+											<div class="radio-cover">
+												<label>
+													<input class="uk-radio" type="radio" name="del1">
+													м. Львів, вул. Промислова , 50/52
+												</label>
+											</div>
+										</div>
+									</div>
+									<!-- tab 3 -->
+									<div>
+										<div class="detail-box bordered">
+											<div class="header">
+												<i class="icon icon-calendar"></i>
+												Відправка замовлень перевізником вібдувається щодня(крім вихідних) до 12:00.
+											</div>
+											<div uk-grid class="uk-grid-small">
+												<div class="uk-width-1-4@m">
+													<div class="group-title">Область</div>
+													<div class="selecter-cover uk-width-1-1">
+														<select name="operation" id="operation" class="select uk-width-1-1">
+															<option value="Одеська" selected>Одеська</option>
+															<option value="Київська">Київська</option>
+															<option value="Харківська">Харківська</option>
+															<option value="Запорізька">Запорізька</option>
+															<option value="Миколаївська">Миколаївська</option>
+														</select>
+													</div>
+												</div>
+												<div class="uk-width-1-4@m">
+													<div class="group-title">Місто</div>
+													<div class="selecter-cover uk-width-1-1">
+														<select name="operation" id="operation" class="select uk-width-1-1">
+															<option value="Одеська" selected>Одеса</option>
+															<option value="Київська">Київ</option>
+															<option value="Харківська">Харків</option>
+															<option value="Запорізька">Запоріжжя</option>
+															<option value="Миколаївська">Миколаїв</option>
+														</select>
+													</div>
+												</div>
+											</div>
+											<ul uk-switcher class="checkbox-tabs">
+												<li class="uk-active"><a href="#">У відділення</a></li>
+												<li><a href="#">На адресу</a></li>
+											</ul>
+											<div class="uk-switcher">
+												<!-- У відділення -->
+												<div>
+													<div uk-grid class="uk-grid-small">
+														<div class="uk-width-1-1@s uk-width-1-3@m">
+															<div class="group-title">Номер відділення</div>
+															<div class="selecter-cover uk-width-1-1">
+																<select name="operation" id="operation" class="select uk-width-1-1">
+																	<option value="Номер 1" selected>Номер 1</option>
+																	<option value="Номер 2">Номер 2</option>
+																	<option value="Номер 3">Номер 3</option>
+																	<option value="Номер 4">Номер 4</option>
+																	<option value="Номер 5">Номер 5</option>
+																</select>
+															</div>
+														</div>
+													</div>
+													<div uk-grid class="uk-grid-small">
+														<div class="uk-width-1-1@s uk-width-1-3@m">
+															<div class="group-title">Вулиця</div>
+															<div class="selecter-cover uk-width-1-1">
+																<select name="operation" id="operation" class="select uk-width-1-1">
+																	<option value="Вулиця номер 1" selected>Вулиця номер 1</option>
+																	<option value="Вулиця номер 2">Вулиця номер 2</option>
+																	<option value="Вулиця номер 3">Вулиця номер 3</option>
+																	<option value="Вулиця номер 4">Вулиця номер 4</option>
+																	<option value="Вулиця номер 5">Вулиця номер 5</option>
+																</select>
+															</div>
+														</div>
+														<div class="uk-width-1-1@s uk-width-1-3@m">
+															<div uk-grid class="uk-grid-small">
+																<div class="uk-width-1-3@s">
+																	<div class="group-title">Будинок</div>
+																	<div class="form-group">
+																		<input class="uk-input input uk-width-1-1" type="text" placeholder="№">
+																	</div>
+																</div>
+																<div class="uk-width-1-3@s">
+																	<div class="group-title">Під’їзд</div>
+																	<div class="form-group">
+																		<input class="uk-input input uk-width-1-1" type="text" placeholder="№">
+																	</div>
+																</div>
+																<div class="uk-width-1-3@s">
+																	<div class="group-title">Квартира</div>
+																	<div class="form-group">
+																		<input class="uk-input input uk-width-1-1" type="text" placeholder="№">
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+												<!-- На адресу -->
+												<div>
+													<div uk-grid class="uk-grid-small">
+														<div class="uk-width-1-2@s uk-width-1-3@m">
+															<div class="group-title">Вулиця</div>
+															<div class="form-group">
+																<input class="uk-input input uk-width-1-1" type="text" placeholder="Вулиця">
+															</div>
+														</div>
+														<div class="uk-width-1-2@s uk-width-1-3@m">
+															<div uk-grid class="uk-grid-small">
+																<div class="uk-width-1-2@s uk-width-1-3@m">
+																	<div class="group-title">Будинок</div>
+																	<div class="form-group">
+																		<input class="uk-input input uk-width-1-1" type="text" placeholder="№">
+																	</div>
+																</div>
+																<div class="uk-width-1-2@s uk-width-1-3@m">
+																	<div class="group-title">Під’їзд</div>
+																	<div class="form-group">
+																		<input class="uk-input input uk-width-1-1" type="text" placeholder="№">
+																	</div>
+																</div>
+																<div class="uk-width-1-2@s uk-width-1-3@m">
+																	<div class="group-title">Квартира</div>
+																	<div class="form-group">
+																		<input class="uk-input input uk-width-1-1" type="text" placeholder="№">
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<!-- 4 -->
+							<div class="detail-box">
+								<div class="header">
+									<i class="icon icon-card"></i>
+									Оплата
+								</div>
+								<div class="subcategory">
+									<div class="group-title">Спосіб оплати</div>
+									<div class="radio-cover">
+										<label>
+											<input class="uk-radio" type="radio" name="pay1" checked>
+											Банковський переказ від юридичної особи
+										</label>
+									</div>
+									<div class="radio-cover">
+										<label>
+											<input class="uk-radio" type="radio" name="pay1">
+											Онлайн оплата картою
+										</label>
+									</div>
+									<div class="radio-cover">
+										<label>
+											<input class="uk-radio" type="radio" name="pay1">
+											Оплата готівкою при отриманні
+										</label>
+									</div>
+								</div>
+								<div uk-grid class="uk-grid-small">
+									<div class="uk-width-1-1@s uk-width-1-3@m">
+										<div class="uk-margin-top">
+											<div class="checkbox-cover">
+												<label>
+													<input class="uk-checkbox" type="checkbox" checked>
+													Данні платника <span uk-tooltip="Дані платника і коротка інформація про них" class="help"><i class="icon icon-question"></i></span>
+												</label>
+											</div>
+											<div class="uk-margin-top">
+												<div class="group-title">Данні платника</div>
+												<div class="form-group">
+													<input class="uk-input input uk-width-1-1" type="text" placeholder="Данні платника">
+												</div>
+											</div>
+											<div class="uk-margin-top">
+												<div class="group-title">Додаткова інформація до замовлення</div>
+												<div class="form-group">
+													<textarea name="text" id="text" class="textarea small" placeholder="Введіть  коментар"></textarea>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="checkbox-cover uk-margin-top">
+										<label>
+											<input class="uk-checkbox" type="checkbox" checked>
+											Оформляючи замовлення, даю згоду на збір та обробку даних, а також їх передачу службам доставки *
+										</label>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="uk-width-1-1@s uk-width-1-3@m">
+							<div class="order-details-card">
+								<div class="headers">
+									<h4 class="title">Деталі замовлення</h4>
+								</div>
+								<div class="info-box">
+									<div class="uk-grid uk-grid-small ">
+										<div class="uk-width-1-3"><div class="detail">3 товари на суму</div></div>
+										<div class="align-right uk-width-2-3"><div class="detail-info">26512.00 ₴</div></div>
+									</div>
+									<div class="uk-grid uk-grid-small uk-child-width-1-2">
+										<div class="uk-width-1-3"><div class="detail">Вартість доставки</div></div>
+										<div class="align-right uk-width-2-3"><div class="detail-info">За тарифами перевізника</div></div>
+									</div>
+								</div>
+								<div class="total">
+									<div class="uk-grid uk-child-width-1-2">
+										<div><div class="detail">До сплати</div></div>
+										<div class="align-right"><div class="price-large">26512.00 ₴</div></div>
+									</div>
+								</div>
+								<div class="form lined-form filled-form">
+									<div uk-grid class="uk-child-width-1-2">
+										<div class="price-cover">
+											<div class="total-price align-left">26512.00 ₴</div>
+										</div>
+										<button type="submit" class="uk-button uk-button-secondary">
+											Замовлення підтверджую<span class="icon-line"></span>
+										</button>
+									</div>
+								</div>
+								<div class="bottom">
+									<ul>
+										<li>Оплата замовлень доступна після підтвердження замовлення менеджером. </li>
+										<li>Замовлення виконуються після оплати.</li>
+										<li>Доступні способи оплати: оплата за рахунком, оплата кредитною картою онлайн, готівка в офісі</li>
+										<li>Повна інформація на сторінці <a class="underlined" href="delivery.html">Доставка і оплата</a></li>
+									</ul>
+									<div class="payment-info">
+										Ми приймаємо
+										<img src="img/payment_mastercard.png" alt="mastercard">
+										<img src="img/payment_visa.png" alt="visa">
+										<img src="img/payment_american.png" alt="american">
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</form>
+			</div>
+		</section>
 	</main>
 
 	<!-- footer -->

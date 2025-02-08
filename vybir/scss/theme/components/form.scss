@@ -13,6 +13,22 @@
 		}
 	}
 
+	textarea {
+		display: block;
+		width: 100%;
+		resize: none;
+		display: inline-block;
+		padding: 5px 22px;
+		line-height: 40px;
+		font-size: var(--font-size);
+		color: $color_primary;
+		font-family: $font;
+
+		&.small {
+			height: 52px;
+		}
+	}
+
 	.form-group {
 
 		&.error {
@@ -59,7 +75,7 @@
 
 		.icon {
 			position: absolute;
-			left: 10px; top: 50%;
+			left: 15px; top: 50%;
 			transform: translateY(-50%);
 			color: $color_primary;
 			font-size: 24px;
@@ -86,6 +102,97 @@
 		&:hover {
 			color: $color_secondary;
 		}
+	}
+
+	.checkbox-tabs {
+		white-space: nowrap;
+		font-size: 0;
+		margin: 20px 0;
+		padding: 0;
+
+		.checkbox-group {
+			font-size: 16px;
+			position: relative;
+			display: inline-block;
+
+			input {
+				position: absolute;
+				top: 0; left: 0;
+				visibility: hidden;
+				opacity: 0;
+
+				&:checked {
+
+					~ label {
+						background-color: $color_primary;
+						color: $color_white;
+
+						&:hover {
+							background-color: $color_primary;
+							color: $color_white;
+						}
+					}
+				}
+			}
+
+			.label {
+				border: 1px solid rgba($color_primary, 0.1);
+				border-left: none;
+				cursor: pointer;
+				padding: 15px 20px;
+				display: block;
+				transition: .2s;
+
+				&:hover {
+					background-color: rgba($color_primary, 0.1);
+					color: $color_primary;
+				}
+			}
+
+			&:first-child {
+
+				.label {
+					border-left: 1px solid rgba($color_primary, 0.1);
+				}
+			}
+		}
+
+		li {
+			display: inline-block;
+
+			a {
+				padding: 15px 20px;
+				transition: .2s;
+				border: 1px solid rgba($color_primary, 0.1);
+				border-left: 0;
+				font-size: 16px;
+				line-height: 1.46;
+
+				&:hover {
+					color: $color_primary;
+					background-color: rgba($color_primary, 0.1);
+				}
+			}
+
+			&.uk-active {
+
+				a {
+					background-color: $color_primary;
+					color: $color_white;
+				}
+			}
+
+			&:first-child {
+
+				a {
+					border-left: 1px solid rgba($color_primary, 0.1);
+				}
+			}
+		}
+	}
+
+	.uk-radio {
+		margin-right: 10px;
 	}
 }
 
@@ -122,6 +229,8 @@
 	}
 }
 
+
+
 .form.inline-form {
 	display: flex;
 }
@@ -154,6 +263,14 @@
 	border: 1px solid $color_secondary;
 	margin: 20px 0;
 
+	&.primary-line {
+		border-color: $color_primary;
+	}
+
+	&.filled-form {
+		background-color: $hover_transparent;
+	}
+
 	.align-right {
 		justify-content: end;
 		display: flex;
@@ -171,6 +288,23 @@
 		.input {
 			padding-top: 1px;
 			padding-bottom: 2px;
+			padding-left: 12px;
+			padding-right: 12px;
+		}
+
+		textarea {
+			padding-left: 12px;
+			padding-right: 12px;
+		}
+
+		.checkbox-tabs {
+
+			.checkbox-group {
+
+				.label {
+					padding: 10px 16px;
+				}
+			}
 		}
 	}
 
@@ -181,6 +315,16 @@
 			background-image: url(../img/sort_icon_bg.png);
 			background-repeat: no-repeat;
 			background-position: 10px center;
+		}
+	}
+
+	.order-details-card {
+
+		.headers {
+
+			.title{
+				font-size: 30px;
+			}
 		}
 	}
 }

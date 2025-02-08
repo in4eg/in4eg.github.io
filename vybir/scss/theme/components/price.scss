@@ -2,6 +2,7 @@
 	font-size: var(--font-size);
 	font-weight: 600;
 	line-height: 1;
+	white-space: nowrap;
 
 	.digit {
 		font-size: var(--subheader2-font-size);
@@ -20,12 +21,33 @@
 	text-align: right;
 	padding-right: 20px;
 }
+
 .total-price {
 	font-size: 32px;
 	font-weight: 700;
+	white-space: nowrap;
 }
 
-@media (max-width: 1440px) {
+.price-large {
+	white-space: nowrap;
+	color: $color_primary_hover;
+	font-weight: 700;
+	font-size: 32px;
+}
+
+@media (max-width: 1780px) {
+
+	.price-large,
+	.total-price {
+		font-size: 26px;
+	}
+}
 
 
+@media (max-width: 1200px) {
+
+	.price-large,
+	.total-price {
+		font-size: 20px;
+	}
 }

@@ -115,6 +115,16 @@ $tag-button-color-active: $color_secondary;
 $close-lightbox-position: 20px;
 $uk-card-preview-padding: 10px;
 
+$alert-danger-color: $color_black;
+$alert-warning-color: $color_black;
+$alert-success-color: $color_black;
+$alert-primary-color: $color_black;
+
+$modal-dialog-width-xmall: 393px;
+$modal-dialog-width-small: 820px;
+$modal-dialog-width-medium: 1172px;
+$modal-dialog-width-large: 1400px;
+$modal-dialog-background: $color_whitesmoke;
 
 /* 2. Import default variables and available mixins.*/
 @import "uikit/src/scss/variables-theme.scss";
