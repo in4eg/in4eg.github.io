@@ -34,4 +34,12 @@
 		border: 0;
 		background-color: transparent;
 	}
+
+	&.full-size {
+		width: 100%;
+
+		input {
+			width: calc(100% - $calculator_height*2);
+		}
+	}
 }

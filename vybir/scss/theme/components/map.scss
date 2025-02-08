@@ -154,6 +154,12 @@ hr.hr-short {
 			font-size: calc(var(--h5-font-size) * .4);
 			letter-spacing: .2em;
 		}
+		ul, a {
+			color: $color_white;
+		}
+	}
+	.bold {
+		font-weight: 700;
 	}
 	.contact-form {
 		background: $color_secondary_hover;
@@ -262,6 +268,13 @@ hr.hr-short {
 			padding-left: 50px;
 			padding-right: 50px;
 		}
+
+		.description:after {
+			top: 30px; right: 30px;
+			width: 30px; height: 30px;
+			border-top-width: 2px;
+			border-right-width: 2px;
+		}
 	}
 }
 @media (max-width: 960px){
@@ -277,6 +290,7 @@ hr.hr-short {
 		.description {
 			padding: 100px;
 		}
+
 	}
 
 }

@@ -89,6 +89,39 @@
 	}
 }
 
+.radio-group {
+	display: inline-block;
+	vertical-align: middle;
+	position: relative;
+	margin-right: 5px;
+
+	&:last-child {
+		margin-right: 0;
+	}
+
+	input {
+		position: absolute;
+		visibility: hidden;
+		opacity: 0;
+
+		&:checked {
+
+			~ label {
+				border-color: $color_secondary;
+			}
+		}
+	}
+
+	label {
+		height: 30px; width: 30px;
+		display: inline-block;
+		border-radius: 50%;
+		overflow: hidden;
+		border: 2px solid transparent;
+		cursor: pointer;
+	}
+}
+
 .form.inline-form {
 	display: flex;
 }

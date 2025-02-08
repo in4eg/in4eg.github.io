@@ -2,13 +2,13 @@
 <html lang="ua">
 <head>
 	<meta charset="UTF-8">
-	<title>Vybir :: Partners</title>
+	<title>Vybir :: Detail</title>
 
 	<link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
 	<link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
 	<link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
 	<link rel="manifest" href="/favicon/site.webmanifest">
-	<link rel="mask-icon" href="/favicon/safari-pinned-tab.png" color="#314961">
+	<link rel="mask-icon" href="/favicon/safari-pinned-tab.svg" color="#314961">
 	<meta name="msapplication-TileColor" content="#314961">
 	<meta name="theme-color" content="#314961">
 
@@ -73,12 +73,35 @@
 						</div>
 					</form>
 					<div class="login-button">
-						<!-- sign in button -->
-						<a class="uk-button uk-button-secondary button spaced-right button-icon-m" href="#loginModal" uk-toggle uk-tooltip="Вхід/Реєстрація">
-							<span class="visible-m">Вхід/Реєстрація</span>
-							<i class="icon icon-logout hidden-m"></i>
+						<!-- if user logged -->
+						<div class="uk-inline">
+							<button class="button-link button-link-icon uk-button uk-button-transparent" type="button" uk-tooltip="Меню профіля">
+								<i class="icon icon-user"></i>
+							</button>
+							<div class="uk-card uk-card-small uk-card-body uk-card-default user-menu-card" uk-drop="mode: click">
+								<button class="button uk-button button uk-button-transparent button-square logout-button" type="button" uk-tooltip="Вийти">
+									<i class="icon icon-logout"></i>
+								</button>
+								<ul class="uk-nav-default user-menu-list" uk-nav>
+									<li class="uk-active">
+										<div class="text">
+											<div class="name">Василь П.</div>
+											<div class="marked currency">Курс 44,35</div>
+										</div>
+									</li>
+									<li><a href="#" class="text">Особисті дані</a></li>
+									<li><a href="#" class="text">Мої замовлення</a></li>
+									<li><a href="#" class="text">Мій кабінет</a></li>
+								</ul>
+							</div>
+						</div>
+						<a class="uk-button button-link button-link-icon" href="#cartModal" uk-toggle uk-tooltip="Оформити завмовлення">
+							<span class="count-group">
+								<i class="icon icon-cart"></i>
+								<span class="button-count">199</span>
+							</span>
 						</a>
-						<!-- / sign in button -->
+					<!-- / if user logged -->
 					</div>
 				</div>
 			</div>
@@ -258,7 +281,7 @@
 </div>
 					</div>
 				</div>
-				<div class="catalog-menu-main">
+				<div class="">
 					<div class="catalog-menu-submenu">
 						<div class="uk-card uk-card-body uk-card-default uk-card-small">
 							<div id="catalogSubmenu">
@@ -1558,535 +1581,810 @@
 <!-- / cart -->
 
 	<main class="page-main" id="pageMain">
-		<div class="main-menu-grid">
+		<!-- breadcrumbs -->
+		<div class="breadcrumbs">
 			<div class="uk-container uk-container-xlarge">
-				<div class="menu-cover-page uk-margin-medium-top">
-					<div class="uk-grid-collapse uk-grid" uk-filter="target: .switcher-partner">
-						<!-- type filters desktop -->
-						<div class="uk-width-1-1 uk-width-2-5@s uk-width-1-4@m uk-width-1-6@l uk-visible@m">
-							<ul class="collapsed-mobile parner-list-small uk-list page-switcher">
-								<!-- all -->
-								<li class="item tab-button" uk-filter-control>
-									<a href="#">
-										<figure class="parner-item">
-											<figcaption>Всі партнери</figcaption>
-										</figure>
-									</a>
-								</li>
-								<!-- 1 -->
-								<li class="item tab-button" uk-filter-control=".p1">
-									<a href="#">
-										<figure class="parner-item">
-											<img src="img/partners/1.png" draggable="false">
-											<figcaption>Poliplast</figcaption>
-										</figure>
-									</a>
-								</li>
-								<!-- 2 -->
-								<li class="item tab-button" uk-filter-control=".p2">
-									<a href="#">
-										<figure class="parner-item">
-											<img src="img/partners/2.png" draggable="false">
-											<figcaption>Guisti</figcaption>
-										</figure>
-									</a>
-								</li>
-								<!-- 3 -->
-								<li class="item tab-button" uk-filter-control=".p3">
-									<a href="#">
-										<figure class="parner-item">
-											<img src="img/partners/3.png" draggable="false">
-											<figcaption>Ogtm</figcaption>
-										</figure>
-									</a>
-								</li>
-								<!-- 4 -->
-								<li class="item tab-button" uk-filter-control=".p4">
-									<a href="#">
-										<figure class="parner-item">
-											<img src="img/partners/4.png" draggable="false">
-											<figcaption>Vibo</figcaption>
-										</figure>
-									</a>
-								</li>
-								<!-- 5 -->
-								<li class="item tab-button" uk-filter-control=".p5">
-									<a href="#">
-										<figure class="parner-item">
-											<img src="img/partners/5.png" draggable="false">
-											<figcaption>Euro Orvel</figcaption>
-										</figure>
-									</a>
-								</li>
-								<!-- 6 -->
-								<li class="item tab-button" uk-filter-control=".p6">
-									<a href="#">
-										<figure class="parner-item">
-											<img src="img/partners/6.png" draggable="false">
-											<figcaption>Hettich</figcaption>
-										</figure>
-									</a>
-								</li>
-								<!-- 7 -->
-								<li class="item tab-button" uk-filter-control=".p7">
-									<a href="#">
-										<figure class="parner-item">
-											<img src="img/partners/7.png" draggable="false">
-											<figcaption>Italiana</figcaption>
-										</figure>
-									</a>
-								</li>
-								<!-- 8 -->
-								<li class="item tab-button" uk-filter-control=".p8">
-									<a href="#">
-										<figure class="parner-item">
-											<img src="img/partners/8.png" draggable="false">
-											<figcaption>GTV</figcaption>
-										</figure>
-									</a>
-								</li>
-								<!-- 9 -->
-								<li class="item tab-button" uk-filter-control=".p9">
-									<a href="#">
-										<figure class="parner-item">
-											<img src="img/partners/9.png" draggable="false">
-											<figcaption>Scilm</figcaption>
-										</figure>
-									</a>
-								</li>
-								<!-- 10 -->
-								<li class="item tab-button" uk-filter-control=".p10">
-									<a href="#">
-										<figure class="parner-item">
-											<img src="img/partners/10.png" draggable="false">
-											<figcaption>Fundermax</figcaption>
-										</figure>
-									</a>
-								</li>
-								<!-- 11 -->
-								<li class="item tab-button" uk-filter-control=".p11">
-									<a href="#">
-										<figure class="parner-item">
-											<img src="img/partners/11.png" draggable="false">
-											<figcaption>Luxe Form</figcaption>
-										</figure>
-									</a>
-								</li>
-								<!-- 12 -->
-								<li class="item tab-button" uk-filter-control=".p12">
-									<a href="#">
-										<figure class="parner-item">
-											<img src="img/partners/12.png" draggable="false">
-											<figcaption>Alvic</figcaption>
-										</figure>
-									</a>
-								</li>
-								<!-- 13 -->
-								<li class="item tab-button" uk-filter-control=".p13">
-									<a href="#">
-										<figure class="parner-item">
-											<img src="img/partners/13.png" draggable="false">
-											<figcaption>Rehau</figcaption>
-										</figure>
-									</a>
-								</li>
-								<!-- 14 -->
-								<li class="item tab-button" uk-filter-control=".p14">
-									<a href="#">
-										<figure class="parner-item">
-											<img src="img/partners/14.png" draggable="false">
-											<figcaption>Swiss Krono</figcaption>
-										</figure>
-									</a>
-								</li>
-								<!-- 15 -->
-								<li class="item tab-button" uk-filter-control=".p15">
-									<a href="#">
-										<figure class="parner-item">
-											<img src="img/partners/15.png" draggable="false">
-											<figcaption>Egger</figcaption>
-										</figure>
-									</a>
-								</li>
-							</ul>
-						</div>
-						<!-- / type filters desktop -->
-						<!-- page content column -->
-						<div class="uk-width-1-1 uk-width-1-1@s uk-width-3-4@m uk-width-5-6@l gallery-cover">
-							<!-- 1 -->
-							<div class="tab-cover">
-								<h1 class="h4-header-font filter-title">Партнери</h1>
-								<!-- type filters mobile -->
-								<div class="uk-width-1-1 uk-hidden@m">
-									<ul class="collapsed-mobile parner-list-small uk-list page-switcher">
-										<!-- all -->
-										<li class="item tab-button" uk-filter-control>
-											<a href="#">
-												<figure class="parner-item">
-													<figcaption>Всі партнери</figcaption>
-												</figure>
-												<i class="icon icon-caret_right caret"></i>
-											</a>
-										</li>
-										<!-- 1 -->
-										<li class="item tab-button" uk-filter-control=".p1">
-											<a href="#">
-												<figure class="parner-item">
-													<img src="img/partners/1.png" draggable="false">
-													<figcaption>Poliplast</figcaption>
-												</figure>
-												<i class="icon icon-caret_right caret"></i>
-											</a>
-										</li>
-										<!-- 2 -->
-										<li class="item tab-button" uk-filter-control=".p2">
-											<a href="#">
-												<figure class="parner-item">
-													<img src="img/partners/2.png" draggable="false">
-													<figcaption>Guisti</figcaption>
-												</figure>
-												<i class="icon icon-caret_right caret"></i>
-											</a>
-										</li>
-										<!-- 3 -->
-										<li class="item tab-button" uk-filter-control=".p3">
-											<a href="#">
-												<figure class="parner-item">
-													<img src="img/partners/3.png" draggable="false">
-													<figcaption>Ogtm</figcaption>
-												</figure>
-												<i class="icon icon-caret_right caret"></i>
-											</a>
-										</li>
-										<!-- 4 -->
-										<li class="item tab-button" uk-filter-control=".p4">
-											<a href="#">
-												<figure class="parner-item">
-													<img src="img/partners/4.png" draggable="false">
-													<figcaption>Vibo</figcaption>
-												</figure>
-												<i class="icon icon-caret_right caret"></i>
-											</a>
-										</li>
-										<!-- 5 -->
-										<li class="item tab-button" uk-filter-control=".p5">
-											<a href="#">
-												<figure class="parner-item">
-													<img src="img/partners/5.png" draggable="false">
-													<figcaption>Euro Orvel</figcaption>
-												</figure>
-												<i class="icon icon-caret_right caret"></i>
-											</a>
-										</li>
-										<!-- 6 -->
-										<li class="item tab-button" uk-filter-control=".p6">
-											<a href="#">
-												<figure class="parner-item">
-													<img src="img/partners/6.png" draggable="false">
-													<figcaption>Hettich</figcaption>
-												</figure>
-												<i class="icon icon-caret_right caret"></i>
-											</a>
-										</li>
-										<!-- 7 -->
-										<li class="item tab-button" uk-filter-control=".p7">
-											<a href="#">
-												<figure class="parner-item">
-													<img src="img/partners/7.png" draggable="false">
-													<figcaption>Italiana</figcaption>
-												</figure>
-												<i class="icon icon-caret_right caret"></i>
-											</a>
-										</li>
-										<!-- 8 -->
-										<li class="item tab-button" uk-filter-control=".p8">
-											<a href="#">
-												<figure class="parner-item">
-													<img src="img/partners/8.png" draggable="false">
-													<figcaption>GTV</figcaption>
-												</figure>
-												<i class="icon icon-caret_right caret"></i>
-											</a>
-										</li>
-										<!-- 9 -->
-										<li class="item tab-button" uk-filter-control=".p9">
-											<a href="#">
-												<figure class="parner-item">
-													<img src="img/partners/9.png" draggable="false">
-													<figcaption>Scilm</figcaption>
-												</figure>
-												<i class="icon icon-caret_right caret"></i>
-											</a>
-										</li>
-										<!-- 10 -->
-										<li class="item tab-button" uk-filter-control=".p10">
-											<a href="#">
-												<figure class="parner-item">
-													<img src="img/partners/10.png" draggable="false">
-													<figcaption>Fundermax</figcaption>
-												</figure>
-												<i class="icon icon-caret_right caret"></i>
-											</a>
-										</li>
-										<!-- 11 -->
-										<li class="item tab-button" uk-filter-control=".p11">
-											<a href="#">
-												<figure class="parner-item">
-													<img src="img/partners/11.png" draggable="false">
-													<figcaption>Luxe Form</figcaption>
-												</figure>
-												<i class="icon icon-caret_right caret"></i>
-											</a>
-										</li>
-										<!-- 12 -->
-										<li class="item tab-button" uk-filter-control=".p12">
-											<a href="#">
-												<figure class="parner-item">
-													<img src="img/partners/12.png" draggable="false">
-													<figcaption>Alvic</figcaption>
-												</figure>
-												<i class="icon icon-caret_right caret"></i>
-											</a>
-										</li>
-										<!-- 13 -->
-										<li class="item tab-button" uk-filter-control=".p13">
-											<a href="#">
-												<figure class="parner-item">
-													<img src="img/partners/13.png" draggable="false">
-													<figcaption>Rehau</figcaption>
-												</figure>
-												<i class="icon icon-caret_right caret"></i>
-											</a>
-										</li>
-										<!-- 14 -->
-										<li class="item tab-button" uk-filter-control=".p14">
-											<a href="#">
-												<figure class="parner-item">
-													<img src="img/partners/14.png" draggable="false">
-													<figcaption>Swiss Krono</figcaption>
-												</figure>
-												<i class="icon icon-caret_right caret"></i>
-											</a>
-										</li>
-										<!-- 15 -->
-										<li class="item tab-button" uk-filter-control=".p15">
-											<a href="#">
-												<figure class="parner-item">
-													<img src="img/partners/15.png" draggable="false">
-													<figcaption>Egger</figcaption>
-												</figure>
-												<i class="icon icon-caret_right caret"></i>
-											</a>
-										</li>
-									</ul>
+					<ul class="uk-breadcrumb">
+						<li><a href="catalog.html">Послуги</a></li>
+						<li><a href="catalog-category.html">Цех обробки компакт-плити</a></li>
+						<li><span>Обробка торця компакт плити у вигляді фаски на прямолінійних деталях без внутр. вирізів</span></li>
+					</ul>
+			</div>
+		</div>
+		<!-- details top -->
+		<div class="uk-container uk-container-xlarge">
+			<div class="detail-top">
+				<div class="uk-grid">
+					<div class="uk-width-1-1 uk-width-1-1@s uk-width-2-5@m uk-width-2-5@l">
+						<!-- main image slider -->
+						<div class="uk-position-relative" uk-slideshow="animation: fade">
+							<div class="uk-slideshow-items">
+								<div>
+									<img src="img/temp/card6.png" draggable="false" alt="detail" uk-cover>
 								</div>
-								<!-- / type filters mobile -->
-								<!-- selected tags -->
-								<div uk-filter="target: .switcher-filter">
-									<div class="bordered-tags selected-tags collapsed-s collapsed-mobile">
-										<div class="uk-button uk-tag-button uk-tag-small" uk-filter-control><a href="#">Всі</a></div>
-										<div class="uk-button uk-tag-button uk-tag-small" uk-filter-control=".tag-white"><a href="#">Alvic</a></div>
-										<div class="uk-button uk-tag-button uk-tag-small" uk-filter-control=".tag-blue"><a href="#">ВКФ Вибір</a></div>
-										<div class="uk-button uk-tag-button uk-tag-small" uk-filter-control=".tag-black"><a href="#">Меблеві ролики</a></div>
-										<div class="uk-button uk-tag-button uk-tag-small" uk-filter-control=".tag-black2"><a href="#">Металеві вироби Вибір</a></div>
-										<div class="uk-button uk-tag-button uk-tag-small" uk-filter-control=".tag-black3"><a href="#">Настінна система Zobal</a></div>
-										<!-- show more -->
-										<button class="uk-button uk-button-link tab-button">
-											<span class="closed">Більше <i class="icon icon-caret_bottom"></i></span>
-											<span class="opened">Менше <i class="icon icon-caret_top"></i></span>
-										</button>
-									</div>
-									<div class="parners-cover switcher-partner switcher-filter uk-grid-small uk-child-width-1-1 uk-child-width-1-1@s uk-child-width-1-2@m uk-child-width-1-4@l" uk-grid>
-										<!-- 1 -->
-										<div class="tag-white p1">
-											<a href="partner-detail.html" class="info-card info-card-smaller parner-element">
-												<figure class="element-figure uk-cover-container">
-													<img src="img/partners/1_i.png" alt="catalog" draggable="false"uk-cover>
-													<figcaption class="image-caption caption-small">
-														Poliplast
-													</figcaption>
-												</figure>
-												<div class="logo-cover"><img src="img/partners/1.png" class="logo"></div>
-											</a>
-										</div>
-										<!-- 2 -->
-										<div class="tag-blue p2">
-											<a href="partner-detail.html" class="info-card info-card-smaller parner-element">
-												<figure class="element-figure uk-cover-container">
-													<img src="img/partners/2_i.png" alt="catalog" draggable="false"uk-cover>
-													<figcaption class="image-caption caption-small">
-														Guisti
-													</figcaption>
-												</figure>
-												<div class="logo-cover"><img src="img/partners/2.png" class="logo"></div>
-											</a>
-										</div>
-										<!-- 3 -->
-										<div class="tag-white p3">
-											<a href="partner-detail.html" class="info-card info-card-smaller parner-element">
-												<figure class="element-figure uk-cover-container">
-													<img src="img/partners/3_i.png" alt="catalog" draggable="false"uk-cover>
-													<figcaption class="image-caption caption-small">
-														Ogtm
-													</figcaption>
-												</figure>
-												<div class="logo-cover"><img src="img/partners/3.png" class="logo"></div>
-											</a>
-										</div>
-										<!-- 4 -->
-										<div class="tag-white p4">
-											<a href="partner-detail.html" class="info-card info-card-smaller parner-element">
-												<figure class="element-figure uk-cover-container">
-													<img src="img/partners/4_i.png" alt="catalog" draggable="false"uk-cover>
-													<figcaption class="image-caption caption-small">
-														Vibo
-													</figcaption>
-												</figure>
-												<div class="logo-cover"><img src="img/partners/4.png" class="logo"></div>
-											</a>
-										</div>
-										<!-- 5 -->
-										<div class="tag-black3 p5">
-											<a href="partner-detail.html" class="info-card info-card-smaller parner-element">
-												<figure class="element-figure uk-cover-container">
-													<img src="img/partners/5_i.png" alt="catalog" draggable="false"uk-cover>
-													<figcaption class="image-caption caption-small">
-														Euro Orvel
-													</figcaption>
-												</figure>
-												<div class="logo-cover"><img src="img/partners/5.png" class="logo"></div>
-											</a>
-										</div>
-										<!-- 6 -->
-										<div class="tag-black2 p6">
-											<a href="partner-detail.html" class="info-card info-card-smaller parner-element">
-												<figure class="element-figure uk-cover-container">
-													<img src="img/partners/6_i.png" alt="catalog" draggable="false"uk-cover>
-													<figcaption class="image-caption caption-small">
-														Hettich
-													</figcaption>
-												</figure>
-												<div class="logo-cover"><img src="img/partners/6.png" class="logo"></div>
-											</a>
-										</div>
-										<!-- 7 -->
-										<div class="tag-black3 p7">
-											<a href="partner-detail.html" class="info-card info-card-smaller parner-element">
-												<figure class="element-figure uk-cover-container">
-													<img src="img/partners/7_i.png" alt="catalog" draggable="false"uk-cover>
-													<figcaption class="image-caption caption-small">
-														Italiana
-													</figcaption>
-												</figure>
-												<div class="logo-cover"><img src="img/partners/7.png" class="logo"></div>
-											</a>
-										</div>
-										<!-- 8 -->
-										<div class="tag-black2 p8">
-											<a href="partner-detail.html" class="info-card info-card-smaller parner-element">
-												<figure class="element-figure uk-cover-container">
-													<img src="img/partners/8_i.png" alt="catalog" draggable="false"uk-cover>
-													<figcaption class="image-caption caption-small">
-														GTV
-													</figcaption>
-												</figure>
-												<div class="logo-cover"><img src="img/partners/8.png" class="logo"></div>
-											</a>
-										</div>
-										<!-- 9 -->
-										<div class="tag-black p9">
-											<a href="partner-detail.html" class="info-card info-card-smaller parner-element">
-												<figure class="element-figure uk-cover-container">
-													<img src="img/partners/9_i.png" alt="catalog" draggable="false"uk-cover>
-													<figcaption class="image-caption caption-small">
-														Scilm
-													</figcaption>
-												</figure>
-												<div class="logo-cover"><img src="img/partners/9.png" class="logo"></div>
-											</a>
-										</div>
-										<!-- 10 -->
-										<div class="tag-black p10">
-											<a href="partner-detail.html" class="info-card info-card-smaller parner-element">
-												<figure class="element-figure uk-cover-container">
-													<img src="img/partners/10_i.png" alt="catalog" draggable="false"uk-cover>
-													<figcaption class="image-caption caption-small">
-														Fundermax
-													</figcaption>
-												</figure>
-												<div class="logo-cover"><img src="img/partners/10.png" class="logo"></div>
-											</a>
-										</div>
-										<!-- 11 -->
-										<div class="tag-blue p11">
-											<a href="partner-detail.html" class="info-card info-card-smaller parner-element">
-												<figure class="element-figure uk-cover-container">
-													<img src="img/partners/11_i.png" alt="catalog" draggable="false"uk-cover>
-													<figcaption class="image-caption caption-small">
-														Luxe Form
-													</figcaption>
-												</figure>
-												<div class="logo-cover"><img src="img/partners/11.png" class="logo"></div>
-											</a>
-										</div>
-										<!-- 12 -->
-										<div class="tag-black p12">
-											<a href="partner-detail.html" class="info-card info-card-smaller parner-element">
-												<figure class="element-figure uk-cover-container">
-													<img src="img/partners/12_i.png" alt="catalog" draggable="false"uk-cover>
-													<figcaption class="image-caption caption-small">
-														Alvic
-													</figcaption>
-												</figure>
-												<div class="logo-cover"><img src="img/partners/12.png" class="logo"></div>
-											</a>
-										</div>
-										<!-- 13 -->
-										<div class="tag-black3 p13">
-											<a href="partner-detail.html" class="info-card info-card-smaller parner-element">
-												<figure class="element-figure uk-cover-container">
-													<img src="img/partners/13_i.png" alt="catalog" draggable="false"uk-cover>
-													<figcaption class="image-caption caption-small">
-														Rehau
-													</figcaption>
-												</figure>
-												<div class="logo-cover"><img src="img/partners/13.png" class="logo"></div>
-											</a>
-										</div>
-										<!-- 14 -->
-										<div class="tag-black2 p14">
-											<a href="partner-detail.html" class="info-card info-card-smaller parner-element">
-												<figure class="element-figure uk-cover-container">
-													<img src="img/partners/14_i.png" alt="catalog" draggable="false"uk-cover>
-													<figcaption class="image-caption caption-small">
-														Swiss Krono
-													</figcaption>
-												</figure>
-												<div class="logo-cover"><img src="img/partners/14.png" class="logo"></div>
-											</a>
-										</div>
-										<!-- 15 -->
-										<div class="tag-blue p15">
-											<a href="partner-detail.html" class="info-card info-card-smaller parner-element">
-												<figure class="element-figure uk-cover-container">
-													<img src="img/partners/15_i.png" alt="catalog" draggable="false"uk-cover>
-													<figcaption class="image-caption caption-small">
-														Egger
-													</figcaption>
-												</figure>
-												<div class="logo-cover"><img src="img/partners/15.png" class="logo"></div>
-											</a>
-										</div>
-									</div>
+								<div>
+									<img src="img/temp/card5.png" draggable="false" alt="detail" uk-cover>
 								</div>
-								<!-- / selected tags -->
+								<div>
+									<img src="img/temp/card6.png" draggable="false" alt="detail" uk-cover>
+								</div>
 							</div>
+							<!-- slider arrow nav -->
+							<a class="uk-position-center-left uk-position-small uk-hidden-hover" href uk-slidenav-previous uk-slideshow-item="previous"></a>
+							<a class="uk-position-center-right uk-position-small uk-hidden-hover" href uk-slidenav-next uk-slideshow-item="next"></a>
+							<!-- slider arrow nav -->
+							<!-- thumbnav -->
+							<div class="thumbnav-cover uk-margin-top">
+								<ul class="uk-thumbnav">
+									<li uk-slideshow-item="0"><a href="#"><img src="img/temp/card6.png" width="140" height="109" draggable="false" alt="detail"></a></li>
+									<li uk-slideshow-item="1"><a href="#"><img src="img/temp/card5.png" width="140" height="109" draggable="false" alt="detail"></a></li>
+									<li uk-slideshow-item="2"><a href="#"><img src="img/temp/card6.png" width="140" height="109" draggable="false" alt="detail"></a></li>
+								</ul>
+							</div>
+							<!-- / thumbnav -->
 						</div>
-						<!-- / page content column -->
+						<!-- main image slider -->
+					</div>
+					<div class="uk-width-1-1 uk-width-1-1@s uk-width-3-5@m uk-width-3-5@l">
+						<div class="item-detals">
+							<h1 class="subheader1">Обробка торця компакт плити у вигляді фаски на прямолінійних деталях без внутр. вирізів</h1>
+							<div class="bordered-element uk-width-1-1">
+								<div class="price">106.80 ₴/м </div>
+							</div>
+							<a href="order.html" class="uk-button uk-button-secondary uk-width-1-1">
+								Замовити послугу
+							</a>
+						</div>
 					</div>
 				</div>
 			</div>
 		</div>
+		<!-- / details top -->
+		<!-- details bottom -->
+		<section class="details-bottom">
+			<div class="uk-container uk-container-xlarge">
+				<ul uk-accordion>
+					<li class="uk-open">
+						<a class="uk-accordion-title" href>
+							<div class="lined-header subheader1">Опис товару</div>
+						</a>
+						<div class="uk-accordion-content">
+							<div class="item-detals">
+								<div class="uk-text-meta uk-text-bold">
+									Набір комплектуючих для висувних шухлядів Hettich ArciTech висотою h=282мм з подвійними боковинами h=126 із сталі з порошковим покриттям доступний у трьох кольорах: білий, сріблястий, антрацит.
+								</div>
+								<div class="uk-text-meta">
+									Після порізки на торці деталі залишаються сліди від пилу. Для надання естетичного вигляду ми обробляємоторець у виглядіфаски під кутом45°(близько 1 мм з двох сторін). Для обробки торця необхідно попередньо до розміру заготовки додати припуск 2 мм на кожну сторону обробки. (Якщо обробка по периметру плюс 4 мм до габаритів за шириною та висотою). Фрезерування зовнішнього контуру виконується на фрезерному верстаті з ЧПУ Homag спеціалізованими алмазними фрезами.
+								</div>
+								<div class="uk-text-meta">
+									Обмеження для обробки зовнішніх торців: мінімальна довжина 300 мм, мінімальна ширина 100 мм. Максимальна довжина – 3096 мм, ширина – 1246 мм. Вказано чистові розміри деталі з обробкою по периметру (заготівля + припуски)
+								</div>
+							</div>
+						</div>
+				</li>
+			</div>
+		</section>
+		<!-- details bottom -->
+		<!-- similar services -->
+		<section class="section section-elements">
+			<div class="uk-container uk-container-xlarge">
+				<h4 class="section-title">Схожі послуги</h4>
+				<!-- cards slider -->
+				<div uk-slider>
+					<div class="uk-slider-items uk-child-width-1-2@s uk-child-width-1-4@m uk-child-width-1-5@l uk-grid-small promotions-elements" uk-grid>
+						<!-- 1 -->
+						<div class="tag-furniture">
+							<div class="preview-card uk-card uk-card-default">
+	<a href="detail-service.html" class="image-inner">
+		<figure class="image-cover">
+			<img src="img/temp/card7.png" alt="card" class="vertical">
+		</figure>
+	</a>
+	<div class="caption-inner no-cart-button">
+		<a href="detail-service.html" class="subheader3">Складання алюмінієвих фасадів М21,М23 (до 1000 мм)</a>
+		<div class="caption">Широкі фасадні профілі з мінімальним обхватом до 1000мм</div>
+	</div>
+	<div class="price"><span class="digit">за домовленістю</span></div>
+</div>
+						</div>
+						<!-- 2 -->
+						<div class="tag-materials tag-special">
+							<div class="preview-card uk-card uk-card-default">
+	<a href="detail-service.html" class="image-inner">
+		<figure class="image-cover">
+			<img src="img/temp/card6.png" alt="card" class="vertical">
+		</figure>
+	</a>
+	<div class="caption-inner no-cart-button">
+		<a href="detail-service.html" class="subheader3">Складання алюмінієвих фасадів М21,М23 (до 1000 мм)</a>
+		<div class="caption">Широкі фасадні профілі з мінімальним обхватом до 1000мм</div>
+	</div>
+	<div class="price"><span class="digit">138</span>₴/шт.</div>
+</div>
+						</div>
+						<!-- 3 -->
+						<div class="tag-kitchen">
+							<div class="preview-card uk-card uk-card-default">
+	<a href="detail-service.html" class="image-inner">
+		<figure class="image-cover">
+			<img src="img/temp/card7.png" alt="card" class="vertical">
+		</figure>
+	</a>
+	<div class="caption-inner no-cart-button">
+		<a href="detail-service.html" class="subheader3">Складання алюмінієвих фасадів М21,М23 (до 1000 мм)</a>
+		<div class="caption">Широкі фасадні профілі з мінімальним обхватом до 1000мм</div>
+	</div>
+	<div class="price"><span class="digit">за домовленістю</span></div>
+</div>
+						</div>
+						<!-- 4 -->
+						<div class="tag-light tag-special">
+							<div class="preview-card uk-card uk-card-default">
+	<a href="detail-service.html" class="image-inner">
+		<figure class="image-cover">
+			<img src="img/temp/card6.png" alt="card" class="vertical">
+		</figure>
+	</a>
+	<div class="caption-inner no-cart-button">
+		<a href="detail-service.html" class="subheader3">Складання алюмінієвих фасадів М21,М23 (до 1000 мм)</a>
+		<div class="caption">Широкі фасадні профілі з мінімальним обхватом до 1000мм</div>
+	</div>
+	<div class="price"><span class="digit">138</span>₴/шт.</div>
+</div>
+						</div>
+						<!-- 5 -->
+						<div class="tag-bathroom">
+							<div class="preview-card uk-card uk-card-default">
+	<a href="detail-service.html" class="image-inner">
+		<figure class="image-cover">
+			<img src="img/temp/card7.png" alt="card" class="vertical">
+		</figure>
+	</a>
+	<div class="caption-inner no-cart-button">
+		<a href="detail-service.html" class="subheader3">Складання алюмінієвих фасадів М21,М23 (до 1000 мм)</a>
+		<div class="caption">Широкі фасадні профілі з мінімальним обхватом до 1000мм</div>
+	</div>
+	<div class="price"><span class="digit">за домовленістю</span></div>
+</div>
+						</div>
+						<!-- 6 -->
+						<div class="tag-filling">
+							<div class="preview-card uk-card uk-card-default">
+	<a href="detail-service.html" class="image-inner">
+		<figure class="image-cover">
+			<img src="img/temp/card7.png" alt="card" class="vertical">
+		</figure>
+	</a>
+	<div class="caption-inner no-cart-button">
+		<a href="detail-service.html" class="subheader3">Складання алюмінієвих фасадів М21,М23 (до 1000 мм)</a>
+		<div class="caption">Широкі фасадні профілі з мінімальним обхватом до 1000мм</div>
+	</div>
+	<div class="price"><span class="digit">за домовленістю</span></div>
+</div>
+						</div>
+						<!-- 7 -->
+						<div class="tag-doors tag-special">
+							<div class="preview-card uk-card uk-card-default">
+	<a href="detail-service.html" class="image-inner">
+		<figure class="image-cover">
+			<img src="img/temp/card6.png" alt="card" class="vertical">
+		</figure>
+	</a>
+	<div class="caption-inner no-cart-button">
+		<a href="detail-service.html" class="subheader3">Складання алюмінієвих фасадів М21,М23 (до 1000 мм)</a>
+		<div class="caption">Широкі фасадні профілі з мінімальним обхватом до 1000мм</div>
+	</div>
+	<div class="price"><span class="digit">138</span>₴/шт.</div>
+</div>
+						</div>
+						<!-- 8 -->
+						<div class="tag-ready">
+							<div class="preview-card uk-card uk-card-default">
+	<a href="detail-service.html" class="image-inner">
+		<figure class="image-cover">
+			<img src="img/temp/card6.png" alt="card" class="vertical">
+		</figure>
+	</a>
+	<div class="caption-inner no-cart-button">
+		<a href="detail-service.html" class="subheader3">Складання алюмінієвих фасадів М21,М23 (до 1000 мм)</a>
+		<div class="caption">Широкі фасадні профілі з мінімальним обхватом до 1000мм</div>
+	</div>
+	<div class="price"><span class="digit">138</span>₴/шт.</div>
+</div>
+						</div>
+						<!-- 9 -->
+						<div class="tag-decor tag-special">
+							<div class="preview-card uk-card uk-card-default">
+	<a href="detail-service.html" class="image-inner">
+		<figure class="image-cover">
+			<img src="img/temp/card6.png" alt="card" class="vertical">
+		</figure>
+	</a>
+	<div class="caption-inner no-cart-button">
+		<a href="detail-service.html" class="subheader3">Складання алюмінієвих фасадів М21,М23 (до 1000 мм)</a>
+		<div class="caption">Широкі фасадні профілі з мінімальним обхватом до 1000мм</div>
+	</div>
+	<div class="price"><span class="digit">138</span>₴/шт.</div>
+</div>
+						</div>
+						<!-- 10 -->
+						<div class="tag-furniture">
+							<div class="preview-card uk-card uk-card-default">
+	<a href="detail-service.html" class="image-inner">
+		<figure class="image-cover">
+			<img src="img/temp/card7.png" alt="card" class="vertical">
+		</figure>
+	</a>
+	<div class="caption-inner no-cart-button">
+		<a href="detail-service.html" class="subheader3">Складання алюмінієвих фасадів М21,М23 (до 1000 мм)</a>
+		<div class="caption">Широкі фасадні профілі з мінімальним обхватом до 1000мм</div>
+	</div>
+	<div class="price"><span class="digit">за домовленістю</span></div>
+</div>
+						</div>
+						<!-- 11 -->
+						<div class="tag-furniture">
+							<div class="preview-card uk-card uk-card-default">
+	<a href="detail-service.html" class="image-inner">
+		<figure class="image-cover">
+			<img src="img/temp/card6.png" alt="card" class="vertical">
+		</figure>
+	</a>
+	<div class="caption-inner no-cart-button">
+		<a href="detail-service.html" class="subheader3">Складання алюмінієвих фасадів М21,М23 (до 1000 мм)</a>
+		<div class="caption">Широкі фасадні профілі з мінімальним обхватом до 1000мм</div>
+	</div>
+	<div class="price"><span class="digit">138</span>₴/шт.</div>
+</div>
+						</div>
+						<!-- 12 -->
+						<div class="tag-materials">
+							<div class="preview-card uk-card uk-card-default">
+	<a href="detail-service.html" class="image-inner">
+		<figure class="image-cover">
+			<img src="img/temp/card7.png" alt="card" class="vertical">
+		</figure>
+	</a>
+	<div class="caption-inner no-cart-button">
+		<a href="detail-service.html" class="subheader3">Складання алюмінієвих фасадів М21,М23 (до 1000 мм)</a>
+		<div class="caption">Широкі фасадні профілі з мінімальним обхватом до 1000мм</div>
+	</div>
+	<div class="price"><span class="digit">за домовленістю</span></div>
+</div>
+						</div>
+						<!-- 13 -->
+						<div class="tag-kitchen">
+							<div class="preview-card uk-card uk-card-default">
+	<a href="detail-service.html" class="image-inner">
+		<figure class="image-cover">
+			<img src="img/temp/card6.png" alt="card" class="vertical">
+		</figure>
+	</a>
+	<div class="caption-inner no-cart-button">
+		<a href="detail-service.html" class="subheader3">Складання алюмінієвих фасадів М21,М23 (до 1000 мм)</a>
+		<div class="caption">Широкі фасадні профілі з мінімальним обхватом до 1000мм</div>
+	</div>
+	<div class="price"><span class="digit">138</span>₴/шт.</div>
+</div>
+						</div>
+						<!-- 14 -->
+						<div class="tag-light">
+							<div class="preview-card uk-card uk-card-default">
+	<a href="detail-service.html" class="image-inner">
+		<figure class="image-cover">
+			<img src="img/temp/card7.png" alt="card" class="vertical">
+		</figure>
+	</a>
+	<div class="caption-inner no-cart-button">
+		<a href="detail-service.html" class="subheader3">Складання алюмінієвих фасадів М21,М23 (до 1000 мм)</a>
+		<div class="caption">Широкі фасадні профілі з мінімальним обхватом до 1000мм</div>
+	</div>
+	<div class="price"><span class="digit">за домовленістю</span></div>
+</div>
+						</div>
+						<!-- 15 -->
+						<div class="tag-bathroom">
+							<div class="preview-card uk-card uk-card-default">
+	<a href="detail-service.html" class="image-inner">
+		<figure class="image-cover">
+			<img src="img/temp/card6.png" alt="card" class="vertical">
+		</figure>
+	</a>
+	<div class="caption-inner no-cart-button">
+		<a href="detail-service.html" class="subheader3">Складання алюмінієвих фасадів М21,М23 (до 1000 мм)</a>
+		<div class="caption">Широкі фасадні профілі з мінімальним обхватом до 1000мм</div>
+	</div>
+	<div class="price"><span class="digit">138</span>₴/шт.</div>
+</div>
+						</div>
+						<!-- 16 -->
+						<div class="tag-filling">
+							<div class="preview-card uk-card uk-card-default">
+	<a href="detail-service.html" class="image-inner">
+		<figure class="image-cover">
+			<img src="img/temp/card6.png" alt="card" class="vertical">
+		</figure>
+	</a>
+	<div class="caption-inner no-cart-button">
+		<a href="detail-service.html" class="subheader3">Складання алюмінієвих фасадів М21,М23 (до 1000 мм)</a>
+		<div class="caption">Широкі фасадні профілі з мінімальним обхватом до 1000мм</div>
+	</div>
+	<div class="price"><span class="digit">138</span>₴/шт.</div>
+</div>
+						</div>
+						<!-- 17 -->
+						<div class="tag-doors">
+							<div class="preview-card uk-card uk-card-default">
+	<a href="detail-service.html" class="image-inner">
+		<figure class="image-cover">
+			<img src="img/temp/card7.png" alt="card" class="vertical">
+		</figure>
+	</a>
+	<div class="caption-inner no-cart-button">
+		<a href="detail-service.html" class="subheader3">Складання алюмінієвих фасадів М21,М23 (до 1000 мм)</a>
+		<div class="caption">Широкі фасадні профілі з мінімальним обхватом до 1000мм</div>
+	</div>
+	<div class="price"><span class="digit">за домовленістю</span></div>
+</div>
+						</div>
+						<!-- 18 -->
+						<div class="tag-ready">
+							<div class="preview-card uk-card uk-card-default">
+	<a href="detail-service.html" class="image-inner">
+		<figure class="image-cover">
+			<img src="img/temp/card6.png" alt="card" class="vertical">
+		</figure>
+	</a>
+	<div class="caption-inner no-cart-button">
+		<a href="detail-service.html" class="subheader3">Складання алюмінієвих фасадів М21,М23 (до 1000 мм)</a>
+		<div class="caption">Широкі фасадні профілі з мінімальним обхватом до 1000мм</div>
+	</div>
+	<div class="price"><span class="digit">138</span>₴/шт.</div>
+</div>
+						</div>
+						<!-- 19 -->
+						<div class="tag-decor">
+							<div class="preview-card uk-card uk-card-default">
+	<a href="detail-service.html" class="image-inner">
+		<figure class="image-cover">
+			<img src="img/temp/card6.png" alt="card" class="vertical">
+		</figure>
+	</a>
+	<div class="caption-inner no-cart-button">
+		<a href="detail-service.html" class="subheader3">Складання алюмінієвих фасадів М21,М23 (до 1000 мм)</a>
+		<div class="caption">Широкі фасадні профілі з мінімальним обхватом до 1000мм</div>
+	</div>
+	<div class="price"><span class="digit">138</span>₴/шт.</div>
+</div>
+						</div>
+					</div>
+					<!-- slider nav -->
+					<a class="uk-position-center-left uk-position-small uk-hidden-hover" href uk-slidenav-previous uk-slider-item="previous" uk-tooltip="Попередній"></a>
+					<a class="uk-position-center-right uk-position-small uk-hidden-hover" href uk-slidenav-next uk-slider-item="next" uk-tooltip="Наступний"></a>
+				</div>
+				<div class="align-right link-cover">
+					<a href="catalog-filter.html" class="link" uk-tooltip="Перейти до каталогу">Дивитися всі <i class="icon icon-caret_right caret"></i></a>
+				</div>
+			</div>
+		</section>
+		<!-- /similar services -->
+		<!-- special offers-->
+		<section class="section special-offers">
+	<div class="uk-container uk-container-xlarge">
+		<h4 class="section-title align-center">Спеціальні пропозиції</h4>
+		<div uk-grid class="uk-grid-small">
+			<!-- 1 -->
+			<div class="uk-width-1-2@m">
+				<div class="offer-item offer-item-smaller offer-item-primary">
+					<div class="item-inner">
+						<figure class="element-figure image-cover">
+							<img src="img/temp/offer1.png" alt="offer" draggable="false" class="vertical">
+							<figcaption class="image-caption caption-secondary">-20% до 11/02/2025</figcaption>
+						</figure>
+						<div class="text-cover">
+							<div class="verticaly-middle">
+								<div class="inner">
+									<h5 class="element-title">Замовлення дверей зі знижкою</h5>
+									<div class="button-cover">
+										<a href="catalog.html" class="button uk-button button-light">
+											<span class="text">Дивитися</span>
+											<span class="fade"></span>
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- 2 -->
+			<div class="uk-width-1-2@m">
+				<div class="offer-item offer-item-smaller">
+					<div class="item-inner">
+						<figure class="element-figure image-cover">
+							<img src="img/temp/offer2.png" alt="offer" draggable="false" class="vertical">
+							<figcaption class="image-caption caption-primary">дійсний до 11/02/2025</figcaption>
+						</figure>
+						<div class="text-cover">
+							<div class="verticaly-middle">
+								<div class="inner">
+									<h5 class="element-title">Промокод на <br>стільниці <br>EGGER</h5>
+									<div class="button-cover">
+										<a href="catalog.html" class="button uk-button button-light">
+											<span class="text">Отримати</span>
+											<span class="fade"></span>
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- 3 -->
+			<div class="uk-width-1-2@m">
+				<div class="offer-item offer-item-smaller offer-item-primary">
+					<div class="item-inner">
+						<figure class="element-figure image-cover">
+							<img src="img/temp/offer3.png" alt="offer" draggable="false" >
+							<figcaption class="image-caption caption-secondary">пропозиція діє до 11/02/2025</figcaption>
+						</figure>
+						<div class="text-cover text-cover-with-price">
+							<div class="verticaly-middle">
+								<div class="inner">
+									<h5 class="element-title">Висувний кутовий механізм Rolling Corner Vibo</h5>
+									<div class="price">
+										<div class="old">5996 ₴/шт.</div>
+										<span class="digit">3496</span> ₴/шт.
+									</div>
+									<div class="button-cover">
+										<a href="catalog.html" class="button uk-button button-light">
+											<span class="text">Дивитися</span>
+											<span class="fade"></span>
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- 4 -->
+			<div class="uk-width-1-2@m">
+				<div class="offer-item offer-item-smaller offer-item-dark">
+					<div class="item-inner">
+						<figure class="element-figure image-cover">
+							<img src="img/temp/offer4.png" alt="offer" draggable="false" class="vertical">
+							<figcaption class="image-caption caption-secondary">пропозиція діє до 11/02/2025</figcaption>
+						</figure>
+						<div class="text-cover text-cover-with-price">
+							<div class="verticaly-middle">
+								<div class="inner">
+									<h5 class="element-title">Стелажна система зберігання Вибір</h5>
+									<div class="price">
+										<div class="old">5996 ₴/шт.</div>
+										<span class="digit">3496</span> ₴/шт.
+									</div>
+									<div class="button-cover">
+										<a href="catalog.html" class="button uk-button button-light">
+											<span class="text">Дивитися</span>
+											<span class="fade"></span>
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+		<!-- /special offers-->
+		<section class="section section-elements">
+			<div class="uk-container uk-container-xlarge" uk-filter="target: .contacts">
+				<h4 class="section-title">Замовити послугу</h4>
+							<!-- tabs slider navigation -->
+			<div class="tabs-navigation visible-mobile">
+			<!-- <div uk-slider class="tabs-slider"> -->
+				<div class="uk-slider-items align-center">
+					<div class="tab-item uk-active filter-active" uk-tooltip="Переглянути" uk-filter-control=".tag-hotline">
+						<a href="#" aria-hidden="true"><i class="icon icon-support tab-icon"></i>Гаряча<br class="uk-show@mobile"> лінія</a>
+					</div>
+					<!-- 2 -->
+					<div class="tab-item" uk-tooltip="Переглянути" uk-filter-control=".tag-odesa">
+						<a href="#" aria-hidden="true"><i class="icon icon-location tab-icon"></i>Одеса</a>
+					</div>
+					<!-- 3 -->
+					<div class="tab-item" uk-tooltip="Переглянути" uk-filter-control=".tag-kyiv">
+						<a href="#" aria-hidden="true"><i class="icon icon-location tab-icon"></i>Київ</a>
+					</div>
+					<!-- 4 -->
+					<div class="tab-item" uk-tooltip="Переглянути" uk-filter-control=".tag-lviv">
+						<a href="#" aria-hidden="true"><i class="icon icon-location tab-icon"></i>Львів</a>
+					</div>
+				</div>
+			<!-- </div> -->
+			</div>
+			<!-- / tabs slider navigation -->
+
+			<!-- cards slider -->
+			<div uk-slider class="contacts-switcher">
+				<div class="uk-slider-items uk-child-width-1 uk-grid-small contacts" uk-grid>
+					<div class="tag-hotline uk-active">
+						<div uk-grid class="uk-grid-column-collapse uk-grid-row-collapse contact-form">
+							<div class="uk-width-1-2@m">
+								<div class="description">
+									<div>
+										<h6 style="text-transform: uppercase">Замовити послугу</h6>
+										<h5>
+											Обробка торця компакт плити у вигляді фаски на прямолінійних деталях без внутр. вирізів
+										</h5>
+										Заповнення контактних даних (емейл або телефон) допоможе нам надати всю важливу інформацію щодо послуги, що вас цікавить.
+										<div class="bold uk-margin-top">Ми зв’яжемося з вами у робочий час:</div>
+										<ul class="bold">
+											<li>Пн-Пт 8:00-17:00 </li>
+											<li>Сб 8:00-15:00</li>
+										</ul>
+										<br>
+										
+									</div>
+								</div>
+							</div>
+							<div class="uk-width-1-2@m">
+								<div class="contact-form">
+									<div class="form-container">
+										<form action="" class="form">
+
+											<div class="form-group form-icon-group">
+												<i class="icon icon-id"></i>
+												<input class="uk-input input uk-width-1-1" type="text" placeholder="Ваше Ім’я">
+											</div>
+
+											<div uk-grid class="uk-grid-small">
+												<div class="uk-width-1-2@m">
+													<div class="form-group form-icon-group" style="margin: 0">
+														<i class="icon icon-mail"></i>
+														<input class="uk-input input uk-width-1-1" type="text" placeholder="Електронна пошта">
+													</div>
+												</div>
+												<div class="uk-width-1-2@m">
+													<div class="form-group form-icon-group">
+														<i class="icon icon-phone"></i>
+														<input class="uk-input input uk-width-1-1" type="text" placeholder="+38 0">
+													</div>
+												</div>
+											</div>
+
+											<div class="form-group">
+												<select name="" id="" class="uk-input input uk-width-1-1">
+													<option value="" disabled selected>Місто *</option>
+													<option value="">Одеса</option>
+													<option value="">Київ</option>
+													<option value="">Львів</option>
+												</select>
+											</div>
+
+											<div class="form-group">
+												<input class="uk-input input uk-width-1-1" type="text" placeholder="Тема повідомлення *">
+											</div>
+
+											<div class="form-group">
+												<textarea name="" id="" rows="4" class="uk-input input uk-width-1-1" placeholder="Повідомлення *"></textarea>
+											</div>
+
+											<!-- remove inline styles, it's only for demo -->
+											<div class="captcha" style="background: rgba(255,255,255,.2); width: 200px">
+												CAPTCHA HERE
+											</div>
+
+											<p style="line-height: 1"><small>*Заповнюючи цю форму Ви даєте згоду на обробку персональных Даних</small></p>
+
+											<button class="button uk-button button-light uk-width-1-1" type="submit">
+												Відправити
+											</button>
+										</form>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="tag-odesa">
+						<!-- contacts -->
+						<div uk-grid class="uk-grid-column-medium map-contacts">
+							<div class="uk-width-1-4@m">
+								<div class="map-address">
+									<h5>Адреса</h5>
+									<hr class="hr-short">
+									ВКФ Вибір Одеса <br>
+									Одеса, 65013 вул. <br>
+									Миколаївська дорога, 253/1 <br>
+									e-mail: sale@vybor.biz.ua
+								</div>
+							</div>
+							<div class="uk-width-1-2@m">
+								<div class="map-phones">
+									<h5>Телефони</h5>
+									<hr class="hr-short">
+									<div class="uk-grid-small" uk-grid>
+										<div class="uk-width-1-3@m">
+											<a href="tel:+38-048-734-64-34">+38-048-734-64-34</a><br>
+											<a href="tel:+38-067-134-64-34">+38-067-134-64-34</a><br>
+											<a href="tel:+38-099-134-64-34">+38-099-134-64-34</a><br>
+											<a href="tel:+38-073-134-64-34">+38-073-134-64-34</a>
+										</div>
+										<div class="uk-width-1-3@m">
+											<small>Відділ прийому замовлень:</small><br>
+											<a href="tel:+38-048-734-64-35">+38-048-734-64-35</a><br>
+											<a href="tel:+38-067-134-64-35">+38-067-134-64-35</a>
+										</div>
+										<div class="uk-width-1-3@m">
+											<small>Відділ регіонів:</small><br>
+											<a href="tel:+38-048-734-64-36">+38-048-734-64-36</a><br>
+											<a href="tel:+38-067-134-64-36">+38-067-134-64-36</a>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="uk-width-1-4@m">
+								<div class="map-working-hours">
+									<h5>Графік роботи</h5>
+									<hr class="hr-short">
+									Пн-Пт 8:00-17:00 <br>
+									Сб 8:00-15:00 <br>
+									Нд вихідний
+								</div>
+							</div>
+						</div>
+						<!-- map -->
+						<div class="uk-container uk-container-xlarge">
+							<div class="map">
+								<div id="map" class="map-container"></div>
+								<div class="marker"></div>
+								<div class="map-card">
+									<h5>ВКФ Вибір Одеса</h5>
+									<hr class="hr-short">
+									Одеса, 65013 вул.<br>	
+									Миколаївська дорога, 253/1<br>
+									e-mail: sale@vybir.biz.ua
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="tag-kyiv">
+						<!-- contacts -->
+						<div uk-grid class="uk-grid-column-medium map-contacts">
+							<div class="uk-width-1-4@m">
+								<div class="map-address">
+									<h5>Адреса</h5>
+									<hr class="hr-short">
+									ВКФ Вибір Київ <br>
+									Київ, 65013 вул. <br>
+									Миколаївська дорога, 253/1 <br>
+									e-mail: sale@vybor.biz.ua
+								</div>
+							</div>
+							<div class="uk-width-1-2@m">
+								<div class="map-phones">
+									<h5>Телефони</h5>
+									<hr class="hr-short">
+									<div class="uk-grid-small" uk-grid>
+										<div class="uk-width-1-3@m">
+											<a href="tel:+38-048-734-64-34">+38-048-734-64-34</a><br>
+											<a href="tel:+38-067-134-64-34">+38-067-134-64-34</a><br>
+											<a href="tel:+38-099-134-64-34">+38-099-134-64-34</a><br>
+											<a href="tel:+38-073-134-64-34">+38-073-134-64-34</a>
+										</div>
+										<div class="uk-width-1-3@m">
+											<small>Відділ прийому замовлень:</small><br>
+											<a href="tel:+38-048-734-64-35">+38-048-734-64-35</a><br>
+											<a href="tel:+38-067-134-64-35">+38-067-134-64-35</a>
+										</div>
+										<div class="uk-width-1-3@m">
+											<small>Відділ регіонів:</small><br>
+											<a href="tel:+38-048-734-64-36">+38-048-734-64-36</a><br>
+											<a href="tel:+38-067-134-64-36">+38-067-134-64-36</a>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="uk-width-1-4@m">
+								<div class="map-working-hours">
+									<h5>Графік роботи</h5>
+									<hr class="hr-short">
+									Пн-Пт 8:00-17:00 <br>
+									Сб 8:00-15:00 <br>
+									Нд вихідний
+								</div>
+							</div>
+						</div>
+						<!-- map -->
+						<div class="uk-container uk-container-xlarge">
+							<div class="map">
+								<div id="map" class="map-container"></div>
+								<div class="marker"></div>
+								<div class="map-card">
+									<h5>ВКФ Вибір Київ</h5>
+									<hr class="hr-short">
+									Одеса, 65013 вул.<br>	
+									Миколаївська дорога, 253/1<br>
+									e-mail: sale@vybir.biz.ua
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="tag-lviv">
+						<!-- contacts -->
+						<div uk-grid class="uk-grid-column-medium map-contacts">
+							<div class="uk-width-1-4@m">
+								<div class="map-address">
+									<h5>Адреса</h5>
+									<hr class="hr-short">
+									ВКФ Вибір Львів <br>
+									Львів, 65013 вул. <br>
+									Миколаївська дорога, 253/1 <br>
+									e-mail: sale@vybor.biz.ua
+								</div>
+							</div>
+							<div class="uk-width-1-2@m">
+								<div class="map-phones">
+									<h5>Телефони</h5>
+									<hr class="hr-short">
+									<div class="uk-grid-small" uk-grid>
+										<div class="uk-width-1-3@m">
+											<a href="tel:+38-048-734-64-34">+38-048-734-64-34</a><br>
+											<a href="tel:+38-067-134-64-34">+38-067-134-64-34</a><br>
+											<a href="tel:+38-099-134-64-34">+38-099-134-64-34</a><br>
+											<a href="tel:+38-073-134-64-34">+38-073-134-64-34</a>
+										</div>
+										<div class="uk-width-1-3@m">
+											<small>Відділ прийому замовлень:</small><br>
+											<a href="tel:+38-048-734-64-35">+38-048-734-64-35</a><br>
+											<a href="tel:+38-067-134-64-35">+38-067-134-64-35</a>
+										</div>
+										<div class="uk-width-1-3@m">
+											<small>Відділ регіонів:</small><br>
+											<a href="tel:+38-048-734-64-36">+38-048-734-64-36</a><br>
+											<a href="tel:+38-067-134-64-36">+38-067-134-64-36</a>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="uk-width-1-4@m">
+								<div class="map-working-hours">
+									<h5>Графік роботи</h5>
+									<hr class="hr-short">
+									Пн-Пт 8:00-17:00 <br>
+									Сб 8:00-15:00 <br>
+									Нд вихідний
+								</div>
+							</div>
+						</div>
+						<!-- map -->
+						<div class="uk-container uk-container-xlarge">
+							<div class="map">
+								<div id="map" class="map-container"></div>
+								<div class="marker"></div>
+								<div class="map-card">
+									<h5>ВКФ Вибір Львів</h5>
+									<hr class="hr-short">
+									Львів, 65013 вул.<br>	
+									Миколаївська дорога, 253/1<br>
+									e-mail: sale@vybir.biz.ua
+								</div>
+							</div>
+						</div>
+					</div>
+
+				</div>
+				<!-- slider nav -->
+<!-- 					<a class="uk-position-center-left uk-position-small uk-hidden-hover" href uk-slidenav-previous uk-slider-item="previous" uk-tooltip="Попередній"></a>
+				<a class="uk-position-center-right uk-position-small uk-hidden-hover" href uk-slidenav-next uk-slider-item="next" uk-tooltip="Наступний"></a> -->
+			</div>
+			</div>
+		</section>
 	</main>
 
 	<!-- footer -->

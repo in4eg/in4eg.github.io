@@ -2,7 +2,7 @@
 <html lang="ua">
 <head>
 	<meta charset="UTF-8">
-	<title>Vybir :: Detail</title>
+	<title>Vybir :: Detail Element</title>
 
 	<link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
 	<link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
@@ -1467,7 +1467,7 @@
 						<button type="button" class="action-button minus" uk-tooltip="Відняти">
 							<i class="icon icon-minus"></i>
 						</button>
-						<input type="number" value="0" class="value-input" readonly>
+						<input type="number" value="1" class="value-input" readonly>
 						<button type="button" class="action-button plus" uk-tooltip="Додати ще">
 							<i class="icon icon-plus"></i>
 						</button>
@@ -1504,7 +1504,7 @@
 						<button type="button" class="action-button minus" uk-tooltip="Відняти">
 							<i class="icon icon-minus"></i>
 						</button>
-						<input type="number" value="0" class="value-input" readonly>
+						<input type="number" value="2" class="value-input" readonly>
 						<button type="button" class="action-button plus" uk-tooltip="Додати ще">
 							<i class="icon icon-plus"></i>
 						</button>
@@ -1541,7 +1541,7 @@
 						<button type="button" class="action-button minus" uk-tooltip="Відняти">
 							<i class="icon icon-minus"></i>
 						</button>
-						<input type="number" value="0" class="value-input" readonly>
+						<input type="number" value="1" class="value-input" readonly>
 						<button type="button" class="action-button plus" uk-tooltip="Додати ще">
 							<i class="icon icon-plus"></i>
 						</button>
@@ -1556,19 +1556,26 @@
 	</div>
 	<!-- / body -->
 	<!-- footer -->
-	<div class="uk-modal-footer">
-		<button class="uk-button uk-button-primary uk-modal-close" type="button">
-			Продовжити покупки<span class="icon-line"></span>
-		</button>
-		<div class="make-order">
-			<div class="total">26512.00 ₴</div>
-			<a href="order.html" class="uk-button uk-button-secondary">
-				Оформити замовлення<span class="icon-line"></span>
-			</a>
+	<div class="uk-modal-footer cart-footer">
+		<div uk-grid class="uk-child-width-1-2@s">
+			<div>
+				<button class="uk-button uk-button-primary uk-modal-close" type="button">
+					Продовжити покупки<span class="icon-line"></span>
+				</button>
+			</div>
+			<div class="form lined-form">
+				<div uk-grid class="uk-child-width-1-2">
+					<div class="price-cover">
+						<div class="total-price">26512.00 ₴</div>
+					</div>
+					<a href="order.html" class="uk-button uk-button-secondary">
+						Оформити замовлення<span class="icon-line"></span>
+					</a>
+				</div>
+			</div>
 		</div>
 	</div>
 	<!-- / footer -->
-
 </div>
 </div>
 <!-- / cart -->
@@ -1577,57 +1584,228 @@
 		<!-- breadcrumbs -->
 		<div class="breadcrumbs">
 			<div class="uk-container uk-container-xlarge">
-				<nav aria-label="Breadcrumb">
 					<ul class="uk-breadcrumb">
 						<li><a href="catalog.html">Каталог</a></li>
-						<li><a href="catalog-category.html">Меблева фурнітура</a></li>
-						<li><a href="catalog-subcategory.html">Меблеві ручки та гачки</a></li>
-						<li><a href="catalog-filter.html">Ручки Giusti</a></li>
-						<li><span>Меблева ручка Giusti РГ 663 WMN833.096.00H4 вінтажний нікель</span></li>
+						<li><a href="catalog-category.html">Меблеві ручки та гачки</a></li>
+						<li><span>Меблеві ручки GTV</span></li>
 					</ul>
-				</nav>
 			</div>
 		</div>
-		<!-- details -->
+		<!-- details top -->
 		<div class="uk-container uk-container-xlarge">
-			<div class="uk-grid-match" uk-grid>
-				<div class="uk-width-2-5@l">
-					<!-- main image slider -->
-					<div class="uk-position-relative" uk-slideshow="animation: fade">
-						<div class="uk-slideshow-items">
-							<div>
-								<img src="img/temp/detail1.jpg" draggable="false" alt="detail" uk-cover>
+			<div class="detail-top">
+				<div class="uk-grid">
+					<div class="uk-width-1-1 uk-width-1-1@s uk-width-2-5@m uk-width-2-5@l">
+						<!-- main image slider -->
+						<div class="uk-position-relative" uk-slideshow="animation: fade">
+							<div class="uk-slideshow-items">
+								<div>
+									<img src="img/temp/card1.png" draggable="false" alt="detail" uk-cover>
+								</div>
+								<div>
+									<img src="img/temp/card2.png" draggable="false" alt="detail" uk-cover>
+								</div>
+								<div>
+									<img src="img/temp/card3.png" draggable="false" alt="detail" uk-cover>
+								</div>
+								<div>
+									<img src="img/temp/card4.png" draggable="false" alt="detail" uk-cover>
+								</div>
 							</div>
-							<div>
-								<img src="img/temp/detail2.jpg" draggable="false" alt="detail" uk-cover>
+							<!-- slider arrow nav -->
+							<a class="uk-position-center-left uk-position-small uk-hidden-hover" href uk-slidenav-previous uk-slideshow-item="previous"></a>
+							<a class="uk-position-center-right uk-position-small uk-hidden-hover" href uk-slidenav-next uk-slideshow-item="next"></a>
+							<!-- slider arrow nav -->
+							<!-- thumbnav -->
+							<div class="thumbnav-cover">
+								<ul class="uk-thumbnav">
+									<li uk-slideshow-item="0"><a href="#"><img src="img/temp/card1.png" draggable="false" alt="detail"></a></li>
+									<li uk-slideshow-item="1"><a href="#"><img src="img/temp/card2.png" draggable="false" alt="detail"></a></li>
+									<li uk-slideshow-item="2"><a href="#"><img src="img/temp/card3.png" draggable="false" alt="detail"></a></li>
+									<li uk-slideshow-item="3"><a href="#"><img src="img/temp/card4.png" draggable="false" alt="detail"></a></li>
+								</ul>
 							</div>
-							<div>
-								<img src="img/temp/detail3.jpg" draggable="false" alt="detail" uk-cover>
-							</div>
+							<!-- / thumbnav -->
 						</div>
-						<!-- slider arrow nav -->
-						<a class="uk-position-center-left uk-position-small uk-hidden-hover" href uk-slidenav-previous uk-slideshow-item="previous"></a>
-						<a class="uk-position-center-right uk-position-small uk-hidden-hover" href uk-slidenav-next uk-slideshow-item="next"></a>
-						<!-- slider arrow nav -->
-						<!-- thumbnav -->
-						<div class="thumbnav-cover uk-margin-top">
-							<ul class="uk-thumbnav">
-								<li uk-slideshow-item="0"><a href="#"><img src="img/temp/detail1.jpg" width="140" height="109" draggable="false" alt="detail"></a></li>
-								<li uk-slideshow-item="1"><a href="#"><img src="img/temp/detail2.jpg" width="140" height="109" draggable="false" alt="detail"></a></li>
-								<li uk-slideshow-item="2"><a href="#"><img src="img/temp/detail3.jpg" width="140" height="109" draggable="false" alt="detail"></a></li>
-							</ul>
-						</div>
-						<!-- / thumbnav -->
+						<!-- main image slider -->
 					</div>
-					<!-- main image slider -->
-				</div>
-				<div class="uk-width-2-5@l">
-					<h1 class="subheader1">Меблева ручка GTV GRAVEL L=1200мм золото світле (UA-GRAVEL-1200-22)</h1>
+					<div class="uk-width-1-1 uk-width-1-1@s uk-width-3-5@m uk-width-3-5@l">
+						<div class="item-detals">
+							<h1 class="subheader1">Меблева ручка GTV GRAVEL L=1200мм золото світле (UA-GRAVEL-1200-22)</h1>
+							<div uk-grid class="info-element">
+								<div class="uk-width-auto">
+									<div class="info attention">Залишилось 2 шт. Cкоро поповненя</div>
+								</div>
+								<div class="uk-width-expand align-right">
+									<div class="code"><span class="uk-visible@s">Код товара:</span> 34897</div>
+								</div>
+							</div>
+							<div class="bordered-element uk-width-1-1">
+								<div class="price">
+									106.80 ₴/м
+									<sup class="old-price">8669.00 ₴</sup>
+								</div>
+							</div>
+							<div class="option-element uk-width-1-1">
+								<div class="text">Колір</div>
+								<div class="radio-group" uk-tooltip="Колір перший">
+									<input type="radio" id="color1" name="color" checked>
+									<label for="color1" style="background-image: url(img/color1.png);"></label>
+								</div>
+								<div class="radio-group" uk-tooltip="Колір другий">
+									<input type="radio" id="color2" name="color">
+									<label for="color2" style="background-image: url(img/color2.png);"></label>
+								</div>
+								<div class="radio-group" uk-tooltip="Колір третій">
+									<input type="radio" id="color3" name="color">
+									<label for="color3" style="background-image: url(img/color3.png);"></label>
+								</div>
+								<div class="radio-group" uk-tooltip="Колір четвертий">
+									<input type="radio" id="color3" name="color">
+									<label for="color3" style="background-color: black"></label>
+								</div>
+							</div>
+							<div class="bordered-element">
+								<div class="option-element inline">
+									<div class="text">Довжина шухляди(1):</div>
+									<div class="code">500мм</div>
+								</div>
+								<div class="option-element inline">
+									<div class="text">Тип напрямних(2):</div>
+									<div class="code">Повне SS</div>
+								</div>
+								<div class="option-element inline">
+									<div class="text">Навантаження на шухляду(3):</div>
+									<div class="code">40кг</div>
+									<div class="code">60кг</div>
+									<div class="code">80кг</div>
+								</div>
+								<div class="option-element inline">
+									<div class="text">Комплектація боковин(4):</div>
+									<div class="code">1 рейлінг</div>
+								</div>
+								<div class="option-element inline">
+									<div class="text">Ширина шухляди(5):</div>
+									<div class="code">Без задньої стінки</div>
+								</div>
+							</div>
+							<div class="option-element uk-width-1-1">
+								<!-- calculator -->
+								<div class="calculator full-size">
+									<button type="button" class="action-button minus" uk-tooltip="Відняти">
+										<i class="icon icon-minus"></i>
+									</button>
+									<input type="number" value="1" class="value-input" readonly>
+									<button type="button" class="action-button plus" uk-tooltip="Додати ще">
+										<i class="icon icon-plus"></i>
+									</button>
+								</div>
+								<!-- / calculator -->
+							</div>
+							<button class="uk-button uk-button-secondary uk-width-1-1" onclick="UIkit.notification({message: 'Товар додано у кошик', pos: 'top-right'})">
+								Додати в кошик <span class="icon-line"></span>
+							</button>
+							<div class="option-element">
+								<a href="#orderCutModal" uk-toggle class="underlined">Замовити порізку в розмір</a>
+							</div>
+							<div class="payment-info">
+								Ми приймаємо
+								<img src="img/payment_mastercard.png" alt="mastercard">
+								<img src="img/payment_visa.png" alt="visa">
+								<img src="img/payment_american.png" alt="american">
+							</div>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
-		<!-- / details -->
-		<!-- similar products -->
+		<!-- / details top -->
+		<!-- details bottom -->
+		<section class="details-bottom">
+			<div class="uk-container uk-container-xlarge">
+				<ul uk-accordion>
+					<li class="uk-open">
+						<a class="uk-accordion-title" href>
+							<div class="lined-header subheader1">Характеристики</div>
+						</a>
+						<div class="uk-accordion-content">
+							<div class="small-detals">
+								<!-- small header -->
+								<div class="uk-grid-small" uk-grid>
+									<div class="uk-width-expand" uk-leader>Одиниця виміру</div>
+									<div>шт</div>
+								</div>
+								<!-- small 1 -->
+								<div class="uk-grid-small" uk-grid>
+									<div class="uk-width-expand" uk-leader>Мінімальна кількість до замовлення</div>
+									<div>1</div>
+								</div>
+								<!-- small 2 -->
+								<div class="uk-grid-small" uk-grid>
+									<div class="uk-width-expand" uk-leader>Кількість в упаковці</div>
+									<div>1</div>
+								</div>
+								<!-- small 3 -->
+								<div class="uk-grid-small" uk-grid>
+									<div class="uk-width-expand" uk-leader>Артикул</div>
+									<div>UA-GRAVEL-1200-22</div>
+								</div>
+								<!-- small 4 -->
+								<div class="uk-grid-small" uk-grid>
+									<div class="uk-width-expand" uk-leader>Довжина</div>
+									<div>1200.00 мм</div>
+								</div>
+								<!-- small 5 -->
+								<div class="uk-grid-small" uk-grid>
+									<div class="uk-width-expand" uk-leader>Ширина</div>
+									<div>10.00 мм</div>
+								</div>
+								<!-- small 4 -->
+								<div class="uk-grid-small" uk-grid>
+									<div class="uk-width-expand" uk-leader>Висота</div>
+									<div>29.00 мм</div>
+								</div>
+								<!-- small 4 -->
+								<div class="uk-grid-small" uk-grid>
+									<div class="uk-width-expand" uk-leader>Міжосьова відстань</div>
+									<div>1152.00 мм</div>
+								</div>
+								<!-- small 4 -->
+								<div class="uk-grid-small" uk-grid>
+									<div class="uk-width-expand" uk-leader>Виробник</div>
+									<div>GTV</div>
+								</div>
+								<!-- small 4 -->
+								<div class="uk-grid-small" uk-grid>
+									<div class="uk-width-expand" uk-leader>Матеріал</div>
+									<div>ZnAl</div>
+								</div>
+							</div>
+						</div>
+					</li>
+					<li>
+						<a class="uk-accordion-title" href>
+							<div class="lined-header subheader1">Опис товару</div>
+						</a>
+						<div class="uk-accordion-content">
+							<div class="item-detals">
+								<div class="uk-text-meta uk-text-bold">
+									Набір комплектуючих для висувних шухлядів Hettich ArciTech висотою h=282мм з подвійними боковинами h=126 із сталі з порошковим покриттям доступний у трьох кольорах: білий, сріблястий, антрацит.
+								</div>
+								<div class="uk-text-meta">
+									Після порізки на торці деталі залишаються сліди від пилу. Для надання естетичного вигляду ми обробляємоторець у виглядіфаски під кутом45°(близько 1 мм з двох сторін). Для обробки торця необхідно попередньо до розміру заготовки додати припуск 2 мм на кожну сторону обробки. (Якщо обробка по периметру плюс 4 мм до габаритів за шириною та висотою). Фрезерування зовнішнього контуру виконується на фрезерному верстаті з ЧПУ Homag спеціалізованими алмазними фрезами.
+								</div>
+								<div class="uk-text-meta">
+									Обмеження для обробки зовнішніх торців: мінімальна довжина 300 мм, мінімальна ширина 100 мм. Максимальна довжина – 3096 мм, ширина – 1246 мм. Вказано чистові розміри деталі з обробкою по периметру (заготівля + припуски)
+								</div>
+							</div>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</section>
+		<!-- details bottom -->
+		<!-- similar elements -->
 		<section class="section section-elements">
 	<div class="uk-container uk-container-xlarge">
 		<h4 class="section-title">Схожі товари</h4>
@@ -2404,7 +2582,7 @@
 		</div>
 	</div>
 </section>
-		<!-- /similar products -->
+		<!-- /similar elements -->
 		<!-- special offers-->
 		<section class="section special-offers">
 	<div class="uk-container uk-container-xlarge">
@@ -2719,6 +2897,54 @@
 		</div>
 	</div>
 </footer>
+
+
+
+	<!-- cart -->
+	<div id="orderCutModal" class="uk-modal-container" uk-modal>
+		<div class="uk-modal-dialog">
+			<!-- header -->
+			<div class="uk-modal-header">
+				<div uk-grid class="uk-grid-small">
+					<div class="uk-width-5-6">
+						<h2 class="uk-modal-title">Замовити порізку профіля</h2>
+					</div>
+					<div class="uk-width-1-6 align-right">
+						<button class="uk-modal-close-default" type="button" aria-label="Close" uk-close></button>
+					</div>
+				</div>
+			</div>
+			<!-- / header -->
+			<!-- body -->
+			<div class="uk-modal-body uk-body-collapsed-vertical">
+				<form action="#" class="form lined-form">
+					<div class="uk-alert-danger" uk-alert>
+						<p>
+							<span class="bold">Увага!</span> При замовленні доставки враховуйте обмеження перевізника на довжину посилки
+							Нова Пошта - до 3 метрів, вантажне відділення! САТ, Делівері - без обмежень
+							В замовлення влючається плата за пакування 3% від суми замовлення, за вийнятком самовивозу замовлення з Одеси
+						</p>
+					</div>
+					<div class="uk-alert-danger" uk-alert>
+						<p>
+							<span class="bold">Увага!</span> Порізка профілю та комплектування такого замовлення відбувається в Одесі.
+						</p>
+					</div>
+				</form>
+			</div>
+			<!-- / body -->
+			<!-- footer -->
+			<div class="uk-modal-footer cart-footer">
+				<div class="uk-child-width-1-1">
+					<a href="order.html" class="uk-button uk-button-secondary">
+						Перейти до кошика<span class="icon-line"></span>
+					</a>
+				</div>
+			</div>
+			<!-- / footer -->
+		</div>
+	</div>
+	<!-- / cart -->
 
 
 	<script src="js/uikit/uikit.min.js"></script>
