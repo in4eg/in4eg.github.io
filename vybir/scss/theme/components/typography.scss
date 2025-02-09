@@ -2,6 +2,7 @@ h1, h2, h3, h4, h5, h6 {
 	text-transform: none;
 	font-weight: 500;
 	color: $color_primary;
+	font-family: $font;
 
 	&::selection {
 		color: $color_white;
@@ -80,6 +81,7 @@ h6,
 	color: $color_primary;
 	text-transform: none;
 	font-weight: 600;
+	font-family: $font;
 }
 
 .subheader2 {
@@ -87,6 +89,7 @@ h6,
 	color: $color_primary;
 	text-transform: none;
 	font-weight: 600;
+	font-family: $font;
 }
 
 .subheader3 {
@@ -94,6 +97,7 @@ h6,
 	color: $color_primary;
 	text-transform: none;
 	font-weight: 600;
+	font-family: $font;
 }
 
 .icon-line {
@@ -245,5 +249,9 @@ ul, ol {
 	.info {
 		padding: 2px 10px;
 		font-size: 12px;
+	}
+
+	.mark {
+		letter-spacing: 1.2px;
 	}
 }

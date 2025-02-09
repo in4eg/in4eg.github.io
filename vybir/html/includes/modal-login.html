@@ -1,9 +1,61 @@
-<div class="uk-modal-dialog uk-modal-body">
-	<button class="uk-modal-close-default" type="button" aria-label="Close" uk-close></button>
-	<h2 class="uk-modal-title">Вхід/Реєстрація</h2>
-	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-	<p class="uk-text-right">
-		<button class="uk-button uk-button-default uk-modal-close" type="button">Cancel</button>
-		<button class="uk-button uk-button-primary" type="button">Save</button>
-	</p>
+<div class="uk-modal-dialog">
+	<!-- header -->
+	<div class="uk-modal-header">
+		<div uk-grid class="uk-grid-small">
+			<div class="uk-width-5-6">
+				<h2 class="uk-modal-title">
+					Вхід/Реєстрація
+				</h2>
+			</div>
+			<div class="uk-width-1-6 align-right">
+				<button class="uk-modal-close-default" type="button" aria-label="Close" uk-close></button>
+			</div>
+		</div>
+	</div>
+	<!-- / header -->
+	<!-- body -->
+	<div class="uk-modal-body uk-body-collapsed-vertical">
+		<form action="#" class="form login-form">
+			<div uk-grid class="uk-grid-small">
+				<div class="uk-width-1-1@m">
+					<div class="group-title">Ім’я</div>
+					<div class="form-group form-icon-group">
+						<i class="icon icon-id"></i>
+						<input class="uk-input input uk-width-1-1" type="text" placeholder="Ім’я">
+					</div>
+				</div>
+				<div class="uk-width-1-2@m">
+					<div class="group-title">Мобільний телефон</div>
+					<div class="form-group form-icon-group">
+						<i class="icon icon-phone"></i>
+						<input class="uk-input input uk-width-1-1" type="text" placeholder="+38 0">
+					</div>
+				</div>
+				<div class="uk-width-1-2@m">
+					<div class="group-title">Електронна пошта</div>
+					<div class="form-group form-icon-group">
+						<i class="icon icon-mail"></i>
+						<input class="uk-input input uk-width-1-1" type="email" placeholder="Emaill">
+					</div>
+				</div>
+			</div>
+		</form>
+	</div>
+	<!-- / body -->
+	<!-- footer -->
+	<div class="uk-modal-footer cart-footer">
+		<div uk-grid class="uk-child-width-1-2@m uk-grid-small">
+			<div>
+				<button class="uk-button uk-button-primary uk-modal-close uk-width-1-1" type="button">
+					Відмінити<span class="icon-line"></span>
+				</button>
+			</div>
+			<div>
+				<button class="uk-button uk-button-secondary uk-width-1-1" type="button">
+					Відправити<span class="icon-line"></span>
+				</button>
+			</div>
+		</div>
+	</div>
+	<!-- / footer -->
 </div>

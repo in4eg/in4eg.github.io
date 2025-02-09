@@ -5,11 +5,22 @@ $header_height: 73px;
 	--header_height: #{$header_height};
 }
 
+.page-main {
+	padding-top: var(--header_height);
+}
+
 .main-header {
 	background-color: $color-primary;
 	height: var(--header_height);
 	position: relative;
 	z-index: 20;
+	position: fixed;
+	top: 0; left: 0;
+	width: 100%;
+
+	> .uk-container {
+		height: 100%;
+	}
 
 	.uk-logo {
 		width:170px;
@@ -38,7 +49,7 @@ $header_height: 73px;
 	.uk-navbar-nav > li > .link {
 		font-size: 15px;
 		font-weight: 600;
-		padding: 26px 23px;
+		padding: 21px 23px;
 		color: $color_white;
 		display: block;
 		position: relative;
@@ -283,7 +294,14 @@ $header_height: 73px;
 			gap: 0;
 
 			> li > .link {
-				padding: 21px 12px;
+				padding: 18px 12px;
+			}
+		}
+
+		.form {
+
+			.input {
+				line-height: 37px;
 			}
 		}
 	}
@@ -296,7 +314,6 @@ $header_height: 73px;
 		.uk-navbar-nav > li > {
 
 			.link {
-				padding: 21px 12px;
 				font-size: 14px;
 			}
 		}
@@ -304,6 +321,7 @@ $header_height: 73px;
 		.main-nav {
 			padding-left: 10px;
 		}
+
 	}
 }
 
@@ -320,17 +338,67 @@ $header_height: 73px;
 			gap: 0;
 
 			> li > .link {
-				font-size: 16px;
+				font-size: 14px;
+				padding-left: 5px;
+				padding-right: 5px;
+				font-weight: 400;
 			}
 		}
 
 		.user-menu {
-			margin-left: 20px;
+			margin-left: 0;
+
+			.button.button-icon-m {
+				height: 42px; width: 42px;
+				padding: 10px 5px;
+				line-height: 42px;
+			}
+		}
+
+		.uk-button.button-link-icon {
+
+			.icon {
+				font-size: 20px;
+			}
+		}
+
+		.button-link {
+			padding-left: 10px;
+			padding-right: 10px;
+		}
+
+		.uk-logo {
+			width: 100px;
+		}
+
+		.form-group.form-icon-group {
+
+			.input {
+				padding-left: 33px;
+			}
+
+			.icon {
+				font-size: 16px;
+				left: 10px;
+			}
+		}
+	}
+}
+
+@media (max-width: 1200px) {
+
+	.main-header {
+
+		.user-menu {
 			max-width: none;
 		}
 
-		.main-nav {
-			display: none;
+		.menu-inner {
+			justify-content: end;
+
+			form {
+				max-width: 300px;
+			}
 		}
 	}
 }
@@ -392,10 +460,6 @@ $header_height: 73px;
 
 	.main-header {
 
-		.user-menu {
-			margin-left: 18px;
-		}
-
 		.login-button {
 
 			.spaced-right {
@@ -412,16 +476,17 @@ $header_height: 73px;
 		}
 
 		.menu-inner {
-			gap: 12px;
+			gap: 8px;
 		}
 
 		.button.button-menu {
-			margin-right: 18px;
-			width: 30px;
+			margin: 0 8px 0 0;
+			width: 40px;
+			padding: 5px;
 		}
 
 		.button-link {
-			padding: 13px;
+			padding: 12px 8px;
 		}
 
 		.uk-logo {

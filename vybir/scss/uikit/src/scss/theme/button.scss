@@ -118,7 +118,8 @@
 	$button-padding-vertical: 6px;
 	$button-padding-horizontal: 17px;
 
-	.uk-button.uk-button-secondary {
+	.uk-button.uk-button-secondary,
+	.uk-button.uk-button-primary {
 		padding: $button-padding-vertical $button-padding-horizontal;
 	}
 }

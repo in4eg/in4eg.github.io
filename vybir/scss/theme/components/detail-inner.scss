@@ -136,6 +136,27 @@
 	}
 }
 
+.order-table {
+
+	.button-order {
+		font-size: 16px;
+	}
+}
+
+@media (max-width: 1440px) {
+
+	.order-table {
+
+		.selecter-cover {
+
+			.select {
+				background-image: none;
+			}
+		}
+	}
+}
+
+
 @media (max-width: 1200px) {
 
 	.detail-top {
@@ -159,6 +180,82 @@
 			margin-top: 20px;
 		}
 	}
+
+
+	.order-table {
+		display: block;
+
+		.selecter-cover .select {
+			background-image: none;
+		}
+
+		thead {
+			display: none;
+		}
+
+		tbody {
+			display: block;
+		}
+
+		tr {
+			display: block;
+			font-size: 0;
+			margin: 0 -5px 10px;
+
+			td, th {
+				display: inline-block;
+				width: 50%;
+				font-size: 14px;
+				padding: 5px;
+				margin-top: 30px;
+				position: relative;
+				vertical-align: bottom;
+
+				&:last-child {
+					width: 100%;
+					margin-top: 0;
+				}
+
+				&:first-child {
+					margin-top: 20px;
+				}
+
+				&:before {
+					content: attr(data-text);
+					position: absolute;
+					bottom: 100%; left: 0;
+					font-size: 14px;
+					color: rgba($color_black, 0.3);
+				}
+			}
+		}
+
+		input,
+		.input.small,
+		select,
+		button {
+			width: 100%;
+		}
+
+		input,
+		.input.small,
+		.select {
+			font-size: 14px;
+		}
+
+		.button-order {
+			height: 42px;
+			font-size: 14px;
+
+			&.uk-button-transparent {
+				border: 1px solid $color-primary;
+			}
+
+			.icon {
+				font-size: 10px;
+			}
+		}
+	}
 }
 
 @media (max-width: 640px) {
@@ -171,7 +268,6 @@
 			bottom: 10px; left: 50%;
 			transform: translateX(-50%);
 		}
-
 
 		.uk-thumbnav {
 			background-color: #cccccc;
@@ -229,6 +325,35 @@
 
 				}
 			}
+		}
+
+		.option-element {
+
+			.text {
+				font-size: 12px;
+			}
+
+			&.inline {
+				margin-bottom: 5px;
+			}
+		}
+	}
+
+	.details-bottom {
+
+		.lined-header {
+			margin-bottom: 0;
+		}
+	}
+
+	.uk-modal-title {
+		font-size: 20px;
+	}
+
+	.uk-modal-header {
+
+		> .uk-grid {
+			align-items: center;
 		}
 	}
 }

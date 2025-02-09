@@ -1,3 +1,10 @@
+$header_height: 73px;
+
+/*document*/
+:root {
+	--header_height: #{$header_height};
+}
+
 .selected-tags {
 	padding: 4px 0;
 	margin: 0 -2px;
@@ -114,6 +121,11 @@
 }
 
 @media (max-width: 960px) {
+	$header_height: 63px;
+
+	:root {
+		--header_height: #{$header_height};
+	}
 
 	.section-header {
 
@@ -157,6 +169,11 @@
 		padding: 10px 0;
 		background-color: $color_whitesmoke;
 		box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+		position: fixed;
+		top: var(--header-height);
+		left: 0;
+		width: 100%;
+		z-index: 2;
 
 		button,
 		select {
@@ -181,12 +198,20 @@
 		width: 100%;
 		height: 100%;
 		background-color: $color_white;
-		padding: 20px;
+		padding: 10px 20px 20px;
 		z-index: 10;
 		display: none;
+		padding-right: 0;
+		z-index: 99;
 
 		&.active {
 			display: block;
+			padding-right: 20px;
+		}
+
+		form {
+			height: calc(100% - 62px);
+			overflow: auto;
 		}
 
 		.header-title,
@@ -200,7 +225,7 @@
 			color: $color_primary;
 			padding: 8px 10px;
 			height: 48px; width: 48px;
-			transform: translateY(-8px) translateX(17px);
+			transform: translateY(-8px) translateX(14px);
 
 			.icon {
 				font-size: 14px;
@@ -217,6 +242,26 @@
 				.icon {
 					color: $color_red;
 				}
+			}
+		}
+
+		.header-title {
+			padding-right: 40px;
+			position: relative;
+
+			.subheader2 {
+				font-size: 24px;
+			}
+
+			> .uk-grid {
+				align-items: center;
+			}
+
+			.uk-close {
+				height: 40px;
+				width: 40px;
+				position: absolute;
+				right: -10px; top: 10px;
 			}
 		}
 	}

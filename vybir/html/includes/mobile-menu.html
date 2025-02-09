@@ -21,19 +21,17 @@
 		</div>
 	</div>
 	<!-- / mobile header -->
-	<div>
-		<!-- mobile catalog button -->
-		<div class="uk-margin-bottom uk-hidden@m catalog-button-cover">
-			<button class="uk-button uk-button-secondary uk-width-1-1 button-toggle main-catalog-toggle">
-				<i class="icon icon-catalog-button"></i>
-				Каталог товарів
-			</button>
-		</div>
-		<!-- / mobile catalog button -->
+	<!-- mobile catalog button -->
+	<div class="catalog-button">
+		<button class="uk-button uk-button-secondary uk-width-1-1 button-toggle main-catalog-toggle">
+			<i class="icon icon-catalog-button"></i>
+			Каталог товарів
+		</button>
 	</div>
+	<!-- / mobile catalog button -->
+	<!-- mobile user options -->
 	<div id="mobileUserMenuContainer">
-		<!-- mobile user options -->
-		<div class="uk-margin-bottom uk-hidden@m catalog-user-options">
+		<div class="catalog-user-options">
 			<ul class="clear user-mobile-navigation">
 				<li class="list-item">
 					<a href="catalog-category.html" uk-tooltip="title: Кабінет; pos: top-left" class="cover">
@@ -64,9 +62,57 @@
 			</ul>
 		</div>
 	</div>
-	<div id="mobileMainMenuContainer"></div>
+	<!-- mobile main nav -->
+	<div id="mobileMainMenuContainer">
+		<nav class="uk-nav main-nav uk-navbar-container uk-navbar-transparent" uk-navbar>
+			<ul class="uk-navbar-nav">
+				<li class="uk-navbar-item">
+					<a class="link" href="services.html">
+						<span class="text">Послуги</span>
+						<i class="icon icon-caret_right caret"></i>
+					</a>
+				</li>
+				<li class="uk-navbar-item">
+					<a class="link" href="news.html">
+						<span class="text">Статті та Новини</span>
+						<i class="icon icon-caret_right caret"></i>
+					</a>
+				</li>
+				<li class="uk-navbar-item">
+					<a class="link" href="gallery.html">
+						<span class="text">Галерея</span>
+						<i class="icon icon-caret_right caret"></i>
+					</a>
+				</li>
+				<li class="uk-navbar-item">
+					<a class="link" href="partners.html">
+						<span class="text">Партнери</span>
+						<i class="icon icon-caret_right caret"></i>
+					</a>
+				</li>
+				<li class="uk-navbar-item">
+					<a class="link" href="delivery.html">
+						<span class="text">Доставка/Оплата</span>
+						<i class="icon icon-caret_right caret"></i>
+					</a>
+				</li>
+				<li class="uk-navbar-item">
+					<a class="link" href="contacts.html">
+						<span class="text">Контакти</span>
+						<i class="icon icon-caret_right caret"></i>
+					</a>
+				</li>
+				<li class="uk-navbar-item">
+					<a class="link" href="career.html">
+						<span class="text">Вакансії</span>
+						<i class="icon icon-caret_right caret"></i>
+					</a>
+				</li>
+			</ul>
+		</nav>
+	</div>
+	<!-- social links for mobile menu -->
 	<div id="mobileSocialContainer">
-		<!-- social links for mobile menu -->
 		<div class="header-social" id="headerSocail">
 			<h4 class="subheader2">Ми в соцмережах</h4>
 			<ul class="social-list clear">

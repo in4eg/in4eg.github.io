@@ -655,3 +655,60 @@
 		}
 	}
 }
+
+@media (max-width: 640px) {
+
+	.offer-item.offer-item-smaller {
+
+		.text-cover {
+			padding: 20px;
+
+			.inner:after {
+				display: none;
+			}
+
+			.button-cover {
+
+				.button {
+					line-height: 32px;
+				}
+			}
+		}
+
+		.item-inner {
+
+			&:before {
+				position: absolute;
+				content: '';
+				height: 8px; width: 8px;
+				border-top: 2px solid $color_dark;
+				border-right: 2px solid $color_dark;
+				right: 15px; top: 15px;
+				z-index: 3;
+			}
+		}
+
+		&.offer-item-primary,
+		&.offer-item-dark {
+
+			.item-inner {
+
+				&:before {
+					border-top: 2px solid $color_white;
+					border-right: 2px solid $color_white;
+				}
+			}
+		}
+
+		&.offer-item-contact {
+
+			.button-cover {
+
+				.button {
+					line-height: 14px;
+				}
+			}
+		}
+	}
+
+}

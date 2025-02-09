@@ -2,7 +2,7 @@
 	display: none;
 }
 
-@media (max-width: 968px) {
+@media (max-width: 961px) {
 
 	.mobile-menu {
 
@@ -16,6 +16,127 @@
 		&.active {
 			display: block;
 		}
+
+		.mobile-header {
+			padding: 15px 20px;
+			border-bottom: 1px solid $border_color;
+
+			.mobile-logo {
+				width: 133px;
+			}
+
+			.button-link {
+				padding: 0;
+				height: 40px; width: 40px;
+				line-height: 40px;
+				font-weight: bold;
+
+				&:hover {
+
+					.text {
+						color: $color_primary;
+					}
+				}
+			}
+
+			> .uk-grid {
+				align-items: center;
+			}
+
+			.mobile-menu-close {
+				padding: 0;
+				width: 28px;
+				text-align: right;
+
+				&:hover {
+
+					.icon {
+						color: $color_red;
+					}
+				}
+
+				&:after {
+					display: none;
+				}
+
+				.icon {
+					font-size: 16px;
+				}
+			}
+		}
+
+		.catalog-button {
+			padding: 20px;
+		}
+
+		.catalog-user-options {
+			border-bottom: 1px solid $border_color;
+			margin-bottom: 10px;
+			padding-bottom: 20px;
+		}
+
+		.user-mobile-navigation,
+		.main-nav {
+			display: block;
+
+			.link,
+			.cover {
+				color: $color_primary;
+				font-weight: 500;
+				padding: 5px 20px 5px 20px;
+				font-size: 18px;
+				display: block;
+
+				&:hover {
+					color: $color_primary_hover;
+				}
+
+				.caret,
+				.button-count {
+					position: absolute;
+					top: 50%; right: 20px;
+					transform: translateY(-50%);
+					font-size: 10px;
+					margin-top: 2px;
+				}
+
+				.title-icon {
+					position: absolute;
+					top: 50%; left: 20px;
+					transform: translateY(-50%);
+				}
+			}
+
+			.cover.bordered-cover {
+				display: inline-block;
+				border: 2px solid $color_secondary;
+				margin-left: 20px;
+				margin-top: 10px;
+			}
+		}
+
+		.user-mobile-navigation {
+
+			.cover {
+				padding-left: 51px;
+			}
+		}
+
+		.uk-navbar-nav,
+		.uk-navbar-item,
+		.uk-navbar-nav>li>a {
+			display: block;
+		}
+
+		.header-social {
+			border-top: 1px solid $border_color;
+			padding: 20px;
+			margin-top: 10px;
+
+			.subheader2 {
+				margin-bottom: 10px;
+			}
+		}
 	}
 	.mobile-menu-back {
 		position: relative;
@@ -23,6 +144,8 @@
 		font-weight: 500;
 		line-height: 1.4;
 		padding: 10px 0;
+		margin-left: 28px;
+		margin-bottom: 10px;
 
 		&:before {
 			content: "";
@@ -32,7 +155,7 @@
 			transform: rotate(-180deg);
 			width: 24px; height: 24px;
 			margin-left: -30px;
-			background-size: 50%;
+			background-size: 33%;
 		}
 		.icon {
 			font-size: 1.1em;

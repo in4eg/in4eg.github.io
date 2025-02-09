@@ -1,15 +1,4 @@
-<!-- mobile header -->
-<div class="uk-hidden@m mobile-header">
-	<div uk-grid class="uk-grid-small">
-		<div class="uk-width-1-2"><h4>Фільтри</h4></div>
-		<div class="uk-width-1-2 align-right">
-			<button uk-toggle="target: #catalogFilters; animation: uk-animation-fade; cls: active" type="button" class="uk-button button-link-icon uk-button-toggle" uk-tooltip="Закрити фільтри">
-				<span class="text"><i class="icon icon-close"></i></span>
-			</button>
-		</div>
-	</div>
-</div>
-<!-- / mobile header -->
+
 <form action="#" class="form">
 	<div class="header-title">
 		<div uk-grid class="uk-grid-collapse">
@@ -18,6 +7,8 @@
 				<button class="uk-button uk-button-link uk-button-small" type="reset" uk-tooltip="Скинути фільтри">Скинути</button>
 			</div>
 		</div>
+		<!-- mobile close -->
+		<button uk-toggle="target: #catalogFilters; animation: uk-animation-fade; cls: active" type="button" aria-label="Close" uk-close class="mobile-close-filter uk-hidden@m"></button>
 	</div>
 	<ul uk-accordion="multiple: true">
 		<li class="uk-open">
