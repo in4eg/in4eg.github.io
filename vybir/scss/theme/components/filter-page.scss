@@ -146,6 +146,10 @@ $header_height: 73px;
 
 			.filter-back-button {
 				transform: translateX(-12px);
+
+				&.detail-page {
+					transform: translateX(-12px) translateY(-7px);
+				}
 			}
 		}
 
@@ -161,6 +165,7 @@ $header_height: 73px;
 
 			.download-link {
 				padding: 7px;
+				margin-top: 10px;
 			}
 		}
 	}
@@ -211,7 +216,8 @@ $header_height: 73px;
 
 		form {
 			height: calc(100% - 62px);
-			overflow: auto;
+			overflow-y: auto;
+			overflow-x: hidden;
 		}
 
 		.header-title,
@@ -271,11 +277,15 @@ $header_height: 73px;
 
 	.bordered-tags {
 		overflow: hidden;
-		white-space: nowrap;
 
 		.tab-button {
 			display: inline-block;
 			padding: 0 5px;
+
+			&:last-child {
+				margin-top: 10px;
+				display: block;
+			}
 
 			.opened {
 				display: none;
