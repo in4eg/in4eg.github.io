@@ -146,6 +146,10 @@ $header_height: 73px;
 		margin-top: 20px;
 		align-items: center;
 
+		&.partner-page-header {
+			margin-top: 0;
+		}
+
 		.uk-first-column {
 			width: 42px;
 			max-width: 42px;
@@ -154,7 +158,7 @@ $header_height: 73px;
 				transform: translateX(-7px) translateY(4px);
 
 				&.detail-page {
-					transform: translateX(-7px) translateY(-7px);
+					transform: translateX(-7px) translateY(-1px);
 				}
 			}
 		}
@@ -215,7 +219,7 @@ $header_height: 73px;
 		}
 
 		form {
-			height: calc(100% - 62px);
+			height: 100%;
 			overflow-y: auto;
 			overflow-x: hidden;
 			padding-right: 20px;
