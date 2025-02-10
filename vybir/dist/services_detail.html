@@ -81,7 +81,7 @@
 							</form>
 							<div class="login-button">
 								<!-- sign in button -->
-								<a class="uk-button uk-button-secondary button spaced-right button-icon-m" href="#loginModal" uk-toggle uk-tooltip="Вхід/Реєстрація">
+								<a class="uk-button uk-button-secondary button spaced-right button-icon-m" href="#" uk-tooltip="Вхід/Реєстрація">
 									<span class="visible-m">Вхід/Реєстрація</span>
 									<i class="icon icon-logout hidden-m"></i>
 								</a>
@@ -104,71 +104,6 @@
 </header>
 
 <!-- header modals -->
-<!-- login -->
-<div id="loginModal" uk-modal>
-	<div class="uk-modal-dialog">
-	<!-- header -->
-	<div class="uk-modal-header">
-		<div uk-grid class="uk-grid-small">
-			<div class="uk-width-5-6">
-				<h2 class="uk-modal-title">
-					Вхід/Реєстрація
-				</h2>
-			</div>
-			<div class="uk-width-1-6 align-right">
-				<button class="uk-modal-close-default" type="button" aria-label="Close" uk-close></button>
-			</div>
-		</div>
-	</div>
-	<!-- / header -->
-	<!-- body -->
-	<div class="uk-modal-body uk-body-collapsed-vertical">
-		<form action="#" class="form login-form">
-			<div uk-grid class="uk-grid-small">
-				<div class="uk-width-1-1@m">
-					<div class="group-title">Ім’я</div>
-					<div class="form-group form-icon-group">
-						<i class="icon icon-id"></i>
-						<input class="uk-input input uk-width-1-1" type="text" placeholder="Ім’я">
-					</div>
-				</div>
-				<div class="uk-width-1-2@m">
-					<div class="group-title">Мобільний телефон</div>
-					<div class="form-group form-icon-group">
-						<i class="icon icon-phone"></i>
-						<input class="uk-input input uk-width-1-1" type="text" placeholder="+38 0">
-					</div>
-				</div>
-				<div class="uk-width-1-2@m">
-					<div class="group-title">Електронна пошта</div>
-					<div class="form-group form-icon-group">
-						<i class="icon icon-mail"></i>
-						<input class="uk-input input uk-width-1-1" type="email" placeholder="Emaill">
-					</div>
-				</div>
-			</div>
-		</form>
-	</div>
-	<!-- / body -->
-	<!-- footer -->
-	<div class="uk-modal-footer cart-footer">
-		<div uk-grid class="uk-child-width-1-2@m uk-grid-small">
-			<div>
-				<button class="uk-button uk-button-primary uk-modal-close uk-width-1-1" type="button">
-					Відмінити<span class="icon-line"></span>
-				</button>
-			</div>
-			<div>
-				<button class="uk-button uk-button-secondary uk-width-1-1" type="button">
-					Відправити<span class="icon-line"></span>
-				</button>
-			</div>
-		</div>
-	</div>
-	<!-- / footer -->
-</div>
-</div>
-<!-- / login -->
 <!-- cart -->
 <div id="cartModal" class="uk-modal-container" uk-modal>
 	<div class="uk-modal-dialog">
@@ -229,7 +164,7 @@
 	<!-- 2 -->
 	<li class="order-item">
 		<div class="align-right">
-			<button class="uk-button uk-button-transparent remove-item">
+			<button class="uk-button uk-button-transparent button-order">
 				Видалити
 				<i class="icon icon-close"></i>
 			</button>

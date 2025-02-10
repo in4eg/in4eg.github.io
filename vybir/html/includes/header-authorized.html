@@ -60,7 +60,7 @@
 									<button class="button-link button-link-icon uk-button uk-button-transparent" type="button" uk-tooltip="Меню профіля">
 										<i class="icon icon-user"></i>
 									</button>
-									<div class="uk-card uk-card-small uk-card-body uk-card-default user-menu-card" uk-drop="mode: click">
+									<div class="uk-card uk-card-small uk-card-body uk-card-default user-menu-card"  uk-dropdown="mode: click">
 										<button class="button uk-button button uk-button-transparent button-square logout-button" type="button" uk-tooltip="Вийти">
 											<i class="icon icon-logout"></i>
 										</button>
@@ -102,11 +102,6 @@
 </header>
 
 <!-- header modals -->
-<!-- login -->
-<div id="loginModal" uk-modal>
-	@@include('modal-login.html')
-</div>
-<!-- / login -->
 <!-- cart -->
 <div id="cartModal" class="uk-modal-container" uk-modal>
 	@@include('modal-cart.html')
@@ -117,5 +112,6 @@
 <!-- catalog menu -->
 @@include('main-menu.html')
 <!-- / catalog menu -->
-
+<!-- mobile menu -->
 @@include('mobile-menu.html')
+<!-- / mobile menu -->

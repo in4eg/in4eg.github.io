@@ -127,6 +127,10 @@ $header_height: 73px;
 		--header_height: #{$header_height};
 	}
 
+	.filter-page-cover {
+		padding-top: 62px;
+	}
+
 	.section-header {
 
 		.filter-back-button {
@@ -139,16 +143,18 @@ $header_height: 73px;
 
 	.header-filter {
 		margin-bottom: 20px;
+		margin-top: 20px;
+		align-items: center;
 
 		.uk-first-column {
 			width: 42px;
 			max-width: 42px;
 
 			.filter-back-button {
-				transform: translateX(-12px);
+				transform: translateX(-7px) translateY(4px);
 
 				&.detail-page {
-					transform: translateX(-12px) translateY(-7px);
+					transform: translateX(-7px) translateY(-7px);
 				}
 			}
 		}
@@ -165,7 +171,6 @@ $header_height: 73px;
 
 			.download-link {
 				padding: 7px;
-				margin-top: 10px;
 			}
 		}
 	}
@@ -192,10 +197,6 @@ $header_height: 73px;
 		}
 	}
 
-	.header-filter {
-		margin-top: 20px;
-	}
-
 	.catalog-filters {
 		position: fixed;
 		top: 0;
@@ -203,7 +204,7 @@ $header_height: 73px;
 		width: 100%;
 		height: 100%;
 		background-color: $color_white;
-		padding: 10px 20px 20px;
+		padding: 10px 0 20px 20px;
 		z-index: 10;
 		display: none;
 		padding-right: 0;
@@ -211,13 +212,13 @@ $header_height: 73px;
 
 		&.active {
 			display: block;
-			padding-right: 20px;
 		}
 
 		form {
 			height: calc(100% - 62px);
 			overflow-y: auto;
 			overflow-x: hidden;
+			padding-right: 20px;
 		}
 
 		.header-title,
