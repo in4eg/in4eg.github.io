@@ -514,6 +514,11 @@ img.adaptive {
 .section-banner .social a:hover {
   opacity: 1
 }
+@media (max-width:768px) {
+  .banner-cover {
+    height: calc(100vh - 50px)
+  }
+}
 :root {
   --font-size: 16px;
   --section-title-font-size: 48px;

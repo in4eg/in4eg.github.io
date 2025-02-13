@@ -52,8 +52,11 @@ document.addEventListener('DOMContentLoaded', function(){
 					}
 				} else {
 					element.classList.remove(toggleClass);
-					element.classList.remove(ANIMATED_CLASS);
 					button.classList.remove(defaultClass);
+
+					if (!element.classList.contains('main-header')) {
+						element.classList.remove(ANIMATED_CLASS);
+					}
 				};
 			});
 		});
