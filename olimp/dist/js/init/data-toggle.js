@@ -2,6 +2,7 @@
 document.addEventListener('DOMContentLoaded', function(){
 	Array.prototype.forEach.call(document.querySelectorAll("[data-toggle-element]"), function(button){
 		let defaultClass = 'active'
+		const ANIMATED_CLASS = 'animated';
 		let toggleClass = button.dataset.toggleClass ? button.dataset.toggleClass : defaultClass;
 		let elementLink = button.dataset.toggleElement;
 
@@ -12,11 +13,15 @@ document.addEventListener('DOMContentLoaded', function(){
 				if (!element.classList.contains(toggleClass)) {
 					element.classList.add(toggleClass);
 					button.classList.add(defaultClass);
+					setTimeout(function(){
+						element.classList.add(ANIMATED_CLASS);
+					}, 250)
 					if (element.classList.contains('main-header') && element.querySelector('.search-input')) {
 						element.querySelector('.search-input').focus();
 					}
 				} else {
 					element.classList.remove(toggleClass);
+					element.classList.remove(ANIMATED_CLASS);
 					button.classList.remove(defaultClass);
 				};
 			});
@@ -24,27 +29,30 @@ document.addEventListener('DOMContentLoaded', function(){
 	});
 
 	// search position
-	let setSearchPotion = function(){
-		let toggleButton = document.getElementById('searchToggle');
+	let setSearchPotion = function(toggleButton){
+		if (!toggleButton) return;
 		let searchForm = document.getElementById('searchForm');
-		let formCover = document.getElementById('headerContainer');
+		let headerCover = document.getElementById('headerContainer');
+
+		let buttonPadding = 7;
 
 		if (!toggleButton) return;
-		let toggleRect = searchToggle.getBoundingClientRect();
-		let coverRect = formCover.getBoundingClientRect();
+		let toggleRect = toggleButton.getBoundingClientRect();
 
-		let elLeft = toggleRect.x - 6;
-		let elTop = toggleRect.y - 6;
-		let elRight = coverRect.right - coverRect.width;
+		let coverRect = headerCover.getBoundingClientRect();
+
+		let elLeft = toggleRect.x - coverRect.left - buttonPadding;
+		let elTop = toggleRect.y - buttonPadding;
+		let elRight = 0;
 
 		searchForm.style.left = elLeft+'px';
 		searchForm.style.top = elTop+'px';
 		searchForm.style.right = elRight+'px';
 	}
 
-	setSearchPotion();
+	document.getElementById('searchToggle').addEventListener("click", function (e) {
+		let toggleButton = this;
+		setSearchPotion(toggleButton);
+	})
 
-	window.addEventListener('resize', function(event){
-		setSearchPotion();
-	});
 });
