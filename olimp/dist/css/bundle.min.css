@@ -900,6 +900,128 @@ img.adaptive {
   border-color: #977767;
   color: #f5f3f1
 }
+.glider-contain {
+  width: 100%;
+  margin: 0 auto;
+  position: relative
+}
+.glider {
+  margin: 0 auto;
+  position: relative;
+  overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;
+  -ms-overflow-style: none;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0)
+}
+.glider-track {
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  z-index: 1
+}
+.glider.draggable {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  cursor: -webkit-grab;
+  cursor: grab
+}
+.glider.draggable .glider-slide img {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  pointer-events: none
+}
+.glider.drag {
+  cursor: -webkit-grabbing;
+  cursor: grabbing
+}
+.glider-slide {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -ms-flex-line-pack: center;
+  align-content: center;
+  width: 100%
+}
+.glider-slide img {
+  max-width: 100%
+}
+.glider::-webkit-scrollbar {
+  opacity: 0;
+  height: 0
+}
+.glider-slide {
+  min-width: 150px
+}
+.glider-hide {
+  opacity: 0
+}
+.glider-dots {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  margin: 0 auto;
+  padding: 0
+}
+.glider-dot {
+  border: 0;
+  padding: 0;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  outline: 0;
+  display: block;
+  cursor: pointer;
+  color: #ccc;
+  border-radius: 999px;
+  background: #ccc;
+  width: 12px;
+  height: 12px;
+  margin: 7px
+}
+.glider-dot.active,
+.glider-dot:focus,
+.glider-dot:hover {
+  background: #a89cc8
+}
+@media (max-width:36em) {
+  .glider::-webkit-scrollbar {
+    opacity: 1;
+    -webkit-appearance: none;
+    width: 7px;
+    height: 3px
+  }
+  .glider::-webkit-scrollbar-thumb {
+    opacity: 1;
+    border-radius: 99px;
+    background-color: rgba(156,156,156,.25);
+    -webkit-box-shadow: 0 0 1px rgba(255,255,255,.25);
+    box-shadow: 0 0 1px rgba(255,255,255,.25)
+  }
+}
 :root {
   --font-size: 16px;
   --section-title-font-size: 48px;
@@ -4180,6 +4302,36 @@ img.adaptive {
   width: 1px;
   background-color: #e4e2e1
 }
+.slider .slider-cover.glider {
+  display: block
+}
+.slider .slider-cover.glider .glider-track {
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -ms-flex-flow: row nowrap;
+  flex-flow: row nowrap;
+  position: relative;
+  gap: 50px;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start
+}
+.slider .slider-cover.glider .glider-track .slider-item {
+  -webkit-box-flex: unset;
+  -ms-flex: unset;
+  flex: unset;
+  -ms-flex-item-align: start;
+  -ms-grid-row-align: start;
+  align-self: start
+}
 .slider .slider-navigation {
   padding: 25px 0;
   position: relative;
@@ -4219,7 +4371,7 @@ img.adaptive {
     width: calc(33.3333333333% - 35px)
   }
 }
-@media (max-width:768px) {
+@media (max-width:992px) {
   .slider .slider-cover .slider-item {
     -webkit-box-flex: 1;
     -ms-flex: 1 0 calc(50% - 25px);
@@ -4229,7 +4381,9 @@ img.adaptive {
 }
 @media (max-width:640px) {
   .slider .slider-cover {
-    overflow: visible;
+    gap: 16px
+  }
+  .slider .slider-cover.glider .glider-track {
     gap: 16px
   }
   .slider .slider-cover .slider-item {
