@@ -516,7 +516,7 @@ img.adaptive {
 }
 @media (max-width:768px) {
   .banner-cover {
-    height: calc(100vh - 50px)
+    height: calc(100vh - 70px)
   }
 }
 :root {
@@ -746,12 +746,16 @@ img.adaptive {
 @media (max-width:992px) {
   .button.full-sm {
     width: 100%;
-    padding: 24px 32px 24px 16px
+    padding: 24px 43px 24px 16px
   }
   .button.full-sm .button-icon {
     position: absolute;
     right: 12px;
-    top: 12px
+    top: 12px;
+    margin-left: 0
+  }
+  .button.full-sm.button-block {
+    padding-right: 43px
   }
 }
 @font-face {
@@ -2722,6 +2726,11 @@ img.adaptive {
     top: -29px
   }
 }
+@media (max-width:520px) {
+  .counter-list.inline-list li {
+    width: 75%
+  }
+}
 :root {
   --font-size: 16px;
   --section-title-font-size: 48px;
@@ -4303,7 +4312,11 @@ img.adaptive {
   background-color: #e4e2e1
 }
 .slider .slider-cover.glider {
-  display: block
+  display: block;
+  position: relative;
+  overflow-x: auto;
+  overflow-y: hidden;
+  -webkit-overflow-scrolling: touch
 }
 .slider .slider-cover.glider .glider-track {
   overflow: hidden;
