@@ -898,7 +898,8 @@ img.adaptive {
   transition: .2s
 }
 .section-dark .form .input {
-  border-color: rgba(255,255,255,.2)
+  border-color: rgba(255,255,255,.2);
+  color: #f5f3f1
 }
 .section-dark .form .input:hover {
   border-color: #977767;
