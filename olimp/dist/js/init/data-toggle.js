@@ -1,5 +1,7 @@
 // toggle class event
 document.addEventListener('DOMContentLoaded', function(){
+	const headerContainer = document.getElementById('mainHeader');
+
 	Array.prototype.forEach.call(document.querySelectorAll("[data-toggle-element]"), function(button){
 		let defaultClass = 'active'
 		const ANIMATED_CLASS = 'animated';
@@ -7,6 +9,7 @@ document.addEventListener('DOMContentLoaded', function(){
 		let elementLink = button.dataset.toggleElement;
 
 		button.addEventListener("click", function (e) {
+			headerContainer.classList.remove('menu-active');
 
 			Array.prototype.forEach.call(document.querySelectorAll(elementLink), function(element){
 

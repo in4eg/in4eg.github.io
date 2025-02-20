@@ -23,14 +23,15 @@
 </head>
 <body id="innerBody">
 	<!-- header -->
-	<!-- class dark for inner pages without dark banner -->
+	<!-- class dark for inner pages without dark banner and colored logo -->
 <header class="main-header dark fixed" id="mainHeader" data-scroll-check=".section-dark">
 	<div class="container">
 		<div class="header-container" id="headerContainer">
 			<div class="left-side">
 				<div class="logo-cover">
 					<a href="index.html" class="logo light-theme"><img src="img/logo_light.png" alt="logo" draggable="false"></a>
-					<a href="index.html" class="logo dark-theme"><img src="img/logo_dark.png" alt="logo" draggable="false"></a>
+					<!-- colored logo -->
+					<a href="index.html" class="logo dark-theme"><img src="img/logo_colored.png" alt="logo" draggable="false"></a>
 				</div>
 				<div class="search-cover">
 					<div class="language">
@@ -42,9 +43,14 @@
 							</div>
 						</div>
 					</div>
+					<!-- mobile button for consultation -->
+					<button class="button mobile-toggle button-transparent button-round">
+						<i class="icon icon-phone icon-round"></i>
+					</button>
+					<!-- mobile button for consultation -->
 					<div class="search">
 						<button class="button search-toggle button-transparent button-round" data-toggle-element="#mainHeader" data-toggle-class="form-search-active" id="searchToggle">
-							<i class="icon icon-search"></i>
+							<i class="icon icon-search icon-round"></i>
 						</button>
 					</div>
 				</div>
@@ -62,10 +68,12 @@
 						<li><a href="contacts.html"><span class="text">Контакти</span></a></li>
 					</ul>
 				</nav>
+				<!-- desktop button for consultation -->
 				<div class="button-cover">
 					<button type="button" class="button button-header button-bordered">
 						<span class="text">Консультацiя</span>
 					</button>
+					<!-- / desktop button for consultation -->
 				</div>
 				<!-- mobile menu toggle button -->
 				<button type="button" class="button menu-button" data-toggle-element="#mainNavigation">
@@ -79,7 +87,7 @@
 			<form action="javascript:void(0)" id="searchForm" class="header-search-form">
 				<div class="form-group">
 					<button class="button search-toggle-close" data-toggle-element="#mainHeader" data-toggle-class="form-search-active" type="button">
-						<i class="icon icon-search"></i>
+						<i class="icon icon-search icon-round"></i>
 					</button>
 					<input type="text" class="input search-input" placeholder="Пошук..." id="inputSearch">
 				</div>
@@ -90,10 +98,18 @@
 			<!-- / search form -->
 		</div>
 	</div>
-	<!-- menu -->
+	<!-- sub menu (if main menu has categories) -->
 	<div class="action-result menu-result" id="menuResult">
 		<div class="container">
 			<div class="result">
+				<!-- only for mobile back button -->
+				<button class="back-button button button-header">
+					<span class="button-icon">
+						<i class="icon icon-left"></i>
+					</span>
+					<span class="text">Назад</span>
+				</button>
+				<!-- / only for mobile back button -->
 				<div class="info-section">
 					<div class="row">
 						<div class="col-xs-12 col-lg-2">
@@ -164,7 +180,7 @@
 			</div>
 		</div>
 	</div>
-	<!-- / menu -->
+	<!-- / sub menu (if main menu has categories) -->
 	<!-- search result -->
 	<div class="action-result search-result" id="searchResult">
 		<div class="container">
@@ -193,7 +209,7 @@
 						<div class="col-xs-12 col-lg-10">
 							<div class="row">
 								<!-- 1 -->
-								<div class="col-xs-12 col-sm-4">
+								<div class="col-xs-12 col-ms-6 col-sm-4">
 									<!-- article preview -->
 									<a href="article.html" class="article-preview">
 										<figure class="article-image">
@@ -207,7 +223,7 @@
 									<!-- / article preview -->
 								</div>
 								<!-- 2 -->
-								<div class="col-xs-12 col-sm-4">
+								<div class="col-xs-12 col-ms-6 col-sm-4">
 									<!-- article preview -->
 									<a href="article.html" class="article-preview">
 										<figure class="article-image">
@@ -221,7 +237,7 @@
 									<!-- / article preview -->
 								</div>
 								<!-- 3 -->
-								<div class="col-xs-12 col-sm-4">
+								<div class="col-xs-12 col-ms-6 col-sm-4">
 									<!-- article preview -->
 									<a href="article.html" class="article-preview">
 										<figure class="article-image">
@@ -310,9 +326,1579 @@
 		document.getElementById('searchResult').classList.add('success');
 	};
 </script>
-	<!-- / header -->
-	<main class="page-main" id="pageMain">
 
+<script>
+	window.searchFormSubmit = function(){
+		console.log('show form result')
+		document.getElementById('searchResult').classList.add('success');
+	};
+</script>
+	<!-- / header -->
+
+	<!-- class inner-page -->
+	<main class="page-main inner-page" id="pageMain">
+
+		<!-- breadcrumbs -->
+		<div class="breadcrumbs">
+			<div class="container">
+				<ul class="breadcrumbs-list clear">
+					<li><a href="index.html" class="text">Головна</a></li>
+					<li><span class="text">Послуги</span></li>
+				</ul>
+			</div>
+		</div>
+		<!-- / breadcrumbs -->
+
+		<!-- main section -->
+		<section class="section inner-section">
+			<div class="container">
+				<h1 class="section-title-large">Наші послуги</h1>
+				<ul class="accordeon-list clear">
+					<!-- 1 -->
+					<li>
+						<div class="accordeon" data-accordeon>
+							<div class="accordeon-title">
+								<img src="img/service_family.svg" draggable="false" class="image-icon">
+								<h2 class="title">Послуги з сімейного права</h2>
+							</div>
+							<div class="accordeon-inner">
+								<ul class="clear dotted-list">
+									<li>
+										Детальна сторінка послуги з сімейного права
+										<a href="services_detail.html" class="button button-link button-primary-light-transparent with-arrow">
+											<span class="text">перейти до послуги</span>
+											<span class="button-icon">
+												<i class="icon icon-right"></i>
+											</span>
+										</a>
+									</li>
+									<li>
+										Детальна сторінка послуги з сімейного права
+										<a href="services_detail.html" class="button button-link button-primary-light-transparent with-arrow">
+											<span class="text">перейти до послуги</span>
+											<span class="button-icon">
+												<i class="icon icon-right"></i>
+											</span>
+										</a>
+									</li>
+									<li>
+										Детальна сторінка послуги з сімейного права
+										<a href="services_detail.html" class="button button-link button-primary-light-transparent with-arrow">
+											<span class="text">перейти до послуги</span>
+											<span class="button-icon">
+												<i class="icon icon-right"></i>
+											</span>
+										</a>
+									</li>
+									<li>
+										Детальна сторінка послуги з сімейного права
+										<a href="services_detail.html" class="button button-link button-primary-light-transparent with-arrow">
+											<span class="text">перейти до послуги</span>
+											<span class="button-icon">
+												<i class="icon icon-right"></i>
+											</span>
+										</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</li>
+					<!-- 2 -->
+					<li>
+						<div class="accordeon" data-accordeon>
+							<div class="accordeon-title">
+								<img src="img/service_family.svg" draggable="false" class="image-icon">
+								<h2 class="title">Захист цивільно-правових відносин</h2>
+							</div>
+							<div class="accordeon-inner">
+								<ul class="clear dotted-list">
+									<li>
+										Детальна цивільно-правових відносин
+										<a href="services_detail.html" class="button button-link button-primary-light-transparent with-arrow">
+											<span class="text">перейти до послуги</span>
+											<span class="button-icon">
+												<i class="icon icon-right"></i>
+											</span>
+										</a>
+									</li>
+									<li>
+										Детальна цивільно-правових відносин
+										<a href="services_detail.html" class="button button-link button-primary-light-transparent with-arrow">
+											<span class="text">перейти до послуги</span>
+											<span class="button-icon">
+												<i class="icon icon-right"></i>
+											</span>
+										</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</li>
+					<!-- 3 -->
+					<li>
+						<div class="accordeon" data-accordeon>
+							<div class="accordeon-title">
+								<img src="img/service_military.svg" draggable="false" class="image-icon">
+								<h2 class="title">Військове право</h2>
+							</div>
+							<div class="accordeon-inner">
+								<ul class="clear dotted-list">
+									<li>
+										Отримання відстрочки від мобілізації
+										<a href="services_detail.html" class="button button-link button-primary-light-transparent with-arrow">
+											<span class="text">перейти до послуги</span>
+											<span class="button-icon">
+												<i class="icon icon-right"></i>
+											</span>
+										</a>
+									</li>
+									<li>
+										Оскарження рішення ВЛК
+										<a href="services_detail.html" class="button button-link button-primary-light-transparent with-arrow">
+											<span class="text">перейти до послуги</span>
+											<span class="button-icon">
+												<i class="icon icon-right"></i>
+											</span>
+										</a>
+									</li>
+									<li>
+										Скасування наказу про призов
+										<a href="services_detail.html" class="button button-link button-primary-light-transparent with-arrow">
+											<span class="text">перейти до послуги</span>
+											<span class="button-icon">
+												<i class="icon icon-right"></i>
+											</span>
+										</a>
+									</li>
+									<li>
+										Постановка на військовий облік та зняття
+										<a href="services_detail.html" class="button button-link button-primary-light-transparent with-arrow">
+											<span class="text">перейти до послуги</span>
+											<span class="button-icon">
+												<i class="icon icon-right"></i>
+											</span>
+										</a>
+									</li>
+									<li>
+										Захист при звинуваченні в ухиленні від мобілізації
+										<a href="services_detail.html" class="button button-link button-primary-light-transparent with-arrow">
+											<span class="text">перейти до послуги</span>
+											<span class="button-icon">
+												<i class="icon icon-right"></i>
+											</span>
+										</a>
+									</li>
+									<li>
+										Виплати, пільги, компенсації
+										<a href="services_detail.html" class="button button-link button-primary-light-transparent with-arrow">
+											<span class="text">перейти до послуги</span>
+											<span class="button-icon">
+												<i class="icon icon-right"></i>
+											</span>
+										</a>
+									</li>
+									<li>
+										Розірвання контракту
+										<a href="services_detail.html" class="button button-link button-primary-light-transparent with-arrow">
+											<span class="text">перейти до послуги</span>
+											<span class="button-icon">
+												<i class="icon icon-right"></i>
+											</span>
+										</a>
+									</li>
+									<li>
+										Звільнення з лав ЗСУ за сімейними обставинами, хворобою
+										<a href="services_detail.html" class="button button-link button-primary-light-transparent with-arrow">
+											<span class="text">перейти до послуги</span>
+											<span class="button-icon">
+												<i class="icon icon-right"></i>
+											</span>
+										</a>
+									</li>
+									<li>
+										Отримання посвідчення «Учасника бойових дій»
+										<a href="services_detail.html" class="button button-link button-primary-light-transparent with-arrow">
+											<span class="text">перейти до послуги</span>
+											<span class="button-icon">
+												<i class="icon icon-right"></i>
+											</span>
+										</a>
+									</li>
+									<li>
+										Встановлення інвалідності для військових
+										<a href="services_detail.html" class="button button-link button-primary-light-transparent with-arrow">
+											<span class="text">перейти до послуги</span>
+											<span class="button-icon">
+												<i class="icon icon-right"></i>
+											</span>
+										</a>
+									</li>
+									<li>
+										Складання рапортів
+										<a href="services_detail.html" class="button button-link button-primary-light-transparent with-arrow">
+											<span class="text">перейти до послуги</span>
+											<span class="button-icon">
+												<i class="icon icon-right"></i>
+											</span>
+										</a>
+									</li>
+									<li>
+										Відпустки
+										<a href="services_detail.html" class="button button-link button-primary-light-transparent with-arrow">
+											<span class="text">перейти до послуги</span>
+											<span class="button-icon">
+												<i class="icon icon-right"></i>
+											</span>
+										</a>
+									</li>
+									<li>
+										СЗЧ та Дезертирство
+										<a href="services_detail.html" class="button button-link button-primary-light-transparent with-arrow">
+											<span class="text">перейти до послуги</span>
+											<span class="button-icon">
+												<i class="icon icon-right"></i>
+											</span>
+										</a>
+									</li>
+									<li>
+										Отримання земельної ділянки військовим
+										<a href="services_detail.html" class="button button-link button-primary-light-transparent with-arrow">
+											<span class="text">перейти до послуги</span>
+											<span class="button-icon">
+												<i class="icon icon-right"></i>
+											</span>
+										</a>
+									</li>
+									<li>
+										Захист права на соціальний і правовий захист військовослужбовців та членів їх сімей
+										<a href="services_detail.html" class="button button-link button-primary-light-transparent with-arrow">
+											<span class="text">перейти до послуги</span>
+											<span class="button-icon">
+												<i class="icon icon-right"></i>
+											</span>
+										</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</li>
+					<!-- 4 -->
+					<li>
+						<div class="accordeon" data-accordeon>
+							<div class="accordeon-title">
+								<img src="img/service_military.svg" draggable="false" class="image-icon">
+								<h2 class="title">Земельне право</h2>
+							</div>
+							<div class="accordeon-inner">
+								<ul class="clear dotted-list">
+									<li>
+										Отримання відстрочки від мобілізації
+										<a href="services_detail.html" class="button button-link button-primary-light-transparent with-arrow">
+											<span class="text">перейти до послуги</span>
+											<span class="button-icon">
+												<i class="icon icon-right"></i>
+											</span>
+										</a>
+									</li>
+									<li>
+										Оскарження рішення ВЛК
+										<a href="services_detail.html" class="button button-link button-primary-light-transparent with-arrow">
+											<span class="text">перейти до послуги</span>
+											<span class="button-icon">
+												<i class="icon icon-right"></i>
+											</span>
+										</a>
+									</li>
+									<li>
+										Скасування наказу про призов
+										<a href="services_detail.html" class="button button-link button-primary-light-transparent with-arrow">
+											<span class="text">перейти до послуги</span>
+											<span class="button-icon">
+												<i class="icon icon-right"></i>
+											</span>
+										</a>
+									</li>
+									<li>
+										Постановка на військовий облік та зняття
+										<a href="services_detail.html" class="button button-link button-primary-light-transparent with-arrow">
+											<span class="text">перейти до послуги</span>
+											<span class="button-icon">
+												<i class="icon icon-right"></i>
+											</span>
+										</a>
+									</li>
+									<li>
+										Захист при звинуваченні в ухиленні від мобілізації
+										<a href="services_detail.html" class="button button-link button-primary-light-transparent with-arrow">
+											<span class="text">перейти до послуги</span>
+											<span class="button-icon">
+												<i class="icon icon-right"></i>
+											</span>
+										</a>
+									</li>
+									<li>
+										Виплати, пільги, компенсації
+										<a href="services_detail.html" class="button button-link button-primary-light-transparent with-arrow">
+											<span class="text">перейти до послуги</span>
+											<span class="button-icon">
+												<i class="icon icon-right"></i>
+											</span>
+										</a>
+									</li>
+									<li>
+										Розірвання контракту
+										<a href="services_detail.html" class="button button-link button-primary-light-transparent with-arrow">
+											<span class="text">перейти до послуги</span>
+											<span class="button-icon">
+												<i class="icon icon-right"></i>
+											</span>
+										</a>
+									</li>
+									<li>
+										Звільнення з лав ЗСУ за сімейними обставинами, хворобою
+										<a href="services_detail.html" class="button button-link button-primary-light-transparent with-arrow">
+											<span class="text">перейти до послуги</span>
+											<span class="button-icon">
+												<i class="icon icon-right"></i>
+											</span>
+										</a>
+									</li>
+									<li>
+										Отримання посвідчення «Учасника бойових дій»
+										<a href="services_detail.html" class="button button-link button-primary-light-transparent with-arrow">
+											<span class="text">перейти до послуги</span>
+											<span class="button-icon">
+												<i class="icon icon-right"></i>
+											</span>
+										</a>
+									</li>
+									<li>
+										Встановлення інвалідності для військових
+										<a href="services_detail.html" class="button button-link button-primary-light-transparent with-arrow">
+											<span class="text">перейти до послуги</span>
+											<span class="button-icon">
+												<i class="icon icon-right"></i>
+											</span>
+										</a>
+									</li>
+									<li>
+										Складання рапортів
+										<a href="services_detail.html" class="button button-link button-primary-light-transparent with-arrow">
+											<span class="text">перейти до послуги</span>
+											<span class="button-icon">
+												<i class="icon icon-right"></i>
+											</span>
+										</a>
+									</li>
+									<li>
+										Відпустки
+										<a href="services_detail.html" class="button button-link button-primary-light-transparent with-arrow">
+											<span class="text">перейти до послуги</span>
+											<span class="button-icon">
+												<i class="icon icon-right"></i>
+											</span>
+										</a>
+									</li>
+									<li>
+										СЗЧ та Дезертирство
+										<a href="services_detail.html" class="button button-link button-primary-light-transparent with-arrow">
+											<span class="text">перейти до послуги</span>
+											<span class="button-icon">
+												<i class="icon icon-right"></i>
+											</span>
+										</a>
+									</li>
+									<li>
+										Отримання земельної ділянки військовим
+										<a href="services_detail.html" class="button button-link button-primary-light-transparent with-arrow">
+											<span class="text">перейти до послуги</span>
+											<span class="button-icon">
+												<i class="icon icon-right"></i>
+											</span>
+										</a>
+									</li>
+									<li>
+										Захист права на соціальний і правовий захист військовослужбовців та членів їх сімей
+										<a href="services_detail.html" class="button button-link button-primary-light-transparent with-arrow">
+											<span class="text">перейти до послуги</span>
+											<span class="button-icon">
+												<i class="icon icon-right"></i>
+											</span>
+										</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</li>
+					<!-- 5 -->
+					<li>
+						<div class="accordeon" data-accordeon>
+							<div class="accordeon-title">
+								<img src="img/service_pension.svg" draggable="false" class="image-icon">
+								<h2 class="title">Пенсійне забезпечення</h2>
+							</div>
+							<div class="accordeon-inner">
+								<ul class="clear dotted-list">
+									<li>
+										Отримання відстрочки від мобілізації
+										<a href="services_detail.html" class="button button-link button-primary-light-transparent with-arrow">
+											<span class="text">перейти до послуги</span>
+											<span class="button-icon">
+												<i class="icon icon-right"></i>
+											</span>
+										</a>
+									</li>
+									<li>
+										Оскарження рішення ВЛК
+										<a href="services_detail.html" class="button button-link button-primary-light-transparent with-arrow">
+											<span class="text">перейти до послуги</span>
+											<span class="button-icon">
+												<i class="icon icon-right"></i>
+											</span>
+										</a>
+									</li>
+									<li>
+										Скасування наказу про призов
+										<a href="services_detail.html" class="button button-link button-primary-light-transparent with-arrow">
+											<span class="text">перейти до послуги</span>
+											<span class="button-icon">
+												<i class="icon icon-right"></i>
+											</span>
+										</a>
+									</li>
+									<li>
+										Постановка на військовий облік та зняття
+										<a href="services_detail.html" class="button button-link button-primary-light-transparent with-arrow">
+											<span class="text">перейти до послуги</span>
+											<span class="button-icon">
+												<i class="icon icon-right"></i>
+											</span>
+										</a>
+									</li>
+									<li>
+										Захист при звинуваченні в ухиленні від мобілізації
+										<a href="services_detail.html" class="button button-link button-primary-light-transparent with-arrow">
+											<span class="text">перейти до послуги</span>
+											<span class="button-icon">
+												<i class="icon icon-right"></i>
+											</span>
+										</a>
+									</li>
+									<li>
+										Виплати, пільги, компенсації
+										<a href="services_detail.html" class="button button-link button-primary-light-transparent with-arrow">
+											<span class="text">перейти до послуги</span>
+											<span class="button-icon">
+												<i class="icon icon-right"></i>
+											</span>
+										</a>
+									</li>
+									<li>
+										Розірвання контракту
+										<a href="services_detail.html" class="button button-link button-primary-light-transparent with-arrow">
+											<span class="text">перейти до послуги</span>
+											<span class="button-icon">
+												<i class="icon icon-right"></i>
+											</span>
+										</a>
+									</li>
+									<li>
+										Звільнення з лав ЗСУ за сімейними обставинами, хворобою
+										<a href="services_detail.html" class="button button-link button-primary-light-transparent with-arrow">
+											<span class="text">перейти до послуги</span>
+											<span class="button-icon">
+												<i class="icon icon-right"></i>
+											</span>
+										</a>
+									</li>
+									<li>
+										Отримання посвідчення «Учасника бойових дій»
+										<a href="services_detail.html" class="button button-link button-primary-light-transparent with-arrow">
+											<span class="text">перейти до послуги</span>
+											<span class="button-icon">
+												<i class="icon icon-right"></i>
+											</span>
+										</a>
+									</li>
+									<li>
+										Встановлення інвалідності для військових
+										<a href="services_detail.html" class="button button-link button-primary-light-transparent with-arrow">
+											<span class="text">перейти до послуги</span>
+											<span class="button-icon">
+												<i class="icon icon-right"></i>
+											</span>
+										</a>
+									</li>
+									<li>
+										Складання рапортів
+										<a href="services_detail.html" class="button button-link button-primary-light-transparent with-arrow">
+											<span class="text">перейти до послуги</span>
+											<span class="button-icon">
+												<i class="icon icon-right"></i>
+											</span>
+										</a>
+									</li>
+									<li>
+										Відпустки
+										<a href="services_detail.html" class="button button-link button-primary-light-transparent with-arrow">
+											<span class="text">перейти до послуги</span>
+											<span class="button-icon">
+												<i class="icon icon-right"></i>
+											</span>
+										</a>
+									</li>
+									<li>
+										СЗЧ та Дезертирство
+										<a href="services_detail.html" class="button button-link button-primary-light-transparent with-arrow">
+											<span class="text">перейти до послуги</span>
+											<span class="button-icon">
+												<i class="icon icon-right"></i>
+											</span>
+										</a>
+									</li>
+									<li>
+										Отримання земельної ділянки військовим
+										<a href="services_detail.html" class="button button-link button-primary-light-transparent with-arrow">
+											<span class="text">перейти до послуги</span>
+											<span class="button-icon">
+												<i class="icon icon-right"></i>
+											</span>
+										</a>
+									</li>
+									<li>
+										Захист права на соціальний і правовий захист військовослужбовців та членів їх сімей
+										<a href="services_detail.html" class="button button-link button-primary-light-transparent with-arrow">
+											<span class="text">перейти до послуги</span>
+											<span class="button-icon">
+												<i class="icon icon-right"></i>
+											</span>
+										</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</li>
+					<!-- 6 -->
+					<li>
+						<div class="accordeon" data-accordeon>
+							<div class="accordeon-title">
+								<img src="img/service_criminal.svg" draggable="false" class="image-icon">
+								<h2 class="title">Кримінальне право</h2>
+							</div>
+							<div class="accordeon-inner">
+								<ul class="clear dotted-list">
+									<li>
+										Отримання відстрочки від мобілізації
+										<a href="services_detail.html" class="button button-link button-primary-light-transparent with-arrow">
+											<span class="text">перейти до послуги</span>
+											<span class="button-icon">
+												<i class="icon icon-right"></i>
+											</span>
+										</a>
+									</li>
+									<li>
+										Оскарження рішення ВЛК
+										<a href="services_detail.html" class="button button-link button-primary-light-transparent with-arrow">
+											<span class="text">перейти до послуги</span>
+											<span class="button-icon">
+												<i class="icon icon-right"></i>
+											</span>
+										</a>
+									</li>
+									<li>
+										Скасування наказу про призов
+										<a href="services_detail.html" class="button button-link button-primary-light-transparent with-arrow">
+											<span class="text">перейти до послуги</span>
+											<span class="button-icon">
+												<i class="icon icon-right"></i>
+											</span>
+										</a>
+									</li>
+									<li>
+										Постановка на військовий облік та зняття
+										<a href="services_detail.html" class="button button-link button-primary-light-transparent with-arrow">
+											<span class="text">перейти до послуги</span>
+											<span class="button-icon">
+												<i class="icon icon-right"></i>
+											</span>
+										</a>
+									</li>
+									<li>
+										Захист при звинуваченні в ухиленні від мобілізації
+										<a href="services_detail.html" class="button button-link button-primary-light-transparent with-arrow">
+											<span class="text">перейти до послуги</span>
+											<span class="button-icon">
+												<i class="icon icon-right"></i>
+											</span>
+										</a>
+									</li>
+									<li>
+										Виплати, пільги, компенсації
+										<a href="services_detail.html" class="button button-link button-primary-light-transparent with-arrow">
+											<span class="text">перейти до послуги</span>
+											<span class="button-icon">
+												<i class="icon icon-right"></i>
+											</span>
+										</a>
+									</li>
+									<li>
+										Розірвання контракту
+										<a href="services_detail.html" class="button button-link button-primary-light-transparent with-arrow">
+											<span class="text">перейти до послуги</span>
+											<span class="button-icon">
+												<i class="icon icon-right"></i>
+											</span>
+										</a>
+									</li>
+									<li>
+										Звільнення з лав ЗСУ за сімейними обставинами, хворобою
+										<a href="services_detail.html" class="button button-link button-primary-light-transparent with-arrow">
+											<span class="text">перейти до послуги</span>
+											<span class="button-icon">
+												<i class="icon icon-right"></i>
+											</span>
+										</a>
+									</li>
+									<li>
+										Отримання посвідчення «Учасника бойових дій»
+										<a href="services_detail.html" class="button button-link button-primary-light-transparent with-arrow">
+											<span class="text">перейти до послуги</span>
+											<span class="button-icon">
+												<i class="icon icon-right"></i>
+											</span>
+										</a>
+									</li>
+									<li>
+										Встановлення інвалідності для військових
+										<a href="services_detail.html" class="button button-link button-primary-light-transparent with-arrow">
+											<span class="text">перейти до послуги</span>
+											<span class="button-icon">
+												<i class="icon icon-right"></i>
+											</span>
+										</a>
+									</li>
+									<li>
+										Складання рапортів
+										<a href="services_detail.html" class="button button-link button-primary-light-transparent with-arrow">
+											<span class="text">перейти до послуги</span>
+											<span class="button-icon">
+												<i class="icon icon-right"></i>
+											</span>
+										</a>
+									</li>
+									<li>
+										Відпустки
+										<a href="services_detail.html" class="button button-link button-primary-light-transparent with-arrow">
+											<span class="text">перейти до послуги</span>
+											<span class="button-icon">
+												<i class="icon icon-right"></i>
+											</span>
+										</a>
+									</li>
+									<li>
+										СЗЧ та Дезертирство
+										<a href="services_detail.html" class="button button-link button-primary-light-transparent with-arrow">
+											<span class="text">перейти до послуги</span>
+											<span class="button-icon">
+												<i class="icon icon-right"></i>
+											</span>
+										</a>
+									</li>
+									<li>
+										Отримання земельної ділянки військовим
+										<a href="services_detail.html" class="button button-link button-primary-light-transparent with-arrow">
+											<span class="text">перейти до послуги</span>
+											<span class="button-icon">
+												<i class="icon icon-right"></i>
+											</span>
+										</a>
+									</li>
+									<li>
+										Захист права на соціальний і правовий захист військовослужбовців та членів їх сімей
+										<a href="services_detail.html" class="button button-link button-primary-light-transparent with-arrow">
+											<span class="text">перейти до послуги</span>
+											<span class="button-icon">
+												<i class="icon icon-right"></i>
+											</span>
+										</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</li>
+					<!-- 7 -->
+					<li>
+						<div class="accordeon" data-accordeon>
+							<div class="accordeon-title">
+								<img src="img/service_car.svg" draggable="false" class="image-icon">
+								<h2 class="title">Адміністративне правопорушення та ДТП</h2>
+							</div>
+							<div class="accordeon-inner">
+								<ul class="clear dotted-list">
+									<li>
+										Отримання відстрочки від мобілізації
+										<a href="services_detail.html" class="button button-link button-primary-light-transparent with-arrow">
+											<span class="text">перейти до послуги</span>
+											<span class="button-icon">
+												<i class="icon icon-right"></i>
+											</span>
+										</a>
+									</li>
+									<li>
+										Оскарження рішення ВЛК
+										<a href="services_detail.html" class="button button-link button-primary-light-transparent with-arrow">
+											<span class="text">перейти до послуги</span>
+											<span class="button-icon">
+												<i class="icon icon-right"></i>
+											</span>
+										</a>
+									</li>
+									<li>
+										Скасування наказу про призов
+										<a href="services_detail.html" class="button button-link button-primary-light-transparent with-arrow">
+											<span class="text">перейти до послуги</span>
+											<span class="button-icon">
+												<i class="icon icon-right"></i>
+											</span>
+										</a>
+									</li>
+									<li>
+										Постановка на військовий облік та зняття
+										<a href="services_detail.html" class="button button-link button-primary-light-transparent with-arrow">
+											<span class="text">перейти до послуги</span>
+											<span class="button-icon">
+												<i class="icon icon-right"></i>
+											</span>
+										</a>
+									</li>
+									<li>
+										Захист при звинуваченні в ухиленні від мобілізації
+										<a href="services_detail.html" class="button button-link button-primary-light-transparent with-arrow">
+											<span class="text">перейти до послуги</span>
+											<span class="button-icon">
+												<i class="icon icon-right"></i>
+											</span>
+										</a>
+									</li>
+									<li>
+										Виплати, пільги, компенсації
+										<a href="services_detail.html" class="button button-link button-primary-light-transparent with-arrow">
+											<span class="text">перейти до послуги</span>
+											<span class="button-icon">
+												<i class="icon icon-right"></i>
+											</span>
+										</a>
+									</li>
+									<li>
+										Розірвання контракту
+										<a href="services_detail.html" class="button button-link button-primary-light-transparent with-arrow">
+											<span class="text">перейти до послуги</span>
+											<span class="button-icon">
+												<i class="icon icon-right"></i>
+											</span>
+										</a>
+									</li>
+									<li>
+										Звільнення з лав ЗСУ за сімейними обставинами, хворобою
+										<a href="services_detail.html" class="button button-link button-primary-light-transparent with-arrow">
+											<span class="text">перейти до послуги</span>
+											<span class="button-icon">
+												<i class="icon icon-right"></i>
+											</span>
+										</a>
+									</li>
+									<li>
+										Отримання посвідчення «Учасника бойових дій»
+										<a href="services_detail.html" class="button button-link button-primary-light-transparent with-arrow">
+											<span class="text">перейти до послуги</span>
+											<span class="button-icon">
+												<i class="icon icon-right"></i>
+											</span>
+										</a>
+									</li>
+									<li>
+										Встановлення інвалідності для військових
+										<a href="services_detail.html" class="button button-link button-primary-light-transparent with-arrow">
+											<span class="text">перейти до послуги</span>
+											<span class="button-icon">
+												<i class="icon icon-right"></i>
+											</span>
+										</a>
+									</li>
+									<li>
+										Складання рапортів
+										<a href="services_detail.html" class="button button-link button-primary-light-transparent with-arrow">
+											<span class="text">перейти до послуги</span>
+											<span class="button-icon">
+												<i class="icon icon-right"></i>
+											</span>
+										</a>
+									</li>
+									<li>
+										Відпустки
+										<a href="services_detail.html" class="button button-link button-primary-light-transparent with-arrow">
+											<span class="text">перейти до послуги</span>
+											<span class="button-icon">
+												<i class="icon icon-right"></i>
+											</span>
+										</a>
+									</li>
+									<li>
+										СЗЧ та Дезертирство
+										<a href="services_detail.html" class="button button-link button-primary-light-transparent with-arrow">
+											<span class="text">перейти до послуги</span>
+											<span class="button-icon">
+												<i class="icon icon-right"></i>
+											</span>
+										</a>
+									</li>
+									<li>
+										Отримання земельної ділянки військовим
+										<a href="services_detail.html" class="button button-link button-primary-light-transparent with-arrow">
+											<span class="text">перейти до послуги</span>
+											<span class="button-icon">
+												<i class="icon icon-right"></i>
+											</span>
+										</a>
+									</li>
+									<li>
+										Захист права на соціальний і правовий захист військовослужбовців та членів їх сімей
+										<a href="services_detail.html" class="button button-link button-primary-light-transparent with-arrow">
+											<span class="text">перейти до послуги</span>
+											<span class="button-icon">
+												<i class="icon icon-right"></i>
+											</span>
+										</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</li>
+					<!-- 8 -->
+					<li>
+						<div class="accordeon" data-accordeon>
+							<div class="accordeon-title">
+								<img src="img/service_military.svg" draggable="false" class="image-icon">
+								<h2 class="title">Житлові спори</h2>
+							</div>
+							<div class="accordeon-inner">
+								<ul class="clear dotted-list">
+									<li>
+										Отримання відстрочки від мобілізації
+										<a href="services_detail.html" class="button button-link button-primary-light-transparent with-arrow">
+											<span class="text">перейти до послуги</span>
+											<span class="button-icon">
+												<i class="icon icon-right"></i>
+											</span>
+										</a>
+									</li>
+									<li>
+										Оскарження рішення ВЛК
+										<a href="services_detail.html" class="button button-link button-primary-light-transparent with-arrow">
+											<span class="text">перейти до послуги</span>
+											<span class="button-icon">
+												<i class="icon icon-right"></i>
+											</span>
+										</a>
+									</li>
+									<li>
+										Скасування наказу про призов
+										<a href="services_detail.html" class="button button-link button-primary-light-transparent with-arrow">
+											<span class="text">перейти до послуги</span>
+											<span class="button-icon">
+												<i class="icon icon-right"></i>
+											</span>
+										</a>
+									</li>
+									<li>
+										Постановка на військовий облік та зняття
+										<a href="services_detail.html" class="button button-link button-primary-light-transparent with-arrow">
+											<span class="text">перейти до послуги</span>
+											<span class="button-icon">
+												<i class="icon icon-right"></i>
+											</span>
+										</a>
+									</li>
+									<li>
+										Захист при звинуваченні в ухиленні від мобілізації
+										<a href="services_detail.html" class="button button-link button-primary-light-transparent with-arrow">
+											<span class="text">перейти до послуги</span>
+											<span class="button-icon">
+												<i class="icon icon-right"></i>
+											</span>
+										</a>
+									</li>
+									<li>
+										Виплати, пільги, компенсації
+										<a href="services_detail.html" class="button button-link button-primary-light-transparent with-arrow">
+											<span class="text">перейти до послуги</span>
+											<span class="button-icon">
+												<i class="icon icon-right"></i>
+											</span>
+										</a>
+									</li>
+									<li>
+										Розірвання контракту
+										<a href="services_detail.html" class="button button-link button-primary-light-transparent with-arrow">
+											<span class="text">перейти до послуги</span>
+											<span class="button-icon">
+												<i class="icon icon-right"></i>
+											</span>
+										</a>
+									</li>
+									<li>
+										Звільнення з лав ЗСУ за сімейними обставинами, хворобою
+										<a href="services_detail.html" class="button button-link button-primary-light-transparent with-arrow">
+											<span class="text">перейти до послуги</span>
+											<span class="button-icon">
+												<i class="icon icon-right"></i>
+											</span>
+										</a>
+									</li>
+									<li>
+										Отримання посвідчення «Учасника бойових дій»
+										<a href="services_detail.html" class="button button-link button-primary-light-transparent with-arrow">
+											<span class="text">перейти до послуги</span>
+											<span class="button-icon">
+												<i class="icon icon-right"></i>
+											</span>
+										</a>
+									</li>
+									<li>
+										Встановлення інвалідності для військових
+										<a href="services_detail.html" class="button button-link button-primary-light-transparent with-arrow">
+											<span class="text">перейти до послуги</span>
+											<span class="button-icon">
+												<i class="icon icon-right"></i>
+											</span>
+										</a>
+									</li>
+									<li>
+										Складання рапортів
+										<a href="services_detail.html" class="button button-link button-primary-light-transparent with-arrow">
+											<span class="text">перейти до послуги</span>
+											<span class="button-icon">
+												<i class="icon icon-right"></i>
+											</span>
+										</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</li>
+					<!-- 9 -->
+					<li>
+						<div class="accordeon" data-accordeon>
+							<div class="accordeon-title">
+								<img src="img/service_heritage.svg" draggable="false" class="image-icon">
+								<h2 class="title">Спадкове право</h2>
+							</div>
+							<div class="accordeon-inner">
+								<ul class="clear dotted-list">
+									<li>
+										Отримання відстрочки від мобілізації
+										<a href="services_detail.html" class="button button-link button-primary-light-transparent with-arrow">
+											<span class="text">перейти до послуги</span>
+											<span class="button-icon">
+												<i class="icon icon-right"></i>
+											</span>
+										</a>
+									</li>
+									<li>
+										Оскарження рішення ВЛК
+										<a href="services_detail.html" class="button button-link button-primary-light-transparent with-arrow">
+											<span class="text">перейти до послуги</span>
+											<span class="button-icon">
+												<i class="icon icon-right"></i>
+											</span>
+										</a>
+									</li>
+									<li>
+										Скасування наказу про призов
+										<a href="services_detail.html" class="button button-link button-primary-light-transparent with-arrow">
+											<span class="text">перейти до послуги</span>
+											<span class="button-icon">
+												<i class="icon icon-right"></i>
+											</span>
+										</a>
+									</li>
+									<li>
+										Постановка на військовий облік та зняття
+										<a href="services_detail.html" class="button button-link button-primary-light-transparent with-arrow">
+											<span class="text">перейти до послуги</span>
+											<span class="button-icon">
+												<i class="icon icon-right"></i>
+											</span>
+										</a>
+									</li>
+									<li>
+										Захист при звинуваченні в ухиленні від мобілізації
+										<a href="services_detail.html" class="button button-link button-primary-light-transparent with-arrow">
+											<span class="text">перейти до послуги</span>
+											<span class="button-icon">
+												<i class="icon icon-right"></i>
+											</span>
+										</a>
+									</li>
+									<li>
+										Виплати, пільги, компенсації
+										<a href="services_detail.html" class="button button-link button-primary-light-transparent with-arrow">
+											<span class="text">перейти до послуги</span>
+											<span class="button-icon">
+												<i class="icon icon-right"></i>
+											</span>
+										</a>
+									</li>
+									<li>
+										Розірвання контракту
+										<a href="services_detail.html" class="button button-link button-primary-light-transparent with-arrow">
+											<span class="text">перейти до послуги</span>
+											<span class="button-icon">
+												<i class="icon icon-right"></i>
+											</span>
+										</a>
+									</li>
+									<li>
+										Звільнення з лав ЗСУ за сімейними обставинами, хворобою
+										<a href="services_detail.html" class="button button-link button-primary-light-transparent with-arrow">
+											<span class="text">перейти до послуги</span>
+											<span class="button-icon">
+												<i class="icon icon-right"></i>
+											</span>
+										</a>
+									</li>
+									<li>
+										Отримання посвідчення «Учасника бойових дій»
+										<a href="services_detail.html" class="button button-link button-primary-light-transparent with-arrow">
+											<span class="text">перейти до послуги</span>
+											<span class="button-icon">
+												<i class="icon icon-right"></i>
+											</span>
+										</a>
+									</li>
+									<li>
+										Встановлення інвалідності для військових
+										<a href="services_detail.html" class="button button-link button-primary-light-transparent with-arrow">
+											<span class="text">перейти до послуги</span>
+											<span class="button-icon">
+												<i class="icon icon-right"></i>
+											</span>
+										</a>
+									</li>
+									<li>
+										Складання рапортів
+										<a href="services_detail.html" class="button button-link button-primary-light-transparent with-arrow">
+											<span class="text">перейти до послуги</span>
+											<span class="button-icon">
+												<i class="icon icon-right"></i>
+											</span>
+										</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</li>
+					<!-- 10 -->
+					<li>
+						<div class="accordeon" data-accordeon>
+							<div class="accordeon-title">
+								<img src="img/service_credit.svg" draggable="false" class="image-icon">
+								<h2 class="title">Кредитні спори</h2>
+							</div>
+							<div class="accordeon-inner">
+								<ul class="clear dotted-list">
+									<li>
+										Отримання відстрочки від мобілізації
+										<a href="services_detail.html" class="button button-link button-primary-light-transparent with-arrow">
+											<span class="text">перейти до послуги</span>
+											<span class="button-icon">
+												<i class="icon icon-right"></i>
+											</span>
+										</a>
+									</li>
+									<li>
+										Оскарження рішення ВЛК
+										<a href="services_detail.html" class="button button-link button-primary-light-transparent with-arrow">
+											<span class="text">перейти до послуги</span>
+											<span class="button-icon">
+												<i class="icon icon-right"></i>
+											</span>
+										</a>
+									</li>
+									<li>
+										Скасування наказу про призов
+										<a href="services_detail.html" class="button button-link button-primary-light-transparent with-arrow">
+											<span class="text">перейти до послуги</span>
+											<span class="button-icon">
+												<i class="icon icon-right"></i>
+											</span>
+										</a>
+									</li>
+									<li>
+										Постановка на військовий облік та зняття
+										<a href="services_detail.html" class="button button-link button-primary-light-transparent with-arrow">
+											<span class="text">перейти до послуги</span>
+											<span class="button-icon">
+												<i class="icon icon-right"></i>
+											</span>
+										</a>
+									</li>
+									<li>
+										Захист при звинуваченні в ухиленні від мобілізації
+										<a href="services_detail.html" class="button button-link button-primary-light-transparent with-arrow">
+											<span class="text">перейти до послуги</span>
+											<span class="button-icon">
+												<i class="icon icon-right"></i>
+											</span>
+										</a>
+									</li>
+									<li>
+										Виплати, пільги, компенсації
+										<a href="services_detail.html" class="button button-link button-primary-light-transparent with-arrow">
+											<span class="text">перейти до послуги</span>
+											<span class="button-icon">
+												<i class="icon icon-right"></i>
+											</span>
+										</a>
+									</li>
+									<li>
+										Розірвання контракту
+										<a href="services_detail.html" class="button button-link button-primary-light-transparent with-arrow">
+											<span class="text">перейти до послуги</span>
+											<span class="button-icon">
+												<i class="icon icon-right"></i>
+											</span>
+										</a>
+									</li>
+									<li>
+										Звільнення з лав ЗСУ за сімейними обставинами, хворобою
+										<a href="services_detail.html" class="button button-link button-primary-light-transparent with-arrow">
+											<span class="text">перейти до послуги</span>
+											<span class="button-icon">
+												<i class="icon icon-right"></i>
+											</span>
+										</a>
+									</li>
+									<li>
+										Отримання посвідчення «Учасника бойових дій»
+										<a href="services_detail.html" class="button button-link button-primary-light-transparent with-arrow">
+											<span class="text">перейти до послуги</span>
+											<span class="button-icon">
+												<i class="icon icon-right"></i>
+											</span>
+										</a>
+									</li>
+									<li>
+										Встановлення інвалідності для військових
+										<a href="services_detail.html" class="button button-link button-primary-light-transparent with-arrow">
+											<span class="text">перейти до послуги</span>
+											<span class="button-icon">
+												<i class="icon icon-right"></i>
+											</span>
+										</a>
+									</li>
+									<li>
+										Складання рапортів
+										<a href="services_detail.html" class="button button-link button-primary-light-transparent with-arrow">
+											<span class="text">перейти до послуги</span>
+											<span class="button-icon">
+												<i class="icon icon-right"></i>
+											</span>
+										</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</li>
+					<!-- 11 -->
+					<li>
+						<div class="accordeon" data-accordeon>
+							<div class="accordeon-title">
+								<img src="img/service_military.svg" draggable="false" class="image-icon">
+								<h2 class="title">Зняття та скасування арешту</h2>
+							</div>
+							<div class="accordeon-inner">
+								<ul class="clear dotted-list">
+									<li>
+										Отримання відстрочки від мобілізації
+										<a href="services_detail.html" class="button button-link button-primary-light-transparent with-arrow">
+											<span class="text">перейти до послуги</span>
+											<span class="button-icon">
+												<i class="icon icon-right"></i>
+											</span>
+										</a>
+									</li>
+									<li>
+										Оскарження рішення ВЛК
+										<a href="services_detail.html" class="button button-link button-primary-light-transparent with-arrow">
+											<span class="text">перейти до послуги</span>
+											<span class="button-icon">
+												<i class="icon icon-right"></i>
+											</span>
+										</a>
+									</li>
+									<li>
+										Скасування наказу про призов
+										<a href="services_detail.html" class="button button-link button-primary-light-transparent with-arrow">
+											<span class="text">перейти до послуги</span>
+											<span class="button-icon">
+												<i class="icon icon-right"></i>
+											</span>
+										</a>
+									</li>
+									<li>
+										Постановка на військовий облік та зняття
+										<a href="services_detail.html" class="button button-link button-primary-light-transparent with-arrow">
+											<span class="text">перейти до послуги</span>
+											<span class="button-icon">
+												<i class="icon icon-right"></i>
+											</span>
+										</a>
+									</li>
+									<li>
+										Захист при звинуваченні в ухиленні від мобілізації
+										<a href="services_detail.html" class="button button-link button-primary-light-transparent with-arrow">
+											<span class="text">перейти до послуги</span>
+											<span class="button-icon">
+												<i class="icon icon-right"></i>
+											</span>
+										</a>
+									</li>
+									<li>
+										Виплати, пільги, компенсації
+										<a href="services_detail.html" class="button button-link button-primary-light-transparent with-arrow">
+											<span class="text">перейти до послуги</span>
+											<span class="button-icon">
+												<i class="icon icon-right"></i>
+											</span>
+										</a>
+									</li>
+									<li>
+										Розірвання контракту
+										<a href="services_detail.html" class="button button-link button-primary-light-transparent with-arrow">
+											<span class="text">перейти до послуги</span>
+											<span class="button-icon">
+												<i class="icon icon-right"></i>
+											</span>
+										</a>
+									</li>
+									<li>
+										Звільнення з лав ЗСУ за сімейними обставинами, хворобою
+										<a href="services_detail.html" class="button button-link button-primary-light-transparent with-arrow">
+											<span class="text">перейти до послуги</span>
+											<span class="button-icon">
+												<i class="icon icon-right"></i>
+											</span>
+										</a>
+									</li>
+									<li>
+										Отримання посвідчення «Учасника бойових дій»
+										<a href="services_detail.html" class="button button-link button-primary-light-transparent with-arrow">
+											<span class="text">перейти до послуги</span>
+											<span class="button-icon">
+												<i class="icon icon-right"></i>
+											</span>
+										</a>
+									</li>
+									<li>
+										Встановлення інвалідності для військових
+										<a href="services_detail.html" class="button button-link button-primary-light-transparent with-arrow">
+											<span class="text">перейти до послуги</span>
+											<span class="button-icon">
+												<i class="icon icon-right"></i>
+											</span>
+										</a>
+									</li>
+									<li>
+										Складання рапортів
+										<a href="services_detail.html" class="button button-link button-primary-light-transparent with-arrow">
+											<span class="text">перейти до послуги</span>
+											<span class="button-icon">
+												<i class="icon icon-right"></i>
+											</span>
+										</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</li>
+					<!-- 12 -->
+					<li>
+						<div class="accordeon" data-accordeon>
+							<div class="accordeon-title">
+								<img src="img/service_military.svg" draggable="false" class="image-icon">
+								<h2 class="title">Трудові спори</h2>
+							</div>
+							<div class="accordeon-inner">
+								<ul class="clear dotted-list">
+									<li>
+										Отримання відстрочки від мобілізації
+										<a href="services_detail.html" class="button button-link button-primary-light-transparent with-arrow">
+											<span class="text">перейти до послуги</span>
+											<span class="button-icon">
+												<i class="icon icon-right"></i>
+											</span>
+										</a>
+									</li>
+									<li>
+										Оскарження рішення ВЛК
+										<a href="services_detail.html" class="button button-link button-primary-light-transparent with-arrow">
+											<span class="text">перейти до послуги</span>
+											<span class="button-icon">
+												<i class="icon icon-right"></i>
+											</span>
+										</a>
+									</li>
+									<li>
+										Скасування наказу про призов
+										<a href="services_detail.html" class="button button-link button-primary-light-transparent with-arrow">
+											<span class="text">перейти до послуги</span>
+											<span class="button-icon">
+												<i class="icon icon-right"></i>
+											</span>
+										</a>
+									</li>
+									<li>
+										Постановка на військовий облік та зняття
+										<a href="services_detail.html" class="button button-link button-primary-light-transparent with-arrow">
+											<span class="text">перейти до послуги</span>
+											<span class="button-icon">
+												<i class="icon icon-right"></i>
+											</span>
+										</a>
+									</li>
+									<li>
+										Захист при звинуваченні в ухиленні від мобілізації
+										<a href="services_detail.html" class="button button-link button-primary-light-transparent with-arrow">
+											<span class="text">перейти до послуги</span>
+											<span class="button-icon">
+												<i class="icon icon-right"></i>
+											</span>
+										</a>
+									</li>
+									<li>
+										Виплати, пільги, компенсації
+										<a href="services_detail.html" class="button button-link button-primary-light-transparent with-arrow">
+											<span class="text">перейти до послуги</span>
+											<span class="button-icon">
+												<i class="icon icon-right"></i>
+											</span>
+										</a>
+									</li>
+									<li>
+										Розірвання контракту
+										<a href="services_detail.html" class="button button-link button-primary-light-transparent with-arrow">
+											<span class="text">перейти до послуги</span>
+											<span class="button-icon">
+												<i class="icon icon-right"></i>
+											</span>
+										</a>
+									</li>
+									<li>
+										Звільнення з лав ЗСУ за сімейними обставинами, хворобою
+										<a href="services_detail.html" class="button button-link button-primary-light-transparent with-arrow">
+											<span class="text">перейти до послуги</span>
+											<span class="button-icon">
+												<i class="icon icon-right"></i>
+											</span>
+										</a>
+									</li>
+									<li>
+										Отримання посвідчення «Учасника бойових дій»
+										<a href="services_detail.html" class="button button-link button-primary-light-transparent with-arrow">
+											<span class="text">перейти до послуги</span>
+											<span class="button-icon">
+												<i class="icon icon-right"></i>
+											</span>
+										</a>
+									</li>
+									<li>
+										Встановлення інвалідності для військових
+										<a href="services_detail.html" class="button button-link button-primary-light-transparent with-arrow">
+											<span class="text">перейти до послуги</span>
+											<span class="button-icon">
+												<i class="icon icon-right"></i>
+											</span>
+										</a>
+									</li>
+									<li>
+										Складання рапортів
+										<a href="services_detail.html" class="button button-link button-primary-light-transparent with-arrow">
+											<span class="text">перейти до послуги</span>
+											<span class="button-icon">
+												<i class="icon icon-right"></i>
+											</span>
+										</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</li>
+					<!-- 13 -->
+					<li>
+						<div class="accordeon" data-accordeon>
+							<div class="accordeon-title">
+								<img src="img/service_military.svg" draggable="false" class="image-icon">
+								<h2 class="title">Захист прав споживачів</h2>
+							</div>
+							<div class="accordeon-inner">
+								<ul class="clear dotted-list">
+									<li>
+										Отримання відстрочки від мобілізації
+										<a href="services_detail.html" class="button button-link button-primary-light-transparent with-arrow">
+											<span class="text">перейти до послуги</span>
+											<span class="button-icon">
+												<i class="icon icon-right"></i>
+											</span>
+										</a>
+									</li>
+									<li>
+										Оскарження рішення ВЛК
+										<a href="services_detail.html" class="button button-link button-primary-light-transparent with-arrow">
+											<span class="text">перейти до послуги</span>
+											<span class="button-icon">
+												<i class="icon icon-right"></i>
+											</span>
+										</a>
+									</li>
+									<li>
+										Скасування наказу про призов
+										<a href="services_detail.html" class="button button-link button-primary-light-transparent with-arrow">
+											<span class="text">перейти до послуги</span>
+											<span class="button-icon">
+												<i class="icon icon-right"></i>
+											</span>
+										</a>
+									</li>
+									<li>
+										Постановка на військовий облік та зняття
+										<a href="services_detail.html" class="button button-link button-primary-light-transparent with-arrow">
+											<span class="text">перейти до послуги</span>
+											<span class="button-icon">
+												<i class="icon icon-right"></i>
+											</span>
+										</a>
+									</li>
+									<li>
+										Захист при звинуваченні в ухиленні від мобілізації
+										<a href="services_detail.html" class="button button-link button-primary-light-transparent with-arrow">
+											<span class="text">перейти до послуги</span>
+											<span class="button-icon">
+												<i class="icon icon-right"></i>
+											</span>
+										</a>
+									</li>
+									<li>
+										Виплати, пільги, компенсації
+										<a href="services_detail.html" class="button button-link button-primary-light-transparent with-arrow">
+											<span class="text">перейти до послуги</span>
+											<span class="button-icon">
+												<i class="icon icon-right"></i>
+											</span>
+										</a>
+									</li>
+									<li>
+										Розірвання контракту
+										<a href="services_detail.html" class="button button-link button-primary-light-transparent with-arrow">
+											<span class="text">перейти до послуги</span>
+											<span class="button-icon">
+												<i class="icon icon-right"></i>
+											</span>
+										</a>
+									</li>
+									<li>
+										Звільнення з лав ЗСУ за сімейними обставинами, хворобою
+										<a href="services_detail.html" class="button button-link button-primary-light-transparent with-arrow">
+											<span class="text">перейти до послуги</span>
+											<span class="button-icon">
+												<i class="icon icon-right"></i>
+											</span>
+										</a>
+									</li>
+									<li>
+										Отримання посвідчення «Учасника бойових дій»
+										<a href="services_detail.html" class="button button-link button-primary-light-transparent with-arrow">
+											<span class="text">перейти до послуги</span>
+											<span class="button-icon">
+												<i class="icon icon-right"></i>
+											</span>
+										</a>
+									</li>
+									<li>
+										Встановлення інвалідності для військових
+										<a href="services_detail.html" class="button button-link button-primary-light-transparent with-arrow">
+											<span class="text">перейти до послуги</span>
+											<span class="button-icon">
+												<i class="icon icon-right"></i>
+											</span>
+										</a>
+									</li>
+									<li>
+										Складання рапортів
+										<a href="services_detail.html" class="button button-link button-primary-light-transparent with-arrow">
+											<span class="text">перейти до послуги</span>
+											<span class="button-icon">
+												<i class="icon icon-right"></i>
+											</span>
+										</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</section>
+		<!-- /main section -->
+
+		<!-- contact form -->
+		<section class="contact-section section spaced-large" id="contactForm">
+	<div class="container">
+		<div class="section section-dark mask-dark spaced-inner">
+			<div class="title-side">
+				<h4 class="point-subtitle subtitle">контактувати</h4>
+			</div>
+			<div class="contact-inner">
+				<div class="form-contact">
+					<div class="side">
+						<h2 class="section-title-large">Подати заявку</h2>
+						<div class="paragraph">Залиште заявку — і ми допоможемо вирішити вашу проблему швидко та ефективно!</div>
+					</div>
+					<div class="side">
+						<form action="javascript:void(0)" class="form">
+							<div class="form-group">
+								<input type="tel" class="input" placeholder="+380 (___) ___ __ __">
+							</div>
+							<button type="submit" class="button button-light button-arrow button-block full-sm">
+								<span class="text">Передзвоніть мені</span>
+								<span class="button-icon">
+									<i class="icon icon-right"></i>
+								</span>
+							</button>
+						</form>
+					</div>
+				</div>
+				<ul class="clear checked-list bordered-top">
+					<li>Широкий спектр послуг</li>
+					<li>Безкоштовна консультація</li>
+					<li>Надійність</li>
+					<li>Ефективність</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</section>
+		<!-- / contact form -->
+
+		<!-- map -->
+		<div class="map-container">
+		<!-- data attributes changable in html -->
+		<div id="map" class="map"
+			data-position="50.450001, 30.523333"
+			data-zoom="16"
+			data-title="Kyiv, Ukraine"
+		></div>
+		<!-- / map -->
 	</main>
 	<!-- footer -->
 	<footer class="main-footer section-dark">
