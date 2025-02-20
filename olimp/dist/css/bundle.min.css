@@ -854,6 +854,7 @@ img.adaptive {
   }
 }
 @font-face {
+  font-display: swap;
   font-family: "Proxima Nova Bl";
   src: url(../fonts/proximanova/ProximaNova-Black.eot);
   src: local("Proxima Nova Black"),local("ProximaNova-Black"),url(../fonts/proximanova/ProximaNova-Black.eot?#iefix) format("embedded-opentype"),url(../fonts/proximanova/ProximaNova-Black.woff2) format("woff2"),url(../fonts/proximanova/ProximaNova-Black.woff) format("woff"),url(../fonts/proximanova/ProximaNova-Black.ttf) format("truetype");
@@ -861,6 +862,7 @@ img.adaptive {
   font-style: normal
 }
 @font-face {
+  font-display: swap;
   font-family: "Proxima Nova Th";
   src: url(../fonts/proximanova/ProximaNova-Extrabld.eot);
   src: local("Proxima Nova Extrabold"),local("ProximaNova-Extrabld"),url(../fonts/proximanova/ProximaNova-Extrabld.eot?#iefix) format("embedded-opentype"),url(../fonts/proximanova/ProximaNova-Extrabld.woff2) format("woff2"),url(../fonts/proximanova/ProximaNova-Extrabld.woff) format("woff"),url(../fonts/proximanova/ProximaNova-Extrabld.ttf) format("truetype");
@@ -868,6 +870,7 @@ img.adaptive {
   font-style: normal
 }
 @font-face {
+  font-display: swap;
   font-family: "Proxima Nova Lt";
   src: url(../fonts/proximanova/ProximaNova-SemiboldIt.eot);
   src: local("Proxima Nova Semibold Italic"),local("ProximaNova-SemiboldIt"),url(../fonts/proximanova/ProximaNova-SemiboldIt.eot?#iefix) format("embedded-opentype"),url(../fonts/proximanova/ProximaNova-SemiboldIt.woff2) format("woff2"),url(../fonts/proximanova/ProximaNova-SemiboldIt.woff) format("woff"),url(../fonts/proximanova/ProximaNova-SemiboldIt.ttf) format("truetype");
@@ -875,6 +878,7 @@ img.adaptive {
   font-style: italic
 }
 @font-face {
+  font-display: swap;
   font-family: "Proxima Nova Th";
   src: url(../fonts/proximanova/ProximaNovaT-Thin.eot);
   src: local("Proxima Nova Thin"),local("ProximaNovaT-Thin"),url(../fonts/proximanova/ProximaNovaT-Thin.eot?#iefix) format("embedded-opentype"),url(../fonts/proximanova/ProximaNovaT-Thin.woff2) format("woff2"),url(../fonts/proximanova/ProximaNovaT-Thin.woff) format("woff"),url(../fonts/proximanova/ProximaNovaT-Thin.ttf) format("truetype");
@@ -882,6 +886,7 @@ img.adaptive {
   font-style: normal
 }
 @font-face {
+  font-display: swap;
   font-family: "Proxima Nova Lt";
   src: url(../fonts/proximanova/ProximaNova-Light.eot);
   src: local("Proxima Nova Light"),local("ProximaNova-Light"),url(../fonts/proximanova/ProximaNova-Light.eot?#iefix) format("embedded-opentype"),url(../fonts/proximanova/ProximaNova-Light.woff2) format("woff2"),url(../fonts/proximanova/ProximaNova-Light.woff) format("woff"),url(../fonts/proximanova/ProximaNova-Light.ttf) format("truetype");
@@ -889,6 +894,7 @@ img.adaptive {
   font-style: normal
 }
 @font-face {
+  font-display: swap;
   font-family: "Proxima Nova Bl";
   src: url(../fonts/proximanova/ProximaNova-BlackIt.eot);
   src: local("Proxima Nova Black Italic"),local("ProximaNova-BlackIt"),url(../fonts/proximanova/ProximaNova-BlackIt.eot?#iefix) format("embedded-opentype"),url(../fonts/proximanova/ProximaNova-BlackIt.woff2) format("woff2"),url(../fonts/proximanova/ProximaNova-BlackIt.woff) format("woff"),url(../fonts/proximanova/ProximaNova-BlackIt.ttf) format("truetype");
@@ -896,6 +902,7 @@ img.adaptive {
   font-style: italic
 }
 @font-face {
+  font-display: swap;
   font-family: "Proxima Nova Rg";
   src: url(../fonts/proximanova/ProximaNova-BoldIt.eot);
   src: local("Proxima Nova Bold Italic"),local("ProximaNova-BoldIt"),url(../fonts/proximanova/ProximaNova-BoldIt.eot?#iefix) format("embedded-opentype"),url(../fonts/proximanova/ProximaNova-BoldIt.woff2) format("woff2"),url(../fonts/proximanova/ProximaNova-BoldIt.woff) format("woff"),url(../fonts/proximanova/ProximaNova-BoldIt.ttf) format("truetype");
@@ -903,6 +910,7 @@ img.adaptive {
   font-style: italic
 }
 @font-face {
+  font-display: swap;
   font-family: "Proxima Nova Th";
   src: url(../fonts/proximanova/ProximaNova-ThinIt.eot);
   src: local("Proxima Nova Thin Italic"),local("ProximaNova-ThinIt"),url(../fonts/proximanova/ProximaNova-ThinIt.eot?#iefix) format("embedded-opentype"),url(../fonts/proximanova/ProximaNova-ThinIt.woff2) format("woff2"),url(../fonts/proximanova/ProximaNova-ThinIt.woff) format("woff"),url(../fonts/proximanova/ProximaNova-ThinIt.ttf) format("truetype");
@@ -910,6 +918,7 @@ img.adaptive {
   font-style: italic
 }
 @font-face {
+  font-display: swap;
   font-family: "Proxima Nova Rg";
   src: url(../fonts/proximanova/ProximaNova-Bold.eot);
   src: local("Proxima Nova Bold"),local("ProximaNova-Bold"),url(../fonts/proximanova/ProximaNova-Bold.eot?#iefix) format("embedded-opentype"),url(../fonts/proximanova/ProximaNova-Bold.woff) format("woff"),url(../fonts/proximanova/ProximaNova-Bold.ttf) format("truetype");
@@ -917,6 +926,7 @@ img.adaptive {
   font-style: normal
 }
 @font-face {
+  font-display: swap;
   font-family: "Proxima Nova Rg";
   src: url(../fonts/proximanova/ProximaNova-RegularIt.eot);
   src: local("Proxima Nova Regular Italic"),local("ProximaNova-RegularIt"),url(../fonts/proximanova/ProximaNova-RegularIt.eot?#iefix) format("embedded-opentype"),url(../fonts/proximanova/ProximaNova-RegularIt.woff2) format("woff2"),url(../fonts/proximanova/ProximaNova-RegularIt.woff) format("woff"),url(../fonts/proximanova/ProximaNova-RegularIt.ttf) format("truetype");
@@ -924,6 +934,7 @@ img.adaptive {
   font-style: italic
 }
 @font-face {
+  font-display: swap;
   font-family: "Proxima Nova Th";
   src: url(../fonts/proximanova/ProximaNova-ExtrabldIt.eot);
   src: local("Proxima Nova Extrabold Italic"),local("ProximaNova-ExtrabldIt"),url(../fonts/proximanova/ProximaNova-ExtrabldIt.eot?#iefix) format("embedded-opentype"),url(../fonts/proximanova/ProximaNova-ExtrabldIt.woff2) format("woff2"),url(../fonts/proximanova/ProximaNova-ExtrabldIt.woff) format("woff"),url(../fonts/proximanova/ProximaNova-ExtrabldIt.ttf) format("truetype");
@@ -931,6 +942,7 @@ img.adaptive {
   font-style: italic
 }
 @font-face {
+  font-display: swap;
   font-family: "Proxima Nova Rg";
   src: url(../fonts/proximanova/ProximaNova-Regular.eot);
   src: local("Proxima Nova Regular"),local("ProximaNova-Regular"),url(../fonts/proximanova/ProximaNova-Regular.eot?#iefix) format("embedded-opentype"),url(../fonts/proximanova/ProximaNova-Regular.woff) format("woff"),url(../fonts/proximanova/ProximaNova-Regular.ttf) format("truetype");
@@ -938,6 +950,7 @@ img.adaptive {
   font-style: normal
 }
 @font-face {
+  font-display: swap;
   font-family: "Proxima Nova Lt";
   src: url(../fonts/proximanova/ProximaNova-LightIt.eot);
   src: local("Proxima Nova Light Italic"),local("ProximaNova-LightIt"),url(../fonts/proximanova/ProximaNova-LightIt.eot?#iefix) format("embedded-opentype"),url(../fonts/proximanova/ProximaNova-LightIt.woff2) format("woff2"),url(../fonts/proximanova/ProximaNova-LightIt.woff) format("woff"),url(../fonts/proximanova/ProximaNova-LightIt.ttf) format("truetype");
@@ -945,6 +958,7 @@ img.adaptive {
   font-style: italic
 }
 @font-face {
+  font-display: swap;
   font-family: "Proxima Nova Lt";
   src: url(../fonts/proximanova/ProximaNova-Semibold.eot);
   src: local("Proxima Nova Semibold"),local("ProximaNova-Semibold"),url(../fonts/proximanova/ProximaNova-Semibold.eot?#iefix) format("embedded-opentype"),url(../fonts/proximanova/ProximaNova-Semibold.woff2) format("woff2"),url(../fonts/proximanova/ProximaNova-Semibold.woff) format("woff"),url(../fonts/proximanova/ProximaNova-Semibold.ttf) format("truetype");
@@ -2662,7 +2676,6 @@ img.adaptive {
   padding-bottom: 25px;
   padding-right: 16px;
   position: relative;
-  color: #252324;
   font-size: var(--subtitle-font-size);
   font-weight: 600
 }
@@ -2676,7 +2689,12 @@ img.adaptive {
   top: 50%;
   -webkit-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
-  transform: translateY(-50%)
+  transform: translateY(-50%);
+  font-weight: 400
+}
+.accordeon-list .accordeon-title:after {
+  font-size: 14px;
+  color: #3a3430
 }
 .accordeon-list .accordeon-title .image-icon {
   position: absolute;
@@ -2686,8 +2704,88 @@ img.adaptive {
   -ms-transform: translateY(-50%);
   transform: translateY(-50%)
 }
+.accordeon-list .accordeon-title .title {
+  display: inline-block;
+  position: relative;
+  color: #252324
+}
+.accordeon-list .accordeon-title .title:after {
+  content: "";
+  bottom: 10px;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  position: absolute;
+  -webkit-transition: .2s;
+  transition: .2s;
+  background-color: #3c2e25;
+  -webkit-transform: scaleX(.6);
+  -ms-transform: scaleX(.6);
+  transform: scaleX(.6);
+  opacity: 0
+}
+.accordeon-list .accordeon-title:hover .title {
+  color: #3c2e25
+}
+.accordeon-list .accordeon-title:hover .title:after {
+  -webkit-transform: scaleX(1);
+  -ms-transform: scaleX(1);
+  transform: scaleX(1);
+  opacity: 1
+}
 .accordeon-list .accordeon-inner {
-  padding-left: 320px
+  padding-left: 320px;
+  padding-bottom: 48px
+}
+.accordeon-list .accordeon-inner .dotted-list li {
+  position: relative;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  -webkit-transition: color .2s;
+  transition: color .2s
+}
+.accordeon-list .accordeon-inner .dotted-list li a.button-link {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  opacity: 0
+}
+.accordeon-list .accordeon-inner .dotted-list li:hover {
+  color: #252324
+}
+.accordeon-list .accordeon-inner .dotted-list li:hover a {
+  opacity: 1
+}
+.accordeon-list .accordeon.active .accordeon-title:after {
+  color: #977767
+}
+.accordeon-list .accordeon.active .title {
+  color: #3c2e25
+}
+.accordeon-list .accordeon.active .title:after {
+  -webkit-transform: scaleX(1);
+  -ms-transform: scaleX(1);
+  transform: scaleX(1);
+  opacity: 1
+}
+.dotted-list li {
+  position: relative;
+  padding-left: 24px;
+  color: #3c2e25;
+  font-size: var(--font-size)
+}
+.dotted-list li:before {
+  content: "";
+  position: absolute;
+  height: 4px;
+  width: 4px;
+  border-radius: 50%;
+  background-color: #977767;
+  left: 0;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%)
 }
 @media (max-width:1199px) {
   .counter-list {
@@ -4185,6 +4283,46 @@ img.adaptive {
 .section li:first-child + * + * + * + * + * + * + * + * + li {
   -webkit-animation-delay: .45s;
   animation-delay: .45s
+}
+.section .slider-item:first-child + * + * + * + * + * + * + * + * + * + li,
+.section li:first-child + * + * + * + * + * + * + * + * + * + li {
+  -webkit-animation-delay: .5s;
+  animation-delay: .5s
+}
+.section .slider-item:first-child + * + * + * + * + * + * + * + * + * + * + li,
+.section li:first-child + * + * + * + * + * + * + * + * + * + * + li {
+  -webkit-animation-delay: .55s;
+  animation-delay: .55s
+}
+.section .slider-item:first-child + * + * + * + * + * + * + * + * + * + * + * + li,
+.section li:first-child + * + * + * + * + * + * + * + * + * + * + * + li {
+  -webkit-animation-delay: .6s;
+  animation-delay: .6s
+}
+.section .slider-item:first-child + * + * + * + * + * + * + * + * + * + * + * + * + li,
+.section li:first-child + * + * + * + * + * + * + * + * + * + * + * + * + li {
+  -webkit-animation-delay: .65s;
+  animation-delay: .65s
+}
+.section .slider-item:first-child + * + * + * + * + * + * + * + * + * + * + * + * + * + li,
+.section li:first-child + * + * + * + * + * + * + * + * + * + * + * + * + * + li {
+  -webkit-animation-delay: .7s;
+  animation-delay: .7s
+}
+.section .slider-item:first-child + * + * + * + * + * + * + * + * + * + * + * + * + * + * + li,
+.section li:first-child + * + * + * + * + * + * + * + * + * + * + * + * + * + * + li {
+  -webkit-animation-delay: .75s;
+  animation-delay: .75s
+}
+.section .slider-item:first-child + * + * + * + * + * + * + * + * + * + * + * + * + * + * + * + li,
+.section li:first-child + * + * + * + * + * + * + * + * + * + * + * + * + * + * + * + li {
+  -webkit-animation-delay: .8s;
+  animation-delay: .8s
+}
+.section .slider-item:first-child + * + * + * + * + * + * + * + * + * + * + * + * + * + * + * + * + li,
+.section li:first-child + * + * + * + * + * + * + * + * + * + * + * + * + * + * + * + * + li {
+  -webkit-animation-delay: .85s;
+  animation-delay: .85s
 }
 @-webkit-keyframes fade-in-animation {
   0% {

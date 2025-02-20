@@ -17,6 +17,6 @@ document.addEventListener('DOMContentLoaded', function(){
 		}
 	}
 
-	inputSearch.addEventListener('keydown', onSearchKeyDown);
+	inputSearch.addEventListener('keydown', onSearchKeyDown, {passive: true});
 });
 

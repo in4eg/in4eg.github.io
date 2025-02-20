@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', function(){
 		Array.prototype.forEach.call(document.querySelectorAll(".section"), function(section){
 			setDetectSectionAnimation(section);
 		});
-	});
+	}, {passive: true});
 
 	// on load
 	Array.prototype.forEach.call(document.querySelectorAll(".section"), function(section){

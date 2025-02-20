@@ -210,7 +210,7 @@ document.addEventListener("DOMContentLoaded", function() {
 			escapeContainer.addEventListener('mouseleave', function(){
 				tabsContainer.classList.remove(ACTIVE_MENU_CLASS);
 				headerContainer.classList.remove(ACTIVE_HEADER_CLASS);
-			});
+			}, {passive: true});
 		};
 
 		let tabs = selectAll(`${targetId} .menu-tab`);
@@ -245,7 +245,7 @@ document.addEventListener("DOMContentLoaded", function() {
 				let targetIndex = button.dataset.tabHover;
 				hideAll(tabs);
 				show(tabs, targetIndex);
-			});
+			}, {passive: true});
 
 			button.addEventListener('click', function(e){
 				if (window.innerWidth >= 1200) return;
@@ -268,7 +268,7 @@ document.addEventListener("DOMContentLoaded", function() {
 				show(tabs, targetIndex);
 				navigation.classList.add(TOUCH_ACTIVE_MENU_CLASS);
 				tabsContainer.classList.add(TOUCH_ACTIVE_MENU_CLASS);
-			});
+			}, {passive: true});
 		};
 
 
@@ -295,7 +295,7 @@ document.addEventListener("DOMContentLoaded", function() {
 				headerContainer.classList.remove(ACTIVE_HEADER_CLASS);
 				navigation.classList.remove(TOUCH_ACTIVE_MENU_CLASS);
 				tabsContainer.classList.remove(TOUCH_ACTIVE_MENU_CLASS);
-			});
+			}, {passive: true});
 		}
 
 	}
@@ -321,7 +321,7 @@ document.addEventListener('DOMContentLoaded', function(){
 		}
 	}
 
-	inputSearch.addEventListener('keydown', onSearchKeyDown);
+	inputSearch.addEventListener('keydown', onSearchKeyDown, {passive: true});
 });
 
 
@@ -342,7 +342,7 @@ document.addEventListener('DOMContentLoaded', function(){
 		Array.prototype.forEach.call(document.querySelectorAll(".section"), function(section){
 			setDetectSectionAnimation(section);
 		});
-	});
+	}, {passive: true});
 
 	// on load
 	Array.prototype.forEach.call(document.querySelectorAll(".section"), function(section){
