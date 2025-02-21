@@ -10,6 +10,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	const TOUCH_SELECTED_MENU_CLASS = 'touch-offset';
 
 	const headerContainer = document.getElementById('mainHeader');
+	const mainNavigationContainer = document.getElementById('mainNavigation');
 
 	let select = function(selector, parent){
 		return (parent || document).querySelector(selector);
@@ -92,33 +93,40 @@ document.addEventListener("DOMContentLoaded", function() {
 			}, {passive: true});
 		};
 
+		let removeActiveClasses = function(){
+			tabsContainer.classList.remove(ACTIVE_MENU_CLASS);
+			headerContainer.classList.remove(ACTIVE_HEADER_CLASS);
+			navigation.classList.remove(TOUCH_ACTIVE_MENU_CLASS);
+			tabsContainer.classList.remove(TOUCH_ACTIVE_MENU_CLASS);
+		}
 
 		let backButtons = selectAll(`.back-button`);
 		for (let i = 0; i < backButtons.length; i++) {
 			let backButton = backButtons[i];
 			backButton.addEventListener('touchstart', function(e){
-				if (window.innerWidth >= 769) return;
+				if (window.innerWidth >= 1200) return;
 				e.preventDefault();
 				e.stopPropagation();
 				e.stopImmediatePropagation();
-				tabsContainer.classList.remove(ACTIVE_MENU_CLASS);
-				headerContainer.classList.remove(ACTIVE_HEADER_CLASS);
-				navigation.classList.remove(TOUCH_ACTIVE_MENU_CLASS);
-				tabsContainer.classList.remove(TOUCH_ACTIVE_MENU_CLASS);
-			});
+				removeActiveClasses();
+			}, {passive: true});
 
 			backButton.addEventListener('click', function(e){
-				if (window.innerWidth >= 769) return;
-				e.preventDefault();
-				e.stopImmediatePropagation();
-				e.stopPropagation();
-				tabsContainer.classList.remove(ACTIVE_MENU_CLASS);
-				headerContainer.classList.remove(ACTIVE_HEADER_CLASS);
-				navigation.classList.remove(TOUCH_ACTIVE_MENU_CLASS);
-				tabsContainer.classList.remove(TOUCH_ACTIVE_MENU_CLASS);
+				if (window.innerWidth >= 1200) return;
+				removeActiveClasses();
 			}, {passive: true});
 		}
 
+		document.body.addEventListener(`click`, function(e){
+			if (e.target.closest('[data-toggle-element="#mainNavigation"]')) return;
+			if (e.target.closest('#mainNavigation')) return;
+			if (e.target.closest('#menuResult')) return;
+
+			if (tabsContainer.classList.contains(ACTIVE_MENU_CLASS)) {
+				removeActiveClasses();
+			}
+		}, {passive: true});
 	}
 
 });
+

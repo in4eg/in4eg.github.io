@@ -2744,6 +2744,9 @@ img.adaptive {
   -webkit-transition: color .2s;
   transition: color .2s
 }
+.accordeon-list .accordeon-inner .dotted-list li a:not(.button) {
+  display: block
+}
 .accordeon-list .accordeon-inner .dotted-list li a.button-link {
   position: absolute;
   right: 0;
@@ -2752,6 +2755,9 @@ img.adaptive {
 }
 .accordeon-list .accordeon-inner .dotted-list li:hover {
   color: #252324
+}
+.accordeon-list .accordeon-inner .dotted-list li:hover a:not(.button) {
+  text-decoration: underline
 }
 .accordeon-list .accordeon-inner .dotted-list li:hover a {
   opacity: 1
@@ -3691,6 +3697,9 @@ img.adaptive {
   .main-header.light .menu-button.active .lines {
     background-color: transparent
   }
+  .main-header.light.menu-active {
+    background-color: transparent
+  }
   .main-header.dark .menu-button {
     border: 1px solid rgba(37,35,36,.3)
   }
@@ -3713,6 +3722,9 @@ img.adaptive {
   .main-header.dark .menu-button.active .lines {
     background-color: transparent
   }
+  .main-header.dark.menu-active {
+    background-color: transparent
+  }
   .main-header .header-navigation {
     display: none;
     padding: 25px;
@@ -3722,7 +3734,7 @@ img.adaptive {
     z-index: 12;
     height: 100vh;
     overflow: auto;
-    width: 50%;
+    width: calc(50% + 40px);
     -webkit-transform: translateY(-100%);
     -ms-transform: translateY(-100%);
     transform: translateY(-100%);
@@ -3816,12 +3828,16 @@ img.adaptive {
   }
   .main-header .action-result.menu-result {
     position: fixed;
-    left: calc(50% - 20px);
+    left: 0;
     top: 0;
     width: calc(50% + 20px);
     max-height: 100%;
     height: 100%;
-    border-left: 1px solid
+    -webkit-transition: .2s;
+    transition: .2s;
+    -webkit-transform: translateX(-100%);
+    -ms-transform: translateX(-100%);
+    transform: translateX(-100%)
   }
   .main-header .action-result.menu-result .menu-tab .submenu-cover {
     display: block;
@@ -3846,19 +3862,28 @@ img.adaptive {
     padding-left: 14px;
     padding-right: 14px
   }
+  .main-header .action-result.menu-result .back-button {
+    display: block;
+    padding-left: 25px;
+    margin-top: 40px;
+    width: 100%;
+    text-align: left;
+    border: 1px solid;
+    border-radius: 100px
+  }
   .main-header.light .header-navigation {
     color: #f5f3f1;
     background-color: #252324
   }
-  .main-header.light .action-result.menu-result {
-    border-left-color: rgba(245,243,241,.3)
+  .main-header.light .action-result.menu-result .back-button {
+    border-color: rgba(255,255,255,.2)
   }
   .main-header.dark .header-navigation {
     color: #252324;
     background-color: #f4f3f1
   }
-  .main-header.dark .action-result.menu-result {
-    border-left-color: 1px solid rgba(37,35,36,.3)
+  .main-header.dark .action-result.menu-result .back-button {
+    border-color: rgba(60,46,37,.2)
   }
 }
 @media (min-width:769px) {
@@ -3908,11 +3933,7 @@ img.adaptive {
     padding-top: 89px
   }
   .main-header .action-result.menu-result {
-    border-left: 0;
     width: 100%;
-    left: 0;
-    -webkit-transition: .2s;
-    transition: .2s;
     -webkit-transform: translateX(100%);
     -ms-transform: translateX(100%);
     transform: translateX(100%);
@@ -3920,21 +3941,6 @@ img.adaptive {
   }
   .main-header .action-result.menu-result .menu-tab .header-link {
     margin-bottom: 20px
-  }
-  .main-header .action-result.menu-result .back-button {
-    display: block;
-    padding-left: 25px;
-    margin-top: 40px;
-    width: 100%;
-    text-align: left;
-    border: 1px solid;
-    border-radius: 100px
-  }
-  .main-header.light .action-result.menu-result .back-button {
-    border-color: rgba(255,255,255,.2)
-  }
-  .main-header.dark .action-result.menu-result .back-button {
-    border-color: rgba(60,46,37,.2)
   }
 }
 @media (max-width:380px) {

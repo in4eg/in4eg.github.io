@@ -61,4 +61,16 @@ document.addEventListener('DOMContentLoaded', function(){
 		setSearchPotion(toggleButton);
 	})
 
+	const mainNavigationContainer = document.getElementById('mainNavigation');
+
+	document.body.addEventListener(`click`, function(e){
+		if (e.target.closest('[data-toggle-element="#mainNavigation"]')) return;
+		if (e.target.closest('#mainNavigation')) return;
+		if (e.target.closest('#menuResult')) return;
+		if (mainNavigationContainer.classList.contains('active')) {
+			document.querySelector('[data-toggle-element="#mainNavigation"]').classList.remove('active');
+			mainNavigationContainer.classList.remove('active');
+		}
+	}, {passive: true});
+
 });
