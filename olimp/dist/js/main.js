@@ -375,7 +375,7 @@ document.addEventListener('DOMContentLoaded', function(){
 	}, 10)
 });
 window.addEventListener('load', function(){
-	if (document.querySelector('.glider')) {
+	if (document.querySelector('.glider') && window.Glider) {
 		new Glider(document.querySelector('.glider'), {
 			draggable: true,
 			arrows: {
