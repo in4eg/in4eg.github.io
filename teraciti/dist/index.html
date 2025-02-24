@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="ua">
+<head>
+
+	<meta charset="UTF-8">
+	<title>Teracity :: Main Page</title>
+
+	<link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
+	<link rel="manifest" href="/favicon/site.webmanifest">
+	<link rel="mask-icon" href="/favicon/safari-pinned-tab.svg" color="#5bbad5">
+	<meta name="msapplication-TileColor" content="#ffc40d">
+	<meta name="theme-color" content="#ffffff">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+	<meta name="format-detection" content="telephone=no">
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Wix+Madefor+Display:wght@400..800&display=swap" rel="stylesheet">
+
+
+	<link rel="stylesheet" href="css/bundle.min.css">
+
+</head>
+<body>
+	<!-- header -->
+	<script>
+	var apiKey = 'AIzaSyCN5lnM5tvkscMcdvMCu8LTuCvdHKv2iCM';
+</script>
+
+<header class="main-header" id="mainHeader">
+	<div class="container">
+		<div class="header-inner">
+			<a href="index.html" class="logo">
+				<img src="img/teracity_logo_horisontal_light.png" class="logo-image light">
+				<img src="img/teracity_logo_horisontal.png" class="logo-image dark">
+			</a>
+			<div class="navigation-inner">
+				<div class="main-navigation" id="mainNavigation">
+					<nav class="main-nav">
+						<ul class="link-list clear">
+							<li class="item">
+								<a href="index.html" class="link active"><span class="text">Головна</span></a>
+							</li>
+							<li class="item">
+								<a href="catalog.html" class="link"><span class="text">Об'єкти</span></a>
+							</li>
+							<li class="item">
+								<a href="contacts.html" class="link"><span class="text">Контакти</span></a>
+							</li>
+						</ul>
+					</nav>
+					<div class="dropdown-select language-select">
+						<div class="header">
+							<div class="item"><img src="img/lang_ukr.png" alt="ukr"></div>
+						</div>
+						<div class="inner">
+							<div class="item"><img src="img/lang_eng.png" alt="eng"></div>
+						</div>
+					</div>
+				</div>
+				<div class="align-right mobile-panel">
+					<button class="button button-menu menu-toggle" data-toggle="mainNavigation">
+						<span></span>
+					</button>
+				</div>
+				<div class="login-info">
+					<button class="button button-primary" type="button" data-call="#loginPopup">
+						Авторизація
+						<span class="fade"></span>
+					</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</header>
+
+	<main class="page-main" id="pageMain">
+		<!-- banner -->
+		<section class="main-banner">
+			<div class="banner-caption">
+				<div class="container">
+					<div class="verticaly-middle">
+						<div class="inner align-center">
+							<div class="subtitle">Ваш надійний партнер</div>
+							<h1 class="main-title">лідер на ринку нерухомості</h1>
+							<a href="catalog.html" class="button button-primary button-large">
+								<span class="text">Дивитись все</span>
+								<span class="fader"></span>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- / banner -->
+
+		<!-- form -->
+		<section class="section large-spaced bordered" id="contact">
+			<div class="container">
+				<div class="section-subheader">Будьмо на зв'язку</div>
+				<h2 class="spaced-bottom-large">Залишайте заявку</h2>
+				<!-- contact form -->
+				<form action="javascript:void(0);" class="form validate-form">
+	<div class="row">
+		<div class="col-xs-12 col-sm-6">
+			<div class="row">
+				<div class="col-xs-12 col-ms-6 spaced-xs">
+					<div class="input-cover">
+						<label class="label" for="name">Ім'я</label>
+						<input type="text" class="input" id="name" data-minlength="2">
+						<div class="error-alert">Вкажіть ім'я повністю</div>
+					</div>
+				</div>
+				<div class="col-xs-12 col-ms-6 spaced-xs">
+					<div class="input-cover">
+						<label class="label" for="secondName">Прізвище</label>
+						<input type="text" class="input" id="secondName" data-minlength="2">
+						<div class="error-alert">Вкажіть прізвище повністю</div>
+					</div>
+				</div>
+				<div class="col-xs-12 spaced-xs">
+					<div class="input-cover">
+						<label class="label" for="email">Email</label>
+						<input type="email" class="input email" id="email" data-validate="email">
+						<div class="error-alert">Електронна адреса введена не вірно</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="col-xs-12 col-sm-6">
+			<div class="input-cover">
+				<label class="label" for="message">Повідомлення</label>
+				<textarea type="textarea" class="textarea" id="message" data-minlength="10"></textarea>
+				<div class="error-alert">Введіть повідомлення, мін 10 символів</div>
+			</div>
+			<button class="button button-primary button-block" type="submit">
+				Відправити
+				<span class="fade"></span>
+			</button>
+		</div>
+	</div>
+</form>
+
+				</div>
+			</div>
+		</section>
+		<!-- / form -->
+
+		<div class="colored-section">
+			<div class="container">
+				<div class="verticaly-middle">
+					<div class="inner">
+						<div class="counters">
+							<div class="item">
+								<div class="digit" data-counter="650,1000"><span>650</span></div>
+								<div class="text">об'єктів</div>
+							</div>
+							<div class="item">
+								<div class="digit" data-counter="17,1000"><span>17</span></div>
+								<div class="text">років на ринку</div>
+							</div>
+							<div class="item">
+								<div class="digit" data-counter="80,1000"><span>80</span></div>
+								<div class="text">фахівців</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- social -->
+		<section class="section large-spaced">
+			<div class="container">
+				<div class="section-subheader">Завжди на зв'язку</div>
+				<h2 class="spaced-bottom-large">Наші контакти</h2>
+				<ul class="contact-list clear">
+					<li class="list-item">
+						<i class="icon icon-location"></i>
+						<div class="info">
+							<a href="https://www.google.com.ua/maps/preview" class="link" target="_blank" rel="noopener noreferrer">
+								Україна, м. Київ<br>
+								вул. Хрещатик, буд. 255, офіс 7
+							</a>
+						</div>
+					</li>
+					<li class="list-item">
+						<i class="icon icon-phone"></i>
+						<div class="info">
+							<a href="tel:+3801234567" class="link">+380 123 45 67</a>
+						</div>
+					</li>
+					<li class="list-item">
+						<i class="icon icon-alternate_email"></i>
+						<div class="info">
+							<a href="mailto:info@mysite.com" class="link">info@mysite.com</a>
+						</div>
+					</li>
+				</ul>
+				<div class="social-section">
+					<div class="title">
+						Приєднуйся до нас та слідкуй за останніми новинами у соціальних мережах:
+					</div>
+					<ul class="link-list clear">
+						<li class="item">
+							<a href="https://www.facebook.com/" target="_blank" class="icon-link" rel="noopener noreferrer">
+								<i class="icon icon-facebook1"></i>
+							</a>
+						</li>
+						<li class="item">
+							<a href="thttps://x.com" target="_blank" class="icon-link" rel="noopener noreferrer">
+								<i class="icon icon-x-twitter"></i>
+							</a>
+						</li>
+						<li class="item">
+							<a href="https://www.linkedin.com" target="_blank" class="icon-link" rel="noopener noreferrer">
+								<i class="icon icon-linkedin"></i>
+							</a>
+						</li>
+						<li class="item">
+							<a href="https://www.instagram.com/" target="_blank" class="icon-link" rel="noopener noreferrer">
+								<i class="icon icon-instagram"></i>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</section>
+		<!-- social -->
+	</main>
+
+	<!-- map -->
+	<div class="map-container">
+	<!-- data attributes changable in html -->
+	<div id="map" class="map"
+		data-position="50.450001, 30.523333"
+		data-zoom="16"
+		data-title="Kyiv, Ukraine"
+	></div>
+</div>
+
+	<!-- popup -->
+	<div id="loginPopup" class="popup rounded-card">
+	<div class="inner">
+		<button type="button" class="close-popup button">&times;</button>
+		<div class="header">Авторизація</div>
+		<div class="main">
+			<!-- login form -->
+			<form action="" class="form validate-form">
+				<div class="input-cover">
+					<label class="label" for="phone">Логін <sup>*</sup></label>
+					<input type="tel" class="input phone" id="phone" data-mask="+38 (000) 000-00-00" placeholder="+38 (000) 000-00-00">
+					<div class="error-alert">Вкажіть номер телефону</div>
+				</div>
+				<div class="input-cover">
+					<label class="label" for="password">Пароль<sup>*</sup></label>
+					<input type="password" class="input" id="password" data-minlength="5" autocomplete>
+					<div class="error-alert">Вкажіть пароль (мін 5 символів)</div>
+				</div>
+				<button class="button button-primary button-block" type="submit">
+					Відправити
+					<span class="fade"></span>
+				</button>
+			</form>
+		</div>
+	</div>
+</div>
+
+	<!-- footer -->
+	<footer class="main-footer">
+	<div class="container">
+		<div class="footer-inner">
+			<div class="logo-cover">
+				<a href="index.html" class="logo">
+					<img src="img/teracity_logo_horisontal_light.png" alt="logo">
+				</a>
+			</div>
+			<div class="contacts">
+				<a href="mailto:info@mysite.com" class="link">info@mysite.com</a>
+			</div>
+			<div class="copyright">&copy; Teracity, 2024</div>
+			<!-- scroll to top -->
+			<a href="#pageMain" data-scrollto="#pageMain" class="top-link button square-button">
+				<i class="icon icon-top"></i>
+				<span class="fade"></span>
+			</a>
+			<!-- / scroll to top -->
+		</div>
+	</div>
+</footer>
+
+	<script src="js/lib/jquery.min.js"></script>
+	<!-- map -->
+	<script>
+		var script = document.createElement('script');
+		script.src = "https://maps.googleapis.com/maps/api/js?key="+apiKey+"&callback=initMap&v=weekly";
+		document.getElementsByTagName('script')[0].parentNode.appendChild(script);
+	</script>
+	<!-- bundle -->
+	<script src="js/main.js"></script>
+
+</body>
+</html>
