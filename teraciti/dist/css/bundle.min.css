@@ -5635,7 +5635,12 @@ html.with-fancybox body.hide-scrollbar {
   .main-header .language-select {
     padding-right: 0;
     display: inline-block;
-    background-color: rgba(253,253,251,.1)
+    background-color: rgba(253,253,251,.1);
+    opacity: 0;
+    -webkit-transition: .2s opacity;
+    transition: .2s opacity;
+    -webkit-transition-delay: .2s;
+    transition-delay: .2s
   }
   .main-header .language-select .header {
     padding-right: 0;
@@ -5780,6 +5785,9 @@ html.with-fancybox body.hide-scrollbar {
   .main-header .main-navigation.active.animated .link-list .item {
     -webkit-animation: fade-in-animation-up .3s forwards;
     animation: fade-in-animation-up .3s forwards
+  }
+  .main-header .main-navigation.active.animated .language-select {
+    opacity: 1
   }
   .main-header .main-navigation .link-list {
     text-align: center
