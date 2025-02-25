@@ -5499,7 +5499,8 @@ html.with-fancybox body.hide-scrollbar {
   transition: .5s;
   -webkit-transform: translateY(-100%);
   -ms-transform: translateY(-100%);
-  transform: translateY(-100%)
+  transform: translateY(-100%);
+  pointer-events: none
 }
 .main-header .logo {
   white-space: nowrap;
@@ -5589,7 +5590,9 @@ html.with-fancybox body.hide-scrollbar {
 }
 .main-header .login-info {
   text-align: right;
-  white-space: nowrap
+  white-space: nowrap;
+  position: relative;
+  z-index: 1
 }
 .main-header .login-info .name {
   color: #fdfdfb;
