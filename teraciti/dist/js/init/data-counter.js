@@ -22,7 +22,6 @@ $("[data-counter]").each(function(index, item){
 		var scrollTop = $(window).scrollTop();
 		var treshold = window.innerHeight * 0.75;
 		if (scrollTop > $(item).offset().top - treshold){
-			console.log(item);
 			runAnimation();
 		}
 	});
