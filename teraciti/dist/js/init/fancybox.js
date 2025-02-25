@@ -1,5 +1,5 @@
 $(document).ready(function() {
-	if ($('[data-fancybox]') && window.fancybox) {
+	if ($('[data-fancybox]') && window.Fancybox) {
 		Fancybox.bind('.owl-item:not(.cloned) [data-fancybox]', {
 			compact: false,
 			idle: false,

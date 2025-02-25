@@ -3,7 +3,7 @@
 <head>
 
 	<meta charset="UTF-8">
-	<title>Teracity :: Main Page</title>
+	<title>Teracity :: Contacts</title>
 
 	<link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
 	<link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
@@ -20,34 +20,35 @@
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Wix+Madefor+Display:wght@400..800&display=swap" rel="stylesheet">
 
-
 	<link rel="stylesheet" href="css/bundle.min.css">
 
 </head>
 <body>
-	<!-- header -->
+
 	<script>
 	var apiKey = '';
 </script>
 
-<header class="main-header" id="mainHeader">
+<!-- class .inner for other pages-->
+<header class="main-header inner" id="mainHeader">
 	<div class="container">
 		<div class="header-inner">
 			<a href="index.html" class="logo">
-				<img src="img/teracity_logo_horisontal_light.png" class="logo-image light">
+				<!-- dark logo -->
+				<img src="img/teracity_logo_horisontal.png" class="logo-image">
 			</a>
 			<div class="navigation-inner">
 				<div class="main-navigation" id="mainNavigation">
 					<nav class="main-nav">
 						<ul class="link-list clear">
 							<li class="item">
-								<a href="index.html" class="link active"><span class="text">Головна</span></a>
+								<a href="index.html" class="link"><span class="text">Головна</span></a>
 							</li>
 							<li class="item">
 								<a href="catalog.html" class="link"><span class="text">Об'єкти</span></a>
 							</li>
 							<li class="item">
-								<a href="contacts.html" class="link"><span class="text">Контакти</span></a>
+								<a href="contacts.html" class="link active"><span class="text">Контакти</span></a>
 							</li>
 						</ul>
 					</nav>
@@ -66,9 +67,9 @@
 					</button>
 				</div>
 				<div class="login-info">
-					<div class="name">Гончаров І.</div>
-					<button class="button button-primary button-icon" type="button" data-call="#loginOutPopup">
-						<i class="icon icon-power"></i>
+					<button class="button button-primary" type="button" data-call="#loginPopup">
+						<span class="visible-desktop">Авторизація</span>
+						<i class="icon icon-login visible-mobile"></i>
 						<span class="fade"></span>
 					</button>
 				</div>
@@ -77,100 +78,31 @@
 	</div>
 </header>
 
-	<main class="page-main" id="pageMain">
-		<!-- banner -->
-		<section class="main-banner first-section">
-			<div class="banner-caption">
-				<div class="container">
-					<div class="verticaly-middle">
-						<div class="inner align-center">
-							<div class="subtitle">Ваш надійний партнер</div>
-							<h1 class="main-title">лідер на ринку нерухомості</h1>
-							<a href="catalog.html" class="button button-primary button-large">
-								<span class="text">Дивитись всі об'єкти</span>
-								<span class="fader"></span>
-							</a>
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
-		<!-- / banner -->
-
-		<!-- form -->
-		<section class="section large-spaced bordered" id="contact">
+	<!-- class .inner-page -->
+	<main class="page-main inner-page" id="pageMain">
+		<!-- breadcrumbs -->
+		<div class="breadcrumbs">
 			<div class="container">
-				<div class="section-subheader">Будьмо на зв'язку</div>
-				<h2 class="spaced-bottom-large">Залишайте заявку</h2>
-				<!-- contact form -->
-				<form action="javascript:void(0);" class="form validate-form">
-	<div class="row">
-		<div class="col-xs-12 col-md-6">
-			<div class="row">
-				<div class="col-xs-12 col-ms-6">
-					<div class="input-cover">
-						<label class="label" for="name">Ім'я</label>
-						<input type="text" class="input" id="name" data-minlength="2">
-						<div class="error-alert">Вкажіть ім'я повністю</div>
-					</div>
-				</div>
-				<div class="col-xs-12 col-ms-6">
-					<div class="input-cover">
-						<label class="label" for="secondName">Прізвище</label>
-						<input type="text" class="input" id="secondName" data-minlength="2">
-						<div class="error-alert">Вкажіть прізвище повністю</div>
-					</div>
-				</div>
-				<div class="col-xs-12">
-					<div class="input-cover">
-						<label class="label" for="email">Email</label>
-						<input type="email" class="input email" id="email" data-validate="email">
-						<div class="error-alert">Електронна адреса введена не вірно</div>
-					</div>
-				</div>
+				<ul class="list clear">
+					<li><a href="index.html" class="link">Головна</a></li>
+					<li>Контакти</li>
+				</ul>
 			</div>
 		</div>
-		<div class="col-xs-12 col-md-6">
-			<div class="input-cover">
-				<label class="label" for="message">Повідомлення</label>
-				<textarea type="textarea" class="textarea" id="message" data-minlength="10"></textarea>
-				<div class="error-alert">Введіть повідомлення, мін 10 символів</div>
-			</div>
-			<button class="button button-primary button-block" type="submit">
-				Відправити
-				<span class="fade"></span>
-			</button>
-		</div>
-	</div>
-</form>
+		<!-- / breadcrumbs -->
 
-				</div>
-			</div>
-		</section>
-		<!-- / form -->
-
+		<!-- top -->
 		<div class="colored-section">
 			<div class="container">
 				<div class="verticaly-middle">
-					<div class="inner">
-						<div class="counters">
-							<div class="item">
-								<div class="digit" data-counter="650,1000"><span>650</span></div>
-								<div class="text">об'єктів</div>
-							</div>
-							<div class="item">
-								<div class="digit" data-counter="17,1000"><span>17</span></div>
-								<div class="text">років на ринку</div>
-							</div>
-							<div class="item">
-								<div class="digit" data-counter="80,1000"><span>80</span></div>
-								<div class="text">фахівців</div>
-							</div>
-						</div>
+						<div class="inner align-center">
+							<div class="main-subtitle">Ваш надійний партнер</div>
+							<h1 class="main-title">лідер на ринку нерухомості</h1>
 					</div>
 				</div>
 			</div>
 		</div>
+		<!-- / top -->
 
 		<!-- social -->
 		<section class="section large-spaced">
@@ -230,7 +162,60 @@
 			</div>
 		</section>
 		<!-- social -->
+
+		<!-- form -->
+		<section class="section large-spaced dark-section">
+			<div class="container">
+				<div class="section-subheader">Для швидкого зв'язку</div>
+				<h2 class="spaced-bottom-large">Залишайте заявку</h2>
+				<!-- contact form -->
+				<form action="javascript:void(0);" class="form validate-form">
+	<div class="row">
+		<div class="col-xs-12 col-md-6">
+			<div class="row">
+				<div class="col-xs-12 col-ms-6">
+					<div class="input-cover">
+						<label class="label" for="name">Ім'я</label>
+						<input type="text" class="input" id="name" data-minlength="2">
+						<div class="error-alert">Вкажіть ім'я повністю</div>
+					</div>
+				</div>
+				<div class="col-xs-12 col-ms-6">
+					<div class="input-cover">
+						<label class="label" for="secondName">Прізвище</label>
+						<input type="text" class="input" id="secondName" data-minlength="2">
+						<div class="error-alert">Вкажіть прізвище повністю</div>
+					</div>
+				</div>
+				<div class="col-xs-12">
+					<div class="input-cover">
+						<label class="label" for="email">Email</label>
+						<input type="email" class="input email" id="email" data-validate="email">
+						<div class="error-alert">Електронна адреса введена не вірно</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="col-xs-12 col-md-6">
+			<div class="input-cover">
+				<label class="label" for="message">Повідомлення</label>
+				<textarea type="textarea" class="textarea" id="message" data-minlength="10"></textarea>
+				<div class="error-alert">Введіть повідомлення, мін 10 символів</div>
+			</div>
+			<button class="button button-primary button-block" type="submit">
+				Відправити
+				<span class="fade"></span>
+			</button>
+		</div>
+	</div>
+</form>
+
+				</div>
+			</div>
+		</section>
+		<!-- / form -->
 	</main>
+
 
 	<!-- map -->
 	<div class="map-container">
@@ -317,6 +302,7 @@
 	</div>
 </footer>
 
+
 	<script src="js/lib/jquery.min.js"></script>
 	<!-- map -->
 	<script>
@@ -326,6 +312,5 @@
 	</script>
 	<!-- bundle -->
 	<script src="js/main.js"></script>
-
 </body>
 </html>

@@ -3,7 +3,7 @@
 <head>
 
 	<meta charset="UTF-8">
-	<title>Teracity :: Main Page</title>
+	<title>Teracity :: Detail Page</title>
 
 	<link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
 	<link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
@@ -20,7 +20,6 @@
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Wix+Madefor+Display:wght@400..800&display=swap" rel="stylesheet">
 
-
 	<link rel="stylesheet" href="css/bundle.min.css">
 
 </head>
@@ -30,21 +29,21 @@
 	var apiKey = '';
 </script>
 
-<header class="main-header" id="mainHeader">
+<header class="main-header inner" id="mainHeader">
 	<div class="container">
 		<div class="header-inner">
 			<a href="index.html" class="logo">
-				<img src="img/teracity_logo_horisontal_light.png" class="logo-image light">
+				<img src="img/teracity_logo_horisontal.png" class="logo-image light">
 			</a>
 			<div class="navigation-inner">
 				<div class="main-navigation" id="mainNavigation">
 					<nav class="main-nav">
 						<ul class="link-list clear">
 							<li class="item">
-								<a href="index.html" class="link active"><span class="text">Головна</span></a>
+								<a href="index.html" class="link"><span class="text">Головна</span></a>
 							</li>
 							<li class="item">
-								<a href="catalog.html" class="link"><span class="text">Об'єкти</span></a>
+								<a href="catalog.html" class="link active"><span class="text">Об'єкти</span></a>
 							</li>
 							<li class="item">
 								<a href="contacts.html" class="link"><span class="text">Контакти</span></a>
@@ -77,30 +76,122 @@
 	</div>
 </header>
 
-	<main class="page-main" id="pageMain">
-		<!-- banner -->
-		<section class="main-banner first-section">
-			<div class="banner-caption">
-				<div class="container">
-					<div class="verticaly-middle">
-						<div class="inner align-center">
-							<div class="subtitle">Ваш надійний партнер</div>
-							<h1 class="main-title">лідер на ринку нерухомості</h1>
-							<a href="catalog.html" class="button button-primary button-large">
-								<span class="text">Дивитись всі об'єкти</span>
-								<span class="fader"></span>
-							</a>
+	<!-- class .inner-page -->
+	<main class="page-main inner-page" id="pageMain">
+		<div class="breadcrumbs">
+			<div class="container">
+				<ul class="list clear">
+					<li><a href="index.html" class="link">Головна</a></li>
+					<li><a href="catalog.html" class="link">Об'єкти</a></li>
+					<li>2-к. квартира на Б. Хмельницкого (ID: 124594)</li>
+				</ul>
+			</div>
+		</div>
+		<!-- top -->
+		<section class="detail-item section">
+			<div class="container">
+				<div class="top">
+					<div class="section-subheader">Київ, Солом'янський, Ніжинська, 29Г</div>
+					<h1 class="title">2-к. квартира на Б. Хмельницкого (ID: 124594)</h1>
+				</div>
+				<!-- slider -->
+				<div class="dots-slider owl-carousel slider fixed-height" data-slides="1,1,1,1,1" data-nav="true" data-dots="true" data-loop="true">
+					<div class="slide">
+						<img src="img/catalog/1.jpg" draggable="false" data-fancybox="gallery">
+					</div>
+					<div class="slide">
+						<img src="img/catalog/2.jpg" draggable="false" data-fancybox="gallery">
+					</div>
+					<div class="slide">
+						<img src="img/catalog/3.jpg" draggable="false" data-fancybox="gallery">
+					</div>
+					<div class="slide">
+						<img src="img/catalog/4.jpg" draggable="false" data-fancybox="gallery">
+					</div>
+					<div class="slide">
+						<img src="img/catalog/5.jpg" draggable="false" data-fancybox="gallery">
+					</div>
+					<div class="slide">
+						<img src="img/catalog/6.jpg" draggable="false" data-fancybox="gallery">
+					</div>
+					<div class="slide">
+						<img src="img/catalog/7.jpg" draggable="false" data-fancybox="gallery">
+					</div>
+				</div>
+				<!-- / slider -->
+			</div>
+		</section>
+		<!-- / top -->
+
+		<!-- dark middle -->
+		<section class="section collapsed">
+			<div class="container">
+				<div class="dark-inner">
+					<div class="icons-detail">
+						<div class="item">
+							<img src="img/square.svg" draggable="false" class="icon">
+							<div class="caption">Площа 32 м<sup>2</sup></div>
+						</div>
+						<div class="item">
+							<img src="img/type.svg" draggable="false" class="icon">
+							<div class="caption">1-к. квартира</div>
+						</div>
+						<div class="item">
+							<img src="img/floor.svg" draggable="false" class="icon">
+							<div class="caption">Поверх: 2</div>
+						</div>
+						<div class="item">
+							<img src="img/house.svg" draggable="false" class="icon">
+							<div class="caption">Поверховість: 9</div>
 						</div>
 					</div>
 				</div>
 			</div>
 		</section>
-		<!-- / banner -->
+		<!-- / dark middle -->
 
-		<!-- form -->
-		<section class="section large-spaced bordered" id="contact">
+		<!-- description bottom -->
+		<section class="section">
 			<div class="container">
-				<div class="section-subheader">Будьмо на зв'язку</div>
+				<div class="detail-item-top">
+					<div class="row">
+						<div class="col-xs-12 col-sm-6">
+							<div class="subtitle">Оренда</div>
+							<div class="price">18 000 ₴</div>
+						</div>
+						<div class="col-xs-12 col-sm-6">
+							<div class="subtitle">Контакти власника</div>
+							<a href="tel:380939998877" class="link">+380939998877</a><br>
+							<a href="tel:380939998877" class="link">+380939998877</a>
+						</div>
+					</div>
+				</div>
+				<article>
+					<p>Біля НАУ, Караваєві Дачі, хороша транспортна розвязка, швидкісний трамва 12 хв, пішого ходу.</p>
+					<p>
+						Є генератор на ліфти. Апартаменти з новим сучасним ремонтом. Всі меблі та техніка нові, ремонт зроблений дуже якісно. Техніка - вбудований холодильник, посудомійна машина, духова шафа та варочна поверхня, кондиціонер, телевізор. Квартира має гарне планування. Кухня вітальня та окрема спальня, простора лоджія та санвузол. Ремонт якісний, робили для себе. Комплекс розташований майже в центрі міста, дуже гарна транспортна розвʼязка. Метро 5хв пішки. Весь центр в 5хв.їзди.
+					</p>
+					<p>Свіжий ремонт, замінена проводка та сантехніка.</p>
+					<ul>
+						<li>в кімнаті велика шафа, диван євро-книжка, вихід на засклений балкон</li>
+						<li>холодильник No frost 2м, пральна машина автомат, електроплита індукційна, електрочайник, бойлер, мікрохвильовка, прасувальна дошка, сушка</li>
+						<li>ванна повноцінна.</li>
+					</ul>
+					<p>Свіжий ремонт, замінена проводка та сантехніка.</p>
+					<ol>
+						<li>в кімнаті велика шафа, диван євро-книжка, вихід на засклений балкон</li>
+						<li>холодильник No frost 2м, пральна машина автомат, електроплита індукційна, електрочайник, бойлер, мікрохвильовка, прасувальна дошка, сушка</li>
+						<li>ванна повноцінна.</li>
+					</ol>
+				</article>
+			</div>
+		</section>
+		<!-- / description bottom -->
+
+
+		<section class="section large-spaced" id="contact">
+			<div class="container">
+				<div class="section-subheader">Зацікавив об'єкт?</div>
 				<h2 class="spaced-bottom-large">Залишайте заявку</h2>
 				<!-- contact form -->
 				<form action="javascript:void(0);" class="form validate-form">
@@ -148,99 +239,7 @@
 			</div>
 		</section>
 		<!-- / form -->
-
-		<div class="colored-section">
-			<div class="container">
-				<div class="verticaly-middle">
-					<div class="inner">
-						<div class="counters">
-							<div class="item">
-								<div class="digit" data-counter="650,1000"><span>650</span></div>
-								<div class="text">об'єктів</div>
-							</div>
-							<div class="item">
-								<div class="digit" data-counter="17,1000"><span>17</span></div>
-								<div class="text">років на ринку</div>
-							</div>
-							<div class="item">
-								<div class="digit" data-counter="80,1000"><span>80</span></div>
-								<div class="text">фахівців</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-
-		<!-- social -->
-		<section class="section large-spaced">
-			<div class="container">
-				<div class="section-subheader">Завжди на зв'язку</div>
-				<h2 class="spaced-bottom-large">Наші контакти</h2>
-				<ul class="contact-list clear">
-					<li class="list-item">
-						<i class="icon icon-location"></i>
-						<div class="info">
-							<a href="https://www.google.com.ua/maps/preview" target="_blank" rel="noopener noreferrer">
-								Україна, м. Київ<br>
-								вул. Хрещатик, буд. 255, офіс 7
-							</a>
-						</div>
-					</li>
-					<li class="list-item">
-						<i class="icon icon-phone"></i>
-						<div class="info">
-							<a href="tel:+3801234567">+380 123 45 67</a>
-						</div>
-					</li>
-					<li class="list-item">
-						<i class="icon icon-alternate_email"></i>
-						<div class="info">
-							<a href="mailto:info@mysite.com">info@mysite.com</a>
-						</div>
-					</li>
-				</ul>
-				<div class="social-section">
-					<div class="title">
-						Приєднуйся до нас та слідкуй за останніми новинами у соціальних мережах:
-					</div>
-					<ul class="link-list clear">
-						<li class="item">
-							<a href="https://www.facebook.com/" target="_blank" class="icon-link" rel="noopener noreferrer">
-								<i class="icon icon-facebook1"></i>
-							</a>
-						</li>
-						<li class="item">
-							<a href="thttps://x.com" target="_blank" class="icon-link" rel="noopener noreferrer">
-								<i class="icon icon-x-twitter"></i>
-							</a>
-						</li>
-						<li class="item">
-							<a href="https://www.linkedin.com" target="_blank" class="icon-link" rel="noopener noreferrer">
-								<i class="icon icon-linkedin"></i>
-							</a>
-						</li>
-						<li class="item">
-							<a href="https://www.instagram.com/" target="_blank" class="icon-link" rel="noopener noreferrer">
-								<i class="icon icon-instagram"></i>
-							</a>
-						</li>
-					</ul>
-				</div>
-			</div>
-		</section>
-		<!-- social -->
 	</main>
-
-	<!-- map -->
-	<div class="map-container">
-	<!-- data attributes changable in html -->
-	<div id="map" class="map"
-		data-position="50.450001, 30.523333"
-		data-zoom="16"
-		data-title="Kyiv, Ukraine"
-	></div>
-</div>
 
 	<!-- popup -->
 	<div id="loginPopup" class="popup rounded-card">
@@ -318,14 +317,9 @@
 </footer>
 
 	<script src="js/lib/jquery.min.js"></script>
-	<!-- map -->
-	<script>
-		var script = document.createElement('script');
-		script.src = "https://maps.googleapis.com/maps/api/js?key="+apiKey+"&callback=initMap&v=weekly";
-		document.getElementsByTagName('script')[0].parentNode.appendChild(script);
-	</script>
+	<script src="js/plugins/owl.carousel.min.js"></script>
+	<script src="js/plugins/fancybox.umd.js"></script>
 	<!-- bundle -->
 	<script src="js/main.js"></script>
-
 </body>
 </html>

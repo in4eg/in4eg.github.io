@@ -12,7 +12,7 @@
   --border-width: 1px;
   --margin: 15px;
   --padding: 20px;
-  --border-radius: 4px;
+  --border-radius: 0px;
   --icon_height: 20px;
   --icon-large_height: 48px;
   --pagination-link_size: 38px;
@@ -35,7 +35,7 @@
     --border-width: 1px;
     --margin: 15px;
     --padding: 20px;
-    --border-radius: 4px;
+    --border-radius: 0px;
     --icon_height: 20px;
     --pagination-link_size: 38px;
     --icon-large_height: 40px;
@@ -44,13 +44,19 @@
     --space-gap: 5px
   }
 }
+@media (max-width:993px) {
+  :root {
+    --section-padding: 70px
+  }
+}
 @media (max-width:768px) {
   :root {
     --h1-font-size: 28px;
     --h2-font-size: 26px;
     --h3-font-size: 18px;
     --h4-font-size: 16px;
-    --font-size-large: 18px;
+    --font-size-large: 16px;
+    --subheader2-font-size: 20px;
     --icon-large_height: 32px;
     --pagination-link_size: 28px;
     --section-padding: 50px
@@ -619,7 +625,7 @@ img.adaptive {
   --border-width: 1px;
   --margin: 15px;
   --padding: 20px;
-  --border-radius: 4px;
+  --border-radius: 0px;
   --icon_height: 20px;
   --icon-large_height: 48px;
   --pagination-link_size: 38px;
@@ -642,7 +648,7 @@ img.adaptive {
     --border-width: 1px;
     --margin: 15px;
     --padding: 20px;
-    --border-radius: 4px;
+    --border-radius: 0px;
     --icon_height: 20px;
     --pagination-link_size: 38px;
     --icon-large_height: 40px;
@@ -651,13 +657,19 @@ img.adaptive {
     --space-gap: 5px
   }
 }
+@media (max-width:993px) {
+  :root {
+    --section-padding: 70px
+  }
+}
 @media (max-width:768px) {
   :root {
     --h1-font-size: 28px;
     --h2-font-size: 26px;
     --h3-font-size: 18px;
     --h4-font-size: 16px;
-    --font-size-large: 18px;
+    --font-size-large: 16px;
+    --subheader2-font-size: 20px;
     --icon-large_height: 32px;
     --pagination-link_size: 28px;
     --section-padding: 50px
@@ -677,7 +689,7 @@ img.adaptive {
   --border-width: 1px;
   --margin: 15px;
   --padding: 20px;
-  --border-radius: 4px;
+  --border-radius: 0px;
   --icon_height: 20px;
   --icon-large_height: 48px;
   --pagination-link_size: 38px;
@@ -700,7 +712,7 @@ img.adaptive {
     --border-width: 1px;
     --margin: 15px;
     --padding: 20px;
-    --border-radius: 4px;
+    --border-radius: 0px;
     --icon_height: 20px;
     --pagination-link_size: 38px;
     --icon-large_height: 40px;
@@ -709,13 +721,19 @@ img.adaptive {
     --space-gap: 5px
   }
 }
+@media (max-width:993px) {
+  :root {
+    --section-padding: 70px
+  }
+}
 @media (max-width:768px) {
   :root {
     --h1-font-size: 28px;
     --h2-font-size: 26px;
     --h3-font-size: 18px;
     --h4-font-size: 16px;
-    --font-size-large: 18px;
+    --font-size-large: 16px;
+    --subheader2-font-size: 20px;
     --icon-large_height: 32px;
     --pagination-link_size: 28px;
     --section-padding: 50px
@@ -729,8 +747,7 @@ article {
 article p {
   font-size: var(--font-size);
   line-height: 1.92;
-  margin-bottom: var(--section-padding);
-  text-indent: var(--section-padding)
+  margin-bottom: 15px
 }
 article p:last-child {
   margin-bottom: 0
@@ -739,12 +756,11 @@ article ol,
 article ul {
   list-style: none;
   padding: 0;
-  margin: 0 0 var(--section-padding)
+  margin-bottom: 15px
 }
 article ol > li,
 article ul > li {
   padding: 0 0 0 var(--padding);
-  margin: 0 0 calc(var(--section-padding) * .5);
   font-size: var(--font-size);
   line-height: 1.92;
   display: block;
@@ -784,7 +800,6 @@ article ol > li:before {
   font-weight: 700;
   top: 6px
 }
-@charset "UTF-8";
 :root {
   --font-size: 16px;
   --h1-font-size: 72px;
@@ -799,7 +814,7 @@ article ol > li:before {
   --border-width: 1px;
   --margin: 15px;
   --padding: 20px;
-  --border-radius: 4px;
+  --border-radius: 0px;
   --icon_height: 20px;
   --icon-large_height: 48px;
   --pagination-link_size: 38px;
@@ -822,7 +837,7 @@ article ol > li:before {
     --border-width: 1px;
     --margin: 15px;
     --padding: 20px;
-    --border-radius: 4px;
+    --border-radius: 0px;
     --icon_height: 20px;
     --pagination-link_size: 38px;
     --icon-large_height: 40px;
@@ -831,20 +846,27 @@ article ol > li:before {
     --space-gap: 5px
   }
 }
+@media (max-width:993px) {
+  :root {
+    --section-padding: 70px
+  }
+}
 @media (max-width:768px) {
   :root {
     --h1-font-size: 28px;
     --h2-font-size: 26px;
     --h3-font-size: 18px;
     --h4-font-size: 16px;
-    --font-size-large: 18px;
+    --font-size-large: 16px;
+    --subheader2-font-size: 20px;
     --icon-large_height: 32px;
     --pagination-link_size: 28px;
     --section-padding: 50px
   }
 }
 .breadcrumbs {
-  border-bottom: 1px solid rgba(232,232,232,.1)
+  border-bottom: 1px solid rgba(232,232,232,.1);
+  margin-bottom: 25px
 }
 .breadcrumbs .list {
   display: block;
@@ -855,20 +877,21 @@ article ol > li:before {
 .breadcrumbs .list li {
   display: inline-block;
   vertical-align: middle;
-  font-size: var(--font-size-small);
+  font-size: var(--font-size);
   position: relative;
   line-height: 1.2
 }
 .breadcrumbs .list li a {
   padding: 0 10px;
-  font-size: var(--font-size-small);
+  font-size: var(--font-size);
   line-height: 1.2
 }
 .breadcrumbs .list li:after {
   position: absolute;
-  content: "∕";
+  content: "|";
   right: -2px;
-  top: 1px
+  top: 1px;
+  color: #845539
 }
 .breadcrumbs .list li:last-child {
   padding-left: 10px
@@ -880,9 +903,25 @@ article ol > li:before {
   padding-left: 0
 }
 @media (max-width:525px) {
-  .breadcrumbs .list li:last-child {
-    padding-left: 0;
-    display: block
+  .breadcrumbs {
+    margin-bottom: 15px
+  }
+  .breadcrumbs .list {
+    padding: 10px 0;
+    white-space: nowrap;
+    overflow: hidden
+  }
+  .breadcrumbs .list li,
+  .breadcrumbs .list li a {
+    font-size: 12px
+  }
+  .breadcrumbs .list li:nth-child(3) {
+    width: 60%;
+    text-overflow: ellipsis;
+    overflow: hidden
+  }
+  .breadcrumbs .list li:nth-child(n+4) {
+    display: none
   }
 }
 :root {
@@ -899,7 +938,7 @@ article ol > li:before {
   --border-width: 1px;
   --margin: 15px;
   --padding: 20px;
-  --border-radius: 4px;
+  --border-radius: 0px;
   --icon_height: 20px;
   --icon-large_height: 48px;
   --pagination-link_size: 38px;
@@ -922,7 +961,7 @@ article ol > li:before {
     --border-width: 1px;
     --margin: 15px;
     --padding: 20px;
-    --border-radius: 4px;
+    --border-radius: 0px;
     --icon_height: 20px;
     --pagination-link_size: 38px;
     --icon-large_height: 40px;
@@ -931,13 +970,19 @@ article ol > li:before {
     --space-gap: 5px
   }
 }
+@media (max-width:993px) {
+  :root {
+    --section-padding: 70px
+  }
+}
 @media (max-width:768px) {
   :root {
     --h1-font-size: 28px;
     --h2-font-size: 26px;
     --h3-font-size: 18px;
     --h4-font-size: 16px;
-    --font-size-large: 18px;
+    --font-size-large: 16px;
+    --subheader2-font-size: 20px;
     --icon-large_height: 32px;
     --pagination-link_size: 28px;
     --section-padding: 50px
@@ -1053,6 +1098,21 @@ article ol > li:before {
   pointer-events: none;
   -webkit-filter: grayscale(70%);
   filter: grayscale(70%)
+}
+.button .marker {
+  height: 10px;
+  width: 10px;
+  background-color: #cb5149;
+  position: absolute;
+  border-radius: 50%;
+  opacity: 0;
+  -webkit-transform: scale(.1);
+  -ms-transform: scale(.1);
+  transform: scale(.1);
+  -webkit-transition: .3s;
+  transition: .3s;
+  top: 0;
+  right: 0
 }
 .button.disabled {
   opacity: .3;
@@ -1249,6 +1309,12 @@ article ol > li:before {
   -webkit-box-shadow: none;
   box-shadow: none
 }
+.button.marker-active .marker {
+  opacity: 1;
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1)
+}
 @media (min-width:769px) {
   .button .visible-desktop {
     display: inline-block
@@ -1282,7 +1348,7 @@ article ol > li:before {
   --border-width: 1px;
   --margin: 15px;
   --padding: 20px;
-  --border-radius: 4px;
+  --border-radius: 0px;
   --icon_height: 20px;
   --icon-large_height: 48px;
   --pagination-link_size: 38px;
@@ -1305,7 +1371,7 @@ article ol > li:before {
     --border-width: 1px;
     --margin: 15px;
     --padding: 20px;
-    --border-radius: 4px;
+    --border-radius: 0px;
     --icon_height: 20px;
     --pagination-link_size: 38px;
     --icon-large_height: 40px;
@@ -1314,13 +1380,19 @@ article ol > li:before {
     --space-gap: 5px
   }
 }
+@media (max-width:993px) {
+  :root {
+    --section-padding: 70px
+  }
+}
 @media (max-width:768px) {
   :root {
     --h1-font-size: 28px;
     --h2-font-size: 26px;
     --h3-font-size: 18px;
     --h4-font-size: 16px;
-    --font-size-large: 18px;
+    --font-size-large: 16px;
+    --subheader2-font-size: 20px;
     --icon-large_height: 32px;
     --pagination-link_size: 28px;
     --section-padding: 50px
@@ -1377,7 +1449,7 @@ article ol > li:before {
   --border-width: 1px;
   --margin: 15px;
   --padding: 20px;
-  --border-radius: 4px;
+  --border-radius: 0px;
   --icon_height: 20px;
   --icon-large_height: 48px;
   --pagination-link_size: 38px;
@@ -1400,7 +1472,7 @@ article ol > li:before {
     --border-width: 1px;
     --margin: 15px;
     --padding: 20px;
-    --border-radius: 4px;
+    --border-radius: 0px;
     --icon_height: 20px;
     --pagination-link_size: 38px;
     --icon-large_height: 40px;
@@ -1409,13 +1481,19 @@ article ol > li:before {
     --space-gap: 5px
   }
 }
+@media (max-width:993px) {
+  :root {
+    --section-padding: 70px
+  }
+}
 @media (max-width:768px) {
   :root {
     --h1-font-size: 28px;
     --h2-font-size: 26px;
     --h3-font-size: 18px;
     --h4-font-size: 16px;
-    --font-size-large: 18px;
+    --font-size-large: 16px;
+    --subheader2-font-size: 20px;
     --icon-large_height: 32px;
     --pagination-link_size: 28px;
     --section-padding: 50px
@@ -1424,7 +1502,19 @@ article ol > li:before {
 .button.filter-button {
   display: none
 }
-@media (max-width:1200px) {
+.catalog-filter-cover .rounded-card .header {
+  padding-left: 0;
+  padding-right: 0
+}
+.catalog-filter-cover .rounded-card .title {
+  font-size: var(--h3-font-size);
+  line-height: var(--h3-font-size)
+}
+.catalog-filter-cover .rounded-card .main {
+  padding-left: 0;
+  padding-right: 0
+}
+@media (max-width:993px) {
   .button.filter-button {
     position: fixed;
     z-index: 10;
@@ -1456,27 +1546,17 @@ article ol > li:before {
     height: 100%;
     overflow: auto
   }
-  .catalog-filter-cover .filter-form {
-    width: 50%;
-    margin: 0 auto
+}
+@media (max-width:993px) {
+  .catalog-filter-cover .rounded-card {
+    padding-left: 60px;
+    padding-right: 60px
   }
 }
 @media (max-width:768px) {
-  .button.filter-button {
-    left: 30px
-  }
-  .catalog-filter-cover .filter-form {
-    width: 70%
-  }
-}
-@media (max-width:640px) {
-  .catalog-filter-cover .filter-form {
-    width: 75%
-  }
-}
-@media (max-width:480px) {
-  .catalog-filter-cover .filter-form {
-    width: 100%
+  .catalog-filter-cover .rounded-card {
+    padding-left: 10px;
+    padding-right: 10px
   }
 }
 :root {
@@ -1493,7 +1573,7 @@ article ol > li:before {
   --border-width: 1px;
   --margin: 15px;
   --padding: 20px;
-  --border-radius: 4px;
+  --border-radius: 0px;
   --icon_height: 20px;
   --icon-large_height: 48px;
   --pagination-link_size: 38px;
@@ -1516,7 +1596,7 @@ article ol > li:before {
     --border-width: 1px;
     --margin: 15px;
     --padding: 20px;
-    --border-radius: 4px;
+    --border-radius: 0px;
     --icon_height: 20px;
     --pagination-link_size: 38px;
     --icon-large_height: 40px;
@@ -1525,46 +1605,98 @@ article ol > li:before {
     --space-gap: 5px
   }
 }
+@media (max-width:993px) {
+  :root {
+    --section-padding: 70px
+  }
+}
 @media (max-width:768px) {
   :root {
     --h1-font-size: 28px;
     --h2-font-size: 26px;
     --h3-font-size: 18px;
     --h4-font-size: 16px;
-    --font-size-large: 18px;
+    --font-size-large: 16px;
+    --subheader2-font-size: 20px;
     --icon-large_height: 32px;
     --pagination-link_size: 28px;
     --section-padding: 50px
   }
 }
-.catalog-item {
+.catalog-item.rounded-card {
   margin-bottom: var(--margin);
   -webkit-transition: -webkit-box-shadow .3s;
   transition: -webkit-box-shadow .3s;
   transition: box-shadow .3s;
   transition: box-shadow .3s,-webkit-box-shadow .3s
 }
-.catalog-item .header {
+.catalog-item.rounded-card .header {
   display: block;
-  cursor: pointer
+  cursor: pointer;
+  padding-left: 0;
+  padding-right: 0
 }
-.catalog-item:last-child {
+.catalog-item.rounded-card .main {
+  padding-left: 0;
+  padding-right: 0
+}
+.catalog-item.rounded-card:last-child {
   margin-bottom: 0
 }
-.catalog-item .subtitle {
-  margin-bottom: var(--margin);
+.catalog-item.rounded-card .time {
+  margin-bottom: 15px;
   color: #a3806b
 }
-.catalog-item .description {
+.catalog-item.rounded-card .title-link {
+  display: block;
+  color: #201f20;
+  -webkit-transition: .2s;
+  transition: .2s;
+  font-weight: 700
+}
+.catalog-item.rounded-card .title-link:hover {
+  color: #a3806b
+}
+.catalog-item.rounded-card [data-toggle] {
+  position: relative;
+  display: block
+}
+.catalog-item.rounded-card [data-toggle] .inner {
+  position: absolute;
+  width: 100%;
+  bottom: 100%;
+  left: 0;
+  background-color: #fdfdfb;
+  z-index: 1;
+  border: 1px solid rgba(199,170,89,.3);
+  display: none
+}
+.catalog-item.rounded-card [data-toggle] .inner a {
+  display: block;
+  text-align: center;
+  padding: var(--margin)
+}
+.catalog-item.rounded-card [data-toggle].active .inner {
+  display: block
+}
+.catalog-item.rounded-card [data-toggle].active .not-active {
+  opacity: 0
+}
+.catalog-item.rounded-card [data-toggle].active .if-active {
+  opacity: 1
+}
+.catalog-item.rounded-card .description {
   margin-bottom: var(--margin);
   text-align: justify
 }
-.catalog-item .price {
+.catalog-item.rounded-card .price {
   color: #845539;
   font-weight: 700;
-  font-size: var(--subheader2-font-size)
+  font-size: var(--subheader1-font-size);
+  margin: 20px 0;
+  text-align: right
 }
-.catalog-item .caption-cover {
+.catalog-item.rounded-card .caption-cover {
   height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1574,33 +1706,19 @@ article ol > li:before {
   -ms-flex-line-pack: justify;
   align-content: space-between
 }
-.catalog-item .bottom,
-.catalog-item .top {
+.catalog-item.rounded-card .bottom,
+.catalog-item.rounded-card .top {
   width: 100%
 }
-.catalog-item .owl-carousel .owl-item img {
-  width: auto
-}
 @media (max-width:768px) {
-  .catalog-item .align-left-xs {
+  .catalog-item.rounded-card .align-left-xs {
     text-align: left
   }
-  .catalog-item .spaced-top-xs {
+  .catalog-item.rounded-card .spaced-top-xs {
     margin-top: var(--margin)
   }
-  .catalog-item .image-full {
-    padding-top: 55%
-  }
-  .catalog-item .image-full img {
-    max-height: 250%
-  }
-}
-@media (max-width:525px) {
-  .catalog-item .image-full {
-    padding-top: 75%
-  }
-  .catalog-item .image-full img {
-    max-height: 150%
+  .catalog-item.rounded-card .price {
+    text-align: left
   }
 }
 :root {
@@ -1617,7 +1735,7 @@ article ol > li:before {
   --border-width: 1px;
   --margin: 15px;
   --padding: 20px;
-  --border-radius: 4px;
+  --border-radius: 0px;
   --icon_height: 20px;
   --icon-large_height: 48px;
   --pagination-link_size: 38px;
@@ -1640,7 +1758,7 @@ article ol > li:before {
     --border-width: 1px;
     --margin: 15px;
     --padding: 20px;
-    --border-radius: 4px;
+    --border-radius: 0px;
     --icon_height: 20px;
     --pagination-link_size: 38px;
     --icon-large_height: 40px;
@@ -1649,13 +1767,19 @@ article ol > li:before {
     --space-gap: 5px
   }
 }
+@media (max-width:993px) {
+  :root {
+    --section-padding: 70px
+  }
+}
 @media (max-width:768px) {
   :root {
     --h1-font-size: 28px;
     --h2-font-size: 26px;
     --h3-font-size: 18px;
     --h4-font-size: 16px;
-    --font-size-large: 18px;
+    --font-size-large: 16px;
+    --subheader2-font-size: 20px;
     --icon-large_height: 32px;
     --pagination-link_size: 28px;
     --section-padding: 50px
@@ -1763,71 +1887,6 @@ article ol > li:before {
   .contact-list.tiled .list-item:nth-child(even) {
     padding-left: 0
   }
-}
-:root {
-  --font-size: 16px;
-  --h1-font-size: 72px;
-  --h2-font-size: 48px;
-  --h3-font-size: 28px;
-  --h4-font-size: 18px;
-  --subheader1-font-size: 34px;
-  --subheader2-font-size: 26px;
-  --subheader3-font-size: 20px;
-  --font-size-small: 12px;
-  --font-size-large: 18px;
-  --border-width: 1px;
-  --margin: 15px;
-  --padding: 20px;
-  --border-radius: 4px;
-  --icon_height: 20px;
-  --icon-large_height: 48px;
-  --pagination-link_size: 38px;
-  --header_height: 91px;
-  --section-padding: 100px;
-  --space-gap: 5px
-}
-@media (max-width:1200px) {
-  :root {
-    --font-size: 14px;
-    --h1-font-size: 38px;
-    --h2-font-size: 30px;
-    --h3-font-size: 22px;
-    --h4-font-size: 16px;
-    --subheader1-font-size: 32px;
-    --subheader2-font-size: 24px;
-    --subheader3-font-size: 18px;
-    --font-size-small: 10px;
-    --font-size-large: 18px;
-    --border-width: 1px;
-    --margin: 15px;
-    --padding: 20px;
-    --border-radius: 4px;
-    --icon_height: 20px;
-    --pagination-link_size: 38px;
-    --icon-large_height: 40px;
-    --header_height: 79px;
-    --section-padding: 100px;
-    --space-gap: 5px
-  }
-}
-@media (max-width:768px) {
-  :root {
-    --h1-font-size: 28px;
-    --h2-font-size: 26px;
-    --h3-font-size: 18px;
-    --h4-font-size: 16px;
-    --font-size-large: 18px;
-    --icon-large_height: 32px;
-    --pagination-link_size: 28px;
-    --section-padding: 50px
-  }
-}
-.detail-section .owl-carousel .slide img {
-  width: auto
-}
-.detail-section .owl-carousel .slide img[data-fancybox] {
-  cursor: -webkit-zoom-in;
-  cursor: zoom-in
 }
 :root {
   --f-spinner-width: 36px;
@@ -2371,7 +2430,7 @@ article ol > li:before {
   width: var(--f-button-svg-width);
   height: var(--f-button-svg-height);
   fill: var(--f-button-svg-fill);
-  stroke: currentColor;
+  stroke: #0c0a09;
   stroke-width: var(--f-button-svg-stroke-width);
   stroke-linecap: round;
   stroke-linejoin: round;
@@ -2472,7 +2531,7 @@ html.with-fancybox body.hide-scrollbar {
 .fancybox__container {
   --fancybox-color: #dbdbdb;
   --fancybox-hover-color: #fff;
-  --fancybox-bg: rgba(13,25,41, 0.95);
+  --fancybox-bg: rgba(0,0,0, 0.7);
   --fancybox-slide-gap: 10px;
   --f-spinner-width: 50px;
   --f-spinner-height: 50px;
@@ -2778,7 +2837,7 @@ html.with-fancybox body.hide-scrollbar {
   left: 0;
   right: 0;
   z-index: 20;
-  background: rgba(24,24,27,.5)
+  background: rgba(0,0,0,.5)
 }
 .is-compact .fancybox__footer .fancybox__caption {
   padding: 12px
@@ -2801,7 +2860,7 @@ html.with-fancybox body.hide-scrollbar {
   --f-button-width: 50px;
   --f-button-height: 50px;
   --f-button-border: 0;
-  --f-button-border-radius: 4px;
+  --f-button-border-radius: 0;
   --f-button-color: var(--fancybox-color);
   --f-button-hover-color: var(--fancybox-hover-color);
   --f-button-bg: transparent;
@@ -2941,7 +3000,7 @@ html.with-fancybox body.hide-scrollbar {
 .has-vimeo .fancybox__content,
 .has-youtube .fancybox__content {
   padding: 0;
-  background: rgba(24,24,27,.9);
+  background: rgba(0,0,0,.5);
   color: #fff
 }
 .has-map .fancybox__content {
@@ -3250,7 +3309,7 @@ html.with-fancybox body.hide-scrollbar {
   --f-button-bg: rgba(255, 255, 255, 0.3);
   --f-button-hover-bg: rgba(70, 70, 73, 0.65);
   --f-button-active-bg: rgba(90, 90, 93, 0.65);
-  --f-button-border-radius: 4px;
+  --f-button-border-radius: 0;
   --f-button-svg-width: 24px;
   --f-button-svg-height: 24px;
   --f-button-svg-stroke-width: 1.5;
@@ -3434,7 +3493,7 @@ html.with-fancybox body.hide-scrollbar {
   --border-width: 1px;
   --margin: 15px;
   --padding: 20px;
-  --border-radius: 4px;
+  --border-radius: 0px;
   --icon_height: 20px;
   --icon-large_height: 48px;
   --pagination-link_size: 38px;
@@ -3457,7 +3516,7 @@ html.with-fancybox body.hide-scrollbar {
     --border-width: 1px;
     --margin: 15px;
     --padding: 20px;
-    --border-radius: 4px;
+    --border-radius: 0px;
     --icon_height: 20px;
     --pagination-link_size: 38px;
     --icon-large_height: 40px;
@@ -3466,13 +3525,19 @@ html.with-fancybox body.hide-scrollbar {
     --space-gap: 5px
   }
 }
+@media (max-width:993px) {
+  :root {
+    --section-padding: 70px
+  }
+}
 @media (max-width:768px) {
   :root {
     --h1-font-size: 28px;
     --h2-font-size: 26px;
     --h3-font-size: 18px;
     --h4-font-size: 16px;
-    --font-size-large: 18px;
+    --font-size-large: 16px;
+    --subheader2-font-size: 20px;
     --icon-large_height: 32px;
     --pagination-link_size: 28px;
     --section-padding: 50px
@@ -3548,27 +3613,27 @@ html.with-fancybox body.hide-scrollbar {
 .form .input::-webkit-input-placeholder,
 .form .select::-webkit-input-placeholder,
 .form .textarea::-webkit-input-placeholder {
-  color: #a3806b
+  color: #201f20
 }
 .form .input::-moz-placeholder,
 .form .select::-moz-placeholder,
 .form .textarea::-moz-placeholder {
-  color: #a3806b
+  color: #201f20
 }
 .form .input:-ms-input-placeholder,
 .form .select:-ms-input-placeholder,
 .form .textarea:-ms-input-placeholder {
-  color: #a3806b
+  color: #201f20
 }
 .form .input::-ms-input-placeholder,
 .form .select::-ms-input-placeholder,
 .form .textarea::-ms-input-placeholder {
-  color: #a3806b
+  color: #201f20
 }
 .form .input::placeholder,
 .form .select::placeholder,
 .form .textarea::placeholder {
-  color: #a3806b
+  color: #201f20
 }
 .form .disabled.select,
 .form .disabled.textarea,
@@ -3625,6 +3690,15 @@ html.with-fancybox body.hide-scrollbar {
   -webkit-box-shadow: rgba(100,100,111,.2) 0 7px 29px 0;
   box-shadow: rgba(100,100,111,.2) 0 7px 29px 0
 }
+.form.cropped-form {
+  max-width: 500px;
+  width: 100%
+}
+@media (max-width:768px) {
+  .form.cropped-form {
+    max-width: 100%
+  }
+}
 :root {
   --font-size: 16px;
   --h1-font-size: 72px;
@@ -3639,7 +3713,7 @@ html.with-fancybox body.hide-scrollbar {
   --border-width: 1px;
   --margin: 15px;
   --padding: 20px;
-  --border-radius: 4px;
+  --border-radius: 0px;
   --icon_height: 20px;
   --icon-large_height: 48px;
   --pagination-link_size: 38px;
@@ -3662,7 +3736,7 @@ html.with-fancybox body.hide-scrollbar {
     --border-width: 1px;
     --margin: 15px;
     --padding: 20px;
-    --border-radius: 4px;
+    --border-radius: 0px;
     --icon_height: 20px;
     --pagination-link_size: 38px;
     --icon-large_height: 40px;
@@ -3671,13 +3745,19 @@ html.with-fancybox body.hide-scrollbar {
     --space-gap: 5px
   }
 }
+@media (max-width:993px) {
+  :root {
+    --section-padding: 70px
+  }
+}
 @media (max-width:768px) {
   :root {
     --h1-font-size: 28px;
     --h2-font-size: 26px;
     --h3-font-size: 18px;
     --h4-font-size: 16px;
-    --font-size-large: 18px;
+    --font-size-large: 16px;
+    --subheader2-font-size: 20px;
     --icon-large_height: 32px;
     --pagination-link_size: 28px;
     --section-padding: 50px
@@ -4745,7 +4825,7 @@ html.with-fancybox body.hide-scrollbar {
   --border-width: 1px;
   --margin: 15px;
   --padding: 20px;
-  --border-radius: 4px;
+  --border-radius: 0px;
   --icon_height: 20px;
   --icon-large_height: 48px;
   --pagination-link_size: 38px;
@@ -4768,7 +4848,7 @@ html.with-fancybox body.hide-scrollbar {
     --border-width: 1px;
     --margin: 15px;
     --padding: 20px;
-    --border-radius: 4px;
+    --border-radius: 0px;
     --icon_height: 20px;
     --pagination-link_size: 38px;
     --icon-large_height: 40px;
@@ -4777,13 +4857,19 @@ html.with-fancybox body.hide-scrollbar {
     --space-gap: 5px
   }
 }
+@media (max-width:993px) {
+  :root {
+    --section-padding: 70px
+  }
+}
 @media (max-width:768px) {
   :root {
     --h1-font-size: 28px;
     --h2-font-size: 26px;
     --h3-font-size: 18px;
     --h4-font-size: 16px;
-    --font-size-large: 18px;
+    --font-size-large: 16px;
+    --subheader2-font-size: 20px;
     --icon-large_height: 32px;
     --pagination-link_size: 28px;
     --section-padding: 50px
@@ -4927,7 +5013,7 @@ html.with-fancybox body.hide-scrollbar {
   --border-width: 1px;
   --margin: 15px;
   --padding: 20px;
-  --border-radius: 4px;
+  --border-radius: 0px;
   --icon_height: 20px;
   --icon-large_height: 48px;
   --pagination-link_size: 38px;
@@ -4950,7 +5036,7 @@ html.with-fancybox body.hide-scrollbar {
     --border-width: 1px;
     --margin: 15px;
     --padding: 20px;
-    --border-radius: 4px;
+    --border-radius: 0px;
     --icon_height: 20px;
     --pagination-link_size: 38px;
     --icon-large_height: 40px;
@@ -4959,13 +5045,19 @@ html.with-fancybox body.hide-scrollbar {
     --space-gap: 5px
   }
 }
+@media (max-width:993px) {
+  :root {
+    --section-padding: 70px
+  }
+}
 @media (max-width:768px) {
   :root {
     --h1-font-size: 28px;
     --h2-font-size: 26px;
     --h3-font-size: 18px;
     --h4-font-size: 16px;
-    --font-size-large: 18px;
+    --font-size-large: 16px;
+    --subheader2-font-size: 20px;
     --icon-large_height: 32px;
     --pagination-link_size: 28px;
     --section-padding: 50px
@@ -5015,7 +5107,7 @@ html.with-fancybox body.hide-scrollbar {
   --border-width: 1px;
   --margin: 15px;
   --padding: 20px;
-  --border-radius: 4px;
+  --border-radius: 0px;
   --icon_height: 20px;
   --icon-large_height: 48px;
   --pagination-link_size: 38px;
@@ -5038,7 +5130,7 @@ html.with-fancybox body.hide-scrollbar {
     --border-width: 1px;
     --margin: 15px;
     --padding: 20px;
-    --border-radius: 4px;
+    --border-radius: 0px;
     --icon_height: 20px;
     --pagination-link_size: 38px;
     --icon-large_height: 40px;
@@ -5047,13 +5139,19 @@ html.with-fancybox body.hide-scrollbar {
     --space-gap: 5px
   }
 }
+@media (max-width:993px) {
+  :root {
+    --section-padding: 70px
+  }
+}
 @media (max-width:768px) {
   :root {
     --h1-font-size: 28px;
     --h2-font-size: 26px;
     --h3-font-size: 18px;
     --h4-font-size: 16px;
-    --font-size-large: 18px;
+    --font-size-large: 16px;
+    --subheader2-font-size: 20px;
     --icon-large_height: 32px;
     --pagination-link_size: 28px;
     --section-padding: 50px
@@ -5161,7 +5259,7 @@ html.with-fancybox body.hide-scrollbar {
   --border-width: 1px;
   --margin: 15px;
   --padding: 20px;
-  --border-radius: 4px;
+  --border-radius: 0px;
   --icon_height: 20px;
   --icon-large_height: 48px;
   --pagination-link_size: 38px;
@@ -5184,7 +5282,7 @@ html.with-fancybox body.hide-scrollbar {
     --border-width: 1px;
     --margin: 15px;
     --padding: 20px;
-    --border-radius: 4px;
+    --border-radius: 0px;
     --icon_height: 20px;
     --pagination-link_size: 38px;
     --icon-large_height: 40px;
@@ -5193,13 +5291,19 @@ html.with-fancybox body.hide-scrollbar {
     --space-gap: 5px
   }
 }
+@media (max-width:993px) {
+  :root {
+    --section-padding: 70px
+  }
+}
 @media (max-width:768px) {
   :root {
     --h1-font-size: 28px;
     --h2-font-size: 26px;
     --h3-font-size: 18px;
     --h4-font-size: 16px;
-    --font-size-large: 18px;
+    --font-size-large: 16px;
+    --subheader2-font-size: 20px;
     --icon-large_height: 32px;
     --pagination-link_size: 28px;
     --section-padding: 50px
@@ -5247,14 +5351,6 @@ html.with-fancybox body.hide-scrollbar {
 }
 .main-banner .banner-caption .verticaly-cover {
   height: 100%
-}
-.main-banner .banner-caption .subtitle {
-  margin-bottom: 20px;
-  font-size: var(--subheader2-font-size)
-}
-.main-banner .banner-caption .main-title {
-  margin-bottom: 50px;
-  font-weight: 700
 }
 .main-banner [data-scrollto] {
   position: absolute;
@@ -5316,7 +5412,7 @@ html.with-fancybox body.hide-scrollbar {
   --border-width: 1px;
   --margin: 15px;
   --padding: 20px;
-  --border-radius: 4px;
+  --border-radius: 0px;
   --icon_height: 20px;
   --icon-large_height: 48px;
   --pagination-link_size: 38px;
@@ -5339,7 +5435,7 @@ html.with-fancybox body.hide-scrollbar {
     --border-width: 1px;
     --margin: 15px;
     --padding: 20px;
-    --border-radius: 4px;
+    --border-radius: 0px;
     --icon_height: 20px;
     --pagination-link_size: 38px;
     --icon-large_height: 40px;
@@ -5348,13 +5444,19 @@ html.with-fancybox body.hide-scrollbar {
     --space-gap: 5px
   }
 }
+@media (max-width:993px) {
+  :root {
+    --section-padding: 70px
+  }
+}
 @media (max-width:768px) {
   :root {
     --h1-font-size: 28px;
     --h2-font-size: 26px;
     --h3-font-size: 18px;
     --h4-font-size: 16px;
-    --font-size-large: 18px;
+    --font-size-large: 16px;
+    --subheader2-font-size: 20px;
     --icon-large_height: 32px;
     --pagination-link_size: 28px;
     --section-padding: 50px
@@ -5419,6 +5521,11 @@ html.with-fancybox body.hide-scrollbar {
     text-align: center
   }
 }
+@media (max-width:993px) {
+  .main-footer .footer-inner [data-scrollto] {
+    right: 20px
+  }
+}
 :root {
   --font-size: 16px;
   --h1-font-size: 72px;
@@ -5433,7 +5540,7 @@ html.with-fancybox body.hide-scrollbar {
   --border-width: 1px;
   --margin: 15px;
   --padding: 20px;
-  --border-radius: 4px;
+  --border-radius: 0px;
   --icon_height: 20px;
   --icon-large_height: 48px;
   --pagination-link_size: 38px;
@@ -5456,7 +5563,7 @@ html.with-fancybox body.hide-scrollbar {
     --border-width: 1px;
     --margin: 15px;
     --padding: 20px;
-    --border-radius: 4px;
+    --border-radius: 0px;
     --icon_height: 20px;
     --pagination-link_size: 38px;
     --icon-large_height: 40px;
@@ -5465,13 +5572,19 @@ html.with-fancybox body.hide-scrollbar {
     --space-gap: 5px
   }
 }
+@media (max-width:993px) {
+  :root {
+    --section-padding: 70px
+  }
+}
 @media (max-width:768px) {
   :root {
     --h1-font-size: 28px;
     --h2-font-size: 26px;
     --h3-font-size: 18px;
     --h4-font-size: 16px;
-    --font-size-large: 18px;
+    --font-size-large: 16px;
+    --subheader2-font-size: 20px;
     --icon-large_height: 32px;
     --pagination-link_size: 28px;
     --section-padding: 50px
@@ -5533,7 +5646,7 @@ html.with-fancybox body.hide-scrollbar {
 .main-header .link-list .link .text:before {
   content: "";
   position: absolute;
-  bottom: 3px;
+  bottom: 0;
   left: 0;
   width: 100%;
   height: 1px;
@@ -5614,6 +5727,33 @@ html.with-fancybox body.hide-scrollbar {
   -webkit-transform: translateY(0);
   -ms-transform: translateY(0);
   transform: translateY(0)
+}
+.main-header.inner:before {
+  -webkit-transform: translateY(0);
+  -ms-transform: translateY(0);
+  transform: translateY(0);
+  background-color: rgba(253,253,251,.5)
+}
+.main-header.inner .link-list .link {
+  color: #201f20
+}
+.main-header.inner .link-list .link .text:before {
+  background-color: #201f20
+}
+.main-header.inner .dropdown-select,
+.main-header.inner .login-info .name {
+  color: #201f20
+}
+.main-header.inner .button.button-menu span,
+.main-header.inner .button.button-menu span:after,
+.main-header.inner .button.button-menu span:before {
+  background-color: #201f20
+}
+.main-header.inner .button.button-menu.active span {
+  background-color: transparent
+}
+.main-header.inner .main-navigation:before {
+  background-color: rgba(253,253,251,.9)
 }
 @media (max-width:993px) {
   .main-header {
@@ -5826,6 +5966,11 @@ html.with-fancybox body.hide-scrollbar {
     transform: translateY(-1px)
   }
 }
+@media (max-width:640px) {
+  .main-header .logo {
+    width: 170px
+  }
+}
 :root {
   --font-size: 16px;
   --h1-font-size: 72px;
@@ -5840,7 +5985,7 @@ html.with-fancybox body.hide-scrollbar {
   --border-width: 1px;
   --margin: 15px;
   --padding: 20px;
-  --border-radius: 4px;
+  --border-radius: 0px;
   --icon_height: 20px;
   --icon-large_height: 48px;
   --pagination-link_size: 38px;
@@ -5863,7 +6008,7 @@ html.with-fancybox body.hide-scrollbar {
     --border-width: 1px;
     --margin: 15px;
     --padding: 20px;
-    --border-radius: 4px;
+    --border-radius: 0px;
     --icon_height: 20px;
     --pagination-link_size: 38px;
     --icon-large_height: 40px;
@@ -5872,13 +6017,19 @@ html.with-fancybox body.hide-scrollbar {
     --space-gap: 5px
   }
 }
+@media (max-width:993px) {
+  :root {
+    --section-padding: 70px
+  }
+}
 @media (max-width:768px) {
   :root {
     --h1-font-size: 28px;
     --h2-font-size: 26px;
     --h3-font-size: 18px;
     --h4-font-size: 16px;
-    --font-size-large: 18px;
+    --font-size-large: 16px;
+    --subheader2-font-size: 20px;
     --icon-large_height: 32px;
     --pagination-link_size: 28px;
     --section-padding: 50px
@@ -5959,7 +6110,7 @@ html.with-fancybox body.hide-scrollbar {
   --border-width: 1px;
   --margin: 15px;
   --padding: 20px;
-  --border-radius: 4px;
+  --border-radius: 0px;
   --icon_height: 20px;
   --icon-large_height: 48px;
   --pagination-link_size: 38px;
@@ -5982,7 +6133,7 @@ html.with-fancybox body.hide-scrollbar {
     --border-width: 1px;
     --margin: 15px;
     --padding: 20px;
-    --border-radius: 4px;
+    --border-radius: 0px;
     --icon_height: 20px;
     --pagination-link_size: 38px;
     --icon-large_height: 40px;
@@ -5991,13 +6142,19 @@ html.with-fancybox body.hide-scrollbar {
     --space-gap: 5px
   }
 }
+@media (max-width:993px) {
+  :root {
+    --section-padding: 70px
+  }
+}
 @media (max-width:768px) {
   :root {
     --h1-font-size: 28px;
     --h2-font-size: 26px;
     --h3-font-size: 18px;
     --h4-font-size: 16px;
-    --font-size-large: 18px;
+    --font-size-large: 16px;
+    --subheader2-font-size: 20px;
     --icon-large_height: 32px;
     --pagination-link_size: 28px;
     --section-padding: 50px
@@ -6301,16 +6458,17 @@ html.with-fancybox body.hide-scrollbar {
 }
 .owl-dots {
   text-align: center;
-  -webkit-tap-highlight-color: transparent
+  -webkit-tap-highlight-color: transparent;
+  white-space: normal
 }
 .owl-dots .owl-dot {
   display: inline-block;
   zoom: 1
 }
 .owl-dots .owl-dot span {
-  width: 10px;
-  height: 10px;
-  margin: 5px 7px;
+  width: 7px;
+  height: 7px;
+  margin: 5px;
   background: #d6d6d6;
   display: block;
   -webkit-backface-visibility: visible;
@@ -6353,7 +6511,7 @@ html.with-fancybox body.hide-scrollbar {
   --border-width: 1px;
   --margin: 15px;
   --padding: 20px;
-  --border-radius: 4px;
+  --border-radius: 0px;
   --icon_height: 20px;
   --icon-large_height: 48px;
   --pagination-link_size: 38px;
@@ -6376,7 +6534,7 @@ html.with-fancybox body.hide-scrollbar {
     --border-width: 1px;
     --margin: 15px;
     --padding: 20px;
-    --border-radius: 4px;
+    --border-radius: 0px;
     --icon_height: 20px;
     --pagination-link_size: 38px;
     --icon-large_height: 40px;
@@ -6385,17 +6543,29 @@ html.with-fancybox body.hide-scrollbar {
     --space-gap: 5px
   }
 }
+@media (max-width:993px) {
+  :root {
+    --section-padding: 70px
+  }
+}
 @media (max-width:768px) {
   :root {
     --h1-font-size: 28px;
     --h2-font-size: 26px;
     --h3-font-size: 18px;
     --h4-font-size: 16px;
-    --font-size-large: 18px;
+    --font-size-large: 16px;
+    --subheader2-font-size: 20px;
     --icon-large_height: 32px;
     --pagination-link_size: 28px;
     --section-padding: 50px
   }
+}
+.page-main {
+  min-height: calc(100vh - 130px)
+}
+.page-main.inner-page {
+  padding-top: 91px
 }
 .dropdown-select {
   cursor: pointer;
@@ -6474,6 +6644,9 @@ html.with-fancybox body.hide-scrollbar {
   z-index: 2;
   height: 100%
 }
+.colored-section .main-title {
+  margin-bottom: 0
+}
 .counters {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -6509,15 +6682,77 @@ html.with-fancybox body.hide-scrollbar {
 .social-section .link-list .icon-link .icon {
   font-size: var(--subheader3-font-size)
 }
+.detail-item {
+  border-top: 1px solid rgba(132,85,57,.2)
+}
+.detail-item.section {
+  padding-top: 50px
+}
+.detail-item .title {
+  font-size: var(--h3-font-size);
+  line-height: var(--h3-font-size);
+  text-transform: uppercase;
+  font-weight: 700;
+  margin-bottom: 30px
+}
+.detail-item-top {
+  margin-bottom: 50px
+}
+.detail-item-top .col-xs-12:last-child {
+  text-align: right
+}
+.detail-item-top .subtitle {
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 20px;
+  margin-bottom: 10px
+}
+.detail-item-top .price {
+  color: #845539;
+  font-weight: 700;
+  font-size: 48px
+}
+.icons-detail {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: var(--section-padding)
+}
+.icons-detail .item {
+  text-align: center
+}
+.icons-detail .item .caption {
+  text-transform: uppercase;
+  margin-top: 15px
+}
+.icons-detail .item .icon {
+  height: 56px;
+  width: 56px
+}
+@media (max-width:993px) {
+  .icons-detail {
+    padding: 30px
+  }
+  .icons-detail .item .icon {
+    height: 40px;
+    width: 40px
+  }
+}
 @media (max-width:768px) {
   .colored-section {
     height: auto;
     background-attachment: local;
-    background-position: center
+    background-position: center;
+    padding: var(--section-padding) 0
   }
   .counters {
-    display: block;
-    padding: var(--section-padding) 0
+    display: block
   }
   .counters .item {
     margin-bottom: 30px
@@ -6527,6 +6762,30 @@ html.with-fancybox body.hide-scrollbar {
   }
   .counters .item .digit {
     margin: 0 auto
+  }
+  .icons-detail {
+    padding: 30px;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap
+  }
+  .icons-detail .item {
+    -ms-flex-preferred-size: 50%;
+    flex-basis: 50%;
+    max-width: 50%;
+    width: 50%;
+    -webkit-box-flex: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto
+  }
+  .icons-detail .item:nth-child(1),
+  .icons-detail .item:nth-child(2) {
+    margin-bottom: 50px
+  }
+  .detail-item-top .col-xs-12:last-child {
+    text-align: left;
+    margin-top: 30px
   }
 }
 .alert {
@@ -6544,6 +6803,23 @@ html.with-fancybox body.hide-scrollbar {
 .alert:last-child {
   margin-bottom: 0
 }
+@media (max-width:640px) {
+  .section .dark-inner {
+    margin-left: -20px;
+    margin-right: -20px
+  }
+  .detail-item.section {
+    margin-bottom: 0;
+    padding-bottom: 0
+  }
+  .icons-detail {
+    padding: 30px 0
+  }
+  .icons-detail .item .icon {
+    height: 27px;
+    width: 27px
+  }
+}
 :root {
   --font-size: 16px;
   --h1-font-size: 72px;
@@ -6558,7 +6834,7 @@ html.with-fancybox body.hide-scrollbar {
   --border-width: 1px;
   --margin: 15px;
   --padding: 20px;
-  --border-radius: 4px;
+  --border-radius: 0px;
   --icon_height: 20px;
   --icon-large_height: 48px;
   --pagination-link_size: 38px;
@@ -6581,7 +6857,7 @@ html.with-fancybox body.hide-scrollbar {
     --border-width: 1px;
     --margin: 15px;
     --padding: 20px;
-    --border-radius: 4px;
+    --border-radius: 0px;
     --icon_height: 20px;
     --pagination-link_size: 38px;
     --icon-large_height: 40px;
@@ -6590,24 +6866,29 @@ html.with-fancybox body.hide-scrollbar {
     --space-gap: 5px
   }
 }
+@media (max-width:993px) {
+  :root {
+    --section-padding: 70px
+  }
+}
 @media (max-width:768px) {
   :root {
     --h1-font-size: 28px;
     --h2-font-size: 26px;
     --h3-font-size: 18px;
     --h4-font-size: 16px;
-    --font-size-large: 18px;
+    --font-size-large: 16px;
+    --subheader2-font-size: 20px;
     --icon-large_height: 32px;
     --pagination-link_size: 28px;
     --section-padding: 50px
   }
 }
 .pagination {
-  font-size: 0
+  font-size: 0;
+  margin-bottom: 30px
 }
 .pagination .pagination-elements {
-  border-radius: var(--border-radius);
-  border: 1px solid rgba(232,232,232,.1);
   display: inline-block;
   white-space: nowrap;
   overflow: hidden;
@@ -6621,17 +6902,11 @@ html.with-fancybox body.hide-scrollbar {
   vertical-align: middle;
   text-align: center;
   font-size: var(--font-size);
-  border-right: 1px solid rgba(232,232,232,.1)
-}
-.pagination .item:last-child {
-  border-right: none;
-  border-radius: 0 var(--border-radius) var(--border-radius) 0
-}
-.pagination .item:first-child {
-  border-radius: var(--border-radius) 0 0 var(--border-radius)
+  border-right: 1px solid rgba(232,232,232,.1);
+  background-color: rgba(132,85,57,.1)
 }
 .pagination .item.link {
-  color: #e8e8e8;
+  color: #845539;
   display: -ms-inline-grid;
   display: inline-grid;
   -ms-flex-line-pack: center;
@@ -6646,22 +6921,21 @@ html.with-fancybox body.hide-scrollbar {
   color: #845539
 }
 .pagination .item.link.active ~ .item.link:hover {
-  background-color: #f4f3f4;
-  color: #feedc4
+  background-color: #845539;
+  color: #fdfdfb
 }
 .pagination .item.link:hover {
-  background-color: #f4f3f4;
-  color: #feedc4
+  background-color: #845539;
+  color: #fdfdfb
 }
 .pagination .item.empty {
-  color: #e8e8e8;
+  color: #a3806b;
   pointer-events: none
 }
 .pagination .item.disabled {
-  color: #e8e8e8;
+  color: #c7aa59;
   pointer-events: none;
-  opacity: .9;
-  background-color: rgba(244,243,244,.6)
+  opacity: .6
 }
 .pagination .pagination-position {
   font-size: var(--font-size)
@@ -6680,7 +6954,7 @@ html.with-fancybox body.hide-scrollbar {
   --border-width: 1px;
   --margin: 15px;
   --padding: 20px;
-  --border-radius: 4px;
+  --border-radius: 0px;
   --icon_height: 20px;
   --icon-large_height: 48px;
   --pagination-link_size: 38px;
@@ -6703,7 +6977,7 @@ html.with-fancybox body.hide-scrollbar {
     --border-width: 1px;
     --margin: 15px;
     --padding: 20px;
-    --border-radius: 4px;
+    --border-radius: 0px;
     --icon_height: 20px;
     --pagination-link_size: 38px;
     --icon-large_height: 40px;
@@ -6712,13 +6986,19 @@ html.with-fancybox body.hide-scrollbar {
     --space-gap: 5px
   }
 }
+@media (max-width:993px) {
+  :root {
+    --section-padding: 70px
+  }
+}
 @media (max-width:768px) {
   :root {
     --h1-font-size: 28px;
     --h2-font-size: 26px;
     --h3-font-size: 18px;
     --h4-font-size: 16px;
-    --font-size-large: 18px;
+    --font-size-large: 16px;
+    --subheader2-font-size: 20px;
     --icon-large_height: 32px;
     --pagination-link_size: 28px;
     --section-padding: 50px
@@ -6847,7 +7127,7 @@ html.with-fancybox body.hide-scrollbar {
   --border-width: 1px;
   --margin: 15px;
   --padding: 20px;
-  --border-radius: 4px;
+  --border-radius: 0px;
   --icon_height: 20px;
   --icon-large_height: 48px;
   --pagination-link_size: 38px;
@@ -6870,7 +7150,7 @@ html.with-fancybox body.hide-scrollbar {
     --border-width: 1px;
     --margin: 15px;
     --padding: 20px;
-    --border-radius: 4px;
+    --border-radius: 0px;
     --icon_height: 20px;
     --pagination-link_size: 38px;
     --icon-large_height: 40px;
@@ -6879,20 +7159,23 @@ html.with-fancybox body.hide-scrollbar {
     --space-gap: 5px
   }
 }
+@media (max-width:993px) {
+  :root {
+    --section-padding: 70px
+  }
+}
 @media (max-width:768px) {
   :root {
     --h1-font-size: 28px;
     --h2-font-size: 26px;
     --h3-font-size: 18px;
     --h4-font-size: 16px;
-    --font-size-large: 18px;
+    --font-size-large: 16px;
+    --subheader2-font-size: 20px;
     --icon-large_height: 32px;
     --pagination-link_size: 28px;
     --section-padding: 50px
   }
-}
-.rounded-card {
-  border: 1px solid rgba(232,232,232,.1)
 }
 .rounded-card .header {
   padding: var(--padding) calc(var(--padding) * 1.4);
@@ -6900,15 +7183,43 @@ html.with-fancybox body.hide-scrollbar {
   font-weight: 700;
   font-size: var(--h3-font-size);
   border-bottom: 1px solid rgba(132,85,57,.2);
-  background-color: #fdfdfb
+  background-color: #fdfdfb;
+  text-transform: uppercase
+}
+.rounded-card .subtitle {
+  font-size: var(--font-size-large);
+  display: inline-block;
+  position: relative;
+  -webkit-transition: .2s;
+  transition: .2s;
+  text-transform: none;
+  font-weight: 400
+}
+.rounded-card .subtitle:after {
+  content: "";
+  width: 150px;
+  height: 1px;
+  left: calc(100% + 15px);
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  background-color: #845539;
+  position: absolute
 }
 .rounded-card .main {
   padding: calc(var(--padding) * 1.4);
   background-color: #fdfdfb
 }
-.rounded-card:not(.no-hover):hover {
-  -webkit-box-shadow: rgba(0,0,0,.24) 0 3px 8px;
-  box-shadow: rgba(0,0,0,.24) 0 3px 8px
+@media (max-width:768px) {
+  .rounded-card .subtitle {
+    margin-bottom: 20px
+  }
+  .rounded-card .subtitle:after {
+    width: 50px;
+    left: 0;
+    top: 100%
+  }
 }
 :root {
   --font-size: 16px;
@@ -6924,7 +7235,7 @@ html.with-fancybox body.hide-scrollbar {
   --border-width: 1px;
   --margin: 15px;
   --padding: 20px;
-  --border-radius: 4px;
+  --border-radius: 0px;
   --icon_height: 20px;
   --icon-large_height: 48px;
   --pagination-link_size: 38px;
@@ -6947,7 +7258,7 @@ html.with-fancybox body.hide-scrollbar {
     --border-width: 1px;
     --margin: 15px;
     --padding: 20px;
-    --border-radius: 4px;
+    --border-radius: 0px;
     --icon_height: 20px;
     --pagination-link_size: 38px;
     --icon-large_height: 40px;
@@ -6956,13 +7267,19 @@ html.with-fancybox body.hide-scrollbar {
     --space-gap: 5px
   }
 }
+@media (max-width:993px) {
+  :root {
+    --section-padding: 70px
+  }
+}
 @media (max-width:768px) {
   :root {
     --h1-font-size: 28px;
     --h2-font-size: 26px;
     --h3-font-size: 18px;
     --h4-font-size: 16px;
-    --font-size-large: 18px;
+    --font-size-large: 16px;
+    --subheader2-font-size: 20px;
     --icon-large_height: 32px;
     --pagination-link_size: 28px;
     --section-padding: 50px
@@ -6989,9 +7306,42 @@ html.with-fancybox body.hide-scrollbar {
   background-color: #845539;
   position: absolute
 }
+.section .dark-inner {
+  background-color: #201f20;
+  color: #fdfdfb
+}
+.section.dark-section {
+  background-color: #201f20;
+  color: #fdfdfb
+}
+.section.dark-section .form .input-cover .input,
+.section.dark-section .form .input-cover .label,
+.section.dark-section .form .input-cover .textarea {
+  color: #fdfdfb
+}
+.section.dark-section .form .input-cover .input::-webkit-input-placeholder {
+  color: #c7aa59
+}
+.section.dark-section .form .input-cover .input::-moz-placeholder {
+  color: #c7aa59
+}
+.section.dark-section .form .input-cover .input:-ms-input-placeholder {
+  color: #c7aa59
+}
+.section.dark-section .form .input-cover .input::-ms-input-placeholder {
+  color: #c7aa59
+}
+.section.dark-section .form .input-cover .input::placeholder {
+  color: #c7aa59
+}
+.section.collapsed {
+  padding: 0
+}
 @media (max-width:768px) {
   .section .section-subheader:after {
-    width: 50px
+    width: 50px;
+    left: 0;
+    top: 100%
   }
 }
 :root {
@@ -7008,7 +7358,7 @@ html.with-fancybox body.hide-scrollbar {
   --border-width: 1px;
   --margin: 15px;
   --padding: 20px;
-  --border-radius: 4px;
+  --border-radius: 0px;
   --icon_height: 20px;
   --icon-large_height: 48px;
   --pagination-link_size: 38px;
@@ -7031,7 +7381,7 @@ html.with-fancybox body.hide-scrollbar {
     --border-width: 1px;
     --margin: 15px;
     --padding: 20px;
-    --border-radius: 4px;
+    --border-radius: 0px;
     --icon_height: 20px;
     --pagination-link_size: 38px;
     --icon-large_height: 40px;
@@ -7040,13 +7390,19 @@ html.with-fancybox body.hide-scrollbar {
     --space-gap: 5px
   }
 }
+@media (max-width:993px) {
+  :root {
+    --section-padding: 70px
+  }
+}
 @media (max-width:768px) {
   :root {
     --h1-font-size: 28px;
     --h2-font-size: 26px;
     --h3-font-size: 18px;
     --h4-font-size: 16px;
-    --font-size-large: 18px;
+    --font-size-large: 16px;
+    --subheader2-font-size: 20px;
     --icon-large_height: 32px;
     --pagination-link_size: 28px;
     --section-padding: 50px
@@ -7073,10 +7429,10 @@ html.with-fancybox body.hide-scrollbar {
   border: none;
   width: 100%;
   background-color: transparent;
-  border: 1px solid #feedc4;
+  border: 1px solid #845539;
   padding: var(--margin) calc(var(--margin) * 3) var(--margin) var(--margin);
   font-weight: 500;
-  border-radius: var(--border-radius);
+  border-radius: 0;
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
@@ -7092,13 +7448,15 @@ html.with-fancybox body.hide-scrollbar {
 }
 .selecter .anchor:focus,
 .selecter .anchor:hover {
-  border-color: #e8e8e8
+  border-color: #a3806b
 }
 .selecter .anchor .count {
   color: #845539;
   position: absolute;
-  right: calc(var(--margin) * 2);
+  right: calc(var(--margin) * 2.5);
   top: 50%;
+  font-size: 12px;
+  font-weight: 700;
   -webkit-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
   transform: translateY(-50%)
@@ -7106,23 +7464,24 @@ html.with-fancybox body.hide-scrollbar {
 .selecter.opened .dropdown {
   display: block
 }
+.selecter.opened .anchor {
+  background-image: url(../img/select-arrows-opened.png)
+}
 .selecter .dropdown {
   position: absolute;
   z-index: 5;
   width: 100%;
   display: none;
   left: 0;
-  top: 100%;
-  -webkit-box-shadow: rgba(0,0,0,.24) 0 3px 8px;
-  box-shadow: rgba(0,0,0,.24) 0 3px 8px
+  top: 100%
 }
 .selecter .dropdown ul {
   list-style-type: none;
   border-top: none;
   background-color: #fdfdfb;
-  border: 1px solid #feedc4;
+  border: 1px solid rgba(132,85,57,.3);
   font-weight: 500;
-  border-radius: var(--border-radius);
+  border-radius: 0;
   max-height: 250px;
   overflow: auto
 }
@@ -7136,29 +7495,13 @@ html.with-fancybox body.hide-scrollbar {
   cursor: pointer;
   position: relative;
   font-size: var(--font-size);
-  border-bottom: 1px solid #feedc4;
+  border-bottom: 1px solid rgba(132,85,57,.3);
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis
 }
 .selecter .dropdown ul li:last-child {
   border-bottom: none
-}
-.selecter .dropdown ul li:before {
-  content: "";
-  display: block;
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  width: 5px;
-  background-color: #845539;
-  z-index: 2;
-  -webkit-transition: .2s;
-  transition: .2s;
-  -webkit-transform: scaleY(0);
-  -ms-transform: scaleY(0);
-  transform: scaleY(0)
 }
 .selecter .dropdown ul li:hover:not(.disabled) {
   color: #845539
@@ -7235,8 +7578,7 @@ html.with-fancybox body.hide-scrollbar {
   height: calc(var(--icon_height) * .8);
   width: calc(var(--icon_height) * .8);
   content: "";
-  border-radius: 4px;
-  border: 1px solid #feedc4;
+  border: 1px solid #845539;
   -webkit-transition: .2s;
   transition: .2s;
   left: calc(var(--margin) * -1.2);
@@ -7247,19 +7589,17 @@ html.with-fancybox body.hide-scrollbar {
   transform: translateY(-50%)
 }
 .selecter .dropdown ul label:after {
-  content: "";
+  content: "\e90e";
+  font-family: icomoon;
   position: absolute;
-  height: calc(var(--icon_height) * .5);
-  width: calc(var(--icon_height) * .5);
-  left: 50%;
+  left: calc(var(--margin) * -1.1);
   top: 50%;
-  -webkit-transform: translate(calc(var(--margin) * -1),-50%);
-  -ms-transform: translate(calc(var(--margin) * -1),-50%);
-  transform: translate(calc(var(--margin) * -1),-50%);
-  background-color: #845539;
-  border-radius: 4px;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
   z-index: 3;
-  opacity: 0
+  opacity: 0;
+  font-weight: 700
 }
 .selecter .dropdown ul label:hover:before {
   border-color: #845539
@@ -7278,7 +7618,7 @@ html.with-fancybox body.hide-scrollbar {
   --border-width: 1px;
   --margin: 15px;
   --padding: 20px;
-  --border-radius: 4px;
+  --border-radius: 0px;
   --icon_height: 20px;
   --icon-large_height: 48px;
   --pagination-link_size: 38px;
@@ -7301,7 +7641,7 @@ html.with-fancybox body.hide-scrollbar {
     --border-width: 1px;
     --margin: 15px;
     --padding: 20px;
-    --border-radius: 4px;
+    --border-radius: 0px;
     --icon_height: 20px;
     --pagination-link_size: 38px;
     --icon-large_height: 40px;
@@ -7310,13 +7650,19 @@ html.with-fancybox body.hide-scrollbar {
     --space-gap: 5px
   }
 }
+@media (max-width:993px) {
+  :root {
+    --section-padding: 70px
+  }
+}
 @media (max-width:768px) {
   :root {
     --h1-font-size: 28px;
     --h2-font-size: 26px;
     --h3-font-size: 18px;
     --h4-font-size: 16px;
-    --font-size-large: 18px;
+    --font-size-large: 16px;
+    --subheader2-font-size: 20px;
     --icon-large_height: 32px;
     --pagination-link_size: 28px;
     --section-padding: 50px
@@ -7361,7 +7707,7 @@ html.with-fancybox body.hide-scrollbar {
   --border-width: 1px;
   --margin: 15px;
   --padding: 20px;
-  --border-radius: 4px;
+  --border-radius: 0px;
   --icon_height: 20px;
   --icon-large_height: 48px;
   --pagination-link_size: 38px;
@@ -7384,7 +7730,7 @@ html.with-fancybox body.hide-scrollbar {
     --border-width: 1px;
     --margin: 15px;
     --padding: 20px;
-    --border-radius: 4px;
+    --border-radius: 0px;
     --icon_height: 20px;
     --pagination-link_size: 38px;
     --icon-large_height: 40px;
@@ -7393,13 +7739,19 @@ html.with-fancybox body.hide-scrollbar {
     --space-gap: 5px
   }
 }
+@media (max-width:993px) {
+  :root {
+    --section-padding: 70px
+  }
+}
 @media (max-width:768px) {
   :root {
     --h1-font-size: 28px;
     --h2-font-size: 26px;
     --h3-font-size: 18px;
     --h4-font-size: 16px;
-    --font-size-large: 18px;
+    --font-size-large: 16px;
+    --subheader2-font-size: 20px;
     --icon-large_height: 32px;
     --pagination-link_size: 28px;
     --section-padding: 50px
@@ -7420,8 +7772,30 @@ html.with-fancybox body.hide-scrollbar {
   width: 100%;
   white-space: normal
 }
+.slider .slide img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -o-object-fit: cover;
+  object-fit: cover;
+  -o-object-position: center;
+  object-position: center;
+  -webkit-transition: .2s;
+  transition: .2s
+}
+.slider .slide img[data-fancybox] {
+  cursor: -webkit-zoom-in;
+  cursor: zoom-in
+}
 .slider.auto-height {
   height: auto
+}
+.slider.fixed-height {
+  height: 50vh
 }
 .slider.dots-slider {
   position: relative
@@ -7436,9 +7810,6 @@ html.with-fancybox body.hide-scrollbar {
 .slider.dots-slider .owl-item {
   height: 100%
 }
-.slider.dots-slider .owl-item .image-full img {
-  width: auto
-}
 .slider.dots-slider .owl-nav {
   position: absolute;
   z-index: 3;
@@ -7451,13 +7822,15 @@ html.with-fancybox body.hide-scrollbar {
   margin: 0
 }
 .slider.dots-slider .owl-nav button {
-  font-size: var(--h2-font-size);
-  color: #fdfdfb;
+  font-size: 30px;
+  color: #845539;
   position: absolute;
-  background-color: rgba(255,255,255,.3)
+  background-color: rgba(255,255,255,.3);
+  border-radius: 0;
+  border: 1px solid rgba(132,85,57,.3)
 }
 .slider.dots-slider .owl-nav button:hover {
-  color: #845539;
+  color: #a3806b;
   background-color: rgba(255,255,255,.5)
 }
 .slider.dots-slider .owl-nav .owl-prev {
@@ -7473,7 +7846,7 @@ html.with-fancybox body.hide-scrollbar {
   left: 0;
   width: 100%;
   text-align: center;
-  padding: calc(var(--padding)/ 2) 0
+  padding: calc(var(--padding)/ 2)
 }
 .slider.dots-slider .owl-dots .owl-dot span {
   background-color: #fff
@@ -7488,16 +7861,17 @@ html.with-fancybox body.hide-scrollbar {
   .slider.dots-slider {
     border-radius: 0
   }
-  .slider.dots-slider:not(.auto-height) {
-    margin-top: calc(var(--padding) * 1.4 * -1);
-    margin-right: calc(var(--padding) * 1.4 * -1);
-    margin-left: calc(var(--padding) * 1.4 * -1);
-    width: calc(100% + var(--padding) * 1.4 * 2)
+  .slider.dots-slider:not(.fixed-height) {
+    margin-bottom: calc(var(--padding) * 1.4);
+    height: 350px;
+    width: calc(100% + 40px);
+    margin-left: -20px;
+    margin-right: -20px
   }
-  .slider.dots-slider.auto-height {
-    margin-right: -30px;
-    margin-left: -30px;
-    width: calc(100% + 60px)
+  .slider.dots-slider.fixed-height {
+    margin-right: -20px;
+    margin-left: -20px;
+    width: calc(100% + 40px)
   }
   .slider.dots-slider .owl-nav {
     display: none
@@ -7517,7 +7891,7 @@ html.with-fancybox body.hide-scrollbar {
   --border-width: 1px;
   --margin: 15px;
   --padding: 20px;
-  --border-radius: 4px;
+  --border-radius: 0px;
   --icon_height: 20px;
   --icon-large_height: 48px;
   --pagination-link_size: 38px;
@@ -7540,7 +7914,7 @@ html.with-fancybox body.hide-scrollbar {
     --border-width: 1px;
     --margin: 15px;
     --padding: 20px;
-    --border-radius: 4px;
+    --border-radius: 0px;
     --icon_height: 20px;
     --pagination-link_size: 38px;
     --icon-large_height: 40px;
@@ -7549,30 +7923,23 @@ html.with-fancybox body.hide-scrollbar {
     --space-gap: 5px
   }
 }
+@media (max-width:993px) {
+  :root {
+    --section-padding: 70px
+  }
+}
 @media (max-width:768px) {
   :root {
     --h1-font-size: 28px;
     --h2-font-size: 26px;
     --h3-font-size: 18px;
     --h4-font-size: 16px;
-    --font-size-large: 18px;
+    --font-size-large: 16px;
+    --subheader2-font-size: 20px;
     --icon-large_height: 32px;
     --pagination-link_size: 28px;
     --section-padding: 50px
   }
-}
-h1,
-h2,
-h3,
-h4 {
-  font-weight: 400;
-  font-weight: 100
-}
-h1.spaced-bottom,
-h2.spaced-bottom,
-h3.spaced-bottom,
-h4.spaced-bottom {
-  margin-bottom: calc(var(--section-padding) * 2)
 }
 h1 {
   font-size: var(--h1-font-size);
@@ -7599,6 +7966,17 @@ h3 {
 h4 {
   font-size: var(--h4-font-size);
   line-height: var(--h4-font-size)
+}
+.main-subtitle {
+  margin-bottom: 20px;
+  font-size: var(--subheader2-font-size)
+}
+.main-title {
+  margin-bottom: 50px;
+  font-weight: 700;
+  font-size: var(--h1-font-size);
+  line-height: var(--h1-font-size);
+  text-transform: uppercase
 }
 .paragraph {
   font-size: var(--font-size);

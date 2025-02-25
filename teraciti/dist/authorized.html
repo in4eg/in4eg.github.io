@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="ua">
+<head>
+
+	<meta charset="UTF-8">
+	<title>Teracity :: Main Page</title>
+
+	<link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
+	<link rel="manifest" href="/favicon/site.webmanifest">
+	<link rel="mask-icon" href="/favicon/safari-pinned-tab.svg" color="#201f20">
+	<meta name="msapplication-TileColor" content="#201f20">
+	<meta name="theme-color" content="#201f20">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+	<meta name="format-detection" content="telephone=no">
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Wix+Madefor+Display:wght@400..800&display=swap" rel="stylesheet">
+
+
+	<link rel="stylesheet" href="css/bundle.min.css">
+
+</head>
+<body>
+	<!-- header -->
+	<script>
+	var apiKey = '';
+</script>
+
+<!-- class .inner for other pages-->
+<header class="main-header inner" id="mainHeader">
+	<div class="container">
+		<div class="header-inner">
+			<a href="index.html" class="logo">
+				<!-- dark logo -->
+				<img src="img/teracity_logo_horisontal.png" class="logo-image">
+			</a>
+			<div class="navigation-inner">
+				<div class="main-navigation" id="mainNavigation">
+					<nav class="main-nav">
+						<ul class="link-list clear">
+							<li class="item">
+								<a href="index.html" class="link"><span class="text">Головна</span></a>
+							</li>
+							<li class="item">
+								<a href="catalog.html" class="link"><span class="text">Об'єкти</span></a>
+							</li>
+							<li class="item">
+								<a href="contacts.html" class="link active"><span class="text">Контакти</span></a>
+							</li>
+						</ul>
+					</nav>
+					<div class="dropdown-select language-select">
+						<div class="header">
+							<div class="item"><img src="img/lang_ukr.png" alt="ukr"></div>
+						</div>
+						<div class="inner">
+							<div class="item"><img src="img/lang_eng.png" alt="eng"></div>
+						</div>
+					</div>
+				</div>
+				<div class="align-right mobile-panel">
+					<button class="button button-menu menu-toggle" data-toggle="mainNavigation">
+						<span></span>
+					</button>
+				</div>
+				<div class="login-info">
+					<button class="button button-primary" type="button" data-call="#loginPopup">
+						<span class="visible-desktop">Авторизація</span>
+						<i class="icon icon-login visible-mobile"></i>
+						<span class="fade"></span>
+					</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</header>
+
+	<!-- class .inner-page -->
+	<main class="page-main inner-page" id="pageMain">
+		<section class="section large-spaced">
+			<div class="container">
+				<div class="section-subheader">Необхідно авторизуватись</div>
+				<h2 class="spaced-bottom-large">Введіть данні</h2>
+				<!-- login form -->
+				<form action="" class="form validate-form cropped-form">
+					<div class="input-cover">
+						<label class="label" for="phone">Логін <sup>*</sup></label>
+						<input type="tel" class="input phone" id="phone" data-mask="+38 (000) 000-00-00" placeholder="+38 (000) 000-00-00">
+						<div class="error-alert">Вкажіть номер телефону</div>
+					</div>
+					<div class="input-cover">
+						<label class="label" for="password">Пароль<sup>*</sup></label>
+						<input type="password" class="input" id="password" data-minlength="5" autocomplete>
+						<div class="error-alert">Вкажіть пароль (мін 5 символів)</div>
+					</div>
+					<button class="button button-primary button-block" type="submit">
+						Відправити
+						<span class="fade"></span>
+					</button>
+				</form>
+				</div>
+			</div>
+		</section>
+		<!-- / form -->
+	</main>
+
+	<!-- footer -->
+	<footer class="main-footer">
+	<div class="container">
+		<div class="footer-inner">
+			<div class="logo-cover">
+				<a href="index.html" class="logo">
+					<img src="img/teracity_logo_horisontal_light.png" alt="logo">
+				</a>
+			</div>
+			<div class="contacts">
+				<a href="mailto:info@mysite.com" class="link">info@mysite.com</a>
+			</div>
+			<div class="copyright">&copy; Teracity, 2025</div>
+			<!-- scroll to top -->
+			<a href="#pageMain" data-scrollto="#pageMain" class="top-link button button-icon button-primary">
+				<i class="icon icon-top"></i>
+				<span class="fade"></span>
+			</a>
+			<!-- / scroll to top -->
+		</div>
+	</div>
+</footer>
+
+	<!-- popup -->
+	<div id="loginPopup" class="popup rounded-card">
+	<div class="inner">
+		<button type="button" class="close-popup button">&times;</button>
+		<div class="header">Авторизація</div>
+		<div class="main">
+			<!-- login form -->
+			<form action="" class="form validate-form">
+				<div class="input-cover">
+					<label class="label" for="phone">Логін <sup>*</sup></label>
+					<input type="tel" class="input phone" id="phone" data-mask="+38 (000) 000-00-00" placeholder="+38 (000) 000-00-00">
+					<div class="error-alert">Вкажіть номер телефону</div>
+				</div>
+				<div class="input-cover">
+					<label class="label" for="password">Пароль<sup>*</sup></label>
+					<input type="password" class="input" id="password" data-minlength="5" autocomplete>
+					<div class="error-alert">Вкажіть пароль (мін 5 символів)</div>
+				</div>
+				<button class="button button-primary button-block" type="submit">
+					Відправити
+					<span class="fade"></span>
+				</button>
+			</form>
+		</div>
+	</div>
+</div>
+	<div id="loginOutPopup" class="popup rounded-card">
+	<div class="inner">
+		<button type="button" class="close-popup button">&times;</button>
+		<div class="header">Вихід</div>
+		<div class="main">
+			<div class="alert">
+				<i class="icon icon-info"></i>Підтвердіть вихід з системи
+			</div>
+			<div class="row">
+				<div class="col-xs-12 col-sm-6 spaced-xs">
+					<button class="button button-secondary button-block" type="button" data-dismiss="#loginOutPopup">
+						Відміна
+						<span class="fade"></span>
+					</button>
+				</div>
+				<div class="col-xs-12 col-sm-6">
+					<button class="button button-primary button-block" type="button">
+						Підтверджую
+						<span class="fade"></span>
+					</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+	<script src="js/lib/jquery.min.js"></script>
+	<!-- map -->
+	<script>
+		var script = document.createElement('script');
+		script.src = "https://maps.googleapis.com/maps/api/js?key="+apiKey+"&callback=initMap&v=weekly";
+		document.getElementsByTagName('script')[0].parentNode.appendChild(script);
+	</script>
+	<!-- bundle -->
+	<script src="js/main.js"></script>
+</body>
+</html>
