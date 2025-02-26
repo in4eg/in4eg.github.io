@@ -139,6 +139,9 @@ img.adaptive {
 .color-white {
   color: #fdfdfb
 }
+.bold {
+  font-weight: 700
+}
 .margin-top {
   margin-top: var(--margin)
 }
@@ -6940,6 +6943,36 @@ html.with-fancybox body.hide-scrollbar {
 .pagination .pagination-position {
   font-size: var(--font-size)
 }
+.wPaginate1 {
+  display: block;
+  font-size: 0
+}
+._wPaginate_holder {
+  display: inline-block;
+  white-space: nowrap;
+  overflow: hidden;
+  font-size: 0
+}
+._wPaginate_link {
+  height: var(--pagination-link_size);
+  width: var(--pagination-link_size);
+  line-height: var(--pagination-link_size);
+  display: inline-block;
+  vertical-align: middle;
+  text-align: center;
+  font-size: var(--font-size);
+  border-right: 1px solid rgba(232,232,232,.1);
+  background-color: rgba(132,85,57,.1)
+}
+._wPaginate_link:hover {
+  background-color: #845539;
+  color: #fdfdfb
+}
+._wPaginate_link._wPaginate_link_active {
+  background-color: #845539;
+  color: #fdfdfb;
+  pointer-events: none
+}
 :root {
   --font-size: 16px;
   --h1-font-size: 72px;
@@ -7336,6 +7369,12 @@ html.with-fancybox body.hide-scrollbar {
 }
 .section.collapsed {
   padding: 0
+}
+.section.collapsed-top {
+  padding-top: 0
+}
+.section.collapsed-bottom {
+  padding-bottom: 0
 }
 @media (max-width:768px) {
   .section .section-subheader:after {
@@ -7995,6 +8034,9 @@ h4 {
 }
 .spaced-bottom {
   margin-bottom: var(--margin)
+}
+.spaced-bottom-small {
+  margin-bottom: calc(var(--margin)/ 2)
 }
 .spaced-bottom-large {
   margin-bottom: calc(var(--margin) * 4)
