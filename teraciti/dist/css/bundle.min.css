@@ -5631,6 +5631,9 @@ html.with-fancybox body.hide-scrollbar {
 .main-header .logo .logo-image.dark {
   display: none
 }
+.main-header .logo.disabled {
+  pointer-events: none
+}
 .main-header .main-nav {
   display: block
 }
@@ -5672,6 +5675,9 @@ html.with-fancybox body.hide-scrollbar {
   -ms-transform: scale(1);
   transform: scale(1);
   opacity: 1
+}
+.main-header .link-list .link.disabled {
+  opacity: .5
 }
 .main-header .mobile-panel {
   display: none
