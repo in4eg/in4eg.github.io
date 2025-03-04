@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', function(){
 	let ANIMATED_CLASS = 'animated'
 
 	let setDetectSectionAnimation = function(section){
-		if (window.pageYOffset + window.innerHeight / 1.7 > section.offsetTop) {
+		if (window.pageYOffset + window.innerHeight / 1.5 > section.offsetTop) {
 			if (!section.classList.contains(ANIMATED_CLASS)) {
 				section.classList.add(ANIMATED_CLASS);
 			};

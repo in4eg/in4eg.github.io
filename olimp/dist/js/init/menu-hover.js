@@ -67,7 +67,7 @@ document.addEventListener("DOMContentLoaded", function() {
 				let targetIndex = button.dataset.tabHover;
 				hideAll(tabs);
 				show(tabs, targetIndex);
-			}, {passive: true});
+			});
 
 			button.addEventListener('click', function(e){
 				if (window.innerWidth >= 1200) return;
