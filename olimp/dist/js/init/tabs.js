@@ -4,6 +4,7 @@ document.addEventListener('DOMContentLoaded', function(){
 	const TAB_CONTENT_ACTIVE_CLASS = 'active';
 
 	let setFaderSize = function(button){
+		if (!button || !button.parentElement) return;
 		let fader = button.parentElement.querySelector('.tab-fader');
 		fader.style.width = button.offsetWidth + 'px';
 		fader.style.top = button.offsetTop + 'px';

@@ -1,8 +1,22 @@
 window.addEventListener('load', function(){
+
+	const waitForFinalEvent = (function(){
+		var timers = {};
+		return function (callback, ms, uniqueId) {
+			if (!uniqueId) {
+				uniqueId = "Don't call this twice without a uniqueId";
+			}
+			if (timers[uniqueId]) {
+				clearTimeout (timers[uniqueId]);
+			}
+			timers[uniqueId] = setTimeout(callback, ms);
+		};
+	})();
+
+
 	window.gliderInstances = {};
 
 	if (document.querySelectorAll('.glider').length && window.Glider) {
-
 		Array.prototype.forEach.call(document.querySelectorAll('.glider'), function(slider){
 			gliderInstances[slider.id] = new Glider(slider, {
 				draggable: true,
@@ -16,8 +30,8 @@ window.addEventListener('load', function(){
 						breakpoint: 0,
 						settings: {
 							// Set to `auto` and provide item width to adjust to viewport
-							slidesToShow: 1.3,
-							slidesToScroll: 1.3,
+							slidesToShow: 1.2,
+							slidesToScroll: 1.2,
 							duration: 0.25
 						}
 					}, {
@@ -60,47 +74,74 @@ window.addEventListener('load', function(){
 			})
 		})
 	}
-})
 
-if (document.querySelectorAll('.glider').length) {
-	Array.prototype.forEach.call(document.querySelectorAll('.glider'), function(slider){
-		slider.addEventListener('glider-slide-visible', function(event){
-			var glider = Glider(this);
-
-			let countCover = glider.ele.parentElement.querySelector('.slider-navigation .slider-counter');
-			if (!countCover) return;
+	if (window.gliderInstances) {
+		for (let key in window.gliderInstances) {
+			let glider = window.gliderInstances[key];
 
 			let totalSlides = glider.slides.length;
-			let currentSlides = event.detail.slide+1;
+			let slidesToScroll = glider.opt.slidesToScroll;
+			let currentSlides = slidesToScroll;
 
-			let checkNavigation = function(){
+			function setSlideCount(){
+				let countCover = glider.ele.parentElement.querySelector('.slider-navigation .slider-counter');
+				if (!countCover) return;
+
+				countCover.querySelector('.current').innerHTML = Math.floor(currentSlides);
+				countCover.querySelector('.total').innerHTML = totalSlides;
+			};
+
+			function checkNavigation(){
+				if (!glider || !totalSlides) return;
+				let gliderParent = glider.ele.parentElement;
 				if (totalSlides <= glider.opt.slidesToShow) {
-					slider.parentElement.classList.add('hide-arrow')
+					gliderParent.classList.add('hide-arrow');
 				} else {
-					slider.parentElement.classList.remove('hide-arrow')
+					gliderParent.classList.remove('hide-arrow');
 				}
 			};
 
+			function setFaderPosition(){
+				let fader = glider.ele.parentElement.querySelector('.slider-navigation .fade');
+				let fadeWidth = Math.floor(100/Math.ceil(totalSlides/slidesToScroll));
+				let leftPosition = Math.floor(currentSlides/totalSlides*100 - fadeWidth);
+
+				if (leftPosition < fadeWidth) {
+					leftPosition = 0;
+				};
+
+				fader.style.width = fadeWidth + '%';
+				fader.style.left = leftPosition + '%';
+			};
+
+			setSlideCount();
 			checkNavigation();
+			setFaderPosition();
 
-			countCover.querySelector('.current').innerHTML = currentSlides;
-			countCover.querySelector('.total').innerHTML = totalSlides;
+			glider.arrows.prev.addEventListener(`click`, function(e){
+				if ((totalSlides - slidesToScroll) < slidesToScroll) {
+					currentSlides = totalSlides - (totalSlides - slidesToScroll)
+				} else {
+					currentSlides -= slidesToScroll;
+				};
+				setSlideCount();
+				setFaderPosition();
+			}, {passive: true});
 
-			let fadeWidth = glider.opt.slidesToScroll*10;
-
-			glider.ele.parentElement.querySelector('.slider-navigation .fade').style.width = fadeWidth + '%';
-
-			let leftPosition = (100 - (totalSlides - currentSlides)/totalSlides*100) - fadeWidth;
-			if (leftPosition < 0) {
-				leftPosition = 0
-			}
-
-			glider.ele.parentElement.querySelector('.slider-navigation .fade').style.left = leftPosition + '%';
+			glider.arrows.next.addEventListener(`click`, function(e){
+				currentSlides += slidesToScroll;
+				if (currentSlides >= totalSlides) {
+					currentSlides = totalSlides;
+				}
+				setSlideCount();
+				setFaderPosition();
+			}, {passive: true});
 
 			window.addEventListener('resize', function(event){
+				setSlideCount();
 				checkNavigation();
-			});
-		});
-	})
-
-};
+				setFaderPosition();
+			})
+		}
+	}
+})

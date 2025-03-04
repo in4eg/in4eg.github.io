@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', function(){
 
 			blockParent.style.height = blockParent.getBoundingClientRect().height + 'px';
 
-			let startPosition = stickInside.scrollHeight + block.getBoundingClientRect().height/2;
+			let startPosition = stickInside.scrollHeight;
 			let endPositon = startPosition + stickInsideHeight - block.getBoundingClientRect().height;
 
 			if (window.pageYOffset + headerHeight < startPosition) {

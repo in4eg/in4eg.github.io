@@ -71,17 +71,19 @@ document.addEventListener("DOMContentLoaded", function() {
 
 			button.addEventListener('click', function(e){
 				if (window.innerWidth >= 1200) return;
-				e.preventDefault();
-				e.stopPropagation();
-				e.stopImmediatePropagation();
-				let targetIndex = button.dataset.tabHover;
 				hideAll(tabs);
-				show(tabs, targetIndex);
+				if (button.dataset.tabHover) {
+					e.preventDefault();
+					e.stopPropagation();
+					e.stopImmediatePropagation();
+					let targetIndex = button.dataset.tabHover;
+					show(tabs, targetIndex);
+				}
 			});
 
 
 			button.addEventListener('touchstart', function(e){
-				if (window.innerWidth >= 1200) return;
+				if (window.innerWidth >= 1200 || !button.dataset.tabHover) return;
 				e.preventDefault();
 				e.stopPropagation();
 				e.stopImmediatePropagation();
