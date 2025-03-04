@@ -317,7 +317,6 @@ document.addEventListener("DOMContentLoaded", function() {
 
 			button.addEventListener('touchstart', function(e){
 				if (window.innerWidth >= 1200 || !button.dataset.tabHover) return;
-				e.preventDefault();
 				e.stopPropagation();
 				e.stopImmediatePropagation();
 				let targetIndex = button.dataset.tabHover;
@@ -576,6 +575,14 @@ window.addEventListener('load', function(){
 				fader.style.left = leftPosition + '%';
 			};
 
+			function onGliderScrollEnd(scrollElement){
+				let itemWidth = glider.itemWidth;
+				let leftScrollPosition = scrollElement.scrollLeft;
+				currentSlides = Math.floor(leftScrollPosition/itemWidth + slidesToScroll);
+				setSlideCount();
+				setFaderPosition();
+			}
+
 			setSlideCount();
 			checkNavigation();
 			setFaderPosition();
@@ -598,6 +605,13 @@ window.addEventListener('load', function(){
 				setSlideCount();
 				setFaderPosition();
 			}, {passive: true});
+
+
+			glider.ele.addEventListener('scrollend', function(event){
+				waitForFinalEvent(function(){
+					onGliderScrollEnd(event.srcElement);
+				}, 250, 'glider_scroll')
+			})
 
 			window.addEventListener('resize', function(event){
 				setSlideCount();

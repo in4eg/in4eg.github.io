@@ -114,6 +114,14 @@ window.addEventListener('load', function(){
 				fader.style.left = leftPosition + '%';
 			};
 
+			function onGliderScrollEnd(scrollElement){
+				let itemWidth = glider.itemWidth;
+				let leftScrollPosition = scrollElement.scrollLeft;
+				currentSlides = Math.floor(leftScrollPosition/itemWidth + slidesToScroll);
+				setSlideCount();
+				setFaderPosition();
+			}
+
 			setSlideCount();
 			checkNavigation();
 			setFaderPosition();
@@ -136,6 +144,13 @@ window.addEventListener('load', function(){
 				setSlideCount();
 				setFaderPosition();
 			}, {passive: true});
+
+
+			glider.ele.addEventListener('scrollend', function(event){
+				waitForFinalEvent(function(){
+					onGliderScrollEnd(event.srcElement);
+				}, 250, 'glider_scroll')
+			})
 
 			window.addEventListener('resize', function(event){
 				setSlideCount();

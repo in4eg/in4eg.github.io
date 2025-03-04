@@ -84,7 +84,6 @@ document.addEventListener("DOMContentLoaded", function() {
 
 			button.addEventListener('touchstart', function(e){
 				if (window.innerWidth >= 1200 || !button.dataset.tabHover) return;
-				e.preventDefault();
 				e.stopPropagation();
 				e.stopImmediatePropagation();
 				let targetIndex = button.dataset.tabHover;
