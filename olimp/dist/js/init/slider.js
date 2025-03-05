@@ -128,9 +128,9 @@ window.addEventListener('load', function(){
 
 			glider.arrows.prev.addEventListener(`click`, function(e){
 				if ((totalSlides - slidesToScroll) < slidesToScroll) {
-					currentSlides = totalSlides - (totalSlides - slidesToScroll)
+					currentSlides = Math.floor(totalSlides - (totalSlides - slidesToScroll));
 				} else {
-					currentSlides -= slidesToScroll;
+					currentSlides -= Math.floor(slidesToScroll);
 				};
 				setSlideCount();
 				setFaderPosition();

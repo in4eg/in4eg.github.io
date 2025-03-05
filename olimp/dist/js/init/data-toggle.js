@@ -12,7 +12,6 @@ document.addEventListener('DOMContentLoaded', function(){
 			headerContainer.classList.remove('menu-active');
 
 			Array.prototype.forEach.call(document.querySelectorAll(elementLink), function(element){
-
 				if (!element.classList.contains(toggleClass)) {
 					element.classList.add(toggleClass);
 					button.classList.add(defaultClass);
@@ -21,11 +20,14 @@ document.addEventListener('DOMContentLoaded', function(){
 					}, 250)
 					if (element.classList.contains('main-header') && element.querySelector('.search-input')) {
 						element.querySelector('.search-input').focus();
+						document.body.classList.add('overlayed');
 					}
 				} else {
 					element.classList.remove(toggleClass);
 					button.classList.remove(defaultClass);
-
+					if (document.body.classList.contains('overlayed')){
+						document.body.classList.remove('overlayed');
+					};
 					if (!element.classList.contains('main-header')) {
 						element.classList.remove(ANIMATED_CLASS);
 					}
@@ -67,9 +69,14 @@ document.addEventListener('DOMContentLoaded', function(){
 		if (e.target.closest('[data-toggle-element="#mainNavigation"]')) return;
 		if (e.target.closest('#mainNavigation')) return;
 		if (e.target.closest('#menuResult')) return;
+		if (e.target.closest('#searchResult')) return;
 		if (mainNavigationContainer.classList.contains('active')) {
 			document.querySelector('[data-toggle-element="#mainNavigation"]').classList.remove('active');
 			mainNavigationContainer.classList.remove('active');
+		}
+		if (headerContainer.classList.contains('form-search-active') && !e.target.closest('#mainHeader')) {
+			headerContainer.classList.remove('form-search-active');
+			document.body.classList.remove('overlayed');
 		}
 	}, {passive: true});
 

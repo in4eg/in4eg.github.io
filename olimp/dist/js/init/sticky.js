@@ -26,21 +26,21 @@ document.addEventListener('DOMContentLoaded', function(){
 
 			blockParent.style.height = blockParent.getBoundingClientRect().height + 'px';
 
-			let startPosition = stickInside.scrollHeight;
+			let startPosition = stickInside.offsetTop - headerHeight;
 			let endPositon = startPosition + stickInsideHeight - block.getBoundingClientRect().height;
 
-			if (window.pageYOffset + headerHeight < startPosition) {
+			if (window.pageYOffset < startPosition) {
 				// console.log('top')
 				block.style.top = 'auto';
 				block.classList.remove('to-top');
 				block.classList.remove('to-bottom');
-			} else if (window.pageYOffset + headerHeight >= startPosition && window.pageYOffset + headerHeight <= endPositon) {
+			} else if (window.pageYOffset >= startPosition && window.pageYOffset <= endPositon) {
 				// console.log('middle')
 				block.classList.add('to-top');
 				block.style.top = headerHeight + 'px';
 				block.style.left = blockParent.getBoundingClientRect().left + 'px';
 				block.classList.remove('to-bottom');
-			} else if (window.pageYOffset + headerHeight > endPositon) {
+			} else if (window.pageYOffset > endPositon) {
 				// console.log('bottom')
 				block.style.left = blockParent.offsetLeft + 'px';
 				block.classList.remove('to-top');

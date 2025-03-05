@@ -3,6 +3,7 @@
   --font-size-large: 18px;
   --section-title-font-size: 48px;
   --section-title-large-font-size: 64px;
+  --section-title-small-font-size: 40px;
   --subtitle-font-size: 24px;
   --buttons-font-size: 14px;
   --article-title-font-size: 20px;
@@ -12,20 +13,23 @@
   :root {
     --section-title-font-size: 40px;
     --section-title-large-font-size: 58px;
-    --subtitle-font-size: 20px
+    --subtitle-font-size: 20px;
+    --section-title-small-font-size: 38px
   }
 }
 @media (max-width:1199px) {
   :root {
     --section-title-font-size: 36px;
-    --section-title-large-font-size: 54px
+    --section-title-large-font-size: 54px;
+    --section-title-small-font-size: 32px
   }
 }
 @media (max-width:768px) {
   :root {
     --section-title-font-size: 32px;
     --article-title-font-size: 18px;
-    --section-title-large-font-size: 40px
+    --section-title-large-font-size: 32px;
+    --section-title-small-font-size: 28px
   }
 }
 *,
@@ -229,6 +233,7 @@ img.adaptive {
   --font-size-large: 18px;
   --section-title-font-size: 48px;
   --section-title-large-font-size: 64px;
+  --section-title-small-font-size: 40px;
   --subtitle-font-size: 24px;
   --buttons-font-size: 14px;
   --article-title-font-size: 20px;
@@ -238,20 +243,23 @@ img.adaptive {
   :root {
     --section-title-font-size: 40px;
     --section-title-large-font-size: 58px;
-    --subtitle-font-size: 20px
+    --subtitle-font-size: 20px;
+    --section-title-small-font-size: 38px
   }
 }
 @media (max-width:1199px) {
   :root {
     --section-title-font-size: 36px;
-    --section-title-large-font-size: 54px
+    --section-title-large-font-size: 54px;
+    --section-title-small-font-size: 32px
   }
 }
 @media (max-width:768px) {
   :root {
     --section-title-font-size: 32px;
     --article-title-font-size: 18px;
-    --section-title-large-font-size: 40px
+    --section-title-large-font-size: 32px;
+    --section-title-small-font-size: 28px
   }
 }
 :root {
@@ -259,6 +267,7 @@ img.adaptive {
   --font-size-large: 18px;
   --section-title-font-size: 48px;
   --section-title-large-font-size: 64px;
+  --section-title-small-font-size: 40px;
   --subtitle-font-size: 24px;
   --buttons-font-size: 14px;
   --article-title-font-size: 20px;
@@ -268,20 +277,23 @@ img.adaptive {
   :root {
     --section-title-font-size: 40px;
     --section-title-large-font-size: 58px;
-    --subtitle-font-size: 20px
+    --subtitle-font-size: 20px;
+    --section-title-small-font-size: 38px
   }
 }
 @media (max-width:1199px) {
   :root {
     --section-title-font-size: 36px;
-    --section-title-large-font-size: 54px
+    --section-title-large-font-size: 54px;
+    --section-title-small-font-size: 32px
   }
 }
 @media (max-width:768px) {
   :root {
     --section-title-font-size: 32px;
     --article-title-font-size: 18px;
-    --section-title-large-font-size: 40px
+    --section-title-large-font-size: 32px;
+    --section-title-small-font-size: 28px
   }
 }
 .accordeon .accordeon-title {
@@ -344,6 +356,7 @@ img.adaptive {
   --font-size-large: 18px;
   --section-title-font-size: 48px;
   --section-title-large-font-size: 64px;
+  --section-title-small-font-size: 40px;
   --subtitle-font-size: 24px;
   --buttons-font-size: 14px;
   --article-title-font-size: 20px;
@@ -353,20 +366,23 @@ img.adaptive {
   :root {
     --section-title-font-size: 40px;
     --section-title-large-font-size: 58px;
-    --subtitle-font-size: 20px
+    --subtitle-font-size: 20px;
+    --section-title-small-font-size: 38px
   }
 }
 @media (max-width:1199px) {
   :root {
     --section-title-font-size: 36px;
-    --section-title-large-font-size: 54px
+    --section-title-large-font-size: 54px;
+    --section-title-small-font-size: 32px
   }
 }
 @media (max-width:768px) {
   :root {
     --section-title-font-size: 32px;
     --article-title-font-size: 18px;
-    --section-title-large-font-size: 40px
+    --section-title-large-font-size: 32px;
+    --section-title-small-font-size: 28px
   }
 }
 .article-preview {
@@ -427,6 +443,7 @@ img.adaptive {
   --font-size-large: 18px;
   --section-title-font-size: 48px;
   --section-title-large-font-size: 64px;
+  --section-title-small-font-size: 40px;
   --subtitle-font-size: 24px;
   --buttons-font-size: 14px;
   --article-title-font-size: 20px;
@@ -436,20 +453,23 @@ img.adaptive {
   :root {
     --section-title-font-size: 40px;
     --section-title-large-font-size: 58px;
-    --subtitle-font-size: 20px
+    --subtitle-font-size: 20px;
+    --section-title-small-font-size: 38px
   }
 }
 @media (max-width:1199px) {
   :root {
     --section-title-font-size: 36px;
-    --section-title-large-font-size: 54px
+    --section-title-large-font-size: 54px;
+    --section-title-small-font-size: 32px
   }
 }
 @media (max-width:768px) {
   :root {
     --section-title-font-size: 32px;
     --article-title-font-size: 18px;
-    --section-title-large-font-size: 40px
+    --section-title-large-font-size: 32px;
+    --section-title-small-font-size: 28px
   }
 }
 .banner-cover {
@@ -560,6 +580,7 @@ img.adaptive {
   --font-size-large: 18px;
   --section-title-font-size: 48px;
   --section-title-large-font-size: 64px;
+  --section-title-small-font-size: 40px;
   --subtitle-font-size: 24px;
   --buttons-font-size: 14px;
   --article-title-font-size: 20px;
@@ -569,20 +590,23 @@ img.adaptive {
   :root {
     --section-title-font-size: 40px;
     --section-title-large-font-size: 58px;
-    --subtitle-font-size: 20px
+    --subtitle-font-size: 20px;
+    --section-title-small-font-size: 38px
   }
 }
 @media (max-width:1199px) {
   :root {
     --section-title-font-size: 36px;
-    --section-title-large-font-size: 54px
+    --section-title-large-font-size: 54px;
+    --section-title-small-font-size: 32px
   }
 }
 @media (max-width:768px) {
   :root {
     --section-title-font-size: 32px;
     --article-title-font-size: 18px;
-    --section-title-large-font-size: 40px
+    --section-title-large-font-size: 32px;
+    --section-title-small-font-size: 28px
   }
 }
 .breadcrumbs {
@@ -628,11 +652,28 @@ img.adaptive {
 .breadcrumbs-list a.text:hover {
   color: #3c2e25
 }
+@media (max-width:768px) {
+  .breadcrumbs-list li:last-child {
+    display: block;
+    padding-left: 0;
+    margin-top: 8px
+  }
+}
+@media (max-width:420px) {
+  .breadcrumbs-list li {
+    font-size: 12px;
+    padding-right: 10px
+  }
+  .breadcrumbs-list li + li {
+    padding-left: 10px
+  }
+}
 :root {
   --font-size: 16px;
   --font-size-large: 18px;
   --section-title-font-size: 48px;
   --section-title-large-font-size: 64px;
+  --section-title-small-font-size: 40px;
   --subtitle-font-size: 24px;
   --buttons-font-size: 14px;
   --article-title-font-size: 20px;
@@ -642,20 +683,23 @@ img.adaptive {
   :root {
     --section-title-font-size: 40px;
     --section-title-large-font-size: 58px;
-    --subtitle-font-size: 20px
+    --subtitle-font-size: 20px;
+    --section-title-small-font-size: 38px
   }
 }
 @media (max-width:1199px) {
   :root {
     --section-title-font-size: 36px;
-    --section-title-large-font-size: 54px
+    --section-title-large-font-size: 54px;
+    --section-title-small-font-size: 32px
   }
 }
 @media (max-width:768px) {
   :root {
     --section-title-font-size: 32px;
     --article-title-font-size: 18px;
-    --section-title-large-font-size: 40px
+    --section-title-large-font-size: 32px;
+    --section-title-small-font-size: 28px
   }
 }
 .button {
@@ -856,16 +900,24 @@ img.adaptive {
 @media (max-width:992px) {
   .button.full-sm {
     width: 100%;
-    padding: 24px 43px 24px 16px
+    padding: 20px 43px 20px 16px
   }
   .button.full-sm .button-icon {
     position: absolute;
     right: 12px;
-    top: 12px;
+    top: 8px;
     margin-left: 0
   }
   .button.full-sm.button-block {
     padding-right: 43px
+  }
+  .button.button-block {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-right: 46px
+  }
+  .button.button-block .button-icon {
+    top: 8px
   }
 }
 @media (max-width:768px) {
@@ -1001,6 +1053,7 @@ img.adaptive {
   --font-size-large: 18px;
   --section-title-font-size: 48px;
   --section-title-large-font-size: 64px;
+  --section-title-small-font-size: 40px;
   --subtitle-font-size: 24px;
   --buttons-font-size: 14px;
   --article-title-font-size: 20px;
@@ -1010,20 +1063,23 @@ img.adaptive {
   :root {
     --section-title-font-size: 40px;
     --section-title-large-font-size: 58px;
-    --subtitle-font-size: 20px
+    --subtitle-font-size: 20px;
+    --section-title-small-font-size: 38px
   }
 }
 @media (max-width:1199px) {
   :root {
     --section-title-font-size: 36px;
-    --section-title-large-font-size: 54px
+    --section-title-large-font-size: 54px;
+    --section-title-small-font-size: 32px
   }
 }
 @media (max-width:768px) {
   :root {
     --section-title-font-size: 32px;
     --article-title-font-size: 18px;
-    --section-title-large-font-size: 40px
+    --section-title-large-font-size: 32px;
+    --section-title-small-font-size: 28px
   }
 }
 .form .form-group {
@@ -1173,6 +1229,7 @@ img.adaptive {
   --font-size-large: 18px;
   --section-title-font-size: 48px;
   --section-title-large-font-size: 64px;
+  --section-title-small-font-size: 40px;
   --subtitle-font-size: 24px;
   --buttons-font-size: 14px;
   --article-title-font-size: 20px;
@@ -1182,20 +1239,23 @@ img.adaptive {
   :root {
     --section-title-font-size: 40px;
     --section-title-large-font-size: 58px;
-    --subtitle-font-size: 20px
+    --subtitle-font-size: 20px;
+    --section-title-small-font-size: 38px
   }
 }
 @media (max-width:1199px) {
   :root {
     --section-title-font-size: 36px;
-    --section-title-large-font-size: 54px
+    --section-title-large-font-size: 54px;
+    --section-title-small-font-size: 32px
   }
 }
 @media (max-width:768px) {
   :root {
     --section-title-font-size: 32px;
     --article-title-font-size: 18px;
-    --section-title-large-font-size: 40px
+    --section-title-large-font-size: 32px;
+    --section-title-small-font-size: 28px
   }
 }
 .row,
@@ -2361,6 +2421,7 @@ img.adaptive {
   --font-size-large: 18px;
   --section-title-font-size: 48px;
   --section-title-large-font-size: 64px;
+  --section-title-small-font-size: 40px;
   --subtitle-font-size: 24px;
   --buttons-font-size: 14px;
   --article-title-font-size: 20px;
@@ -2370,20 +2431,23 @@ img.adaptive {
   :root {
     --section-title-font-size: 40px;
     --section-title-large-font-size: 58px;
-    --subtitle-font-size: 20px
+    --subtitle-font-size: 20px;
+    --section-title-small-font-size: 38px
   }
 }
 @media (max-width:1199px) {
   :root {
     --section-title-font-size: 36px;
-    --section-title-large-font-size: 54px
+    --section-title-large-font-size: 54px;
+    --section-title-small-font-size: 32px
   }
 }
 @media (max-width:768px) {
   :root {
     --section-title-font-size: 32px;
     --article-title-font-size: 18px;
-    --section-title-large-font-size: 40px
+    --section-title-large-font-size: 32px;
+    --section-title-small-font-size: 28px
   }
 }
 .inline-list {
@@ -2588,8 +2652,6 @@ img.adaptive {
   -webkit-box-direction: normal;
   -ms-flex-direction: row;
   flex-direction: row;
-  -ms-flex-flow: row nowrap;
-  flex-flow: row nowrap;
   padding: 25px 0;
   border-bottom: 1px solid #e4e2e1;
   border-top: 1px solid #e4e2e1;
@@ -2620,6 +2682,43 @@ img.adaptive {
   bottom: 0;
   width: 1px;
   background-color: #e4e2e1
+}
+.cases-list {
+  margin-top: 16px;
+  margin-left: -24px;
+  margin-right: -24px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  position: relative
+}
+.cases-list > li {
+  -webkit-box-flex: 1;
+  -ms-flex: 1 0 25%;
+  flex: 1 0 25%;
+  width: 25%;
+  position: relative;
+  padding: 24px;
+  border-bottom: 1px solid #e4e2e1
+}
+.cases-list > li:after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 24px;
+  bottom: 24px;
+  width: 1px;
+  background-color: #e4e2e1;
+  pointer-events: none
+}
+.cases-list > li:nth-child(4n):after {
+  display: none
 }
 .progress-list {
   border-top: 1px solid #977767;
@@ -3114,6 +3213,7 @@ img.adaptive {
   --font-size-large: 18px;
   --section-title-font-size: 48px;
   --section-title-large-font-size: 64px;
+  --section-title-small-font-size: 40px;
   --subtitle-font-size: 24px;
   --buttons-font-size: 14px;
   --article-title-font-size: 20px;
@@ -3123,20 +3223,23 @@ img.adaptive {
   :root {
     --section-title-font-size: 40px;
     --section-title-large-font-size: 58px;
-    --subtitle-font-size: 20px
+    --subtitle-font-size: 20px;
+    --section-title-small-font-size: 38px
   }
 }
 @media (max-width:1199px) {
   :root {
     --section-title-font-size: 36px;
-    --section-title-large-font-size: 54px
+    --section-title-large-font-size: 54px;
+    --section-title-small-font-size: 32px
   }
 }
 @media (max-width:768px) {
   :root {
     --section-title-font-size: 32px;
     --article-title-font-size: 18px;
-    --section-title-large-font-size: 40px
+    --section-title-large-font-size: 32px;
+    --section-title-small-font-size: 28px
   }
 }
 .main-footer {
@@ -3329,6 +3432,7 @@ img.adaptive {
   --font-size-large: 18px;
   --section-title-font-size: 48px;
   --section-title-large-font-size: 64px;
+  --section-title-small-font-size: 40px;
   --subtitle-font-size: 24px;
   --buttons-font-size: 14px;
   --article-title-font-size: 20px;
@@ -3338,20 +3442,23 @@ img.adaptive {
   :root {
     --section-title-font-size: 40px;
     --section-title-large-font-size: 58px;
-    --subtitle-font-size: 20px
+    --subtitle-font-size: 20px;
+    --section-title-small-font-size: 38px
   }
 }
 @media (max-width:1199px) {
   :root {
     --section-title-font-size: 36px;
-    --section-title-large-font-size: 54px
+    --section-title-large-font-size: 54px;
+    --section-title-small-font-size: 32px
   }
 }
 @media (max-width:768px) {
   :root {
     --section-title-font-size: 32px;
     --article-title-font-size: 18px;
-    --section-title-large-font-size: 40px
+    --section-title-large-font-size: 32px;
+    --section-title-small-font-size: 28px
   }
 }
 .main-header {
@@ -3671,7 +3778,9 @@ img.adaptive {
   color: #f5f3f1
 }
 .main-header.light .action-result {
-  background-color: #252324
+  background-color: #252324;
+  -webkit-box-shadow: rgba(60,46,37,.05) 0 8px 24px;
+  box-shadow: rgba(60,46,37,.05) 0 8px 24px
 }
 .main-header.light .action-result .info-section {
   border-top: 1px solid rgba(245,243,241,.3)
@@ -3727,7 +3836,9 @@ img.adaptive {
   color: #252324
 }
 .main-header.dark .action-result {
-  background-color: #f4f3f1
+  background-color: #f4f3f1;
+  -webkit-box-shadow: rgba(37,35,36,.05) 0 8px 24px;
+  box-shadow: rgba(37,35,36,.05) 0 8px 24px
 }
 .main-header.dark .action-result .info-section {
   border-top: 1px solid rgba(37,35,36,.3)
@@ -4128,6 +4239,7 @@ img.adaptive {
   --font-size-large: 18px;
   --section-title-font-size: 48px;
   --section-title-large-font-size: 64px;
+  --section-title-small-font-size: 40px;
   --subtitle-font-size: 24px;
   --buttons-font-size: 14px;
   --article-title-font-size: 20px;
@@ -4137,20 +4249,23 @@ img.adaptive {
   :root {
     --section-title-font-size: 40px;
     --section-title-large-font-size: 58px;
-    --subtitle-font-size: 20px
+    --subtitle-font-size: 20px;
+    --section-title-small-font-size: 38px
   }
 }
 @media (max-width:1199px) {
   :root {
     --section-title-font-size: 36px;
-    --section-title-large-font-size: 54px
+    --section-title-large-font-size: 54px;
+    --section-title-small-font-size: 32px
   }
 }
 @media (max-width:768px) {
   :root {
     --section-title-font-size: 32px;
     --article-title-font-size: 18px;
-    --section-title-large-font-size: 40px
+    --section-title-large-font-size: 32px;
+    --section-title-small-font-size: 28px
   }
 }
 .member-preview .photo-image {
@@ -4195,6 +4310,7 @@ img.adaptive {
   --font-size-large: 18px;
   --section-title-font-size: 48px;
   --section-title-large-font-size: 64px;
+  --section-title-small-font-size: 40px;
   --subtitle-font-size: 24px;
   --buttons-font-size: 14px;
   --article-title-font-size: 20px;
@@ -4204,20 +4320,23 @@ img.adaptive {
   :root {
     --section-title-font-size: 40px;
     --section-title-large-font-size: 58px;
-    --subtitle-font-size: 20px
+    --subtitle-font-size: 20px;
+    --section-title-small-font-size: 38px
   }
 }
 @media (max-width:1199px) {
   :root {
     --section-title-font-size: 36px;
-    --section-title-large-font-size: 54px
+    --section-title-large-font-size: 54px;
+    --section-title-small-font-size: 32px
   }
 }
 @media (max-width:768px) {
   :root {
     --section-title-font-size: 32px;
     --article-title-font-size: 18px;
-    --section-title-large-font-size: 40px
+    --section-title-large-font-size: 32px;
+    --section-title-small-font-size: 28px
   }
 }
 .page-main {
@@ -4249,6 +4368,7 @@ img.adaptive {
   width: calc(100% - 10px);
   position: relative;
   margin-left: 5px;
+  z-index: 1;
   background-color: #977767
 }
 .divider:after,
@@ -4367,6 +4487,9 @@ img.adaptive {
     padding-top: 0;
     margin-top: 0
   }
+  .page-main.inner-page {
+    padding-top: 158px
+  }
 }
 @media (max-width:992px) {
   .column-side {
@@ -4406,12 +4529,16 @@ img.adaptive {
   .map-container .map {
     height: 400px
   }
+  .page-main.inner-page {
+    padding-top: 112px
+  }
 }
 :root {
   --font-size: 16px;
   --font-size-large: 18px;
   --section-title-font-size: 48px;
   --section-title-large-font-size: 64px;
+  --section-title-small-font-size: 40px;
   --subtitle-font-size: 24px;
   --buttons-font-size: 14px;
   --article-title-font-size: 20px;
@@ -4421,20 +4548,23 @@ img.adaptive {
   :root {
     --section-title-font-size: 40px;
     --section-title-large-font-size: 58px;
-    --subtitle-font-size: 20px
+    --subtitle-font-size: 20px;
+    --section-title-small-font-size: 38px
   }
 }
 @media (max-width:1199px) {
   :root {
     --section-title-font-size: 36px;
-    --section-title-large-font-size: 54px
+    --section-title-large-font-size: 54px;
+    --section-title-small-font-size: 32px
   }
 }
 @media (max-width:768px) {
   :root {
     --section-title-font-size: 32px;
     --article-title-font-size: 18px;
-    --section-title-large-font-size: 40px
+    --section-title-large-font-size: 32px;
+    --section-title-small-font-size: 28px
   }
 }
 .popup {
@@ -4567,11 +4697,26 @@ img.adaptive {
   height: 100%;
   border: 0
 }
+@media (max-width:992px) {
+  .popup.popup-video .inner {
+    max-width: 80vw
+  }
+}
+@media (max-width:768px) {
+  .popup.popup-video .inner {
+    max-width: calc(100vw - 40px)
+  }
+  .popup.popup-video .close-popup {
+    height: 40px;
+    width: 40px
+  }
+}
 :root {
   --font-size: 16px;
   --font-size-large: 18px;
   --section-title-font-size: 48px;
   --section-title-large-font-size: 64px;
+  --section-title-small-font-size: 40px;
   --subtitle-font-size: 24px;
   --buttons-font-size: 14px;
   --article-title-font-size: 20px;
@@ -4581,20 +4726,23 @@ img.adaptive {
   :root {
     --section-title-font-size: 40px;
     --section-title-large-font-size: 58px;
-    --subtitle-font-size: 20px
+    --subtitle-font-size: 20px;
+    --section-title-small-font-size: 38px
   }
 }
 @media (max-width:1199px) {
   :root {
     --section-title-font-size: 36px;
-    --section-title-large-font-size: 54px
+    --section-title-large-font-size: 54px;
+    --section-title-small-font-size: 32px
   }
 }
 @media (max-width:768px) {
   :root {
     --section-title-font-size: 32px;
     --article-title-font-size: 18px;
-    --section-title-large-font-size: 40px
+    --section-title-large-font-size: 32px;
+    --section-title-small-font-size: 28px
   }
 }
 .review-preview {
@@ -4957,6 +5105,7 @@ img.adaptive {
   --font-size-large: 18px;
   --section-title-font-size: 48px;
   --section-title-large-font-size: 64px;
+  --section-title-small-font-size: 40px;
   --subtitle-font-size: 24px;
   --buttons-font-size: 14px;
   --article-title-font-size: 20px;
@@ -4966,37 +5115,52 @@ img.adaptive {
   :root {
     --section-title-font-size: 40px;
     --section-title-large-font-size: 58px;
-    --subtitle-font-size: 20px
+    --subtitle-font-size: 20px;
+    --section-title-small-font-size: 38px
   }
 }
 @media (max-width:1199px) {
   :root {
     --section-title-font-size: 36px;
-    --section-title-large-font-size: 54px
+    --section-title-large-font-size: 54px;
+    --section-title-small-font-size: 32px
   }
 }
 @media (max-width:768px) {
   :root {
     --section-title-font-size: 32px;
     --article-title-font-size: 18px;
-    --section-title-large-font-size: 40px
+    --section-title-large-font-size: 32px;
+    --section-title-small-font-size: 28px
   }
 }
-.section.section-spaced {
-  padding: 160px 0 40px
-}
-.section.section-spaced .section-title {
+.section .section-title {
   max-width: 64%;
   line-height: 1.08;
   margin-bottom: 42px
 }
-.section.section-spaced .section-title-large {
+.section .section-title.collapsed-bottom {
+  margin-bottom: 0
+}
+.section .section-title-large {
   line-height: 1.08;
   margin-bottom: 44px
 }
-.section.section-spaced .subtitle {
+.section .section-title-large.collapsed-bottom {
+  margin-bottom: 0
+}
+.section .subtitle {
   color: #736d6a;
   margin-bottom: 45px
+}
+.section.section-spaced {
+  padding: 160px 0 40px
+}
+.section.section-spaced-middle {
+  padding: 120px 0
+}
+.section.section-spaced-middle + .section.section-spaced-middle {
+  padding-top: 0
 }
 .section.spaced-small {
   margin: 64px 0
@@ -5061,6 +5225,11 @@ img.adaptive {
 .section .bordered-link-title .title {
   max-width: 58%
 }
+.section .bordered-inner {
+  border-bottom: 1px solid #e4e2e1;
+  border-top: 1px solid #e4e2e1;
+  padding: 64px 0
+}
 .spaced-inner {
   padding: 70px 80px 80px 70px
 }
@@ -5089,6 +5258,9 @@ img.adaptive {
 @media (max-width:1440px) {
   .section.spaced-large {
     margin: 100px 0
+  }
+  .section.section-spaced-middle {
+    padding: 80px 0
   }
   .section.section-spaced {
     padding: 100px 0 40px
@@ -5120,10 +5292,13 @@ img.adaptive {
   .section .bordered-link-title .title {
     max-width: 90%
   }
+  .section.section-spaced-middle {
+    padding: 70px 0
+  }
 }
 @media (max-width:992px) {
   .section.section-spaced {
-    padding: 50px 0 20px
+    padding: 44px 0 20px
   }
   .section.section-spaced .section-title {
     max-width: 100%;
@@ -5143,8 +5318,14 @@ img.adaptive {
   .section .bordered-link-title .title {
     max-width: 100%
   }
+  .section .bordered-inner {
+    padding: 50px 0
+  }
   .section.spaced-large {
     margin: 60px 0
+  }
+  .section.section-spaced-middle {
+    padding: 44px 0
   }
   .spaced-inner {
     padding: 40px 24px
@@ -5163,6 +5344,13 @@ img.adaptive {
   }
   .section-banner .bottom .banner-title {
     margin-bottom: 24px
+  }
+  .section .section-title {
+    max-width: 100%
+  }
+  .section .section-title-large,
+  .section .title-with-link {
+    margin-bottom: 16px
   }
 }
 @media (max-width:768px) {
@@ -5187,8 +5375,15 @@ img.adaptive {
   .section.spaced-small {
     margin: 48px 0
   }
+  .section.spaced-small.collapsed-top-xs {
+    margin-top: 20px;
+    margin-bottom: 80px
+  }
   .section .bordered-link-title {
     padding: 24px 0
+  }
+  .section .bordered-inner {
+    padding: 48px 0 24px
   }
   .section.section-spaced .section-title-large {
     margin-bottom: 32px
@@ -5200,7 +5395,7 @@ img.adaptive {
     margin-bottom: 0
   }
 }
-@media (max-width:768px) {
+@media (max-width:640px) {
   .section.section-spaced .section-title-large {
     margin-bottom: 16px
   }
@@ -5213,6 +5408,7 @@ img.adaptive {
   --font-size-large: 18px;
   --section-title-font-size: 48px;
   --section-title-large-font-size: 64px;
+  --section-title-small-font-size: 40px;
   --subtitle-font-size: 24px;
   --buttons-font-size: 14px;
   --article-title-font-size: 20px;
@@ -5222,20 +5418,23 @@ img.adaptive {
   :root {
     --section-title-font-size: 40px;
     --section-title-large-font-size: 58px;
-    --subtitle-font-size: 20px
+    --subtitle-font-size: 20px;
+    --section-title-small-font-size: 38px
   }
 }
 @media (max-width:1199px) {
   :root {
     --section-title-font-size: 36px;
-    --section-title-large-font-size: 54px
+    --section-title-large-font-size: 54px;
+    --section-title-small-font-size: 32px
   }
 }
 @media (max-width:768px) {
   :root {
     --section-title-font-size: 32px;
     --article-title-font-size: 18px;
-    --section-title-large-font-size: 40px
+    --section-title-large-font-size: 32px;
+    --section-title-small-font-size: 28px
   }
 }
 .slider .slider-cover {
@@ -5308,7 +5507,7 @@ img.adaptive {
   align-self: start
 }
 .slider .slider-navigation {
-  padding: 25px 0;
+  padding: 25px 0 0;
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -5412,6 +5611,7 @@ img.adaptive {
   --font-size-large: 18px;
   --section-title-font-size: 48px;
   --section-title-large-font-size: 64px;
+  --section-title-small-font-size: 40px;
   --subtitle-font-size: 24px;
   --buttons-font-size: 14px;
   --article-title-font-size: 20px;
@@ -5421,20 +5621,23 @@ img.adaptive {
   :root {
     --section-title-font-size: 40px;
     --section-title-large-font-size: 58px;
-    --subtitle-font-size: 20px
+    --subtitle-font-size: 20px;
+    --section-title-small-font-size: 38px
   }
 }
 @media (max-width:1199px) {
   :root {
     --section-title-font-size: 36px;
-    --section-title-large-font-size: 54px
+    --section-title-large-font-size: 54px;
+    --section-title-small-font-size: 32px
   }
 }
 @media (max-width:768px) {
   :root {
     --section-title-font-size: 32px;
     --article-title-font-size: 18px;
-    --section-title-large-font-size: 40px
+    --section-title-large-font-size: 32px;
+    --section-title-small-font-size: 28px
   }
 }
 .tabs {
@@ -5532,6 +5735,7 @@ img.adaptive {
   --font-size-large: 18px;
   --section-title-font-size: 48px;
   --section-title-large-font-size: 64px;
+  --section-title-small-font-size: 40px;
   --subtitle-font-size: 24px;
   --buttons-font-size: 14px;
   --article-title-font-size: 20px;
@@ -5541,20 +5745,23 @@ img.adaptive {
   :root {
     --section-title-font-size: 40px;
     --section-title-large-font-size: 58px;
-    --subtitle-font-size: 20px
+    --subtitle-font-size: 20px;
+    --section-title-small-font-size: 38px
   }
 }
 @media (max-width:1199px) {
   :root {
     --section-title-font-size: 36px;
-    --section-title-large-font-size: 54px
+    --section-title-large-font-size: 54px;
+    --section-title-small-font-size: 32px
   }
 }
 @media (max-width:768px) {
   :root {
     --section-title-font-size: 32px;
     --article-title-font-size: 18px;
-    --section-title-large-font-size: 40px
+    --section-title-large-font-size: 32px;
+    --section-title-small-font-size: 28px
   }
 }
 h1,
@@ -5620,6 +5827,9 @@ a {
 .section-title.spaced-bottom {
   margin-bottom: 40px
 }
+.section-title.cropped-width {
+  max-width: 50%
+}
 .sticky-inner.spaced-bottom {
   margin-bottom: 40px
 }
@@ -5627,6 +5837,14 @@ a {
   font-size: var(--section-title-large-font-size);
   font-weight: 700;
   line-height: 1.17
+}
+.section-title-large.cropped-width {
+  max-width: 50%
+}
+.section-title-small {
+  font-size: var(--section-title-small-font-size);
+  font-weight: 700;
+  line-height: 1.1
 }
 .subtitle {
   font-size: 16px;
@@ -5692,12 +5910,24 @@ p.bold {
   font-weight: 600;
   line-height: 1.4
 }
+article ol,
+article ul {
+  list-style: none;
+  padding: 0;
+  margin: 0
+}
+article ol > li,
+article ul > li {
+  padding: 0;
+  margin: 0
+}
 article h4,
 article h5,
 article ol,
 article p,
 article ul {
-  margin-bottom: 32px
+  margin-bottom: 32px;
+  color: #3c2e25
 }
 article h4:last-child,
 article h5:last-child,
@@ -5706,14 +5936,11 @@ article p:last-child,
 article ul:last-child {
   margin-bottom: 0
 }
-article ol,
-article ul {
-  margin-left: 18px
-}
 article li,
 article p {
   font-size: calc(var(--article-title-font-size) * .9);
-  line-height: 1.56
+  line-height: 1.56;
+  color: #3a3430
 }
 article h1 {
   font-size: var(--section-title-large-font-size);
@@ -5742,6 +5969,60 @@ article h4 {
 article h5 {
   font-size: var(--article-title-font-size)
 }
+article ul > li {
+  position: relative;
+  padding-left: 18px
+}
+article ul > li:before {
+  content: "";
+  position: absolute;
+  height: 4px;
+  width: 4px;
+  border-radius: 50%;
+  background-color: #3c2e25;
+  left: 0;
+  top: 12px
+}
+article ol {
+  counter-reset: count
+}
+article ol > li {
+  position: relative;
+  padding-bottom: 32px;
+  margin-bottom: 32px;
+  border-bottom: 1px solid #e4e2e1
+}
+article ol > li:last-child {
+  margin-bottom: 0;
+  border-bottom: 0;
+  padding-bottom: 0
+}
+article ol > li:before {
+  content: counter(count);
+  counter-increment: count;
+  color: #736d6a;
+  font-size: 14px;
+  height: 52px;
+  width: 52px;
+  border: 1px solid #e4e2e1;
+  display: block;
+  text-align: center;
+  line-height: 52px;
+  border-radius: 50%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  -webkit-transform: translateY(-10px);
+  -ms-transform: translateY(-10px);
+  transform: translateY(-10px);
+  -webkit-transition: .2s;
+  transition: .2s
+}
+article ol > li > h5,
+article ol > li h3,
+article ol > li h4 {
+  padding-left: 76px
+}
 .blockquote {
   color: #736d6a;
   font-size: var(--font-size);
@@ -5760,5 +6041,35 @@ article h5 {
 @media (max-width:1440px) {
   .section-title-large {
     line-height: 1.1
+  }
+  .section-title-large.cropped-width {
+    max-width: 60%
+  }
+}
+@media (max-width:992px) {
+  .section-title-large.cropped-width {
+    max-width: 100%
+  }
+}
+@media (max-width:768px) {
+  article h4,
+  article h5,
+  article ol,
+  article p,
+  article ul {
+    margin-bottom: 24px
+  }
+  article ol > li {
+    padding-bottom: 24px;
+    margin-bottom: 24px
+  }
+  article ol > li:before {
+    height: 48px;
+    width: 48px;
+    line-height: 48px
+  }
+  article ol > li h4,
+  article ol > li h5 {
+    padding-left: 70px
   }
 }

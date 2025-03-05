@@ -56,7 +56,6 @@ document.addEventListener('DOMContentLoaded', function(){
 			headerContainer.classList.remove('menu-active');
 
 			Array.prototype.forEach.call(document.querySelectorAll(elementLink), function(element){
-
 				if (!element.classList.contains(toggleClass)) {
 					element.classList.add(toggleClass);
 					button.classList.add(defaultClass);
@@ -65,11 +64,14 @@ document.addEventListener('DOMContentLoaded', function(){
 					}, 250)
 					if (element.classList.contains('main-header') && element.querySelector('.search-input')) {
 						element.querySelector('.search-input').focus();
+						document.body.classList.add('overlayed');
 					}
 				} else {
 					element.classList.remove(toggleClass);
 					button.classList.remove(defaultClass);
-
+					if (document.body.classList.contains('overlayed')){
+						document.body.classList.remove('overlayed');
+					};
 					if (!element.classList.contains('main-header')) {
 						element.classList.remove(ANIMATED_CLASS);
 					}
@@ -111,9 +113,14 @@ document.addEventListener('DOMContentLoaded', function(){
 		if (e.target.closest('[data-toggle-element="#mainNavigation"]')) return;
 		if (e.target.closest('#mainNavigation')) return;
 		if (e.target.closest('#menuResult')) return;
+		if (e.target.closest('#searchResult')) return;
 		if (mainNavigationContainer.classList.contains('active')) {
 			document.querySelector('[data-toggle-element="#mainNavigation"]').classList.remove('active');
 			mainNavigationContainer.classList.remove('active');
+		}
+		if (headerContainer.classList.contains('form-search-active') && !e.target.closest('#mainHeader')) {
+			headerContainer.classList.remove('form-search-active');
+			document.body.classList.remove('overlayed');
 		}
 	}, {passive: true});
 
@@ -589,9 +596,9 @@ window.addEventListener('load', function(){
 
 			glider.arrows.prev.addEventListener(`click`, function(e){
 				if ((totalSlides - slidesToScroll) < slidesToScroll) {
-					currentSlides = totalSlides - (totalSlides - slidesToScroll)
+					currentSlides = Math.floor(totalSlides - (totalSlides - slidesToScroll));
 				} else {
-					currentSlides -= slidesToScroll;
+					currentSlides -= Math.floor(slidesToScroll);
 				};
 				setSlideCount();
 				setFaderPosition();
@@ -650,21 +657,21 @@ document.addEventListener('DOMContentLoaded', function(){
 
 			blockParent.style.height = blockParent.getBoundingClientRect().height + 'px';
 
-			let startPosition = stickInside.scrollHeight;
+			let startPosition = stickInside.offsetTop - headerHeight;
 			let endPositon = startPosition + stickInsideHeight - block.getBoundingClientRect().height;
 
-			if (window.pageYOffset + headerHeight < startPosition) {
+			if (window.pageYOffset < startPosition) {
 				// console.log('top')
 				block.style.top = 'auto';
 				block.classList.remove('to-top');
 				block.classList.remove('to-bottom');
-			} else if (window.pageYOffset + headerHeight >= startPosition && window.pageYOffset + headerHeight <= endPositon) {
+			} else if (window.pageYOffset >= startPosition && window.pageYOffset <= endPositon) {
 				// console.log('middle')
 				block.classList.add('to-top');
 				block.style.top = headerHeight + 'px';
 				block.style.left = blockParent.getBoundingClientRect().left + 'px';
 				block.classList.remove('to-bottom');
-			} else if (window.pageYOffset + headerHeight > endPositon) {
+			} else if (window.pageYOffset > endPositon) {
 				// console.log('bottom')
 				block.style.left = blockParent.offsetLeft + 'px';
 				block.classList.remove('to-top');
