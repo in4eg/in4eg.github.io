@@ -614,17 +614,10 @@ window.addEventListener('load', function(){
 			}, {passive: true});
 
 
-			glider.ele.addEventListener('scrollend', function(event){
-				waitForFinalEvent(function(){
-					onGliderScrollEnd(event.srcElement);
-				}, 250, 'glider_scroll')
+			glider.ele.addEventListener('scroll', function(event){
+				onGliderScrollEnd(event.srcElement);
 			})
 
-			glider.ele.addEventListener('touchend', function(event){
-				waitForFinalEvent(function(){
-					onGliderScrollEnd(event.srcElement);
-				}, 250, 'glider_touch')
-			})
 
 			window.addEventListener('resize', function(event){
 				setSlideCount();
