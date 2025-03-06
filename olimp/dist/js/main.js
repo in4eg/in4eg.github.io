@@ -620,6 +620,12 @@ window.addEventListener('load', function(){
 				}, 250, 'glider_scroll')
 			})
 
+			glider.ele.addEventListener('touchend', function(event){
+				waitForFinalEvent(function(){
+					onGliderScrollEnd(event.srcElement);
+				}, 250, 'glider_touch')
+			})
+
 			window.addEventListener('resize', function(event){
 				setSlideCount();
 				checkNavigation();
