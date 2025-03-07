@@ -111,24 +111,24 @@ window.addEventListener('load', function(){
 			checkNavigation();
 			setFaderPosition();
 
-			glider.arrows.prev.addEventListener(`click`, function(e){
-				if ((totalSlides - slidesToScroll) < slidesToScroll) {
-					currentSlides = Math.floor(totalSlides - (totalSlides - slidesToScroll));
-				} else {
-					currentSlides -= Math.floor(slidesToScroll);
-				};
-				setSlideCount();
-				setFaderPosition();
-			}, {passive: true});
+			// glider.arrows.prev.addEventListener(`click`, function(e){
+			// 	if ((totalSlides - slidesToScroll) < slidesToScroll) {
+			// 		currentSlides = Math.floor(totalSlides - (totalSlides - slidesToScroll));
+			// 	} else {
+			// 		currentSlides -= Math.floor(slidesToScroll);
+			// 	};
+			// 	setSlideCount();
+			// 	setFaderPosition();
+			// }, {passive: true});
 
-			glider.arrows.next.addEventListener(`click`, function(e){
-				currentSlides += slidesToScroll;
-				if (currentSlides >= totalSlides) {
-					currentSlides = totalSlides;
-				}
-				setSlideCount();
-				setFaderPosition();
-			}, {passive: true});
+			// glider.arrows.next.addEventListener(`click`, function(e){
+			// 	currentSlides += slidesToScroll;
+			// 	if (currentSlides >= totalSlides) {
+			// 		currentSlides = totalSlides;
+			// 	}
+			// 	setSlideCount();
+			// 	setFaderPosition();
+			// }, {passive: true});
 
 
 			glider.ele.addEventListener('scroll', function(event){
