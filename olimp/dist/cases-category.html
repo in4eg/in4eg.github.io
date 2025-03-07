@@ -326,20 +326,6 @@
 		document.getElementById('searchResult').classList.add('success');
 	};
 </script>
-
-<script>
-	window.searchFormSubmit = function(){
-		console.log('show form result')
-		document.getElementById('searchResult').classList.add('success');
-	};
-</script>
-
-<script>
-	window.searchFormSubmit = function(){
-		console.log('show form result')
-		document.getElementById('searchResult').classList.add('success');
-	};
-</script>
 	<!-- / header -->
 
 	<!-- class inner-page -->
@@ -361,16 +347,39 @@
 			<div class="container">
 				<h1 class="section-title-large">Наші кейси</h1>
 				<!-- filters -->
-				<form action="javascript:void(0)" class="form filters-form">
-					<div class="row">
+					<div class="row bottom-sm">
 						<div class="col-xs-12 col-md-6">
-							
+							<div class="dropdown" data-dropdown>
+								<div class="dropdown-header"><div class="item">Військове право</div></div>
+								<div class="dropdown-inner">
+									<a class="item" href="cases.html" aria-label="category">Всі кейси</a>
+									<a class="item" href="cases-category.html" aria-label="category">Послуги з сімейного права</a>
+									<a class="item" href="cases-category.html" aria-label="category">Захист цивільно-правових відносин</a>
+									<a class="item" href="cases-category.html" aria-label="category">Земельне право</a>
+									<a class="item" href="cases-category.html" aria-label="category">Пенсійне забезпечення</a>
+									<a class="item" href="cases-category.html" aria-label="category">Кримінальне право</a>
+									<a class="item" href="cases-category.html" aria-label="category">Адміністративне правопорушення та ДТП</a>
+									<a class="item" href="cases-category.html" aria-label="category">Житлові спори</a>
+									<a class="item" href="cases-category.html" aria-label="category">Спадкове право</a>
+									<a class="item" href="cases-category.html" aria-label="category">Кредитні спори</a>
+									<a class="item" href="cases-category.html" aria-label="category">Зняття та скасування арешту</a>
+									<a class="item" href="cases-category.html" aria-label="category">Трудові спори</a>
+									<a class="item" href="cases-category.html" aria-label="category">Захист прав споживачів</a>
+								</div>
+							</div>
 						</div>
 						<div class="col-xs-12 col-md-6">
-							
+							<form action="javascript:void(0)" class="form filters-form" id="searchCaseForm">
+								<div class="labeled-group">
+									<input type="text" class="input" id="caseInput" data-filter=".case-preview">
+									<label for="caseInput"><span class="text">Пошук кейса</span></label>
+								</div>
+								<button class="button-round button" type="submit">
+									<i class="icon icon-search"></i>
+								</button>
+							</form>
 						</div>
 					</div>
-				</form>
 				<!-- /filters -->
 			</div>
 		</section>
@@ -378,11 +387,11 @@
 
 		<!-- cases -->
 		<div class="container">
-			<ul class="clear bordered-list cases-list">
+			<ul class="clear cases-list">
 				<!-- 1 -->
 				<li>
 					<!-- article preview -->
-					<a href="cases-detail.html" class="article-preview" aria-label="Read more about case">
+					<a href="cases-detail.html" class="article-preview case-preview" aria-label="Read more about case">
 						<figure class="article-image">
 							<img src="img/temp/el1.jpg" draggable="false" alt="image">
 						</figure>
@@ -399,9 +408,9 @@
 				<!-- 2 -->
 				<li>
 					<!-- article preview -->
-					<a href="cases-detail.html" class="article-preview" aria-label="Read more about case">
+					<a href="cases-detail.html" class="article-preview case-preview" aria-label="Read more about case">
 						<figure class="article-image">
-							<img src="img/temp/el2.jpg" draggable="false" alt="image">
+							<img src="img/temp/el4.jpg" draggable="false" alt="image">
 						</figure>
 						<div class="caption">
 							<div class="subtitle">Військове право</div>
@@ -416,15 +425,15 @@
 				<!-- 3 -->
 				<li>
 					<!-- article preview -->
-						<a href="cases-detail.html" class="article-preview" aria-label="Read more about case">
+						<a href="cases-detail.html" class="article-preview case-preview" aria-label="Read more about case">
 							<figure class="article-image">
-								<img src="img/temp/el3.jpg" draggable="false" alt="image">
+								<img src="img/temp/el1.jpg" draggable="false" alt="image">
 							</figure>
 							<div class="caption">
 								<div class="subtitle">Військове право</div>
-								<h2 class="article-title large-title">Відновлення паспорта для особи без документів.</h2>
+								<h2 class="article-title large-title">Визнання батьківства та повернення дітей через суд.</h2>
 								<div class="description">
-									Допомога у визнанні брата клієнта недієздатним і отримання статусу опікуна, що дозволило звільнити клієнта з військової служби.
+									Допомога в судовому порядку визнання батьківства та повернення дітей, яких незаконно забрала служба у справах дітей після смерті матері.
 								</div>
 							</div>
 						</a>
@@ -433,7 +442,7 @@
 				<!-- 4 -->
 				<li>
 					<!-- article preview -->
-					<a href="cases-detail.html" class="article-preview" aria-label="Read more about case">
+					<a href="cases-detail.html" class="article-preview case-preview" aria-label="Read more about case">
 						<figure class="article-image">
 							<img src="img/temp/el4.jpg" draggable="false" alt="image">
 						</figure>
@@ -450,7 +459,7 @@
 				<!-- 5 -->
 				<li>
 					<!-- article preview -->
-					<a href="cases-detail.html" class="article-preview" aria-label="Read more about case">
+					<a href="cases-detail.html" class="article-preview case-preview" aria-label="Read more about case">
 						<figure class="article-image">
 							<img src="img/temp/el4.jpg" draggable="false" alt="image">
 						</figure>
@@ -467,15 +476,15 @@
 				<!-- 6 -->
 				<li>
 					<!-- article preview -->
-					<a href="cases-detail.html" class="article-preview" aria-label="Read more about case">
+					<a href="cases-detail.html" class="article-preview case-preview" aria-label="Read more about case">
 						<figure class="article-image">
-							<img src="img/temp/el3.jpg" draggable="false" alt="image">
+							<img src="img/temp/el1.jpg" draggable="false" alt="image">
 						</figure>
 						<div class="caption">
 							<div class="subtitle">Військове право</div>
-							<h2 class="article-title large-title">Відновлення паспорта для особи без документів.</h2>
+							<h2 class="article-title large-title">Визнання батьківства та повернення дітей через суд.</h2>
 							<div class="description">
-								Допомога у визнанні брата клієнта недієздатним і отримання статусу опікуна, що дозволило звільнити клієнта з військової служби.
+								Допомога в судовому порядку визнання батьківства та повернення дітей, яких незаконно забрала служба у справах дітей після смерті матері.
 							</div>
 						</div>
 					</a>
@@ -484,9 +493,9 @@
 				<!-- 7 -->
 				<li>
 					<!-- article preview -->
-					<a href="cases-detail.html" class="article-preview" aria-label="Read more about case">
+					<a href="cases-detail.html" class="article-preview case-preview" aria-label="Read more about case">
 						<figure class="article-image">
-							<img src="img/temp/el2.jpg" draggable="false" alt="image">
+							<img src="img/temp/el1.jpg" draggable="false" alt="image">
 						</figure>
 						<div class="caption">
 							<div class="subtitle">Військове право</div>
@@ -501,7 +510,7 @@
 				<!-- 8 -->
 				<li>
 					<!-- article preview -->
-					<a href="cases-detail.html" class="article-preview" aria-label="Read more about case">
+					<a href="cases-detail.html" class="article-preview case-preview" aria-label="Read more about case">
 						<figure class="article-image">
 							<img src="img/temp/el1.jpg" draggable="false" alt="image">
 						</figure>
@@ -518,7 +527,7 @@
 				<!-- 9 -->
 				<li>
 					<!-- article preview -->
-					<a href="cases-detail.html" class="article-preview" aria-label="Read more about case">
+					<a href="cases-detail.html" class="article-preview case-preview" aria-label="Read more about case">
 						<figure class="article-image">
 							<img src="img/temp/el1.jpg" draggable="false" alt="image">
 						</figure>
@@ -535,9 +544,9 @@
 				<!-- 10 -->
 				<li>
 					<!-- article preview -->
-					<a href="cases-detail.html" class="article-preview" aria-label="Read more about case">
+					<a href="cases-detail.html" class="article-preview case-preview" aria-label="Read more about case">
 						<figure class="article-image">
-							<img src="img/temp/el2.jpg" draggable="false" alt="image">
+							<img src="img/temp/el4.jpg" draggable="false" alt="image">
 						</figure>
 						<div class="caption">
 							<div class="subtitle">Військове право</div>
@@ -552,15 +561,15 @@
 				<!-- 11 -->
 				<li>
 					<!-- article preview -->
-						<a href="cases-detail.html" class="article-preview" aria-label="Read more about case">
+						<a href="cases-detail.html" class="article-preview case-preview" aria-label="Read more about case">
 							<figure class="article-image">
-								<img src="img/temp/el3.jpg" draggable="false" alt="image">
+								<img src="img/temp/el1.jpg" draggable="false" alt="image">
 							</figure>
 							<div class="caption">
 								<div class="subtitle">Військове право</div>
-								<h2 class="article-title large-title">Відновлення паспорта для особи без документів.</h2>
+								<h2 class="article-title large-title">Визнання батьківства та повернення дітей через суд.</h2>
 								<div class="description">
-									Допомога у визнанні брата клієнта недієздатним і отримання статусу опікуна, що дозволило звільнити клієнта з військової служби.
+									Допомога в судовому порядку визнання батьківства та повернення дітей, яких незаконно забрала служба у справах дітей після смерті матері.
 								</div>
 							</div>
 						</a>
@@ -569,7 +578,7 @@
 				<!-- 12 -->
 				<li>
 					<!-- article preview -->
-					<a href="cases-detail.html" class="article-preview" aria-label="Read more about case">
+					<a href="cases-detail.html" class="article-preview case-preview" aria-label="Read more about case">
 						<figure class="article-image">
 							<img src="img/temp/el4.jpg" draggable="false" alt="image">
 						</figure>
@@ -586,7 +595,7 @@
 				<!-- 13 -->
 				<li>
 					<!-- article preview -->
-					<a href="cases-detail.html" class="article-preview" aria-label="Read more about case">
+					<a href="cases-detail.html" class="article-preview case-preview" aria-label="Read more about case">
 						<figure class="article-image">
 							<img src="img/temp/el4.jpg" draggable="false" alt="image">
 						</figure>
@@ -603,67 +612,39 @@
 				<!-- 14 -->
 				<li>
 					<!-- article preview -->
-					<a href="cases-detail.html" class="article-preview" aria-label="Read more about case">
-						<figure class="article-image">
-							<img src="img/temp/el3.jpg" draggable="false" alt="image">
-						</figure>
-						<div class="caption">
-							<div class="subtitle">Військове право</div>
-							<h2 class="article-title large-title">Відновлення паспорта для особи без документів.</h2>
-							<div class="description">
-								Допомога у визнанні брата клієнта недієздатним і отримання статусу опікуна, що дозволило звільнити клієнта з військової служби.
-							</div>
-						</div>
-					</a>
-					<!-- / article preview -->
-				</li>
-				<!-- 15 -->
-				<li>
-					<!-- article preview -->
-					<a href="cases-detail.html" class="article-preview" aria-label="Read more about case">
-						<figure class="article-image">
-							<img src="img/temp/el2.jpg" draggable="false" alt="image">
-						</figure>
-						<div class="caption">
-							<div class="subtitle">Військове право</div>
-							<h2 class="article-title large-title">Відновлення паспорта для особи без документів.</h2>
-							<div class="description">
-								Доведення факту проживання клієнтки в Україні, що дозволило відновити її паспорт громадянина України.
-							</div>
-						</div>
-					</a>
-					<!-- / article preview -->
-				</li>
-				<!-- 16 -->
-				<li>
-					<!-- article preview -->
-					<a href="cases-detail.html" class="article-preview" aria-label="Read more about case">
+					<a href="cases-detail.html" class="article-preview case-preview" aria-label="Read more about case">
 						<figure class="article-image">
 							<img src="img/temp/el1.jpg" draggable="false" alt="image">
 						</figure>
 						<div class="caption">
 							<div class="subtitle">Військове право</div>
-							<h2 class="article-title large-title">Захист прав у військовій справі: скасування штрафу за порушення обов'язку.</h2>
+							<h2 class="article-title large-title">Визнання батьківства та повернення дітей через суд.</h2>
 							<div class="description">
-								Успішне оскарження постанови ТЦК, що призвело до скасування штрафу на суму 17 тис. грн
+								Допомога в судовому порядку визнання батьківства та повернення дітей, яких незаконно забрала служба у справах дітей після смерті матері.
 							</div>
 						</div>
 					</a>
 					<!-- / article preview -->
 				</li>
 			</ul>
+
+			<!-- alert message if list is empty -->
+			<div id="searchEmptyMessage" class="hidden search-alert">
+				<div class="section-title-small">Кейсів за таким запитом не знайдено</div>
+				<div class="theme-text">Спробуйте змінити пошуковий запит</div>
+			</div>
+			<!-- alert message if list is empty -->
 		</div>
 		<!-- / cases -->
-
 		<!-- pagination -->
-		<div class="pagination">
-			<a href="#" class="item"><i class="icon icon-arrow_left"></i></a>
+		<div class="pagination" id="casePagination">
+			<a href="#" class="item"><i class="icon icon-caret_left"></i></a>
 			<a href="#" class="item active">1</a>
 			<a href="#" class="item">2</a>
 			<a href="#" class="item">3</a>
-			<a href="#" class="item">4</a>
 			<span class="empty item">...</span>
-			<a href="#" class="item"><i class="icon icon-arrow_right"></i></a>
+			<a href="#" class="item">12</a>
+			<a href="#" class="item"><i class="icon icon-caret_right"></i></a>
 		</div>
 		<!-- / pagination -->
 	</main>
@@ -787,6 +768,13 @@
 		</div>
 	</div>
 </footer>
+
+<script>
+	window.searchCaseCallback = function(){
+		console.log('show case search result')
+		document.getElementById('searchCaseForm').classList.add('success');
+	};
+</script>
 
 	<script src="js/main.js"></script>
 </body>
