@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', function(){
 		for (i = 0; i < allAccordeons.length; i++) {
 			let accordeonInner = allAccordeons[i].querySelector('.accordeon-inner');
 			allAccordeons[i].classList.remove(ACCORDEON_ACTIVE_CLASS);
-			accordeonInner.style.maxHeight = null;
+			// accordeonInner.style.maxHeight = null;
 		}
 	}
 
@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', function(){
 			this.parentElement.classList.add(ACCORDEON_ACTIVE_CLASS);
 			let style = window.getComputedStyle(accordeonInner);
 			let paddingBottom = style.getPropertyValue('padding').split(' ')[2].replace('px', '');
-			accordeonInner.style.maxHeight = accordeonInner.scrollHeight + parseInt(paddingBottom) + "px";
+			// accordeonInner.style.maxHeight = accordeonInner.scrollHeight + parseInt(paddingBottom) + "px";
 		};
 	}
 
@@ -546,8 +546,9 @@ document.addEventListener('DOMContentLoaded', function(){
 		};
 	}
 
-
-	caseSearchInput.addEventListener('keydown', onCaseSearchKeyDown, {passive: true});
+	if (caseSearchInput) {
+		caseSearchInput.addEventListener('keydown', onCaseSearchKeyDown, {passive: true});
+	}
 })
 // search
 document.addEventListener('DOMContentLoaded', function(){

@@ -3051,7 +3051,7 @@ img.adaptive {
   font-weight: 400
 }
 .accordeon-list .accordeon-title:after {
-  font-size: 15px;
+  font-size: 24px;
   color: #3a3430
 }
 .accordeon-list .accordeon-title .image-icon {
@@ -3124,7 +3124,7 @@ img.adaptive {
 }
 .accordeon-list.simple-accordeon .accordeon-title {
   padding-left: 24px;
-  padding-right: 24px
+  padding-right: 34px
 }
 .accordeon-list.simple-accordeon .accordeon-title .title:after {
   display: none
@@ -3411,9 +3411,6 @@ img.adaptive {
   }
   .accordeon-list .accordeon-title .title {
     font-size: 18px
-  }
-  .accordeon-list .accordeon-title:after {
-    font-size: 12px
   }
   .accordeon-list .accordeon-title .image-icon {
     left: 0;
@@ -5525,6 +5522,9 @@ img.adaptive {
 .section.section-spaced-middle + .section.section-spaced-middle {
   padding-top: 0
 }
+.section.section-spaced-middle.spaced-bottom-large {
+  margin-bottom: 80px
+}
 .section.spaced-small {
   margin: 64px 0
 }
@@ -5689,6 +5689,9 @@ img.adaptive {
   }
   .section.section-spaced-middle {
     padding: 44px 0
+  }
+  .section.section-spaced-middle.spaced-bottom-large {
+    margin-bottom: 36px
   }
   .spaced-inner {
     padding: 40px 24px

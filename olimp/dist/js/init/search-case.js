@@ -95,6 +95,7 @@ document.addEventListener('DOMContentLoaded', function(){
 		};
 	}
 
-
-	caseSearchInput.addEventListener('keydown', onCaseSearchKeyDown, {passive: true});
+	if (caseSearchInput) {
+		caseSearchInput.addEventListener('keydown', onCaseSearchKeyDown, {passive: true});
+	}
 })
