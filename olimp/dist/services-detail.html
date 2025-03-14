@@ -59,7 +59,8 @@
 				<nav class="header-navigation" id="mainNavigation">
 					<ul class="clear" data-hover-show="#menuResult" data-escape-container="#mainHeader">
 						<li><a href="index.html" aria-label="main page"><span class="text">Головна</span></a></li>
-						<li data-tab-hover="1"><a href="services.html" aria-label="detail link"><span class="text">Послуги</span></a></li>
+						<!-- class .active for active link -->
+						<li data-tab-hover="1"><a href="services.html" aria-label="detail link" class="active"><span class="text">Послуги</span></a></li>
 						<li><a href="cases.html" aria-label="detail link"><span class="text">Кейси</span></a></li>
 						<li><a href="news.html" aria-label="detail link"><span class="text">Новини</span></a></li>
 						<li><a href="about.html" aria-label="detail link"><span class="text">Про нас</span></a></li>
@@ -829,7 +830,7 @@
 								<!-- embed src not watch -->
 								<div class="video-cover" data-video-src="https://www.youtube.com/embed/pA2VKhk43a4?si=euZ2d3tA9P4-tM8B">
 									<img src="img/temp/company1.jpg" alt="slide">
-									<img src="img/youtube-icon.svg" alt="icon" class="play-icon">
+									<img src="img/icons/youtube-icon.svg" alt="icon" class="play-icon">
 								</div>
 							</div>
 							<!-- / video preview -->
@@ -841,7 +842,7 @@
 								<!-- embed src not watch -->
 								<div class="video-cover" data-video-src="https://www.youtube.com/embed/h4xBI30DidE?si=8QfoQrXtDTDTNy0i">
 									<img src="img/temp/company2.jpg" alt="slide">
-									<img src="img/youtube-icon.svg" alt="icon" class="play-icon">
+									<img src="img/icons/youtube-icon.svg" alt="icon" class="play-icon">
 								</div>
 							</div>
 							<!-- / video preview -->
@@ -853,7 +854,7 @@
 								<!-- embed src not watch -->
 								<div class="video-cover" data-video-src="https://www.youtube.com/embed/JrF0JrVWEfo?si=tlakT7PfJgiyQIo1">
 									<img src="img/temp/el2.jpg" alt="slide">
-									<img src="img/youtube-icon.svg" alt="icon" class="play-icon">
+									<img src="img/icons/youtube-icon.svg" alt="icon" class="play-icon">
 								</div>
 							</div>
 							<!-- / video preview -->
@@ -865,7 +866,7 @@
 								<!-- embed src not watch -->
 								<div class="video-cover" data-video-src="https://www.youtube.com/embed/1YmClsk16_U?si=3HK7-s1uG-lbMtt6">
 									<img src="img/temp/el3.jpg" alt="slide">
-									<img src="img/youtube-icon.svg" alt="icon" class="play-icon">
+									<img src="img/icons/youtube-icon.svg" alt="icon" class="play-icon">
 								</div>
 							</div>
 							<!-- / video preview -->
@@ -877,7 +878,7 @@
 								<!-- embed src not watch -->
 								<div class="video-cover" data-video-src="https://www.youtube.com/embed/9M4jZuqdw04?si=E9GRxMxTmMbUCHzu">
 									<img src="img/temp/team1.jpg" alt="slide">
-									<img src="img/youtube-icon.svg" alt="icon" class="play-icon">
+									<img src="img/icons/youtube-icon.svg" alt="icon" class="play-icon">
 								</div>
 							</div>
 							<!-- / video preview -->
@@ -889,7 +890,7 @@
 								<!-- embed src not watch -->
 								<div class="video-cover" data-video-src="https://www.youtube.com/embed/1YmClsk16_U?si=3HK7-s1uG-lbMtt6">
 									<img src="img/temp/user3.jpg" alt="slide">
-									<img src="img/youtube-icon.svg" alt="icon" class="play-icon">
+									<img src="img/icons/youtube-icon.svg" alt="icon" class="play-icon">
 								</div>
 							</div>
 							<!-- / video preview -->
@@ -934,7 +935,7 @@
 
 
 		<!-- faq -->
-		<section class="section section-spaced-middle spaced-bottom-large collapsed-top-xs">
+		<section class="section section-spaced-middle collapsed-bottom collapsed-top-xs">
 			<div class="container">
 				<h2 class="section-title-large spaced-bottom">Faq</h2>
 				<ul class="accordeon-list simple-accordeon clear">
@@ -1012,7 +1013,55 @@
 		</section>
 		<!-- / faq -->
 
+		<!-- contact form -->
+		<section class="contact-section section spaced-large" id="contactForm">
+	<div class="container">
+		<div class="section section-dark mask-dark spaced-inner">
+			<div class="title-side">
+				<h4 class="point-subtitle subtitle">контактувати</h4>
+			</div>
+			<div class="contact-inner">
+				<div class="form-contact">
+					<div class="side">
+						<h2 class="section-title-large">Подати заявку</h2>
+						<div class="paragraph">Залиште заявку — і ми допоможемо вирішити вашу <br>проблему швидко та ефективно!</div>
+					</div>
+					<div class="side">
+						<form action="javascript:void(0)" class="form">
+							<div class="form-group">
+								<input type="tel" class="input" placeholder="+380 (___) ___ __ __">
+							</div>
+							<button type="submit" class="button button-light button-arrow button-block full-sm">
+								<span class="text">Передзвоніть мені</span>
+								<span class="button-icon">
+									<i class="icon icon-right"></i>
+								</span>
+							</button>
+						</form>
+					</div>
+				</div>
+				<ul class="clear checked-list bordered-top">
+					<li>Широкий спектр послуг</li>
+					<li>Безкоштовна консультація</li>
+					<li>Надійність</li>
+					<li>Ефективність</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</section>
+		<!-- / contact form -->
 
+
+		<!-- map -->
+		<div class="map-container">
+		<!-- data attributes changable in html -->
+		<div id="map" class="map"
+			data-position="50.450001, 30.523333"
+			data-zoom="16"
+			data-title="Kyiv, Ukraine"
+		></div>
+		<!-- / map -->
 	</main>
 	<!-- footer -->
 	<footer class="main-footer section-dark">

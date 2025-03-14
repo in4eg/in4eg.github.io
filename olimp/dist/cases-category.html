@@ -59,7 +59,8 @@
 				<nav class="header-navigation" id="mainNavigation">
 					<ul class="clear" data-hover-show="#menuResult" data-escape-container="#mainHeader">
 						<li><a href="index.html" aria-label="main page"><span class="text">Головна</span></a></li>
-						<li data-tab-hover="1"><a href="services.html" aria-label="detail link"><span class="text">Послуги</span></a></li>
+						<!-- class .active for active link -->
+						<li data-tab-hover="1"><a href="services.html" aria-label="detail link" class="active"><span class="text">Послуги</span></a></li>
 						<li><a href="cases.html" aria-label="detail link"><span class="text">Кейси</span></a></li>
 						<li><a href="news.html" aria-label="detail link"><span class="text">Новини</span></a></li>
 						<li><a href="about.html" aria-label="detail link"><span class="text">Про нас</span></a></li>
@@ -345,7 +346,7 @@
 		<!-- header -->
 		<section class="section inner-section">
 			<div class="container">
-				<h1 class="section-title-large">Наші кейси</h1>
+				<h1 class="section-title-large">Військове право</h1>
 				<!-- filters -->
 					<div class="row bottom-sm">
 						<div class="col-xs-12 col-md-6">
@@ -647,6 +648,56 @@
 			<a href="#" class="item"><i class="icon icon-caret_right"></i></a>
 		</div>
 		<!-- / pagination -->
+
+		<!-- contact form -->
+		<section class="contact-section section spaced-large" id="contactForm">
+	<div class="container">
+		<div class="section section-dark mask-dark spaced-inner">
+			<div class="title-side">
+				<h4 class="point-subtitle subtitle">контактувати</h4>
+			</div>
+			<div class="contact-inner">
+				<div class="form-contact">
+					<div class="side">
+						<h2 class="section-title-large">Подати заявку</h2>
+						<div class="paragraph">Залиште заявку — і ми допоможемо вирішити вашу <br>проблему швидко та ефективно!</div>
+					</div>
+					<div class="side">
+						<form action="javascript:void(0)" class="form">
+							<div class="form-group">
+								<input type="tel" class="input" placeholder="+380 (___) ___ __ __">
+							</div>
+							<button type="submit" class="button button-light button-arrow button-block full-sm">
+								<span class="text">Передзвоніть мені</span>
+								<span class="button-icon">
+									<i class="icon icon-right"></i>
+								</span>
+							</button>
+						</form>
+					</div>
+				</div>
+				<ul class="clear checked-list bordered-top">
+					<li>Широкий спектр послуг</li>
+					<li>Безкоштовна консультація</li>
+					<li>Надійність</li>
+					<li>Ефективність</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</section>
+		<!-- / contact form -->
+
+
+		<!-- map -->
+		<div class="map-container">
+		<!-- data attributes changable in html -->
+		<div id="map" class="map"
+			data-position="50.450001, 30.523333"
+			data-zoom="16"
+			data-title="Kyiv, Ukraine"
+		></div>
+		<!-- / map -->
 	</main>
 	<!-- footer -->
 	<footer class="main-footer section-dark">

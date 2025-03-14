@@ -59,7 +59,8 @@
 				<nav class="header-navigation" id="mainNavigation">
 					<ul class="clear" data-hover-show="#menuResult" data-escape-container="#mainHeader">
 						<li><a href="index.html" aria-label="main page"><span class="text">Головна</span></a></li>
-						<li data-tab-hover="1"><a href="services.html" aria-label="detail link"><span class="text">Послуги</span></a></li>
+						<!-- class .active for active link -->
+						<li data-tab-hover="1"><a href="services.html" aria-label="detail link" class="active"><span class="text">Послуги</span></a></li>
 						<li><a href="cases.html" aria-label="detail link"><span class="text">Кейси</span></a></li>
 						<li><a href="news.html" aria-label="detail link"><span class="text">Новини</span></a></li>
 						<li><a href="about.html" aria-label="detail link"><span class="text">Про нас</span></a></li>
@@ -327,8 +328,153 @@
 	};
 </script>
 	<!-- / header -->
-	<main class="page-main" id="pageMain">
+	<!-- class inner-page -->
+	<main class="page-main inner-page" id="pageMain">
+		<!-- breadcrumbs -->
+		<div class="breadcrumbs">
+			<div class="container">
+				<ul class="breadcrumbs-list clear">
+					<li><a href="index.html" class="text" aria-label="main page">Головна</a></li>
+					<li><span class="text">Faq</span></li>
+				</ul>
+			</div>
+		</div>
+		<!-- / breadcrumbs -->
 
+		<!-- header -->
+		<section class="section inner-section">
+			<div class="container">
+				<h1 class="section-title-large">Faq</h1>
+				<!-- filters -->
+					<div class="row bottom-sm">
+						<div class="col-xs-12 col-md-6">
+							<div class="dropdown" data-dropdown>
+								<div class="dropdown-header"><div class="item">Всі категорії</div></div>
+								<div class="dropdown-inner">
+									<div class="item">Послуги з сімейного права</div>
+									<div class="item">Захист цивільно-правових відносин</div>
+									<div class="item">Військове право</div>
+									<div class="item">Земельне право</div>
+									<div class="item">Пенсійне забезпечення</div>
+									<div class="item">Кримінальне право</div>
+									<div class="item">Адміністративне правопорушення та ДТП</div>
+									<div class="item">Житлові спори</div>
+									<div class="item">Спадкове право</div>
+									<div class="item">Кредитні спори</div>
+									<div class="item">Зняття та скасування арешту</div>
+									<div class="item">Трудові спори</div>
+									<div class="item">Захист прав споживачів</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-xs-12 col-md-6">
+							<form action="javascript:void(0)" class="form filters-form" id="searchCaseForm">
+								<div class="labeled-group">
+									<input type="text" class="input" id="filterInput" data-filter=".case-preview" data-filter-fields="[data-description], [data-subtitle], [data-title]">
+									<label for="filterInput"><span class="text">Пошук питання</span></label>
+								</div>
+								<button class="button-round button" type="submit">
+									<i class="icon icon-search"></i>
+								</button>
+							</form>
+						</div>
+					</div>
+				<!-- /filters -->
+			</div>
+		</section>
+		<!-- header -->
+
+		<!-- faq -->
+		<section class="section">
+			<div class="container">
+				<ul class="accordeon-list simple-accordeon clear">
+					<!-- 1 -->
+					<li>
+						<div class="accordeon" data-accordeon>
+							<div class="accordeon-title">
+								<h2 class="title">Що таке військове право і які аспекти воно регулює?</h2>
+							</div>
+							<div class="accordeon-inner">
+								<div class="theme-text">
+									Військове право – це галузь права, яка визначає правовий статус військовослужбовців, регулює їхні права та обов’язки, а також встановлює правила проходження військової служби. Воно охоплює питання мобілізації, призову, контрактної служби, соціальних гарантій, пільг та компенсацій<br><br>
+									Також військове право передбачає механізми правового захисту військовослужбовців у випадках порушення їхніх прав, зокрема щодо оскарження рішень військово-лікарських комісій, звільнення, отримання статусу учасника бойових дій або встановлення інвалідності. Крім того, воно визначає юридичну відповідальність за порушення військової дисципліни та ухилення від служби. Ця сфера права забезпечує баланс між інтересами держави та правами військовослужбовців, гарантує правові механізми захисту і вирішення спірних питань, що виникають у процесі служби.
+								</div>
+							</div>
+						</div>
+					</li>
+					<!-- 2 -->
+					<li>
+						<div class="accordeon" data-accordeon>
+							<div class="accordeon-title">
+								<h2 class="title">Які основні права та обов’язки військовослужбовців?</h2>
+							</div>
+							<div class="accordeon-inner">
+								<div class="theme-text">
+									Військове право – це галузь права, яка визначає правовий статус військовослужбовців, регулює їхні права та обов’язки, а також встановлює правила проходження військової служби. Воно охоплює питання мобілізації, призову, контрактної служби, соціальних гарантій, пільг та компенсацій<br><br>
+									Також військове право передбачає механізми правового захисту військовослужбовців у випадках порушення їхніх прав, зокрема щодо оскарження рішень військово-лікарських комісій, звільнення, отримання статусу учасника бойових дій або встановлення інвалідності. Крім того, воно визначає юридичну відповідальність за порушення військової дисципліни та ухилення від служби. Ця сфера права забезпечує баланс між інтересами держави та правами військовослужбовців, гарантує правові механізми захисту і вирішення спірних питань, що виникають у процесі служби.
+								</div>
+						</div>
+					</li>
+					<!-- 3 -->
+					<li>
+						<div class="accordeon" data-accordeon>
+							<div class="accordeon-title">
+								<h2 class="title">Хто підлягає мобілізації, а хто має право на відстрочку?</h2>
+							</div>
+							<div class="accordeon-inner">
+								<div class="theme-text">
+									Військове право – це галузь права, яка визначає правовий статус військовослужбовців, регулює їхні права та обов’язки, а також встановлює правила проходження військової служби. Воно охоплює питання мобілізації, призову, контрактної служби, соціальних гарантій, пільг та компенсацій<br><br>
+									Також військове право передбачає механізми правового захисту військовослужбовців у випадках порушення їхніх прав, зокрема щодо оскарження рішень військово-лікарських комісій, звільнення, отримання статусу учасника бойових дій або встановлення інвалідності. Крім того, воно визначає юридичну відповідальність за порушення військової дисципліни та ухилення від служби. Ця сфера права забезпечує баланс між інтересами держави та правами військовослужбовців, гарантує правові механізми захисту і вирішення спірних питань, що виникають у процесі служби.
+								</div>
+							</div>
+						</div>
+					</li>
+					<!-- 4 -->
+					<li>
+						<div class="accordeon" data-accordeon>
+							<div class="accordeon-title">
+								<h2 class="title">Що таке військове право і які аспекти воно регулює?</h2>
+							</div>
+							<div class="accordeon-inner">
+								<div class="theme-text">
+									Військове право – це галузь права, яка визначає правовий статус військовослужбовців, регулює їхні права та обов’язки, а також встановлює правила проходження військової служби. Воно охоплює питання мобілізації, призову, контрактної служби, соціальних гарантій, пільг та компенсацій<br><br>
+									Також військове право передбачає механізми правового захисту військовослужбовців у випадках порушення їхніх прав, зокрема щодо оскарження рішень військово-лікарських комісій, звільнення, отримання статусу учасника бойових дій або встановлення інвалідності. Крім того, воно визначає юридичну відповідальність за порушення військової дисципліни та ухилення від служби. Ця сфера права забезпечує баланс між інтересами держави та правами військовослужбовців, гарантує правові механізми захисту і вирішення спірних питань, що виникають у процесі служби.
+								</div>
+							</div>
+						</div>
+					</li>
+					<!-- 5 -->
+					<li>
+						<div class="accordeon" data-accordeon>
+							<div class="accordeon-title">
+								<h2 class="title">Чи мають військові право на безкоштовне медичне обслуговування?</h2>
+							</div>
+							<div class="accordeon-inner">
+								<div class="theme-text">
+									Військове право – це галузь права, яка визначає правовий статус військовослужбовців, регулює їхні права та обов’язки, а також встановлює правила проходження військової служби. Воно охоплює питання мобілізації, призову, контрактної служби, соціальних гарантій, пільг та компенсацій<br><br>
+									Також військове право передбачає механізми правового захисту військовослужбовців у випадках порушення їхніх прав, зокрема щодо оскарження рішень військово-лікарських комісій, звільнення, отримання статусу учасника бойових дій або встановлення інвалідності. Крім того, воно визначає юридичну відповідальність за порушення військової дисципліни та ухилення від служби. Ця сфера права забезпечує баланс між інтересами держави та правами військовослужбовців, гарантує правові механізми захисту і вирішення спірних питань, що виникають у процесі служби.
+								</div>
+							</div>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</section>
+		<!-- / faq -->
+
+		<!-- pagination -->
+		<!-- 12 cases per page -->
+		<div class="pagination" id="filterPagination">
+			<a href="#" class="item"><i class="icon icon-caret_left"></i></a>
+			<a href="#" class="item active">1</a>
+			<a href="#" class="item">2</a>
+			<a href="#" class="item">3</a>
+			<a href="#" class="item">4</a>
+			<span class="empty item">...</span>
+			<a href="#" class="item">12</a>
+			<a href="#" class="item"><i class="icon icon-caret_right"></i></a>
+		</div>
+		<!-- / pagination -->
 	</main>
 	<!-- footer -->
 	<footer class="main-footer section-dark">
