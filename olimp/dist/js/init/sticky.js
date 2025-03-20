@@ -1,5 +1,4 @@
 // sticky block
-
 document.addEventListener('DOMContentLoaded', function(){
 	let stickyBlocks = document.querySelectorAll("[data-sticky]");
 	let cloneIsAppended = false;

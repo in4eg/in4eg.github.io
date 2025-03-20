@@ -24,7 +24,7 @@
 </head>
 <body id="innerBody">
 	<!-- header -->
-	<!-- class dark for inner pages without dark banner and colored logo -->
+	<!-- class dark for inner pages without dark banner -->
 <header class="main-header dark fixed" id="mainHeader" data-scroll-check=".section-dark">
 	<div class="container">
 		<div class="header-container" id="headerContainer">
@@ -36,7 +36,7 @@
 				<div class="search-cover">
 					<div class="language">
 						<div class="dropdown-select">
-							<div class="title item">Укр </div>
+							<div class="title item">Укр</div>
 							<div class="inner">
 								<a href="#" class="item" aria-label="eng">Eng</a>
 								<a href="#" class="item" aria-label="ru">Рус</a>
@@ -44,10 +44,10 @@
 						</div>
 					</div>
 					<!-- mobile button for consultation -->
-					<button class="button mobile-toggle button-transparent button-round">
+					<button class="button mobile-toggle button-transparent button-round" data-popup-call="#consultPopup">
 						<i class="icon icon-phone icon-round"></i>
 					</button>
-					<!-- mobile button for consultation -->
+					<!-- / mobile button for consultation -->
 					<div class="search">
 						<button class="button search-toggle button-transparent button-round" data-toggle-element="#mainHeader" data-toggle-class="form-search-active" id="searchToggle">
 							<i class="icon icon-search icon-round"></i>
@@ -58,24 +58,69 @@
 			<div class="right-side">
 				<nav class="header-navigation" id="mainNavigation">
 					<ul class="clear" data-hover-show="#menuResult" data-escape-container="#mainHeader">
-						<li><a href="index.html" aria-label="main page"><span class="text">Головна</span></a></li>
 						<!-- class .active for active link -->
-						<li data-tab-hover="1"><a href="services.html" aria-label="detail link" class="active"><span class="text">Послуги</span></a></li>
-						<li><a href="cases.html" aria-label="detail link"><span class="text">Кейси</span></a></li>
+						<li><a href="index.html" aria-label="main page"><span class="text">Головна</span></a></li>
+						<!-- menuResult -> data-tab-index="1" -->
+						<li data-tab-hover="1"><a class="active" href="services.html" aria-label="detail link"><span class="text">Послуги</span></a></li>
+						<!-- menuResult -> data-tab-index="2" -->
+						<li data-tab-hover="2"><a href="cases.html" aria-label="detail link"><span class="text">Кейси</span></a></li>
 						<li><a href="news.html" aria-label="detail link"><span class="text">Новини</span></a></li>
 						<li><a href="about.html" aria-label="detail link"><span class="text">Про нас</span></a></li>
 						<li><a href="faq.html" aria-label="detail link"><span class="text">FAQ</span></a></li>
 						<li><a href="career.html" aria-label="detail link"><span class="text">Кар'єра</span></a></li>
 						<li><a href="contacts.html" aria-label="detail link"><span class="text">Контакти</span></a></li>
 					</ul>
+					<!-- BOTTOM -->
+					<!-- VISIBLE ONLY <= 768 -->
+					<div class="mobile-bottom">
+						<!-- consultation button -->
+						<div class="centered-inner">
+							<button type="button" class="button contact-button" data-popup-call="#consultPopup" data-header-close>
+								<span class="text">Консультацiя</span>
+							</button>
+						</div>
+						<!-- / consultation button -->
+						<!-- language and social for mobile -->
+						<div class="bordered-top">
+							<div class="language-mobile">
+								<div class="dropdown" data-dropdown>
+									<div class="dropdown-header"><div class="item">Українська</div></div>
+									<div class="dropdown-inner origin-top">
+										<a href="#" class="item" aria-label="eng">English</a>
+										<a href="#" class="item" aria-label="ru">Русский</a>
+									</div>
+								</div>
+							</div>
+							<div class="social-mobile">
+								<ul class="social-list clear">
+									<li>
+										<a aria-label="social link" target="_blank" href="tel:" class="button button-transparent button-round">
+											<span class="button-icon"><i class="icon icon-phone"></i></span>
+										</a>
+									</li>
+									<li>
+										<a aria-label="social link" target="_blank" href="mailto:" class="button button-transparent button-round">
+											<span class="button-icon"><i class="icon icon-mail"></i></span>
+										</a>
+									</li>
+									<li>
+										<a aria-label="social link" target="_blank" href="tg://resolve?domain=@" class="button button-transparent button-round">
+											<span class="button-icon"><i class="icon icon-telegram"></i></span>
+										</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<!-- / language and social for mobile -->
+					</div>
 				</nav>
 				<!-- desktop button for consultation -->
 				<div class="button-cover">
-					<button type="button" class="button button-header button-bordered">
+					<button type="button" class="button button-header button-bordered" data-popup-call="#consultPopup">
 						<span class="text">Консультацiя</span>
 					</button>
-					<!-- / desktop button for consultation -->
 				</div>
+				<!-- / desktop button for consultation -->
 				<!-- mobile menu toggle button -->
 				<button type="button" class="button menu-button" data-toggle-element="#mainNavigation">
 					<div class="lines">
@@ -99,7 +144,8 @@
 			<!-- / search form -->
 		</div>
 	</div>
-	<!-- sub menu (if main menu has categories) -->
+	<!-- SUBMENU -->
+	<!-- (if main menu has categories like servises/cases) -->
 	<div class="action-result menu-result" id="menuResult">
 		<div class="container">
 			<div class="result">
@@ -112,13 +158,14 @@
 				</button>
 				<!-- / only for mobile back button -->
 				<div class="info-section">
-					<div class="row">
-						<div class="col-xs-12 col-lg-2">
-							<div class="point-subtitle subtitle">результати пошуку</div>
-						</div>
-						<div class="col-xs-12 col-lg-10">
-							<!-- for services -->
-							<div class="menu-tab" data-tab-index="1">
+					<!-- SUBMENU -->
+					<!-- for services data-tab-hover="1" -->
+					<div class="menu-tab" data-tab-index="1">
+						<div class="row">
+							<div class="col-xs-12 col-lg-2">
+								<div class="point-subtitle subtitle">послуги</div>
+							</div>
+							<div class="col-xs-12 col-lg-10">
 								<div class="header-link">
 									<a href="services.html" class="subtitle subtitle-link" aria-label="Read all">
 										<span class="text">дивитися всі</span>
@@ -177,12 +224,82 @@
 							</div>
 						</div>
 					</div>
+					<!-- / for services -->
+					<!-- for cases data-tab-hover="2" -->
+					<div class="menu-tab" data-tab-index="2">
+						<div class="row">
+							<div class="col-xs-12 col-lg-2">
+								<div class="point-subtitle subtitle">кейси</div>
+							</div>
+							<div class="col-xs-12 col-lg-10">
+								<div class="header-link">
+									<a href="cases.html" class="subtitle subtitle-link" aria-label="Read all">
+										<span class="text">дивитися всі</span>
+										<i class="icon icon-right"></i>
+									</a>
+								</div>
+								<!-- 1 -->
+								<div class="submenu-cover">
+									<ul class="clear menu-links">
+										<li>
+											<a href="cases-category.html" aria-label="Read more about case">Кейси з сімейного права</a>
+										</li>
+										<li>
+											<a href="cases-category.html" aria-label="Read more about case">Захист цивільно-правових відносин</a>
+										</li>
+										<li>
+											<a href="cases-category.html" aria-label="Read more about case">Військове право</a>
+										</li>
+										<li>
+											<a href="cases-category.html" aria-label="Read more about case">Земельне право</a>
+										</li>
+										<li>
+											<a href="cases-category.html" aria-label="Read more about case">Пенсійне забезпечення</a>
+										</li>
+										<li>
+											<a href="cases-category.html" aria-label="Read more about case">Кримінальне право</a>
+										</li>
+										<li>
+											<a href="cases-category.html" aria-label="Read more about case">Адміністративне правопорушення та ДТП</a>
+										</li>
+									</ul>
+								</div>
+								<!-- 2 -->
+								<div class="submenu-cover">
+									<ul class="clear menu-links">
+										<li>
+											<a href="cases-category.html" aria-label="Read more about case">Житлові спори</a>
+										</li>
+										<li>
+											<a href="cases-category.html" aria-label="Read more about case">Спадкове право</a>
+										</li>
+										<li>
+											<a href="cases-category.html" aria-label="Read more about case">Кредитні спори</a>
+										</li>
+										<li>
+											<a href="cases-category.html" aria-label="Read more about case">Зняття та скасування арешту</a>
+										</li>
+										<li>
+											<a href="cases-category.html" aria-label="Read more about case">Трудові спори</a>
+										</li>
+										<li>
+											<a href="cases-category.html" aria-label="Read more about case">Захист прав споживачів</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- / for cases -->
+					<!-- / SUBMENU -->
 				</div>
 			</div>
 		</div>
 	</div>
-	<!-- / sub menu (if main menu has categories) -->
-	<!-- search result -->
+	<!-- / SUBMENU (if main menu has categories) -->
+
+	<!-- SEARCH -->
+	<!-- search block -->
 	<div class="action-result search-result" id="searchResult">
 		<div class="container">
 			<!-- some recommended or popular information -->
@@ -257,6 +374,7 @@
 				</div>
 			</div>
 			<!-- / some recommended or popular information -->
+			<!-- USER SEARCH RESULT -->
 			<!-- after user click enter results showed -->
 			<div class="result">
 				<!-- search result -->
@@ -293,8 +411,8 @@
 									<a href="services-detail.html" aria-label="Read more about service">Правова підтримка у військовій сфері: як оскаржити штраф?</a>
 								</li>
 								<li>
-									<a href="services-detail.html" aria-label="Read more about service">Скасування штрафу у військовій справі: які є підстави?</a></li>
-							
+									<a href="services-detail.html" aria-label="Read more about service">Скасування штрафу у військовій справі: які є підстави?</a>
+								</li>
 								<li>
 									<a href="services-detail.html" aria-label="Read more about service">Як військовослужбовцю захистити себе від неправомірного штрафу?</a>
 								</li>
@@ -318,12 +436,13 @@
 			</div>
 		</div>
 	</div>
-	<!-- / search result -->
+	<!-- / search block -->
+	<!-- / SEARCH -->
 </header>
 
 <script>
 	window.searchFormSubmit = function(){
-		console.log('show form result')
+		console.log('callback show form result')
 		document.getElementById('searchResult').classList.add('success');
 	};
 </script>
@@ -350,27 +469,27 @@
 						<div class="col-xs-12 col-md-6">
 							<div class="dropdown" data-dropdown>
 								<div class="dropdown-header"><div class="item">Всі категорії</div></div>
-								<div class="dropdown-inner">
-									<div class="item">Послуги з сімейного права</div>
-									<div class="item">Захист цивільно-правових відносин</div>
-									<div class="item">Військове право</div>
-									<div class="item">Земельне право</div>
-									<div class="item">Пенсійне забезпечення</div>
-									<div class="item">Кримінальне право</div>
-									<div class="item">Адміністративне правопорушення та ДТП</div>
-									<div class="item">Житлові спори</div>
-									<div class="item">Спадкове право</div>
-									<div class="item">Кредитні спори</div>
-									<div class="item">Зняття та скасування арешту</div>
-									<div class="item">Трудові спори</div>
-									<div class="item">Захист прав споживачів</div>
+								<div class="dropdown-inner" data-tag-filter=".accordeon-list">
+									<!-- data-tag=".all" for all list category -->
+									<div class="item" data-tag=".all">Всі категорії</div>
+									<!-- data-tag=".tag1" for list category -->
+									<div class="item" data-tag=".tag1">Послуги з сімейного права</div>
+									<!-- data-tag=".tag2" for list category -->
+									<div class="item" data-tag=".tag2">Захист цивільно-правових відносин</div>
+									<div class="item" data-tag=".tag3">Військове право</div>
+									<div class="item" data-tag=".tag4">Земельне право</div>
+									<div class="item" data-tag=".tag5">Пенсійне забезпечення</div>
+									<div class="item" data-tag=".tag6">Кримінальне право</div>
+									<div class="item" data-tag=".tag7">Коли немає питань для такої категорії</div>
+									<div class="item" data-tag=".tag6, .tag1">Категорія, наприклад, і для сімейного, і для кримінального права</div>
 								</div>
 							</div>
 						</div>
 						<div class="col-xs-12 col-md-6">
 							<form action="javascript:void(0)" class="form filters-form" id="searchCaseForm">
+								<div class="disabled-alert">Оберіть іншу категорію для пошуку</div>
 								<div class="labeled-group">
-									<input type="text" class="input" id="filterInput" data-filter=".case-preview" data-filter-fields="[data-description], [data-subtitle], [data-title]">
+									<input type="text" class="input" id="filterInput" data-filter=".accordeon" data-filter-fields="[data-description], [data-title]">
 									<label for="filterInput"><span class="text">Пошук питання</span></label>
 								</div>
 								<button class="button-round button" type="submit">
@@ -385,79 +504,212 @@
 		<!-- header -->
 
 		<!-- faq -->
-		<section class="section">
+		<section class="section faq-section">
 			<div class="container">
+				<!-- faq-list -->
 				<ul class="accordeon-list simple-accordeon clear">
-					<!-- 1 -->
-					<li>
-						<div class="accordeon" data-accordeon>
-							<div class="accordeon-title">
-								<h2 class="title">Що таке військове право і які аспекти воно регулює?</h2>
-							</div>
-							<div class="accordeon-inner">
-								<div class="theme-text">
-									Військове право – це галузь права, яка визначає правовий статус військовослужбовців, регулює їхні права та обов’язки, а також встановлює правила проходження військової служби. Воно охоплює питання мобілізації, призову, контрактної служби, соціальних гарантій, пільг та компенсацій<br><br>
-									Також військове право передбачає механізми правового захисту військовослужбовців у випадках порушення їхніх прав, зокрема щодо оскарження рішень військово-лікарських комісій, звільнення, отримання статусу учасника бойових дій або встановлення інвалідності. Крім того, воно визначає юридичну відповідальність за порушення військової дисципліни та ухилення від служби. Ця сфера права забезпечує баланс між інтересами держави та правами військовослужбовців, гарантує правові механізми захисту і вирішення спірних питань, що виникають у процесі служби.
-								</div>
-							</div>
-						</div>
-					</li>
-					<!-- 2 -->
-					<li>
-						<div class="accordeon" data-accordeon>
-							<div class="accordeon-title">
-								<h2 class="title">Які основні права та обов’язки військовослужбовців?</h2>
-							</div>
-							<div class="accordeon-inner">
-								<div class="theme-text">
-									Військове право – це галузь права, яка визначає правовий статус військовослужбовців, регулює їхні права та обов’язки, а також встановлює правила проходження військової служби. Воно охоплює питання мобілізації, призову, контрактної служби, соціальних гарантій, пільг та компенсацій<br><br>
-									Також військове право передбачає механізми правового захисту військовослужбовців у випадках порушення їхніх прав, зокрема щодо оскарження рішень військово-лікарських комісій, звільнення, отримання статусу учасника бойових дій або встановлення інвалідності. Крім того, воно визначає юридичну відповідальність за порушення військової дисципліни та ухилення від служби. Ця сфера права забезпечує баланс між інтересами держави та правами військовослужбовців, гарантує правові механізми захисту і вирішення спірних питань, що виникають у процесі служби.
-								</div>
-						</div>
-					</li>
-					<!-- 3 -->
-					<li>
-						<div class="accordeon" data-accordeon>
-							<div class="accordeon-title">
-								<h2 class="title">Хто підлягає мобілізації, а хто має право на відстрочку?</h2>
-							</div>
-							<div class="accordeon-inner">
-								<div class="theme-text">
-									Військове право – це галузь права, яка визначає правовий статус військовослужбовців, регулює їхні права та обов’язки, а також встановлює правила проходження військової служби. Воно охоплює питання мобілізації, призову, контрактної служби, соціальних гарантій, пільг та компенсацій<br><br>
-									Також військове право передбачає механізми правового захисту військовослужбовців у випадках порушення їхніх прав, зокрема щодо оскарження рішень військово-лікарських комісій, звільнення, отримання статусу учасника бойових дій або встановлення інвалідності. Крім того, воно визначає юридичну відповідальність за порушення військової дисципліни та ухилення від служби. Ця сфера права забезпечує баланс між інтересами держави та правами військовослужбовців, гарантує правові механізми захисту і вирішення спірних питань, що виникають у процесі служби.
-								</div>
-							</div>
-						</div>
-					</li>
-					<!-- 4 -->
-					<li>
-						<div class="accordeon" data-accordeon>
-							<div class="accordeon-title">
-								<h2 class="title">Що таке військове право і які аспекти воно регулює?</h2>
-							</div>
-							<div class="accordeon-inner">
-								<div class="theme-text">
-									Військове право – це галузь права, яка визначає правовий статус військовослужбовців, регулює їхні права та обов’язки, а також встановлює правила проходження військової служби. Воно охоплює питання мобілізації, призову, контрактної служби, соціальних гарантій, пільг та компенсацій<br><br>
-									Також військове право передбачає механізми правового захисту військовослужбовців у випадках порушення їхніх прав, зокрема щодо оскарження рішень військово-лікарських комісій, звільнення, отримання статусу учасника бойових дій або встановлення інвалідності. Крім того, воно визначає юридичну відповідальність за порушення військової дисципліни та ухилення від служби. Ця сфера права забезпечує баланс між інтересами держави та правами військовослужбовців, гарантує правові механізми захисту і вирішення спірних питань, що виникають у процесі служби.
-								</div>
-							</div>
-						</div>
-					</li>
-					<!-- 5 -->
-					<li>
-						<div class="accordeon" data-accordeon>
-							<div class="accordeon-title">
-								<h2 class="title">Чи мають військові право на безкоштовне медичне обслуговування?</h2>
-							</div>
-							<div class="accordeon-inner">
-								<div class="theme-text">
-									Військове право – це галузь права, яка визначає правовий статус військовослужбовців, регулює їхні права та обов’язки, а також встановлює правила проходження військової служби. Воно охоплює питання мобілізації, призову, контрактної служби, соціальних гарантій, пільг та компенсацій<br><br>
-									Також військове право передбачає механізми правового захисту військовослужбовців у випадках порушення їхніх прав, зокрема щодо оскарження рішень військово-лікарських комісій, звільнення, отримання статусу учасника бойових дій або встановлення інвалідності. Крім того, воно визначає юридичну відповідальність за порушення військової дисципліни та ухилення від служби. Ця сфера права забезпечує баланс між інтересами держави та правами військовослужбовців, гарантує правові механізми захисту і вирішення спірних питань, що виникають у процесі служби.
-								</div>
-							</div>
-						</div>
-					</li>
-				</ul>
+	<!-- 1 -->
+	<!-- tag3 -> for dropdown filter data-tag=".tag3" -->
+	<li class="all tag3">
+		<div class="accordeon" data-accordeon>
+			<div class="accordeon-title">
+				<div class="search-tooltip">Результатів: <span class="count">0</span></div>
+				<h2 class="title" data-title>Що таке військове право і які аспекти воно регулює?</h2>
+			</div>
+			<div class="accordeon-inner">
+				<div class="theme-text" data-description>
+					Військове право – це галузь права, яка визначає правовий статус військовослужбовців, регулює їхні права та обов’язки, а також встановлює правила проходження військової служби. Воно охоплює питання мобілізації, призову, контрактної служби, соціальних гарантій, пільг та компенсацій<br><br>
+					Також військове право передбачає механізми правового захисту військовослужбовців у випадках порушення їхніх прав, зокрема щодо оскарження рішень військово-лікарських комісій, звільнення, отримання статусу учасника бойових дій або встановлення інвалідності. Крім того, воно визначає юридичну відповідальність за порушення військової дисципліни та ухилення від служби. Ця сфера права забезпечує баланс між інтересами держави та правами військовослужбовців, гарантує правові механізми захисту і вирішення спірних питань, що виникають у процесі служби.
+					Військове право – це галузь права, яка визначає правовий статус військовослужбовців, регулює їхні права та обов’язки, а також встановлює правила проходження військової служби. Воно охоплює питання мобілізації, призову, контрактної служби, соціальних гарантій, пільг та компенсацій<br><br>
+					Також військове право передбачає механізми правового захисту військовослужбовців у випадках порушення їхніх прав, зокрема щодо оскарження рішень військово-лікарських комісій, звільнення, отримання статусу учасника бойових дій або встановлення інвалідності. Крім того, воно визначає юридичну відповідальність за порушення військової дисципліни та ухилення від служби. Ця сфера права забезпечує баланс між інтересами держави та правами військовослужбовців, гарантує правові механізми захисту і вирішення спірних питань, що виникають у процесі служби.
+				</div>
+			</div>
+		</div>
+	</li>
+	<!-- 2 -->
+	<!-- tag3 -> for dropdown filter data-tag=".tag3" -->
+	<li class="all tag3">
+		<div class="accordeon" data-accordeon>
+			<div class="accordeon-title">
+				<div class="search-tooltip">Результатів: <span class="count">0</span></div>
+				<h2 class="title" data-title>Які основні права та обов’язки військовослужбовців?</h2>
+			</div>
+			<div class="accordeon-inner">
+				<div class="theme-text" data-description>
+					Військове право – це галузь права, яка визначає правовий статус військовослужбовців, регулює їхні права та обов’язки, а також встановлює правила проходження військової служби. Воно охоплює питання мобілізації, призову, контрактної служби, соціальних гарантій, пільг та компенсацій<br><br>
+					Також військове право передбачає механізми правового захисту військовослужбовців у випадках порушення їхніх прав, зокрема щодо оскарження рішень військово-лікарських комісій, звільнення, отримання статусу учасника бойових дій або встановлення інвалідності. Крім того, воно визначає юридичну відповідальність за порушення військової дисципліни та ухилення від служби. Ця сфера права забезпечує баланс між інтересами держави та правами військовослужбовців, гарантує правові механізми захисту і вирішення спірних питань, що виникають у процесі служби.
+				</div>
+		</div>
+	</li>
+	<!-- 3 -->
+	<!-- tag3 -> for dropdown filter data-tag=".tag3" -->
+	<li class="all tag3">
+		<div class="accordeon" data-accordeon>
+			<div class="accordeon-title">
+				<div class="search-tooltip">Результатів: <span class="count">0</span></div>
+				<h2 class="title" data-title>Хто підлягає мобілізації, а хто має право на відстрочку?</h2>
+			</div>
+			<div class="accordeon-inner">
+				<div class="theme-text" data-description>
+					Військове право – це галузь права, яка визначає правовий статус військовослужбовців, регулює їхні права та обов’язки, а також встановлює правила проходження військової служби. Воно охоплює питання мобілізації, призову, контрактної служби, соціальних гарантій, пільг та компенсацій<br><br>
+					Також військове право передбачає механізми правового захисту військовослужбовців у випадках порушення їхніх прав, зокрема щодо оскарження рішень військово-лікарських комісій, звільнення, отримання статусу учасника бойових дій або встановлення інвалідності. Крім того, воно визначає юридичну відповідальність за порушення військової дисципліни та ухилення від служби. Ця сфера права забезпечує баланс між інтересами держави та правами військовослужбовців, гарантує правові механізми захисту і вирішення спірних питань, що виникають у процесі служби.
+				</div>
+			</div>
+		</div>
+	</li>
+	<!-- 4 -->
+	<!-- tag3 -> for dropdown filter data-tag=".tag3" -->
+	<li class="all tag3">
+		<div class="accordeon" data-accordeon>
+			<div class="accordeon-title">
+				<div class="search-tooltip">Результатів: <span class="count">0</span></div>
+				<h2 class="title" data-title>Що таке військове право і які аспекти воно регулює?</h2>
+			</div>
+			<div class="accordeon-inner">
+				<div class="theme-text" data-description>
+					Військове право – це галузь права, яка визначає правовий статус військовослужбовців, регулює їхні права та обов’язки, а також встановлює правила проходження військової служби. Воно охоплює питання мобілізації, призову, контрактної служби, соціальних гарантій, пільг та компенсацій<br><br>
+					Також військове право передбачає механізми правового захисту військовослужбовців у випадках порушення їхніх прав, зокрема щодо оскарження рішень військово-лікарських комісій, звільнення, отримання статусу учасника бойових дій або встановлення інвалідності. Крім того, воно визначає юридичну відповідальність за порушення військової дисципліни та ухилення від служби. Ця сфера права забезпечує баланс між інтересами держави та правами військовослужбовців, гарантує правові механізми захисту і вирішення спірних питань, що виникають у процесі служби.
+				</div>
+			</div>
+		</div>
+	</li>
+	<!-- 5 -->
+	<!-- tag3 -> for dropdown filter data-tag=".tag3" -->
+	<li class="all tag3">
+		<div class="accordeon" data-accordeon>
+			<div class="accordeon-title">
+				<div class="search-tooltip">Результатів: <span class="count">0</span></div>
+				<h2 class="title" data-title>Чи мають військові право на безкоштовне медичне обслуговування?</h2>
+			</div>
+			<div class="accordeon-inner">
+				<div class="theme-text" data-description>
+					Військове право – це галузь права, яка визначає правовий статус військовослужбовців, регулює їхні права та обов’язки, а також встановлює правила проходження військової служби. Воно охоплює питання мобілізації, призову, контрактної служби, соціальних гарантій, пільг та компенсацій<br><br>
+					Також військове право передбачає механізми правового захисту військовослужбовців у випадках порушення їхніх прав, зокрема щодо оскарження рішень військово-лікарських комісій, звільнення, отримання статусу учасника бойових дій або встановлення інвалідності. Крім того, воно визначає юридичну відповідальність за порушення військової дисципліни та ухилення від служби. Ця сфера права забезпечує баланс між інтересами держави та правами військовослужбовців, гарантує правові механізми захисту і вирішення спірних питань, що виникають у процесі служби.
+				</div>
+			</div>
+		</div>
+	</li>
+	<!-- 6 -->
+	<li class="all tag2">
+		<div class="accordeon" data-accordeon>
+			<div class="accordeon-title">
+				<div class="search-tooltip">Результатів: <span class="count">0</span></div>
+				<h2 class="title" data-title>Питання про захист цивільно-правових відносин</h2>
+			</div>
+			<div class="accordeon-inner">
+				<div class="theme-text" data-description>
+					Військове право – це галузь права, яка визначає правовий статус військовослужбовців, регулює їхні права та обов’язки, а також встановлює правила проходження військової служби. Воно охоплює питання мобілізації, призову, контрактної служби, соціальних гарантій, пільг та компенсацій<br><br>
+					Також військове право передбачає механізми правового захисту військовослужбовців у випадках порушення їхніх прав, зокрема щодо оскарження рішень військово-лікарських комісій, звільнення, отримання статусу учасника бойових дій або встановлення інвалідності. Крім того, воно визначає юридичну відповідальність за порушення військової дисципліни та ухилення від служби. Ця сфера права забезпечує баланс між інтересами держави та правами військовослужбовців, гарантує правові механізми захисту і вирішення спірних питань, що виникають у процесі служби.
+				</div>
+			</div>
+		</div>
+	</li>
+	<!-- 7 -->
+	<li class="all tag2">
+		<div class="accordeon" data-accordeon>
+			<div class="accordeon-title">
+				<div class="search-tooltip">Результатів: <span class="count">0</span></div>
+				<h2 class="title" data-title>Захист цивільно-правових відносин ще одне питання</h2>
+			</div>
+			<div class="accordeon-inner">
+				<div class="theme-text" data-description>
+					Військове право – це галузь права, яка визначає правовий статус військовослужбовців, регулює їхні права та обов’язки, а також встановлює правила проходження військової служби. Воно охоплює питання мобілізації, призову, контрактної служби, соціальних гарантій, пільг та компенсацій<br><br>
+					Також військове право передбачає механізми правового захисту військовослужбовців у випадках порушення їхніх прав, зокрема щодо оскарження рішень військово-лікарських комісій, звільнення, отримання статусу учасника бойових дій або встановлення інвалідності. Крім того, воно визначає юридичну відповідальність за порушення військової дисципліни та ухилення від служби. Ця сфера права забезпечує баланс між інтересами держави та правами військовослужбовців, гарантує правові механізми захисту і вирішення спірних питань, що виникають у процесі служби.
+				</div>
+			</div>
+		</div>
+	</li>
+	<!-- 8 -->
+	<li class="all tag1">
+		<div class="accordeon" data-accordeon>
+			<div class="accordeon-title">
+				<div class="search-tooltip">Результатів: <span class="count">0</span></div>
+				<h2 class="title" data-title>Питання про послуги з сімейного права</h2>
+			</div>
+			<div class="accordeon-inner">
+				<div class="theme-text" data-description>
+					Послуги з сімейного права
+					Військове право – це галузь права, яка визначає правовий статус військовослужбовців, регулює їхні права та обов’язки, а також встановлює правила проходження військової служби. Воно охоплює питання мобілізації, призову, контрактної служби, соціальних гарантій, пільг та компенсацій<br><br>
+					Також військове право передбачає механізми правового захисту військовослужбовців у випадках порушення їхніх прав, зокрема щодо оскарження рішень військово-лікарських комісій, звільнення, отримання статусу учасника бойових дій або встановлення інвалідності. Крім того, воно визначає юридичну відповідальність за порушення військової дисципліни та ухилення від служби. Ця сфера права забезпечує баланс між інтересами держави та правами військовослужбовців, гарантує правові механізми захисту і вирішення спірних питань, що виникають у процесі служби.
+				</div>
+			</div>
+		</div>
+	</li>
+	<!-- 9 -->
+	<li class="all tag1">
+		<div class="accordeon" data-accordeon>
+			<div class="accordeon-title">
+				<div class="search-tooltip">Результатів: <span class="count">0</span></div>
+				<h2 class="title" data-title>Питання про послуги з сімейного права ще одне</h2>
+			</div>
+			<div class="accordeon-inner">
+				<div class="theme-text" data-description>
+					Військове право – це галузь права, яка визначає правовий статус військовослужбовців, регулює їхні права та обов’язки, а також встановлює правила проходження військової служби. Воно охоплює питання мобілізації, призову, контрактної служби, соціальних гарантій, пільг та компенсацій<br><br>
+					Також військове право передбачає механізми правового захисту військовослужбовців у випадках порушення їхніх прав, зокрема щодо оскарження рішень військово-лікарських комісій, звільнення, отримання статусу учасника бойових дій або встановлення інвалідності. Крім того, воно визначає юридичну відповідальність за порушення військової дисципліни та ухилення від служби. Ця сфера права забезпечує баланс між інтересами держави та правами військовослужбовців, гарантує правові механізми захисту і вирішення спірних питань, що виникають у процесі служби.
+				</div>
+			</div>
+		</div>
+	</li>
+	<!-- 10 -->
+	<li class="all tag4">
+		<div class="accordeon" data-accordeon>
+			<div class="accordeon-title">
+				<div class="search-tooltip">Результатів: <span class="count">0</span></div>
+				<h2 class="title" data-title>Питання про земельне право</h2>
+			</div>
+			<div class="accordeon-inner">
+				<div class="theme-text" data-description>
+					Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab ea, nemo illo odit animi, aut delectus sed distinctio suscipit enim nihil, explicabo ratione quae, architecto repellat fuga nam est ducimus. <br>
+					Soluta culpa, perferendis molestiae sequi. Omnis, reiciendis iure corrupti. Sequi similique inventore rerum unde modi at quasi, quibusdam odio, et, commodi maiores laborum. Quia quasi sint nam animi rem commodi. <br>
+					Vel similique qui, corporis atque, assumenda placeat eveniet, numquam rerum in cum quia, reprehenderit? Tempore mollitia nam recusandae accusantium, corrupti earum ea excepturi assumenda ut ipsa quibusdam ducimus, quisquam et!
+					Necessitatibus ea asperiores voluptatum perferendis amet error dolore harum reprehenderit tempore minima quis praesentium animi natus unde suscipit inventore nulla saepe, eos cumque laboriosam. Saepe temporibus voluptatum esse cumque, porro.
+					Fugiat, vero labore excepturi error temporibus eveniet, officia aperiam voluptas facere expedita odio facilis. Adipisci non esse deserunt doloribus ea quaerat possimus, mollitia velit animi quasi placeat laboriosam maxime ducimus.
+					Iusto, corrupti vitae impedit aliquid voluptatibus ut quia soluta enim consectetur nobis consequuntur minima reiciendis culpa deleniti dolores debitis, animi at nam autem accusantium cupiditate nesciunt? Cupiditate incidunt reiciendis, commodi.
+				</div>
+			</div>
+		</div>
+	</li>
+	<!-- 11 -->
+	<li class="all tag5">
+		<div class="accordeon" data-accordeon>
+			<div class="accordeon-title">
+				<div class="search-tooltip">Результатів: <span class="count">0</span></div>
+				<h2 class="title" data-title>Питання про пенсійне забезпечення</h2>
+			</div>
+			<div class="accordeon-inner">
+				<div class="theme-text" data-description>
+					Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut illum perferendis recusandae, rerum quam. Doloremque error voluptate quo aut ex corrupti perferendis voluptatem quibusdam, sapiente cum voluptas id deserunt, quia!
+					Facilis, quis, a! Temporibus, commodi accusantium tenetur totam illum. Molestias incidunt repellendus eveniet temporibus excepturi, aliquam quaerat a distinctio sit, recusandae debitis dignissimos aut quas voluptates doloribus laudantium, vero ipsam.
+					Illo fugit aliquam numquam animi ipsum maxime quam assumenda commodi error, tenetur aut inventore tempora, nesciunt. Unde, consectetur aliquam eos, iure, odit possimus voluptatibus aliquid molestias consequatur magnam, adipisci error.
+					Nisi, alias in commodi fugiat excepturi totam, ratione nulla. Dolor, accusamus tenetur. Ullam minima eius maiores reprehenderit, dolor possimus a sunt deleniti eum corporis facere aspernatur saepe temporibus odit et.
+				</div>
+			</div>
+		</div>
+	</li>
+	<!-- 12 -->
+	<li class="all tag6">
+		<div class="accordeon" data-accordeon>
+			<div class="accordeon-title">
+				<div class="search-tooltip">Результатів: <span class="count">0</span></div>
+				<h2 class="title" data-title>Питання про кримінальне право</h2>
+			</div>
+			<div class="accordeon-inner">
+				<div class="theme-text" data-description>
+				Lorem ipsum dolor sit amet consectetur, adipisicing elit. Culpa ipsum esse deserunt excepturi nisi! Nobis laborum fugit perferendis maiores temporibus odit ipsam, alias enim culpa rerum distinctio sit cum assumenda.
+				Distinctio possimus aspernatur nemo et hic, expedita esse harum omnis. Quisquam eligendi, placeat laudantium repellendus architecto vel explicabo dolore nulla sit cupiditate distinctio, pariatur animi hic ipsa exercitationem ullam impedit.
+				Quidem, ipsa, eius. Error delectus vero, pariatur aliquam doloribus esse quae atque sapiente eos, porro autem, magnam, est dolore consequatur. Cupiditate quisquam facilis laudantium at provident corrupti similique voluptatibus, ut?
+				</div>
+			</div>
+		</div>
+	</li>
+</ul>
+				<!-- / faq-list -->
+				<!-- alert message if list is empty -->
+				<div id="searchEmptyMessage" class="hidden search-alert">
+					<div class="section-title-small">Питань за таким запитом не знайдено</div>
+					<div class="theme-text">Спробуйте змінити пошуковий запит</div>
+				</div>
+				<!-- alert message if list is empty -->
 			</div>
 		</section>
 		<!-- / faq -->
@@ -475,7 +727,57 @@
 			<a href="#" class="item"><i class="icon icon-caret_right"></i></a>
 		</div>
 		<!-- / pagination -->
-	</main>
+
+		<!-- contact form -->
+		<section class="contact-section section spaced-large" id="contactForm">
+	<div class="container">
+		<div class="section section-dark mask-dark spaced-inner">
+			<div class="title-side">
+				<h4 class="point-subtitle subtitle">контактувати</h4>
+			</div>
+			<div class="contact-inner">
+				<div class="form-contact">
+					<div class="side">
+						<h2 class="section-title-large">Подати заявку</h2>
+						<div class="paragraph">Залиште заявку — і ми допоможемо вирішити вашу <br>проблему швидко та ефективно!</div>
+					</div>
+					<div class="side">
+						<!-- class .validate-form for validation -->
+						<form action="javascript:void(0)" class="form contact-form validate-form">
+							<div class="form-group">
+								<div class="alert">Не коректний телефон</div>
+								<input type="tel" class="input phone" placeholder="+380 (___) ___ __ __">
+							</div>
+							<button type="submit" class="button button-light button-arrow button-block full-sm">
+								<span class="text">Передзвоніть мені</span>
+								<span class="button-icon">
+									<i class="icon icon-right"></i>
+								</span>
+							</button>
+						</form>
+					</div>
+				</div>
+				<ul class="clear checked-list bordered-top">
+					<li>Широкий спектр послуг</li>
+					<li>Безкоштовна консультація</li>
+					<li>Надійність</li>
+					<li>Ефективність</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</section>
+		<!-- / contact form -->
+
+		<!-- map -->
+		<div class="map-container">
+		<!-- data attributes changable in html -->
+		<div id="map" class="map"
+			data-position="50.450001, 30.523333"
+			data-zoom="16"
+			data-title="Kyiv, Ukraine"
+		></div>
+		<!-- / map -->
 	<!-- footer -->
 	<footer class="main-footer section-dark">
 	<div class="container">
@@ -491,7 +793,7 @@
 					<div class="paragraph">Залиште заявку — і ми допоможемо вирішити вашу проблему швидко та ефективно!</div>
 				</div>
 				<div class="col-xs-12 col-md-5 align-right">
-					<button type="button" class="button button-light button-arrow full-sm" aria-label="button">
+					<button type="button" class="button button-light button-arrow full-sm" aria-label="button" data-popup-call="#questionPopup">
 						<span class="text">Передзвоніть мені</span>
 						<span class="button-icon">
 							<i class="icon icon-right"></i>
@@ -596,6 +898,12 @@
 		</div>
 	</div>
 </footer>
+
+	<script>
+		window.onTagFilter = function(data){
+			console.log('callback for tag filter', data);
+		};
+	</script>
 
 	<script src="js/main.js"></script>
 </body>

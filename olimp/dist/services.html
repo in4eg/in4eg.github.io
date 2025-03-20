@@ -24,7 +24,7 @@
 </head>
 <body id="innerBody">
 	<!-- header -->
-	<!-- class dark for inner pages without dark banner and colored logo -->
+	<!-- class dark for inner pages without dark banner -->
 <header class="main-header dark fixed" id="mainHeader" data-scroll-check=".section-dark">
 	<div class="container">
 		<div class="header-container" id="headerContainer">
@@ -36,7 +36,7 @@
 				<div class="search-cover">
 					<div class="language">
 						<div class="dropdown-select">
-							<div class="title item">Укр </div>
+							<div class="title item">Укр</div>
 							<div class="inner">
 								<a href="#" class="item" aria-label="eng">Eng</a>
 								<a href="#" class="item" aria-label="ru">Рус</a>
@@ -44,10 +44,10 @@
 						</div>
 					</div>
 					<!-- mobile button for consultation -->
-					<button class="button mobile-toggle button-transparent button-round">
+					<button class="button mobile-toggle button-transparent button-round" data-popup-call="#consultPopup">
 						<i class="icon icon-phone icon-round"></i>
 					</button>
-					<!-- mobile button for consultation -->
+					<!-- / mobile button for consultation -->
 					<div class="search">
 						<button class="button search-toggle button-transparent button-round" data-toggle-element="#mainHeader" data-toggle-class="form-search-active" id="searchToggle">
 							<i class="icon icon-search icon-round"></i>
@@ -58,24 +58,69 @@
 			<div class="right-side">
 				<nav class="header-navigation" id="mainNavigation">
 					<ul class="clear" data-hover-show="#menuResult" data-escape-container="#mainHeader">
-						<li><a href="index.html" aria-label="main page"><span class="text">Головна</span></a></li>
 						<!-- class .active for active link -->
-						<li data-tab-hover="1"><a href="services.html" aria-label="detail link" class="active"><span class="text">Послуги</span></a></li>
-						<li><a href="cases.html" aria-label="detail link"><span class="text">Кейси</span></a></li>
+						<li><a href="index.html" aria-label="main page"><span class="text">Головна</span></a></li>
+						<!-- menuResult -> data-tab-index="1" -->
+						<li data-tab-hover="1"><a class="active" href="services.html" aria-label="detail link"><span class="text">Послуги</span></a></li>
+						<!-- menuResult -> data-tab-index="2" -->
+						<li data-tab-hover="2"><a href="cases.html" aria-label="detail link"><span class="text">Кейси</span></a></li>
 						<li><a href="news.html" aria-label="detail link"><span class="text">Новини</span></a></li>
 						<li><a href="about.html" aria-label="detail link"><span class="text">Про нас</span></a></li>
 						<li><a href="faq.html" aria-label="detail link"><span class="text">FAQ</span></a></li>
 						<li><a href="career.html" aria-label="detail link"><span class="text">Кар'єра</span></a></li>
 						<li><a href="contacts.html" aria-label="detail link"><span class="text">Контакти</span></a></li>
 					</ul>
+					<!-- BOTTOM -->
+					<!-- VISIBLE ONLY <= 768 -->
+					<div class="mobile-bottom">
+						<!-- consultation button -->
+						<div class="centered-inner">
+							<button type="button" class="button contact-button" data-popup-call="#consultPopup" data-header-close>
+								<span class="text">Консультацiя</span>
+							</button>
+						</div>
+						<!-- / consultation button -->
+						<!-- language and social for mobile -->
+						<div class="bordered-top">
+							<div class="language-mobile">
+								<div class="dropdown" data-dropdown>
+									<div class="dropdown-header"><div class="item">Українська</div></div>
+									<div class="dropdown-inner origin-top">
+										<a href="#" class="item" aria-label="eng">English</a>
+										<a href="#" class="item" aria-label="ru">Русский</a>
+									</div>
+								</div>
+							</div>
+							<div class="social-mobile">
+								<ul class="social-list clear">
+									<li>
+										<a aria-label="social link" target="_blank" href="tel:" class="button button-transparent button-round">
+											<span class="button-icon"><i class="icon icon-phone"></i></span>
+										</a>
+									</li>
+									<li>
+										<a aria-label="social link" target="_blank" href="mailto:" class="button button-transparent button-round">
+											<span class="button-icon"><i class="icon icon-mail"></i></span>
+										</a>
+									</li>
+									<li>
+										<a aria-label="social link" target="_blank" href="tg://resolve?domain=@" class="button button-transparent button-round">
+											<span class="button-icon"><i class="icon icon-telegram"></i></span>
+										</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<!-- / language and social for mobile -->
+					</div>
 				</nav>
 				<!-- desktop button for consultation -->
 				<div class="button-cover">
-					<button type="button" class="button button-header button-bordered">
+					<button type="button" class="button button-header button-bordered" data-popup-call="#consultPopup">
 						<span class="text">Консультацiя</span>
 					</button>
-					<!-- / desktop button for consultation -->
 				</div>
+				<!-- / desktop button for consultation -->
 				<!-- mobile menu toggle button -->
 				<button type="button" class="button menu-button" data-toggle-element="#mainNavigation">
 					<div class="lines">
@@ -99,7 +144,8 @@
 			<!-- / search form -->
 		</div>
 	</div>
-	<!-- sub menu (if main menu has categories) -->
+	<!-- SUBMENU -->
+	<!-- (if main menu has categories like servises/cases) -->
 	<div class="action-result menu-result" id="menuResult">
 		<div class="container">
 			<div class="result">
@@ -112,13 +158,14 @@
 				</button>
 				<!-- / only for mobile back button -->
 				<div class="info-section">
-					<div class="row">
-						<div class="col-xs-12 col-lg-2">
-							<div class="point-subtitle subtitle">результати пошуку</div>
-						</div>
-						<div class="col-xs-12 col-lg-10">
-							<!-- for services -->
-							<div class="menu-tab" data-tab-index="1">
+					<!-- SUBMENU -->
+					<!-- for services data-tab-hover="1" -->
+					<div class="menu-tab" data-tab-index="1">
+						<div class="row">
+							<div class="col-xs-12 col-lg-2">
+								<div class="point-subtitle subtitle">послуги</div>
+							</div>
+							<div class="col-xs-12 col-lg-10">
 								<div class="header-link">
 									<a href="services.html" class="subtitle subtitle-link" aria-label="Read all">
 										<span class="text">дивитися всі</span>
@@ -177,12 +224,82 @@
 							</div>
 						</div>
 					</div>
+					<!-- / for services -->
+					<!-- for cases data-tab-hover="2" -->
+					<div class="menu-tab" data-tab-index="2">
+						<div class="row">
+							<div class="col-xs-12 col-lg-2">
+								<div class="point-subtitle subtitle">кейси</div>
+							</div>
+							<div class="col-xs-12 col-lg-10">
+								<div class="header-link">
+									<a href="cases.html" class="subtitle subtitle-link" aria-label="Read all">
+										<span class="text">дивитися всі</span>
+										<i class="icon icon-right"></i>
+									</a>
+								</div>
+								<!-- 1 -->
+								<div class="submenu-cover">
+									<ul class="clear menu-links">
+										<li>
+											<a href="cases-category.html" aria-label="Read more about case">Кейси з сімейного права</a>
+										</li>
+										<li>
+											<a href="cases-category.html" aria-label="Read more about case">Захист цивільно-правових відносин</a>
+										</li>
+										<li>
+											<a href="cases-category.html" aria-label="Read more about case">Військове право</a>
+										</li>
+										<li>
+											<a href="cases-category.html" aria-label="Read more about case">Земельне право</a>
+										</li>
+										<li>
+											<a href="cases-category.html" aria-label="Read more about case">Пенсійне забезпечення</a>
+										</li>
+										<li>
+											<a href="cases-category.html" aria-label="Read more about case">Кримінальне право</a>
+										</li>
+										<li>
+											<a href="cases-category.html" aria-label="Read more about case">Адміністративне правопорушення та ДТП</a>
+										</li>
+									</ul>
+								</div>
+								<!-- 2 -->
+								<div class="submenu-cover">
+									<ul class="clear menu-links">
+										<li>
+											<a href="cases-category.html" aria-label="Read more about case">Житлові спори</a>
+										</li>
+										<li>
+											<a href="cases-category.html" aria-label="Read more about case">Спадкове право</a>
+										</li>
+										<li>
+											<a href="cases-category.html" aria-label="Read more about case">Кредитні спори</a>
+										</li>
+										<li>
+											<a href="cases-category.html" aria-label="Read more about case">Зняття та скасування арешту</a>
+										</li>
+										<li>
+											<a href="cases-category.html" aria-label="Read more about case">Трудові спори</a>
+										</li>
+										<li>
+											<a href="cases-category.html" aria-label="Read more about case">Захист прав споживачів</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- / for cases -->
+					<!-- / SUBMENU -->
 				</div>
 			</div>
 		</div>
 	</div>
-	<!-- / sub menu (if main menu has categories) -->
-	<!-- search result -->
+	<!-- / SUBMENU (if main menu has categories) -->
+
+	<!-- SEARCH -->
+	<!-- search block -->
 	<div class="action-result search-result" id="searchResult">
 		<div class="container">
 			<!-- some recommended or popular information -->
@@ -257,6 +374,7 @@
 				</div>
 			</div>
 			<!-- / some recommended or popular information -->
+			<!-- USER SEARCH RESULT -->
 			<!-- after user click enter results showed -->
 			<div class="result">
 				<!-- search result -->
@@ -293,8 +411,8 @@
 									<a href="services-detail.html" aria-label="Read more about service">Правова підтримка у військовій сфері: як оскаржити штраф?</a>
 								</li>
 								<li>
-									<a href="services-detail.html" aria-label="Read more about service">Скасування штрафу у військовій справі: які є підстави?</a></li>
-							
+									<a href="services-detail.html" aria-label="Read more about service">Скасування штрафу у військовій справі: які є підстави?</a>
+								</li>
 								<li>
 									<a href="services-detail.html" aria-label="Read more about service">Як військовослужбовцю захистити себе від неправомірного штрафу?</a>
 								</li>
@@ -318,12 +436,13 @@
 			</div>
 		</div>
 	</div>
-	<!-- / search result -->
+	<!-- / search block -->
+	<!-- / SEARCH -->
 </header>
 
 <script>
 	window.searchFormSubmit = function(){
-		console.log('show form result')
+		console.log('callback show form result')
 		document.getElementById('searchResult').classList.add('success');
 	};
 </script>
@@ -743,9 +862,11 @@
 						<div class="paragraph">Залиште заявку — і ми допоможемо вирішити вашу <br>проблему швидко та ефективно!</div>
 					</div>
 					<div class="side">
-						<form action="javascript:void(0)" class="form">
+						<!-- class .validate-form for validation -->
+						<form action="javascript:void(0)" class="form contact-form validate-form">
 							<div class="form-group">
-								<input type="tel" class="input" placeholder="+380 (___) ___ __ __">
+								<div class="alert">Не коректний телефон</div>
+								<input type="tel" class="input phone" placeholder="+380 (___) ___ __ __">
 							</div>
 							<button type="submit" class="button button-light button-arrow button-block full-sm">
 								<span class="text">Передзвоніть мені</span>
@@ -778,6 +899,89 @@
 		></div>
 		<!-- / map -->
 	</main>
+
+	<!-- popups -->
+	<!-- 1 -->
+	<div id="consultPopup" class="popup popup-form">
+	<div class="inner section-dark">
+		<button type="button" class="close-popup button">&times;</button>
+		<div class="header">
+			<div class="title">Отримати консультацію</div>
+			<div class="paragraph">Залиште свої контактні дані, і наші фахівці <br>зв'яжуться з вами якнайшвидше.</div>
+		</div>
+		<div class="main">
+			<!-- class .validate-form for validation -->
+			<form action="javascript:void(0)" class="form contact-form">
+				<div class="form-group labeled-group">
+					<div class="alert">Мінімум 2 символа</div>
+					<input type="text" class="input" id="name" name="name" data-minlength="2">
+					<label for="name"><span class="text">Ваше ім’я:</span></label>
+				</div>
+				<!-- no label no class .labeled-group -->
+				<div class="form-group">
+					<div class="alert">Не коректний телефон</div>
+					<input type="tel" class="input phone" id="phone" name="phone" placeholder="+380 (___) ___ __ __">
+					<!-- no label here -->
+				</div>
+				<div class="form-group labeled-group">
+					<div class="alert">Не коректний емейл</div>
+					<input type="mail" class="input email" id="email" name="email">
+					<label for="email"><span class="text">Електронна пошта:</span></label>
+				</div>
+				<button type="submit" class="button button-light button-arrow button-block full-sm">
+					<span class="text">Отримати консультацію</span>
+					<span class="button-icon">
+						<i class="icon icon-right"></i>
+					</span>
+				</button>
+			</form>
+		</div>
+	</div>
+</div>
+	<!-- 2 -->
+	<div id="questionPopup" class="popup popup-form">
+	<div class="inner section-dark">
+		<button type="button" class="close-popup button">&times;</button>
+		<div class="header">
+			<div class="title">Поставте запитання нашим фахівцям</div>
+			<div class="paragraph">Заповніть форму нижче, щоб отримати професійну консультацію</div>
+		</div>
+		<div class="main">
+			<!-- class .validate-form for validation -->
+			<form action="javascript:void(0)" class="form contact-form">
+				<div class="form-group labeled-group">
+					<div class="alert">Мінімум 2 символа</div>
+					<input type="text" class="input" id="name" name="name" data-minlength="2">
+					<label for="name"><span class="text">Ваше ім’я:</span></label>
+				</div>
+				<div class="form-group labeled-group">
+					<div class="alert">Не коректний емейл</div>
+					<input type="mail" class="input email" id="email" name="email">
+					<label for="email"><span class="text">Електронна пошта:</span></label>
+				</div>
+				<!-- no label no class .labeled-group -->
+				<div class="form-group">
+					<div class="alert">Не коректний телефон</div>
+					<input type="tel" class="input phone" id="phone" name="phone" placeholder="+380 (___) ___ __ __">
+					<!-- no label here -->
+				</div>
+				<div class="form-group labeled-group textarea-group">
+					<div class="alert">Мінімум 10 символів</div>
+					<textarea name="message" id="message" class="textarea" data-minlength="10"></textarea>
+					<label for="message"><span class="text">Опис вашого запиту</span></label>
+				</div>
+				<button type="submit" class="button button-light button-arrow button-block full-sm">
+					<span class="text">Обговорити задачу</span>
+					<span class="button-icon">
+						<i class="icon icon-right"></i>
+					</span>
+				</button>
+			</form>
+		</div>
+	</div>
+</div>
+	<!-- / popups -->
+
 	<!-- footer -->
 	<footer class="main-footer section-dark">
 	<div class="container">
@@ -793,7 +997,7 @@
 					<div class="paragraph">Залиште заявку — і ми допоможемо вирішити вашу проблему швидко та ефективно!</div>
 				</div>
 				<div class="col-xs-12 col-md-5 align-right">
-					<button type="button" class="button button-light button-arrow full-sm" aria-label="button">
+					<button type="button" class="button button-light button-arrow full-sm" aria-label="button" data-popup-call="#questionPopup">
 						<span class="text">Передзвоніть мені</span>
 						<span class="button-icon">
 							<i class="icon icon-right"></i>
@@ -898,6 +1102,16 @@
 		</div>
 	</div>
 </footer>
+	<!-- / footer -->
+
+	<!-- map -->
+	<!-- heeds api key and map id -->
+<!-- 	<script>
+		var script = document.createElement('script');
+		script.src = "https://maps.googleapis.com/maps/api/js?key="+apiKey+"&callback=initMap&v=weekly";
+		document.getElementsByTagName('script')[0].parentNode.appendChild(script);
+	</script> -->
+	<!-- map -->
 
 	<script src="js/main.js"></script>
 </body>
