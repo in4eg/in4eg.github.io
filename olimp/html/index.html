@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+	<meta charset="UTF-8">
+	<title>Olimp :: Main Page</title>
+
+	<link rel="icon" type="image/png" href="/favicon/favicon-96x96.png" sizes="96x96">
+	<link rel="icon" type="image/svg+xml" href="/favicon/favicon.svg">
+	<link rel="shortcut icon" href="/favicon/favicon.ico">
+	<link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
+	<meta name="apple-mobile-web-app-title" content="Olimp">
+	<link rel="manifest" href="/favicon/site.webmanifest">
+
+	<meta name="msapplication-TileColor" content="#252324">
+	<meta name="theme-color" content="#252324">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+	<meta name="format-detection" content="telephone=no">
+	<meta name="description" content="description">
+
+	<link rel="stylesheet" href="css/bundle.min.css">
+</head>
+<body id="innerBody">
+	<script>
+		var apiKey = '';
+		var mapId = '';
+	</script>
+
+	<!-- header -->
+	@@include('./includes/header-main.html')
+	<!-- / header -->
+	<main class="page-main" id="pageMain">
+		<!-- banner -->
+		<section class="section-banner first-section section section-dark">
+			<div class="banner-cover">
+				<img src="img/banner_main.jpg" draggable="false" alt="image">
+			</div>
+			<div class="caption">
+				<div class="container">
+					<div class="top">
+						<div class="banner-subtitle subtitle">Ми юридична компанія</div>
+					</div>
+					<div class="divider light"></div>
+					<div class="bottom">
+						<div class="row bottom-sm">
+							<div class="col-xs-12 col-md-7">
+								<h1 class="banner-title section-title">Вирішуємо найскладніші питання просто та ефективно.</h1>
+							</div>
+							<div class="col-xs-12 col-md-5 align-right">
+								<button type="button" class="button button-light button-arrow full-sm" data-popup-call="#questionPopup">
+									<span class="text">Обговорити задачу</span>
+									<span class="button-icon">
+										<i class="icon icon-right"></i>
+									</span>
+								</button>
+							</div>
+						</div>
+						<div class="scroll-bottom">
+							<a class="button button-transparent button-round" href="#companyAdvantages" data-scrollto="#companyAdvantages" aria-label="scroll top">
+								<span class="button-icon"><i class="icon icon-bottom"></i></span>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="social">
+				<ul class="social-list clear vertical">
+					<li>
+						<a aria-label="social link" target="_blank" href="tel:" class="button button-transparent button-round">
+							<span class="button-icon"><i class="icon icon-phone"></i></span>
+						</a>
+					</li>
+					<li>
+						<a aria-label="social link" target="_blank" href="mailto:" class="button button-transparent button-round">
+							<span class="button-icon"><i class="icon icon-mail"></i></span>
+						</a>
+					</li>
+					<li>
+						<a aria-label="social link" target="_blank" href="tg://resolve?domain=@" class="button button-transparent button-round">
+							<span class="button-icon"><i class="icon icon-telegram"></i></span>
+						</a>
+					</li>
+				</ul>
+			</div>
+		</section>
+		<!-- / banner -->
+
+		<!-- company advantages -->
+		<section class="section-spaced section" id="companyAdvantages">
+			<div class="container">
+				<h2 class="section-title">
+					Юридична компанія «Олімп» —<br>ваш надійний партнер у вирішенні складних правових питань.
+				</h2>
+				<div class="point-subtitle subtitle">З нами ви отримуєте:</div>
+				<ul class="clear counter-list inline-list collapsed-xs">
+					<li>Професіоналізм і досвід у правових питаннях</li>
+					<li>Індивідуальний підхід до кожної справи</li>
+					<li>Повну конфіденційність</li>
+					<li>Чіткі та прозорі умови співпраці</li>
+				</ul>
+				<div class="divider centered"></div>
+			</div>
+		</section>
+		<!-- / company advantages -->
+
+		<!-- about company -->
+		<section class="section-spaced section" id="companyAbout">
+			<div class="container">
+				<div class="point-subtitle subtitle">Про нас</div>
+				<h2 class="section-title">
+					Юридична компанія “Олімп” — це команда професіоналів, створена з метою забезпечення якісного правового супроводу для кожного клієнта. 
+				</h2>
+				<!-- visible only for mobile -->
+				<div class="images-section visible-sm">
+					<figure class="image-cover">
+						<img src="img/temp/company1.jpg" draggable="false" alt="image">
+					</figure>
+				</div>
+				<!-- / visible only for mobile -->
+				<div class="column-side cell-child-2">
+					<div class="cell">
+						<div class="paragraph bold paragraph-larger">
+							Засновниця компанії Ірина, юрист із багаторічним досвідом, зібрала навколо себе найкращих фахівців у сфері права, аби створити команду, здатну вирішувати найскладніші юридичні завдання.
+						</div>
+					</div>
+					<div class="cell">
+						<div class="paragraph">
+							Прагнення до досконалості та бажання допомагати людям стали рушійною силою для відкриття нашої компанії. Ми переконані, що успіх досягається тоді, коли працюєш із людьми, які поділяють твої цінності. Тому кожен член нашої команди — це не лише висококваліфікований юрист, але й людина, віддана своїй справі.
+						</div>
+					</div>
+				</div>
+				<div class="divider centered"></div>
+				<div class="images-section">
+					<div class="row">
+						<!-- visible only for desktop -->
+						<div class="col-xs-12 col-sm-6 hidden-sm">
+							<figure class="image-cover">
+								<img src="img/temp/company1.jpg" draggable="false" alt="image">
+							</figure>
+						</div>
+						<!-- / visible only for desktop -->
+						<div class="col-xs-12 col-sm-6">
+							<figure class="image-cover">
+								<img src="img/temp/company2.jpg" draggable="false" alt="image">
+							</figure>
+						</div>
+					</div>
+				</div>
+				<a href="about.html" class="button button-primary-transparent button-block" aria-label="Details">
+					<span class="text">Читати докладніше</span>
+					<span class="button-icon">
+						<i class="icon icon-right"></i>
+					</span>
+				</a>
+			</div>
+		</section>
+		<!-- / about company -->
+
+		<!-- company services -->
+		<section class="section-spaced section" id="companyServices">
+			<div class="container">
+				<h2 class="section-title-large">Наші послуги</h2>
+				<div class="point-subtitle subtitle">основні галузі</div>
+				<ul class="clear services-list">
+					<li>
+						<a href="services-detail.html" class="detail-link" aria-label="Read more about this case">
+							<div class="verticaly-middle">
+								<div class="inner">
+									<i class="icon icon-right_up service-icon"></i>
+									<span class="icon-cover">
+										<img src="img/icons/service_family.svg" draggable="false" class="hover-hide" alt="image">
+										<img src="img/icons/service_family_hover.svg" draggable="false" class="hover-show" alt="image">
+									</span>
+									<span class="text">Сімейне право</span>
+								</div>
+							</div>
+						</a>
+					</li>
+					<li>
+						<a href="services-detail.html" class="detail-link" aria-label="Read more about this case">
+							<div class="verticaly-middle">
+								<div class="inner">
+									<i class="icon icon-right_up service-icon"></i>
+									<span class="icon-cover">
+										<img src="img/icons/service_heritage.svg" draggable="false" alt="image" class="hover-hide">
+										<img src="img/icons/service_heritage_hover.svg" draggable="false" class="hover-show" alt="image">
+									</span>
+									<span class="text">Спадкове право</span>
+								</div>
+							</div>
+						</a>
+					</li>
+					<li>
+						<a href="services-detail.html" class="detail-link" aria-label="Read more about this case">
+							<div class="verticaly-middle">
+								<div class="inner">
+									<i class="icon icon-right_up service-icon"></i>
+									<span class="icon-cover">
+										<img src="img/icons/service_military.svg" draggable="false" alt="image" class="hover-hide">
+										<img src="img/icons/service_military_hover.svg" draggable="false" class="hover-show" alt="image">
+									</span>
+									<span class="text">Військове право</span>
+								</div>
+							</div>
+						</a>
+					</li>
+					<li>
+						<a href="services-detail.html" class="detail-link" aria-label="Read more about this case">
+							<div class="verticaly-middle">
+								<div class="inner">
+									<i class="icon icon-right_up service-icon"></i>
+									<span class="icon-cover">
+										<img src="img/icons/service_criminal.svg" draggable="false" alt="image" class="hover-hide">
+										<img src="img/icons/service_criminal_hover.svg" draggable="false" class="hover-show" alt="image">
+									</span>
+									<span class="text">Кримінальне право</span>
+								</div>
+							</div>
+						</a>
+					</li>
+					<li>
+						<a href="services-detail.html" class="detail-link" aria-label="Read more about this case">
+							<div class="verticaly-middle">
+								<div class="inner">
+									<i class="icon icon-right_up service-icon"></i>
+									<span class="icon-cover">
+										<img src="img/icons/service_car.svg" draggable="false" class="hover-hide" alt="image">
+										<img src="img/icons/service_car_hover.svg" draggable="false" class="hover-show" alt="image">
+									</span>
+									<span class="text">ДТП</span>
+								</div>
+							</div>
+						</a>
+					</li>
+					<li>
+						<a href="services-detail.html" class="detail-link" aria-label="Read more about this case">
+							<div class="verticaly-middle">
+								<div class="inner">
+									<i class="icon icon-right_up service-icon"></i>
+									<span class="icon-cover">
+										<img src="img/icons/service_pension.svg" draggable="false" class="hover-hide" alt="image">
+										<img src="img/icons/service_pension_hover.svg" draggable="false" class="hover-show" alt="image">
+									</span>
+									<span class="text">Пенсійне забезпечення</span>
+								</div>
+							</div>
+						</a>
+					</li>
+					<li>
+						<a href="services-detail.html" class="detail-link" aria-label="Read more about this case">
+							<div class="verticaly-middle">
+								<div class="inner">
+									<i class="icon icon-right_up service-icon"></i>
+									<span class="icon-cover">
+										<img src="img/icons/service_credit.svg" draggable="false" class="hover-hide" alt="image">
+										<img src="img/icons/service_credit_hover.svg" draggable="false" class="hover-show" alt="image">
+									</span>
+									<span class="text">Кредитні спори</span>
+								</div>
+							</div>
+						</a>
+					</li>
+					<li>
+						<div class="verticaly-middle align-center">
+							<div class="inner">
+								<a href="services.html" aria-label="View all" class="button button-transparent-round button-arrow full-sm">
+									<span class="text">всі послуги</span>
+									<span class="button-icon">
+										<i class="icon icon-right"></i>
+									</span>
+								</a>
+							</div>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</section>
+		<!-- / company services -->
+
+		<!-- company cases slider-->
+		<section class="section-spaced section" id="companyCases">
+			<div class="container">
+				<!-- title with link -->
+				<div class="title-with-link">
+					<h2 class="section-title-large">Кейси</h2>
+					<div class="link-cover">
+						<a href="cases.html" class="button button-link button-primary-light-transparent with-arrow" aria-label="View all">
+							<span class="text">дивитися всі </span>
+							<span class="button-icon">
+								<i class="icon icon-right"></i>
+							</span>
+						</a>
+					</div>
+				</div>
+				<!-- / title with link -->
+				<!-- slider -->
+				<div class="slider">
+					<!-- slider elements -->
+					<!-- unique id important -->
+					<div class="slider-cover glider" id="casesGlider">
+						<!-- slide 1 -->
+						<div class="slider-item">
+							<!-- article preview -->
+							<a href="cases-detail.html" class="article-preview" aria-label="Read more about case">
+								<figure class="article-image">
+									<img src="img/temp/el1.jpg" draggable="false" alt="image">
+								</figure>
+								<div class="caption">
+									<div class="subtitle">Військове право</div>
+									<h2 class="article-title large-title">Захист прав у військовій справі: скасування штрафу за порушення обов'язку.</h2>
+									<div class="description">
+										Успішне оскарження постанови ТЦК, що призвело до скасування штрафу на суму 17 тис. грн
+									</div>
+								</div>
+							</a>
+							<!-- / article preview -->
+						</div>
+						<!-- slide 2 -->
+						<div class="slider-item">
+							<!-- article preview -->
+							<a href="cases-detail.html" class="article-preview" aria-label="Read more about case">
+								<figure class="article-image">
+									<img src="img/temp/el2.jpg" draggable="false" alt="image">
+								</figure>
+								<div class="caption">
+									<div class="subtitle">Військове право</div>
+									<h2 class="article-title large-title">Відновлення паспорта для особи без документів.</h2>
+									<div class="description">
+										Доведення факту проживання клієнтки в Україні, що дозволило відновити її паспорт громадянина України.
+									</div>
+								</div>
+							</a>
+							<!-- / article preview -->
+						</div>
+						<!-- slide 3 -->
+						<div class="slider-item">
+							<!-- article preview -->
+							<a href="cases-detail.html" class="article-preview" aria-label="Read more about case">
+								<figure class="article-image">
+									<img src="img/temp/el3.jpg" draggable="false" alt="image">
+								</figure>
+								<div class="caption">
+									<div class="subtitle">Сімейне право</div>
+									<h2 class="article-title large-title">Визнання батьківства та повернення дітей через суд.</h2>
+									<div class="description">
+										Допомога в судовому порядку визнання батьківства та повернення дітей, яких незаконно забрала служба у справах дітей після смерті матері.
+									</div>
+								</div>
+							</a>
+							<!-- / article preview -->
+						</div>
+						<!-- slide 4 -->
+						<div class="slider-item">
+							<!-- article preview -->
+							<a href="cases-detail.html" class="article-preview" aria-label="Read more about case">
+								<figure class="article-image">
+									<img src="img/temp/el4.jpg" draggable="false" alt="image">
+								</figure>
+								<div class="caption">
+									<div class="subtitle">Військове право</div>
+									<h2 class="article-title large-title">Визнання опікунства в судовому порядку і звільнення з військ служби.</h2>
+									<div class="description">
+										Допомога у визнанні брата клієнта недієздатним і отримання статусу опікуна, що дозволило звільнити клієнта з військової служби.
+									</div>
+								</div>
+							</a>
+							<!-- / article preview -->
+						</div>
+						<!-- slide 5 -->
+						<div class="slider-item">
+							<!-- article preview -->
+							<a href="cases-detail.html" class="article-preview" aria-label="Read more about case">
+								<figure class="article-image">
+									<img src="img/temp/el2.jpg" draggable="false" alt="image">
+								</figure>
+								<div class="caption">
+									<div class="subtitle">Військове право</div>
+									<h2 class="article-title large-title">Відновлення паспорта для особи без документів.</h2>
+									<div class="description">
+										Доведення факту проживання клієнтки в Україні, що дозволило відновити її паспорт громадянина України.
+									</div>
+								</div>
+							</a>
+							<!-- / article preview -->
+						</div>
+						<!-- slide 6 -->
+						<div class="slider-item">
+							<!-- article preview -->
+							<a href="cases-detail.html" class="article-preview" aria-label="Read more about case">
+								<figure class="article-image">
+									<img src="img/temp/el3.jpg" draggable="false" alt="image">
+								</figure>
+								<div class="caption">
+									<div class="subtitle">Сімейне право</div>
+									<h2 class="article-title large-title">Визнання батьківства та повернення дітей через суд.</h2>
+									<div class="description">
+										Допомога в судовому порядку визнання батьківства та повернення дітей, яких незаконно забрала служба у справах дітей після смерті матері.
+									</div>
+								</div>
+							</a>
+							<!-- / article preview -->
+						</div>
+					</div>
+					<!-- / slider elements -->
+					<!-- slider navigation-->
+					<div class="slider-navigation">
+						<div class="fade"></div>
+						<button class="glider-prev button button-primary-coffee button-round navigation-left" type="button">
+							<span class="button-icon"><i class="icon icon-left"></i></span>
+						</button>
+						<button class="glider-next button button-primary-coffee button-round navigation-right" type="button">
+							<span class="button-icon"><i class="icon icon-right"></i></span>
+						</button>
+						<!-- slide counter -->
+						<div class="slider-counter">
+							<span class="current">0</span>/<span class="total">0</span>
+						</div>
+					</div>
+					<!-- /slider navigation-->
+				</div>
+				<!-- / slider -->
+			</div>
+		</section>
+		<!-- / company cases slider-->
+
+
+		<!-- stages -->
+		<section class="section-spaced section" id="companyStages">
+			<div class="container">
+				<div class="point-subtitle subtitle">Етапи роботи</div>
+				<h2 class="section-title">
+					Ми цінуємо довіру наших клієнтів, тому забезпечуємо прозорість та комфорт на кожному етапі співпраці. Ось як виглядає процес роботи з нами:
+				</h2>
+				<ul class="clear progress-list bordered-list">
+					<li>
+						<div class="progress-inner">
+							<div class="stage">
+								<h4 class="title">Звернення клієнта</h4>
+								<div class="paragraph">Перший крок до вирішення вашої проблеми — це звернення до нашої компанії. Ми уважно вислухаємо вашу ситуацію та запропонуємо найкращі варіанти подальших дій.</div>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="progress-inner">
+							<div class="stage">
+								<h4 class="title">Безкоштовна консультація</h4>
+								<div class="paragraph">На початковому етапі ми надаємо безкоштовну консультацію, щоб краще зрозуміти вашу проблему та відповісти на всі ваші запитання. Це допоможе вам оцінити наш підхід і прийняти рішення про подальшу співпрацю.</div>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="progress-inner">
+							<div class="stage">
+								<h4 class="title">Складання стратегії</h4>
+								<div class="paragraph">Разом із вами ми розробляємо індивідуальну стратегію, яка враховує всі особливості вашої ситуації. Наші юристи детально пояснять кожен етап майбутньої роботи, щоб ви були впевнені в наших діях.</div>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="progress-inner">
+							<div class="stage">
+								<h4 class="title">Вирішення справи</h4>
+								<div class="paragraph">На цьому етапі наша команда працює над досягненням результату. Ми дотримуємося обраної стратегії, інформуємо вас про хід справи та робимо все можливе, щоб забезпечити позитивний результат.</div>
+							</div>
+						</div>
+					</li>
+				</ul>
+				<!-- title with link -->
+				<div class="bordered-link-title">
+					<div class="title-cover">
+						<h2 class="article-subtitle title">У компанії "Олімп" кожен клієнт отримує індивідуальний підхід, високий рівень професіоналізму та підтримку на кожному етапі співпраці.</h2>
+					</div>
+					<div class="link-cover">
+						<button type="button" class="button button-primary button-arrow full-sm" data-popup-call="#questionPopup">
+							<span class="text">Обговорити задачу</span>
+							<span class="button-icon">
+								<i class="icon icon-right"></i>
+							</span>
+						</button>
+					</div>
+				</div>
+				<!-- / title with link -->
+			</div>
+		</section>
+		<!-- / stages -->
+
+		<!-- contact form -->
+		@@include('./includes/contact-section.html')
+		<!-- / contact form -->
+
+
+		<!-- map -->
+		<div class="map-container">
+		<!-- data attributes changable in html -->
+		<div id="map" class="map"
+			data-position="50.450001, 30.523333"
+			data-zoom="16"
+			data-title="Kyiv, Ukraine"
+		></div>
+		<!-- / map -->
+	</main>
+
+
+	<!-- popups -->
+	<!-- 1 -->
+	@@include('./includes/popup-consult.html')
+	<!-- 2 -->
+	@@include('./includes/popup-question.html')
+	<!-- / popups -->
+
+	<!-- footer -->
+	@@include('./includes/footer-main.html')
+
+	<!-- map -->
+	<!-- heeds api key and map id -->
+<!-- 	<script>
+		var script = document.createElement('script');
+		script.src = "https://maps.googleapis.com/maps/api/js?key="+apiKey+"&callback=initMap&v=weekly";
+		document.getElementsByTagName('script')[0].parentNode.appendChild(script);
+	</script> -->
+	<!-- map -->
+	<script src="js/plugins/glider.js"></script>
+	<script src="js/main.js"></script>
+</body>
+</html>

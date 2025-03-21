@@ -1,0 +1,79 @@
+<section class="contact-section section spaced-large-bottom" id="contactForm">
+	<div class="container">
+		<div class="section section-dark mask-dark spaced-inner">
+			<div class="title-side">
+				<h4 class="point-subtitle subtitle">Виникли питання?</h4>
+			</div>
+			<div class="contact-inner">
+				<div class="form-contact">
+					<div class="side">
+						<h2 class="section-title">Ми готові допомогти вам у будь-яких питаннях.</h2>
+						<div class="paragraph">Заповніть форму нижче, і наші фахівці зв'яжуться з вами для надання необхідної інформації або консультації.</div>
+						<!-- only for desktop -->
+						<div class="hidden-sm">
+							<ul class="clear checked-list bordered-top cell-2">
+								<li>Ефективність</li>
+								<li>Широкий спектр послуг</li>
+								<li>Надійність</li>
+								<li>Безкоштовна консультація</li>
+							</ul>
+						</div>
+						<!-- / only for desktop -->
+					</div>
+					<div class="side">
+						<!-- class .validate-form for validation -->
+						<form action="javascript:void(0)" class="form contact-form validate-form">
+							<div class="form-group labeled-group">
+								<div class="alert">Мінімум 2 символа</div>
+								<input type="text" class="input" id="name" name="name" data-minlength="2">
+								<label for="name"><span class="text">Ваше ім’я:</span></label>
+							</div>
+							<div class="form-group labeled-group">
+								<div class="alert">Не коректний емейл</div>
+								<input type="mail" class="input email" id="email" name="email">
+								<label for="email"><span class="text">Електронна пошта:</span></label>
+							</div>
+							<!-- no label no class .labeled-group -->
+							<div class="form-group">
+								<div class="alert">Не коректний телефон</div>
+								<input type="tel" class="input phone" id="phone" name="phone" placeholder="+380 (___) ___ __ __">
+								<!-- no label here -->
+							</div>
+							<div class="form-group labeled-group">
+								<div class="alert">Тема не обрана</div>
+								<select name="theme" id="theme" class="select">
+									<option value="Тема вашого запиту:" disabled selected>Тема вашого запиту:</option>
+									<option value="Сімейне право">Сімейне право</option>
+									<option value="Військове право">Військове право</option>
+									<option value="Спадкове право">Спадкове право</option>
+									<option value="Кредитні спори">Кредитні спори</option>
+								</select>
+							</div>
+							<div class="form-group labeled-group textarea-group">
+								<div class="alert">Мінімум 10 символів</div>
+								<textarea name="message" id="message" class="textarea" data-minlength="10"></textarea>
+								<label for="message"><span class="text">Опис вашого запиту</span></label>
+							</div>
+							<button type="submit" class="button button-light button-arrow button-block full-sm">
+								<span class="text">Залишити заявку</span>
+								<span class="button-icon">
+									<i class="icon icon-right"></i>
+								</span>
+							</button>
+						</form>
+						<!-- only for mobile -->
+						<div class="visible-sm">
+							<ul class="clear checked-list bordered-top cell-2">
+								<li>Ефективність</li>
+								<li>Широкий спектр послуг</li>
+								<li>Надійність</li>
+								<li>Безкоштовна консультація</li>
+							</ul>
+						</div>
+						<!-- / only for mobile -->
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>

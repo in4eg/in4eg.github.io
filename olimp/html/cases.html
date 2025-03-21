@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+	<meta charset="UTF-8">
+	<title>Olimp :: Cases Page</title>
+
+	<link rel="icon" type="image/png" href="/favicon/favicon-96x96.png" sizes="96x96">
+	<link rel="icon" type="image/svg+xml" href="/favicon/favicon.svg">
+	<link rel="shortcut icon" href="/favicon/favicon.ico">
+	<link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
+	<meta name="apple-mobile-web-app-title" content="Olimp">
+	<link rel="manifest" href="/favicon/site.webmanifest">
+
+	<meta name="msapplication-TileColor" content="#252324">
+	<meta name="theme-color" content="#252324">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+	<meta name="format-detection" content="telephone=no">
+	<meta name="description" content="description">
+
+	<link rel="stylesheet" href="css/bundle.min.css">
+
+</head>
+<body id="innerBody">
+	<!-- header -->
+	@@include('./includes/header-inner.html')
+	<!-- / header -->
+
+	<!-- class inner-page -->
+	<main class="page-main inner-page" id="pageMain">
+		<!-- breadcrumbs -->
+		<div class="breadcrumbs">
+			<div class="container">
+				<ul class="breadcrumbs-list clear">
+					<li><a href="index.html" class="text" aria-label="main page">Головна</a></li>
+					<li><span class="text">Кейси</span></li>
+				</ul>
+			</div>
+		</div>
+		<!-- / breadcrumbs -->
+
+		<!-- header -->
+		<section class="section inner-section">
+			<div class="container">
+				<h1 class="section-title-large">Наші кейси</h1>
+				<!-- filters -->
+					<div class="row bottom-sm">
+						<div class="col-xs-12 col-md-6">
+							<div class="dropdown" data-dropdown>
+								<div class="dropdown-header"><div class="item">Всі кейси</div></div>
+								<div class="dropdown-inner">
+									<a class="item" href="cases-category.html" aria-label="category">Послуги з сімейного права</a>
+									<a class="item" href="cases-category.html" aria-label="category">Захист цивільно-правових відносин</a>
+									<a class="item" href="cases-category.html" aria-label="category">Військове право</a>
+									<a class="item" href="cases-category.html" aria-label="category">Земельне право</a>
+									<a class="item" href="cases-category.html" aria-label="category">Пенсійне забезпечення</a>
+									<a class="item" href="cases-category.html" aria-label="category">Кримінальне право</a>
+									<a class="item" href="cases-category.html" aria-label="category">Адміністративне правопорушення та ДТП</a>
+									<a class="item" href="cases-category.html" aria-label="category">Житлові спори</a>
+									<a class="item" href="cases-category.html" aria-label="category">Спадкове право</a>
+									<a class="item" href="cases-category.html" aria-label="category">Кредитні спори</a>
+									<a class="item" href="cases-category.html" aria-label="category">Зняття та скасування арешту</a>
+									<a class="item" href="cases-category.html" aria-label="category">Трудові спори</a>
+									<a class="item" href="cases-category.html" aria-label="category">Захист прав споживачів</a>
+								</div>
+							</div>
+						</div>
+						<div class="col-xs-12 col-md-6">
+							<form action="javascript:void(0)" class="form filters-form" id="searchCaseForm">
+								<div class="labeled-group">
+									<input type="text" class="input" id="filterInput" data-filter=".case-preview" data-filter-fields="[data-description], [data-subtitle], [data-title]">
+									<label for="filterInput"><span class="text">Пошук кейса</span></label>
+								</div>
+								<button class="button-round button" type="submit">
+									<i class="icon icon-search"></i>
+								</button>
+							</form>
+						</div>
+					</div>
+				<!-- /filters -->
+			</div>
+		</section>
+		<!-- header -->
+
+		<!-- cases -->
+		<div class="container">
+			<!-- 12 cases per page -->
+			<ul class="clear cases-list" data-mobile-visible="4">
+				<!-- 1 -->
+				<li>
+					<!-- article preview -->
+					<a href="cases-detail.html" class="article-preview case-preview" aria-label="Read more about case">
+						<figure class="article-image">
+							<img src="img/temp/el1.jpg" draggable="false" alt="image">
+						</figure>
+						<div class="caption">
+							<div class="subtitle" data-subtitle>Військове право</div>
+							<h2 class="article-title large-title" data-title>Захист прав у військовій справі: скасування штрафу за порушення обов'язку.</h2>
+							<div class="description" data-description>
+								Успішне оскарження постанови ТЦК, що призвело до скасування штрафу на суму 17 тис. грн
+							</div>
+						</div>
+					</a>
+					<!-- / article preview -->
+				</li>
+				<!-- 2 -->
+				<li>
+					<!-- article preview -->
+					<a href="cases-detail.html" class="article-preview case-preview" aria-label="Read more about case">
+						<figure class="article-image">
+							<img src="img/temp/el2.jpg" draggable="false" alt="image">
+						</figure>
+						<div class="caption">
+							<div class="subtitle" data-subtitle>Військове спори</div>
+							<h2 class="article-title large-title" data-title>Відновлення паспорта для особи без документів.</h2>
+							<div class="description" data-description>
+								Доведення факту проживання клієнтки в Україні, що дозволило відновити її паспорт громадянина України.
+							</div>
+						</div>
+					</a>
+					<!-- / article preview -->
+				</li>
+				<!-- 3 -->
+				<li>
+					<!-- article preview -->
+						<a href="cases-detail.html" class="article-preview case-preview" aria-label="Read more about case">
+							<figure class="article-image">
+								<img src="img/temp/el3.jpg" draggable="false" alt="image">
+							</figure>
+							<div class="caption">
+								<div class="subtitle" data-subtitle>Військове право</div>
+								<h2 class="article-title large-title" data-title>Визнання батьківства та повернення дітей через суд.</h2>
+								<div class="description" data-description>
+									Допомога в судовому порядку визнання батьківства та повернення дітей, яких незаконно забрала служба у справах дітей після смерті матері.
+								</div>
+							</div>
+						</a>
+						<!-- / article preview -->
+				</li>
+				<!-- 4 -->
+				<li>
+					<!-- article preview -->
+					<a href="cases-detail.html" class="article-preview case-preview" aria-label="Read more about case">
+						<figure class="article-image">
+							<img src="img/temp/el4.jpg" draggable="false" alt="image">
+						</figure>
+						<div class="caption">
+							<div class="subtitle" data-subtitle>Військове право</div>
+							<h2 class="article-title large-title" data-title>Визнання опікунства в судовому порядку і звільнення з військ служби.</h2>
+							<div class="description" data-description>
+								Допомога у визнанні брата клієнта недієздатним і отримання статусу опікуна, що дозволило звільнити клієнта з військової служби.
+							</div>
+						</div>
+					</a>
+					<!-- / article preview -->
+				</li>
+				<!-- 5 -->
+				<li>
+					<!-- article preview -->
+					<a href="cases-detail.html" class="article-preview case-preview" aria-label="Read more about case">
+						<figure class="article-image">
+							<img src="img/temp/el4.jpg" draggable="false" alt="image">
+						</figure>
+						<div class="caption">
+							<div class="subtitle" data-subtitle>Військове право</div>
+							<h2 class="article-title large-title" data-title>Визнання опікунства в судовому порядку і звільнення з військ служби.</h2>
+							<div class="description" data-description>
+								Допомога у визнанні брата клієнта недієздатним і отримання статусу опікуна, що дозволило звільнити клієнта з військової служби.
+							</div>
+						</div>
+					</a>
+					<!-- / article preview -->
+				</li>
+				<!-- 6 -->
+				<li>
+					<!-- article preview -->
+					<a href="cases-detail.html" class="article-preview case-preview" aria-label="Read more about case">
+						<figure class="article-image">
+							<img src="img/temp/el3.jpg" draggable="false" alt="image">
+						</figure>
+						<div class="caption">
+							<div class="subtitle" data-subtitle>Сімейне право</div>
+							<h2 class="article-title large-title" data-title>Визнання батьківства та повернення дітей через суд.</h2>
+							<div class="description" data-description>
+								Допомога в судовому порядку визнання батьківства та повернення дітей, яких незаконно забрала служба у справах дітей після смерті матері.
+							</div>
+						</div>
+					</a>
+					<!-- / article preview -->
+				</li>
+				<!-- 7 -->
+				<li>
+					<!-- article preview -->
+					<a href="cases-detail.html" class="article-preview case-preview" aria-label="Read more about case">
+						<figure class="article-image">
+							<img src="img/temp/el2.jpg" draggable="false" alt="image">
+						</figure>
+						<div class="caption">
+							<div class="subtitle" data-subtitle>Військове право</div>
+							<h2 class="article-title large-title" data-title>Відновлення паспорта для особи без документів.</h2>
+							<div class="description" data-description>
+								Доведення факту проживання клієнтки в Україні, що дозволило відновити її паспорт громадянина України.
+							</div>
+						</div>
+					</a>
+					<!-- / article preview -->
+				</li>
+				<!-- 8 -->
+				<li>
+					<!-- article preview -->
+					<a href="cases-detail.html" class="article-preview case-preview" aria-label="Read more about case">
+						<figure class="article-image">
+							<img src="img/temp/el1.jpg" draggable="false" alt="image">
+						</figure>
+						<div class="caption">
+							<div class="subtitle" data-subtitle>Військове право</div>
+							<h2 class="article-title large-title" data-title>Захист прав у військовій справі: скасування штрафу за порушення обов'язку.</h2>
+							<div class="description" data-description>
+								Успішне оскарження постанови ТЦК, що призвело до скасування штрафу на суму 17 тис. грн
+							</div>
+						</div>
+					</a>
+					<!-- / article preview -->
+				</li>
+				<!-- 9 -->
+				<li>
+					<!-- article preview -->
+					<a href="cases-detail.html" class="article-preview case-preview" aria-label="Read more about case">
+						<figure class="article-image">
+							<img src="img/temp/el1.jpg" draggable="false" alt="image">
+						</figure>
+						<div class="caption">
+							<div class="subtitle" data-subtitle>Кримінальне право</div>
+							<h2 class="article-title large-title" data-title>Захист прав у військовій справі: скасування штрафу за порушення обов'язку.</h2>
+							<div class="description" data-description>
+								Успішне оскарження постанови ТЦК, що призвело до скасування штрафу на суму 17 тис. грн
+							</div>
+						</div>
+					</a>
+					<!-- / article preview -->
+				</li>
+				<!-- 10 -->
+				<li>
+					<!-- article preview -->
+					<a href="cases-detail.html" class="article-preview case-preview" aria-label="Read more about case">
+						<figure class="article-image">
+							<img src="img/temp/el2.jpg" draggable="false" alt="image">
+						</figure>
+						<div class="caption">
+							<div class="subtitle" data-subtitle>Житлові спори</div>
+							<h2 class="article-title large-title" data-title>Відновлення паспорта для особи без документів.</h2>
+							<div class="description" data-description>
+								Доведення факту проживання клієнтки в Україні, що дозволило відновити її паспорт громадянина України.
+							</div>
+						</div>
+					</a>
+					<!-- / article preview -->
+				</li>
+				<!-- 11 -->
+				<li>
+					<!-- article preview -->
+						<a href="cases-detail.html" class="article-preview case-preview" aria-label="Read more about case">
+							<figure class="article-image">
+								<img src="img/temp/el3.jpg" draggable="false" alt="image">
+							</figure>
+							<div class="caption">
+								<div class="subtitle" data-subtitle>Земельне право</div>
+								<h2 class="article-title large-title" data-title>Визнання батьківства та повернення дітей через суд.</h2>
+								<div class="description" data-description>
+									Допомога в судовому порядку визнання батьківства та повернення дітей, яких незаконно забрала служба у справах дітей після смерті матері.
+								</div>
+							</div>
+						</a>
+						<!-- / article preview -->
+				</li>
+			</ul>
+
+			<!-- only for mobile show more button-->
+			<div class="spaced-top-cover visible-sm" id="showMore">
+				<button class="button button-primary-transparent button-block" aria-label="show more" data-show-more="[data-mobile-visible]">
+					<span class="text">Показати ще <span class="count">0</span></span>
+					<span class="button-icon">
+						<i class="icon icon-bottom"></i>
+					</span>
+				</button>
+			</div>
+			<!-- / only for mobile show more button-->
+
+			<!-- alert message if list is empty -->
+			<div id="searchEmptyMessage" class="hidden search-alert">
+				<div class="section-title-small">Кейсів за таким запитом не знайдено</div>
+				<div class="theme-text">Спробуйте змінити пошуковий запит</div>
+			</div>
+			<!-- alert message if list is empty -->
+		</div>
+		<!-- / cases -->
+		<!-- pagination -->
+		<!-- 12 cases per page -->
+		<div class="pagination" id="filterPagination">
+			<a href="#" class="item"><i class="icon icon-caret_left"></i></a>
+			<a href="#" class="item active">1</a>
+			<a href="#" class="item">2</a>
+			<a href="#" class="item">3</a>
+			<a href="#" class="item">4</a>
+			<span class="empty item">...</span>
+			<a href="#" class="item">12</a>
+			<a href="#" class="item"><i class="icon icon-caret_right"></i></a>
+		</div>
+		<!-- / pagination -->
+
+		<!-- contact form -->
+		@@include('./includes/contact-section.html')
+		<!-- / contact form -->
+
+
+		<!-- map -->
+		<div class="map-container">
+		<!-- data attributes changable in html -->
+		<div id="map" class="map"
+			data-position="50.450001, 30.523333"
+			data-zoom="16"
+			data-title="Kyiv, Ukraine"
+		></div>
+		<!-- / map -->
+	</main>
+
+	<!-- popups -->
+	<!-- 1 -->
+	@@include('./includes/popup-consult.html')
+	<!-- 2 -->
+	@@include('./includes/popup-question.html')
+	<!-- / popups -->
+
+	<!-- footer -->
+	@@include('./includes/footer-main.html')
+	<!-- /	footer -->
+
+
+	<script>
+		window.searchCaseCallback = function(){
+			console.log('show case search result')
+			document.getElementById('searchCaseForm').classList.add('success');
+		};
+	</script>
+	<!-- map -->
+	<!-- heeds api key and map id -->
+<!-- 	<script>
+		var script = document.createElement('script');
+		script.src = "https://maps.googleapis.com/maps/api/js?key="+apiKey+"&callback=initMap&v=weekly";
+		document.getElementsByTagName('script')[0].parentNode.appendChild(script);
+	</script> -->
+	<!-- map -->
+	<script src="js/main.js"></script>
+</body>
+</html>

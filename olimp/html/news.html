@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+	<meta charset="UTF-8">
+	<title>Olimp :: News Page</title>
+
+	<link rel="icon" type="image/png" href="/favicon/favicon-96x96.png" sizes="96x96">
+	<link rel="icon" type="image/svg+xml" href="/favicon/favicon.svg">
+	<link rel="shortcut icon" href="/favicon/favicon.ico">
+	<link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
+	<meta name="apple-mobile-web-app-title" content="Olimp">
+	<link rel="manifest" href="/favicon/site.webmanifest">
+
+	<meta name="msapplication-TileColor" content="#252324">
+	<meta name="theme-color" content="#252324">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+	<meta name="format-detection" content="telephone=no">
+	<meta name="description" content="description">
+
+	<link rel="stylesheet" href="css/bundle.min.css">
+
+</head>
+<body id="innerBody">
+	<!-- header -->
+	@@include('./includes/header-inner.html')
+	<!-- / header -->
+	<!-- class inner-page -->
+	<main class="page-main inner-page" id="pageMain">
+		<!-- breadcrumbs -->
+		<div class="breadcrumbs">
+			<div class="container">
+				<ul class="breadcrumbs-list clear">
+					<li><a href="index.html" class="text" aria-label="main page">Головна</a></li>
+					<li><span class="text">Новини</span></li>
+				</ul>
+			</div>
+		</div>
+		<!-- / breadcrumbs -->
+
+		<section class="inner-section section" id="companyAbout">
+			<div class="container">
+				<h1 class="section-title-large">Новини</h1>
+			</div>
+		</section>
+
+		<!-- contact form -->
+		@@include('./includes/contact-section.html')
+		<!-- / contact form -->
+
+		<!-- map -->
+		<div class="map-container">
+		<!-- data attributes changable in html -->
+		<div id="map" class="map"
+			data-position="50.450001, 30.523333"
+			data-zoom="16"
+			data-title="Kyiv, Ukraine"
+		></div>
+		<!-- / map -->
+	</main>
+
+	<!-- popups -->
+	<!-- 1 -->
+	@@include('./includes/popup-consult.html')
+	<!-- 2 -->
+	@@include('./includes/popup-question.html')
+	<!-- / popups -->
+
+	<!-- footer -->
+	@@include('./includes/footer-main.html')
+	<!-- / footer -->
+
+	<!-- map -->
+	<!-- heeds api key and map id -->
+<!-- 	<script>
+		var script = document.createElement('script');
+		script.src = "https://maps.googleapis.com/maps/api/js?key="+apiKey+"&callback=initMap&v=weekly";
+		document.getElementsByTagName('script')[0].parentNode.appendChild(script);
+	</script> -->
+	<!-- map -->
+
+	<script src="js/main.js"></script>
+</body>
+</html>

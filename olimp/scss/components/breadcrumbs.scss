@@ -1,0 +1,59 @@
+@import '../variables.scss';
+
+.breadcrumbs {
+	margin-bottom: 24px;
+}
+
+.breadcrumbs-list {
+	$gap: 32px;
+
+	display: flex;
+	flex-wrap: wrap;
+
+
+	li {
+		font-size: 14px;
+		position: relative;
+		line-height: 1;
+		margin-right: $gap;
+
+		&:after {
+			position: absolute;
+			content: '';
+			background-color: $color-primary-coffee;
+			width: 1px; height: 100%;
+			right: calc($gap/2*-1); top: 0;
+		}
+
+		&:last-child {
+			margin-right: 0;
+
+			&:after { display: none; }
+		}
+	}
+
+	.text {
+		color: $color-middle-brown;
+		line-height: 1;
+		display: inline-block;
+	}
+
+	span.text {
+		color: $color-primary;
+		cursor: default;
+	}
+
+	a.text:hover {
+		color: $color-primary;
+	}
+}
+
+@media (max-width: 768px) {
+
+
+}
+
+@media (max-width: 420px) {
+
+
+}

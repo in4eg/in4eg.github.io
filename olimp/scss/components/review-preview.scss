@@ -1,0 +1,80 @@
+@import '../variables.scss';
+
+.review-preview {
+	display: block;
+
+	.blockquote {
+		margin-bottom: 24px;
+	}
+
+	.user {
+		white-space: nowrap;
+
+		.photo {
+			height: 40px; width: 40px;
+			overflow: hidden;
+			border-radius: 50%;
+			position: relative;
+			display: inline-block;
+			vertical-align: middle;
+			margin-right: 16px;
+
+			img {
+				position: absolute;
+				top: 0; left: 0;
+				width: 100%; height: 100%;
+				box-sizing: border-box;
+				object-fit: cover;
+				object-position: center;
+				transition: .2s;
+				transform: translateZ(0);
+			}
+		}
+
+		.name {
+			font-size: var(--font-size-large);
+			color: $color-primary;
+			font-weight: 700;
+			display: inline-block;
+			vertical-align: middle;
+		}
+	}
+
+	[data-video-src] {
+		cursor: scale;
+	}
+
+	.video-cover {
+		position: relative;
+		padding-top: 112.4%;
+
+		img:not(.play-icon) {
+			position: absolute;
+			top: 0; left: 0;
+			width: 100%; height: 100%;
+			box-sizing: border-box;
+			object-fit: cover;
+			object-position: center;
+			transition: .2s;
+			transform: translateZ(0);
+		}
+
+		.play-icon {
+			position: absolute;
+			top: 0; left: 0;
+			bottom: 0; right: 0;
+			margin: auto;
+			z-index: 1;
+			height: 48px; width: 48px;
+			transition: .2s;
+			transform: translateZ(0);
+			-webkit-backface-visibility: hidden;
+		}
+
+		&:hover .play-icon {
+			height: 55px; width: 55px;
+			transform: translateZ(0);
+		}
+	}
+}
+

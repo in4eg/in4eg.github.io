@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+	<meta charset="UTF-8">
+	<title>Olimp :: Contacts Page</title>
+
+	<link rel="icon" type="image/png" href="/favicon/favicon-96x96.png" sizes="96x96">
+	<link rel="icon" type="image/svg+xml" href="/favicon/favicon.svg">
+	<link rel="shortcut icon" href="/favicon/favicon.ico">
+	<link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
+	<meta name="apple-mobile-web-app-title" content="Olimp">
+	<link rel="manifest" href="/favicon/site.webmanifest">
+
+	<meta name="msapplication-TileColor" content="#252324">
+	<meta name="theme-color" content="#252324">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+	<meta name="format-detection" content="telephone=no">
+	<meta name="description" content="description">
+
+	<link rel="stylesheet" href="css/bundle.min.css">
+
+</head>
+<body id="innerBody">
+	<!-- header -->
+	@@include('./includes/header-inner.html')
+	<!-- / header -->
+	<!-- class inner-page -->
+	<main class="page-main inner-page" id="pageMain">
+		<!-- breadcrumbs -->
+		<div class="breadcrumbs">
+			<div class="container">
+				<ul class="breadcrumbs-list clear">
+					<li><a href="index.html" class="text" aria-label="main page">Головна</a></li>
+					<li><span class="text">Контакти</span></li>
+				</ul>
+			</div>
+		</div>
+		<!-- / breadcrumbs -->
+
+		<section class="inner-section section" id="companyAbout">
+			<div class="container">
+				<h1 class="section-title-large">Контакти</h1>
+				<div class="contact-line">
+					<div class="row middle-xs">
+						<div class="col-xs-12 col-lg-6">
+							<div class="paragraph bold paragraph-larger">
+								Київ, Украина, 02000 <br>
+								БЦ "Парус", вул. Казимира Малевича 2, поверх 10
+							</div>
+						</div>
+						<div class="col-xs-12 col-lg-6 social-cell">
+							<a href="#map" data-scrollto="#map" class="location-link">
+								<i class="icon icon-location"></i>
+								<span class="text">Як дістатися?</span>
+							</a>
+							<ul class="social-list-small clear">
+								<li><a href="#" target="_blank" aria-label="social link"><i class="icon icon-instagram"></i></a></li>
+								<li><a href="#" target="_blank" aria-label="social link"><i class="icon icon-facebook"></i></a></li>
+								<li><a href="#" target="_blank" aria-label="social link"><i class="icon icon-telegram-full"></i></a></li>
+								<li><a href="#" target="_blank" aria-label="social link"><i class="icon icon-youtube"></i></a></li>
+								<li><a href="#" target="_blank" aria-label="social link"><i class="icon icon-linkedin"></i></a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="divider centered"></div>
+				<ul class="contact-list clear icons-list">
+					<li>
+						<div class="icon-cover"><i class="icon icon-phone"></i></div>
+						<div class="title">Номера телефонів:</div>
+						<div class="text">
+							<a href="tel:+3800500000000" class="link block-link">+380 (050) 000 00 00</a>
+							<a href="tel:+3800502222222" class="link block-link">+380 (050) 222 22 22</a>
+						</div>
+					</li>
+					<li>
+						<div class="icon-cover"><i class="icon icon-mail"></i></div>
+						<div class="title">E-mail:</div>
+						<div class="text">
+							<a href="mailto:olimp@olimp.com" class="link block-link">olimp@olimp.com</a>
+							<a href="mailto:info@olimp.com" class="link block-link">info@olimp.com</a>
+						</div>
+					</li>
+					<li>
+						<div class="icon-cover"><i class="icon icon-timer"></i></div>
+						<div class="title">Ми працюємо:</div>
+						<div class="text">
+							Понеділок - Пʼятниця <br>
+							09:30 - 19:00
+						</div>
+					</li>
+				</ul>
+				<!-- only for mobile -->
+				<div class="visible-sm mobile-social">
+					<ul class="social-list-small clear">
+						<li><a href="#" target="_blank" aria-label="social link"><i class="icon icon-instagram"></i></a></li>
+						<li><a href="#" target="_blank" aria-label="social link"><i class="icon icon-facebook"></i></a></li>
+						<li><a href="#" target="_blank" aria-label="social link"><i class="icon icon-telegram-full"></i></a></li>
+						<li><a href="#" target="_blank" aria-label="social link"><i class="icon icon-youtube"></i></a></li>
+						<li><a href="#" target="_blank" aria-label="social link"><i class="icon icon-linkedin"></i></a></li>
+					</ul>
+				</div>
+				<!-- / only for mobile -->
+			</div>
+		</section>
+
+		<!-- contact form -->
+		@@include('./includes/contact-section-large.html')
+		<!-- / contact form -->
+
+		<!-- map -->
+		<div class="map-container">
+		<!-- data attributes changable in html -->
+		<div id="map" class="map"
+			data-position="50.450001, 30.523333"
+			data-zoom="16"
+			data-title="Kyiv, Ukraine"
+		></div>
+		<!-- / map -->
+	</main>
+
+
+	<!-- popups -->
+	<!-- 1 -->
+	@@include('./includes/popup-consult.html')
+	<!-- 2 -->
+	@@include('./includes/popup-question.html')
+	<!-- / popups -->
+
+	<!-- footer -->
+	@@include('./includes/footer-main.html')
+	<!-- / footer -->
+
+	<!-- map -->
+	<!-- heeds api key and map id -->
+<!-- 	<script>
+		var script = document.createElement('script');
+		script.src = "https://maps.googleapis.com/maps/api/js?key="+apiKey+"&callback=initMap&v=weekly";
+		document.getElementsByTagName('script')[0].parentNode.appendChild(script);
+	</script> -->
+	<!-- map -->
+
+
+	<script>
+		window.onContactFormSubmit = function(event){
+			console.log('callback on form submit', event)
+		};
+	</script>
+
+	<script src="js/main.js"></script>
+</body>
+</html>

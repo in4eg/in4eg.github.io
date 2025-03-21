@@ -1,0 +1,46 @@
+@import '../variables.scss';
+
+.member-preview {
+
+	.photo-image {
+		padding-top: 110.46%;
+		overflow: hidden;
+		position: relative;
+		transform: translateZ(0);
+		margin-bottom: 24px;
+
+		img {
+			position: absolute;
+			top: 0; left: 0;
+			width: 100%; height: 100%;
+			box-sizing: border-box;
+			object-fit: cover;
+			object-position: center;
+			transition: .2s;
+			transform: translateZ(0);
+		}
+	}
+
+	.caption {
+
+		.name {
+			font-size: var(--subtitle-font-size);
+			margin-bottom: 16px;
+		}
+
+		.position {
+			color: $color-middle-brown;
+			font-size: var(--font-size);
+		}
+	}
+
+	&:hover {
+
+		.photo-image {
+
+			img {
+				transform: translateZ(0) scale(1.02);
+			}
+		}
+	}
+}

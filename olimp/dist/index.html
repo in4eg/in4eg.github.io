@@ -60,61 +60,63 @@
 			</div>
 			<div class="right-side">
 				<nav class="header-navigation" id="mainNavigation">
-					<ul class="clear" data-hover-show="#menuResult" data-escape-container="#mainHeader">
-						<!-- class .active for active link -->
-						<li><a href="index.html" aria-label="main page" class="active"><span class="text">Головна</span></a></li>
-						<!-- menuResult -> data-tab-index="1" -->
-						<li data-tab-hover="1"><a href="services.html" aria-label="detail link"><span class="text">Послуги</span></a></li>
-						<!-- menuResult -> data-tab-index="2" -->
-						<li data-tab-hover="2"><a href="cases.html" aria-label="detail link"><span class="text">Кейси</span></a></li>
-						<li><a href="news.html" aria-label="detail link"><span class="text">Новини</span></a></li>
-						<li><a href="about.html" aria-label="detail link"><span class="text">Про нас</span></a></li>
-						<li><a href="faq.html" aria-label="detail link"><span class="text">FAQ</span></a></li>
-						<li><a href="career.html" aria-label="detail link"><span class="text">Кар'єра</span></a></li>
-						<li><a href="contacts.html" aria-label="detail link"><span class="text">Контакти</span></a></li>
-					</ul>
-					<!-- BOTTOM -->
-					<!-- VISIBLE ONLY <= 768 -->
-					<div class="mobile-bottom">
-						<!-- consultation button -->
-						<div class="centered-inner">
-							<button type="button" class="button contact-button" data-popup-call="#consultPopup" data-header-close>
-								<span class="text">Консультацiя</span>
-							</button>
-						</div>
-						<!-- / consultation button -->
-						<!-- language and social for mobile -->
-						<div class="bordered-top">
-							<div class="language-mobile">
-								<div class="dropdown" data-dropdown>
-									<div class="dropdown-header"><div class="item">Українська</div></div>
-									<div class="dropdown-inner origin-top">
-										<a href="#" class="item" aria-label="eng">English</a>
-										<a href="#" class="item" aria-label="ru">Русский</a>
+					<div class="inner">
+						<ul class="clear" data-hover-show="#menuResult" data-escape-container="#mainHeader">
+							<!-- class .active for active link -->
+							<li><a href="index.html" aria-label="main page" class="active"><span class="text">Головна</span></a></li>
+							<!-- menuResult -> data-tab-index="1" -->
+							<li data-tab-hover="1"><a href="services.html" aria-label="detail link"><span class="text">Послуги</span></a></li>
+							<!-- menuResult -> data-tab-index="2" -->
+							<li data-tab-hover="2"><a href="cases.html" aria-label="detail link"><span class="text">Кейси</span></a></li>
+							<li><a href="news.html" aria-label="detail link"><span class="text">Новини</span></a></li>
+							<li><a href="about.html" aria-label="detail link"><span class="text">Про нас</span></a></li>
+							<li><a href="faq.html" aria-label="detail link"><span class="text">FAQ</span></a></li>
+							<li><a href="career.html" aria-label="detail link"><span class="text">Кар'єра</span></a></li>
+							<li><a href="contacts.html" aria-label="detail link"><span class="text">Контакти</span></a></li>
+						</ul>
+						<!-- BOTTOM -->
+						<!-- VISIBLE ONLY <= 768 -->
+						<div class="mobile-bottom">
+							<!-- consultation button -->
+							<div class="centered-inner">
+								<button type="button" class="button contact-button" data-popup-call="#consultPopup" data-header-close>
+									<span class="text">Консультацiя</span>
+								</button>
+							</div>
+							<!-- / consultation button -->
+							<!-- language and social for mobile -->
+							<div class="bordered-top">
+								<div class="language-mobile">
+									<div class="dropdown" data-dropdown>
+										<div class="dropdown-header"><div class="item">Українська</div></div>
+										<div class="dropdown-inner origin-top">
+											<a href="#" class="item" aria-label="eng">English</a>
+											<a href="#" class="item" aria-label="ru">Русский</a>
+										</div>
 									</div>
 								</div>
+								<div class="social-mobile">
+									<ul class="social-list clear">
+										<li>
+											<a aria-label="social link" target="_blank" href="tel:" class="button button-transparent button-round">
+												<span class="button-icon"><i class="icon icon-phone"></i></span>
+											</a>
+										</li>
+										<li>
+											<a aria-label="social link" target="_blank" href="mailto:" class="button button-transparent button-round">
+												<span class="button-icon"><i class="icon icon-mail"></i></span>
+											</a>
+										</li>
+										<li>
+											<a aria-label="social link" target="_blank" href="tg://resolve?domain=@" class="button button-transparent button-round">
+												<span class="button-icon"><i class="icon icon-telegram"></i></span>
+											</a>
+										</li>
+									</ul>
+								</div>
 							</div>
-							<div class="social-mobile">
-								<ul class="social-list clear">
-									<li>
-										<a aria-label="social link" target="_blank" href="tel:" class="button button-transparent button-round">
-											<span class="button-icon"><i class="icon icon-phone"></i></span>
-										</a>
-									</li>
-									<li>
-										<a aria-label="social link" target="_blank" href="mailto:" class="button button-transparent button-round">
-											<span class="button-icon"><i class="icon icon-mail"></i></span>
-										</a>
-									</li>
-									<li>
-										<a aria-label="social link" target="_blank" href="tg://resolve?domain=@" class="button button-transparent button-round">
-											<span class="button-icon"><i class="icon icon-telegram"></i></span>
-										</a>
-									</li>
-								</ul>
-							</div>
+							<!-- / language and social for mobile -->
 						</div>
-						<!-- / language and social for mobile -->
 					</div>
 				</nav>
 				<!-- desktop button for consultation -->
@@ -513,7 +515,7 @@
 					Юридична компанія «Олімп» —<br>ваш надійний партнер у вирішенні складних правових питань.
 				</h2>
 				<div class="point-subtitle subtitle">З нами ви отримуєте:</div>
-				<ul class="clear counter-list inline-list">
+				<ul class="clear counter-list inline-list collapsed-xs">
 					<li>Професіоналізм і досвід у правових питаннях</li>
 					<li>Індивідуальний підхід до кожної справи</li>
 					<li>Повну конфіденційність</li>

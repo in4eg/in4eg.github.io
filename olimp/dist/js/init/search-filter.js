@@ -18,13 +18,16 @@ document.addEventListener('DOMContentLoaded', function(){
 	function alertMessageToggle(open){
 		let alertMessage = document.getElementById('searchEmptyMessage');
 		let pagination = document.getElementById('filterPagination');
+		let showMore = document.getElementById('showMore');
 
 		if (open) {
 			if (alertMessage) alertMessage.classList.remove('hidden');
 			if (pagination) pagination.classList.add('hidden');
+			if (showMore) showMore.classList.add('hidden');
 		} else {
 			if (alertMessage) alertMessage.classList.add('hidden');
 			if (pagination) pagination.classList.remove('hidden');
+			if (showMore) showMore.classList.remove('hidden');
 		};
 	};
 

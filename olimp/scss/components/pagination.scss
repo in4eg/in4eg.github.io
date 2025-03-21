@@ -1,0 +1,92 @@
+@import '../variables.scss';
+
+
+.pagination {
+	$gap: 16px;
+	$size: 40px;
+
+	margin: 72px 0 200px;
+	justify-content: center;
+	display: flex;
+	flex-wrap: wrap;
+	gap: $gap;
+
+	a {
+		color: $color-middle-brown;
+		font-size: var(--font-size);
+		height: $size; width: $size;
+		border: 1px solid $color-light-secondary;
+		text-align: center;
+		line-height: $size;
+
+		&.active {
+			background-color: $color-primary-coffee;
+			color: $color-white;
+			border-radius: 50%;
+		}
+
+		&:hover:not(.active) {
+			color: $color-primary-coffee;
+		}
+
+		&:first-child,
+		&:last-child {
+			border-color: transparent;
+
+			.icon {
+				font-size: 12px;
+
+				&:before {
+					position: relative;
+					top: 1px;
+				}
+			}
+
+			&:hover {
+				background-color: transparent;
+				color: $color-primary-coffee;
+			}
+		}
+	}
+
+	span {
+		color: $color-middle-brown;
+		font-size: var(--font-size);
+		height: $size; width: $size;
+		border: 1px solid $color-light-secondary;
+		text-align: center;
+		line-height: $size;
+		cursor: default;
+	}
+}
+
+
+@media (max-width: 993px) {
+
+	.pagination {
+		margin: 60px 0 150px;
+	}
+}
+
+@media (max-width: 768px) {
+
+	.pagination {
+		$gap: 10px;
+		$size: 36px;
+		flex-wrap: nowrap;
+		overflow: hidden;
+
+		margin: 40px 0 80px;
+		gap: $gap;
+
+		a {
+			height: $size; width: $size;
+			line-height: $size;
+		}
+
+		span {
+			height: $size; width: $size;
+			line-height: $size;
+		}
+	}
+}

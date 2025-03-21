@@ -1,0 +1,282 @@
+@import '../variables.scss';
+
+$button-round-size: 40px;
+
+/* default */
+.button {
+	display: inline-block;
+	font-size: var(--buttons-font-size);
+	font-family: $font;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	vertical-align: middle;
+	white-space: nowrap;
+	position: relative;
+	z-index: 1;
+	line-height: 1;
+	border: none;
+	text-align: center;
+	transition: .2s;
+	text-decoration: none;
+	border: none;
+	max-width: 100%;
+	white-space: nowrap;
+	cursor: pointer;
+	background-color: transparent;
+	text-transform: uppercase;
+	border: 1px solid transparent;
+}
+
+/* custom */
+.button {
+	text-transform: uppercase;
+
+	.text {
+		white-space: nowrap;
+		vertical-align: middle;
+		display: inline-block;
+	}
+
+	.button-icon {
+		height: $button-round-size; width: $button-round-size;
+		vertical-align: middle;
+		display: inline-block;
+		border-radius: 50%;
+		font-size: calc(var(--buttons-font-size)*1.5);
+		position: relative;
+
+		.icon {
+			position: absolute;
+			top: 50%; left: 50%;
+			transform: translate(-50%, -50%);
+
+			&:before {
+				position: relative;
+				top: -1px;
+			}
+		}
+	}
+}
+
+.button.button-bordered {
+	border: 1px solid;
+	padding: 12px 36px;
+	border-radius: 100px;
+}
+
+.button.disabled {
+	opacity: .8;
+	pointer-events: none;
+	user-select: none;
+}
+
+
+.button.button-block {
+	display: block;
+	width: 100%;
+	padding: 24px 15px 24px 32px;
+
+	.button-icon {
+		position: absolute;
+		right: 12px; top: 12px;
+	}
+}
+
+.button.button-round {
+	height: $button-round-size; width: $button-round-size;
+	border-radius: 50%;
+
+	.button-icon {
+		position: static;
+	}
+}
+
+.button.button-arrow {
+	padding: 11px 15px 11px 32px;
+	border-radius: 100px;
+	white-space: nowrap;
+
+	.button-icon {
+		margin-left: 20px;
+	}
+
+	&.button-block {
+		padding: 24px 15px 24px 32px;
+	}
+}
+
+.button.button-primary-transparent {
+	color: $color-primary;
+	border: 1px solid $color-primary;
+	border-radius: 100px;
+
+	&:hover {
+		background-color: $color-primary;
+		color: $color-white-clear;
+	}
+}
+
+.button.button-transparent-round {
+	color: $color-primary;
+	border: 1px solid $color-light-secondary;
+	border-radius: 100px;
+
+	.button-icon {
+		background-color: $color-primary;
+		color: $color-white-clear;
+	}
+
+	&:hover {
+		background-color: $color-primary;
+		color: $color-white-clear;
+
+		.button-icon {
+			color: $color-primary;
+			background-color: $color-white;
+		}
+	}
+}
+
+.button.button-primary-light-transparent {
+	color: $color-primary;
+	border: 1px solid $color-light-secondary;
+	border-radius: 100px;
+
+	&:hover {
+		background-color: $color-primary;
+		color: $color-white-clear;
+	}
+}
+
+.button.button-light {
+	background-color: $color-white;
+	color: $color-dark;
+
+	.button-icon {
+		background-color: $color-primary-coffee;
+		color: $color-white;
+	}
+
+	&:hover {
+		background-color: $color-primary-coffee;
+		color: $color-white;
+
+		.button-icon {
+			background-color: $color-white;
+			color: $color-primary-coffee;
+		}
+	}
+}
+
+.button.button-link {
+	padding: 12px 36px;
+
+	&.with-arrow {
+		padding-top: 0;
+		padding-right: 10px;
+		padding-bottom: 0;
+	}
+}
+
+.button.button-primary {
+	background-color: $color-primary;
+	color: $color-white;
+
+	.button-icon {
+		color: $color-primary;
+		background-color: $color-white;
+	}
+
+	&:hover {
+		background-color: $color-secondary;
+
+		.button-icon {
+			color: $color-secondary;
+			background-color: $color-white;
+		}
+	}
+}
+
+.button.button-secondary {
+	background-color: $color-secondary-hover;
+	color: $color-white;
+
+	&:hover {
+		background-color: $color-secondary;
+	}
+}
+
+.button.button-default {
+
+	&.button-round {
+		color: $color-middle-brown;
+		background-color: $color-middle-brown-hover;
+
+		&:hover {
+			background-color: $color-primary-coffee;
+			color: $color-white-clear;
+		}
+	}
+}
+
+.button.button-primary-coffee {
+	background-color: $color-primary-coffee;
+	color: $color-white;
+
+	&.disabled {
+
+		&.button-round {
+			color: $color-middle-brown;
+			background-color: $color-middle-brown-hover;
+		}
+	}
+
+	&:hover:not(.disabled) {
+		background-color: $color-primary;
+	}
+}
+
+@media (max-width: 992px) {
+
+	.button.full-sm {
+		width: 100%;
+		padding: 20px 43px 20px 16px;
+
+		.button-icon {
+			position: absolute;
+			right: 12px; top: 7px;
+			margin-left: 0;
+		}
+
+		&.button-block {
+			padding-right: 43px;
+		}
+	}
+
+	.button.button-block,
+	.button.button-arrow.button-block {
+		padding-top: 20px;
+		padding-bottom: 20px;
+		padding-right: 46px;
+	}
+}
+
+@media (max-width: 768px) {
+
+	.button .text.visible-sm {
+		display: inline-block;
+	}
+	.button .text.hidden-sm {
+		display: none;
+	}
+}
+
+@media (min-width: 769px) {
+
+	.button .text.hidden-sm {
+		display: inline-block;
+	}
+	.button .text.visible-sm {
+		display: none;
+	}
+}

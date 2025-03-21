@@ -1,0 +1,117 @@
+@import '../variables.scss';
+
+.accordeon {
+
+	.accordeon-title {
+		cursor: pointer;
+		position: relative;
+
+		&:after {
+			content: '\e91c';
+			font-family: 'icomoon';
+			position: absolute;
+			right: 0; top: 50%;
+			transform: translateY(-50%);
+		}
+	}
+
+	.accordeon-inner {
+		display: none;
+		opacity: 0;
+		will-change: max-height;
+		transition: 0.3s ease-out;
+	}
+
+	.search-tooltip {
+		position: absolute;
+		left: 16px; bottom: 0;
+		color: $color-white;
+		background-color: $color-primary;
+		padding: 3px 7px;
+		font-size: 12px;
+		opacity: 0;
+		transform: translateY(5px);
+		transition: .3s;
+
+		&:after {
+			content: '';
+			position: absolute;
+			width: 0; height: 0;
+			bottom: 100%; left: 50%;
+			transform: translateX(-50%);
+			border-left: 8px solid transparent;
+			border-right: 8px solid transparent;
+			border-bottom: 8px solid $color-primary;
+			clear: both;
+		}
+	}
+
+	&.active {
+
+		.accordeon-inner {
+			display: block;
+			opacity: 1;
+		}
+
+		.accordeon-title:after {
+			content: "\e91b";
+		}
+	}
+}
+
+.accordeon.success {
+
+	.search-tooltip {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+@media (max-width: 992px) {
+
+	.mobile-accordeon {
+
+		.accordeon-title {
+			position: relative;
+			padding-right: 20px;
+			cursor: pointer;
+
+			&:after {
+				content: "\e913";
+				font-family: 'icomoon';
+				font-size: calc(var(--buttons-font-size)*0.6);
+				position: absolute;
+				right: 0; top: 50%;
+				transform: translateY(-50%);
+			}
+		}
+
+		.accordeon-inner {
+			display: none;
+		}
+
+		&.active {
+
+			.accordeon-title {
+
+				&:after {
+					content: "\e912";
+				}
+			}
+
+			.accordeon-inner {
+				display: block;
+			}
+		}
+	}
+}
+
+@media (max-width: 768px) {
+
+	.accordeon {
+
+		.search-tooltip {
+			bottom: -11px; left: 12px;
+		}
+	}
+}

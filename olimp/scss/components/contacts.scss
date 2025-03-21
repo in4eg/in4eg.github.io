@@ -1,0 +1,169 @@
+@import '../variables.scss';
+
+.contact-line {
+	padding-bottom: 64px;
+
+	.location-link {
+		display: inline-block;
+		vertical-align: middle;
+		white-space: nowrap;
+		margin-right: 80px;
+
+		.icon {
+			font-size: 24px;
+			display: inline-block;
+			vertical-align: middle;
+			margin-right: 12px;
+		}
+
+		.text {
+			font-size: var(--font-size-large);
+			line-height: 24px;
+			display: inline-block;
+			vertical-align: middle;
+		}
+
+		&:hover {
+			color: $color-middle-brown;
+		}
+	}
+
+	.social-cell {
+		text-align: right;
+	}
+}
+
+.contact-list {
+	$gap: 74px;
+
+	display: flex;
+	flex-wrap: wrap;
+	margin: 72px 0 80px;
+	justify-content: space-between;
+
+	li {
+		position: relative;
+		width: calc(100%/3);
+		padding-right: $gap;
+
+		&:after {
+			content: '';
+			position: absolute;
+			right: $gap; top: 10px;
+			bottom: 10px;
+			width: 1px;
+			background-color: $color-light-secondary;
+		}
+
+		&:last-child {
+			padding-right: 0;
+
+			&:after { display: none; }
+		}
+	}
+
+	.icon:before {
+		position: relative;
+		top: 1px;
+	}
+}
+
+.social-list-small {
+	display: inline-block;
+	vertical-align: middle;
+	font-size: 0;
+
+	li {
+		display: inline-block;
+		vertical-align: middle;
+		margin-right: 16px;
+
+		&:last-child { margin-right: 0; }
+	}
+
+	a {
+		font-size: 24px;
+		height: 24px; width: 24px;
+		color: $color-middle-brown;
+		text-align: center;
+		line-height: 24px;
+
+		&:hover {
+			color: $color-secondary;
+		}
+	}
+}
+
+@media (max-width: 1199px) {
+
+	.contact-line {
+
+		.social-cell {
+			text-align: left;
+			margin-top: 24px;
+			display: flex;
+			justify-content: space-between;
+		}
+	}
+
+	.contact-list {
+		margin: 40px 0;
+
+		li {
+			width: 100%;
+
+			&:after {
+				right: 0; left: 0;
+				bottom: 0; top: auto;
+				width: auto; height: 1px;
+			}
+
+			&:last-child {
+
+				&:after {
+					display: block;
+				}
+			}
+		}
+
+		&.icons-list {
+
+			li {
+				padding-bottom: 16px;
+				margin-bottom: 16px;
+
+				&:last-child {
+					margin-bottom: 0;
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: 768px) {
+
+	.contact-line {
+		padding-bottom: 36px;
+
+		.social-cell {
+			display: block;
+
+			.social-list-small {
+				display: none;
+			}
+		}
+	}
+
+	.contact-list {
+
+		.title {
+			display: none;
+		}
+	}
+
+	.mobile-social {
+		text-align: center;
+		margin-bottom: 80px;
+	}
+	
+}

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+	<meta charset="UTF-8">
+	<title>Olimp :: Faq Page</title>
+
+	<link rel="icon" type="image/png" href="/favicon/favicon-96x96.png" sizes="96x96">
+	<link rel="icon" type="image/svg+xml" href="/favicon/favicon.svg">
+	<link rel="shortcut icon" href="/favicon/favicon.ico">
+	<link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
+	<meta name="apple-mobile-web-app-title" content="Olimp">
+	<link rel="manifest" href="/favicon/site.webmanifest">
+
+	<meta name="msapplication-TileColor" content="#252324">
+	<meta name="theme-color" content="#252324">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+	<meta name="format-detection" content="telephone=no">
+	<meta name="description" content="description">
+
+	<link rel="stylesheet" href="css/bundle.min.css">
+
+</head>
+<body id="innerBody">
+	<!-- header -->
+	@@include('./includes/header-inner.html')
+	<!-- / header -->
+	<!-- class inner-page -->
+	<main class="page-main inner-page" id="pageMain">
+		<!-- breadcrumbs -->
+		<div class="breadcrumbs">
+			<div class="container">
+				<ul class="breadcrumbs-list clear">
+					<li><a href="index.html" class="text" aria-label="main page">Головна</a></li>
+					<li><span class="text">Faq</span></li>
+				</ul>
+			</div>
+		</div>
+		<!-- / breadcrumbs -->
+
+		<!-- header -->
+		<section class="section inner-section">
+			<div class="container">
+				<h1 class="section-title-large">Faq</h1>
+				<!-- filters -->
+					<div class="row bottom-sm">
+						<div class="col-xs-12 col-md-6">
+							<div class="dropdown" data-dropdown>
+								<div class="dropdown-header"><div class="item">Всі категорії</div></div>
+								<div class="dropdown-inner" data-tag-filter=".accordeon-list">
+									<!-- data-tag=".all" for all list category -->
+									<div class="item" data-tag=".all">Всі категорії</div>
+									<!-- data-tag=".tag1" for list category -->
+									<div class="item" data-tag=".tag1">Послуги з сімейного права</div>
+									<!-- data-tag=".tag2" for list category -->
+									<div class="item" data-tag=".tag2">Захист цивільно-правових відносин</div>
+									<div class="item" data-tag=".tag3">Військове право</div>
+									<div class="item" data-tag=".tag4">Земельне право</div>
+									<div class="item" data-tag=".tag5">Пенсійне забезпечення</div>
+									<div class="item" data-tag=".tag6">Кримінальне право</div>
+									<div class="item" data-tag=".tag7">Для прикладу, коли немає питань для такої категорії</div>
+									<div class="item" data-tag=".tag6, .tag1">Категорія, наприклад, і для сімейного, і для кримінального права</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-xs-12 col-md-6">
+							<form action="javascript:void(0)" class="form filters-form" id="searchCaseForm">
+								<div class="labeled-group">
+									<input type="text" class="input" id="filterInput" data-filter=".accordeon" data-filter-fields="[data-description], [data-title]">
+									<label for="filterInput"><span class="text">Пошук питання</span></label>
+								</div>
+								<button class="button-round button" type="submit">
+									<i class="icon icon-search"></i>
+								</button>
+							</form>
+						</div>
+					</div>
+				<!-- /filters -->
+			</div>
+		</section>
+		<!-- header -->
+
+		<!-- faq -->
+		<section class="section faq-section">
+			<div class="container">
+				<!-- faq-list -->
+				@@include('./includes/faq-list-large.html')
+				<!-- / faq-list -->
+				<!-- alert message if list is empty -->
+				<div id="searchEmptyMessage" class="hidden search-alert">
+					<div class="section-title-small">Питань за таким запитом не знайдено</div>
+					<div class="theme-text">Спробуйте змінити пошуковий запит</div>
+				</div>
+				<!-- alert message if list is empty -->
+			</div>
+		</section>
+		<!-- / faq -->
+
+		<!-- pagination -->
+		<!-- 12 cases per page -->
+		<div class="pagination" id="filterPagination">
+			<a href="#" class="item"><i class="icon icon-caret_left"></i></a>
+			<a href="#" class="item active">1</a>
+			<a href="#" class="item">2</a>
+			<a href="#" class="item">3</a>
+			<a href="#" class="item">4</a>
+			<span class="empty item">...</span>
+			<a href="#" class="item">12</a>
+			<a href="#" class="item"><i class="icon icon-caret_right"></i></a>
+		</div>
+		<!-- / pagination -->
+
+		<!-- contact form -->
+		@@include('./includes/contact-section.html')
+		<!-- / contact form -->
+
+		<!-- map -->
+		<div class="map-container">
+		<!-- data attributes changable in html -->
+		<div id="map" class="map"
+			data-position="50.450001, 30.523333"
+			data-zoom="16"
+			data-title="Kyiv, Ukraine"
+		></div>
+		<!-- / map -->
+	<!-- footer -->
+	@@include('./includes/footer-main.html')
+
+	<script>
+		window.onTagFilter = function(data){
+			console.log('callback for tag filter', data);
+		};
+	</script>
+
+	<script src="js/main.js"></script>
+</body>
+</html>
