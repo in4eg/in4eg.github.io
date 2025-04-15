@@ -22,7 +22,7 @@
     "gulp-minify": "0.0.15",
     "gulp-plumber": "^1.2.0",
     "gulp-rename": "^1.4.0",
-    "gulp-sass": "^3.2.1",
+    "gulp-sass": "^6.0.1",
     "gulp-zip": "^4.2.0"
   }
 }
