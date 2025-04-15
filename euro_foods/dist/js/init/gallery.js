@@ -1,0 +1,1 @@
+$('.gallery-list [data-gallery]').simpleLightbox();

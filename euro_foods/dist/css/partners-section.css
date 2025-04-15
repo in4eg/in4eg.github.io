@@ -1,0 +1,163 @@
+/*primary font*/
+.partners-section {
+  background-image: url(../img/category-back1.png), url(../img/category-back2.png), url(../img/category-back3.png), url(../img/category-back3.png), url(../img/partners-back1.png);
+  background-repeat: no-repeat, no-repeat, no-repeat, no-repeat, no-repeat;
+  background-position: 70% 20px, left -272px, -30px 170px, 95% 50px, right bottom; }
+  .partners-section .partners-slider {
+    white-space: nowrap;
+    overflow: hidden;
+    font-size: 0; }
+    .partners-section .partners-slider .item {
+      display: inline-block;
+      width: 100%;
+      white-space: normal; }
+      .partners-section .partners-slider .item .partners-side {
+        display: inline-block;
+        vertical-align: top;
+        padding: 0 20px 0 0;
+        width: 74%; }
+      .partners-section .partners-slider .item .caption-side {
+        display: inline-block;
+        vertical-align: top;
+        padding: 0 0 0 20px;
+        color: #000;
+        font-size: 22px;
+        font-weight: 300;
+        line-height: 40px;
+        width: 26%; }
+    .partners-section .partners-slider .partners-list {
+      font-size: 0;
+      margin: 0; }
+      .partners-section .partners-slider .partners-list .list-item {
+        font-size: 0;
+        width: 33.33%;
+        display: inline-block;
+        vertical-align: top; }
+        .partners-section .partners-slider .partners-list .list-item .inner {
+          padding: 25px 40px 40px;
+          background-color: #fff;
+          display: block;
+          transition: box-shadow .3s;
+          border: 1px solid #dedede;
+          border-right-color: transparent; }
+        .partners-section .partners-slider .partners-list .list-item:nth-child(n+4) .inner {
+          border-top-color: transparent; }
+        .partners-section .partners-slider .partners-list .list-item:nth-child(3n) .inner {
+          border-right-color: #dedede; }
+      .partners-section .partners-slider .partners-list .logo-cover {
+        height: 170px;
+        position: relative;
+        display: block;
+        padding-top: 78.6%;
+        -webkit-transform: translateZ(0);
+        transform: translateZ(0); }
+        .partners-section .partners-slider .partners-list .logo-cover img {
+          position: absolute;
+          top: 0;
+          left: 0;
+          bottom: 0;
+          right: 0;
+          max-height: 100%;
+          max-width: 100%;
+          margin: auto; }
+  .partners-section .partners-slider.owl-loaded {
+    position: relative; }
+    .partners-section .partners-slider.owl-loaded .owl-slider {
+      -webkit-transform: translateZ(0);
+      transform: translateZ(0); }
+    .partners-section .partners-slider.owl-loaded .owl-nav {
+      position: absolute;
+      bottom: 40px;
+      right: 0;
+      padding: 0 0 0 20px;
+      width: 26%;
+      max-width: 100%;
+      font-size: 0; }
+      .partners-section .partners-slider.owl-loaded .owl-nav .owl-prev,
+      .partners-section .partners-slider.owl-loaded .owl-nav .owl-next {
+        font-size: 36px;
+        display: inline-block;
+        padding: 15px;
+        color: #000;
+        transition: color .3s; }
+        .partners-section .partners-slider.owl-loaded .owl-nav .owl-prev:hover,
+        .partners-section .partners-slider.owl-loaded .owl-nav .owl-next:hover {
+          color: #00ac5e; }
+        .partners-section .partners-slider.owl-loaded .owl-nav .owl-prev.disabled,
+        .partners-section .partners-slider.owl-loaded .owl-nav .owl-next.disabled {
+          color: #b4b4b4; }
+
+@media (max-width: 1231px) {
+  .partners-section {
+    background-size: 137px 97px, 268px 268px, 220px 167px, 50px 50px, 250px 167px;
+    background-position: 75% 20px,left -180px,-30px 170px,95% 50px,right 115%; }
+    .partners-section .partners-slider .partners-list .list-item .inner {
+      height: auto;
+      padding: 20px; }
+    .partners-section .partners-slider .partners-list .logo-cover {
+      height: auto;
+      padding-top: 88%; }
+    .partners-section .partners-slider .item .partners-side {
+      padding-right: 10px;
+      width: 67%; }
+    .partners-section .partners-slider .item .caption-side {
+      font-size: 18px;
+      line-height: 30px;
+      padding-left: 10px;
+      width: 33%; }
+  .partners-section .partners-slider.owl-loaded .owl-nav {
+    padding-left: 0;
+    width: 33%;
+    bottom: 0; } }
+
+@media (max-width: 767px) {
+  .partners-section {
+    background-image: none; }
+    .partners-section .partners-slider {
+      position: relative;
+      padding-bottom: 40px; }
+      .partners-section .partners-slider .item .partners-side {
+        padding-right: 0;
+        display: block;
+        width: 100%;
+        margin-bottom: 30px; }
+      .partners-section .partners-slider .item .caption-side {
+        padding-left: 0;
+        display: block;
+        width: 100%; }
+  .partners-section .partners-slider.owl-loaded .owl-dots {
+    position: absolute;
+    padding: 0;
+    margin: 0 -10px;
+    left: 0;
+    bottom: 0; }
+    .partners-section .partners-slider.owl-loaded .owl-dots .owl-dot span {
+      background-color: #999; }
+    .partners-section .partners-slider.owl-loaded .owl-dots .owl-dot.active span {
+      background-color: #00ac5e; } }
+
+@media (max-width: 480px) {
+  .partners-section .container {
+    padding: 0 !important; }
+  .partners-section .primary-title {
+    padding: 0 15px; }
+  .partners-section .partners-slider {
+    padding-bottom: 0; }
+    .partners-section .partners-slider .partners-list .list-item {
+      width: 50%; }
+      .partners-section .partners-slider .partners-list .list-item .inner {
+        padding: 15px; }
+      .partners-section .partners-slider .partners-list .list-item:nth-child(n+3) {
+        display: none; }
+      .partners-section .partners-slider .partners-list .list-item:nth-child(2n) .inner {
+        border-right-color: #dedede; }
+    .partners-section .partners-slider .partners-list .logo-cover {
+      padding-top: 112px; }
+    .partners-section .partners-slider .item .partners-side {
+      margin-bottom: 70px; }
+    .partners-section .partners-slider .item .caption-side {
+      padding: 0 15px; }
+  .partners-section .partners-slider.owl-loaded .owl-dots {
+    /*margin: 0;*/
+    padding: 0 15px;
+    top: 164px; } }

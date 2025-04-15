@@ -1,0 +1,225 @@
+@import 'variables.scss';
+
+.popup {
+	position: fixed;
+	z-index: 55;
+	background: rgba(#000,.7);
+	top: 0; left: 0; right: 0; bottom: 0;
+	overflow-x: hidden;
+	overflow-y: auto;
+	white-space: nowrap;
+	text-align: center;
+	transition: .3s;
+	font-size: 0;
+	opacity: 0;
+	display: none;
+	padding: 15px;
+
+	&:after {
+		content: '';
+		display: inline-block;
+		vertical-align: middle;
+		width: 0; height: 100%;
+	}
+
+	.close-popup {
+		position: absolute;
+		width: 80px; height: 80px;
+		line-height: 80px;
+		top: 0; right: 0;
+		border-radius: 0;
+		border: none;
+		cursor: pointer;
+		background: transparent;
+		transition: .2s;
+		font-size: 24px;
+		color: #cfcfcf;
+
+		&:hover {
+			color: $danger;
+		}
+	}
+
+	.inner {
+		display: inline-block;
+		width: 100%;
+		vertical-align: middle;
+		padding: 0;
+		max-width: 590px;
+		background: transparent;
+		text-align: left;
+		opacity: 0;
+		background: #fff;
+		font-size: 14px;
+		white-space: normal;
+		position: relative;
+		transition: .3s;
+		transform: translateY(-50px);
+		box-shadow: 0 0 50px rgba(0, 0, 0, 0.25);
+		padding: 50px;
+	}
+
+	&.active {
+		opacity: 1;
+
+		.inner {
+			transition-delay: .2s;
+			opacity: 1;
+			transform: translateY(0);
+		}
+	}
+}
+
+/* custom */
+.popup {
+
+	.header {
+
+		.title {
+			color: #000;
+			font-size: 30px;
+			font-weight: 700;
+			line-height: 36px;
+			margin: 0 0 30px;
+
+			&.collapsed-bottom {
+				margin-bottom: 0;
+			}
+		}
+	}
+
+	.popup-tabs {
+		margin: 0 0 30px;
+
+		.tab-item {
+			color: $primary;
+
+			span {
+				padding-top: 8px;
+				padding-bottom: 5px;
+				display: block;
+				font-weight: 300;
+				transition: color .3s;
+			}
+
+			&.active {
+				color: #000;
+
+				span {
+					font-weight: 700;
+					box-shadow: 0 3px 0 $primary;
+				}
+			}
+			&:hover {
+
+				span {
+					color: #000;
+				}
+			}
+		}
+	}
+	.form-bottom {
+		margin: 30px 0 0;
+	}
+	.outer-icon {
+		margin-top: 20px;
+		color: #000;
+		transition: color .3s;
+
+		&:hover {
+			color: $primary;
+		}
+
+		.icon {
+			font-size: 18px;
+			display: inline-block;
+			vertical-align: middle;
+			color: #999;
+			margin-right: 10px;
+
+			&:before {
+				position: relative;
+				top: -2px;
+			}
+		}
+	}
+	.btn-list {
+
+		.item {
+			display: inline-block;
+			 vertical-align: top;
+		}
+	}
+	.simple-content {
+		padding-top: 30px;
+
+		.lead {
+			font-size: 18px;
+			color: #999;
+			font-weight: 300;
+			line-height: 20px;
+			margin-bottom: 30px;
+		}
+	}
+}
+
+.popup.large {
+
+	.inner {
+		max-width: 675px;
+	}
+}
+.popup.largest {
+
+	.inner {
+		max-width: 1232px;
+	}
+}
+
+@media (max-width: 767px) {
+
+	.popup {
+
+		.catalog-table {
+			border-top: 0;
+			margin: 0;
+		}
+	}
+}
+
+@media (max-width: 640px) {
+
+	.popup {
+
+		.inner {
+			padding: 30px;
+		}
+		.header {
+
+			.title {
+				font-size: 24px;
+				line-height: 30px;
+				margin: 0 0 20px;
+			}
+		}
+		.form-bottom {
+
+			.bottom-xs {
+				text-align: left;
+				margin-top: 15px;
+			}
+		}
+	}
+}
+@media (max-width: 480px) {
+
+	.popup {
+
+		.close-popup {
+			height: 40px; width: 40px;
+			line-height: 44px;
+			font-size: 18px;
+		}
+	}
+}
+

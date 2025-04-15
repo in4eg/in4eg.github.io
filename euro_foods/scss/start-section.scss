@@ -1,0 +1,389 @@
+@import 'variables.scss';
+
+.start-section {
+	margin-bottom: 40px;
+
+	.hidden-title {
+		display: none;
+	}
+	.partical-title {
+		font-size: 0;
+		margin-bottom: 22px;
+
+		.primary {
+			color: #fff;
+			font-size: 38px;
+			font-weight: 400;
+			line-height: 42px;
+			background-color: $primary;
+			padding: 0 15px;
+		}
+		.bottom {
+			color: #000;
+			font-size: 16px;
+			font-weight: 700;
+			line-height: 58px;
+			background-color: $gray;
+			padding: 10px 15px;
+		}
+		.hidden-lg {
+			display: none;
+		}
+	}
+
+	@for $i from 1 through 4 {
+		.order-#{$i} {
+			order: #{$i};
+		}
+	}
+
+	.item-cover {
+
+		&:hover {
+
+			.outer {
+				background-color: $gray;
+			}
+
+			~ .item-cover {
+
+				.outer {
+					background-color: $gray;
+				}
+			}
+		}
+	}
+	.start-item {
+		background-color: #fff;
+		text-align: center;
+		padding-right: 20px;
+		height: 352px;
+		position: relative;
+
+		&:after {
+			height: 30px; width: 30px;
+			background-image: url(../img/angle-arrows.png);
+			position: absolute;
+			top: 50%; right: -22px;
+			transform: translateY(-50%);
+			content: '';
+			background-color: #fff;
+			z-index: 1;
+			background-repeat: no-repeat;
+		}
+
+		&.dashed {
+
+			&:hover {
+
+				&:before {
+					opacity: 0;
+				}
+			}
+
+			&:before {
+				position: absolute;
+				height: 1px; width: 57px;
+				background-image: url(../img/dashed-line2.png);
+				background-repeat: no-repeat;
+				background-position: right center;
+				content: '';
+				position: absolute;
+				top: 50%; right: 30px;
+				margin-top: 1px;
+				transition: opacity .3s;
+			}
+
+			&.last {
+
+				&:before {
+					right: auto; left: 10px;
+				}
+			}
+		}
+		&.last {
+
+			&:after {
+				display: none;
+			}
+		}
+		.outer {
+			padding: 25px 25px 35px;
+			height: 352px;
+			transition: background-color .3s;
+			position: relative;
+			z-index: 1;
+		}
+
+		&.gray {
+
+			.outer {
+				background-color: $gray;
+			}
+		}
+		.image-icon {
+			height: 98px;
+			margin-bottom: 15px;
+			white-space: nowrap;
+
+			&:before {
+				content: '';
+				height: 100%;
+				display: inline-block;
+				vertical-align: middle;
+			}
+			img {
+				display: inline-block;
+				vertical-align: middle;
+			}
+		}
+		.day-number {
+			width: 90px; height: 90px;
+			background-color: $action;
+			display: inline-block;
+			color: #000;
+			font-size: 22px;
+			font-weight: 700;
+			line-height: 18px;
+			line-height: 90px;
+			border-radius: 50%;
+		}
+		.text {
+			color: #000;
+			font-size: 22px;
+			font-weight: 300;
+			line-height: 30px;
+			margin-top: 10px;
+		}
+	}
+	.lined-title {
+		width: 540px;
+		max-width: 100%;
+		color: #010101;
+		font-size: 16px;
+		font-weight: 700;
+		line-height: 30px;
+		padding-left: 140px;
+		position: relative;
+
+		&:before {
+			width: 69px; height: 10px;
+			content: '';
+			background-image: url(../img/primary-arrow.png);
+			left: 0; top: 15px;
+			position: absolute;
+		}
+	}
+	.dashed-title {
+		width: 328px;
+		max-width: 100%;
+		color: #000;
+		font-size: 16px;
+		font-weight: 700;
+		line-height: 30px;
+		text-align: center;
+		margin: 0 auto 60px;
+		padding-top: 80px;
+		position: relative;
+
+		&:before {
+			width: 318px; height: 29px;
+			content: '';
+			background-image: url(../img/dashed-line1.png);
+			left: 0; top: 0;
+			position: absolute;
+		}
+	}
+}
+
+@media (max-width: 1199px) {
+
+	.start-section {
+
+		.start-item {
+
+			.text {
+				font-size: 18px;
+				line-height: 24px;
+			}
+			.outer {
+				padding-left: 10px;
+				padding-right: 10px;
+			}
+		}
+	}
+}
+@media (max-width: 993px) {
+
+	.start-section {
+
+		.start-item {
+
+			.outer {
+				height: auto;
+				padding-left: 0;
+				padding-right: 0;
+				padding-bottom: 0;
+			}
+
+			&:hover {
+
+				.outer {
+					background-color: #fff;
+				}
+			}
+
+			&.gray {
+
+				.outer {
+					background-color: #fff;
+				}
+			}
+			&.dashed:before {
+				display: none;
+			}
+		}
+		.lined-title {
+			padding-left: 60px;
+
+			&:before {
+				left: -40px;
+			}
+		}
+		.dashed-title {
+			padding-top: 55px;
+			margin-bottom: 20px;
+		}
+		.partical-title {
+
+			.primary {
+				font-size: 24px;
+			}
+			.bottom {
+				line-height: 36px;
+			}
+		}
+	}
+}
+@media (max-width: 767px) {
+
+	.start-section {
+
+		.hidden-title {
+			display: block;
+			font-weight: 300;
+		}
+
+		.item-cover {
+
+			&:hover {
+
+				.outer {
+					background-color: #fff;
+				}
+
+				~ .item-cover {
+
+					.outer {
+						background-color: #fff;
+					}
+				}
+			}
+		}
+
+		.partical-title {
+			margin-bottom: 30px;
+
+			.primary {
+				line-height: 38px;
+			}
+			.inner {
+				padding-left: 15px;
+			}
+			.bottom {
+
+				.inner {
+					line-height: 56px;
+				}
+			}
+			.hidden-lg {
+				display: block;
+			}
+		}
+		.mobile-dashed {
+			position: relative;
+
+			&:after {
+				height: 222px; width: 275px;
+				content: '';
+				background-image: url(../img/dashed-line3.png);
+				position: absolute;
+				right: 50%; bottom: 20px;
+			}
+		}
+		.start-item {
+			height: auto;
+			padding-bottom: 50px;
+			padding-right: 0;
+
+			.outer {
+				padding: 0;
+				font-size: 0;
+			}
+
+			.image-icon {
+				display: none;
+			}
+			.day-number {
+				display: inline-block;
+				vertical-align: middle;
+			}
+			.text {
+				margin: 0;
+				width: calc(100% - 90px);
+				text-align: left;
+				display: inline-block;
+				vertical-align: middle;
+				padding-left: 22px;
+			}
+			&:after {
+				right: auto; left: 30px;
+				bottom: 5px; top: auto;
+				transform: rotate(90deg);
+			}
+		}
+		.lined-title,
+		.dashed-title {
+			padding-left: 0;
+			font-size: 16px;
+			font-weight: 300;
+			line-height: 30px;
+			text-align: left;
+			margin: 0;
+			padding: 0;
+
+			&:before {
+				display: none;
+			}
+		}
+	}
+}
+@media (max-width: 640px) {
+
+	.start-section {
+
+		.mobile-dashed:after {
+			transform: translateX(50%);
+		}
+	}
+}
+@media (max-width: 480px) {
+
+	.start-section {
+
+		.mobile-dashed:after {
+			right: 15px;
+			transform: translateX(0);
+		}
+	}
+}

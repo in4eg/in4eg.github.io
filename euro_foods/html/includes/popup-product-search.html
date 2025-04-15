@@ -1,0 +1,55 @@
+<div id="productSearchPopup" class="popup">
+	<div class="inner">
+		<div class="header">
+			<div class="title">
+				Запрос на поиск продукта
+			</div>
+			<button type="button" class="close-popup" data-close="#productPopup">
+				<i class="icon icon-close"></i>
+			</button>
+		</div>
+		<div class="content">
+			<form action="#" class="validate-form"  data-success="#successPopup">
+				<div class="simple-subtitle">Ваши пожелания</div>
+				<div class="form-group">
+					<textarea name="message1" placeholder="Описание продукта" class="textarea input ignored bordered"></textarea>
+				</div>
+				<div class="simple-subtitle">Цена</div>
+				<div class="row">
+					<div class="col-xs-12 col-sm-6">
+						<div class="form-group" data-before="от">
+							<input type="number" class="input bordered" placeholder="0">
+						</div>
+					</div>
+					<div class="col-xs-12 col-sm-6">
+						<div class="form-group" data-before="до">
+							<input type="number" class="input bordered" placeholder="0">
+						</div>
+					</div>
+				</div>
+				<div class="simple-subtitle">Срочность <span class="helper">(актуально до)</span></div>
+				<div class="form-group">
+					<input type="text" class="input phone bordered" placeholder="Дата" data-mask="99.99.9999" data-calendar>
+				</div>
+				<div class="simple-subtitle">Объем</div>
+				<div class="form-group" data-after="кг/месяц">
+					<input type="number" class="input bordered" placeholder="0">
+				</div>
+
+				<div class="simple-subtitle">Частота</div>
+				<div class="checkbox-group collapsed-bottom">
+					<input type="checkbox" id="period2" class="checkbox" checked>
+					<label for="period2" class="checkbox-label option-label grey-label part-label">Разово</label>
+					<label for="period2" class="label second-part-label part-label">Регулярно</label> 
+				</div>
+				<div class="checkbox-group">
+					<input type="checkbox" id="commPersonal" class="checkbox" checked>
+					<label for="commPersonal" class="checkbox-label primary-bordered">Даю согласие на обработку персональных данных</label>
+				</div>
+				<div class="form-bottom">
+					<button type="submit" class="btn success-btn">Отправить</button>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>

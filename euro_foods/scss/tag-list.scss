@@ -1,0 +1,56 @@
+@import 'variables.scss';
+
+.tag-list {
+	font-size: 0;
+	margin: 15px -10px;
+
+	.item {
+		font-size: 14px;
+		transition: .3s;
+		padding: 5px 10px;
+		display: inline-block;
+		font-weight: 300;
+
+		.link {
+			color: $primary;
+			padding: 5px 10px;
+			background-color: $gray;
+		}
+
+		&:hover {
+
+			.link {
+				color: #fff;
+				background-color: $primary;
+			}
+		}
+	}
+}
+.tag-list.simple {
+
+	.item {
+		font-size: 16px;
+
+		.link {
+			padding: 0;
+			background-color: transparent;
+
+			&:hover {
+				color: #006a3a;
+			}
+		}
+	}
+}
+
+@media (max-width: 767px) {
+
+	.tag-list {
+		margin-left: -4px;
+		margin-right: -4px;
+
+		.item {
+			padding-left: 4px;
+			padding-right: 4px;
+		}
+	}
+}

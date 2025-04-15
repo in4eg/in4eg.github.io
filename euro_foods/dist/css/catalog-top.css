@@ -1,0 +1,22 @@
+/*primary font*/
+.catalog-top .subtitle {
+  color: #000;
+  font-size: 30px;
+  font-weight: 400;
+  line-height: 68px;
+  margin: 0; }
+
+.catalog-top .btn.btn-simple {
+  padding-left: 0;
+  padding-right: 0; }
+  .catalog-top .btn.btn-simple .icon {
+    margin-right: 5px; }
+  .catalog-top .btn.btn-simple:hover {
+    color: #2e76ba; }
+
+@media (max-width: 767px) {
+  .catalog-top .subtitle {
+    color: #000;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 30px; } }

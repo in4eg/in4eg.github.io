@@ -1,0 +1,11 @@
+/*primary font*/
+.login-section {
+  display: none; }
+
+@media (max-width: 767px) {
+  .login-section {
+    display: block;
+    margin-bottom: 30px; }
+    .login-section .article-small .caption .text .arrow {
+      display: inline;
+      margin-left: 10px; } }

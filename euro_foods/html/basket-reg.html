@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+	<meta name="format-detection" content="telephone=no">
+
+	<title>Euro Foods :: Basket</title>
+
+	<meta name="msapplication-TileColor" content="#da532c">
+	<meta name="theme-color" content="#ffffff">
+	<link rel="apple-touch-icon" sizes="144x144" href="/db-apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/db-favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/db-favicon-16x16.png">
+	<link rel="manifest" href="/db-site.webmanifest">
+	<link rel="mask-icon" href="/db-safari-pinned-tab.svg" color="#5bbad5">
+	
+	<link rel="stylesheet" href="css/account-footer.css">
+	<link rel="stylesheet" href="css/account-header.css">
+	<link rel="stylesheet" href="css/aside-right.css">
+	<link rel="stylesheet" href="css/action-sample.css">
+	<link rel="stylesheet" href="css/article-small.css">
+	<link rel="stylesheet" href="css/breadcrumbs-section.css">
+	<link rel="stylesheet" href="css/buttons.css">
+	<link rel="stylesheet" href="css/catalog-table.css">
+	<link rel="stylesheet" href="css/catalog-bottom.css">
+	<link rel="stylesheet" href="css/dotted-list.css">
+	<link rel="stylesheet" href="css/fonts.css">
+	<link rel="stylesheet" href="css/form-elements.css">
+	<link rel="stylesheet" href="css/form-calendar-section.css">
+	<link rel="stylesheet" href="css/general.css">
+	<link rel="stylesheet" href="css/grid.css">
+	<link rel="stylesheet" href="css/icons.css">
+	<link rel="stylesheet" href="css/main-aside.css">
+	<link rel="stylesheet" href="css/main-category.css">
+	<link rel="stylesheet" href="css/main-footer.css">
+	<link rel="stylesheet" href="css/main-header.css">
+	<link rel="stylesheet" href="css/popup.css">
+	<link rel="stylesheet" href="css/pickmeup.css">
+	<link rel="stylesheet" href="css/personal-section.css">
+	<link rel="stylesheet" href="css/skin.css">
+	<link rel="stylesheet" href="css/social-list.css">
+	<link rel="stylesheet" href="css/tabs.css">
+
+</head>
+<body class="page-body">
+
+	<div class="page-main">
+
+		<!-- header -->
+		#=include includes/account-header.html
+		<!-- / header -->
+
+		<main class="inner-main">
+			<!-- left aside -->
+			#=include includes/account-aside.html
+			<!-- / left aside -->
+
+			<div class="personal-section">
+				<section class="action-sample">
+					<div class="container">
+						<h1 class="section-title">Оформление заказа</h1>
+						<div data-accordeon class="order-top active">
+							<div class="anchor">
+								<div class="inner">
+									<span class="bold text">Ваш заказ</span>
+									<span class="text">Наименований: <span class="bold">15</span></span>
+									<span class="text">Сумма заказа: <span class="bold primary-color">1 342 689,70</span></span>
+									<div class="anchor-arrow">
+										<i class="icon icon-right-angle"></i>
+									</div>
+								</div>
+							</div>
+							<div class="accordeon-inner">
+								<form action="#" class="left-offset">
+									<!-- catalog-table -->
+									<div class="catalog-table">
+										<!-- header-item -->
+										<div class="header-item item">
+											<div class="row">
+												<div class="col-sm-4 col-md-5">
+													Наименование товара
+												</div>
+												<div class="col-sm-2 col-md-1">
+													Ед/изм
+												</div>
+												<div class="col-sm-2 col-md-2">
+													Цена
+												</div>
+												<div class="col-sm-2 col-md-2">
+													Количество
+												</div>
+												<div class="col-sm-2 col-md-2">
+													Сумма
+												</div>
+											</div>
+										</div>
+										<!-- / header-item -->
+										<div class="table-inner">
+											<!-- catalog-item -->
+											<div class="catalog-item">
+												<div class="title-item line-row with-price">
+													<div class="row">
+														<div class="col-xs-8 col-sm-4 col-md-5">
+															<a href="#" class="dark-link">Йогурт натуральный 3,5%, 0,15кг*12шт., "Активия”</a>
+														</div>
+														<div class="col-sm-2 col-md-1 counter">
+															Шт.
+														</div>
+														<div class="col-xs-12 col-sm-2 col-md-2 price-cover hidden-xs">
+															<div class="price">10 100,00 P</div>
+														</div>
+														<div class="col-xs-4 col-sm-2 col-md-2 align-right">
+															<button type="button" class="btn btn-link primary-link calculator-toggle first hidden" data-calculator>
+																<i class="icon icon-add"></i>
+															</button>
+															<button type="button" class="btn btn-link primary-link calculator-toggle round second" data-calculator>
+																<i class="icon icon-tick"></i>
+																<span class="count">2</span>
+															</button>
+															<div class="calculator" data-max="99" data-min="0">
+																<button type="button" class="btn action-btn minus">
+																	<i class="icon icon-remove"></i>
+																</button>
+																<input type="number" value="2" class="value-input">
+																<button type="button" class="btn action-btn plus">
+																	<i class="icon icon-add"></i>
+																</button>
+															</div>
+														</div>
+														<div class="col-xs-12 col-sm-2 col-md-2 price-cover">
+															<div class="price bold">
+																20 200,00
+																<i class="icon icon-rouble"></i>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+											<!-- catalog-item -->
+											<div class="catalog-item">
+												<div class="title-item line-row with-price">
+													<div class="row">
+														<div class="col-xs-8 col-sm-4 col-md-5">
+															<a href="#" class="dark-link">Йогурт натуральный 3,5%, 0,15кг*12шт., "Активия”</a>
+														</div>
+														<div class="col-sm-2 col-md-1 counter">
+															Шт.
+														</div>
+														<div class="col-xs-12 col-sm-2 col-md-2 price-cover hidden-xs">
+															<div class="price">10 100,00 P</div>
+														</div>
+														<div class="col-xs-4 col-sm-2 col-md-2 align-right">
+															<button type="button" class="btn btn-link primary-link calculator-toggle first hidden" data-calculator>
+																<i class="icon icon-add"></i>
+															</button>
+															<button type="button" class="btn btn-link primary-link calculator-toggle round second" data-calculator>
+																<i class="icon icon-tick"></i>
+																<span class="count">2</span>
+															</button>
+															<div class="calculator" data-max="99" data-min="0">
+																<button type="button" class="btn action-btn minus">
+																	<i class="icon icon-remove"></i>
+																</button>
+																<input type="number" value="2" class="value-input">
+																<button type="button" class="btn action-btn plus">
+																	<i class="icon icon-add"></i>
+																</button>
+															</div>
+														</div>
+														<div class="col-xs-12 col-sm-2 col-md-2 price-cover">
+															<div class="price bold">
+																20 200,00
+																<i class="icon icon-rouble"></i>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+											<!-- catalog-item -->
+											<div class="catalog-item">
+												<div class="title-item line-row unavailable-item">
+													<div class="row">
+														<div class="col-xs-8 col-sm-4 col-md-5">
+															<a href="#" class="dark-link">Йогурт натуральный 3,5%, 0,15кг*12шт., "Активия”</a>
+														</div>
+														<div class="col-sm-2 col-md-1 counter">
+															Шт.
+														</div>
+														<div class="col-xs-6 col-sm-2 col-md-2">
+															<div class="danger-color">нет в наличии</div>
+														</div>
+														<div class="col-xs-4 col-sm-2 col-md-2 align-right hidden-xs"></div>
+														<div class="col-xs-6 col-sm-2 col-md-2 right-xs">
+															<button type="button" class="btn btn-link success-link before-icon" data-call="#popupItems">
+																<i class="icon icon-circling-arrows"></i>
+																<span class="hide-sm">Подобрать замену</span>
+																<span class="show-sm">Заменить</span>
+															</button>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<!-- / catalog-table -->
+								</form>
+							</div>
+						</div>
+					</div>
+				</section>
+				<section class="form-calendar-section">
+					<div class="container">
+						<h2 class="title">Дата и адрес доставки</h2>
+						<div class="row">
+							<div class="col-xs-12 col-md-7">
+								<form action="#" class="validate-form calendar-form">
+									<div class="row">
+										<div class="col-xs-12 col-sm-8">
+											<div class="date-group">
+												<div class="text">Дата доставки:</div>
+												<input type="text" value="12 декабря 2018" id="setDate" readonly>
+											</div>
+										</div>
+										<div class="col-xs-12 col-sm-4">
+											<button class="btn calendar-btn" type="button">
+												<i class="icon icon-calendar"></i>
+												Изменить дату
+											</button>
+											<div class="js-single" data-calendar="#setDate"></div>
+										</div>
+									</div>
+									<div class="select-group">
+										<select name="address" class="select">
+											<option value="ул. Восстания, дом 1, ТЦ “”Невский центрр, 2 этаж">ул. Восстания, дом 1, ТЦ “”Невский центрр, 2 этаж</option>
+											<option value="Московский пр., 141, Санкт-Петербург">Московский пр., 141, Санкт-Петербург</option>
+											<option value="Кировский р-н, Санкт-Петербург, Россия">Кировский р-н, Санкт-Петербург, Россия</option>
+										</select>
+									</div>
+									<div class="form-group">
+										<textarea class="input textarea bordered" placeholder="Комментарий"></textarea>
+									</div>
+									<div id="linkTablet" class="link-tablet"></div>
+									<ul class="btn-list clear block-xs">
+										<li class="item">
+											<button class="btn success-btn" type="submit">Подтвердить заказ</button>
+										</li>
+										<li class="item">
+											<a href="basket.html" class="btn btn-simple">Вернуться к корзине</a>
+										</li>
+									</ul>
+								</form>
+							</div>
+							<div class="col-xs-12 col-md-5 col-lg-4 col-lg-offset-1 large-btn-cover" id="linkDesktop">
+								<button type="button" class="btn btn-link primary-link catalog-link" data-desktop="#linkDesktop" data-tablet="#linkTablet">
+									<i class="icon icon-list-add gray-icon"></i>
+									Добавить товары из каталога
+									<span class="text">Товары, которые уже в заказе, <br>сохранятся</span>
+								</button>
+							</div>
+						</div>
+					</div>
+				</section>
+			</div>
+		</main>
+
+		<!-- main-footer -->
+		#=include includes/account-footer.html
+		<!-- / main-footer -->
+	</div>
+
+	<!-- popups -->
+	#=include includes/popup-login.html
+	#=include includes/popup-call.html
+	#=include includes/popup-request.html
+	#=include includes/popup-success.html
+	#=include includes/popup-items.html
+
+	<!-- script -->
+	<script src="js/lib/jquery.min.js"></script>
+
+	<script src="js/plugins/jquery.maskedinput.min.js"></script>
+	<script src="js/plugins/jquery.selecter.js"></script>
+	<script src="js/plugins/owl.carousel.min.js"></script>
+	<script src="js/plugins/simpleLightbox.js"></script>
+	<script src="js/plugins/pickmeup.min.js"></script>
+
+	<script src="js/main.js"></script>
+
+	<script src="js/init/accordeon.js"></script>
+	<script src="js/init/aside-menu.js"></script>
+	<script src="js/init/data-toggle.js"></script>
+	<script src="js/init/dots-slider.js"></script>
+	<script src="js/init/datepicker-init.js"></script>
+	<script src="js/init/main-menu.js"></script>
+	<script src="js/init/mask.js"></script>
+	<script src="js/init/calculator.js"></script>
+	<script src="js/init/popup.js"></script>
+	<script src="js/init/scrollspy.js"></script>
+	<script src="js/init/selecter-init.js"></script>
+	<script src="js/init/tabs.js"></script>
+	<script src="js/init/validation.js"></script>
+	<script src="js/init/input-action.js"></script>
+
+</body>
+</html>

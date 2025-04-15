@@ -1,0 +1,16 @@
+/*primary font*/
+$pt: 'PT Sans Caption';
+$abh: 'Abhaya Libre';
+$din: 'DIN Alternate';
+$myr: 'Myriad Pro';
+
+$font: $pt;
+
+$primary: #3EB5F1;
+$secondary: #009FE3;
+$danger: #FF6347;
+$gray: #999;
+
+/*link*/
+$link: $primary;
+$link-hover: lighten($primary, 10%);

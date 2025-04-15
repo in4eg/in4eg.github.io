@@ -1,0 +1,137 @@
+/*primary font*/
+.choose-section {
+  background-image: url(../img/choose-section-back1.png), url(../img/choose-section-back2.png), url(../img/category-back3.png);
+  background-repeat: no-repeat, no-repeat, no-repeat;
+  background-position: 20% top, right -60px, left 180px; }
+  .choose-section.simple {
+    background-image: none;
+    background-color: #f7f7f7; }
+  .choose-section .choose-slider {
+    font-size: 0;
+    margin: 0 -15px; }
+    .choose-section .choose-slider .item {
+      padding: 40px 15px;
+      width: 33.33%;
+      display: inline-block;
+      vertical-align: top;
+      padding-left: 135px;
+      position: relative; }
+      .choose-section .choose-slider .item .digit {
+        color: #999;
+        font-size: 225px;
+        font-weight: 100;
+        line-height: 1;
+        position: absolute;
+        top: 24px;
+        left: 0; }
+      .choose-section .choose-slider .item .item-icon {
+        height: 90px;
+        width: 90px;
+        margin-bottom: 15px; }
+      .choose-section .choose-slider .item .caption {
+        display: inline-block;
+        vertical-align: top; }
+        .choose-section .choose-slider .item .caption .title {
+          color: #000;
+          font-family: "Circe", sans-serif;
+          font-size: 30px;
+          font-weight: 700;
+          line-height: 48px;
+          margin: 0 0 18px; }
+          .choose-section .choose-slider .item .caption .title span {
+            padding: 0 25px;
+            background-color: #ffe932; }
+        .choose-section .choose-slider .item .caption .paragraph {
+          color: #000;
+          font-size: 16px;
+          font-weight: 300;
+          line-height: 30px; }
+  .choose-section .slider-nav {
+    display: none; }
+
+@media (max-width: 1231px) {
+  .choose-section .choose-slider .item {
+    width: 50%; }
+    .choose-section .choose-slider .item .caption .title {
+      font-size: 24px;
+      line-height: 38px; }
+      .choose-section .choose-slider .item .caption .title span {
+        padding: 0 15px; }
+    .choose-section .choose-slider .item .digit {
+      font-size: 192px; }
+    .choose-section .choose-slider .item.hidden-digit {
+      padding: 15px; }
+      .choose-section .choose-slider .item.hidden-digit .caption {
+        display: block;
+        font-size: 0; }
+        .choose-section .choose-slider .item.hidden-digit .caption .item-icon {
+          display: inline-block;
+          vertical-align: middle;
+          width: 90px;
+          margin: 0 20px 0 0; }
+        .choose-section .choose-slider .item.hidden-digit .caption .paragraph {
+          display: inline-block;
+          vertical-align: middle;
+          margin: 0;
+          width: calc(100% - 110px); }
+      .choose-section .choose-slider .item.hidden-digit .digit {
+        display: none; } }
+
+@media (max-width: 767px) {
+  .choose-section {
+    background-image: none; }
+    .choose-section .choose-slider {
+      white-space: nowrap;
+      overflow: hidden;
+      margin: 0; }
+      .choose-section .choose-slider .item {
+        width: 100%;
+        display: inline-block;
+        white-space: normal;
+        padding-left: 79px;
+        display: none;
+        min-height: 144px;
+        cursor: default; }
+        .choose-section .choose-slider .item.active {
+          display: block; }
+        .choose-section .choose-slider .item.hidden-digit {
+          padding: 0;
+          height: auto;
+          min-height: auto; }
+        .choose-section .choose-slider .item .caption .title {
+          background-color: #ffe932;
+          display: inline-block;
+          padding: 5px 10px 0;
+          font-size: 0;
+          line-height: 30px;
+          margin-bottom: 10px; }
+          .choose-section .choose-slider .item .caption .title br {
+            display: none; }
+          .choose-section .choose-slider .item .caption .title span {
+            font-size: 18px;
+            /*background-color: transparent;*/
+            padding: 0;
+            line-height: 30px;
+            margin-right: 7px; }
+            .choose-section .choose-slider .item .caption .title span:last-child {
+              margin-right: 0; }
+        .choose-section .choose-slider .item .digit {
+          font-size: 144px;
+          left: -7px;
+          top: 30px; }
+    .choose-section .slider-nav {
+      font-size: 0;
+      margin: 0;
+      display: block; }
+      .choose-section .slider-nav .dot {
+        display: inline-block;
+        cursor: pointer;
+        padding: 10px; }
+        .choose-section .slider-nav .dot span {
+          height: 6px;
+          width: 6px;
+          display: block;
+          background-color: #dedede;
+          transition: background-color .3s; }
+        .choose-section .slider-nav .dot.active span {
+          background-color: #00ac5e; } }

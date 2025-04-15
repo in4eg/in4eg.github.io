@@ -1,0 +1,85 @@
+/*proxima*/
+@font-face {
+	font-family: Proxima;
+	src: url(../fonts/proxima/Thin.otf);
+	font-weight: 100;
+	font-style: normal;
+}
+@font-face {
+	font-family: Proxima;
+	src: url(../fonts/proxima/Light.otf);
+	font-weight: 300;
+	font-style: normal;
+}
+@font-face {
+	font-family: Proxima;
+	src: url(../fonts/proxima/Regular.otf);
+	font-weight: 400;
+	font-style: normal;
+}
+@font-face {
+	font-family: Proxima;
+	src: url(../fonts/proxima/Semibold.otf);
+	font-weight: 500;
+	font-style: normal;
+}
+@font-face {
+	font-family: Proxima;
+	src: url(../fonts/proxima/Bold.otf);
+	font-weight: 700;
+	font-style: normal;
+}
+
+/*bebas*/
+@font-face {
+	font-family: Bebas;
+	src: url(../fonts/bebas/Thin.otf);
+	font-weight: 100;
+	font-style: normal;
+}
+@font-face {
+	font-family: Bebas;
+	src: url(../fonts/bebas/Light.otf);
+	font-weight: 300;
+	font-style: normal;
+}
+@font-face {
+	font-family: Bebas;
+	src: url(../fonts/bebas/Regular.otf);
+	font-weight: 400;
+	font-style: normal;
+}
+@font-face {
+	font-family: Bebas;
+	src: url(../fonts/bebas/Bold.otf);
+	font-weight: 700;
+	font-style: normal;
+}
+
+/*PT SANS*/
+@font-face {
+	font-family: PTSans;
+	src: url(../fonts/pt/PTSans.ttc);
+	font-weight: 400;
+	font-style: normal;
+}
+
+/*primary font*/
+$font: Proxima, sans-serif;
+/*secondary font*/
+$font2: Bebas, sans-serif;
+$font3: PTSans, sans-serif;
+
+$green: #75c3b7;
+$purple: #732379;
+$yellow: #d9e021;
+
+$blink1: $yellow;
+$blink2: $purple;
+$blink3: $yellow;
+$blink4: $green;
+
+/*link*/
+$link: $purple;
+$link-hover: darken($purple, 20);
+

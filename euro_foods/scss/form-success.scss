@@ -1,0 +1,79 @@
+@import 'variables.scss';
+
+.form-success {
+	background-color: $success;
+	color: #fff;
+	padding: 100px 0;
+
+	.title {
+		color: #fff;
+		font-size: 30px;
+		font-weight: 700;
+		line-height: 40px;
+		padding-right: 70px;
+	}
+	.paragraph {
+		color: #fff;
+		font-size: 30px;
+		font-weight: 300;
+		line-height: 40px;
+		padding-right: 70px;
+	}
+}
+.form-success-wrap {
+	overflow: hidden;
+}
+@media (max-width: 1231px) {
+
+	.form-success {
+		padding: 60px 0;
+
+		.title,
+		.paragraph {
+			font-size: 24px;
+			line-height: 30px;
+			padding-right: 0;
+		}
+	}
+}
+@media (max-width: 993px) {
+
+	.form-success {
+		margin-left: -15px;
+		margin-right: -15px;
+		padding-left: 15px;
+		padding-right: 15px;
+
+		&.spaced-top-sm {
+			margin-top: 40px;
+		}
+	}
+
+}
+@media (max-width: 767px) {
+
+	.form-success-wrap {
+		display: block;
+		padding: 0 15px;
+	}
+	.form-success {
+		padding-top: 40px;
+		padding-bottom: 40px;
+
+		&.large {
+			padding-left: 0;
+			padding-right: 0;
+		}
+
+		&.spaced-top-sm {
+			margin-top: 0px;
+		}
+
+		.title {
+			margin-bottom: 0px;
+		}
+		.form-cover {
+			margin-top: 30px;
+		}
+	}
+}

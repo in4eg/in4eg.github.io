@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+	<meta charset="UTF-8">
+	<meta name="theme-color" content="#732379">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+	<meta name="format-detection" content="telephone=no">
+	
+	<title>Casper</title>
+
+	<link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
+	<link rel="stylesheet" href="css/bundle.min.css">
+
+</head>
+<body>
+
+	#=include includes/header.html
+
+	<main id="main-page">
+
+		<section class="hero-section large section">
+			<div class="verticaly-middle">
+				<div class="inner">
+					<div class="container">
+
+						#=include includes/logo.html
+
+						<div class="content">
+							<div class="caption form-title">ETHEREUM КОШЕЛЕК</div>
+							<form action="" class="wallet-form validate-form inline-form no-select" id="copied-form">
+								<div class="form-group inline-group" onmousedown="return false;" onclick="return true;">
+									<div class="input transparent input-shadow" id="copied">ox872dB420jdkap34518874jkldPewhnBxukdiu3dfwer740lkjs43435lpl</div>
+									<!-- <input type="text" class="input transparent input-shadow" id="copied" value="ox872dB420jdkap34518874jkldPewhnBxukdiu3dfwer740lkjs43435lpl"> -->
+								</div>
+								<div class="btn-group">
+									<div class="btn btn-invert blocked no-focus" id="copybtn" data-call="#popupCopied">Copy</div>
+								</div>
+								<div class="form-group checkbox-group">
+									<input type="checkbox" class="checkbox" id="agreetment">
+									<span class="label-caption">
+										<label for="agreetment" class="checkbox-label">Согласен</label>
+										c
+										<a href="#" class="dashed-link">договором оферты</a>
+										и
+										<a href="#" class="dashed-link">пользовательским соглашением</a>
+									</span>
+								</div>
+							</form>
+
+							#=include includes/rocket-purple-main.html
+
+							<div class="caption">
+								ПЕРВАЯ ПЛАТФОРМА ДЕЦЕНТРАЛИЗИРОВАННОГО ОБЛАЧНОГО ХРАНЕНИЯ <br>
+								ДАННЫХ ДЛЯ DAPPS С УНИВЕРСАЛЬНЫМ API (CASPER API) 
+							</div>
+							<div class="main-title">
+								<span>ДЕЦЕНТРАЛИЗАЦИЯ ХРАНЕНИЯ ДАННЫХ</span><br>
+								<span>НОВЫЕ ВОЗМОЖНОСТИ ДЛЯ DAPPS</span><br>
+								<span>SMART-CONTRACT ЛЮБОГО BLOCKCHAIN</span>
+							</div>
+							<form action="#" class="sign-form validate-form form-head" data-success="#popupThanks">
+								<button class="btn call-btn" type="button">Подпишись</button>
+								<div class="form-group">
+									<input type="text" class="transparent-input input email" placeholder="Введите email">
+								</div>
+								<button class="btn btn-round" type="submit" data-success="#popupThanks">
+									<i class="icon icon-plane"></i>
+								</button>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- цель -->
+		<section class="section idea-section scroll-purple" id="idea">
+			<div class="container">
+				<figure class="section-logo">
+					<img src="img/logo-typical.svg" alt="casper">
+				</figure>
+				<h1 class="section-title">Casper Api для DApps</h1>
+				<div class="row middle-xs">
+					<div class="col-xs-10 col-sm-9">
+							<p class="paragraph primary">
+								Casper создается, чтобы ваш DApp мог более эффективно и надежно хранить информацию ваших пользователей
+							</p>
+							<p class="paragraph primary">
+								Мы хотим видеть бурное развитие DApps, вне зависимости от блокчейн-платформы.
+								Чтобы облегчить задачу по созданию собственного DApp, мы снимаем с разработчиков вопросы по хранению данных их пользователей, благодаря нашему Casper API.
+								DApp на любой  блокчейн-платформе со смарт-контрактом может использовать наш API для нужд хранения любого типа данных.
+							</p>
+						<div class="section-title">ПЕРЕДОВЫЕ ТЕХНОЛОГИИ CASPER:</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-xs-12 col-sm-4 card-cover first-card scroll-yellow">
+						<div class="card">
+							<div class="title">CONVENIENCE</div>
+							<ul class="clear list">
+								<li>P2P для быстрой доставки файлов</li>
+								<li>Ethereum на proof of stake</li>
+								<li>Smart-Contract любого blokchain</li>
+							</ul>
+							<img src="img/4.svg" alt="">
+						</div>
+					</div>
+					<div class="col-xs-12 col-sm-4 card-cover secound-card scroll-yellow">
+						<div class="card">
+							<div class="title">SAFETY</div>
+							<ul class="clear list">
+								<li>Reliable coding of files</li>
+								<li>Files split into parts</li>
+							</ul>
+							<img src="img/2.svg" alt="">
+						</div>
+					</div>
+					<div class="col-xs-12 col-sm-4 card-cover third-card scroll-yellow">
+						<div class="card">
+							<div class="title">Reliability</div>
+							<ul class="clear list">
+								<li>No single point of failur</li>
+								<li>Duplication of parts</li>
+								<li>Dynamic analysis and correction of failures</li>
+							</ul>
+							<img src="img/3.svg" alt="">
+						</div>
+					</div>
+				</div>
+				<div class="casper translate-left">
+					<img src="img/tech2.svg" alt="">
+				</div>
+			</div>
+		</section>
+		<!-- / цель -->
+
+		<!-- rocket -->
+		#=include includes/rocket-purple.html
+		<!-- / rocket -->
+
+		<!-- цель -->
+		<section class="section spaced-section scroll-purple" id="goal">
+			<div class="container">
+				<figure class="section-logo">
+					<img src="img/logo-typical.svg" alt="casper">
+				</figure>
+				<div class="row middle-xs">
+					<div class="col-xs-12 col-sm-6">
+						<div class="section-title large">Цель</div>
+						<p class="paragraph primary">
+							После отработки технологии хранения и стабилизации экосистемы Casper, мы переходим ко второй стадии проекта, формируя сеть децентрализованных быстродоступных распределенных виртуальных машин (используем HDD, CPU, RAM, GPU), для работы с запросами IoT, self-driving cars, AR/VR.
+						</p>
+						<p class="paragraph primary">
+							Все эти технологии требуют максимально оперативного отклика и подобная сеть сможет решить проблемы компаний из этих сфер бизнеса, что делает такое решение невероятно привлекательным для рынка.
+						</p>
+					</div>
+					<div class="col-xs-12 col-sm-6">
+						<div class="to-the-moon-wrapper">
+							#=include includes/to-the-moon.html
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- / цель -->
+
+		<section class="section small primary3-section">
+			<div class="container">
+				<div class="section-title align-center small">ПРИСОЕДИНЯЙТЕСЬ К НАМ</div>
+				<div class="row spaced-row translate-right">
+					<div class="col-xs-6 align-right">
+						<ul class="clear socials-list">
+							<li><a href="#"><i class="icon icon-plane"></i></a></li>
+							<li><a href="#"><i class="icon icon-facebook"></i></a></li>
+							<li><a href="#"><i class="icon icon-medium"></i></a></li>
+							<li><a href="#"><i class="icon icon-github"></i></a></li>
+							<li><a href="#"><i class="icon icon-bitcoin"></i></a></li>
+							<li><a href="#"><i class="icon icon-reddit"></i></a></li>
+							<li><a href="#"><i class="icon icon-twitter"></i></a></li>
+						</ul>
+					</div>
+					<div class="col-xs-6">
+						<form action="#" method="post" class="sign-form validate-form form-head" data-success="#popupThanks">
+							<button class="btn call-btn" type="button">Подпишись</button>
+							<div class="form-group">
+								<input type="text" class="transparent-input input email" placeholder="Введите email">
+							</div>
+							<button class="btn btn-round" type="submit" data-success="#popupThanks">
+								<i class="icon icon-plane"></i>
+							</button>
+						</form>
+					</div>
+				</div>
+				<div class="casper translate-right">
+					<img src="img/casper.svg" alt="">
+				</div>
+			</div>
+		</section>
+
+
+		<!-- технология -->
+		#=include includes/technology.html
+		<!-- / технология -->
+
+		<!-- mobile -->
+		<div class="business-mobile section" id="business-xs">
+			<div class="container">
+				<div class="paragraph primary">
+					Узнать больше о Casper можно <br> в следующих документах:
+				</div>
+				<div class="doc-tail line light">
+					<a href="test.txt" download class="letter-image">
+						<figure>
+							<img src="img/let2.svg" alt="">
+						</figure>
+					</a>
+					<div class="doc-info line">
+						<div class="title">
+							БИЗНЕС <br>МОДЕЛЬ
+						</div>
+						<div class="doc-button">
+							<a href="test.txt" download class="btn btn-small btn-invert">Скачать  <i class="icon icon-download"></i>
+							</a>
+						</div>
+					</div>
+				</div>
+				<div class="doc-tail line light">
+					<a href="test.txt" download class="letter-image">
+						<figure>
+							<img src="img/let4.svg" alt="">
+						</figure>
+					</a>
+					<div class="doc-info line">
+						<div class="title">
+							технология
+						</div>
+						<div class="doc-button">
+							<a href="test.txt" download class="btn btn-small btn-invert">Скачать  <i class="icon icon-download"></i>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- rocket -->
+		#=include includes/rocket-green.html
+		<!-- / rocket -->
+
+		<section class="section primary2-section scroll-yellow ico-section rocket-to-green" id="ico">
+			<div class="container">
+				<figure class="section-logo">
+					<img src="img/logo-yellow.svg" alt="casper">
+				</figure>
+				<div class="row middle-xs">
+					<div class="col-xs-6">
+						<div class="section-title large">CASPER TOKEN (CST)</div>
+						<div class="paragraph">Владельцы CST получают следующие возможности:</div>
+						<ul class="clear point-list">
+							<li>Стать поставщиком ресурсов (1CST = до 256Gb) для обеспечения потребностей сервиса в хранении данных, получая за это вознаграждение</li>
+							<li>Сдать токен в аренду поставщику и получить часть его вознаграждения от использования вашего токена</li>
+							<li>Свободно продать токен на бирже по рыночной стоимости</li>
+						</ul>
+					</div>
+					<div class="col-xs-6">
+						<div class="pie-holder">
+							<div class="canvas">
+								<canvas id="myChart"></canvas>
+							</div>
+
+							<div class="helper-1">Pre-ico цена токена - $0,8 <span class="after"></span></div>
+							<div class="helper-2">ICO цена токена - $1,6 <span class="after"></span></div>
+							<div class="helper-3">РЕЗЕРВ вознаграждения <br>крупных инвесторов <span class="after"></span></div>
+							<div class="helper-4">Команда <span class="after"></span></div>
+							<div class="helper-5">РЕЗЕРВ СИСТЕМЫ <span class="after"></span></div>
+
+							<div class="text-1">2,2%</div>
+							<div class="text-2">44,4%</div>
+							<div class="text-3">13,4%</div>
+							<div class="text-4">15%</div>
+							<div class="text-5">25%</div>
+
+						</div>
+					</div>
+				</div>
+				<div class="timeline">
+					<ul class="clear">
+						<li>
+							<div class="point active">
+								<div class="placeholder up">2011 год</div>
+								<div class="helper">
+									<div class="caption">
+										Основание компании Legion Digital
+										<small>(outsource it-development agancy)</small>
+									</div>
+									<div class="title">2011 год</div>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="point">
+								<div class="placeholder down">май 2017</div>
+								<div class="helper">
+									<div class="caption">Возникновение идеи Casper</div>
+									<div class="title">май 2017</div>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="point">
+								<div class="placeholder up">ноябрь 2017</div>
+								<div class="helper">
+									<div class="caption">проведение pre-ICO</div>
+									<div class="title">ноябрь 2017</div>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="point">
+								<div class="placeholder down">январь 2017</div>
+								<div class="helper">
+									<div class="caption">разработка прототипа Casper</div>
+									<div class="title">январь 2017</div>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="point">
+								<div class="placeholder up">февраль 2018</div>
+								<div class="helper">
+									<div class="caption">проведение ICO</div>
+									<div class="title">февраль 2018</div>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="point">
+								<div class="placeholder down">июнь 2018</div>
+								<div class="helper">
+									<div class="caption">Выход альфа-версии Casper</div>
+									<div class="title">июнь 2018</div>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="point">
+								<div class="placeholder up">август 2018</div>
+								<div class="helper">
+									<div class="caption">Выход бета-версии Casper</div>
+									<div class="title">август 2018</div>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="point">
+								<div class="placeholder down">декабрь 2018</div>
+								<div class="helper right-origin">
+									<div class="caption">релиз проекта</div>
+									<div class="title">декабрь 2018</div>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="point">
+								<div class="placeholder up">2019</div>
+								<div class="helper right-origin">
+									<div class="caption">
+										глобальное подключение поставщиков
+									</div>
+									<div class="title">2019</div>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="point disabled">
+								<div class="placeholder down">Реализация баз данных</div>
+							</div>
+						</li>
+						<li>
+							<div class="point disabled">
+								<div class="placeholder up">
+									CASPER API ДЛЯ <br>
+									ДЕЦЕНТРАЛИЗИРОВАННЫХ <br>
+									ВЫЧИСЛЕНИЙ
+								</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</section>
+
+
+		<!-- advantages -->
+		<section class="section small primary3-section advantages-section scroll-purple">
+			<div class="container">
+				<div class="section-title align-center small">Дополнительные преимущества для владельцев CST</div>
+				<ul class="ordered-list clear">
+					<li>Наличие 1 CST = 1 GB хранилища</li>
+					<li>Casper DeStorage это сервис <br> облачного хранения файлов</li>
+					<li>Первый DApp работающий <br> на Casper API</li>
+				</ul>
+			</div>
+			<figure class="animation-move casper">
+				<img src="img/casper.svg" alt="casper">
+			</figure>
+		</section>
+		<!-- / advantages -->
+
+		
+		<!-- бизенес модеь -->
+		#=include includes/business-model.html
+		<!-- / бизенес модеь -->
+
+		<!-- video -->
+		#=include includes/video.html
+		<!-- / video -->
+
+		<!-- команда -->
+		#=include includes/command.html
+		<!-- / команда -->
+
+		<!-- rocket -->
+		#=include includes/rocket-yellow.html
+		<!-- / rocket -->
+
+		<!-- документы -->
+		#=include includes/document.html
+		<!-- / документы -->
+
+	</main>
+
+	<!-- scroll-top -->
+	<button class="scroll-top-btn">
+		<svg xmlns="http://www.w3.org/2000/svg" width="60" height="89" viewBox="0 0 60 89">
+			<g fill="none" fill-rule="evenodd">
+				<g stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+					<path class="to-darkgreen" fill="#671C6C" stroke="#671C6C" d="M16.351 26.474s-10.92 6.933-13.1 13.54C1.07 46.62 1 50.424 1 50.424h11.193M42.115 25.985s11.566 7.422 13.747 14.029c2.18 6.606 2.285 10.807 2.285 10.807l-11.357-.095"/>
+					<path class="to-green" fill="#732379" stroke="#732379" d="M19 50.673v9.894h21.648v-9.752"/>
+					<path fill="#D9E021" stroke="#D9E021" d="M29.518 87.753l-7.426-13.31S20.606 65 29.572 65c8.967 0 7.75 8.993 7.75 8.993l-7.804 13.76z"/>
+					<path class="to-green" fill="#732379" stroke="#732379" d="M29.424 1c9.134-.078 17.421 49.731 17.421 49.731L12 50.487S20.29 1.079 29.424 1z"/>
+				</g>
+				<path fill="#FFF" fill-rule="nonzero" d="M37.585 37.707l-7.092-7.292A1.378 1.378 0 0 0 29.5 30a1.32 1.32 0 0 0-.982.415l-7.103 7.292a1.409 1.409 0 0 0-.415 1.02c0 .402.138.738.415 1.007l.818.84c.262.284.59.426.982.426.393 0 .72-.142.982-.426l5.303-5.433 5.303 5.433c.262.284.59.426.982.426.386 0 .717-.142.993-.426l.818-.84c.27-.276.404-.612.404-1.008s-.138-.736-.415-1.02z"/>
+			</g>
+		</svg>
+
+	</button>
+
+	#=include includes/footer.html
+	#=include includes/popup-thanks.html
+	#=include includes/popup-form.html
+	#=include includes/popup-copied.html
+
+
+
+	<script src="js/bundle.js"></script>
+
+
+</body>
+</html>

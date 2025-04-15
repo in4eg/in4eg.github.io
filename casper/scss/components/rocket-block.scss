@@ -1,0 +1,393 @@
+.rocket-block {
+	padding: 20px 0;
+	position: relative;
+	z-index: 2;
+	width: calc(100% - 70px);
+	margin: 0 auto;
+
+	&.title-inside {
+
+		.title {
+			width: 237px; height: 44px;
+			background-color: #732379;
+			position: absolute;
+			top: 22px; right: 0;
+			font-size: 30px;
+			line-height: 44px;
+		}
+	}
+	.title {
+		font-size: 15px;
+		font-weight: 600;
+		color: #fff;
+		text-align: center;
+		margin: 0 0 15px;
+	}
+}
+.progress {
+	position: relative;
+
+	progress {
+		position: absolute;
+		width: 0; height: 0;
+		left: -100%;
+	}
+
+	.progress-value {
+		color: #fff;
+		text-align: left;
+		font-size: 40px;
+		font-weight: 600;
+	}
+
+	.progress-bg {
+		background-color: darken($green, 10%);
+		position: relative;
+		height: 40px;
+		border-radius: 24px;
+		margin: 25px 0;
+	}
+	.progress-bar {
+		background-image: linear-gradient(to left, #f7fc6b, #dde420);
+		height: 100%;
+		position: absolute;
+		top: 0; left: 0;
+		border-radius: 24px 0 0 24px;
+
+		&:before {
+			animation: progress-bar 1s linear infinite;
+			background-image: linear-gradient(-45deg,rgba(255,255,255,.15) 25%,transparent 25%,transparent 50%,rgba(255,255,255,.15) 50%,rgba(255,255,255,.15) 75%,transparent 75%,transparent);
+			background-size: 20px 20px;
+			position: absolute;
+			content: '';
+			top: 0; left: 0;
+			width: 100%; height: 100%;
+			border-radius: 24px 0 0 24px;
+		}
+		.rocket {
+			height: 56px; width: 85px;
+			position: absolute;
+			right: -35px; top: 50%;
+			transform: translateY(-50%);
+			z-index: 3;
+
+			svg {
+				width: 100%; height: 100%;
+			}
+
+			&:before,
+			&:after {
+				content: '';
+				display: block;
+				position: absolute;
+				top: 50%; left: 0%;
+				margin-top: -2px;
+				border-radius: 50%;
+				width: 5px; height: 5px;
+				background: #D9E021;
+				transform: scale(0);
+			}
+			&:before {
+				animation: flame .5s infinite linear;
+			}
+			&:after {
+				animation: flame .5s .25s infinite linear;
+			}
+		}
+	}
+}
+
+.progress-caption {
+	display: table;
+	table-layout: fixed;
+	width: 100%;
+	margin-top: 45px;
+
+	.caption-block {
+		display: table-cell;
+		text-align: center;
+		color: #fff;
+		font-size: 22px;
+		font-weight: 500;
+		text-transform: uppercase;
+
+		&:last-child {
+			text-align: right;
+		}
+		&:first-child {
+			text-align: left;
+		}
+	}
+	.tooltip-cover {
+		color: $yellow;
+		border-bottom: 1px dashed $yellow;
+		display: inline-block;
+		position: relative;
+		white-space: normal;
+
+		.anchor {
+			cursor: pointer;
+		}
+		sup {
+			font-size: 14px;
+		}
+		.inner {
+			position: absolute;
+			display: none;
+			background-color: $yellow;
+			background-image: url(../img/casper.svg);
+			background-repeat: no-repeat;
+			background-size: 50px 50px;
+			background-position: 260px 60px;
+			box-shadow: 0 0 14px 0 rgba(0, 0, 0, 0.03), 0 6px 14px 0 rgba(0, 0, 0, 0.05);
+			border-radius: 4px;
+			left: 50%;
+			transform: translateX(-50%);
+			color: $purple;
+			padding: 20px;
+			width: 290px;
+			z-index: 3;
+			text-align: left;
+			text-transform: none;
+
+			.paragraph {
+				margin: 0 0 15px;
+				font-weight: 400;
+				font-size: 14px;
+
+				&:last-child {
+					margin-bottom: 0;
+				}
+				.bold {
+					font-weight: 600;
+				}
+			}
+			.close {
+				position: absolute;
+				top: 5px; right: 5px;
+				width: 30px; height: 30px;
+				line-height: 30px;
+				text-align: center;
+				border-radius: 4px;
+				border: none;
+				background: 0 0;
+				font-size: 32px;
+				font-weight: 100;
+				font-family: Proxima,sans-serif;
+				cursor: pointer;
+				opacity: .5;
+				transition: .2s;
+
+				&:hover {
+					opacity: 1;
+				}
+			}
+
+			&:after {
+				content: '';
+				position: absolute;
+				border: 10px solid transparent;
+				left: 50%;
+				transform: translateX(-50%);
+			}
+		}
+		&.bottom {
+
+			.inner {
+				top: 100%;
+				margin-top: 20px;
+
+				&:after {
+					bottom: 100%;
+					border-bottom: 10px solid $yellow;
+				}
+			}
+		}
+		&.top {
+
+			.inner {
+				bottom: 100%;
+				margin-bottom: 20px;
+
+				&:after {
+					top: 100%;
+					border-top: 10px solid $yellow;
+				}
+			}
+		}
+		&.active {
+
+			.inner {
+				display: block;
+			}
+		}
+	}
+}
+.rocket-block.purple {
+
+	.progress {
+
+		.progress-bg {
+			background-color: darken($purple, 10%);
+		}
+	}
+}
+.rocket-block.yellow {
+
+	.title {
+		color: $purple;
+	}
+	.progress-caption {
+
+		.caption-block {
+			color: $purple;
+		}
+		.tooltip-cover {
+			color: $green;
+			border-bottom-color: $green;
+			white-space: normal;
+
+			.inner {
+				background-color: $green;
+			}
+			&.top {
+
+				.inner {
+
+					&:after {
+						border-top-color: $green;
+					}
+				}
+			}
+		}
+	}
+	.progress {
+
+		.progress-bar {
+			background-image: linear-gradient(to left, #9c34a4, #671c6c);
+		}
+		.progress-bg {
+			background-color: darken($yellow, 5%);
+		}
+	}
+}
+@-webkit-keyframes progress-bar {
+	0% {
+		background-position: 0 0;
+	}
+	100% {
+		background-position: -40px 0;
+	}
+}
+@-moz-keyframes progress-bar {
+	0% {
+		background-position: 0 0;
+	}
+	100% {
+		background-position: -40px 0;
+	}
+}
+@keyframes progress-bar {
+	0% {
+		background-position: 0 0;
+	}
+	100% {
+		background-position: -40px 0;
+	}
+}
+
+@keyframes flame {
+	0% {
+		transform: translateY(0) scale(0);
+	}
+	100% {
+		transform: translateX(-10px) scale(1);
+	}
+}
+
+@media (max-width: 992px){
+	.progress-caption {
+
+		.tooltip-cover {
+
+			.inner {
+				margin-left: -15px;
+
+				&:after {
+					margin-left: 15px;
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: 640px){
+
+	.progress {
+
+		.progress-value {
+			font-size: 35px;
+			margin-left: -18px;
+		}
+	}
+	.rocket-block {
+		padding: 0;
+		width: calc(100% - 45px);
+
+		&.title-inside {
+
+			.title {
+				width: 110px; height: 31px;
+				line-height: 30px;
+				font-size: 13px;
+				top: 11px; right: -18px;
+			}
+		}
+	}
+	.progress-caption {
+		display: flex;
+		flex: 0 1 auto;
+		flex-direction: row;
+		flex-wrap: wrap;
+		margin-top: 35px;
+		margin: 0 -18px;
+		width: auto;
+
+		.caption-block {
+			order: 1;
+			width: 100%;
+			flex-basis: 100%;
+			max-width: 100%;
+			white-space: nowrap;
+
+			&:first-child {
+				width: 50%;
+				flex-basis: 50%;
+				max-width: 50%;
+				order: 2;
+				margin-top: 15px;
+			}
+			&:last-child {
+				width: 50%;
+				flex-basis: 50%;
+				max-width: 50%;
+				order: 2;
+				margin-top: 15px;
+			}
+		}
+	}
+	.progress-caption {
+
+		.tooltip-cover {
+
+			.inner {
+				margin-left: -45px;
+
+				&:after {
+					margin-left: 45px;
+				}
+			}
+		} 
+	}
+}
+

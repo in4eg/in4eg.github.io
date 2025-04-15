@@ -1,0 +1,753 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+	<meta charset="UTF-8">
+	<title>M-Style :: Service Page</title>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+	<meta name="format-detection" content="telephone=no">
+
+	<link rel="stylesheet" href="css/_bundle.min.css">
+
+</head>
+<body>
+
+	<header class="main-header">
+		<div class="sub-head">
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-sm-7" id="miniNavDesktop">
+						<ul class="clear menu" data-mobile="#miniNavMobile" data-desktop="#miniNavDesktop">
+							<li><a href="#">О компании</a></li>
+							<li><a href="#">Работа у нас</a></li>
+							<li><a href="#">Консультант плюс</a></li>
+						</ul>
+					</div>
+					<div class="col-xs-12 col-sm-5 align-right">
+						ВАШ ГОРОД:&nbsp;
+						<div class="dropdown" data-dropdown>
+							<button class="anchor">Санкт-петербург</button>
+							<ul class="dropdown-menu">
+								<li><a href="#">Санкт-петербург</a></li>
+								<li><a href="#">Москва</a></li>
+								<li><a href="#">Екатеринбург</a></li>
+								<li><a href="#">Тюмень</a></li>
+								<li><a href="#">нижний новгород</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="main-head">
+			<div class="container-fluid">
+				<div class="row collapsed-row collapse-right">
+					<div class="col-xs-2">
+						<a href="index.html" class="logo">
+							<img src="img/logo.png" alt="">
+						</a>
+					</div>
+					<div class="col-xs-10 col-md-7 align-right menu-toggle-col">
+						<a class="phone" href="tel:78122449595"><i class="icon icon-points"></i>+7 (812) 244-95-95</a>
+						<a class="phone" href="tel:88002000226">8-800-2000-226</a>
+						<div class="dropdown large dropdown-window" data-dropdown>
+							<button class="anchor">
+								<i class="icon icon-phone"></i>
+								<span>Заказать звонок</span>
+							</button>
+							<div class="dropdown-menu">
+								<form action="#" class="form validate-form">
+									<div class="success-fadeout">
+										<div class="form-group">
+											<input id="userName" type="text" class="input">
+											<label for="userName">Имя</label>
+											<i class="icon icon-checked icon-success"></i>
+											<i class="icon icon-cancel icon-error"></i>
+										</div>
+										<div class="form-group">
+											<input id="userPhone" type="text" class="input" data-mask="+9(999) 999-99-99">
+											<label for="userPhone">Телефон</label>
+											<i class="icon icon-checked icon-success"></i>
+											<i class="icon icon-cancel icon-error"></i>
+										</div>
+									<!-- 	<div class="form-group">
+											<input id="userEmail" type="text" class="input email">
+											<label for="userEmail">Email</label>
+											<i class="icon icon-checked icon-success"></i>
+											<i class="icon icon-cancel icon-error"></i>
+										</div> -->
+										<button class="btn">Отправить</button>
+										<div class="success-fadein">
+											<div class="verticaly-middle">
+												<div class="inner">
+													Благодарим за вашу заявку! <br>
+													Наш пециалист свяжется с Вами <br> в течение 15 минут!
+												</div>
+											</div>
+										</div>
+									</div>
+								</form>
+							</div>
+						</div>
+						<button class="btn search-toggle">
+							<i></i><i></i>
+							<span class="icon icon-search"></span>
+						</button>
+						<button class="none btn main-menu-toggle" id="mainMenuToggle">
+							<i></i><i></i><i></i>
+						</button>
+					</div>
+					<div class="col-xs-3 search-col">
+						<form action="#" class="search-form">
+							<input type="text" class="input" placeholder="Поиск...">
+							<button class="btn"><i class="icon icon-search"></i></button>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="menu-head bordered-bottom">
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-xs-7" id="desktopMenuPlace">
+						<nav class="main-nav" data-desktop="#desktopMenuPlace" data-tablet="#mobileMenuPlace">
+							<ul class="clear">
+								<li class="active"><a href="#">Продукты</a></li>
+								<li><a href="#">Семинары и вебинары</a></li>
+								<li><a href="#">Услуги</a></li>
+								<li><a href="#">Тесты</a></li>
+								<li><a href="#">Контакты</a></li>
+							</ul>
+						</nav>
+					</div>
+					<div class="col-xs-5 collapse-right" id="userMenuDesktop">
+						<ul class="clear user-menu" data-tablet="#userMenuMobile" data-desktop="#userMenuDesktop">
+							<li><a href="#"><i class="icon icon-info"></i>Помощь</a></li>
+							<li><a href="#"><i class="icon icon-user"></i>Личный кабинет</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
+	
+	<div class="none mobile-nav">
+		<div class="head">
+			<div class="row">
+				<div class="col-xs-6">
+					<a href="#" class="logo">
+						<img src="img/logo.png" alt="">
+					</a>
+				</div>
+				<div class="col-xs-6 align-right">
+					<button class="btn" id="hideMainMenu">&times;</button>
+				</div>
+			</div>
+		</div>
+		<div id="userMenuMobile" class="inner"></div>
+		<div id="mobileMenuPlace" class="inner"></div>
+		<div id="miniNavMobile" class="inner"></div>
+	</div>
+
+	<main>
+
+		<section class="slider-outer">
+			<div class="slide-item inner">
+				<figure class="image">
+					<img src="temp/1.jpg" alt="">
+				</figure>
+				<div class="verticaly-middle">
+					<div class="inner">
+						<div class="container">
+							<div class="row">
+								<div class="col-xs-6">
+									<div class="breadcrumbs white">
+										<ul class="list">
+											<li><a href="#">Главная</a></li>
+											<li><a href="#">Услуги</a></li>
+											<li>Консультации</li>
+										</ul>
+									</div>
+									<div class="title bold">Консультации</div>
+									<a href="#order-form" class="btn btn-primary" data-scrollto="#order-form">Заказать</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+		</section>
+
+		<section class="section">
+			<div class="container small">
+				<div class="h3-title">Юридические и налоговые консультации</div>
+				<div class="paragraph">
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget.
+				</div>
+			</div>
+		</section>
+
+		<section class="blue-section white-back bordered-bottom bordered-top">
+			<div class="container">
+				<div class="h3-title align-center">Как происходит консультация?</div>
+				<ul class="list clear">
+					<li>
+						<div class="image"><i class="icon icon-hands"></i></div>
+						<div class="caption">Заполните форму обращения</div>
+						<div class="paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet</div>
+					</li>
+					<li>
+						<div class="image"><i class="icon icon-man"></i></div>
+						<div class="caption">Период рассмотра обращения</div>
+						<div class="paragraph">Устный ответ - до 8 рабочих часов<br> Письменный - до 4 рабочих дней</div>
+					</li>
+					<li>
+					<div class="image"><i class="icon icon-heart"></i></div>
+						<div class="caption">Получаете ответ</div>
+						<div class="paragraph">Вместе с подборкой документов, <br>на которые опирался эксперт.</div>
+					</li>
+				</ul>
+			</div>
+		</section>
+
+		<section class="section grey-section">
+			<div class="container">
+				<div class="row">
+					<div class="col-xs-7">
+						<div class="h3-title">Примеры консультации</div>
+					</div>
+					<div class="col-xs-5 align-right">
+						<div class="offset-top collapse--t" data-nav="review1">
+							<button class="btn btn-round btn-transparent prev">
+								<i class="icon icon-angle-left"></i>
+							</button>
+							<button class="btn btn-round btn-transparent next">
+								<i class="icon icon-angle-right"></i>
+							</button>
+						</div>
+					</div>
+				</div>
+				<div class="reviews-list owl-carousel slider" id="review1">
+					<div class="item two-part">
+						<div class="item-inner">
+							<div class="review">
+								<div class="h3-title">Вопрос</div>
+								<div class="text">
+									Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget.
+								</div>
+							</div>
+						</div>
+						<div class="item-inner">
+							<div class="review">
+								<div class="h3-title">Ответ эксперта</div>
+								<div class="text">
+									Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget.
+									Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget.
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="item two-part">
+						<div class="item-inner">
+							<div class="review">
+								<div class="h3-title">Вопрос</div>
+								<div class="text">
+									Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget.
+								</div>
+							</div>
+						</div>
+						<div class="item-inner">
+							<div class="review">
+								<div class="h3-title">Ответ эксперта</div>
+								<div class="text">
+									Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget.
+									Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget.
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="item two-part">
+						<div class="item-inner">
+							<div class="review">
+								<div class="h3-title">Вопрос</div>
+								<div class="text">
+									Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget.
+								</div>
+							</div>
+						</div>
+						<div class="item-inner">
+							<div class="review">
+								<div class="h3-title">Ответ эксперта</div>
+								<div class="text">
+									Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget.
+									Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget.
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="item two-part">
+						<div class="item-inner">
+							<div class="review">
+								<div class="h3-title">Вопрос</div>
+								<div class="text">
+									Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget.
+								</div>
+							</div>
+						</div>
+						<div class="item-inner">
+							<div class="review">
+								<div class="h3-title">Ответ эксперта</div>
+								<div class="text">
+									Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget.
+									Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget.
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="item two-part">
+						<div class="item-inner">
+							<div class="review">
+								<div class="h3-title">Вопрос</div>
+								<div class="text">
+									Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget.
+								</div>
+							</div>
+						</div>
+						<div class="item-inner">
+							<div class="review">
+								<div class="h3-title">Ответ эксперта</div>
+								<div class="text">
+									Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget.
+									Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget.
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section id="order-form">
+			<form action="#" class="reg-form simple-form validate-form" id="regForm2">
+				<div class="row success-fadeout">
+					<div class="col-xs-12">
+						<div class="h4-title spaced-bottom">Заявка на услугу (консультация)</div>
+					</div>
+					<div class="col-xs-6 col-sm-5 mobile-full">
+						<div class="form-group hide-form-group">
+							<input type="text" id="userCode" class="input ignored">
+							<label for="userCode">Код клиента</label>
+							<div class="caption">Вышлем условия и дополнительную информацию</div>
+							<i class="icon icon-checked icon-success"></i>
+							<i class="icon icon-cancel icon-error"></i>
+							<div class="alert">Код клиента не найден</div>
+							<button class="white-link" id="show-form-group" type="button">У меня нет кода клиента</button>
+						</div>
+						<div class="show-form-group">
+							<div class="form-group">
+								<input type="text" id="userIdent" class="input ignored">
+								<label for="userIdent">Введите Ваш ИНН</label>
+								<div class="caption">Ваш ИНН код</div>
+								<i class="icon icon-checked icon-success"></i>
+								<i class="icon icon-cancel icon-error"></i>
+								<div class="alert">Некорректный ввод</div>
+							</div>
+							<div class="form-group">
+								<input type="text" id="userIdent" class="input ignored">
+								<label for="userIdent">Название Вашей организации</label>
+								<div class="caption">Название Вашей организации</div>
+								<i class="icon icon-checked icon-success"></i>
+								<i class="icon icon-cancel icon-error"></i>
+								<div class="alert">Некорректный ввод</div>
+							</div>
+						</div>
+						<div class="form-group">
+							<input type="text" id="user2Email" class="input email">
+							<label for="user2Email">Email</label>
+							<div class="caption">Для письменной консультации</div>
+							<i class="icon icon-checked icon-success"></i>
+							<i class="icon icon-cancel icon-error"></i>
+							<div class="alert">Некорректный ввод</div>
+						</div>
+						<div class="form-group">
+							<input type="text" id="user2Name" class="input">
+							<label for="user2Name">Имя</label>
+							<div class="caption">Предпочитаем доверительные отношения</div>
+							<i class="icon icon-checked icon-success"></i>
+							<i class="icon icon-cancel icon-error"></i>
+							<div class="alert">Некорректный ввод</div>
+						</div>
+						<div class="form-group">
+							<input type="text" id="user2Phone" class="input" data-mask="+9 (999) 999-99-99">
+							<label for="user2Phone">Телефон</label>
+							<div class="caption">Для устной консультации</div>
+							<i class="icon icon-checked icon-success"></i>
+							<i class="icon icon-cancel icon-error"></i>
+							<div class="alert">Некорректный ввод</div>
+						</div>
+					</div>
+					<div class="col-xs-6 col-sm-5 col-sm-offset-1 mobile-full">
+						<div class="form-group text-area-group">
+							<div class="caption">Текст вашей заявки</div>
+							<textarea name="userComments" id="" class="input bordered-textarea" disabled placeholder="Поле станет активным после заполнения контактных данных"></textarea>
+							<i class="icon icon-checked icon-success"></i>
+							<i class="icon icon-cancel icon-error"></i>
+							<div class="alert">Некорректный ввод</div>
+						</div>
+					</div>
+					<div class="col-xs-12">
+						<button class="btn">Отправить</button>
+					</div>
+					<div class="success-fadein">
+						<div class="verticaly-middle">
+							<div class="inner">
+								Благодарим за вашу заявку! <br>
+								Наш пециалист свяжется с Вами <br> в течение 15 минут!
+							</div>
+						</div>
+					</div>
+				</div>
+			</form>
+		</section>
+
+		<section class="section spaced-top grey-section collapsed-bottom">
+			<div class="container">
+				<div class="row">
+					<div class="col-xs-7">
+						<div class="h3-title">Консультанты</div>
+					</div>
+					<div class="col-xs-5 align-right">
+						<div class="offset-top collapse--t" data-nav="seminar1">
+							<button class="btn btn-round btn-transparent prev">
+								<i class="icon icon-angle-left"></i>
+							</button>
+							<button class="btn btn-round btn-transparent next">
+								<i class="icon icon-angle-right"></i>
+							</button>
+						</div>
+					</div>
+				</div>
+				<div class="seminar-list owl-carousel consult-list" id="seminar1">
+					<div class="item">
+						<a href="#consult-popup" class="open-popup-link">
+							<div class="card consultant">
+								<div class="inner">
+									<div class="top">
+										<div class="name">
+											<div class="type">юрисконсульт</div>
+											<div class="title">Панфилова Виктория Григорьевна</div>
+										</div>
+										<figure class="photo">
+											<img src="temp/person.jpg"  alt="">
+											<!-- add class="horizontal" for a 100% image height -->
+										</figure>
+									</div>
+									<div class="caption">
+										Специалист в области трудового, гражданского права, арбитражного и гражданского процессов.
+										Специалист в области трудового, гражданского права, арбитражного и гражданского процессов.
+										Специалист в области трудового, гражданского права, арбитражного и гражданского процессов.
+										Специалист в области трудового, гражданского права, арбитражного и гражданского процессов.
+										Специалист в области трудового, гражданского права, арбитражного и гражданского процессов.
+									</div>
+								</div>
+							</div>
+						</a>
+					</div>
+					<div class="item">
+						<a href="#consult-popup" class="open-popup-link">
+							<div class="card consultant">
+								<div class="inner">
+									<div class="top">
+										<div class="name">
+											<div class="type">юрисконсульт</div>
+											<div class="title">Панфилова Виктория Григорьевна</div>
+										</div>
+										<figure class="photo">
+											<img src="temp/person.jpg"  alt="">
+											<!-- add class="horizontal" for a 100% image height -->
+										</figure>
+									</div>
+									<div class="caption">
+										Специалист в области трудового, гражданского права, арбитражного и гражданского процессов.
+										Специалист в области трудового, гражданского права, арбитражного и гражданского процессов.
+										Специалист в области трудового, гражданского права, арбитражного и гражданского процессов.
+										Специалист в области трудового, гражданского права, арбитражного и гражданского процессов.
+										Специалист в области трудового, гражданского права, арбитражного и гражданского процессов.
+									</div>
+								</div>
+							</div>
+						</a>
+					</div>
+					<div class="item">
+						<a href="#consult-popup" class="open-popup-link">
+							<div class="card consultant">
+								<div class="inner">
+									<div class="top">
+										<div class="name">
+											<div class="type">юрисконсульт</div>
+											<div class="title">Панфилова Виктория Григорьевна</div>
+										</div>
+										<figure class="photo">
+											<img src="temp/person.jpg"  alt="">
+											<!-- add class="horizontal" for a 100% image height -->
+										</figure>
+									</div>
+									<div class="caption">
+										Специалист в области трудового, гражданского права, арбитражного и гражданского процессов.
+										Специалист в области трудового, гражданского права, арбитражного и гражданского процессов.
+										Специалист в области трудового, гражданского права, арбитражного и гражданского процессов.
+										Специалист в области трудового, гражданского права, арбитражного и гражданского процессов.
+										Специалист в области трудового, гражданского права, арбитражного и гражданского процессов.
+									</div>
+								</div>
+							</div>
+						</a>
+					</div>
+					<div class="item">
+						<a href="#consult-popup" class="open-popup-link">
+							<div class="card consultant">
+								<div class="inner">
+									<div class="top">
+										<div class="name">
+											<div class="type">юрисконсульт</div>
+											<div class="title">Панфилова Виктория Григорьевна</div>
+										</div>
+										<figure class="photo">
+											<img src="temp/person.jpg"  alt="">
+											<!-- add class="horizontal" for a 100% image height -->
+										</figure>
+									</div>
+									<div class="caption">
+										Специалист в области трудового, гражданского права, арбитражного и гражданского процессов.
+										Специалист в области трудового, гражданского права, арбитражного и гражданского процессов.
+										Специалист в области трудового, гражданского права, арбитражного и гражданского процессов.
+										Специалист в области трудового, гражданского права, арбитражного и гражданского процессов.
+										Специалист в области трудового, гражданского права, арбитражного и гражданского процессов.
+									</div>
+								</div>
+							</div>
+						</a>
+					</div>
+					<div class="item">
+						<a href="#consult-popup" class="open-popup-link">
+							<div class="card consultant">
+								<div class="inner">
+									<div class="top">
+										<div class="name">
+											<div class="type">юрисконсульт</div>
+											<div class="title">Панфилова Виктория Григорьевна</div>
+										</div>
+										<figure class="photo">
+											<img src="temp/person.jpg"  alt="">
+											<!-- add class="horizontal" for a 100% image height -->
+										</figure>
+									</div>
+									<div class="caption">
+										Специалист в области трудового, гражданского права, арбитражного и гражданского процессов.
+										Специалист в области трудового, гражданского права, арбитражного и гражданского процессов.
+										Специалист в области трудового, гражданского права, арбитражного и гражданского процессов.
+										Специалист в области трудового, гражданского права, арбитражного и гражданского процессов.
+										Специалист в области трудового, гражданского права, арбитражного и гражданского процессов.
+									</div>
+								</div>
+							</div>
+						</a>
+					</div>
+				</div>
+			</div>
+		</section>
+
+
+		<section class="section grey-section">
+			<div class="container">
+				<div class="h3-title">Другие услуги компании</div>
+				<div class="row">
+					<ul class="card-list">
+						<li class="item">
+							<a href="#" class="card">
+								<div class="inner">
+									<div class="type">консультация</div>
+									<div class="title">Горячая линия</div>
+									<div class="caption">
+										Количество консультаций, для вашей организации уточняйте у специалиста или по телефону Горячей линииКоличество консультаций, для вашей организации уточняйте у специалиста или по телефону Горячей линии. Количество консультаций, для вашей организации уточняйте у специалиста или по телефону Горячей линии
+									</div>
+									<div class="icon-holder">
+										<div class="icon-round">
+											<i class="icon icon-headphones"></i>
+										</div>
+									</div>
+								</div>
+							</a>
+						</li>
+						<li class="item">
+							<a href="#" class="card">
+								<div class="inner">
+									<div class="type">продукты</div>
+									<div class="title">Количество консультаций для вашей организации уточняйте у специалиста</div>
+									<div class="caption">Количество консультаций, для вашей организации уточняйте у специалиста или по телефону Горячей линииКоличество консультаций, для вашей организации уточняйте у специалиста или по телефону Горячей линииКоличество консультаций, для вашей организации уточняйте у специалиста или по телефону Горячей линии</div>
+									<div class="icon-holder">
+										<div class="icon-round">
+											<i class="icon icon-share"></i>
+										</div>
+									</div>
+								</div>
+							</a>
+						</li>
+						<li class="item">
+							<a href="#" class="card">
+								<div class="inner">
+									<div class="type">услуга</div>
+									<div class="title">Консультант Плюс</div>
+									<div class="caption">Количество консультаций, для вашей организации уточняйте у специалиста или по телефону Горячей линииКоличество консультаций, для вашей организации уточняйте у специалиста или по телефону Горячей линииКоличество консультаций, для вашей организации уточняйте у специалиста или по телефону Горячей линии</div>
+									<div class="icon-holder">
+										<div class="icon-round">
+											<i class="icon icon-book"></i>
+										</div>
+									</div>
+								</div>
+								<div class="label">бесплатно</div>
+							</a>
+						</li>
+						<li class="item">
+							<a href="#" class="card">
+								<div class="inner">
+									<div class="type">услуга</div>
+									<div class="title">Горячая линия Горячая линияГорячая линияГорячая линияГорячая линия</div>
+									<div class="caption">Количество консультаций, для вашей организации уточняйте у специалиста или по телефону Горячей линииКоличество консультаций, для вашей организации уточняйте у специалиста или по телефону Горячей линии Количество консультаций, для вашей организации уточняйте у специалиста или по телефону Горячей линии</div>
+									<div class="icon-holder">
+										<div class="icon-round">
+											<i class="icon icon-precent"></i>
+										</div>
+									</div>
+								</div>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</section>
+
+	</main>
+
+	<footer class="main-footer">
+		<div class="container small">
+			<div class="row">
+				<div class="col-xs-3 mobile-full">
+					<div class="heading">О компании</div>
+					<ul class="footer-list">
+						<li><a href="#">Работа у нас</a></li>
+						<li><a href="#">Наши клиенты</a></li>
+						<li><a href="#">Команда М-СТАЙЛ</a></li>
+						<li><a href="#">Новости</a></li>
+					</ul>
+				</div>
+				<div class="col-xs-3 mobile-full">
+					<div class="heading">Продукты</div>
+					<ul class="footer-list">
+						<li><a href="#">Консультант Плюс</a></li>
+						<li><a href="#">Главная книга</a></li>
+						<li><a href="#">Астрал-Отчет</a></li>
+						<li><a href="#">World Business Law</a></li>
+						<li><a href="#">Мобильное приложение</a></li>
+					</ul>
+				</div>
+				<div class="col-xs-3 mobile-full">
+					<div class="heading">Семинары</div>
+					<ul class="footer-list">
+						<li><a href="#">Вебинары</a></li>
+						<li><a href="#">Квартальные семинары</a></li>
+						<li><a href="#">Семинары-тренинги</a></li>
+						<li><a href="#">Обучающие семинары</a></li>
+					</ul>
+				</div>
+				<div class="col-xs-3 mobile-full">
+					<div class="heading">Услуги</div>
+					<ul class="footer-list">
+						<li><a href="#">Горячая линия</a></li>
+						<li><a href="#">Правовые сборники</a></li>
+						<li><a href="#">Консультации</a></li>
+						<li><a href="#">Проверка контрагента</a></li>
+						<li><a href="#">«Что нового?»</a></li>
+					</ul>
+				</div>
+			</div>
+			<!-- top -->
+		</div>
+		<div class="social-section">
+			<div class="container small">
+				<div class="row">
+					<div class="col-xs-6 col-sm-3 col-md-3 phone-col">
+						<div class="subheading">горячая линия</div>
+						<a href="tel:88002000226" class="phone-link">8-800-2000-226</a>
+					</div>
+					<div class="col-xs-6 col-sm-3 col-md-3 phone-col">
+						<div class="subheading">Санкт-Петербург</div>
+						<a href="tel:78122449595" class="phone-link">+7 (812) 244-95-95</a>
+					</div>
+					<div class="col-xs-6 col-sm-3 col-md-3 phone-col">
+						<div class="subheading">Москва</div>
+						<a href="tel:74956487800" class="phone-link">+7 (495) 648-78-00</a>
+					</div>
+					<div class="col-xs-6 col-sm-3 col-md-3 mobile-full">
+						<div class="subheading">Следите за нами</div>
+						<ul class="socials-list">
+							<li><a href="#"><i class="icon icon-vk"></i></a></li>
+							<li><a href="#"><i class="icon icon-facebook"></i></a></li>
+							<li><a href="#"><i class="icon icon-ok"></i></a></li>
+							<li><a href="#"><i class="icon icon-twitter"></i></a></li>
+							<li><a href="#"><i class="icon icon-youtube2"></i></a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- middle -->
+		<div class="container small">
+			<div class="row">
+				<div class="col-xs-12 col-sm-3">
+					<a href="#" class="logo-holder"><img src="img/footer-logo.png" alt="img"></a>
+				</div>
+				<div class="col-xs-12 col-sm-9">
+					<div class="row">
+						<div class="col-md-6">
+							<div class="copy">Copyright &copy; 1994 — 2016. Компания <span class="upper">«М-СТАЙЛ»</span>. Все права защищены</div>
+						</div>
+						<div class="col-md-6">
+							<div class="copy">Создание сайта — <a href="#" class="upper">АГЕНТСТВО DIGITAL-ТРАНСФОРМАЦИИ УЛЕЙ</a></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- bottom -->
+	</footer>
+
+	<!-- Popup itself -->
+		<div id="consult-popup" class="white-popup mfp-hide">
+			<div class="popup-inner">
+				<div class="row">
+					<div class="col-xs-6 col-sm-5 col-md-3 mobile-full">
+						<figure class="image-cover photo">
+						<img src="temp/person.jpg"  alt="">
+						</figure>
+					</div>
+					<div class="col-xs-6 col-sm-7 col-md-9 mobile-full">
+						<div class="tag">юрисконсульт</div>
+						<div class="title">Панфилова Виктория Григорьевна</div>
+						<div class="paragraph">
+							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus luctus nibh feugiat nibh vehicula, ut feugiat ante iaculis. Phasellus dapibus sapien eget nibh volutpat, ut faucibus nisl molestie. Sed facilisis eleifend metus rutrum consequat. Aliquam massa est, maximus ut congue dapibus, convallis id risus.
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+	<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700|Roboto:300,400,500,700" rel="stylesheet">
+
+	<script src="js/bundle/bundle.js"></script>
+
+</body>
+</html>

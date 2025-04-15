@@ -1,0 +1,22 @@
+/*primary font*/
+.lined-list {
+  margin: 5px 0 25px;
+  overflow: hidden; }
+  .lined-list li {
+    position: relative;
+    padding-left: 40px;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 30px; }
+    .lined-list li:before {
+      content: '';
+      position: absolute;
+      top: 14px;
+      left: 0;
+      height: 1px;
+      width: 20px;
+      background-color: #ffe932; }
+
+@media (max-width: 1231px) {
+  .lined-list li {
+    line-height: 30px; } }

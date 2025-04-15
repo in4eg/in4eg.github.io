@@ -1,0 +1,33 @@
+/*primary font*/
+.tag-list {
+  font-size: 0;
+  margin: 15px -10px; }
+  .tag-list .item {
+    font-size: 14px;
+    transition: .3s;
+    padding: 5px 10px;
+    display: inline-block;
+    font-weight: 300; }
+    .tag-list .item .link {
+      color: #00ac5e;
+      padding: 5px 10px;
+      background-color: #f7f7f7; }
+    .tag-list .item:hover .link {
+      color: #fff;
+      background-color: #00ac5e; }
+
+.tag-list.simple .item {
+  font-size: 16px; }
+  .tag-list.simple .item .link {
+    padding: 0;
+    background-color: transparent; }
+    .tag-list.simple .item .link:hover {
+      color: #006a3a; }
+
+@media (max-width: 767px) {
+  .tag-list {
+    margin-left: -4px;
+    margin-right: -4px; }
+    .tag-list .item {
+      padding-left: 4px;
+      padding-right: 4px; } }

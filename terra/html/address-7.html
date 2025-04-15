@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+	<meta name="format-detection" content="telephone=no">
+
+	<title>Terra-e-Muro :: Impressum</title>
+	
+	<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+	<link rel="stylesheet" href="css/bundle.min.css">
+
+</head>
+<body class="light">
+
+	#=include includes/header.html
+
+	<main class="page-main">
+
+		<div class="banner-image section spaced-top-section hidden-xs">
+			<div class="container">
+				<figure class="image-cover">
+					<img src="temp/banner1.jpg" alt="banner">
+				</figure>
+			</div>
+		</div>
+
+		#=include includes/section-address-popup-full.html
+
+		<section class="section hidden-xs">
+			<div class="container">
+				<!-- data-lat, data-lng for map center -->
+				<div id="map" class="contact-map hidden-xs" data-lng="151.25" data-lat="-33.92" data-zoom="12"></div>
+			</div>
+		</section>
+
+		<!-- description -->
+
+		<section class="section spaced-bottom-section">
+			<div class="container">
+				<div class="row">
+					<div class="col-xs-12 col-md-9 col-md-offset-3">
+						<div class="section-article">
+							<h1 class="section-title">Impressum</h1>
+							<div class="paragraph">
+								Terra e Muro Holding GmbH <br>
+								<address>
+									Dieselstrasse 24 <br>
+									85748 Garching
+								</address>
+							</div>
+							<div class="paragraph">
+								Kontakt Verwaltung: <br>
+								<a href="tel:+49(0)89329501121" class="dark-link">Telefon +49 (0) 89 329 501 121</a>
+							</div>
+							<div class="paragraph">
+								<a href="mailto:info(@)terraemuro.de" class="dark-link">info(@)terraemuro.de</a>
+							</div>
+							<div class="paragraph">
+								<ul class="clear">
+									<li>Handelsregister: HRB 182622</li>
+									<li>Registergericht: Amtsgericht München</li>
+									<li>Ust-ID-Nr. DE268404231</li>
+									<li>Geschäftsführer:  Thomas Bach, Tassilo Ritzer</li>
+								</ul>
+							</div>
+							<div class="paragraph">
+								&copy; "Terra e Muro" ist eine eingetragene Marke.
+							</div>
+							<div class="paragraph">
+								Bildnachweis: Bilder von diversen Herstellern, <br>
+								Bilder der Ausstellungen: Daniel Schvarcz Photographie, München
+							</div>
+							<div class="paragraph">
+								Bildnachweis: Bilder von diversen Herstellern, <br>
+								Bilder der Ausstellungen: Daniel Schvarcz Photographie, München
+							</div>
+							<div class="paragraph">
+								<div class="title">Disclaimer</div>
+								Persönliche Daten, die Sie uns bei Ihrem Besuch auf unseren Internet-Seiten überlassen, werden ausschließlich zur Bearbeitung Ihres Anliegens, unter Beachtung der gesetzlichen Datenschutzbestimmungen, gespeichert. Ihre Daten werden weder wissentlich noch willentlich an Dritte weitergeleitet, ohne vorher Ihre Erlaubnis eingeholt zu haben. Wir werden Daten, die uns zur Abwicklung von Anfragen vertrauensvoll überlassen wurden, nicht an Dritte verkaufen, vermieten oder zugänglich machen. Die auf den Terra e Muro GmbH Internetseiten zur Verfügung gestellten Informationen werden unter Beachtung größter Sorgfalt laufend aktualisiert und ergänzt. Dennoch kann keine Garantie für die Richtigkeit und Vollständigkeit der angegebenen Daten übernommen werden, da eine zwischenzeitlich eingetretene Änderung nicht gänzlich auszuschließen ist. Dies gilt ebenso für sämtliche Webseiten Dritter, auf die durch einen Hyperlink verwiesen wird. Für dort enthaltene Informationen (fremde Inhalte) zu denen mittels Hyperlink lediglich der Zugang zur Nutzung vermittelt wird, ist die Terra e MuroGmbH nicht verantwortlich und distanziert sich ausdrücklich hiervon. Die Terra e Muro GmbH schließt demnach jegliche Haftung im oben genannten Zusammenhang aus. Inhalt und Gestaltung der Terra e Muro GmbH Internetseiten sind urheberrechtlich geschützt und dürfen ausschließlich und nach Belieben von Personen, die von der Terra e Muro GmbH autorisiert sind, geändert oder ergänzt werden. Die Vervielfältigung der enthaltenen Daten und Informationen bedarf der vorherigen schriftlichen Zustimmung durch die Terra e Muro GmbH.
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	</main>
+
+	#=include includes/footer.html
+
+	<!-- popups -->
+	#=include includes/popup-date.html
+	#=include includes/popup-success.html
+	#=include includes/popup-step-small.html
+
+	<link href="https://fonts.googleapis.com/css?family=Poppins:100,300,400,500,600,700" rel="stylesheet">
+
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCpKZxw5kh0YQOr9lc_2iUE7wnqd8dQYQY&libraries=places"></script>
+	<script>
+		var locations = [
+		['Bondi Beach', -33.890542, 151.274856, 4],
+		['Coogee Beach', -33.923036, 151.259052, 5],
+		['Cronulla Beach', -34.028249, 151.157507, 3],
+		['Manly Beach', -33.80010128657071, 151.28747820854187, 2],
+		['Maroubra Beach', -33.950198, 151.259302, 1]
+		];
+	</script>
+
+	<script src="js/bundle.js"></script>
+
+
+</body>
+</html>

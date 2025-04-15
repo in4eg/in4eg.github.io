@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+	<meta name="format-detection" content="telephone=no">
+
+	<title>Euro Foods :: Account Profile</title>
+
+	<meta name="msapplication-TileColor" content="#da532c">
+	<meta name="theme-color" content="#ffffff">
+	<link rel="apple-touch-icon" sizes="144x144" href="/db-apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/db-favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/db-favicon-16x16.png">
+	<link rel="manifest" href="/db-site.webmanifest">
+	<link rel="mask-icon" href="/db-safari-pinned-tab.svg" color="#5bbad5">
+
+	<link rel="stylesheet" href="css/account-footer.css">
+	<link rel="stylesheet" href="css/account-header.css">
+	<link rel="stylesheet" href="css/aside-right.css">
+	<link rel="stylesheet" href="css/breadcrumbs-section.css">
+	<link rel="stylesheet" href="css/buttons.css">
+	<link rel="stylesheet" href="css/dotted-list.css">
+	<link rel="stylesheet" href="css/fonts.css">
+	<link rel="stylesheet" href="css/form-elements.css">
+	<link rel="stylesheet" href="css/general.css">
+	<link rel="stylesheet" href="css/grid.css">
+	<link rel="stylesheet" href="css/icons.css">
+	<link rel="stylesheet" href="css/main-aside.css">
+	<link rel="stylesheet" href="css/main-category.css">
+	<link rel="stylesheet" href="css/main-footer.css">
+	<link rel="stylesheet" href="css/main-header.css">
+	<link rel="stylesheet" href="css/popup.css">
+	<link rel="stylesheet" href="css/personal-section.css">
+	<link rel="stylesheet" href="css/skin.css">
+	<link rel="stylesheet" href="css/social-list.css">
+	<link rel="stylesheet" href="css/tabs.css">
+
+</head>
+<body class="page-body">
+
+	<div class="page-main">
+
+		<!-- header -->
+		#=include includes/account-header.html
+		<!-- / header -->
+
+		<main class="inner-main">
+			<!-- left aside -->
+			#=include includes/account-aside.html
+			<!-- / left aside -->
+
+			<section class="personal-section">
+				<div class="container">
+					<h1 class="section-title">Мой профиль</h1>
+					<div class="row">
+						<div class="col-xs-12 col-md-8 col-lg-9">
+							<form action="#" class="validate-form changable-outer" id="formEditable">
+								<div class="dotted-list">
+									<!-- item -->
+									<div class="item">
+										<div class="col">Логин</div>
+										<div class="col"></div>
+										<div class="col">
+											<div class="name">mindal</div>
+										</div>
+									</div>
+									<!-- item -->
+									<div class="item">
+										<div class="col">E-mail</div>
+										<div class="col"></div>
+										<div class="col">
+											<div class="text">
+												<a href="mailto:mindal@yandex.ru" class="primary-link bold">mindal@yandex.ru</a>
+											</div>
+											<ul class="input-list clear" id="inputList0">
+												<li class="item">
+													<div class="form-group remove-group">
+														<input type="email" class="email input small bordered" placeholder="E-mail" value="mindal@yandex.ru">
+														<button type="button" class="remove-btn" data-remove>
+															<i class="icon icon-close"></i>
+														</button>
+													</div>
+												</li>
+											</ul>
+											<button type="button" data-type="email" data-add="#inputList0" class="btn btn-link success-link show-active spaced-bottom">
+												Добавить E-mail
+											</button>
+										</div>
+									</div>
+									<!-- item -->
+									<div class="item">
+										<div class="col">Телефон</div>
+										<div class="col"></div>
+										<div class="col">
+											<div class="text">
+												<a href="tel:78121234567" class="dark-link bold">+7 812 123-45-67</a>
+											</div>
+											<div class="text">
+												<a href="tel:78121234567" class="dark-link bold">+7 812 123-45-67</a>
+											</div>
+											<ul class="input-list clear" id="inputList1">
+												<li class="item">
+													<div class="form-group remove-group">
+														<input type="text" class="input small bordered" placeholder="Номер телефона" data-mask="+7 999 999-99-99" value="+7 812 123-45-67">
+														<button type="button" class="remove-btn" data-remove>
+															<i class="icon icon-close"></i>
+														</button>
+													</div>
+												</li>
+												<li class="item">
+													<div class="form-group remove-group">
+														<input type="text" class="input small bordered" placeholder="Номер телефона" data-mask="+7 999 999-99-99" value="+7 812 123-45-67">
+														<button type="button" class="remove-btn" data-remove>
+															<i class="icon icon-close"></i>
+														</button>
+													</div>
+												</li>
+											</ul>
+											<button type="button" data-type="phone" data-add="#inputList1" class="btn btn-link success-link show-active spaced-bottom">
+												Добавить телефон
+											</button>
+										</div>
+									</div>
+									<!-- item -->
+									<div class="item">
+										<div class="col">Наименование заведения</div>
+										<div class="col"></div>
+										<div class="col">
+											<div class="text">Миндаль кафе</div>
+											<div class="form-group">
+												<input type="text" class="input small bordered" placeholder="Наименование заведения" value="Миндаль кафе">
+											</div>
+										</div>
+									</div>
+									<!-- item -->
+									<div class="item">
+										<div class="col">Наименование компании</div>
+										<div class="col"></div>
+										<div class="col">
+											<div class="text">ИП Иванова П.Л.</div>
+											<div class="form-group">
+												<input type="text" class="input small bordered" placeholder="Наименование компании" value="ИП Иванова П.Л.">
+											</div>
+										</div>
+									</div>
+									<!-- item -->
+									<div class="item">
+										<div class="col">Адрес доставки</div>
+										<div class="col"></div>
+										<div class="col">
+											<div class="text">улица Шкапина дом 8, вход под арку</div>
+											<div class="text">улица Наличная дом 15, корпус 2</div>
+											<div class="text">ул.Восстания дом 1, ТЦ Невский центр, 2 этаж</div>
+											<ul class="input-list clear" id="inputList2">
+												<li class="item">
+													<div class="form-group remove-group">
+														<input type="text" class="input small bordered" placeholder="Адрес доставки" value="улица Шкапина дом 8, вход под арку">
+														<button type="button" class="remove-btn" data-remove>
+															<i class="icon icon-close"></i>
+														</button>
+													</div>
+												</li>
+												<li class="item">
+													<div class="form-group remove-group">
+														<input type="text" class="input small bordered" placeholder="Адрес доставки" value="улица Наличная дом 15, корпус 2">
+														<button type="button" class="remove-btn" data-remove>
+															<i class="icon icon-close"></i>
+														</button>
+													</div>
+												</li>
+												<li class="item">
+													<div class="form-group remove-group">
+														<input type="text" class="input small bordered" placeholder="Адрес доставки" value="ул.Восстания дом 1, ТЦ Невский центр, 2 этаж">
+														<button type="button" class="remove-btn" data-remove>
+															<i class="icon icon-close"></i>
+														</button>
+													</div>
+												</li>
+											</ul>
+											<button type="button" data-type="text" data-add="#inputList2" class="btn btn-link success-link show-active">
+												Добавить адрес
+											</button>
+										</div>
+									</div>
+								</div>
+								<div class="btn-list hidden-active">
+									<div class="item">
+										<button class="btn success-btn" type="button" data-toggle="#formEditable">
+											Изменить
+											<span class="hide-xs">данные профиля</span>
+										</button>
+									</div>
+									<div class="item">
+										<div class="btn btn-simple" data-call="#passwordPopup">Изменить пароль</div>
+									</div>
+								</div>
+								<div class="btn-list show-active">
+									<div class="item">
+										<button class="btn success-btn" type="submit">
+											Сохранить
+										</button>
+									</div>
+									<div class="item">
+										<button type="button" class="btn btn-simple" data-toggle="#formEditable">Отмена</button>
+									</div>
+								</div>
+							</form>
+						</div>
+						<div class="col-xs-12 col-md-4 col-lg-3">
+							<div class="row">
+								<div class="col-xs-12 col-sm-6 col-md-12">
+									<div class="profile-status">
+										<div class="title">Статус отгрузки</div>
+										<div class="text success">
+											<i class="icon icon-verified"></i>
+											Отгрузка разрешена
+										</div>
+									</div>
+								</div>
+								<div class="col-xs-12 col-sm-6 col-md-12">
+									<div class="profile-status">
+										<div class="title">Статус отгрузки</div>
+										<div class="text warning">
+											<i class="icon icon-chat"></i>
+											Для осуществления отгрузки требуются дополнительные согласования
+										</div>
+									</div>
+								</div>
+								<div class="col-xs-12 col-sm-6 col-md-12">
+									<div class="profile-status">
+										<div class="title">Статус отгрузки</div>
+										<div class="text danger">
+											<i class="icon icon-money"></i>
+											Отгрузка за наличный расчет или по предоплате
+										</div>
+									</div>
+								</div>
+								<div class="col-xs-12 col-sm-6 col-md-12">
+									<div class="profile-status">
+										<div class="title">Настройка уведомлений</div>
+										<div class="checkbox-group">
+											<input type="checkbox" id="sms" class="checkbox">
+											<label for="sms" class="checkbox-label option-label">SMS</label>
+										</div>
+										<div class="checkbox-group collapsed-bottom">
+											<input type="checkbox" id="email" class="checkbox">
+											<label for="email" class="checkbox-label option-label">E-mail</label>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+
+		<!-- main-footer -->
+		#=include includes/account-footer.html
+		<!-- / main-footer -->
+	</div>
+
+	<!-- popups -->
+	#=include includes/popup-login.html
+	#=include includes/popup-call.html
+	#=include includes/popup-request.html
+	#=include includes/popup-success.html
+	#=include includes/popup-password.html
+	#=include includes/popup-success-pass.html
+
+
+	<!-- script -->
+	<script src="js/lib/jquery.min.js"></script>
+
+	<script src="js/plugins/jquery.maskedinput.min.js"></script>
+	<script src="js/plugins/jquery.selecter.js"></script>
+	<script src="js/plugins/owl.carousel.min.js"></script>
+	<script src="js/plugins/simpleLightbox.js"></script>
+
+	<script src="js/main.js"></script>
+
+	<script src="js/init/aside-menu.js"></script>
+	<script src="js/init/data-toggle.js"></script>
+	<script src="js/init/main-menu.js"></script>
+	<script src="js/init/mask.js"></script>
+	<script src="js/init/popup.js"></script>
+	<script src="js/init/dots-slider.js"></script>
+	<script src="js/init/scrollspy.js"></script>
+	<script src="js/init/selecter-init.js"></script>
+	<script src="js/init/tabs.js"></script>
+	<script src="js/init/validation.js"></script>
+	<script src="js/init/input-action.js"></script>
+
+</body>
+</html>

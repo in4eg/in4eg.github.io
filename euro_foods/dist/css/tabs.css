@@ -1,0 +1,33 @@
+/*primary font*/
+.tabs .tabs-nav {
+  font-size: 0;
+  margin-left: -15px;
+  margin-right: -15px; }
+  .tabs .tabs-nav .tab-item {
+    cursor: pointer;
+    display: inline-block;
+    font-size: 16px;
+    padding: 0 15px; }
+
+.tabs > .content {
+  display: none; }
+  .tabs > .content.active {
+    display: block; }
+
+.simple-tabs {
+  margin: 0 0 30px; }
+  .simple-tabs .tab-item {
+    color: #00ac5e; }
+    .simple-tabs .tab-item span {
+      padding-top: 8px;
+      padding-bottom: 5px;
+      display: block;
+      font-weight: 300;
+      transition: color .3s; }
+    .simple-tabs .tab-item.active {
+      color: #000; }
+      .simple-tabs .tab-item.active span {
+        font-weight: 700;
+        box-shadow: 0 3px 0 #00ac5e; }
+    .simple-tabs .tab-item:hover span {
+      color: #000; }

@@ -1,0 +1,23 @@
+/*primary font*/
+.counted-list {
+  counter-reset: num; }
+  .counted-list .item {
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 40px;
+    position: relative;
+    padding-left: 45px; }
+    .counted-list .item:before {
+      counter-increment: num;
+      content: counter(num);
+      height: 30px;
+      width: 30px;
+      background-color: #ffe932;
+      color: #000;
+      font-size: 16px;
+      font-weight: 700;
+      line-height: 36px;
+      position: absolute;
+      text-align: center;
+      left: 0;
+      top: 4px; }

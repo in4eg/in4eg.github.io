@@ -1,0 +1,47 @@
+/*primary font*/
+.breadcrumbs-section {
+  margin-bottom: 30px; }
+  .breadcrumbs-section .breadcrumbs-list {
+    margin: 0 -15px;
+    font-size: 0;
+    padding-left: 30px; }
+    .breadcrumbs-section .breadcrumbs-list .item {
+      padding: 0 15px;
+      display: inline-block;
+      position: relative;
+      font-weight: 300; }
+      .breadcrumbs-section .breadcrumbs-list .item:after {
+        content: '\e90c';
+        font-family: 'icomoon';
+        font-size: 6px;
+        color: #999;
+        position: absolute;
+        right: 0;
+        top: 7px;
+        transition: color .3s; }
+      .breadcrumbs-section .breadcrumbs-list .item:last-child:after {
+        display: none; }
+      .breadcrumbs-section .breadcrumbs-list .item .outer {
+        font-size: 16px;
+        color: #999; }
+        .breadcrumbs-section .breadcrumbs-list .item .outer .icon {
+          font-size: 125%;
+          display: inline-block;
+          vertical-align: middle;
+          color: #999;
+          position: absolute;
+          left: -30px;
+          top: 1px; }
+        .breadcrumbs-section .breadcrumbs-list .item .outer .text {
+          display: inline-block;
+          vertical-align: middle;
+          color: #00ac5e;
+          transition: color .3s; }
+      .breadcrumbs-section .breadcrumbs-list .item:hover:after {
+        color: #000; }
+      .breadcrumbs-section .breadcrumbs-list .item:hover .outer .text {
+        color: #000; }
+
+@media (max-width: 767px) {
+  .breadcrumbs-section {
+    display: none; } }

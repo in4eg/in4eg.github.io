@@ -1,0 +1,109 @@
+.advantages-section {
+	position: relative;
+
+	.translate-left {
+		position: absolute;
+	}
+	.ordered-list {
+		font-size: 0;
+		margin: 40px -40px;
+		padding-left: 140px;
+		counter-reset: num;
+
+		li {
+			padding: 0 40px;
+			display: inline-block;
+			vertical-align: middle;
+			width: 33.33%;
+			padding-left: 65px;
+			font-size: 17px;
+			color: #fff;
+			font-family: $font3;
+			font-weight: bold;
+			position: relative;
+
+			&::before {
+				counter-increment: num;
+				content: counter(num);
+				position: absolute;
+				height: 40px; width: 40px;
+				text-align: center;
+				line-height: 38px;
+				color: $purple;
+				border: 3px solid $purple;
+				left: 0; top: 50%;
+				transform: translateY(-50%);
+				font-size: 20px;
+				border-radius: 50%;
+			}
+		}
+	}
+	.casper {
+		position: absolute;
+		top: 50%; left: 0;
+		margin-left: -50px;
+
+		img {
+			width: 140px;
+		}
+	}
+	&.active {
+
+		.casper.animation-move {
+			transform: translateZ(0);
+			animation: animation-move 2.5s infinite;
+		}
+	}
+}
+
+
+@media screen and (max-width: 1199px) {
+	
+	.advantages-section {
+
+		.ordered-list {
+
+			li {
+				width: 50%;
+				margin-bottom: 35px;
+
+				&:last-child {
+					margin-bottom: 0;
+					margin-left: 25%;
+				}
+				br {
+					display: none;
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 640px) {
+	
+	.section.advantages-section {
+
+		&.active {
+
+			.casper {
+
+				&.animation-move {
+					animation: unset;
+				}
+			}
+		}
+
+		.ordered-list {
+			padding-left: 50px;
+
+			li {
+				width: 100%;
+				font-size: 16px;
+
+				&:last-child {
+					margin-left: 0%;
+				}
+			}
+		}
+	}
+}

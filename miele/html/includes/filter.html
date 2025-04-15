@@ -1,0 +1,169 @@
+<div class="filter">
+	<button class="btn open-filter" type="button">Открыть Фильтр</button>
+	<!-- use span.inline to cover "counter"-->
+	<form action="#" class="filter-form">
+	<button class="close-filter" type="button"><i class="icon icon-cross"></i></button>
+
+		<ul class="list clear">
+			<li><a href="#">С фронтальной  <span class="inline">загрузкой <span class="count">5</span></span></a></li>
+			<li><a href="#">С вертикальной  <span class="inline">загрузкой <span class="count">12</span></span></a></li>
+			<li><a href="#">Стирально-<span class="inline">сушильные <span class="count">2</span></span></a></li>
+		</ul>
+		<div class="group">
+			<div class="block">
+				<div class="title">Выбранные фильтры</div>
+				<div class="wrap">
+					<ul class="tag-list">
+						<li class="tag">От 40 до 50 см</li>
+						<li class="tag">До 45 см</li>
+						<li class="tag">До 50 см</li>
+						<li class="tag">До 1000 об/мин</li>
+						<li class="tag">До 1200 об/мин</li>
+					</ul>
+					<button class="btn btn-inverse clear-tag" type="reset">Очистить все</button>
+				</div>
+			</div>
+			<div class="block">
+				<div class="wrap">
+					<div class="checkbox-holder">
+						<input type="checkbox" id="checkfil1">
+						<label for="checkfil1" class="checkbox-label">Товары по акции</label>
+					</div>
+				</div>
+			</div>
+			<div class="block parent active">
+				<div class="title">Базовая цена</div>
+				<div class="inner">
+					<div class="inputs">
+						<div class="input-group">
+							<input type="text" class="input">
+						</div>
+						<div class="line">-</div>
+						<div class="input-group">
+							<input type="text" class="input">
+						</div>
+					</div>
+					<div class="range-slider" data-options="{
+					'min': 1000, 'max': 50000,
+					'start': [8000, 22000], 'margin': 500,
+					'step': 100, 'float': false,
+					'onChange': 'onChangeCallback',
+					'wait': 2000
+				}"></div>
+			</div>
+		</div>
+		<div class="block parent active">
+			<div class="title">Ширина, см</div>
+			<div class="inner">
+				<div class="checkbox-holder">
+					<input type="checkbox" id="checkfil2">
+					<label for="checkfil2" class="checkbox-label"><span class="inline">До 45 см <span class="count">5</span></span></label>
+				</div>
+				<div class="checkbox-holder">
+					<input type="checkbox" id="checkfil3">
+					<label for="checkfil3" class="checkbox-label"><span class="inline">До 60 см <span class="count">12</span></span></label>
+				</div>
+				<div class="checkbox-holder">
+					<input type="checkbox" id="checkfil4">
+					<label for="checkfil4" class="checkbox-label"><span class="inline">До 35 см <span class="count">2</span></span></label>
+				</div>
+			</div>
+		</div>
+		<div class="block parent">
+			<div class="title">Глубина, см</div>
+			<div class="inner">
+				<div class="checkbox-holder">
+					<input type="checkbox" id="checkfil5" disabled>
+					<label for="checkfil5" class="checkbox-label">От 40 до 50 см</label>
+				</div>
+				<div class="checkbox-holder">
+					<input type="checkbox" id="checkfil6">
+					<label for="checkfil6" class="checkbox-label">От 50 <span class="inline">до 60 см <span class="count">12</span></span></label>
+				</div>
+			</div>
+		</div>
+		<div class="block parent active">
+			<div class="title">Скорость отжима</div>
+			<div class="inner">
+				<div class="checkbox-holder">
+					<input type="checkbox" id="checkfil7">
+					<label for="checkfil7" class="checkbox-label">До 1000 об/мин <span class="count">3</span></label>
+				</div>
+				<div class="checkbox-holder">
+					<input type="checkbox" id="checkfil8">
+					<label for="checkfil8" class="checkbox-label">От 1000 <span class="inline">до 1200 об/мин <span class="count">12</span></span></label>
+				</div>
+			</div>
+		</div>
+		<div class="block parent active">
+			<div class="title">Загрузка при стирке</div>
+			<div class="inner">
+				<div class="radio-holder">
+					<input type="radio" id="radio1" name="radio1" disabled>
+					<label for="radio1" class="radio-label">До 1000 об/мин <span class="count">3</span></label>
+				</div>
+				<div class="radio-holder">
+					<input type="radio" id="radio2" name="radio1">
+					<label for="radio2" class="radio-label">От 1000 <span class="inline">до 1200 об/мин <span class="count">12</span></span></label>
+				</div>
+				<div class="radio-holder">
+					<input type="radio" id="radio5" name="radio1">
+					<label for="radio5" class="radio-label">От 1200 <span class="inline">до 1500 об/мин <span class="count">12</span></span></label>
+				</div>
+			</div>
+		</div>
+		<div class="block parent">
+			<div class="title">Класс отжима</div>
+			<div class="inner">
+				<div class="radio-holder">
+					<input type="radio" id="radio3" name="radio2">
+					<label for="radio3" class="radio-label">До 1000 об/мин <span class="count">3</span></label>
+				</div>
+				<div class="radio-holder">
+					<input type="radio" id="radio4" name="radio2">
+					<label for="radio4" class="radio-label">От 1000 <span class="inline">до 1200 об/мин <span class="count">12</span></span></label>
+				</div>
+			</div>
+		</div>
+		<div class="block parent">
+			<div class="title">Класс стирки</div>
+			<div class="inner">
+				<div class="checkbox-holder">
+					<input type="checkbox" id="checkfil9">
+					<label for="checkfil9" class="checkbox-label">До 1000 об/мин <span class="count">3</span></label>
+				</div>
+				<div class="checkbox-holder">
+					<input type="checkbox" id="checkfil10">
+					<label for="checkfil10" class="checkbox-label">От 1000 <span class="inline">до 1200 об/мин <span class="count">12</span></span></label>
+				</div>
+			</div>
+		</div>
+		<div class="block parent">
+			<div class="title">Класс энергоэффективности, EU</div>
+			<div class="inner">
+				<div class="checkbox-holder">
+					<input type="checkbox" id="checkfil11">
+					<label for="checkfil11" class="checkbox-label">До 1000 об/мин <span class="count">3</span></label>
+				</div>
+				<div class="checkbox-holder">
+					<input type="checkbox" id="checkfil12">
+					<label for="checkfil12" class="checkbox-label">От 1000 <span class="inline">до 1200 об/мин <span class="count">12</span></span></label>
+				</div>
+			</div>
+		</div>
+		<div class="block parent">
+			<div class="title">Класс стирки</div>
+			<div class="inner">
+				<div class="checkbox-holder">
+					<input type="checkbox" id="checkfil13">
+					<label for="checkfil13" class="checkbox-label">До 1000 об/мин <span class="count">3</span></label>
+				</div>
+				<div class="checkbox-holder">
+					<input type="checkbox" id="checkfil14">
+					<label for="checkfil14" class="checkbox-label">От 1000 <span class="inline">до 1200 об/мин <span class="count">12</span></span></label>
+				</div>
+			</div>
+		</div>
+	</div>
+</form>
+</div>

@@ -1,0 +1,13 @@
+.dotted-list {
+  display: table;
+  width: 100%;
+  white-space: nowrap; }
+  .dotted-list .col {
+    display: table-cell;
+    width: 10px; }
+    .dotted-list .col:nth-child(2) {
+      width: auto; }
+      .dotted-list .col:nth-child(2):after {
+        content: '';
+        display: block;
+        border-bottom: 1px dotted #999; }

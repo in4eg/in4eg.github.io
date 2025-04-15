@@ -1,0 +1,51 @@
+<div id="datePopup" class="popup">
+	<div class="inner">
+		<div class="header">
+			<div class="title">
+				<span>
+					Kontakt Terra e Muro: <br>
+					Beratungstermin vereinbaren
+				</span>
+			</div>
+			<button type="button" class="close-popup" data-close="#datePopup">
+				<i class="icon icon-cancel"></i>
+			</button>
+		</div>
+		<div class="content">
+			<form action="#" class="validate-form modal-form" data-success="#successPopup" data-hide="#datePopup">
+				<div class="row">
+					<div class="col-xs-12 col-sm-6">
+						<div class="form-group spaced-bottom">
+							<input type="text" class="input" id="formName" data-minlength="2">
+							<label class="label" for="formName">Name *</label>
+						</div>
+					</div>
+					<div class="col-xs-12 col-sm-6">
+						<div class="form-group spaced-bottom">
+							<input type="text" class="input email" id="formEmail">
+							<label class="label" for="formEmail">E-Mail *</label>
+						</div>
+					</div>
+					<div class="col-xs-12 col-sm-6">
+						<div class="form-group spaced-xs">
+							<input type="text" class="input" id="formPlz">
+							<label class="label" for="formPlz">Plz *</label>
+						</div>
+					</div>
+					<div class="col-xs-12 col-sm-6">
+						<div class="form-group">
+							<input type="text" class="input" id="formPhone">
+							<label class="label" for="formPhone">Telefon *</label>
+						</div>
+					</div>
+				</div>
+
+				#=include calendar.html
+
+					<button type="submit" class="btn btn-primary btn-block">
+						Termin anfragen
+					</button>
+			</form>
+		</div>
+	</div>
+</div>

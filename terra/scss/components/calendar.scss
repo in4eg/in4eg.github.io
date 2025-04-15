@@ -1,0 +1,169 @@
+.calendar {
+	margin: 5px 0 0;
+
+	.primary-dropdown {
+		display: inline-block;
+
+		.in-bl {
+			display: inline-block;
+		}
+	}
+
+	.calendar-wrap {
+		font-size: 0;
+		margin: 0 -15px;
+		position: relative;
+
+		.column-part {
+			padding: 0 15px;
+			display: inline-block;
+			vertical-align: top;
+			width: 50%;
+			font-size: 11px;
+		}
+		.form-helper {
+			position: absolute;
+			bottom: 20px; right: 20px;
+		}
+	}
+	.calendar-outer {
+		margin: 0;
+		height: 150px;
+		font-size: 0;
+
+		.date {
+			width: 16.66%; height: 22px;
+			border: 1px solid transparent;
+			text-align: center;
+			line-height: 22px;
+			display: inline-block;
+			font-size: 11px;
+			transition: border-color .3s;
+			cursor: pointer;
+
+			&:hover {
+				border-color: $gray;
+			}
+			&.current {
+				color: $primary;
+			}
+			&.active {
+				border-color: $primary;
+			}
+		}
+	}
+	[data-scrollbar] {
+		max-height: 150px;
+		overflow: auto;
+		position: relative;
+	}
+	.month-list {
+		background-color: #fff;
+		border: 1px solid #f6f6f6;
+		padding: 10px 0;
+		margin-left: -15px;
+		margin-top: 10px;
+
+		li {
+			padding: 7px 15px;
+			cursor: pointer;
+			transition: background-color .3s;
+
+			&:hover:not(.disabled),
+			&.active {
+				background-color: #f8f8f8;
+			}
+			&.current {
+				color: $primary;
+			}
+			&.disabled {
+				color: #999;
+				pointer-events: none;
+				cursor: default;
+			}
+		}
+	}
+	.time {
+		font-size: 0;
+		padding: 0;
+
+		.dropdown {
+			padding: 0 10px;
+			font-size: 11px;
+		}
+		.dropdown-inner {
+			background-color: #fff;
+			padding: 10px 0;
+			margin-left: 10px;
+			width: 85px;
+
+			span {
+				display: block;
+				padding: 7px 15px 7px 21px;
+				cursor: pointer;
+				transition: background-color .3s;
+
+				&:hover:not(.disabled),
+				&.active {
+					background-color: #f8f8f8;
+				}
+				&.current {
+					color: $primary;
+				}
+				&.disabled {
+					color: #999;
+					pointer-events: none;
+					cursor: default;
+				}
+			}
+		}
+	}
+	.place {
+		padding: 20px 17px 0 10px;
+	}
+	.after {
+		font-size: 18px;
+	}
+}
+
+@media (max-width: 650px) {
+
+	.calendar {
+		padding-left: 15px;
+
+		.place {
+			padding-top: 0;
+			margin-left: -10px;
+		}
+		.calendar-wrap {
+
+			.column-part {
+				display: block;
+				padding: 0;
+				width: 100%;
+				max-width: 260px;
+			}
+
+			.form-helper {
+				position: static;
+				display: block;
+				width: 100%;
+				padding: 20px 0 7px;
+				text-align: left;
+			}
+		}
+
+		.time {
+			padding: 0 0 20px;
+			margin-left: -10px;
+		}
+
+		.dropdown.simple-dropdown.large {
+			width: 196px;
+
+			.anchor {
+				width: 196px;
+			}
+		}
+	}
+}

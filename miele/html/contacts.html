@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+	<meta charset="UTF-8">
+	<title>Miele :: Контакты</title>
+	<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="format-detection" content="telephone=no">
+
+	<link rel="stylesheet" href="css/_bundle.min.css">
+
+</head>
+<body>
+
+	#=include includes/header.html
+
+	<main>
+
+		#=include includes/breadcrumbs.html
+
+		<section>
+			<div class="map-container">
+				<div class="map" id="map"></div>
+
+				<div class="contact">
+					<div class="container">
+						<div class="inner">
+							<div class="title">
+								Официальный <br> сертифицированный партнер Miele интерьерная студия<br> «Giulia Novars»
+							</div>
+							<ul class="list clear">
+								<li>
+									<i class="icon primary-icon icon-map-point"></i>
+									<address class="inline">Москва, ул. Марксистская, д. 5, стр.1 <br> м. «Марксистская», «Таганская»</address>
+								</li>
+								<li>
+									<i class="icon primary-icon icon-phone"></i>
+									<a href="tel:+74959111960" class="inline">+7 (495) 911-19-60</a>
+									<br>
+									<a href="tel:+74956327319" class="inline">+7 (495) 632-73-19</a>
+								</li>
+								<li>
+									<i class="icon primary-icon icon-mail"></i>
+									<a href="mailto:taganka@shop-ml.ru" class="inline">taganka@shop-ml.ru</a>
+								</li>
+								<li>
+									<i class="icon primary-icon icon-clock"></i>
+									<span class="inline">Понедельник-пятница — <span class="time">с 10.00 до 20.00</span></span><br>
+									<span class="inline">Суббота — <span class="time">с 11.00 до 19.00</span></span><br>
+									<span class="inline">Воскресенье — <span class="time">с 11.00 до 18.00</span></span>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+	</main>
+
+	#=include includes/footer.html
+
+
+	<!-- #=include includes/popup.html -->
+	<!-- map -->
+	<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCpKZxw5kh0YQOr9lc_2iUE7wnqd8dQYQY&libraries=places"></script>
+	<script src="js/bundle/bundle.js"></script>
+
+</body>
+</html>

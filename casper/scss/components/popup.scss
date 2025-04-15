@@ -1,0 +1,157 @@
+.popup {
+	position: fixed;
+	z-index: 20;
+	background: rgba(0,0,0,.5);
+	top: 0; left: 0; right: 0; bottom: 0;
+	overflow-x: hidden;
+	overflow-y: auto;
+	white-space: nowrap;
+	text-align: center;
+	transition: .3s;
+	font-size: 0;
+	opacity: 0;
+	display: none;
+	padding: 15px;
+
+	&:after {
+		content: '';
+		display: inline-block;
+		vertical-align: middle;
+		width: 0; height: 100%;
+	}
+
+	.title {
+		font-size: 40px;
+		color: $purple;
+		font-weight: 500;
+		text-transform: uppercase;
+
+		small {
+			display: block;
+			text-transform: none;
+			font-size: 30px;
+		}
+		&.initialcase {
+			text-transform: none;
+		}
+	}
+
+	.close-popup {
+		position: absolute;
+		width: 40px; height: 40px;
+		line-height: 40px;
+		top: 10px; right: 10px;
+		border-radius: 0;
+		border: none;
+		cursor: pointer;
+		background: transparent;
+		transition: .2s;
+		font-size: 20px;
+		color: $purple;
+
+		&:hover {
+			color: red;
+		}
+	}
+
+	.inner {
+		display: inline-block;
+		width: 100%;
+		vertical-align: middle;
+		padding: 0;
+		max-width: 400px;
+		border: 2px solid $purple;
+		box-shadow: 0 0 0 10px #fff;
+		border-radius: 2px;
+		background: transparent;
+		text-align: left;
+		opacity: 0;
+		background: #fff;
+		font-size: 13px;
+		white-space: normal;
+		position: relative;
+		transition: .3s;
+		transform: translateY(-50px);
+		padding: 30px;
+
+		&.caption-inner {
+			text-align: center;
+			padding: 80px 0;
+		}
+	}
+
+	&.active {
+		opacity: 1;
+
+		.inner {
+			transition-delay: .2s;
+			opacity: 1;
+			transform: translateY(0);
+		}
+	}
+
+	.form-group {
+
+		&:first-child {
+			margin-top: 0;
+		}
+	}
+	.btn {
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+}
+
+
+.popup-form {
+
+	.inner.caption-inner {
+		padding: 70px 0 30px;
+	}
+	.form-group {
+		margin-bottom: 80px;
+	}
+	.btn {
+		height: 49px;
+		line-height: 49px;
+		max-width: 226px;
+		padding: 0;
+	}
+}
+
+@media (max-width: 768px){
+
+	.popup-form {
+
+		.inner.caption-inner {
+			padding: 30px 0;
+
+			.validate-form {
+				padding-top: 40px;
+			}
+		}
+	}
+}
+
+@media (max-width: 480px){
+
+	.popup {
+
+		.form-group {
+			padding: 0;
+		}
+		.validate-form {
+			padding-left: 15px;
+			padding-right: 15px;
+
+			.btn {
+				min-width: auto;
+				max-width: 100%;
+				width: 100%;
+				display: block;
+			}
+		}
+	}
+}

@@ -1,0 +1,50 @@
+/*primary font*/
+$font: 'Circe', sans-serif;
+$font-extra:'Circe Extra', sans-serif;
+
+$primary: #00ac5e;
+$success: #2e76ba;
+$action: #ffe932;
+$danger: #ff2b3d;
+$gray: #f7f7f7;
+$warning: #ff8a00;
+
+
+@mixin clearfix() {
+	&::after {
+		display: block;
+		content: "";
+		clear: both;
+	}
+}
+
+@mixin placeholder($color){
+	&::-webkit-input-placeholder {
+		color: #{$color};
+	}
+	&:-moz-placeholder {
+		color: #{$color};
+	}
+	&::-moz-placeholder {
+		color: #{$color};
+	}
+	&:-ms-input-placeholder {
+		color: #{$color};
+	}
+}
+@mixin middle(){
+	white-space: nowrap;
+
+	&:before {
+		content: '';
+		display: inline-block;
+		vertical-align: middle;
+		height: 100%;
+	}
+	.middle-inner {
+		display: inline-block;
+		vertical-align: middle;
+		white-space: normal;
+		width: 100%;
+	}
+}

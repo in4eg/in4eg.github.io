@@ -1,0 +1,2 @@
+#selecter
+$('select').selecter()

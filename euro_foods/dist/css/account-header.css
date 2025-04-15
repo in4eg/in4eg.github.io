@@ -1,0 +1,310 @@
+/*primary font*/
+.main-header.account-header {
+  background-color: #f7f7f7;
+  padding: 20px 0; }
+  .main-header.account-header .main-logo {
+    margin-right: 38px; }
+  .main-header.account-header .phone-link .hidden-icon {
+    display: none; }
+  .main-header.account-header .main-nav {
+    margin-right: 50px; }
+    .main-header.account-header .main-nav .nav-list .item.show-xs {
+      display: none; }
+    .main-header.account-header .main-nav .nav-list .item .link {
+      color: #000; }
+      .main-header.account-header .main-nav .nav-list .item .link .icon {
+        display: none; }
+  .main-header.account-header .action-part {
+    display: inline-block;
+    vertical-align: middle; }
+  .main-header.account-header .cart-btn {
+    height: 60px;
+    width: 60px;
+    padding: 0;
+    position: relative;
+    font-size: 32px;
+    line-height: 70px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 50px; }
+    .main-header.account-header .cart-btn.show-xs {
+      display: none; }
+    .main-header.account-header .cart-btn .count {
+      width: 24px;
+      height: 24px;
+      background-color: #ffe932;
+      color: #000;
+      font-size: 14px;
+      font-weight: 300;
+      line-height: 24px;
+      text-align: center;
+      white-space: nowrap;
+      border-radius: 50%;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      position: absolute;
+      top: 4px;
+      right: 4px; }
+  .main-header.account-header .user-panel {
+    display: inline-block;
+    vertical-align: middle; }
+    .main-header.account-header .user-panel .user-icon {
+      width: 24px;
+      height: 24px;
+      color: #dfdfdf;
+      font-size: 28px;
+      display: inline-block;
+      vertical-align: middle;
+      transition: color .3s;
+      margin-right: 7px; }
+      .main-header.account-header .user-panel .user-icon .icon {
+        position: relative;
+        top: -1px; }
+    .main-header.account-header .user-panel .text {
+      color: #00ac5e;
+      font-size: 16px;
+      font-weight: 700;
+      display: inline-block;
+      vertical-align: middle;
+      transition: color .3s; }
+      .main-header.account-header .user-panel .text .gray-icon {
+        font-size: 80%;
+        color: #dfdfdf;
+        margin-left: 5px;
+        transition: color .3s; }
+        .main-header.account-header .user-panel .text .gray-icon:before {
+          position: relative;
+          top: 1px; }
+      .main-header.account-header .user-panel .text:hover {
+        color: #2e76ba; }
+    .main-header.account-header .user-panel .logout .icon {
+      transition: color .3s; }
+    .main-header.account-header .user-panel .logout:hover .icon {
+      color: #999; }
+
+@media (max-width: 1320px) {
+  .main-header.account-header .main-logo {
+    margin-right: 15px; }
+  .main-header.account-header .phone-link .text {
+    margin-right: 15px; } }
+
+@media (max-width: 1231px) {
+  .main-header.account-header {
+    padding: 24px 0; }
+    .main-header.account-header .phone-link {
+      display: none; }
+    .main-header.account-header .tablet-nav .nav-btn {
+      color: #2e76ba;
+      padding-left: 15px;
+      padding-right: 15px; }
+    .main-header.account-header .main-nav {
+      margin-right: 15px; }
+      .main-header.account-header .main-nav .nav-list .item:not(.parent) {
+        display: inline-block; }
+      .main-header.account-header .main-nav .nav-list .item.show-xs {
+        display: none; }
+      .main-header.account-header .main-nav .nav-list .item .link {
+        font-size: 16px;
+        font-weight: 700; }
+    .main-header.account-header .cart-btn {
+      margin-left: 20px;
+      height: 48px;
+      width: 48px;
+      font-size: 24px;
+      line-height: 62px; }
+      .main-header.account-header .cart-btn .count {
+        width: 20px;
+        height: 20px;
+        font-size: 11px; } }
+
+@media (max-width: 767px) {
+  .main-header.account-header {
+    padding: 9px 0; }
+    .main-header.account-header .top-outer {
+      box-sizing: border-box;
+      display: -webkit-flex;
+      display: flex;
+      -webkit-flex: 0 1 auto;
+      flex: 0 1 auto;
+      -webkit-flex-direction: row;
+      flex-direction: row;
+      -webkit-flex-wrap: wrap;
+      flex-wrap: wrap;
+      -webkit-justify-content: space-between;
+      justify-content: space-between;
+      -webkit-align-items: center;
+      align-items: center;
+      -webkit-align-content: center;
+      align-content: center; }
+      .main-header.account-header .top-outer .main-logo {
+        -webkit-order: 2;
+        order: 2; }
+      .main-header.account-header .top-outer .phone-link {
+        -webkit-order: 3;
+        order: 3; }
+      .main-header.account-header .top-outer .tablet-nav {
+        -webkit-order: 1;
+        order: 1; }
+        .main-header.account-header .top-outer .tablet-nav .nav-btn {
+          padding-left: 0; }
+    .main-header.account-header .main-logo {
+      width: 50px;
+      height: 41px;
+      margin-right: 0;
+      -webkit-transform: translateY(-3px);
+      transform: translateY(-3px); }
+      .main-header.account-header .main-logo .logo-light {
+        display: none; }
+      .main-header.account-header .main-logo .logo-image {
+        display: inline-block; }
+    .main-header.account-header .main-nav {
+      display: inline-block;
+      width: 60%;
+      padding-right: 5%; }
+      .main-header.account-header .main-nav .nav-list {
+        display: -webkit-flex;
+        display: flex;
+        -webkit-flex-direction: row;
+        flex-direction: row;
+        -webkit-flex-wrap: wrap;
+        flex-wrap: wrap;
+        -webkit-justify-content: space-between;
+        justify-content: space-between;
+        -webkit-align-items: center;
+        align-items: center;
+        -webkit-align-content: center;
+        align-content: center; }
+    .main-header.account-header .phone-link {
+      display: inline-block;
+      vertical-align: middle; }
+      .main-header.account-header .phone-link .hidden-icon {
+        display: block;
+        color: #2e76ba;
+        font-size: 22px; }
+      .main-header.account-header .phone-link .phone-icon,
+      .main-header.account-header .phone-link .text {
+        display: none; }
+    .main-header.account-header .nav-part {
+      background-color: #fff;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      z-index: 9;
+      box-shadow: 0 0 50px rgba(0, 0, 0, 0.25); }
+      .main-header.account-header .nav-part .main-nav {
+        margin-right: 0; }
+        .main-header.account-header .nav-part .main-nav .nav-list .item.hidden-xs {
+          display: none; }
+        .main-header.account-header .nav-part .main-nav .nav-list .item.show-xs {
+          display: inline-block;
+          position: relative; }
+          .main-header.account-header .nav-part .main-nav .nav-list .item.show-xs .count {
+            width: 20px;
+            height: 20px;
+            background-color: #ffe932;
+            color: #000;
+            font-size: 11px;
+            font-weight: 300;
+            line-height: 24px;
+            text-align: center;
+            white-space: nowrap;
+            border-radius: 50%;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            position: absolute;
+            top: 10px;
+            right: 8px; }
+        .main-header.account-header .nav-part .main-nav .nav-list .item .link {
+          font-size: 0;
+          padding: 0;
+          height: 60px;
+          width: 60px;
+          text-align: center;
+          display: inline-block;
+          line-height: 87px; }
+          .main-header.account-header .nav-part .main-nav .nav-list .item .link .icon {
+            display: inline-block;
+            font-size: 28px;
+            color: #999; }
+          .main-header.account-header .nav-part .main-nav .nav-list .item .link .icon-shopping-cart {
+            font-size: 26px; }
+        .main-header.account-header .nav-part .main-nav .nav-list .item.active .link .icon {
+          color: #2e76ba; }
+      .main-header.account-header .nav-part .user-panel {
+        padding: 0;
+        height: 60px;
+        width: 60px;
+        text-align: center;
+        line-height: 1; }
+        .main-header.account-header .nav-part .user-panel .user-icon {
+          margin-right: 0;
+          font-size: 36px;
+          color: #999;
+          height: auto;
+          width: auto;
+          line-height: 82px; }
+        .main-header.account-header .nav-part .user-panel.active .user-icon {
+          color: #2e76ba; }
+        .main-header.account-header .nav-part .user-panel .text {
+          display: none; }
+      .main-header.account-header .nav-part .action-part {
+        font-size: 0;
+        width: 40%;
+        padding-left: 10%;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-flex-direction: row;
+        flex-direction: row;
+        -webkit-flex-wrap: wrap;
+        flex-wrap: wrap;
+        -webkit-justify-content: space-between;
+        justify-content: space-between;
+        -webkit-align-items: center;
+        align-items: center;
+        -webkit-align-content: center;
+        align-content: center; }
+      .main-header.account-header .nav-part .cart-btn {
+        margin-left: 0;
+        background-color: transparent;
+        color: #999;
+        line-height: 70px;
+        font-size: 28px;
+        height: 60px;
+        width: 60px;
+        text-align: center; }
+        .main-header.account-header .nav-part .cart-btn.active .icon {
+          color: #2e76ba; }
+        .main-header.account-header .nav-part .cart-btn:hover {
+          background-color: transparent;
+          box-shadow: none; }
+        .main-header.account-header .nav-part .cart-btn.show-xs {
+          display: inline-block; }
+        .main-header.account-header .nav-part .cart-btn.hidden-xs {
+          display: none; } }
+
+@media (max-width: 640px) {
+  .main-header.account-header .nav-part .action-part {
+    padding-left: 5%; } }
+
+@media (max-width: 480px) {
+  .main-header.account-header .nav-part .action-part {
+    padding-left: 3%; } }
+
+@media (max-width: 400px) {
+  .main-header.account-header .nav-part .main-nav {
+    width: calc(100% - 130px);
+    padding-right: 0; }
+    .main-header.account-header .nav-part .main-nav .nav-list .item {
+      width: 33.33%; }
+      .main-header.account-header .nav-part .main-nav .nav-list .item .link {
+        width: 100%; }
+  .main-header.account-header .nav-part .action-part {
+    width: 130px;
+    padding-left: 0%; } }
+
+@media (max-width: 325px) {
+  .main-header.account-header .nav-part .main-nav {
+    width: calc(100% - 120px); }
+  .main-header.account-header .nav-part .action-part {
+    width: 120px; } }

@@ -1,0 +1,187 @@
+@import 'variables.scss';
+
+.form-calendar-section {
+	padding: 50px 0;
+
+	.title {
+		color: #000;
+		font-size: 30px;
+		font-weight: 400;
+		line-height: 68px;
+	}
+	.date-group {
+		height: 46px;
+		border: 1px solid #dedede;
+		background-color: #fff;
+		padding: 10px 15px 8px;
+		margin-bottom: 15px;
+		cursor: default;
+
+		.text {
+			font-size: 16px;
+			font-weight: 300;
+			color: #999;
+			display: inline-block;
+		}
+		input {
+			color: #000;
+			border: 0;
+			font-size: 16px;
+			font-weight: 300;
+
+			&[readonly] {
+				cursor: default;
+			}
+		}
+	}
+	.calendar-btn {
+		background-color: $gray;
+		padding: 5px 15px 13px;
+		height: 46px;
+		font-weight: 300;
+		color: $success;
+		display: block;
+		width: 100%;
+
+		.icon {
+			color: #c9c9c9;
+			margin-right: 10px;
+			font-size: 20px;
+
+			&:before {
+				position: relative;
+				top: 3px;
+			}
+		}
+		&.active {
+			background-color: #fff;
+			box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+		}
+		&:hover {
+			background-color: #fff;
+		}
+	}
+	.link-tablet {
+		display: none;
+	}
+	.catalog-link {
+		color: #00ac5e;
+		font-size: 22px;
+		font-weight: 300;
+		padding: 0 0 0 45px;
+		text-align: left;
+
+		.text {
+			display: block;
+			color: #999;
+			font-size: 18px;
+			font-weight: 300;
+			line-height: 30px;
+			margin-top: 10px;
+		}
+		.icon {
+			font-size: 28px;
+			position: absolute;
+			left: 0; top: 0;
+			margin-left: 0;
+		}
+	}
+}
+
+@media (max-width: 1199px) {
+
+	.form-calendar-section {
+
+		.large-btn-cover {
+			text-align: right;
+		}
+	}
+}
+
+@media (max-width: 993px) {
+
+	.form-calendar-section {
+		padding: 40px 0;
+
+		.large-btn-cover {
+			display: none;
+		}
+		.catalog-link {
+			font-size: 18px;
+			font-weight: 700;
+			margin-top: 20px;
+
+			.text {
+				margin-top: 5px;
+
+				br {
+					display: none;
+				}
+			}
+		}
+		.link-tablet {
+			display: block;
+		}
+	}
+}
+
+@media (max-width: 993px) {
+
+	.form-calendar-section {
+
+		.calendar-btn {
+			margin-bottom: 15px;
+		}
+		.link-tablet {
+			display: none;
+		}
+	}
+}
+
+@media (max-width: 767px) {
+
+	.form-calendar-section {
+
+		.title {
+			font-size: 24px;
+			font-weight: 700;
+			line-height: 30px;
+			margin-bottom: 20px;
+		}
+
+		.calendar-btn {
+			height: 40px;
+			padding-bottom: 12px;
+		}
+		.date-group {
+			height: 40px;
+			padding-top: 6px;
+			padding-bottom: 4px;
+		}
+	}
+}
+@media (max-width: 480px) {
+
+	.form-calendar-section {
+
+		.date-group {
+			white-space: nowrap;
+
+			input {
+				width: 140px;
+			}
+		}
+		.btn-list {
+			margin: 25px 0;
+
+			.item {
+				display: block;
+
+				.btn-simple {
+					padding-left: 0;
+					padding-right: 0;
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,51 @@
+.similar-list {
+	font-size: 0;
+	margin: 0 -15px;
+	white-space: nowrap;
+	overflow: hidden;
+	display: block;
+
+	.item {
+		padding: 0 15px;
+		width: 33.33%;
+		white-space: normal;
+		display: inline-block;
+		vertical-align: top;
+	}
+	&.owl-carousel {
+		width: calc(100% + 30px);
+
+		.owl-item {
+
+			.item {
+				width: 100%;
+
+				img {
+					width: auto;
+				}
+			}
+		}
+	}
+	&.owl-loaded {
+		overflow: visible;
+		white-space: normal;
+	}
+}
+@media (max-width: 991px) {
+
+	.similar-list {
+
+		.item {
+			width: 50%;
+		}
+	}
+}
+@media (max-width: 479px) {
+
+	.similar-list {
+
+		.item {
+			width: 100%;
+		}
+	}
+}

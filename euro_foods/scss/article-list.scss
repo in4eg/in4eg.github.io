@@ -1,0 +1,160 @@
+@import 'variables.scss';
+
+.article-list {
+
+	.article-item {
+		margin: 0 -15px;
+		font-size: 0;
+		padding: 50px 0;
+		border-bottom: 1px solid #ededed;
+
+		&:first-child {
+			padding-top: 0;
+		}
+
+		.image-side {
+			padding: 0 15px;
+			display: inline-block;
+			vertical-align: top;
+			width: 33%;
+
+			.image-cover {
+				padding-top: 66.5%;
+				position: relative;
+				overflow: hidden;
+
+				img {
+					position: absolute;
+					min-width: 100%; min-height: 100%;
+					top: 50%; left: 50%;
+					transform: translate(-50%, -50%);
+					max-width: 120%;
+				}
+			}
+		}
+		.caption-side {
+			padding: 0 15px;
+			display: inline-block;
+			vertical-align: top;
+			font-size: 16px;
+			width: 67%;
+
+			.title-link {
+
+				&:hover {
+
+					.simple-title {
+						color: $primary;
+					}
+				}
+			}
+
+			.simple-title {
+				margin-bottom: 10px;
+				transition: color .3s;
+			}
+
+			.tag-list {
+				margin-top: 10px;
+				margin-bottom: 5px;
+			}
+
+			.date {
+				font-weight: 300;
+				font-size: 16px;
+				color: #999;
+			}
+
+			.discount {
+				font-size: 0;
+				margin: 15px 0;
+				text-transform: uppercase;
+
+				.marked {
+					display: inline-block;
+					vertical-align: top;
+					font-size: 11px;
+					font-weight: 700;
+					background-color: $action;
+					padding: 5px 15px 3px 15px;
+					height: 22px;
+					position: relative;
+
+					&.large {
+						padding-left: 40px;
+					}
+
+					.mark-icon {
+						position: absolute;
+						height: 32px;
+						left: 15px; top: -5px;
+					}
+				}
+				.final {
+					display: inline-block;
+					vertical-align: top;
+					font-size: 11px;
+					font-weight: 300;
+					padding: 5px 15px 3px;
+					height: 22px;
+					background-color: $gray;
+				}
+			}
+			.paragraph {
+				font-weight: 300;
+				font-size: 16px;
+				line-height: 30px;
+			}
+		}
+	}
+}
+
+@media (max-width: 993px) {
+
+	.article-list {
+
+		.article-item {
+			padding-top: 40px;
+			padding-bottom: 40px;
+
+			.image-side {
+				width: 40%;
+			}
+			.caption-side {
+				width: 60%;
+			}
+		}
+	}
+}
+
+@media (max-width: 767px) {
+
+	.article-list {
+
+		.article-item {
+			padding-top: 20px;
+			padding-bottom: 20px;
+			border-bottom: 0;
+
+			.image-side {
+				width: 100%;
+				margin-bottom: 30px;
+			}
+			.caption-side {
+				width: 100%;
+
+				.simple-title {
+					font-size: 18px;
+					line-height: 24px;
+				}
+				.tag-list,
+				.paragraph {
+					display: none;
+				}
+				.discount {
+					margin-bottom: 0;
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,50 @@
+.btn {
+	cursor: pointer;
+	font-family: $pt;
+	border: 0;
+	background-color: transparent;
+	padding: 8px 40px 11px;
+	text-align: left;
+
+	.mark {
+		color: #E9A854;
+	}
+}
+.btn.btn-invisible {
+	background-color: transparent;
+	border: 0;
+	padding: 0;
+}
+.btn.btn-primary {
+	color: #fff;
+	text-transform: uppercase;
+	background-color: $primary;
+	border: 1px solid $primary;
+	font-size: 15px;
+	transition: .3s;
+
+	&:hover {
+		background-color: lighten($primary, 8%);
+		border-color: lighten($primary, 8%);
+		box-shadow:  0 3px 4px rgba(0,0,0,0.15);
+	}
+}
+.btn.btn-block {
+	display: block;
+	width: 100%;
+}
+
+@media (max-width: 993px) {
+
+	.btn {
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+}
+
+@media (max-width: 525px) {
+
+	.btn.btn-primary {
+		font-size: 12px;
+	}
+}

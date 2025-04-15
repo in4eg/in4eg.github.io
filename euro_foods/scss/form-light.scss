@@ -1,0 +1,59 @@
+@import 'variables.scss';
+
+.form-light {
+	margin: 50px 0 100px;
+
+	.title {
+		color: #000;
+		font-size: 30px;
+		font-weight: 700;
+		margin: 0 0 20px;
+	}
+	.lead {
+		color: #000;
+		font-size: 16px;
+		font-weight: 300;
+		line-height: 24px;
+		display: none;
+		margin-bottom: 20px;
+	}
+	.spaced-title {
+		padding-left: 100px;
+		color: #000;
+		font-size: 22px;
+		font-weight: 300;
+		line-height: 36px;
+
+		&.with-arrow {
+			position: relative;
+
+			&:before {
+				width: 69px; height: 10px;
+				content: '';
+				background-image: url(../img/primary-arrow.png);
+				left: 0; top: 15px;
+				position: absolute;
+			}
+		}
+	}
+}
+
+@media (max-width: 993px) {
+
+	.form-light {
+		margin-bottom: 60px;
+
+		.lead {
+			display: block;
+		}
+
+		.title {
+			font-size: 24px;
+			margin-bottom: 10px;
+		}
+
+		.hidden-sm {
+			display: none;
+		}
+	}
+}

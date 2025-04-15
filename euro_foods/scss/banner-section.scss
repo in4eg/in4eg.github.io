@@ -1,0 +1,170 @@
+@import 'variables.scss';
+
+.banner-section {
+	position: relative;
+	overflow: hidden;
+	font-size: 0;
+	margin-bottom: 50px;
+
+	.line {
+		height: 180%; width: 57%;
+		background-color: $gray;
+		position: absolute;
+		z-index: 1;
+		top: -35%; left: -3%;
+		transform: rotate(11deg);
+		overflow: hidden;
+
+		&:before {
+			position: absolute;
+			content: '';
+			top: 0; left: 0;
+			right: -13%; bottom: 0;
+			background-image: url(../img/banner-back.png);
+			background-repeat: no-repeat;
+			transform: rotate(-11deg);
+			background-position: 67% 40%;
+		}
+	}
+
+	.image-side {
+		text-align: right;
+
+		.image-cover {
+			overflow: hidden;
+			padding-top: 450px;
+			position: relative;
+			width: 50%;
+			display: inline-block;
+
+			img {
+				position: absolute;
+				right: 0; top: 0;
+				min-height: 100%; min-width: 100%;
+				max-height: 130%;
+			}
+		}
+	}
+	.caption-side {
+		position: absolute;
+		top: 0; left: 0;
+		height: 100%; width: 100%;
+
+		.container,
+		.row {
+			height: 100%;
+		}
+
+		.caption-outer {
+			position: relative;
+			z-index: 3;
+			height: 100%;
+
+			@include middle();
+		}
+
+		.discount {
+			font-size: 0;
+			margin: 15px 0;
+			text-transform: uppercase;
+
+			.marked {
+				display: inline-block;
+				vertical-align: top;
+				font-size: 11px;
+				font-weight: 700;
+				background-color: $action;
+				padding: 5px 15px 3px 15px;
+				height: 22px;
+				position: relative;
+
+				&.large {
+					padding-left: 40px;
+				}
+
+				.mark-icon {
+					position: absolute;
+					height: 32px;
+					left: 15px; top: -5px;
+				}
+			}
+		}
+
+		.title {
+			color: #000;
+			font-size: 48px;
+			font-weight: 400;
+			line-height: 56px;
+		}
+		.date {
+			color: #999;
+			font-size: 22px;
+			font-weight: 300;
+			line-height: 68px;
+		}
+		.tag-list {
+			margin-top: 0;
+			margin-bottom: 0;
+		}
+	}
+}
+
+@media (max-width: 1231px) {
+
+	.banner-section {
+
+		.image-side {
+			text-align: right;
+			.image-cover {
+				padding-top: 386px;
+			}
+		}
+		.caption-side {
+
+			.title {
+				font-size: 36px;
+				line-height: 40px;
+			}
+			.date {
+				font-size: 18px;
+				line-height: 68px;
+			}
+		}
+	}
+}
+@media (max-width: 767px) {
+
+	.banner-section {
+		margin-bottom: 0;
+
+		.image-side {
+
+			.image-cover {
+				padding-top: 66.5%;
+				width: 100%;
+
+				img {
+					max-height: 100%;
+				}
+			}
+		}
+
+		.caption-side {
+			position: static;
+			padding-top: 30px;
+			padding-bottom: 30px;
+
+			.title {
+				font-size: 24px;
+				line-height: 30px;
+				font-weight: 700;
+			}
+			.date {
+				line-height: 36px;
+			}
+		}
+		.line {
+			display: none;
+		}
+	}
+}

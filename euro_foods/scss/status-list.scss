@@ -1,0 +1,94 @@
+@import 'variables.scss';
+
+
+.status-list {
+	margin: 0 -30px;
+	text-align: right;
+
+	.item {
+		display: inline-block;
+		vertical-align: middle;
+		line-height: 24px;
+		padding: 0 30px;
+	}
+}
+
+.status {
+
+	&.success-status,
+	&.online-status {
+		color: $primary;
+	}
+	&.offline-status {
+		color: #999;
+	}
+	&.action-status {
+		color: $success;
+	}
+	&.checked-status {
+
+		.icon {
+			color: $success;
+		}
+	}
+	&.delivery-status {
+
+		.icon {
+			color: #ff8a00;
+		}
+	}
+	&.draft-status {
+
+		.icon {
+			color: #999;
+		}
+	}
+	.icon {
+		font-size: 124%;
+		margin-right: 7px;
+
+		&:before {
+			position: relative;
+			top: 3px;
+		}
+		&.small-icon {
+			font-size: 30%;
+
+			&:before {
+				position: relative;
+				top: -4px;
+			}
+		}
+		&.smaller-icon {
+			font-size: 80%;
+
+			&:before {
+				position: relative;
+				top: 0px;
+			}
+		}
+	}
+}
+@media (max-width: 993px) {
+
+	.status-list {
+
+		.item {
+
+			.offline-status {
+				color: $success;
+			}
+		}
+	}
+}
+@media (max-width: 767px) {
+
+	.status-list {
+		text-align: left;
+		margin: 20px -15px 0;
+
+		.item {
+			padding: 0 15px;
+		}
+	}
+}

@@ -1,0 +1,129 @@
+/*primary font*/
+.personal-section {
+  min-height: calc(100vh - 241px);
+  padding: 50px 0; }
+  .personal-section .profile-status {
+    background-color: #f7f7f7;
+    padding: 30px;
+    margin-bottom: 1px;
+    color: #010101; }
+    .personal-section .profile-status .title {
+      font-size: 16px;
+      font-weight: 700;
+      line-height: 36px; }
+    .personal-section .profile-status .text {
+      font-size: 16px;
+      font-weight: 300;
+      position: relative;
+      padding-left: 30px;
+      margin-top: 5px; }
+      .personal-section .profile-status .text .icon {
+        font-size: 140%;
+        position: absolute;
+        left: 0;
+        top: 4; }
+        .personal-section .profile-status .text .icon:before {
+          position: relative;
+          top: -2px; }
+      .personal-section .profile-status .text.success .icon {
+        color: #00ac5e; }
+      .personal-section .profile-status .text.warning .icon {
+        color: #ff8a00; }
+      .personal-section .profile-status .text.danger .icon {
+        color: #ff2b3d; }
+  .personal-section .btn-list {
+    margin-top: 34px;
+    font-size: 0; }
+    .personal-section .btn-list .item {
+      display: inline-block;
+      vertical-align: middle; }
+  .personal-section .changable-outer .show-active {
+    display: none; }
+  .personal-section .changable-outer .dotted-list .form-group {
+    display: none; }
+  .personal-section .changable-outer .input-list {
+    margin-bottom: 10px; }
+  .personal-section .changable-outer .btn-link {
+    font-weight: 300; }
+  .personal-section .changable-outer.active .hidden-active {
+    display: none; }
+  .personal-section .changable-outer.active .show-active {
+    display: block; }
+  .personal-section .changable-outer.active .dotted-list .form-group {
+    display: block; }
+  .personal-section .changable-outer.active .dotted-list .text {
+    display: none; }
+  .personal-section .changable-outer.active .dotted-list .col {
+    width: 222px; }
+  .personal-section .changable-outer.active .dotted-list .col:nth-child(2) {
+    display: none; }
+  .personal-section .changable-outer.active .dotted-list .col:last-child {
+    width: auto; }
+  .personal-section .header-tabs {
+    text-align: right; }
+    .personal-section .header-tabs .tab-item {
+      color: #00ac5e; }
+      .personal-section .header-tabs .tab-item span {
+        padding-top: 8px;
+        padding-bottom: 5px;
+        display: block;
+        font-weight: 300;
+        transition: color .3s;
+        font-size: 22px;
+        line-height: 24px;
+        border-bottom: 3px solid transparent; }
+      .personal-section .header-tabs .tab-item.active {
+        color: #000; }
+        .personal-section .header-tabs .tab-item.active span {
+          font-weight: 700;
+          border-bottom-color: #00ac5e; }
+      .personal-section .header-tabs .tab-item:hover span {
+        color: #000; }
+
+@media (max-width: 992px) {
+  .personal-section {
+    padding-top: 40px;
+    padding-bottom: 40px; }
+    .personal-section .btn-list {
+      margin-bottom: 57px; }
+    .personal-section .profile-status {
+      margin-bottom: 0;
+      height: 100%; }
+    .personal-section .header-tabs .tab-item span {
+      font-size: 18px;
+      margin-bottom: 8px; } }
+
+@media (max-width: 767px) {
+  .personal-section {
+    padding-top: 30px;
+    padding-bottom: 30px; }
+    .personal-section .page-top {
+      margin-top: 0;
+      padding-bottom: 0; }
+      .personal-section .page-top.spaced-xs {
+        margin-bottom: 30px; }
+    .personal-section .btn-list {
+      margin-bottom: 41px; }
+    .personal-section .profile-status {
+      margin-bottom: 1px;
+      height: auto;
+      padding: 25px 15px;
+      margin-left: -15px;
+      margin-right: -15px; }
+    .personal-section .header-tabs.tabs-nav {
+      text-align: left;
+      margin: 15px -10px;
+      white-space: nowrap; }
+      .personal-section .header-tabs.tabs-nav .tab-item {
+        padding-left: 10px;
+        padding-right: 10px;
+        font-size: 18px; } }
+
+@media (max-width: 640px) {
+  .personal-section .btn-list.block-xs .item {
+    display: block;
+    margin-bottom: 15px; }
+    .personal-section .btn-list.block-xs .item:last-child {
+      margin-bottom: 0; }
+  .personal-section .btn-list.block-xs .btn.btn-simple {
+    padding-left: 0; } }

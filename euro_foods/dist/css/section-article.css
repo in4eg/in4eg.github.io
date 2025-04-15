@@ -1,0 +1,147 @@
+/*primary font*/
+.section-article {
+  margin: 0 0 100px; }
+  .section-article .title {
+    color: #fff;
+    font-family: "Circe", sans-serif;
+    font-size: 30px;
+    font-weight: 400;
+    line-height: 44px;
+    margin: 0 0 20px; }
+    .section-article .title span {
+      padding: 0 15px;
+      background-color: #00ac5e; }
+    .section-article .title .inner {
+      padding: 0;
+      background-color: transparent; }
+    .section-article .title .show-xs {
+      display: none; }
+  .section-article .colored-link {
+    position: relative;
+    display: block;
+    overflow: hidden;
+    transition: box-shadow .3s;
+    height: 100%; }
+    .section-article .colored-link:hover {
+      box-shadow: 0 0 25px rgba(0, 0, 1, 0.18); }
+      .section-article .colored-link:hover .image-cover {
+        -webkit-transform: scale(1.02);
+        transform: scale(1.02); }
+    .section-article .colored-link .image-cover {
+      overflow: hidden;
+      position: relative;
+      transition: .3s;
+      height: 100%;
+      min-height: 330px; }
+      .section-article .colored-link .image-cover img {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        height: 100%;
+        -webkit-transform: translateX(-50%);
+        transform: translateX(-50%); }
+    .section-article .colored-link .info-part {
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      height: auto;
+      padding: 30px; }
+    .section-article .colored-link .lead {
+      font-family: "Circe", sans-serif;
+      font-size: 30px;
+      font-weight: 300;
+      line-height: 48px; }
+      .section-article .colored-link .lead span {
+        padding: 0 15px;
+        background-color: #ffe932; }
+      .section-article .colored-link .lead .bold span {
+        padding: 0; }
+
+@media (max-width: 1250px) {
+  .section-article .colored-link .lead {
+    font-size: 28px; } }
+
+@media (max-width: 1199px) {
+  .section-article .colored-link .info-part {
+    padding: 20px; }
+  .section-article .colored-link .lead {
+    font-size: 24px;
+    line-height: 38px; }
+  .section-article .title {
+    font-size: 24px;
+    margin-bottom: 15px; } }
+
+@media (max-width: 993px) {
+  .section-article {
+    margin-bottom: 60px; }
+    .section-article .colored-link {
+      margin-top: 30px;
+      height: auto; }
+      .section-article .colored-link .image-cover {
+        padding-top: 30%;
+        height: auto;
+        min-height: auto; }
+        .section-article .colored-link .image-cover img {
+          height: auto;
+          width: 100%;
+          top: 50%;
+          left: 0;
+          -webkit-transform: translateY(-50%) translateX(0);
+          transform: translateY(-50%) translateX(0); }
+      .section-article .colored-link .lead {
+        font-size: 0;
+        line-height: 28px; }
+        .section-article .colored-link .lead span {
+          font-size: 24px;
+          padding-left: 0;
+          padding-right: 5px; }
+          .section-article .colored-link .lead span:first-child {
+            padding-left: 15px; }
+        .section-article .colored-link .lead br {
+          display: none; }
+        .section-article .colored-link .lead .bold {
+          display: block;
+          padding: 0;
+          background-color: transparent; }
+          .section-article .colored-link .lead .bold span {
+            padding-right: 15px;
+            line-height: 40px; } }
+
+@media (max-width: 767px) {
+  .section-article {
+    margin-bottom: 40px; }
+    .section-article .title {
+      font-size: 18px;
+      line-height: 32px; }
+      .section-article .title span {
+        padding: 0;
+        background-color: transparent; }
+      .section-article .title .inner {
+        padding: 3px 15px;
+        background-color: #00ac5e; }
+      .section-article .title .show-xs {
+        display: block; }
+    .section-article .colored-link .image-cover {
+      padding-top: 50%; }
+    .section-article .colored-link .lead {
+      line-height: 1; }
+      .section-article .colored-link .lead span {
+        padding: 0 5px;
+        line-height: 38px; }
+        .section-article .colored-link .lead span:first-child {
+          padding-left: 5px; }
+      .section-article .colored-link .lead .bold span {
+        padding-right: 5px; }
+      .section-article .colored-link .lead br {
+        display: block; }
+        .section-article .colored-link .lead br.hidden-xs {
+          display: none; } }
+
+@media (max-width: 480px) {
+  .section-article .colored-link .image-cover {
+    padding-top: 100%; }
+    .section-article .colored-link .image-cover img {
+      width: auto;
+      height: auto;
+      max-height: 120%; } }

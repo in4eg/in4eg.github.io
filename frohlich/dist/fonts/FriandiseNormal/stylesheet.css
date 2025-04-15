@@ -1,0 +1,13 @@
+@font-face {
+    font-family: 'Friandise NormalDemo';
+    src: url('hinted-FriandiseNormalDemo.eot');
+    src: local('Friandise NormalDemo'), local('FriandiseNormalDemo'),
+        url('hinted-FriandiseNormalDemo.eot?#iefix') format('embedded-opentype'),
+        url('hinted-FriandiseNormalDemo.woff2') format('woff2'),
+        url('hinted-FriandiseNormalDemo.woff') format('woff'),
+        url('hinted-FriandiseNormalDemo.ttf') format('truetype'),
+        url('hinted-FriandiseNormalDemo.svg#FriandiseNormalDemo') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+

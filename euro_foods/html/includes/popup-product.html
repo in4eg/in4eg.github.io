@@ -1,0 +1,57 @@
+<div id="productPopup" class="popup">
+	<div class="inner">
+		<div class="header">
+			<div class="title">
+				Предложить свой продукт
+			</div>
+			<button type="button" class="close-popup" data-close="#productPopup">
+				<i class="icon icon-close"></i>
+			</button>
+		</div>
+		<div class="content">
+			<form action="#" class="validate-form"  data-success="#successPopup">
+				<div class="row">
+					<div class="col-xs-12 col-sm-6">
+						<div class="form-group">
+							<input type="text" class="input bordered" placeholder="Название компании">
+						</div>
+					</div>
+					<div class="col-xs-12 col-sm-6">
+						<div class="form-group">
+							<input type="text" class="input bordered" placeholder="Ссылка на сайт">
+						</div>
+					</div>
+				</div>
+				<div class="form-group">
+					<input type="text" class="input bordered" placeholder="Ваше имя:">
+				</div>
+				<div class="row">
+					<div class="col-xs-12 col-sm-6">
+						<div class="form-group">
+							<input type="text" class="input email bordered" placeholder="E-mail:">
+						</div>
+					</div>
+					<div class="col-xs-12 col-sm-6">
+						<div class="form-group">
+							<input type="text" class="input phone bordered" placeholder="Телефон:" data-mask="+7 999 999-99-99">
+						</div>
+					</div>
+				</div>
+				<div class="file-group">
+					<input type="file" class="input-file" id="file1">
+					<label for="file1" class="file-label">
+						<i class="icon icon-clip"></i>
+						<span class="text">Приложить прайс-лист или коммерческое предложение</span>
+					</label>
+				</div>
+				<div class="checkbox-group">
+					<input type="checkbox" id="commPersonal" class="checkbox" checked>
+					<label for="commPersonal" class="checkbox-label primary-bordered">Даю согласие на обработку персональных данных</label>
+				</div>
+				<div class="form-bottom">
+					<button type="submit" class="btn success-btn">Отправить</button>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>

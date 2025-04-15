@@ -1,0 +1,27 @@
+@import 'variables.scss';
+
+.counted-list {
+	counter-reset: num;
+
+	.item {
+		font-size: 16px;
+		font-weight: 300;
+		line-height: 40px;
+		position: relative;
+		padding-left: 45px;
+
+		&:before {
+			counter-increment: num;
+			content: counter(num);
+			height: 30px; width: 30px;
+			background-color: $action;
+			color: #000;
+			font-size: 16px;
+			font-weight: 700;
+			line-height: 36px;
+			position: absolute;
+			text-align: center;
+			left: 0; top: 4px;
+		}
+	}
+}

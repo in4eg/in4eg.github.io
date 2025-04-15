@@ -1,0 +1,148 @@
+/*primary font*/
+.main-footer.footer-inner {
+  background-image: none;
+  background-color: #f7f7f7; }
+
+.main-footer {
+  padding: 67px 0 121px;
+  background-image: url(../img/category-back1.png), url(../img/footer-back1.png), url(../img/category-back3.png);
+  background-repeat: no-repeat, no-repeat, no-repeat;
+  background-position: right bottom, -100px bottom, center 80%; }
+  .main-footer .footer-logo {
+    width: 100px; }
+    .main-footer .footer-logo img {
+      max-width: 100%; }
+  .main-footer .copy {
+    margin: 30px 0 0;
+    color: #000;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 30px; }
+  .main-footer .footer-nav.bold .item {
+    font-weight: 700; }
+  .main-footer .footer-nav .item {
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 30px; }
+    .main-footer .footer-nav .item a {
+      display: block;
+      color: #000;
+      transition: color .3s; }
+      .main-footer .footer-nav .item a:hover {
+        color: #00ac5e; }
+  .main-footer .footer-title {
+    color: #000;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 30px;
+    margin: 0 0 5px; }
+  .main-footer .footer-link {
+    color: #000;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 30px;
+    display: block;
+    transition: color .3s; }
+    .main-footer .footer-link:hover {
+      color: #00ac5e; }
+    .main-footer .footer-link.spaced-bottom {
+      margin-bottom: 25px; }
+  .main-footer .address {
+    color: #000;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 30px; }
+  .main-footer .social-list {
+    margin-bottom: 55px; }
+
+@media (max-width: 1231px) {
+  .main-footer {
+    position: relative;
+    padding: 37px 0 63px;
+    background-size: 99px 67px, 239px 81px, 47px 45px; }
+    .main-footer .hidden-tablet {
+      display: none; }
+    .main-footer .first-col {
+      -webkit-flex-basis: 50%;
+      flex-basis: 50%;
+      max-width: 50%;
+      width: 50%; }
+      .main-footer .first-col .footer-logo {
+        margin-right: 50px;
+        display: inline-block;
+        vertical-align: middle; }
+      .main-footer .first-col .copy {
+        display: inline-block;
+        vertical-align: 0.5em; }
+    .main-footer .middle-col {
+      -webkit-flex-basis: 25%;
+      flex-basis: 25%;
+      max-width: 25%;
+      width: 25%; }
+    .main-footer .last-col {
+      -webkit-flex-basis: 25%;
+      flex-basis: 25%;
+      max-width: 25%;
+      width: 25%;
+      text-align: right; }
+      .main-footer .last-col .copy {
+        display: inline-block;
+        text-align: left; }
+    .main-footer .copy {
+      margin-top: 0; }
+    .main-footer .social-list {
+      position: absolute;
+      left: 170px;
+      top: 90px;
+      margin-bottom: 0; } }
+
+@media (max-width: 767px) {
+  .main-footer {
+    background-image: none; }
+    .main-footer .footer-title {
+      font-size: 24px;
+      margin-bottom: 10px; }
+    .main-footer .first-col {
+      -webkit-flex-basis: 100%;
+      flex-basis: 100%;
+      max-width: 100%;
+      width: 100%;
+      -webkit-order: 2;
+      order: 2;
+      margin-bottom: 20px; }
+      .main-footer .first-col .footer-logo {
+        display: none; }
+      .main-footer .first-col .copy {
+        color: #999; }
+    .main-footer .middle-col {
+      -webkit-flex-basis: 100%;
+      flex-basis: 100%;
+      max-width: 100%;
+      width: 100%;
+      -webkit-order: 1;
+      order: 1; }
+      .main-footer .middle-col .mail-link {
+        color: #00ac5e; }
+        .main-footer .middle-col .mail-link:hover {
+          color: #000; }
+    .main-footer .last-col {
+      -webkit-flex-basis: 100%;
+      flex-basis: 100%;
+      max-width: 100%;
+      width: 100%;
+      -webkit-order: 3;
+      order: 3; }
+      .main-footer .last-col .copy {
+        display: block; }
+        .main-footer .last-col .copy br {
+          display: none; }
+    .main-footer .social-list {
+      left: auto;
+      right: 15px;
+      top: 38px; } }
+
+@media (max-width: 480px) {
+  .main-footer .social-list {
+    left: auto;
+    right: 15px;
+    top: 154px; } }

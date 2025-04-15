@@ -1,0 +1,55 @@
+/*primary font*/
+.form-success {
+  background-color: #2e76ba;
+  color: #fff;
+  padding: 100px 0; }
+  .form-success .title {
+    color: #fff;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 40px;
+    padding-right: 70px; }
+  .form-success .paragraph {
+    color: #fff;
+    font-size: 30px;
+    font-weight: 300;
+    line-height: 40px;
+    padding-right: 70px; }
+
+.form-success-wrap {
+  overflow: hidden; }
+
+@media (max-width: 1231px) {
+  .form-success {
+    padding: 60px 0; }
+    .form-success .title,
+    .form-success .paragraph {
+      font-size: 24px;
+      line-height: 30px;
+      padding-right: 0; } }
+
+@media (max-width: 993px) {
+  .form-success {
+    margin-left: -15px;
+    margin-right: -15px;
+    padding-left: 15px;
+    padding-right: 15px; }
+    .form-success.spaced-top-sm {
+      margin-top: 40px; } }
+
+@media (max-width: 767px) {
+  .form-success-wrap {
+    display: block;
+    padding: 0 15px; }
+  .form-success {
+    padding-top: 40px;
+    padding-bottom: 40px; }
+    .form-success.large {
+      padding-left: 0;
+      padding-right: 0; }
+    .form-success.spaced-top-sm {
+      margin-top: 0px; }
+    .form-success .title {
+      margin-bottom: 0px; }
+    .form-success .form-cover {
+      margin-top: 30px; } }

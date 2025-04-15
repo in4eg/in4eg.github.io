@@ -1,0 +1,156 @@
+@import 'variables.scss';
+
+.btn {
+	transition: box-shadow .3s;
+	font-size: 16px;
+	line-height: 1;
+	padding: 18px 32px;
+	display: inline-block;
+	cursor: pointer;
+	transition: .3s;
+	transform: translateZ(0);
+	font-weight: 700;
+	border: 0;
+	background-color: transparent;
+	text-align: center;
+
+	&:hover {
+		box-shadow: 0 5px 10px rgba(0, 0, 1, 0.18);
+	}
+	.show-sm {
+		display: none;
+	}
+	.show-mg {
+		display: none;
+	}
+}
+.btn.success-btn {
+	background-color: $success;
+	color: #fff;
+
+	&:hover {
+		background-color:  #388fe1;
+	}
+}
+.btn.action-btn {
+	background-color: $action;
+	color: #000;
+
+	&:hover {
+		background-color: #fffd32;
+	}
+}
+.primary-btn {
+	background-color: $primary;
+	color: #fff;
+
+	&:hover {
+		background-color: #35D68D;
+	}
+}
+.btn.btn-block {
+	display: block;
+	width: 100%;
+}
+.btn.btn-link {
+	padding: 0;
+
+	&:hover {
+		box-shadow: none;
+	}
+}
+.btn.btn-simple {
+	color: #999;
+	font-weight: 300;
+
+	&:hover {
+		box-shadow: none;
+		color: $success;
+	}
+}
+.btn.gray-btn {
+	background-color: $gray;
+	color: $primary;
+
+	&:hover {
+		background-color: darken($gray, 5%);
+	}
+}
+.btn-bottom-hidden {
+	display: none;
+}
+.btn.active {
+
+	.hidden-active {
+		display: none;
+	}
+	.show-active {
+		display: inline;
+	}
+}
+.btn.before-icon {
+	position: relative;
+
+	.icon {
+		position: absolute;
+		right: 100%; top: -3px;
+		color: #b4b4b4;
+		margin-right: 10px;
+		font-size: 20px;
+	}
+}
+@media (max-width: 1231px) {
+
+	.btn {
+		padding-left: 30px;
+		padding-right: 30px;
+
+		.hide-md {
+			display: none;
+		}
+		.show-mg {
+			display: inline;
+		}
+	}
+}
+@media (max-width: 993px) {
+
+	.btn {
+
+		.hide-sm {
+			display: none;
+		}
+		.show-sm {
+			display: inline;
+		}
+	}
+}
+@media (max-width: 993px) {
+
+	.btn {
+		padding-top: 12px;
+		padding-bottom: 12px;
+		font-weight: 300;
+	}
+}
+@media (max-width: 767px) {
+
+	.btn {
+		padding-left: 20px;
+		padding-right: 20px;
+
+		.hide-xs {
+			display: none;
+		}
+		.first-xs {
+			text-transform: capitalize;
+		}
+	}
+	.btn-bottom-hidden {
+		display: block;
+		margin-top: 40px;
+	}
+	.btn-top-hidden {
+		margin-top: 30px;
+	}
+}

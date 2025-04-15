@@ -1,0 +1,189 @@
+/*primary font*/
+.company-slider .link-holder {
+  display: none; }
+
+.company-slider .slider-outer {
+  overflow: hidden;
+  white-space: nowrap;
+  position: relative; }
+  .company-slider .slider-outer .item {
+    white-space: normal;
+    display: inline-block;
+    position: relative;
+    z-index: 1;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    width: 100%;
+    font-size: 0; }
+    .company-slider .slider-outer .item .slide-outer {
+      width: 100%;
+      position: relative;
+      overflow: hidden; }
+    .company-slider .slider-outer .item .caption-side {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 1; }
+      .company-slider .slider-outer .item .caption-side .container {
+        height: 100%; }
+      .company-slider .slider-outer .item .caption-side .caption-outer {
+        max-width: 61%;
+        height: 100%;
+        background-color: #f7f7f7;
+        padding: 40px 0;
+        position: relative;
+        z-index: 2; }
+      .company-slider .slider-outer .item .caption-side:after {
+        content: '';
+        display: block;
+        position: absolute;
+        pointer-events: none;
+        background-color: #f7f7f7;
+        width: 20%;
+        height: 100%;
+        z-index: 1;
+        left: 0;
+        top: 0; }
+      .company-slider .slider-outer .item .caption-side:before {
+        content: '';
+        display: block;
+        position: absolute;
+        pointer-events: none;
+        background-color: #f7f7f7;
+        width: 40%;
+        height: 150%;
+        z-index: 1;
+        right: 33%;
+        top: -20%;
+        -webkit-transform: rotate(12deg);
+        transform: rotate(12deg); }
+      .company-slider .slider-outer .item .caption-side .title {
+        color: #000;
+        font-size: 48px;
+        font-weight: 400;
+        line-height: 68px;
+        margin: 0 0 15px; }
+        .company-slider .slider-outer .item .caption-side .title .marked {
+          font-weight: 700;
+          box-shadow: 0 5px 0 #00ac5e; }
+      .company-slider .slider-outer .item .caption-side .caption {
+        color: #000;
+        font-size: 16px;
+        font-weight: 300;
+        line-height: 30px; }
+    .company-slider .slider-outer .item .image-side {
+      position: relative;
+      width: 40%;
+      padding-top: 69%;
+      margin: 0 0 0 auto;
+      overflow: hidden;
+      background-color: #f7f7f7; }
+      .company-slider .slider-outer .item .image-side img {
+        position: absolute;
+        height: 100%;
+        top: 0;
+        left: 50%;
+        -webkit-transform: translateX(-50%);
+        transform: translateX(-50%); }
+    .company-slider .slider-outer .item .mobile-image {
+      display: none; }
+
+.company-slider .slider-outer.owl-loaded {
+  position: relative; }
+  .company-slider .slider-outer.owl-loaded .owl-item {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    font-size: 0; }
+  .company-slider .slider-outer.owl-loaded .owl-nav {
+    position: absolute;
+    z-index: 2;
+    bottom: 80px;
+    max-width: 100%;
+    font-size: 0;
+    width: 1232px;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%); }
+    .company-slider .slider-outer.owl-loaded .owl-nav .owl-prev,
+    .company-slider .slider-outer.owl-loaded .owl-nav .owl-next {
+      font-size: 36px;
+      display: inline-block;
+      padding: 15px;
+      color: #000;
+      transition: color .3s; }
+      .company-slider .slider-outer.owl-loaded .owl-nav .owl-prev:hover,
+      .company-slider .slider-outer.owl-loaded .owl-nav .owl-next:hover {
+        color: #00ac5e; }
+      .company-slider .slider-outer.owl-loaded .owl-nav .owl-prev.disabled,
+      .company-slider .slider-outer.owl-loaded .owl-nav .owl-next.disabled {
+        color: #b4b4b4; }
+
+@media (min-width: 1232px) {
+  .company-slider .slider-outer .item .image-side {
+    padding-top: 780px; } }
+
+@media (max-width: 1231px) {
+  .company-slider .slider-outer .item .image-side {
+    padding-top: 712px; }
+  .company-slider .slider-outer .item .caption-side:before {
+    -webkit-transform: rotate(9deg);
+    transform: rotate(9deg);
+    right: 34%; }
+  .company-slider .slider-outer .item .caption-side .caption-outer {
+    max-width: 60%; }
+  .company-slider .slider-outer .item .caption-side .title {
+    font-size: 36px;
+    line-height: 48px; }
+    .company-slider .slider-outer .item .caption-side .title .marked {
+      box-shadow: 0 3px 0 #00ac5e; }
+  .company-slider .slider-outer.owl-loaded .owl-nav {
+    padding: 0;
+    bottom: 40px; } }
+
+@media (max-width: 767px) {
+  .company-slider {
+    background-color: #f7f7f7; }
+    .company-slider .link-holder {
+      display: block;
+      padding: 0 0 40px; }
+    .company-slider .slider-outer {
+      padding-bottom: 50px;
+      background-color: #f7f7f7; }
+      .company-slider .slider-outer .item .caption-side {
+        position: static;
+        background-color: #f7f7f7; }
+        .company-slider .slider-outer .item .caption-side:after {
+          display: none; }
+        .company-slider .slider-outer .item .caption-side:before {
+          display: none; }
+        .company-slider .slider-outer .item .caption-side .caption-outer {
+          max-width: none;
+          padding-bottom: 20px; }
+        .company-slider .slider-outer .item .caption-side .title {
+          font-size: 24px;
+          line-height: 38px; }
+      .company-slider .slider-outer .item .image-side {
+        padding-top: 56.3%; }
+        .company-slider .slider-outer .item .image-side img {
+          right: auto;
+          left: 50%;
+          height: auto;
+          -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+          width: 100%; }
+      .company-slider .slider-outer .item .mobile-image {
+        display: block;
+        margin: 30px -15px; }
+  .company-slider .slider-outer.owl-loaded {
+    position: relative; }
+    .company-slider .slider-outer.owl-loaded .owl-dots {
+      position: absolute;
+      padding: 0 5px;
+      left: 0;
+      bottom: 20px; }
+      .company-slider .slider-outer.owl-loaded .owl-dots .owl-dot span {
+        background-color: #999; }
+      .company-slider .slider-outer.owl-loaded .owl-dots .owl-dot.active span {
+        background-color: #00ac5e; } }

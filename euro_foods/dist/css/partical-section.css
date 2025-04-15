@@ -1,0 +1,168 @@
+/*primary font*/
+.partical-section.spaced-top {
+  padding-top: 0; }
+
+.partical-section.collapsed-bottom {
+  padding-bottom: 20px; }
+
+.partical-section .partical-outer {
+  border: 1px solid #dedede; }
+
+.partical-section .part {
+  border-bottom: 1px solid #dedede;
+  padding: 60px 40px; }
+  .partical-section .part:last-child {
+    border-bottom: 0; }
+
+.partical-section .spaced-left {
+  padding-left: 30px; }
+
+.partical-section .spaced-right {
+  padding-right: 30px; }
+
+.partical-section .image-holder img {
+  max-width: 100%; }
+
+.partical-section .primary-title {
+  margin-bottom: 30px; }
+  .partical-section .primary-title .last br {
+    display: none; }
+  .partical-section .primary-title .last .inner {
+    padding: 0; }
+
+.partical-section .hours-list {
+  margin: 30px 0; }
+  .partical-section .hours-list .item {
+    color: #000;
+    font-size: 22px;
+    font-weight: 300;
+    line-height: 36px; }
+
+.partical-section .intro {
+  color: #000;
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 36px; }
+
+.partical-section .response-part {
+  font-size: 0;
+  margin: 32px 0 0; }
+  .partical-section .response-part .image-holder {
+    display: inline-block;
+    vertical-align: top;
+    width: 110px;
+    padding-right: 20px; }
+    .partical-section .response-part .image-holder .userpic {
+      padding-top: 105%;
+      display: block;
+      position: relative;
+      overflow: hidden;
+      -webkit-transform: translateZ(0);
+      transform: translateZ(0); }
+      .partical-section .response-part .image-holder .userpic img {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        height: 100%;
+        -webkit-transform: translateX(-50%);
+        transform: translateX(-50%); }
+  .partical-section .response-part .intro-part {
+    display: inline-block;
+    vertical-align: top;
+    width: calc(100% - 110px); }
+    .partical-section .response-part .intro-part .name {
+      color: #000;
+      font-size: 22px;
+      font-weight: 700; }
+    .partical-section .response-part .intro-part .position {
+      color: #999;
+      font-size: 16px;
+      font-weight: 300;
+      line-height: 30px;
+      margin-bottom: 5px; }
+
+.partical-section [data-accordeon] .anchor {
+  display: none; }
+
+.partical-section .right-caption .response-part {
+  display: block; }
+
+@media (max-width: 1199px) {
+  .partical-section .part {
+    padding: 40px 30px; } }
+
+@media (max-width: 993px) {
+  .partical-section .spaced-left {
+    padding-left: 0; }
+  .partical-section .primary-title {
+    margin-bottom: 20px; }
+    .partical-section .primary-title .last {
+      background-color: transparent;
+      padding: 0; }
+      .partical-section .primary-title .last br {
+        display: block; }
+      .partical-section .primary-title .last .inner {
+        padding: 0 15px;
+        background-color: #00ac5e; }
+  .partical-section .intro {
+    font-size: 18px;
+    line-height: 30px; }
+    .partical-section .intro br {
+      display: none; }
+  .partical-section .hours-list {
+    margin: 10px 0; }
+    .partical-section .hours-list .item {
+      font-size: 18px;
+      line-height: 30px; }
+  .partical-section [data-accordeon] .anchor {
+    display: inline-block; }
+    .partical-section [data-accordeon] .anchor .hidden-text {
+      display: none; }
+  .partical-section [data-accordeon] .accordeon-outer {
+    display: none; }
+  .partical-section [data-accordeon].active .anchor .text {
+    display: none; }
+  .partical-section [data-accordeon].active .anchor .hidden-text {
+    display: block; }
+  .partical-section [data-accordeon].active .accordeon-outer {
+    display: block; }
+  .partical-section .response-part .intro-part .name,
+  .partical-section .response-part .intro-part .primary-link {
+    font-size: 18px; } }
+
+@media (max-width: 767px) {
+  .partical-section .partical-outer {
+    border-left: 0;
+    border-right: 0;
+    margin-left: -15px;
+    margin-right: -15px;
+    padding-top: 30px; }
+  .partical-section .part {
+    padding: 30px 15px; }
+    .partical-section .part:first-child {
+      padding-top: 0; }
+    .partical-section .part:last-child {
+      padding-bottom: 0; }
+  .partical-section .primary-title {
+    color: #fff;
+    line-height: 37px; }
+    .partical-section .primary-title span {
+      background-color: #00ac5e;
+      padding: 0 10px; }
+  .partical-section .left-image .response-part {
+    display: none; }
+  .partical-section .right-caption .response-part {
+    display: block; }
+  .partical-section .response-part {
+    padding-bottom: 30px; }
+    .partical-section .response-part .image-holder {
+      width: 85px;
+      padding-right: 15px; }
+    .partical-section .response-part .intro-part {
+      width: calc(100% - 85px); }
+      .partical-section .response-part .intro-part .primary-link {
+        font-size: 16px; } }
+
+@media (max-width: 767px) {
+  .partical-section .image-holder {
+    margin-bottom: 30px; } }

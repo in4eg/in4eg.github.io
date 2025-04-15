@@ -1,0 +1,82 @@
+/*primary font*/
+.contact-section .hidden-large {
+  display: none; }
+
+.contact-section .departments-list .list-item {
+  padding: 50px;
+  background-color: #f7f7f7;
+  margin-bottom: 40px; }
+  .contact-section .departments-list .list-item:last-child {
+    margin-bottom: 0; }
+
+.contact-section .departments-list .list-outer {
+  display: inline-block;
+  vertical-align: top;
+  padding-right: 25px; }
+  .contact-section .departments-list .list-outer .contact-list .item {
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 30px; }
+  .contact-section .departments-list .list-outer .contact-list .icon {
+    color: #999;
+    font-size: 125%;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 10px;
+    width: 20px; }
+  .contact-section .departments-list .list-outer .contact-list .icon-mail {
+    font-size: 132%; }
+    .contact-section .departments-list .list-outer .contact-list .icon-mail:before {
+      position: relative;
+      top: 2px; }
+
+.contact-section .departments-list .link-outer {
+  display: inline-block;
+  padding-top: 4px;
+  vertical-align: top;
+  padding-left: 25px; }
+
+.contact-section .contact-intro {
+  padding: 51px 0 86px; }
+  .contact-section .contact-intro .title {
+    color: #000;
+    font-size: 38px;
+    font-weight: 400;
+    line-height: 68px;
+    margin-bottom: 10px; }
+  .contact-section .contact-intro .list-title {
+    color: #000;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 36px;
+    margin: 15px 0 0; }
+
+@media (max-width: 993px) {
+  .contact-section .departments-list {
+    margin-left: -15px;
+    margin-right: -15px; }
+    .contact-section .departments-list .list-item {
+      padding: 30px 15px;
+      margin-bottom: 20px; }
+  .contact-section .contact-intro {
+    padding: 60px 0; } }
+
+@media (max-width: 767px) {
+  .contact-section .hidden-large {
+    display: block; }
+    .contact-section .hidden-large .bordered-outer {
+      padding-bottom: 0;
+      padding-top: 30px; }
+  .contact-section .departments-list .list-outer {
+    display: block;
+    padding-right: 0; }
+  .contact-section .departments-list .link-outer {
+    display: block;
+    padding-left: 0;
+    margin-top: 7px; }
+  .contact-section .contact-intro {
+    padding: 40px 0; }
+    .contact-section .contact-intro .title {
+      font-size: 24px;
+      font-weight: 700;
+      line-height: 30px; } }

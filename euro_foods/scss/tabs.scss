@@ -1,0 +1,54 @@
+@import 'variables.scss';
+
+.tabs {
+
+	.tabs-nav {
+		font-size: 0;
+		margin-left: -15px;
+		margin-right: -15px;
+
+		.tab-item {
+			cursor: pointer;
+			display: inline-block;
+			font-size: 16px;
+			padding: 0 15px;
+		}
+	}
+	> .content {
+		display: none;
+
+		&.active {
+			display: block;
+		}
+	}
+}
+.simple-tabs {
+	margin: 0 0 30px;
+
+	.tab-item {
+		color: $primary;
+
+		span {
+			padding-top: 8px;
+			padding-bottom: 5px;
+			display: block;
+			font-weight: 300;
+			transition: color .3s;
+		}
+
+		&.active {
+			color: #000;
+
+			span {
+				font-weight: 700;
+				box-shadow: 0 3px 0 $primary;
+			}
+		}
+		&:hover {
+
+			span {
+				color: #000;
+			}
+		}
+	}
+}

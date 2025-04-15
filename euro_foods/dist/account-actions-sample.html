@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+	<meta name="format-detection" content="telephone=no">
+
+	<title>Euro Foods :: Account Actions Sample</title>
+
+	<meta name="msapplication-TileColor" content="#da532c">
+	<meta name="theme-color" content="#ffffff">
+	<link rel="apple-touch-icon" sizes="144x144" href="/db-apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/db-favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/db-favicon-16x16.png">
+	<link rel="manifest" href="/db-site.webmanifest">
+	<link rel="mask-icon" href="/db-safari-pinned-tab.svg" color="#5bbad5">
+	
+	<link rel="stylesheet" href="css/account-footer.css">
+	<link rel="stylesheet" href="css/account-header.css">
+	<link rel="stylesheet" href="css/aside-right.css">
+	<link rel="stylesheet" href="css/action-sample.css">
+	<link rel="stylesheet" href="css/breadcrumbs-section.css">
+	<link rel="stylesheet" href="css/buttons.css">
+	<link rel="stylesheet" href="css/dotted-list.css">
+	<link rel="stylesheet" href="css/fonts.css">
+	<link rel="stylesheet" href="css/form-elements.css">
+	<link rel="stylesheet" href="css/general.css">
+	<link rel="stylesheet" href="css/grid.css">
+	<link rel="stylesheet" href="css/icons.css">
+	<link rel="stylesheet" href="css/main-aside.css">
+	<link rel="stylesheet" href="css/main-category.css">
+	<link rel="stylesheet" href="css/main-footer.css">
+	<link rel="stylesheet" href="css/main-header.css">
+	<link rel="stylesheet" href="css/page-top.css">
+	<link rel="stylesheet" href="css/popup.css">
+	<link rel="stylesheet" href="css/personal-section.css">
+	<link rel="stylesheet" href="css/skin.css">
+	<link rel="stylesheet" href="css/social-list.css">
+	<link rel="stylesheet" href="css/tabs.css">
+
+</head>
+<body class="page-body">
+
+	<div class="page-main">
+
+		<!-- header -->
+		<header class="main-header account-header" id="mainHeader">
+			<div class="container">
+				<div class="row middle-xs">
+					<div class="col-xs-12 col-sm-3 col-md-4">
+						<div class="top-outer">
+							<a href="index.html" class="main-logo">
+								<img src="img/logo.png" alt="logo" class="logo-image">
+								<img src="img/logo-light.png" alt="logo" class="logo-light">
+							</a>
+							<div class="phone-link">
+								<a href="tel:78123216131" class="text">+7 812 321-61-31</a>
+								<button data-call="#callPopup" class="btn btn-link">
+									<img src="img/icon-call.png" alt="icon-call" class="phone-icon">
+									<i class="icon icon-phone-call hidden-icon"></i>
+								</button>
+							</div>
+							<div class="tablet-nav tablet-overlay">
+								<button type="button" class="btn nav-btn" data-menu="#mainMenu">
+									<i class="icon icon-menu close-icon"></i>
+									<i class="icon icon-left-arrow open-icon"></i>
+								</button>
+							</div>
+						</div>
+					</div>
+					<div class="col-xs-12 col-sm-9 col-md-8 align-right">
+						<div class="nav-part">
+							<nav class="main-nav">
+								<ul class="nav-list clear">
+									<li class="item">
+										<a href="#" class="link">
+											<i class="icon icon-checked-list"></i>
+											Мои заказы
+										</a>
+									</li>
+									<li class="item">
+										<a href="#" class="link">
+											<i class="icon icon-book"></i>
+											Каталог
+										</a>
+									</li>
+									<li class="item hidden-xs">
+										<a href="#" class="link">
+											<i class="icon icon-discount"></i>
+											Акции
+										</a>
+									</li>
+									<li class="item show-xs active">
+										<a href="#" class="link">
+											<i class="icon icon-shopping-cart"></i>
+											<span class="count">99+</span>
+										</a>
+									</li>
+								</ul>
+							</nav>
+							<div class="action-part">
+								<a href="#" class="link cart-btn show-xs">
+									<i class="icon icon-discount"></i>
+									Акции
+								</a>
+								<div class="user-panel">
+									<a href="account-profile.html">
+										<span class="user-icon">
+											<i class="icon icon-user"></i>
+										</span>
+										<span class="text">
+											Миндаль кафе
+										</span>
+									</a>
+									<a href="index.html" class="logout">
+										<span class="text">
+											<i class="icon icon-login gray-icon"></i>
+										</span>
+									</a>
+								</div>
+								<a href="#" class="btn primary-btn cart-btn hidden-xs">
+									<span class="count">99+</span>
+									<i class="icon icon-shopping-cart"></i>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</header>
+		<!-- / header -->
+
+		<main class="inner-main">
+			<!-- left aside -->
+			<aside class="main-aside" id="menuDesktop">
+				<div class="outer">
+					<button type="button" class="btn nav-btn" data-menu="#mainMenu">
+						<i class="icon icon-menu close-icon"></i>
+						<i class="icon icon-left-arrow open-icon"></i>
+					</button>
+					<div id="loginDesktop">
+						<a href="#" class="link btn btn-link">
+							<i class="icon icon-user"></i>
+						</a>
+					</div>
+			
+					<ul class="social-list clear vertical">
+						<li class="item">
+							<a href="#" title="vkontakte"><i class="icon icon-vk"></i></a>
+						</li>
+						<li class="item">
+							<a href="#" title="instagram"><i class="icon icon-instagram"></i></a>
+						</li>
+					</ul>
+				</div>
+				<!-- menu main -->
+				<div class="main-menu" id="mainMenu" data-desktop="#menuDesktop" data-header="#mainHeader">
+					<div class="menu-inner">
+						<button type="button" class="btn close-btn" data-hide-menu="#mainMenu">
+							<i class="icon icon-close"></i>
+						</button>
+			
+						<div class="top">
+							<div class="row">
+								<div class="col-xs-12 col-sm-4 link-cover">
+									<div class="phone-link">
+										<a href="tel:78123216131" class="text">+7 812 321-61-31</a>
+										<button data-call="#callPopup" class="btn btn-link">
+											<img src="img/icon-call.png" alt="icon-call" class="phone-icon">
+										</button>
+									</div>
+								</div>
+								<div class="col-xs-12 col-sm-5 form-cover">
+									<form action="#" class="search-form validate-form">
+										<div class="form-group">
+											<input type="text" class="input" placeholder="Что ищем?">
+										</div>
+										<button type="submit" class="btn search-btn">
+											<i class="icon icon-search"></i>
+										</button>
+									</form>
+								</div>
+								<div class="col-xs-12 col-sm-3 btn-cover">
+									<button type="button" class="btn action-btn" data-call="#requestPopup">Отправить заявку</button>
+								</div>
+							</div>
+						</div>
+						<div class="middle-nav">
+							<div class="title">Каталог товаров</div>
+							<ul class="nav-list clear">
+								<li class="item"><a href="#">Мясо</a></li>
+								<li class="item"><a href="#">Птица</a></li>
+								<li class="item"><a href="#">Рыба</a></li>
+								<li class="item"><a href="#">Морепродукты</a></li>
+								<li class="item"><a href="#">Бакалея</a></li>
+								<li class="item"><a href="#">Молочные продукты</a></li>
+								<li class="item"><a href="#">Товары для кондитеров</a></li>
+								<li class="item"><a href="#">Специи, приправы, пряности</a></li>
+								<li class="item"><a href="#">Чай, кофе</a></li>
+							</ul>
+						</div>
+						<div class="bottom-nav">
+							<div class="row">
+								<div class="col-xs-12 col-ms-6 col-md-3">
+									<div class="list-title">О компании</div>
+									<ul class="menu-list clear">
+										<li class="item"><a href="#">История и миссия</a></li>
+										<li class="item"><a href="#">Наша команда</a></li>
+										<li class="item"><a href="#">Отзывы</a></li>
+										<li class="item"><a href="#">Новости и акции</a></li>
+										<li class="item"><a href="#">Наши клиенты</a></li>
+										<li class="item"><a href="#">Наши партнеры</a></li>
+									</ul>
+								</div>
+								<div class="col-xs-12 col-ms-6 col-md-3">
+									<div class="list-title">Шефу и закупщику</div>
+									<ul class="menu-list clear">
+										<li class="item"><a href="#">Повару</a></li>
+										<li class="item"><a href="#">Кондитеру</a></li>
+										<li class="item"><a href="#">Закупщику</a></li>
+										<li class="item"><a href="#">Как стать клиентом ЕФ</a></li>
+										<li class="item"><a href="#">Кому мы не будем интересны</a></li>
+										<li class="item"><a href="#">Наши клиенты</a></li>
+									</ul>
+								</div>
+								<div class="col-xs-12 col-ms-6 col-md-3">
+									<div class="list-title">Поставщикам</div>
+									<ul class="menu-list clear">
+										<li class="item"><a href="#">Как стать партнером</a></li>
+										<li class="item"><a href="#">Предложить свой продукт</a></li>
+									</ul>
+								</div>
+								<div class="col-xs-12 col-ms-6 col-md-3">
+									<ul class="menu-list bold clear">
+										<li class="item"><a href="#">Сервис и логистика</a></li>
+										<li class="item"><a href="#">Статьи</a></li>
+										<li class="item"><a href="#">Блог</a></li>
+										<li class="item"><a href="#">Контакты</a></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</aside>
+			
+			<!-- / left aside -->
+
+			<section class="section personal-section action-sample">
+				<div class="container">
+					<div class="page-top visible-desktop">
+						<button type="button" class="btn btn-link back-link" onclick="window.history.back()">
+							<i class="icon icon-left-arrow"></i>
+						</button>
+						<h1 class="section-title">Йогурт натуральный 3,5%, 0,15кг '12шт., Активия</h1>
+					</div>
+					<div class="date"><span>с 1.12.2018 по 15.12.2018</span></div>
+					<div class="row">
+						<div class="col-xs-12 col-sm-6 col-md-5">
+							<figure class="article-image">
+								<img src="temp/item7.jpg" alt="item" class="adaptive">
+							</figure>
+						</div>
+						<div class="col-xs-12 col-sm-6 col-md-7">
+							<div class="paragraph">
+								У вас сеть ресторанов, кафе или пекарен? Крупное производство с большими производственными мощностями? Для вас имеет значение цена, объёмы и качество. Мы знакомы с системой аукционов и тендеров, готовы выдерживать объёмы и жестко придерживаться сроков поставки. По опыту своих клиентов мы знаем, что ни один продукт не вводится в рецептуру без предварительной проработки.
+							</div>
+						</div>
+					</div>
+					<div class="spaced-top">
+						<div class="row">
+							<div class="col-xs-12 col-md-9">
+								<form action="#" class="validate-form">
+									<div class="row">
+										<div class="col-xs-12 col-sm-8 col-md-8 col-lg-9">
+											<div class="form-group">
+												<input type="text" class="input bordered" placeholder="Название" value="Йогурт натуральный 3,5%, 0,15кг*12шт., Активия">
+											</div>
+										</div>
+										<div class="col-xs-12 col-sm-4 col-md-4 col-lg-3">
+											<div class="calculator-outer">
+												<div class="text">Количество</div>
+												<div class="calculator" data-max="99" data-min="0">
+													<button type="button" class="btn action-btn minus">
+														<i class="icon icon-remove"></i>
+													</button>
+													<input type="number" value="1" class="value-input">
+													<button type="button" class="btn action-btn plus">
+														<i class="icon icon-add"></i>
+													</button>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="form-group">
+										<textarea name="comment" placeholder="Комментарий" class="textarea input ignored bordered"></textarea>
+									</div>
+									<button class="btn success-btn" type="submit">Заказать образец</button>
+								</form>
+							</div>
+						</div>
+					</div>
+					<div class="spaced-top hidden-link">
+						<a href="#" class="primary-link">Вернуться к списку акций</a>
+					</div>
+				</div>
+			</section>
+		</main>
+
+		<!-- main-footer -->
+		<footer class="account-footer">
+			<div class="container">
+				<div class="row">
+					<div class="col-xs-12 col-ms-5 col-sm-4 col-md-5">
+						<div class="list-title">Связь с менеджером:</div>
+						<ul class="social-list clear filled">
+							<li class="item">
+								<a href="tel:+78123216131" title="+7(812) 321-61-31"><i class="icon icon-phone-call"></i></a>
+							</li>
+							<li class="item">
+								<a href="https://wa.me/123456789" title="123456789"><i class="icon icon-whatsapp"></i></a>
+							</li>
+							<li class="item">
+								<a href="mailto:mail@mail.mail" title="mail@mail.mail"><i class="icon icon-mail large-icon"></i></a>
+							</li>
+						</ul>
+					</div>
+					<div class="col-xs-12 col-ms-7 col-sm-4 col-md-4 spaced-xs address-cover">
+						<address class="address">
+							г. Санкт-Петербург, 
+							<span class="in-bl">Рябовское шоссе, д.120, лит. Б</span>
+						</address>
+						<a href="tel:78123216131" class="footer-link">+7(812) 321-61-31</a>
+					</div>
+					<div class="col-xs-12 col-ms-12 col-sm-4 col-md-3 spaced-ms">
+						<div class="copy">
+							&copy; EuroFoods, 2018
+						</div>
+						<div class="copy bottom">
+							<span class="hide-sm">Сайт разработан</span>
+							<span class="show-sm">Разработано</span>
+							в компании Улей
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+		<!-- / main-footer -->
+	</div>
+
+	<!-- popups -->
+	<div id="orderPopup" class="popup">
+		<div class="inner">
+			<div class="header">
+				<div class="title">
+					Личный кабинет
+				</div>
+				<button type="button" class="close-popup" data-close="#loginPopup">
+					<i class="icon icon-close"></i>
+				</button>
+			</div>
+			<div class="content">
+				asd
+			</div>
+		</div>
+	</div>
+	<div id="callPopup" class="popup">
+		<div class="inner">
+			<div class="header">
+				<div class="title">
+					Обратный звонок
+				</div>
+				<button type="button" class="close-popup" data-close="#callPopup">
+					<i class="icon icon-close"></i>
+				</button>
+			</div>
+			<div class="content">
+				<form action="#" class="validate-form" data-success="#successPopup">
+					<div class="form-group">
+						<input type="text" class="input bordered" placeholder="Ваше имя:">
+					</div>
+					<div class="form-group">
+						<input type="text" class="input phone bordered" placeholder="Телефон:" data-mask="+7 999 999-99-99">
+					</div>
+					<div class="checkbox-group">
+						<input type="checkbox" id="callPersonal2" class="checkbox" checked>
+						<label for="callPersonal2" class="checkbox-label primary-bordered">Даю согласие на обработку персональных данных</label>
+					</div>
+					<div class="form-bottom">
+						<button type="submit" class="btn success-btn">Перезвоните мне</button>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+	<div id="requestPopup" class="popup">
+		<div class="inner">
+			<div class="header">
+				<div class="title">
+					Запрос на поиск продукта
+				</div>
+				<button type="button" class="close-popup" data-close="#requestPopup">
+					<i class="icon icon-close"></i>
+				</button>
+			</div>
+			<div class="content">
+				<form action="#" class="validate-form" data-success="#successPopup">
+					<div class="form-group">
+						<input type="text" class="input bordered" placeholder="Ваше имя:">
+					</div>
+					<div class="form-group">
+						<input type="text" class="input email bordered" placeholder="E-mail:">
+					</div>
+					<div class="form-group">
+						<input type="text" class="input phone bordered" placeholder="Телефон:" data-mask="+7 999 999-99-99">
+					</div>
+					<div class="form-group">
+						<textarea class="textarea input bordered" placeholder="Ваши пожелания: название или описание продукта"></textarea>
+					</div>
+					<div class="checkbox-group">
+						<input type="checkbox" id="callPersonal" class="checkbox" checked>
+						<label for="callPersonal" class="checkbox-label primary-bordered">Даю согласие на обработку персональных данных</label>
+					</div>
+					<div class="form-bottom">
+						<button type="submit" class="btn success-btn">Отправить</button>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+	<div id="successPopup" class="popup">
+		<div class="inner">
+			<div class="header">
+				<div class="title">
+					Спасибо за запрос!
+				</div>
+				<button type="button" class="close-popup" data-close="#successPopup">
+					<i class="icon icon-close"></i>
+				</button>
+			</div>
+			<div class="content">
+				<div class="paragraph">
+					Менеджер свяжется с Вами в ближайшее время!
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<!-- script -->
+	<script src="js/lib/jquery.min.js"></script>
+
+	<script src="js/plugins/jquery.maskedinput.min.js"></script>
+	<script src="js/plugins/jquery.selecter.js"></script>
+	<script src="js/plugins/owl.carousel.min.js"></script>
+	<script src="js/plugins/simpleLightbox.js"></script>
+
+	<script src="js/main.js"></script>
+
+	<script src="js/init/aside-menu.js"></script>
+	<script src="js/init/calculator.js"></script>
+	<script src="js/init/data-toggle.js"></script>
+	<script src="js/init/main-menu.js"></script>
+	<script src="js/init/mask.js"></script>
+	<script src="js/init/dots-slider.js"></script>
+	<script src="js/init/popup.js"></script>
+	<script src="js/init/scrollspy.js"></script>
+	<script src="js/init/selecter-init.js"></script>
+	<script src="js/init/tabs.js"></script>
+	<script src="js/init/validation.js"></script>
+	<script src="js/init/input-action.js"></script>
+
+</body>
+</html>

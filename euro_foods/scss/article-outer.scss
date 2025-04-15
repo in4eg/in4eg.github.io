@@ -1,0 +1,294 @@
+@import 'variables.scss';
+
+.article-outer {
+
+	&:after {
+		content: '';
+		display: table;
+		clear: both;
+	}
+
+	h1 {
+		font-size: 48px;
+		font-weight: 400;
+		line-height: 68px;
+		margin: 0 0 5px;
+	}
+	h2 {
+		font-size: 38px;
+		line-height: 54px;
+		font-weight: 400;
+		margin: 0 0 5px;
+	}
+	h3 {
+		font-size: 30px;
+		font-weight: 700;
+		line-height: 42px;
+		margin: 0 0 5px;
+	}
+	h4 {
+		font-size: 22px;
+		font-weight: 700;
+		line-height: 36px;
+		margin: 0 0 5px;
+	}
+	h5 {
+		font-size: 16px;
+		font-weight: 700;
+		line-height: 30px;
+		margin: 0 0 5px;
+	}
+	p {
+		font-size: 16px;
+		font-weight: 300;
+		line-height: 30px;
+		margin: 10px 0;
+
+		&:first-child {
+			margin-top: 0;
+		}
+	}
+	a {
+		color: $primary;
+		font-size: 16px;
+		font-weight: 300;
+		line-height: 30px;
+
+		&:hover {
+			color: $success;
+		}
+	}
+	ul:not(.gallery-list) {
+		margin: 5px 0 25px;
+		overflow: hidden;
+
+		li {
+			position: relative;
+			padding-left: 40px;
+			font-size: 16px;
+			font-weight: 300;
+			line-height: 30px;
+
+			&:before {
+				content: '';
+				position: absolute;
+				top: 14px; left: 0;
+				height: 1px; width: 20px;
+				background-color: $action;
+			}
+		}
+	}
+	ol {
+		margin: 5px 0 25px 0;
+		overflow: hidden;
+		counter-reset: list;
+
+		li {
+			position: relative;
+			font-size: 16px;
+			font-weight: 300;
+			line-height: 30px;
+			padding-left: 40px;
+		}
+	}
+	li { list-style-type: none; }
+	ol { counter-reset: list; }
+	li:before {
+		counter-increment: list;
+		content: counter(list) ". ";
+		position: absolute;
+		left: 0;
+		color: $primary;
+	}
+	.right-image {
+		width: 33.33%;
+		overflow: hidden;
+		float: right;
+		margin: 10px 0 30px 30px;
+		padding-top: 56.3%;
+		position: relative;
+
+		&.small {
+			padding-top: 22%;
+		}
+
+		img {
+			position: absolute;
+			height: 100%;
+			top: 0; left: 50%;
+			transform: translateX(-50%);
+		}
+	}
+	.left-image {
+		width: 33.33%;
+		overflow: hidden;
+		float: left;
+		margin: 10px 30px 30px 0;
+		padding-top: 56.3%;
+		position: relative;
+
+		&.small {
+			padding-top: 22%;
+		}
+
+		img {
+			position: absolute;
+			height: 100%;
+			top: 0; left: 50%;
+			transform: translateX(-50%);
+		}
+	}
+	.form-cover {
+		display: none;
+	}
+	.hidden-link {
+		display: none;
+	}
+	.period {
+		margin: 0 0 30px;
+
+		.icon {
+			font-size: 32px;
+			display: inline-block;
+			vertical-align: middle;
+			margin-right: 10px;
+			color: $primary;
+		}
+		.text {
+			color: #999;
+			font-size: 22px;
+			font-weight: 300;
+			display: inline-block;
+			vertical-align: middle;
+
+			.time {
+				font-weight: 700;
+				color: #000;
+				display: inline-block;
+			}
+		}
+	}
+}
+
+@media (max-width: 767px) {
+
+	.article-outer {
+
+		.right-image,
+		.left-image {
+			width: auto;
+			float: none;
+			margin: 30px -15px;
+			padding-top: 66.5%;
+
+			&.small {
+				padding-top: 66.5%;
+			}
+
+			img {
+				width: auto; height: 100%;
+				min-width: 100%;
+			}
+		}
+		.list-cover {
+			background-color: $gray;
+			margin: 0 -15px;
+			padding: 30px 15px 30px;
+
+			.lined-list {
+				margin-bottom: 0;
+			}
+
+			+ .form-cover {
+				margin-top: 0;
+			}
+		}
+		.form-cover {
+			display: block;
+			margin: 40px -15px;
+
+			&:last-child {
+				margin-bottom: 0;
+			}
+
+			.aside-form {
+				background-color: $primary;
+				padding: 30px 15px;
+
+				&.collapsed-top {
+					margin-top: 0;
+				}
+
+				.lead {
+					font-size: 16px;
+					color: #fff;
+					margin: 0 0 15px;
+					font-weight: 300;
+				}
+				.btn {
+					padding-top: 15px;
+					padding-bottom: 15px;
+				}
+			}
+		}
+		.period {
+
+			.icon {
+				font-size: 20px;
+				margin-right: 7px;
+			}
+			.text {
+				font-size: 16px;
+			}
+		}
+		h1 {
+			font-size: 32px;
+			line-height: 48px;
+		}
+		h2 {
+			font-size: 30px;
+			line-height: 42px;
+			margin-top: 20px;
+
+			&:first-child {
+				margin-top: 0;
+			}
+		}
+		h3 {
+			font-size: 24px;
+			line-height: 30px;
+			margin-top: 20px;
+
+			&:first-child {
+				margin-top: 0;
+			}
+		}
+		h4 {
+			font-size: 18px;
+			line-height: 24px;
+			margin-top: 20px;
+
+			&:first-child {
+				margin-top: 0;
+			}
+		}
+		.catalog-table {
+			margin-left: -15px;
+			margin-right: -15px;
+		}
+	}
+}
+@media (max-width: 480px) {
+
+	.article-outer {
+
+		.hidden-link {
+			display: inline-block;
+			margin-top: 20px;
+		}
+		.right-image,
+		.left-image {
+			padding-top: 176%;
+		}
+	}
+}

@@ -1,0 +1,77 @@
+/*primary font*/
+.advantages-section {
+  background-color: #f7f7f7;
+  margin-bottom: 100px; }
+  .advantages-section .advantages-list {
+    font-size: 0;
+    margin: 0 -15px; }
+    .advantages-section .advantages-list .item {
+      display: inline-block;
+      padding: 15px;
+      width: 33.33%;
+      vertical-align: top; }
+    .advantages-section .advantages-list .title {
+      color: #000;
+      font-family: "Circe", sans-serif;
+      font-size: 30px;
+      font-weight: 700;
+      line-height: 48px;
+      margin: 0 0 18px; }
+      .advantages-section .advantages-list .title span {
+        padding: 0 15px;
+        background-color: #ffe932; }
+    .advantages-section .advantages-list .paragraph {
+      color: #000;
+      font-size: 16px;
+      font-weight: 300;
+      line-height: 30px; }
+  .advantages-section .slider-nav {
+    display: none; }
+
+@media (max-width: 993px) {
+  .advantages-section .advantages-list .item {
+    width: 50%; }
+  .advantages-section .advantages-list .title {
+    font-size: 24px;
+    line-height: 38px; } }
+
+@media (max-width: 767px) {
+  .advantages-section {
+    margin-bottom: 0; }
+    .advantages-section .advantages-list {
+      white-space: nowrap;
+      overflow: hidden; }
+      .advantages-section .advantages-list .item {
+        width: 100%;
+        display: none;
+        white-space: normal;
+        padding-top: 0;
+        padding-bottom: 0; }
+        .advantages-section .advantages-list .item.active {
+          display: block; }
+      .advantages-section .advantages-list .title {
+        font-size: 22px; }
+        .advantages-section .advantages-list .title.inline {
+          font-size: 0; }
+          .advantages-section .advantages-list .title.inline span {
+            font-size: 22px; }
+            .advantages-section .advantages-list .title.inline span:first-child {
+              padding-right: 0; }
+            .advantages-section .advantages-list .title.inline span:last-child {
+              padding-left: 7px; }
+    .advantages-section .slider-nav {
+      font-size: 0;
+      margin: 20px 0px 10px -7px;
+      display: block; }
+      .advantages-section .slider-nav .dot {
+        display: inline-block;
+        cursor: pointer;
+        padding: 10px; }
+        .advantages-section .slider-nav .dot span {
+          height: 6px;
+          width: 6px;
+          display: block;
+          background-color: #dedede;
+          transition: background-color .3s; }
+        .advantages-section .slider-nav .dot.active span {
+          background-color: #00ac5e; } }

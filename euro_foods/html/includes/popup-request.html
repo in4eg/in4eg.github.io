@@ -1,0 +1,35 @@
+<div id="requestPopup" class="popup">
+	<div class="inner">
+		<div class="header">
+			<div class="title">
+				Запрос на поиск продукта
+			</div>
+			<button type="button" class="close-popup" data-close="#requestPopup">
+				<i class="icon icon-close"></i>
+			</button>
+		</div>
+		<div class="content">
+			<form action="#" class="validate-form" data-success="#successPopup">
+				<div class="form-group">
+					<input type="text" class="input bordered" placeholder="Ваше имя:">
+				</div>
+				<div class="form-group">
+					<input type="text" class="input email bordered" placeholder="E-mail:">
+				</div>
+				<div class="form-group">
+					<input type="text" class="input phone bordered" placeholder="Телефон:" data-mask="+7 999 999-99-99">
+				</div>
+				<div class="form-group">
+					<textarea class="textarea input bordered" placeholder="Ваши пожелания: название или описание продукта"></textarea>
+				</div>
+				<div class="checkbox-group">
+					<input type="checkbox" id="callPersonal" class="checkbox" checked>
+					<label for="callPersonal" class="checkbox-label primary-bordered">Даю согласие на обработку персональных данных</label>
+				</div>
+				<div class="form-bottom">
+					<button type="submit" class="btn success-btn">Отправить</button>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>

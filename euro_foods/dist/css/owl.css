@@ -1,0 +1,93 @@
+.owl-carousel {
+  width: 100%;
+  -webkit-tap-highlight-color: transparent;
+  position: relative;
+  z-index: 1; }
+  .owl-carousel .owl-stage {
+    position: relative;
+    -ms-touch-action: pan-Y; }
+  .owl-carousel .owl-stage:after {
+    content: ".";
+    display: block;
+    clear: both;
+    visibility: hidden;
+    line-height: 0;
+    height: 0; }
+  .owl-carousel .owl-stage-outer {
+    position: relative;
+    overflow: visible;
+    -webkit-transform: translate3d(0px, 0px, 0px); }
+  .owl-carousel .owl-item {
+    position: relative;
+    min-height: 1px;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    float: left;
+    -webkit-backface-visibility: hidden;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none; }
+  .owl-carousel .owl-nav.disabled,
+  .owl-carousel .owl-dots.disabled {
+    display: none; }
+  .owl-carousel .owl-nav .owl-prev,
+  .owl-carousel .owl-nav .owl-next,
+  .owl-carousel .owl-dot {
+    cursor: pointer;
+    cursor: hand;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none; }
+  .owl-carousel.owl-loaded {
+    display: block; }
+  .owl-carousel.owl-loading {
+    opacity: 0;
+    display: block; }
+  .owl-carousel.owl-hidden {
+    opacity: 0; }
+  .owl-carousel.owl-refresh .owl-item {
+    visibility: hidden; }
+  .owl-carousel.owl-drag .owl-item {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none; }
+  .owl-carousel.owl-grab {
+    cursor: move;
+    cursor: -webkit-grab;
+    cursor: grab; }
+  .owl-carousel.owl-rtl {
+    direction: rtl; }
+  .owl-carousel.owl-rtl .owl-item {
+    float: right; }
+
+/* No Js */
+.no-js .owl-carousel {
+  display: block; }
+
+.owl-carousel .owl-dots {
+  text-align: center;
+  display: none; }
+  .owl-carousel .owl-dots .owl-dot {
+    display: inline-block;
+    padding: 12px; }
+    .owl-carousel .owl-dots .owl-dot span {
+      width: 6px;
+      height: 6px;
+      background-color: #fff;
+      display: inline-block;
+      transition: background-color .3s; }
+    .owl-carousel .owl-dots .owl-dot.active span {
+      background-color: #ffe932; }
+    .owl-carousel .owl-dots .owl-dot:hover span {
+      background-color: #00ac5e; }
+
+.owl-carousel .owl-nav .owl-next.disabled,
+.owl-carousel .owl-nav .owl-prev.disabled {
+  cursor: default; }
+
+@media (max-width: 767px) {
+  .owl-carousel .owl-nav {
+    display: none; }
+  .owl-carousel .owl-dots {
+    display: block; } }

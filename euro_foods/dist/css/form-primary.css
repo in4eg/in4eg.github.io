@@ -1,0 +1,129 @@
+/*primary font*/
+.hidden-element {
+  overflow: hidden; }
+
+.form-primary {
+  display: table;
+  table-layout: fixed;
+  background-color: #f7f7f7;
+  border-collapse: collapse;
+  width: 100%;
+  box-sizing: border-box;
+  position: relative;
+  overflow: hidden; }
+  .form-primary .image-side {
+    vertical-align: middle;
+    display: table-cell;
+    position: relative;
+    width: 48%;
+    padding-top: 61.5%;
+    overflow: hidden;
+    border-right: 1px solid #00ac5e; }
+    .form-primary .image-side img {
+      position: absolute;
+      height: 100%;
+      top: 0;
+      left: 0; }
+  .form-primary .form-side {
+    display: table-cell;
+    vertical-align: middle;
+    width: 52%;
+    height: 100%;
+    padding: 40px 15px 40px 40px;
+    background-color: #00ac5e;
+    color: #fff; }
+    .form-primary .form-side:before {
+      content: '';
+      display: block;
+      position: absolute;
+      pointer-events: none;
+      background-color: #00ac5e;
+      width: 34%;
+      height: 150%;
+      z-index: 1;
+      left: 39%;
+      top: -20%;
+      -webkit-transform: rotate(12deg);
+      transform: rotate(12deg); }
+    .form-primary .form-side .form-outer {
+      width: 588px;
+      position: relative;
+      z-index: 3;
+      max-width: 100%; }
+    .form-primary .form-side .title {
+      color: #fff;
+      font-size: 48px;
+      font-weight: 700;
+      line-height: 56px;
+      margin: 0 0 30px; }
+    .form-primary .form-side .marked-text {
+      position: relative; }
+      .form-primary .form-side .marked-text span {
+        color: #000;
+        font-size: 22px;
+        font-weight: 700;
+        background-color: #ffe932;
+        line-height: 36px;
+        padding: 0 15px; }
+      .form-primary .form-side .marked-text:before {
+        content: '';
+        position: absolute;
+        border: 5px solid transparent;
+        border-right: 200px solid #ffe932;
+        pointer-events: none;
+        position: absolute;
+        top: 0;
+        right: 99%;
+        z-index: 2;
+        -webkit-transform: rotate(4deg);
+        transform: rotate(4deg); }
+    .form-primary .form-side .simple-text {
+      color: #fff;
+      font-size: 16px;
+      font-weight: 300;
+      line-height: 36px;
+      margin: 10px 0 0; }
+    .form-primary .form-side .form-cover {
+      margin: 30px 0 0; }
+
+@media (min-width: 1540px) {
+  .form-primary .image-side {
+    padding-top: 857px; } }
+
+@media (max-width: 1231px) {
+  .form-primary .image-side {
+    padding-top: 808px;
+    width: 35%; }
+    .form-primary .image-side img {
+      left: -58%; }
+  .form-primary .form-side {
+    width: 65%; }
+    .form-primary .form-side:before {
+      width: 58%;
+      left: 25%;
+      -webkit-transform: rotate(10deg);
+      transform: rotate(10deg); }
+    .form-primary .form-side .title {
+      font-size: 36px;
+      line-height: 40px; }
+    .form-primary .form-side .marked-text:before {
+      border: 3px solid transparent;
+      border-right: 99px solid #ffe932; }
+    .form-primary .form-side .marked-text span {
+      font-size: 18px;
+      line-height: 30px; }
+    .form-primary .form-side .form-cover {
+      margin-top: 20px; } }
+
+@media (max-width: 767px) {
+  .form-primary .image-side {
+    display: none; }
+  .form-primary .form-side {
+    padding-left: 15px;
+    padding-right: 15px; }
+    .form-primary .form-side .title {
+      font-size: 24px;
+      margin: 0 0 20px; }
+    .form-primary .form-side .marked-text,
+    .form-primary .form-side .simple-text {
+      display: none; } }

@@ -1,0 +1,29 @@
+.blockquote-simple {
+	background-color: #fff;
+	padding: 30px 30px 20px 60px;
+	position: relative;
+	color: #48443E;
+
+	.blockquote {
+		font-size: 18px;
+		font-weight: bold;
+		text-transform: uppercase;
+		margin: 0 0 15px;
+		line-height: 1.2;
+	}
+	.icon-quote {
+		position: absolute;
+		top: 30px; left: 22px;
+		font-size: 18px;
+	}
+}
+
+@media (max-width: 1199px) {
+
+	.blockquote-simple {
+
+		.blockquote {
+			font-size: 14px;
+		}
+	}
+}

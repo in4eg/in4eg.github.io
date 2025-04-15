@@ -1,0 +1,115 @@
+/*primary font*/
+.btn {
+  transition: box-shadow .3s;
+  font-size: 16px;
+  line-height: 1;
+  padding: 18px 32px;
+  display: inline-block;
+  cursor: pointer;
+  transition: .3s;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  font-weight: 700;
+  border: 0;
+  background-color: transparent;
+  text-align: center; }
+  .btn:hover {
+    box-shadow: 0 5px 10px rgba(0, 0, 1, 0.18); }
+  .btn .show-sm {
+    display: none; }
+  .btn .show-mg {
+    display: none; }
+
+.btn.success-btn {
+  background-color: #2e76ba;
+  color: #fff; }
+  .btn.success-btn:hover {
+    background-color: #388fe1; }
+
+.btn.action-btn {
+  background-color: #ffe932;
+  color: #000; }
+  .btn.action-btn:hover {
+    background-color: #fffd32; }
+
+.primary-btn {
+  background-color: #00ac5e;
+  color: #fff; }
+  .primary-btn:hover {
+    background-color: #35D68D; }
+
+.btn.btn-block {
+  display: block;
+  width: 100%; }
+
+.btn.btn-link {
+  padding: 0; }
+  .btn.btn-link:hover {
+    box-shadow: none; }
+
+.btn.btn-simple {
+  color: #999;
+  font-weight: 300; }
+  .btn.btn-simple:hover {
+    box-shadow: none;
+    color: #2e76ba; }
+
+.btn.gray-btn {
+  background-color: #f7f7f7;
+  color: #00ac5e; }
+  .btn.gray-btn:hover {
+    background-color: #eaeaea; }
+
+.btn-bottom-hidden {
+  display: none; }
+
+.btn.active .hidden-active {
+  display: none; }
+
+.btn.active .show-active {
+  display: inline; }
+
+.btn.before-icon {
+  position: relative; }
+  .btn.before-icon .icon {
+    position: absolute;
+    right: 100%;
+    top: -3px;
+    color: #b4b4b4;
+    margin-right: 10px;
+    font-size: 20px; }
+
+@media (max-width: 1231px) {
+  .btn {
+    padding-left: 30px;
+    padding-right: 30px; }
+    .btn .hide-md {
+      display: none; }
+    .btn .show-mg {
+      display: inline; } }
+
+@media (max-width: 993px) {
+  .btn .hide-sm {
+    display: none; }
+  .btn .show-sm {
+    display: inline; } }
+
+@media (max-width: 993px) {
+  .btn {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    font-weight: 300; } }
+
+@media (max-width: 767px) {
+  .btn {
+    padding-left: 20px;
+    padding-right: 20px; }
+    .btn .hide-xs {
+      display: none; }
+    .btn .first-xs {
+      text-transform: capitalize; }
+  .btn-bottom-hidden {
+    display: block;
+    margin-top: 40px; }
+  .btn-top-hidden {
+    margin-top: 30px; } }

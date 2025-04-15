@@ -1,0 +1,113 @@
+/*primary font*/
+.map-section {
+  margin-bottom: 100px;
+  position: relative;
+  display: block;
+  width: 100%;
+  background-color: #f7f7f7;
+  overflow: hidden; }
+  .map-section .hidden-title {
+    display: none; }
+  .map-section .address-part {
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    top: 0;
+    left: 0;
+    white-space: nowrap;
+    height: 100%;
+    text-align: center; }
+    .map-section .address-part:after {
+      position: absolute;
+      content: '';
+      top: -10%;
+      left: -54%;
+      bottom: 0;
+      background-color: #f7f7f7;
+      height: 150%;
+      width: 150%;
+      -webkit-transform: rotate(-77deg);
+      transform: rotate(-77deg); }
+    .map-section .address-part:before {
+      content: '';
+      height: 100%;
+      display: inline-block;
+      vertical-align: middle; }
+    .map-section .address-part .container {
+      white-space: normal;
+      display: inline-block;
+      vertical-align: middle;
+      width: 100%;
+      text-align: left; }
+    .map-section .address-part .outer {
+      background-color: #f7f7f7;
+      position: relative;
+      z-index: 1; }
+    .map-section .address-part .section-title {
+      margin-bottom: 20px;
+      line-height: 56px; }
+    .map-section .address-part .lead {
+      color: #999;
+      font-size: 16px;
+      font-weight: 300;
+      line-height: 30px;
+      margin-bottom: 28px; }
+    .map-section .address-part .address {
+      color: #000;
+      font-size: 22px;
+      font-weight: 300;
+      line-height: 36px; }
+  .map-section .map-part {
+    width: 60%;
+    margin: 0 0 0 auto; }
+  .map-section .google-map {
+    height: 600px; }
+  .map-section .marker-map-content {
+    padding: 20px; }
+    .map-section .marker-map-content .title {
+      font-size: 26px;
+      font-weight: 400; }
+    .map-section .marker-map-content .paragraph {
+      max-width: 200px; }
+
+@media (max-width: 1199px) {
+  .map-section .address-part:after {
+    left: -55%; }
+  .map-section .address-part .section-title {
+    line-height: 40px; }
+  .map-section .address-part .lead {
+    margin-bottom: 20px; }
+  .map-section .address-part .address {
+    font-size: 18px; }
+  .map-section .google-map {
+    height: 400px; } }
+
+@media (max-width: 993px) {
+  .map-section {
+    margin-bottom: 20px; }
+    .map-section .address-part:after {
+      left: -68%; } }
+
+@media (max-width: 767px) {
+  .map-section {
+    margin-bottom: 0;
+    background-color: #fff; }
+    .map-section .google-map {
+      height: 270px; }
+    .map-section .hidden-title {
+      display: block;
+      padding: 0 15px; }
+    .map-section .address-part:after {
+      display: none; }
+    .map-section .map-part {
+      width: 100%; }
+    .map-section .address-part {
+      position: static;
+      background-color: #fff; }
+      .map-section .address-part .outer {
+        background-color: #fff;
+        padding: 20px 0 0; }
+      .map-section .address-part .lead {
+        margin-bottom: 10px; }
+      .map-section .address-part:before {
+        display: none; } }

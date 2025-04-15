@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+	<meta name="format-detection" content="telephone=no">
+
+	<title>Terra-e-Muro :: Naturstein &amp; Feinsteinzeug</title>
+	
+	<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+	<link rel="stylesheet" href="css/bundle.min.css">
+
+</head>
+<body class="light">
+
+	#=include includes/header.html
+
+	<main class="page-main">
+
+		<div class="banner-image section spaced-top-section hidden-xs collapsed-spaces">
+			<div class="container">
+				<figure class="image-cover">
+					<img src="temp/banner1.jpg" alt="banner" class="vertical">
+				</figure>
+			</div>
+		</div>
+
+		<section class="section spaced-top-section collapsed-spaces collapsed-spaces">
+			<div class="container">
+				<div class="row">
+					<div class="col-xs-12 col-sm-4 col-md-3 first-sm spaced-xs hidden-xs">
+						<div class="card">
+							<figure class="link-wrap">
+								<img src="temp/1_10.jpg" alt="image" class="primary-image vertical-ms sx-vertical">
+							</figure>
+						</div>
+					</div>
+					<div class="col-xs-12 col-sm-8 col-md-9">
+						<div class="section-article">
+							<h1 class="section-title">Wohnwelten</h1>
+							<div class="paragraph">
+								Fliesen sind längst nicht mehr nur im Bad oder der Küche zu finden. 
+								Das vielseitige Material ist eigentlich überall einsetzbar - von der Garage über die Terrasse bis ins Schlafzimmer.
+								Ausgefallen oder Klassisch, Naturstein oder Feinsteinzeug - Bei Terra e Muro finden Sie dank großer Auswahl und kompetenter Beratung garantiert die richtige Lösung.
+							</div>
+							<div class="paragraph">
+								Suchen Sie noch den passenden Boden für Ihren Raum? Lassen Sie sich inspirieren!
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+
+		<!-- section -->
+		<section class="section packery-section collapsed-spaces">
+			<div class="container">
+				<div class="row">
+					<div class="col-xs-12 col-sm-8 col-md-9">
+						#=include includes/catalog-cards.html
+					</div>
+					<!-- hidden tablet show only phone -->
+					<div class="col-xs-12 col-sm-4 col-md-3 first-sm spaced-xs hidden-xs show-small">
+						<div class="card blue-back spaced-top-card">
+							<div class="top">
+								<div class="title">
+									<span class="lined">
+										Beratungs- <br>termin vereinbaren
+									</span>
+								</div>
+								<div class="subtitle light">
+									Kommen Sie jederzeit für einen persönlichen und kostenlosen Beratungstermin vorbei!
+								</div>
+							</div>
+							<div class="bottom with-form">
+								<div class="date-form" data-call="#datePopup">
+									<div class="date-input">Datum auswählen</div>
+									<i class="icon icon-calendar form-icon"></i>
+								</div>
+								<div class="lined">
+									Termin anfragen
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+	</main>
+
+	#=include includes/footer.html
+
+	<!-- popups -->
+	#=include includes/popup-date.html
+	#=include includes/popup-success.html
+	#=include includes/popup-step.html
+
+	<link href="https://fonts.googleapis.com/css?family=Poppins:100,300,400,500,600,700" rel="stylesheet">
+
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCpKZxw5kh0YQOr9lc_2iUE7wnqd8dQYQY&libraries=places"></script>
+
+	<script src="js/bundle.js"></script>
+
+
+</body>
+</html>

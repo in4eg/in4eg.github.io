@@ -1,0 +1,94 @@
+@import 'variables.scss';
+
+.tooltip {
+	position: relative;
+
+	.icon {
+		color: $primary;
+		position: absolute;
+		right: 100%;
+		font-size: 16px;
+		margin-right: 10px;
+		cursor: help;
+
+		&:hover {
+
+			~ .tooltip-inner {
+				opacity: 1;
+				transform: translateX(0);
+				visibility: visible;
+			}
+		}
+	}
+	&[data-tooltip] {
+
+		.icon {
+			color: $danger;
+
+			&.primary-color {
+				color: $primary;
+			}
+		}
+
+		.tooltip-inner {
+			width: 243px;
+			box-shadow: 0 0 25px rgba(0, 0, 0, 0.1);
+			background-color: #fff;
+			padding: 30px;
+			position: absolute;
+			top: -45px; left: 0;
+			z-index: 1;
+			opacity: 0;
+			transform: translateX(10px);
+			transition: opacity .3s, transform .3s;
+			visibility: hidden;
+
+			&:before {
+				content: '';
+				position: absolute;
+				border: 8px solid transparent;
+				border-right: 8px solid #fff;
+				right: 100%; top: 45px;
+			}
+		}
+	}
+}
+
+@media (max-width: 767px) {
+
+	.tooltip {
+
+		.icon {
+			height: 40px; width: 40px;
+			display: block;
+		}
+
+		.toolip-outer {
+			position: relative;
+		}
+		&[data-tooltip] {
+
+			.tooltip-inner {
+				padding: 20px;
+				top: 100%;
+				margin-top: -15px;
+				transform: translateX(-61%) translateY(0px);
+				transition-delay: .2s;
+
+				&:before {
+					border-right-color: transparent;
+					border-bottom-color: #fff;
+					top: auto; bottom: 100%;
+					right: 33%;
+				}
+			}
+		}
+		.icon:hover {
+
+			~ .tooltip-inner {
+				transform: translateX(-61%) translateY(-23px);
+				margin-top: 10px;
+			}
+		}
+	}
+}

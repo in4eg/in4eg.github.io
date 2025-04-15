@@ -1,0 +1,163 @@
+@import 'variables.scss';
+
+.map-section {
+	margin-bottom: 100px;
+	position: relative;
+	display: block;
+	width: 100%;
+	background-color: $gray;
+	overflow: hidden;
+
+	.hidden-title {
+		display: none;
+	}
+
+	.address-part {
+		position: absolute;
+		z-index: 1;
+		width: 100%;
+		top: 0; left: 0;
+		white-space: nowrap;
+		height: 100%;
+		text-align: center;
+
+		&:after {
+			position: absolute;
+			content: '';
+			top: -10%; left: -54%;
+			bottom: 0;
+			background-color: $gray;
+			height: 150%; width: 150%;
+			transform: rotate(-77deg);
+		}
+		&:before {
+			content: '';
+			height: 100%;
+			display: inline-block;
+			vertical-align: middle;
+		}
+		.container {
+			white-space: normal;
+			display: inline-block;
+			vertical-align: middle;
+			width: 100%;
+			text-align: left;
+		}
+		.outer {
+			background-color: $gray;
+			position: relative;
+			z-index: 1;
+		}
+		.section-title {
+			margin-bottom: 20px;
+			line-height: 56px;
+		}
+		.lead {
+			color: #999;
+			font-size: 16px;
+			font-weight: 300;
+			line-height: 30px;
+			margin-bottom: 28px;
+		}
+		.address {
+			color: #000;
+			font-size: 22px;
+			font-weight: 300;
+			line-height: 36px;
+		}
+	}
+
+	.map-part {
+		width: 60%;
+		margin: 0 0 0 auto;
+	}
+	.google-map {
+		height: 600px;
+	}
+	.marker-map-content {
+		padding: 20px;
+
+		.title {
+			font-size: 26px;
+			font-weight: 400;
+		}
+		.paragraph {
+			max-width: 200px;
+		}
+	}
+}
+
+@media (max-width: 1199px) {
+
+	.map-section {
+
+		.address-part {
+
+			&:after {
+				left: -55%;
+			}
+			.section-title {
+				line-height: 40px;
+			}
+			.lead {
+				margin-bottom: 20px;
+			}
+			.address {
+				font-size: 18px;
+			}
+		}
+		.google-map {
+			height: 400px;
+		}
+	}
+}
+@media (max-width: 993px) {
+
+	.map-section {
+		margin-bottom: 20px;
+
+		.address-part:after {
+			left: -68%;
+		}
+	}
+}
+@media (max-width: 767px) {
+
+	.map-section {
+		margin-bottom: 0;
+		background-color: #fff;
+
+		.google-map {
+			height: 270px;
+		}
+
+		.hidden-title {
+			display: block;
+			padding: 0 15px;
+		}
+
+		.address-part:after {
+			display: none;
+		}
+		.map-part {
+			width: 100%;
+		}
+		.address-part {
+			position: static;
+			background-color: #fff;
+
+			.outer {
+				background-color: #fff;
+				padding: 20px 0 0;
+			}
+
+			.lead {
+				margin-bottom: 10px;
+			}
+
+			&:before {
+				display: none;
+			}
+		}
+	}
+}

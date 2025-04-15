@@ -1,0 +1,105 @@
+@import 'variables.scss';
+
+.social-list {
+	font-size: 0;
+	margin: 0 -10px;
+
+	.item {
+		display: inline-block;
+
+		a {
+			display: block;
+			font-size: 19px;
+			padding: 0 10px;
+			color: #aeaeae;
+			transition: color .3s;
+
+			.icon-vk,
+			.large-icon {
+				font-size: 125%;
+
+				&:before {
+					position: relative;
+					top: 2px;
+				}
+			}
+
+			.icon-acrobat-file {
+				font-size: 139%;
+
+				&:before {
+					position: relative;
+					top: 4px;
+				}
+			}
+			.icon-printer {
+
+				&:before {
+					position: relative;
+					top: 0px;
+				}
+			}
+
+			&:hover {
+				color: $primary;
+			}
+		}
+	}
+	.large-icon {
+		font-size: 134%;
+
+		&:before {
+			position: relative;
+			top: 6px;
+		}
+	}
+	&.vertical {
+
+		.item {
+			display: block;
+			text-align: center;
+			font-size: 0;
+
+			a {
+				padding: 10px;
+			}
+		}
+	}
+}
+.social-list.filled {
+	margin-left: -5px;
+	margin-right: -5px;
+
+	.item {
+		padding: 0 5px;
+
+		a {
+			background-color: $primary;
+			display: block;
+			height: 40px; width: 40px;
+			text-align: center;
+			line-height: 46px;
+			padding: 0;
+			color: #fff;
+			transition: background-color .3s;
+
+			.largest {
+				font-size: 126%;
+
+				&:before {
+					position: relative;
+					top: 2px;
+				}
+			}
+			&:hover {
+				background-color: $success;
+			}
+			.icon-mail {
+
+				&:before {
+					top: 5px;
+				}
+			}
+		}
+	}
+}

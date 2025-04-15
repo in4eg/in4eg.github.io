@@ -1,0 +1,100 @@
+/*primary font*/
+.form-primary-large {
+  background-color: #00ac5e;
+  color: #fff;
+  padding: 80px 0 100px; }
+  .form-primary-large .title {
+    font-size: 48px;
+    font-weight: 400;
+    line-height: 48px;
+    margin: 0 0 50px; }
+  .form-primary-large .subtitle {
+    font-size: 30px;
+    font-weight: 300;
+    line-height: 40px;
+    margin: 0 0 30px; }
+  .form-primary-large .spaced-inner {
+    padding-left: 100px;
+    position: relative; }
+    .form-primary-large .spaced-inner:before {
+      width: 69px;
+      height: 10px;
+      content: '';
+      background-image: url(../img/light-arrow.png);
+      left: 0;
+      top: 85px;
+      position: absolute; }
+  .form-primary-large .name {
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 1;
+    margin-bottom: 5px; }
+  .form-primary-large .position {
+    font-size: 16px;
+    font-weight: 300; }
+  .form-primary-large .share-list {
+    font-size: 0;
+    margin: 18px -5px 0; }
+    .form-primary-large .share-list .item {
+      padding: 5px;
+      display: inline-block; }
+      .form-primary-large .share-list .item a {
+        height: 40px;
+        width: 40px;
+        background-color: #ffe932;
+        font-size: 28px;
+        text-align: center;
+        line-height: 50px;
+        transition: background-color .3s; }
+        .form-primary-large .share-list .item a .icon-mail {
+          position: relative;
+          top: 2px; }
+        .form-primary-large .share-list .item a:hover {
+          background-color: #2e76ba; }
+
+@media (max-width: 993px) {
+  .form-primary-large {
+    padding: 60px 0; }
+    .form-primary-large .title {
+      font-size: 36px;
+      line-height: 40px; }
+    .form-primary-large .subtitle {
+      font-size: 22px;
+      font-weight: 700;
+      line-height: 40px;
+      margin-bottom: 15px; }
+    .form-primary-large .spaced-inner {
+      padding-left: 0; }
+      .form-primary-large .spaced-inner:before {
+        display: none; }
+    .form-primary-large .photo-image {
+      height: 151px;
+      overflow: hidden; }
+    .form-primary-large .name {
+      font-size: 18px; }
+    .form-primary-large .share-list {
+      margin-top: 38px; } }
+
+@media (max-width: 993px) {
+  .form-primary-large {
+    padding: 60px 0; }
+    .form-primary-large .title {
+      font-size: 24px;
+      line-height: 30px;
+      margin-bottom: 0; }
+    .form-primary-large .subtitle {
+      font-size: 24px;
+      font-weight: 300;
+      line-height: 30px;
+      margin-top: 30px; }
+    .form-primary-large .spaced-inner {
+      padding-left: 0; }
+      .form-primary-large .spaced-inner:before {
+        display: none; }
+    .form-primary-large .photo-image {
+      height: 151px; }
+    .form-primary-large .name {
+      font-size: 18px;
+      margin-bottom: 10px; }
+    .form-primary-large .share-list {
+      margin-top: 14px; } }

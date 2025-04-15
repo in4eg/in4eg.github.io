@@ -1,0 +1,85 @@
+/*primary font*/
+.partnership-section .partnership-cards {
+  margin: 0 -15px;
+  font-size: 0; }
+  .partnership-section .partnership-cards .card-item {
+    padding: 0 15px;
+    display: inline-block;
+    position: relative;
+    vertical-align: top;
+    width: 50%; }
+    .partnership-section .partnership-cards .card-item .inner {
+      background-color: #00ac5e;
+      color: #fff;
+      padding: 40px 100px 40px 40px; }
+    .partnership-section .partnership-cards .card-item .title {
+      font-size: 30px;
+      font-weight: 700;
+      line-height: 30px; }
+    .partnership-section .partnership-cards .card-item .paragraph {
+      font-size: 26px;
+      font-weight: 300;
+      line-height: 30px; }
+    .partnership-section .partnership-cards .card-item .caption {
+      margin: 0 0 50px; }
+    .partnership-section .partnership-cards .card-item .card-icon {
+      position: absolute;
+      right: 40px;
+      top: 50%;
+      -webkit-transform: translateY(-50%) translateZ(0);
+      transform: translateY(-50%) translateZ(0);
+      max-height: 90%; }
+
+@media (max-width: 1231px) {
+  .partnership-section .partnership-cards .card-item .inner {
+    padding: 30px 85px 30px 30px; }
+  .partnership-section .partnership-cards .card-item .title {
+    font-size: 24px;
+    line-height: 30px;
+    height: 60px; }
+    .partnership-section .partnership-cards .card-item .title .block {
+      display: block; }
+  .partnership-section .partnership-cards .card-item .paragraph {
+    font-size: 24px; }
+  .partnership-section .partnership-cards .card-item .card-icon {
+    right: 30px;
+    top: 30px;
+    -webkit-transform: translateY(0) translateZ(0);
+    transform: translateY(0) translateZ(0);
+    max-height: 45%; }
+  .partnership-section .partnership-cards .card-item .btn {
+    display: block; }
+  .partnership-section .partnership-cards .card-item .caption {
+    max-width: 160px;
+    margin-bottom: 30px; }
+    .partnership-section .partnership-cards .card-item .caption br {
+      display: none; } }
+
+@media (max-width: 767px) {
+  .partnership-section .partnership-cards .card-item .inner {
+    padding-right: 50px; }
+  .partnership-section .partnership-cards .card-item .caption {
+    max-width: 142px; }
+  .partnership-section .partnership-cards .card-item .title,
+  .partnership-section .partnership-cards .card-item .paragraph {
+    font-size: 20px; } }
+
+@media (max-width: 640px) {
+  .partnership-section .partnership-cards .card-item {
+    width: 100%;
+    margin-bottom: 20px; }
+    .partnership-section .partnership-cards .card-item .inner {
+      padding-right: 30px; }
+    .partnership-section .partnership-cards .card-item:last-child {
+      margin-bottom: 0; }
+    .partnership-section .partnership-cards .card-item .card-icon {
+      position: static;
+      max-width: 130px;
+      margin-bottom: 15px; }
+    .partnership-section .partnership-cards .card-item .caption {
+      max-width: none;
+      margin-bottom: 15px; }
+    .partnership-section .partnership-cards .card-item .title {
+      height: auto; }
+      .partnership-section .partnership-cards .card-item .title .block {
+        display: inline; } }

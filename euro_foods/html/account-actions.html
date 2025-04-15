@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+	<meta name="format-detection" content="telephone=no">
+
+	<title>Euro Foods :: Account Actions</title>
+
+	<meta name="msapplication-TileColor" content="#da532c">
+	<meta name="theme-color" content="#ffffff">
+	<link rel="apple-touch-icon" sizes="144x144" href="/db-apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/db-favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/db-favicon-16x16.png">
+	<link rel="manifest" href="/db-site.webmanifest">
+	<link rel="mask-icon" href="/db-safari-pinned-tab.svg" color="#5bbad5">
+	
+	<link rel="stylesheet" href="css/account-footer.css">
+	<link rel="stylesheet" href="css/account-header.css">
+	<link rel="stylesheet" href="css/aside-right.css">
+	<link rel="stylesheet" href="css/actions-list.css">
+	<link rel="stylesheet" href="css/breadcrumbs-section.css">
+	<link rel="stylesheet" href="css/buttons.css">
+	<link rel="stylesheet" href="css/dotted-list.css">
+	<link rel="stylesheet" href="css/fonts.css">
+	<link rel="stylesheet" href="css/form-elements.css">
+	<link rel="stylesheet" href="css/general.css">
+	<link rel="stylesheet" href="css/grid.css">
+	<link rel="stylesheet" href="css/icons.css">
+	<link rel="stylesheet" href="css/main-aside.css">
+	<link rel="stylesheet" href="css/main-category.css">
+	<link rel="stylesheet" href="css/main-footer.css">
+	<link rel="stylesheet" href="css/main-header.css">
+	<link rel="stylesheet" href="css/popup.css">
+	<link rel="stylesheet" href="css/personal-section.css">
+	<link rel="stylesheet" href="css/skin.css">
+	<link rel="stylesheet" href="css/social-list.css">
+	<link rel="stylesheet" href="css/tabs.css">
+
+</head>
+<body class="page-body">
+
+	<div class="page-main">
+
+		<!-- header -->
+		#=include includes/account-header.html
+		<!-- / header -->
+
+		<main class="inner-main">
+			<!-- left aside -->
+			#=include includes/account-aside.html
+			<!-- / left aside -->
+
+			<section class="section personal-section">
+				<div class="container">
+					<h1 class="section-title">Акции</h1>
+					#=include includes/actions-list.html
+				</div>
+			</section>
+		</main>
+
+		<!-- main-footer -->
+		#=include includes/account-footer.html
+		<!-- / main-footer -->
+	</div>
+
+	<!-- popups -->
+	#=include includes/popup-login.html
+	#=include includes/popup-call.html
+	#=include includes/popup-request.html
+	#=include includes/popup-success.html
+	#=include includes/popup-password.html
+	#=include includes/popup-success-pass.html
+
+
+	<!-- script -->
+	<script src="js/lib/jquery.min.js"></script>
+
+	<script src="js/plugins/jquery.maskedinput.min.js"></script>
+	<script src="js/plugins/jquery.selecter.js"></script>
+	<script src="js/plugins/owl.carousel.min.js"></script>
+	<script src="js/plugins/simpleLightbox.js"></script>
+
+	<script src="js/main.js"></script>
+
+	<script src="js/init/aside-menu.js"></script>
+	<script src="js/init/data-toggle.js"></script>
+	<script src="js/init/main-menu.js"></script>
+	<script src="js/init/mask.js"></script>
+	<script src="js/init/popup.js"></script>
+	<script src="js/init/scrollspy.js"></script>
+	<script src="js/init/selecter-init.js"></script>
+	<script src="js/init/dots-slider.js"></script>
+	<script src="js/init/tabs.js"></script>
+	<script src="js/init/validation.js"></script>
+	<script src="js/init/input-action.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,125 @@
+@import 'variables.scss';
+
+.advantages-section {
+	background-color: $gray;
+	margin-bottom: 100px;
+
+	.advantages-list {
+		font-size: 0;
+		margin: 0 -15px;
+
+		.item {
+			display: inline-block;
+			padding: 15px;
+			width: 33.33%;
+			vertical-align: top;
+		}
+
+		.title {
+			color: #000;
+			font-family: $font;
+			font-size: 30px;
+			font-weight: 700;
+			line-height: 48px;
+			margin: 0 0 18px;
+
+			span {
+				padding: 0 15px;
+				background-color: $action;
+			}
+		}
+		.paragraph {
+			color: #000;
+			font-size: 16px;
+			font-weight: 300;
+			line-height: 30px;
+		}
+	}
+	.slider-nav {
+		display: none;
+	}
+}
+
+@media (max-width: 993px) {
+
+	.advantages-section {
+
+		.advantages-list {
+
+			.item {
+				width: 50%;
+			}
+
+			.title {
+				font-size: 24px;
+				line-height: 38px;
+			}
+		}
+	}
+}
+
+@media (max-width: 767px) {
+
+	.advantages-section {
+		margin-bottom: 0;
+
+		.advantages-list {
+			white-space: nowrap;
+			overflow: hidden;
+
+			.item {
+				width: 100%;
+				display: none;
+				white-space: normal;
+				padding-top: 0;
+				padding-bottom: 0;
+
+				&.active {
+					display: block;
+				}
+			}
+			.title {
+				font-size: 22px;
+
+				&.inline {
+					font-size: 0;
+
+					span {
+						font-size: 22px;
+
+						&:first-child {
+							padding-right: 0;
+						}
+						&:last-child {
+							padding-left: 7px;
+						}
+					}
+				}
+			}
+		}
+		.slider-nav {
+			font-size: 0;
+			margin: 20px 0px 10px -7px;
+			display: block;
+
+			.dot {
+				display: inline-block;
+				cursor: pointer;
+				padding: 10px;
+
+				span {
+					height: 6px; width: 6px;
+					display: block;
+					background-color: #dedede;
+					transition: background-color .3s;
+				}
+				&.active {
+
+					span {
+						background-color: $primary;
+					}
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,9 @@
+/*primary font*/
+.catalog-filter {
+  margin: 30px 0; }
+
+@media (max-width: 767px) {
+  .catalog-filter {
+    display: none; }
+  .filter-outer .filter-section {
+    margin: 30px -15px 0; } }

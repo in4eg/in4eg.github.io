@@ -1,0 +1,84 @@
+/*primary font*/
+.account-footer {
+  background-color: #f7f7f7;
+  padding: 45px 0; }
+  .account-footer .list-title {
+    color: #000;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 30px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 30px; }
+  .account-footer .social-list {
+    display: inline-block;
+    vertical-align: middle; }
+  .account-footer .address {
+    color: #000;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 1;
+    margin-bottom: 13px; }
+  .account-footer .footer-link {
+    color: #000;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1; }
+    .account-footer .footer-link:hover {
+      color: #00ac5e; }
+  .account-footer .copy {
+    color: #000;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 1; }
+    .account-footer .copy.bottom {
+      color: #999999;
+      padding-left: 22px;
+      margin-top: 13px; }
+  .account-footer .show-sm {
+    display: none; }
+
+@media (max-width: 993px) {
+  .account-footer {
+    padding: 30px 0; }
+    .account-footer .hide-sm {
+      display: none; }
+    .account-footer .show-sm {
+      display: inline; }
+    .account-footer .copy {
+      line-height: 21px; }
+      .account-footer .copy.bottom {
+        padding-left: 0; }
+    .account-footer .address {
+      line-height: 30px; }
+    .account-footer .list-title {
+      margin-bottom: 7px; } }
+
+@media (max-width: 767px) {
+  .account-footer {
+    padding-bottom: 90px; }
+    .account-footer .spaced-ms {
+      margin-top: 15px; } }
+
+@media (max-width: 480px) {
+  .account-footer .spaced-xs {
+    margin-top: 30px; }
+  .account-footer .list-title {
+    display: inline-block;
+    margin-right: 23px;
+    margin-bottom: 0;
+    width: 105px;
+    line-height: 20px; }
+  .account-footer .copy {
+    color: #999; }
+    .account-footer .copy.bottom {
+      color: #000; }
+  .account-footer .address-cover {
+    position: relative;
+    padding-top: 22px; }
+    .account-footer .address-cover .footer-link {
+      position: absolute;
+      top: 0;
+      left: 15px; }
+    .account-footer .address-cover .address {
+      margin-bottom: 0; } }

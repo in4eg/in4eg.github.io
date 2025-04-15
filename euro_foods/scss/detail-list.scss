@@ -1,0 +1,35 @@
+.details-list {
+	margin: 18px 0;
+
+	.item {
+		padding: 2px 0;
+
+		.title {
+			color: #999;
+			margin-right: 5px;
+		}
+	}
+}
+.status-block {
+	text-align: right;
+}
+
+@media (max-width: 640px) {
+
+	.details-list {
+
+		.item {
+			margin-bottom: 5px;
+
+			&:last-child {
+				margin-bottom: 0;
+			}
+
+			.title {
+				margin-right: 0;
+				display: block;
+				margin-bottom: 3px;
+			}
+		}
+	}
+}

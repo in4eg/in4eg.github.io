@@ -1,0 +1,13 @@
+@media (max-width: 768px) {
+	
+	.paragraph {
+
+		&.simple {
+			margin: 15px 0;
+		}
+	}
+	.h1-title {
+		margin: 15px 0;
+		line-height: 1.2;
+	}
+}

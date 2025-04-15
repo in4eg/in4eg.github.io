@@ -1,0 +1,55 @@
+/*primary font*/
+.status-list {
+  margin: 0 -30px;
+  text-align: right; }
+  .status-list .item {
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 24px;
+    padding: 0 30px; }
+
+.status.success-status, .status.online-status {
+  color: #00ac5e; }
+
+.status.offline-status {
+  color: #999; }
+
+.status.action-status {
+  color: #2e76ba; }
+
+.status.checked-status .icon {
+  color: #2e76ba; }
+
+.status.delivery-status .icon {
+  color: #ff8a00; }
+
+.status.draft-status .icon {
+  color: #999; }
+
+.status .icon {
+  font-size: 124%;
+  margin-right: 7px; }
+  .status .icon:before {
+    position: relative;
+    top: 3px; }
+  .status .icon.small-icon {
+    font-size: 30%; }
+    .status .icon.small-icon:before {
+      position: relative;
+      top: -4px; }
+  .status .icon.smaller-icon {
+    font-size: 80%; }
+    .status .icon.smaller-icon:before {
+      position: relative;
+      top: 0px; }
+
+@media (max-width: 993px) {
+  .status-list .item .offline-status {
+    color: #2e76ba; } }
+
+@media (max-width: 767px) {
+  .status-list {
+    text-align: left;
+    margin: 20px -15px 0; }
+    .status-list .item {
+      padding: 0 15px; } }

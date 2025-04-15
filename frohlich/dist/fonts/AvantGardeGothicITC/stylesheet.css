@@ -1,0 +1,13 @@
+@font-face {
+    font-family: 'AvantGardeGothicITCW01Bk';
+    src: url('hinted-AvantGardeGothicITCW01Bk.eot');
+    src: local('Avant Garde Gothic ITCW01Bk'), local('AvantGardeGothicITCW01Bk'),
+        url('hinted-AvantGardeGothicITCW01Bk.eot?#iefix') format('embedded-opentype'),
+        url('hinted-AvantGardeGothicITCW01Bk.woff2') format('woff2'),
+        url('hinted-AvantGardeGothicITCW01Bk.woff') format('woff'),
+        url('hinted-AvantGardeGothicITCW01Bk.ttf') format('truetype'),
+        url('hinted-AvantGardeGothicITCW01Bk.svg#AvantGardeGothicITCW01Bk') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+

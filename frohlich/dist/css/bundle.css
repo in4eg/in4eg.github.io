@@ -1,0 +1,308 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  outline: none !important; }
+
+@font-face {
+  font-family: 'AvantGardeGothicITCW01Bk';
+  src: url("../fonts/AvantGardeGothicITC/hinted-AvantGardeGothicITCW01Bk.eot");
+  src: local("Avant Garde Gothic ITCW01Bk"), local("AvantGardeGothicITCW01Bk"), url("../fonts/AvantGardeGothicITC/hinted-AvantGardeGothicITCW01Bk.eot?#iefix") format("embedded-opentype"), url("../fonts/AvantGardeGothicITC/hinted-AvantGardeGothicITCW01Bk.woff2") format("woff2"), url("../fonts/AvantGardeGothicITC/hinted-AvantGardeGothicITCW01Bk.woff") format("woff"), url("../fonts/AvantGardeGothicITC/hinted-AvantGardeGothicITCW01Bk.ttf") format("truetype"), url("../fonts/AvantGardeGothicITC/hinted-AvantGardeGothicITCW01Bk.svg#AvantGardeGothicITCW01Bk") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+html, body {
+  width: 100%;
+  height: 100%;
+  background-color: #f5f4f2;
+  font-size: 14px;
+  font-family: "AvantGardeGothicITCW01Bk";
+  font-weight: 400;
+  color: #00151d;
+  line-height: 1.42;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-size-adjust: none;
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  -ms-text-size-adjust: none;
+  background-position: center top;
+  background-repeat: no-repeat; }
+
+main {
+  display: block;
+  width: 100%;
+  height: auto;
+  min-height: 100%; }
+
+a {
+  display: inline-block;
+  text-decoration: none;
+  transition: .2s;
+  position: relative;
+  color: #00151d; }
+  a:hover {
+    text-decoration: none;
+    color: #006699; }
+
+button,
+input,
+textarea,
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  font-family: "AvantGardeGothicITCW01Bk"; }
+
+.clear {
+  padding: 0;
+  margin: 0;
+  list-style: none; }
+
+.container {
+  max-width: 1390px;
+  margin: 0 auto;
+  padding: 0 15px; }
+
+.main-header {
+  background-color: #fff;
+  padding: 60px 0 30px; }
+  .main-header .logo {
+    max-width: 544px;
+    margin-bottom: 32px; }
+    .main-header .logo img {
+      max-width: 100%; }
+  .main-header .link {
+    display: block; }
+  .main-header .header-caption {
+    max-width: 300px;
+    font-size: 24px;
+    letter-spacing: 1.8px; }
+  .main-header .address {
+    font-style: normal; }
+
+.slider-section {
+  overflow: hidden; }
+  .slider-section .image-slider {
+    font-size: 0;
+    white-space: nowrap;
+    /*overflow: hidden;*/
+    max-width: 1400px;
+    max-height: 510px;
+    margin: 0 auto; }
+    .slider-section .image-slider .item {
+      display: inline-block;
+      vertical-align: top;
+      width: 25%;
+      font-size: 18px; }
+    .slider-section .image-slider .image-cover {
+      display: block;
+      padding-top: 146%;
+      background-color: #ccc;
+      position: relative;
+      -webkit-transform: translateZ(0);
+      transform: translateZ(0);
+      overflow: hidden; }
+      .slider-section .image-slider .image-cover img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%; }
+    .slider-section .image-slider.owl-loaded .owl-item .item {
+      width: 100%; }
+
+.gallery-section {
+  padding: 25px 0; }
+  .gallery-section .gallery-outer {
+    max-width: 52.4%;
+    margin: 0 auto; }
+  .gallery-section .gallery-list {
+    font-size: 0;
+    margin: 0 -10px; }
+    .gallery-section .gallery-list .item {
+      padding: 10px;
+      display: inline-block;
+      font-size: 18px;
+      width: 50%; }
+    .gallery-section .gallery-list .image-cover {
+      display: block;
+      padding-top: 146.8%;
+      background-color: #ccc;
+      position: relative;
+      -webkit-transform: translateZ(0);
+      transform: translateZ(0);
+      overflow: visible; }
+      .gallery-section .gallery-list .image-cover img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%; }
+
+.description-section .description-outer {
+  background-color: #fff;
+  padding: 87px 178px 160px 178px; }
+  .description-section .description-outer .logo {
+    max-width: 689px;
+    margin-left: 154px;
+    margin-bottom: 45px; }
+    .description-section .description-outer .logo img {
+      max-width: 100%; }
+  .description-section .description-outer .block {
+    margin-bottom: 85px; }
+    .description-section .description-outer .block:last-child {
+      margin-bottom: 0; }
+    .description-section .description-outer .block .paragraph {
+      font-size: 22px;
+      letter-spacing: 0.5px;
+      line-height: 1.4;
+      margin-bottom: 17px; }
+      .description-section .description-outer .block .paragraph:last-child {
+        margin-bottom: 0; }
+
+.description-section .caption-part {
+  font-size: 0;
+  margin: 0 -10px; }
+  .description-section .caption-part .text-part {
+    padding: 0 10px;
+    display: inline-block;
+    vertical-align: top;
+    width: 70%; }
+  .description-section .caption-part .image-part {
+    padding: 0 55px;
+    display: inline-block;
+    vertical-align: top;
+    width: 30%;
+    text-align: right; }
+  .description-section .caption-part .photo-image {
+    width: 152px;
+    height: 194px;
+    display: inline-block;
+    position: relative;
+    margin-top: 9px;
+    overflow: hidden; }
+    .description-section .caption-part .photo-image img {
+      max-width: 100%;
+      position: absolute;
+      left: 0;
+      top: 50%;
+      -webkit-transform: translateY(-50%);
+      transform: translateY(-50%); }
+
+@media (max-width: 993px) {
+  .slider-section .image-slider .item {
+    width: 33.33%; }
+  .gallery-section .gallery-outer {
+    max-width: 78.4%; }
+  .description-section .description-outer {
+    padding: 80px; }
+    .description-section .description-outer .logo {
+      margin-left: 50px; }
+  .description-section .caption-part .image-part {
+    padding: 0 10px; } }
+
+@media (max-width: 768px) {
+  .slider-section .image-slider .item {
+    width: 50%; }
+  .description-section .description-outer .block .paragraph {
+    font-size: 18px; }
+  .description-section .caption-part .image-part {
+    width: 100%; }
+  .description-section .caption-part .text-part {
+    width: 100%; }
+  .description-section .caption-part .photo-image {
+    margin-top: 25px; } }
+
+@media (max-width: 640px) {
+  .main-header .header-caption {
+    font-size: 18px; }
+  .gallery-section .gallery-outer {
+    max-width: 100%; }
+  .description-section .description-outer {
+    padding: 40px; }
+    .description-section .description-outer .logo {
+      margin-left: 0; }
+    .description-section .description-outer .block {
+      margin-bottom: 55px; } }
+
+@media (max-width: 480px) {
+  .main-header .header-caption {
+    font-size: 16px; }
+  .slider-section .image-slider .item {
+    width: 100%; }
+  .gallery-section .gallery-list .item {
+    width: 100%; }
+  .description-section .description-outer {
+    padding: 40px 20px; }
+    .description-section .description-outer .block .paragraph {
+      font-size: 14px; }
+    .description-section .description-outer .block {
+      margin-bottom: 45px; }
+  .description-section .caption-part .image-part {
+    text-align: center; } }
+
+.owl-carousel {
+  width: 100%;
+  -webkit-tap-highlight-color: transparent;
+  position: relative;
+  z-index: 1; }
+  .owl-carousel .owl-stage {
+    position: relative;
+    -ms-touch-action: pan-Y; }
+  .owl-carousel .owl-stage:after {
+    content: ".";
+    display: block;
+    clear: both;
+    visibility: hidden;
+    line-height: 0;
+    height: 0; }
+  .owl-carousel .owl-stage-outer {
+    position: relative;
+    overflow: visible;
+    -webkit-transform: translate3d(0px, 0px, 0px); }
+  .owl-carousel .owl-item {
+    position: relative;
+    min-height: 1px;
+    float: left;
+    -webkit-backface-visibility: hidden;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none; }
+  .owl-carousel .owl-nav.disabled,
+  .owl-carousel .owl-dots.disabled {
+    display: none; }
+  .owl-carousel .owl-nav .owl-prev,
+  .owl-carousel .owl-nav .owl-next,
+  .owl-carousel .owl-dot {
+    cursor: pointer;
+    cursor: hand;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none; }
+  .owl-carousel.owl-loaded {
+    display: block; }
+  .owl-carousel.owl-loading {
+    opacity: 0;
+    display: block; }
+  .owl-carousel.owl-hidden {
+    opacity: 0; }
+  .owl-carousel.owl-refresh .owl-item {
+    visibility: hidden; }
+  .owl-carousel.owl-drag .owl-item {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none; }
+  .owl-carousel.owl-grab {
+    cursor: move;
+    cursor: -webkit-grab;
+    cursor: grab; }
+  .owl-carousel.owl-rtl {
+    direction: rtl; }
+  .owl-carousel.owl-rtl .owl-item {
+    float: right; }
+
+/* No Js */
+.no-js .owl-carousel {
+  display: block; }

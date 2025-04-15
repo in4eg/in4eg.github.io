@@ -1,0 +1,411 @@
+* {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+	outline: none !important;
+}
+
+@font-face {
+	font-family: 'AvantGardeGothicITCW01Bk';
+	src: url('../fonts/AvantGardeGothicITC/hinted-AvantGardeGothicITCW01Bk.eot');
+	src: local('Avant Garde Gothic ITCW01Bk'), local('AvantGardeGothicITCW01Bk'),
+	url('../fonts/AvantGardeGothicITC/hinted-AvantGardeGothicITCW01Bk.eot?#iefix') format('embedded-opentype'),
+	url('../fonts/AvantGardeGothicITC/hinted-AvantGardeGothicITCW01Bk.woff2') format('woff2'),
+	url('../fonts/AvantGardeGothicITC/hinted-AvantGardeGothicITCW01Bk.woff') format('woff'),
+	url('../fonts/AvantGardeGothicITC/hinted-AvantGardeGothicITCW01Bk.ttf') format('truetype'),
+	url('../fonts/AvantGardeGothicITC/hinted-AvantGardeGothicITCW01Bk.svg#AvantGardeGothicITCW01Bk') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+$font: 'AvantGardeGothicITCW01Bk';
+$text-color: #00151d;
+$bac-color: #f5f4f2;
+$primary: #006699;
+
+html, body {
+	width: 100%; height: 100%;
+	background-color: $bac-color;
+	font-size: 14px;
+	font-family: $font;
+	font-weight: 400;
+	color: $text-color;
+	line-height: 1.42;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	text-size-adjust: none;
+	-moz-text-size-adjust: none;
+	-webkit-text-size-adjust: none;
+	-ms-text-size-adjust: none;
+	background-position: center top;
+	background-repeat: no-repeat;
+}
+
+main {
+	display: block;
+	width: 100%; height: auto;
+	min-height: 100%;
+}
+
+a {
+	display: inline-block;
+	text-decoration: none;
+	transition: .2s;
+	position: relative;
+	color: $text-color;
+
+	&:hover {
+		text-decoration: none;
+		color: $primary;
+	}
+}
+
+button,
+input,
+textarea,
+select {
+	-webkit-appearance: none; 
+	-moz-appearance: none;
+	appearance: none;
+	font-family: $font;
+}
+
+.clear {
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+.container {
+	max-width: 1390px;
+	margin: 0 auto;
+	padding: 0 15px;
+}
+
+.main-header {
+	background-color: #fff;
+	padding: 60px 0 30px;
+
+	.logo {
+		max-width: 544px;
+		margin-bottom: 32px;
+
+		img {
+			max-width: 100%;
+		}
+	}
+	.link {
+		display: block;
+	}
+	.header-caption {
+		max-width: 300px;
+		font-size: 24px;
+		letter-spacing: 1.8px;
+	}
+	.address {
+		font-style: normal;
+	}
+}
+
+.slider-section {
+	overflow: hidden;
+
+	.image-slider {
+		font-size: 0;
+		white-space: nowrap;
+		/*overflow: hidden;*/
+		max-width: 1400px;
+		max-height: 510px;
+		margin: 0 auto;
+
+		.item {
+			display: inline-block;
+			vertical-align: top;
+			width: 25%;
+			font-size: 18px;
+		}
+		.image-cover {
+			display: block;
+			padding-top: 146%;
+			background-color: #ccc;
+			position: relative;
+			transform: translateZ(0);
+			overflow: hidden;
+
+			img {
+				position: absolute;
+				top: 0; left: 0;
+				height: 100%; width: 100%;
+			}
+		}
+
+		&.owl-loaded {
+
+			.owl-item {
+
+				.item {
+					width: 100%;
+				}
+			}
+		}
+	}
+}
+
+.gallery-section {
+	padding: 25px 0;
+
+	.gallery-outer {
+		max-width: 52.4%;
+		margin: 0 auto;
+	}
+
+	.gallery-list {
+		font-size: 0;
+		margin: 0 -10px;
+
+		.item {
+			padding: 10px;
+			display: inline-block;
+			font-size: 18px;
+			width: 50%;
+
+		}
+		.image-cover {
+			display: block;
+			padding-top: 146.8%;
+			background-color: #ccc;
+			position: relative;
+			transform: translateZ(0);
+			overflow: visible;
+
+			img {
+				position: absolute;
+				top: 0; left: 0;
+				height: 100%; width: 100%;
+			}
+		}
+	}
+}
+
+.description-section {
+
+	.description-outer {
+		background-color: #fff;
+		padding: 87px 178px 160px 178px;
+
+		.logo {
+			max-width: 689px;
+			margin-left: 154px;
+			margin-bottom: 45px;
+
+			img {
+				max-width: 100%;
+			}
+		}
+		.block {
+			margin-bottom: 85px;
+
+			&:last-child {
+				margin-bottom: 0;
+			}
+
+			.paragraph {
+				font-size: 22px;
+				letter-spacing: 0.5px;
+				line-height: 1.4;
+				margin-bottom: 17px;
+
+				&:last-child {
+					margin-bottom: 0;
+				}
+			}
+		}
+	}
+	.caption-part {
+		font-size: 0;
+		margin: 0 -10px;
+
+		.text-part {
+			padding: 0 10px;
+			display: inline-block;
+			vertical-align: top;
+			width: 70%;
+		}
+		.image-part {
+			padding: 0 55px;
+			display: inline-block;
+			vertical-align: top;
+			width: 30%;
+			text-align: right;
+		}
+
+		.photo-image {
+			width: 152px; height: 194px;
+			display: inline-block;
+			position: relative;
+			margin-top: 9px;
+			overflow: hidden;
+
+			img {
+				max-width: 100%;
+				position: absolute;
+				left: 0; top: 50%;
+				transform: translateY(-50%);
+			}
+		}
+	}
+}
+
+@media (max-width: 993px) {
+
+	.slider-section {
+
+		.image-slider {
+
+			.item {
+				width: 33.33%;
+			}
+		}
+	}
+	.gallery-section {
+
+		.gallery-outer {
+			max-width: 78.4%;
+		}
+	}
+	.description-section {
+
+		.description-outer {
+			padding: 80px;
+
+			.logo {
+				margin-left: 50px;
+			}
+		}
+		.caption-part {
+
+			.image-part {
+				padding: 0 10px;
+			}
+		}
+	}
+}
+
+@media (max-width: 768px) {
+
+	.slider-section {
+
+		.image-slider {
+
+			.item {
+				width: 50%;
+			}
+		}
+	}
+	
+	.description-section {
+
+		.description-outer {
+
+			.block {
+
+				.paragraph {
+					font-size: 18px;
+				}
+			}
+		}
+		.caption-part {
+
+			.image-part {
+				width: 100%;
+			}
+			.text-part {
+				width: 100%;
+			}
+			.photo-image {
+				margin-top: 25px;
+			}
+		}
+	}
+}
+
+@media (max-width: 640px) {
+
+	.main-header {
+
+		.header-caption {
+			font-size: 18px;
+		}
+	}
+	.gallery-section {
+
+		.gallery-outer {
+			max-width: 100%;
+		}
+	}
+	.description-section {
+
+		.description-outer {
+			padding: 40px;
+
+			.logo {
+				margin-left: 0;
+			}
+			.block {
+				margin-bottom: 55px;
+			}
+		}
+	}
+}
+
+@media (max-width: 480px) {
+
+	.main-header {
+
+		.header-caption {
+			font-size: 16px;
+		}
+	}
+	.slider-section {
+
+		.image-slider {
+
+			.item {
+				width: 100%;
+			}
+		}
+	}
+
+	.gallery-section {
+
+		.gallery-list {
+
+			.item {
+				width: 100%;
+			}
+		}
+	}
+
+	.description-section {
+
+		.description-outer {
+			padding: 40px 20px;
+
+			.block {
+
+				.paragraph {
+					font-size: 14px;
+				}
+			}
+
+			.block {
+				margin-bottom: 45px;
+			}
+		}
+		.caption-part {
+
+			.image-part {
+				text-align: center;
+			}
+		}
+	}
+}

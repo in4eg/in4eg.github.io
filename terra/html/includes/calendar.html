@@ -1,0 +1,59 @@
+<div class="calendar" id="calendar">
+	<input hidden type="text" id="timeDate" class="ignored">
+	<div class="primary-dropdown dropdown" data-dropdown>
+		<div class="anchor">
+			<div data-month class="in-bl">Month</div>
+			<i class="icon icon-down-arrow anchor-icon"></i>
+		</div>
+		<div class="dropdown-inner">
+			<ul class="clear month-list" data-scrollbar>
+				<li class="disabled">Choose month</li>
+			</ul>
+		</div>
+	</div>
+	<div class="calendar-wrap">
+		<div class="column-part">
+			<div class="calendar-outer" data-date></div>
+		</div>
+		<div class="column-part">
+			<div class="time">
+				<div class="hour simple-dropdown dropdown" data-from="07" data-to="19" data-dropdown>
+					<div class="anchor">
+						<div class="digit">07</div>
+						<span class="anchor-icon"><i class="icon icon-down-arrow"></i></span>
+					</div>
+					<div class="dropdown-inner time-select" data-scrollbar data-hour>
+						<span class="disabled">Choose</span>
+					</div>
+				</div>
+				<span class="after">:</span>
+				<div class="minutes simple-dropdown dropdown" data-step="5" data-dropdown>
+					<div class="anchor">
+						<div class="digit">00</div>
+						<span class="anchor-icon"><i class="icon icon-down-arrow"></i></span>
+					</div>
+					<div class="dropdown-inner time-select" data-scrollbar data-minutes>
+						<span class="disabled">Choose</span>
+					</div>
+				</div>
+			</div>
+			<!-- place -->
+			<div class="place">
+				<div class="simple-dropdown dropdown large" data-dropdown>
+					<div class="anchor">
+						<div class="digit">Ort auswählen</div>
+						<span class="anchor-icon"><i class="icon icon-down-arrow"></i></span>
+					</div>
+					<div class="dropdown-inner place-select" data-scrollbar>
+						<span>Traunstein</span>
+						<span>München</span>
+						<span>Bruckmühl</span>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="form-helper">
+			Hinweis: <span class="bold">Bitte die mit * gekennzeichneten Felder ausfüllen.</span>
+		</div>
+	</div>
+</div>

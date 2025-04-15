@@ -1,0 +1,154 @@
+@import 'variables.scss';
+
+.task-details {
+	padding: 50px 0;
+
+	.primary-subtitle {
+		color: #fff;
+		font-family: $font;
+		margin: 0 0 35px;
+		font-size: 30px;
+		font-weight: 700;
+		line-height: 42px;
+
+		span {
+			padding: 0 15px;
+			background-color: $primary;
+		}
+	}
+	.action-link {
+		color: #000;
+		font-family: $font;
+		margin: 0 0 35px;
+		font-size: 30px;
+		line-height: 48px;
+
+		span {
+			padding: 0 10px;
+			transition: background-color .3s, color .3s;
+			background-color: $action;
+		}
+		.inner {
+			padding: 0;
+		}
+		.bold {
+			font-weight: 700;
+		}
+		.icon {
+			color: #bebebe;
+			transition: color .3s;
+
+			&:before {
+				position: relative;
+				top: 6px;
+			}
+		}
+		&:hover {
+
+			span {
+				background-color: $success;
+				color: #fff;
+			}
+			.icon {
+				color: $success;
+			}
+		}
+	}
+}
+
+@media (max-width: 1320px) {
+
+	.task-details {
+
+		.action-link {
+			font-size: 26px;
+			line-height: 42px;
+		}
+	}
+}
+
+@media (max-width: 992px) {
+
+	.task-details {
+		padding: 30px 0 40px;
+
+		.primary-subtitle {
+			font-size: 24px;
+			margin-bottom: 25px;
+		}
+
+		.action-link {
+			margin-top: 30px;
+			margin-bottom: 15px;
+			font-size: 0;
+			line-height: 1;
+
+			span {
+				font-size: 24px;
+				line-height: 34px;
+				line-height: 40px;
+			}
+
+			.icon {
+				font-size: 26px;
+				margin-left: 15px;
+			}
+
+			.hidden-md {
+				display: none;
+			}
+		}
+	}
+}
+@media (max-width: 767px) {
+
+	.task-details {
+		background-color: $gray;
+		padding-top: 0;
+		margin-bottom: 40px;
+		padding-bottom: 40px;
+
+		.primary-subtitle {
+			font-size: 18px;
+			line-height: 34px;
+			margin-bottom: 20px;
+
+			span {
+				padding: 5px 15px;
+			}
+		}
+
+		.action-link {
+			margin-bottom: 0;
+
+			span {
+				font-size: 22px;
+				line-height: 36px;
+			}
+		}
+	}
+}
+@media (max-width: 480px) {
+
+	.task-details {
+
+		.action-link {
+			width: 257px;
+
+			br {
+				display: none;
+			}
+			.bold {
+				padding-left: 0;
+			}
+			.inner {
+				padding-left: 10px;
+
+				&.collapsed-left {
+					padding-left: 0;
+					padding-right: 10px;
+				}
+			}
+		}
+	}
+}

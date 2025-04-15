@@ -1,0 +1,121 @@
+/*primary font*/
+.form-calendar-section {
+  padding: 50px 0; }
+  .form-calendar-section .title {
+    color: #000;
+    font-size: 30px;
+    font-weight: 400;
+    line-height: 68px; }
+  .form-calendar-section .date-group {
+    height: 46px;
+    border: 1px solid #dedede;
+    background-color: #fff;
+    padding: 10px 15px 8px;
+    margin-bottom: 15px;
+    cursor: default; }
+    .form-calendar-section .date-group .text {
+      font-size: 16px;
+      font-weight: 300;
+      color: #999;
+      display: inline-block; }
+    .form-calendar-section .date-group input {
+      color: #000;
+      border: 0;
+      font-size: 16px;
+      font-weight: 300; }
+      .form-calendar-section .date-group input[readonly] {
+        cursor: default; }
+  .form-calendar-section .calendar-btn {
+    background-color: #f7f7f7;
+    padding: 5px 15px 13px;
+    height: 46px;
+    font-weight: 300;
+    color: #2e76ba;
+    display: block;
+    width: 100%; }
+    .form-calendar-section .calendar-btn .icon {
+      color: #c9c9c9;
+      margin-right: 10px;
+      font-size: 20px; }
+      .form-calendar-section .calendar-btn .icon:before {
+        position: relative;
+        top: 3px; }
+    .form-calendar-section .calendar-btn.active {
+      background-color: #fff;
+      box-shadow: 0 0 8px rgba(0, 0, 0, 0.1); }
+    .form-calendar-section .calendar-btn:hover {
+      background-color: #fff; }
+  .form-calendar-section .link-tablet {
+    display: none; }
+  .form-calendar-section .catalog-link {
+    color: #00ac5e;
+    font-size: 22px;
+    font-weight: 300;
+    padding: 0 0 0 45px;
+    text-align: left; }
+    .form-calendar-section .catalog-link .text {
+      display: block;
+      color: #999;
+      font-size: 18px;
+      font-weight: 300;
+      line-height: 30px;
+      margin-top: 10px; }
+    .form-calendar-section .catalog-link .icon {
+      font-size: 28px;
+      position: absolute;
+      left: 0;
+      top: 0;
+      margin-left: 0; }
+
+@media (max-width: 1199px) {
+  .form-calendar-section .large-btn-cover {
+    text-align: right; } }
+
+@media (max-width: 993px) {
+  .form-calendar-section {
+    padding: 40px 0; }
+    .form-calendar-section .large-btn-cover {
+      display: none; }
+    .form-calendar-section .catalog-link {
+      font-size: 18px;
+      font-weight: 700;
+      margin-top: 20px; }
+      .form-calendar-section .catalog-link .text {
+        margin-top: 5px; }
+        .form-calendar-section .catalog-link .text br {
+          display: none; }
+    .form-calendar-section .link-tablet {
+      display: block; } }
+
+@media (max-width: 993px) {
+  .form-calendar-section .calendar-btn {
+    margin-bottom: 15px; }
+  .form-calendar-section .link-tablet {
+    display: none; } }
+
+@media (max-width: 767px) {
+  .form-calendar-section .title {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 30px;
+    margin-bottom: 20px; }
+  .form-calendar-section .calendar-btn {
+    height: 40px;
+    padding-bottom: 12px; }
+  .form-calendar-section .date-group {
+    height: 40px;
+    padding-top: 6px;
+    padding-bottom: 4px; } }
+
+@media (max-width: 480px) {
+  .form-calendar-section .date-group {
+    white-space: nowrap; }
+    .form-calendar-section .date-group input {
+      width: 140px; }
+  .form-calendar-section .btn-list {
+    margin: 25px 0; }
+    .form-calendar-section .btn-list .item {
+      display: block; }
+      .form-calendar-section .btn-list .item .btn-simple {
+        padding-left: 0;
+        padding-right: 0; } }

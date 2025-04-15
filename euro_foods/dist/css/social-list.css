@@ -1,0 +1,65 @@
+/*primary font*/
+.social-list {
+  font-size: 0;
+  margin: 0 -10px; }
+  .social-list .item {
+    display: inline-block; }
+    .social-list .item a {
+      display: block;
+      font-size: 19px;
+      padding: 0 10px;
+      color: #aeaeae;
+      transition: color .3s; }
+      .social-list .item a .icon-vk,
+      .social-list .item a .large-icon {
+        font-size: 125%; }
+        .social-list .item a .icon-vk:before,
+        .social-list .item a .large-icon:before {
+          position: relative;
+          top: 2px; }
+      .social-list .item a .icon-acrobat-file {
+        font-size: 139%; }
+        .social-list .item a .icon-acrobat-file:before {
+          position: relative;
+          top: 4px; }
+      .social-list .item a .icon-printer:before {
+        position: relative;
+        top: 0px; }
+      .social-list .item a:hover {
+        color: #00ac5e; }
+  .social-list .large-icon {
+    font-size: 134%; }
+    .social-list .large-icon:before {
+      position: relative;
+      top: 6px; }
+  .social-list.vertical .item {
+    display: block;
+    text-align: center;
+    font-size: 0; }
+    .social-list.vertical .item a {
+      padding: 10px; }
+
+.social-list.filled {
+  margin-left: -5px;
+  margin-right: -5px; }
+  .social-list.filled .item {
+    padding: 0 5px; }
+    .social-list.filled .item a {
+      background-color: #00ac5e;
+      display: block;
+      height: 40px;
+      width: 40px;
+      text-align: center;
+      line-height: 46px;
+      padding: 0;
+      color: #fff;
+      transition: background-color .3s; }
+      .social-list.filled .item a .largest {
+        font-size: 126%; }
+        .social-list.filled .item a .largest:before {
+          position: relative;
+          top: 2px; }
+      .social-list.filled .item a:hover {
+        background-color: #2e76ba; }
+      .social-list.filled .item a .icon-mail:before {
+        top: 5px; }

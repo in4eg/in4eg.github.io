@@ -1,0 +1,180 @@
+@import 'variables.scss';
+
+.actions-list {
+	font-size: 0;
+	margin: 0 -20px;
+
+	.item {
+		display: inline-block;
+		vertical-align: top;
+		width: 50%;
+		padding: 0 20px;
+
+		.inner {
+			padding: 50px 0;
+			border-top: 1px solid #dedede;
+		}
+	}
+	.image-part {
+		display: inline-block;
+		vertical-align: top;
+		padding: 0 15px 0 0;
+		width: 50%;
+
+		.image-cover {
+			overflow: hidden;
+			padding-top: 67%;
+			position: relative;
+			transition: opacity .3s;
+
+			&:hover {
+				opacity: .8;
+			}
+
+			img {
+				position: absolute;
+				top: 0; left: 50%;
+				height: 100%;
+				min-width: 100%;
+				transform: translateX(-50%);
+			}
+		}
+	}
+	.caption-part {
+		display: inline-block;
+		vertical-align: top;
+		padding: 0 0 0 15px;
+		width: 50%;
+
+		.title {
+			color: #000;
+			font-size: 22px;
+			font-weight: 700;
+			line-height: 30px;
+			margin-bottom: 20px;
+			transition: color .3s;
+
+			&:hover {
+				color: $primary;
+			}
+		}
+		.date {
+
+			span {
+				color: #fff;
+				font-size: 11px;
+				font-weight: 300;
+				line-height: 30px;
+				padding: 2px 10px 1px;
+				text-transform: uppercase;
+				background-color: $primary;
+			}
+		}
+		.paragraph {
+			color: #000;
+			font-size: 16px;
+			font-weight: 300;
+			line-height: 36px;
+		}
+	}
+}
+
+@media (max-width: 993px) {
+
+	.actions-list {
+
+		.item {
+			width: 100%;
+
+			&:last-child {
+
+				.inner {
+					border-bottom: 1px solid #dedede;
+				}
+			}
+
+			.inner {
+				padding: 30px 0;
+			}
+		}
+		.image-part {
+			width: 32%;
+		}
+		.caption-part {
+			width: 68%;
+
+			.title {
+				font-size: 18px;
+				line-height: 30px;
+				margin-bottom: 5px;
+			}
+			.paragraph {
+				margin-top: 0;
+				line-height: 30px;
+			}
+		}
+	}
+}
+
+@media (max-width: 767px) {
+
+	.actions-list {
+
+		.image-part {
+			width: 40%;
+		}
+		.caption-part {
+			width: 60%;
+		}
+	}
+}
+
+@media (max-width: 640px) {
+
+	.actions-list {
+
+		.image-part {
+			width: 50%;
+		}
+		.caption-part {
+			width: 50%;
+		}
+	}
+}
+
+@media (max-width: 480px) {
+
+	.actions-list {
+
+		.item {
+
+			.inner {
+				padding: 20px 0;
+				border: 0;
+			}
+
+			&:first-child {
+				
+				.inner {
+					padding-top: 0;
+				}
+			}
+			&:last-child {
+
+				.inner {
+					border-bottom: 0;
+				}
+			}
+		}
+
+		.image-part {
+			width: 100%;
+			margin-bottom: 20px;
+			padding-right: 0;
+		}
+		.caption-part {
+			width: 100%;
+			padding-left: 0;
+		}
+	}
+}

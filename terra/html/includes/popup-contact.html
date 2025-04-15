@@ -1,0 +1,64 @@
+<div id="contactPopup" class="popup">
+	<div class="inner">
+		<div class="header">
+			<div class="title">
+				<span>
+					Kontakt Terra e Muro: <br>
+					Was dürfen wir für Sie tun?
+				</span>
+			</div>
+			<button type="button" class="close-popup" data-close="#contactPopup">
+				<i class="icon icon-cancel"></i>
+			</button>
+		</div>
+		<div class="content">
+			<div class="success-fadeout">
+				<form action="#" class="validate-form contact-form" data-success="#successPopup" data-hide="#contactPopup">
+					<div class="row">
+						<div class="col-xs-12 col-sm-6">
+							<div class="form-group spaced-bottom">
+								<input type="text" class="input" id="contactName" data-minlength="2">
+								<label class="label" for="contactName">Vorname, Nachname *</label>
+							</div>
+						</div>
+						<div class="col-xs-12 col-sm-6">
+							<div class="form-group spaced-bottom">
+								<input type="text" class="input" id="contactPhone">
+								<label class="label" for="contactPhone">Telefon *</label>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-xs-12 col-sm-6">
+							<div class="form-group spaced-bottom">
+								<input type="text" class="input email" id="contactEmail">
+								<label class="label" for="contactEmail">E-Mail *</label>
+							</div>
+						</div>
+						<div class="col-xs-12 col-sm-6">
+							<div class="form-group spaced-bottom">
+								<input type="text" class="input" id="contactPlz">
+								<label class="label" for="contactPlz">Plz *</label>
+							</div>
+						</div>
+					</div>
+					<div class="form-group spaced-bottom textarea-group">
+						<label class="label top-label" for="contactMessage">Ihre Nachricht für uns *</label>
+						<textarea class="input textarea" id="contactMessage" data-minlength="5">Bitte senden Sie mir das Magazin für Architekten zu.</textarea>
+					</div>
+					<div class="form-helper">
+						Hinweis: <span class="bold">Bitte die mit * gekennzeichneten Felder ausfüllen.</span>
+					</div>
+					<div class="spaced-top small">
+						<button type="submit" class="btn btn-primary btn-block">
+							Ihre Nachricht für uns <sup class="mark">*</sup>
+						</button>
+					</div>
+				</form>
+			</div>
+			<div class="success-fadein">
+				
+			</div>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,81 @@
+.link-360 {
+	background-color: #fff;
+	display: block;
+	color: #000;
+	max-height: 134px;
+	height: 134px;
+	text-align: center;
+	white-space: nowrap;
+
+	&:before {
+		display: inline-block;
+		vertical-align: middle;
+		content: '';
+		height: 100%;
+	}
+
+	.svg-image {
+		height: 100%; width: 100%;
+	}
+
+	.details {
+		color: #48443E;
+		font-size: 12px;
+		font-style: normal;
+		white-space: normal;
+		font-weight: 700;
+		text-transform: uppercase;
+		font-family: $font;
+		background-color: #fff;
+		display: inline-block;
+		vertical-align: middle;
+		text-align: center;
+	}
+
+	&:hover {
+		color: $primary;
+	}
+}
+
+@media (max-width: 768px) {
+
+	.link-360 {
+
+		.svg-image {
+			margin-left: -20px;
+		}
+	}
+}
+
+@media (max-width: 680px) {
+
+	.link-360 {
+
+		.details {
+			font-size: 10px;
+		}
+	}
+}
+
+@media (max-width: 485px) {
+
+	.link-360 {
+		margin-right: 0;
+		height: 92px;
+		overflow: hidden;
+
+		.svg-image {
+			width: 125%;
+			margin-left: -15%;
+		}
+		.details {
+			padding-left: 10px;
+			padding-right: 10px;
+			font-size: 9px;
+
+			br {
+				display: none;
+			}
+		}
+	}
+}

@@ -1,0 +1,89 @@
+@import 'variables.scss';
+
+.pagination-section {
+	margin: 50px 0 100px;
+
+	.pagination-list {
+		margin: 0 -7px;
+		font-size: 0;
+
+		.item {
+			display: inline-block;
+			position: relative;
+			padding: 0 7px;
+
+			.outer {
+				font-size: 16px;
+				display: block;
+				color: $primary;
+				background-color: $gray;
+				font-weight: 700;
+				height: 40px; width: 40px;
+				text-align: center;
+				line-height: 44px;
+			}
+			&:hover {
+
+				.link {
+					background-color: #006a3a;
+					color: #fff;
+				}
+			}
+			&.active {
+
+				.outer {
+					background-color: $primary;
+					color: #fff;
+				}
+			}
+		}
+	}
+}
+@media (max-width: 993px) {
+
+	.pagination-section {
+		margin-bottom: 10px;
+		margin-top: 30px;
+	}
+}
+@media (max-width: 767px) {
+
+	.pagination-section {
+		margin: 0 0 28px;
+
+		.pagination-list {
+			margin: 0 -12px;
+
+			.item {
+				padding: 0;
+
+				.outer {
+					font-size: 0;
+					padding: 12px;
+					height: auto; width: auto;
+					line-height: 1;
+					background-color: transparent;
+
+					span {
+						height: 6px; width: 6px;
+						background-color: #dedede;
+						display: block;
+					}
+				}
+				&.active {
+
+					.outer {
+						background-color: transparent;
+
+						span {
+							background-color: $primary;
+						}
+					}
+				}
+				&:not(.page) {
+					display: none;
+				}
+			}
+		}
+	}
+}
