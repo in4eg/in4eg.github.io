@@ -1,0 +1,78 @@
+<div id="accessOneProfilePopup" class="access-one-profile-popup white-popup mfp-hide">
+	<div class="inner">
+		<div class="header">
+			<div class="title">Access to <span class="full-name">User Name </span> profile
+				<span data-tooltip="Some little text here but not very large">
+					<span class="btn btn-light btn-round btn-xs btn-tooltip">
+						<i class="icon icon-info"></i>
+					</span>
+				</span>
+			</div>
+			<button class="mfp-close btn btn-grey btn-round">
+				<i class="icon icon-close"></i>
+			</button>
+		</div>
+		<div class="content container">
+			<div class="access-one-profile-inputs" id="placeForAccesses">
+				<div class="access-field row hidden" id="access1">
+					<div class="col-xs-11">
+						<div class="row">
+							<div class="col-xs-12 col-md-5">
+								<div class="input-title">Name</div>
+								<input class="access-name-input" name="name">
+								<span class="error-tip hidden">Please, enter the name</span>
+							</div>
+							<div class="col-xs-12 col-sm-6 col-md-3 access-expiration-field">
+								<div class="input-title">Expiration Date</div>
+								<div class="select-outer">
+									<select name="date" class="select" data-push="#date" data-date-select="">
+										<option class="default-exp-date" selected="selected">Choose</option>
+										<option>Never</option>
+										<option value="364">1 year</option>
+										<option value="91">3 months</option>
+										<option value="30">1 month</option>
+										<option value="20">3 weeks</option>
+										<option value="7">1 week</option>
+									</select>
+									<span class="arrow">
+										<i class="icon icon-angle-down"></i>
+									</span>
+								</div>
+								<span class="error-tip hidden">Choose date</span>
+							</div>
+							<div class="col-xs-12 col-sm-6 col-md-4 access-link-field already-generated">
+								<div class="input-title">Link</div>
+								<a class="already-generated-link" href="#">talentfly.com/qweuoqh</a>
+								<span class="access-generate-link">Generate Link</span>
+								<button class="copy-btn">
+									<i class="icon icon-upload"></i>
+								</button>
+							</div>
+						</div>
+					</div>
+					<div class="col-xs-1 remove-access-block">
+						<button class="remove-access-btn" id="removeAccessBtn3">
+							<i class="icon icon-close icon-close-access"></i>
+						</button>
+					</div>
+				</div>
+				
+			</div>
+
+			<div class="add-access-block">
+				<span class="add-access-btn">&#43; Add Access</span>
+			</div>
+			
+			<!--<div class="access-one-profile-buttons">
+				<button class="btn form-btn btn-simple access-one-profile-popup-btn" type="submit">
+					<span class="text">invite</span>
+					<span class="fade"></span>
+				</button>
+				<button class="btn form-btn btn-grey close-modal access-one-profile-popup-btn" type="button">
+				    <span class="text">cancel</span>
+				    <span class="fade"></span>
+				</button>
+			</div>-->
+		</div>
+	</div>
+</div>

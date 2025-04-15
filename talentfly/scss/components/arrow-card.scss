@@ -1,0 +1,156 @@
+.arrow-card {
+	background: #fff;
+	position: relative;
+	padding: 15px;
+	margin-left: 10px;
+	font-size: 12px;
+	line-height: 2;
+	box-shadow: 0 0 25px #d5e6f8;
+	font-weight: $normal;
+
+	.icon {
+		color: $blue;
+		font-size: 28px;
+	}
+
+	.info {
+		display: none;
+
+		&.active {
+			display: block;
+		}
+	}
+	&.full {
+		color: $green;
+
+		.icon {
+			color: $green;
+		}
+	}
+
+}
+.helper {
+
+	.arrow-card {
+		margin-left: 20px;
+		margin-top: 0;
+		box-shadow: none;
+		padding: 30px 35px;
+		border-radius: 6px;
+		position: relative;
+
+		.icon {
+			color: $lead-color;
+		}
+		.paragraph {
+			color: $lead-color;
+			font-size: 12px;
+		}
+		.h5-title {
+			color: $subtitle-color;
+			font-size: 12px;
+			font-weight: $semi;
+			margin-top: 0;
+			padding-right: 25px;
+		}
+		&:before {
+			position: absolute;
+			content: '';
+			top: 35px; right: 100%;
+			border: 8px solid transparent;
+			border-right: 8px solid #fff;
+		}
+	}
+	.close-helper {
+		@extend .mfp-close;
+		margin-right: -22px;
+		margin-top: -5px;
+
+		.icon {
+			font-size: 11px;
+			line-height: 27px;
+			margin-left: 1px;
+			margin-top: -5px;
+		}
+	}
+}
+
+/* --------------------------------------------------------
+	media styles
+	-------------------------------------------------------- */
+	@media screen and (max-width: 1440px) {
+
+		.arrow-card {
+			font-size: 10px;
+			line-height: 1.5;
+			margin-top: 11px;
+
+			.icon {
+				font-size: 22px;
+			}
+		}
+		.helper {
+
+			.arrow-card {
+				padding: 25px 25px 25px 15px;
+
+				.paragraph {
+					margin: 15px 0;
+					font-size: 10px;
+				}
+			}
+		}
+		.arrow-card {
+			padding: 10px;
+		}
+	}
+	@media screen and (max-width: 1200px) {
+
+		.helper {
+
+			.arrow-card {
+				margin-left: 0;
+				margin-top: 55px;
+				padding: 25px;
+				box-shadow: 0 0 14px #999;
+
+				&:before {
+					top: -16px; right: 43px;
+					border: 8px solid transparent;
+					border-right: 8px solid transparent;
+					border-bottom: 8px solid #fff;
+				}
+
+				.icon-cover {
+					display: none;
+				}
+			}
+			.close-helper {
+				top: 20px; right: 40px;
+			}
+		}
+
+	}
+	@media (max-width: 992px){
+
+		.arrow-card {
+			margin-left: 0;
+
+			.icon {
+				font-size: 26px;
+
+				&:before {
+					position: relative;
+					top: 2px;
+				}
+			}
+		}
+	}
+	@media (max-width: 480px){
+
+		.arrow-card {
+			line-height: 1.6;
+			padding: 15px 10px;
+			font-size: 10px;
+		}
+	}

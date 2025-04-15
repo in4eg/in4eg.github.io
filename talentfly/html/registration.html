@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta name="format-detection" content="telephone=no">
+
+    <title>Talent Fly :: Interviews</title>
+
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/perfect-scrollbar.min.css">
+    <link rel="stylesheet" href="css/bundle.min.css">
+
+</head>
+
+<body>
+
+    #=include includes/header.html
+
+    <main class="main-reistration-page">
+        
+        <div class="container">
+            <div class="section-limited-access row">
+                <div class="limited-access-message-block col-xs-12 col-md-7">
+                    <div class="limited-access-message">
+                        <h1 class="limited-message-title">Show what sets you apart</h1>
+                        <h2 class="limited-message-subtitle">Start building your own profile</h2>
+                        <h2 class="section-title"></h2>
+                    </div>
+                </div>
+
+                <div class="limited-access-form-block col-xs-12 col-md-5">
+                    <form action="#" class="registration-page-form validate-form active" id="signUpFormToContinue" data-scroll-hide="">
+                        <!-- Types of messages: notice, warning, error, success -->
+                        <div id="mainNotification" class="general-notification display-none">
+                            <i class="icon icon-info-round"></i>
+                            <i class="icon icon-attention"></i>
+                            <i class="icon icon-close-round"></i>
+                            <i class="icon icon-success-round"></i>
+                            <div class="timestamp-preloader display-none"></div>
+                        
+                            <!-- <span id="gType" class="type">success:</span> -->
+                            <div class="rows-box">
+                                <span id="gMessage" class="message">Your don’t save video.</span>
+                                <span id="gEndMessage" class="end-message"> Save it too keep changes!</span>
+                            </div>
+                        </div>
+                        <div class="inner">
+                            <div class="h3-title primary">Sign up</div>
+                            <div class="form-group">
+                              <input type="text" class="input" id="id_first_name" maxlength="30" data-minlength="2">
+                              <span class="line"></span>
+                              <label for="id_first_name">First Name</label>
+                              <i class="icon icon-checked2 icon-success"></i>
+                              <i class="icon icon-close2 icon-error"></i>
+                              <div class="alert">Minimum 2 characters. Must include only letters</div>
+                            </div>
+
+                            <div class="form-group">
+                              <input type="text" class="input" id="id_second_name" maxlength="30" data-minlength="2">
+                              <span class="line"></span>
+                              <label for="id_second_name">Last Name</label>
+                              <i class="icon icon-checked2 icon-success"></i>
+                              <i class="icon icon-close2 icon-error"></i>
+                              <div class="alert">Minimum 2 characters. Must include only letters</div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <input type="text" class="input email" id="id_email" maxlength="30" data-minlength="2">
+                                <span class="line"></span>
+                                <label for="id_email" id="passwordToContinueLabel">E-mail</label>
+                                <i class="icon icon-checked2 icon-success"></i>
+                                <i class="icon icon-close2 icon-error"></i>
+                                <div class="alert">Type a correct E-mail. It must include "@"</div>
+                            </div>
+
+                            <div class="form-group last">
+                                <input type="password" class="input" id="id_password" maxlength="30" data-minlength="6">
+                                <span class="line"></span>
+                                <label for="id_password" id="passwordToContinueLabel">Create Password</label>
+                                <i class="icon icon-checked2 icon-success"></i>
+                                <i class="icon icon-close2 icon-error"></i>
+                                <div class="alert">Minimum 6 characters</div>
+                            </div>
+
+                            <div class="checkbox">
+                              <input type="checkbox" id="signUpMemberToContinue">
+                              <label for="signUpMemberToContinue">I represent a business</label>
+                            </div>
+
+                            <div class="row btn-wrap">
+                                <div class="col-xs-12 col-ms-8 col-ms-offset-2">
+                                    <button type="submit" class="registration-page-sighnup-btn btn btn-primary btn-lg btn-block">
+                                        <span class="text">Sign up now!</span>
+                                        <span class="fade"></span>
+                                    </button>
+                                </div>
+                            </div>
+                            <small>
+                              By signing up, you agree to the <a href="#" class="lined">Terms of Service</a> and <a href="#" class="lined">Privacy Policy</a>,
+                              including <a href="#" class="lined">Cookie Use</a>.
+                            </small>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+
+    </main>
+
+    #=include includes/footer-admin.html
+
+
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,300,400,500,600,700" rel="stylesheet">
+    <script src="js/lib/jquery.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/init/buttons.js"></script>
+    <script src="js/init/toggler.js"></script>
+    <script src="js/init/popup-helper.js"></script>
+    <script src="js/init/profile-has-limited-access.js"></script>
+    <script src="js/init/validation.js"></script>
+    <script src="js/init/signInUp-notifications.js"></script>
+    <script src="js/init/general-notifications.js"></script>
+    <script src="js/init/registration-notifications.js"></script>
+
+    <script>
+        var csrf_token = 'token'
+    </script>
+</body>
+
+</html>

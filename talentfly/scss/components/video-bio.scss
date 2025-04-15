@@ -1,0 +1,225 @@
+.interview-advices-box:nth-child(1) {
+    left: 2%;
+}
+
+.interview-advices-box {
+  overflow: hidden;
+}
+
+@media screen and (max-width: 1520px) {
+  .flexible-mode-box .interview-advices-box .advice {
+    margin-bottom: 25px;
+  }
+}
+
+@media screen and (max-width: 1460px) {
+  .flexible-mode-box .interview-advices-box .advice {
+    margin-bottom: 15px;
+
+    .advice-text {
+      margin-top: 5px;
+    }
+  }
+}
+
+@media screen and (max-width: 1281px) {
+  #video-bio .record-timestamp-box {
+    margin-left: 3%;
+  }
+
+  .practice-box .main-video-frame .user-frame-main {
+    padding-top: 46%;
+  }
+
+   #hint-popup {
+    padding: 10px 20px;
+    .header {
+      margin-bottom: 20px;
+      .title{
+        font-size: 16px;
+        line-height: 8px;
+      }
+    }
+    .advice {
+      display: flex;
+      justify-content: space-between;
+      color: #8A98AD;
+      margin-bottom: 35px;
+      .icon {
+          font-size: 36px;
+          margin-right: 20px;
+      }
+      .advice-title {
+          text-transform: uppercase;
+          font-weight: 400;
+          font-size: 14px;
+      }
+      .advice-text {
+        margin-top: 10px;
+        font-size: 12px;
+        list-style-type: none;
+
+        li {
+            position: relative;
+        }
+
+        li:before {
+            display: inline-block;
+            content: '-';
+            position: absolute;
+            left: -10px;
+        }
+      }
+    }
+  }
+  #video-bio{
+    .interview-advices-box {
+      display: none;
+    }
+    .interview-video-box { 
+      position: relative;
+      .main-video-frame {
+        left: 0;
+        width: 100%;
+        padding: 10px 0;
+      }
+    }
+    .practice-box {
+      min-height: 650px;
+      .video-head {
+        margin: 0 0 25px 20px;
+        display: inline-block;
+      }
+    }
+    .video-hint {
+      border-radius: 20px;
+      border: 1px solid #9aa9bf;
+      float:right;
+      display: flex;
+      padding: 5px 10px;
+      font-family: Poppins,sans-serif;
+      margin-right: 20px;
+      transition: background-color .25s linear;
+      &:hover {
+        background-color: #9aa9bf;
+        cursor: pointer;
+        transition: background-color .25s linear;
+      }
+      .wrap {
+        font-size: 12px;
+        text-transform: uppercase;
+        display: flex;
+        align-items: center;
+        color: #9aa9bf !important;
+        &:hover {
+          color: #fff !important;
+        }
+        .icon {
+          margin-right: 10px;
+          font-size: 20px;
+        }
+      }
+    }
+    .video-interview-bar{
+      width: 100%;
+      margin: 0 15px;
+      transform: translateY(14%);
+      .volume-controls {
+        width: 222px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1220px) {
+  .practice-box .main-video-frame .user-frame-main {
+      padding-top: 50%;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+  .video-hint {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  #video-bio .record-timestamp-box {
+    margin-left: 37%;
+  }
+  .practice-box .main-video-frame .user-frame-main {
+    padding-top: 60%;
+  }
+}
+
+
+@media screen and (max-width: 990px) {
+  .practice-box .main-video-frame .user-frame-main {
+      padding-top: 57%;
+    }
+
+  #video-bio  .record-timestamp-box {
+    margin-left: -35%;
+  }
+}
+
+@media screen and (max-width: 980px) {
+  .practice-box .main-video-frame .user-frame-main {
+      padding-top: 60%;
+    }
+}
+
+@media screen and (max-width: 920px) {
+  .practice-box .main-video-frame .user-frame-main {
+      padding-top: 65%;
+    }
+}
+
+@media screen and (max-width: 860px) {
+  .practice-box .main-video-frame .user-frame-main {
+      padding-top: 70%;
+    }
+}
+
+@media screen and (max-width: 860px) {
+  .practice-box .main-video-frame .user-frame-main {
+      padding-top: 75%;
+    }
+}
+
+@media screen and (max-width: 760px) {
+  .practice-box .main-video-frame .user-frame-main {
+      padding-top: 83%;
+    }
+}
+
+@media screen and (max-width: 680px) {
+  .practice-box .main-video-frame .user-frame-main {
+    padding-top: 90%;
+  }
+  #video-bio .video-interview-bar .volume-controls {
+    width: 152px;
+  }
+}
+
+@media screen and (max-width: 620px) {
+
+  .practice-box .main-video-frame .user-frame-main {
+    padding-top: 87%;
+  }
+
+  .practice-section .video-interview-bar .gear-controls {
+    width: 35%;
+  }
+
+  #video-bio .video-interview-bar {
+    transform: translateY(-40%);
+  }
+
+}
+
+@media screen and (max-width: 580px) {
+  .practice-box .main-video-frame .user-frame-main {
+    padding-top: 97%;
+  }
+}

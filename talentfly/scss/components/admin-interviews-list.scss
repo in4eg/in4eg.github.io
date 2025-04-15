@@ -1,0 +1,175 @@
+.gray-slim-btn {
+    font-size: 12px;
+    line-height: 18px;
+    color: #B0BCCF;
+    font-weight: 500;
+    padding: 5px 15px;
+    border: 1px solid #B0BCCF;
+    background-color: transparent;
+    border-radius: 15px;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.gray-slim-btn:hover {
+    background-color: #e7edf6 !important;
+    border-color: #e7edf6;
+    color: #B0BCCF;
+}
+
+.interviews-list-section {
+    
+    .calendar-from-to {
+        i.calendar-left-icon {
+            right: 10px;
+        }
+    }
+    .calendar-input.datepicker {
+        width: 100%;
+    }
+
+    .form-group {
+        display: flex;
+        justify-content: right;
+        align-items: center;
+
+        .input-title {
+            margin: 0;
+        }
+
+        .c-dropdown {
+            margin: 5px 10px;
+        }
+
+        .c-button--dropdown {
+            border-radius: 3px;
+        }
+
+        .btn-search {
+            cursor: pointer;
+        }
+    }
+    .records-interviews {
+        margin: 0 !important;
+        background-color: #fff;
+        padding: 30px 20px;
+
+        .record-interview.title-item {
+            height: 19px;
+            text-transform: uppercase;
+            color: #B0BCCF;
+            font-weight: bold;
+            font-size: 10px;
+            border-bottom: 2px solid #EDF2FA;
+            margin-bottom: 10px;
+            padding: 0;
+
+            .interviewer, .candidate, .date {
+                cursor: pointer;
+            }
+
+            .arrow {
+                font-size: 8px;
+                margin-left: 3px;
+            }
+        }
+
+        .record-interview {
+            padding: 10px 0;
+            margin: 0;
+            border-bottom: 1px solid #EDF2FA;
+            height: 80px;
+            &:last-child{
+              border-bottom: none;
+            }
+
+            .name {
+                font-size: 14px;
+                color: #465264;
+                font-weight: 500;
+                line-height: 21px;
+            }
+
+            .name:hover {
+                color: #469AEB;
+            }
+
+            .position {
+                font-size: 12px;
+                color: #8A98AD;
+                line-height: 18px;
+            }
+
+            .location, .icon-maps {
+                font-size: 12px;
+                color: #465264;
+                line-height: 18px;
+            }
+            
+            .interviewer {
+                width: 27.5%;
+            }
+
+            .candidate {
+                width: 27.5%;
+            }
+
+            .date {
+                width: 17%;
+
+                .inner {
+                    height: 100%;
+                    display: flex;
+                    align-items: center;
+                    font-size: 12px;
+                    color: #465264;
+                    line-height: 18px;
+                    text-transform: uppercase;
+                }
+            }
+
+            .visability {
+                width: 10%;
+                white-space: nowrap;
+
+                .checkbox-cover {
+                    height: 20px;
+                }
+            }
+
+            .edit-button-box {
+                width: 11%;
+
+                
+            }
+            
+        }
+    }
+  .pagination {
+    padding: 0;
+  }
+}
+
+@media screen and (max-width: 1580px) {
+
+    .interviews-list-section .records-interviews .record-interview .candidate, 
+    .interviews-list-section .records-interviews .record-interview .interviewer {
+        width: 25%;
+    }
+
+    .interviews-list-section .records-interviews .record-interview .date {
+        width: 16%;
+        white-space: nowrap;
+    }
+
+    .interviews-list-section .records-interviews .record-interview .visability {
+        min-width: 110px;
+    }
+
+    .interviews-list-section .records-interviews .record-interview .edit-button-box {
+        width: 11%;
+        min-width: 120px;
+    }
+
+
+}

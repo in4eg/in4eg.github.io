@@ -1,0 +1,137 @@
+.what-is-talentfly-page{
+	background-color: white;
+	
+	.try-wrap-what-is-talentfly{
+		margin-bottom: 70px;
+		max-height: 99vh;
+	}
+	.for-you-paragraph{
+		margin-bottom: 0px;
+		margin-top: 15px;
+		width: 95%;
+	}
+	.lg-image-block{
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+	}
+	.how-works-for-you{
+		margin-bottom: 30px;
+	}
+}
+.what-is-talentfly-container{
+	max-width: 1700px;
+}
+.what-is-talentfly-subtitle{
+	font-weight: 500;
+	font-size: 17px;
+	width: 90%;
+	line-height: 26px;
+}
+.features-wrapper{
+	margin-top: 50px;
+}
+.key-features{
+	background-color: #f3f9ff;
+	padding-top: 85px;
+	padding-bottom: 50px;
+}
+.feature-icon{
+	width: 85px;
+	height: 85px;
+	margin: auto;
+	background-repeat: no-repeat;
+	background-size: contain;
+}
+.mic-feature{
+	background-image: url("../temp/mic-icon.png");
+}
+.bulb-feature{
+	background-image: url("../temp/bulb-icon.png");
+}
+.play-feature{
+	background-image: url("../temp/play-icon.png");
+}
+.key-feature-title{
+	color: #5ea6eb;
+	font-size: 20px;
+	text-transform: uppercase;
+	text-align: center;
+	padding-top: 25px;
+	padding-bottom: 15px;
+}
+.key-feature-text{
+	margin: auto;
+	text-align: center;
+}
+.mic-feature-block, .bulb-feature-block, .play-feature-block{
+	margin-bottom: 35px;
+}
+.mic-feature-block{
+	.key-feature-text{
+		width: 312px;
+	}
+}
+.bulb-feature-block{
+	.key-feature-text{
+		width: 255px;
+	}
+}
+.play-feature-block{
+	.key-feature-text{
+		width: 240px;
+	}
+}
+@media (max-width: 992px) {
+	.what-is-talentfly-page{
+		.lg-image-block{
+			display: none;
+		}
+		.for-you-paragraph{
+			width: 100%;
+		}
+		.what-is-talentfly-subtitle{
+			width: 100%;
+		}
+	}
+}
+@media (max-width: 640px) {
+	.key-feature-title{
+		padding-top: 15px;
+	}
+}
+@media (max-width: 425px) {
+	.features-wrapper{
+		.key-feature-text{
+			width: 80%;
+		}
+	}
+}
+@media (min-width: 426px) and (max-width: 480px) {
+	.features-wrapper{
+		.key-feature-text{
+			width: 70%;
+		}
+	}
+}
+@media (min-width: 481px) and (max-width: 640px) {
+	.features-wrapper{
+		.key-feature-text{
+			width: 65%;
+		}
+	}
+}
+@media (min-width: 641px) and (max-width: 768px) {
+	.features-wrapper{
+		.key-feature-text{
+			width: 60%;
+		}
+	}
+}
+@media (min-width: 769px) and (max-width: 992px) {
+	.features-wrapper{
+		.key-feature-text{
+			width: 55%;
+		}
+	}
+}

@@ -1,0 +1,80 @@
+<div class="card spaced offset-bottom space-bottom-xs">
+	<div class="row header">
+		<div class="col-xs-6 title-wrap">
+			<div class="h5-title no-margin">Video recommendations / endorsements</div>
+		</div>
+		<div class="col-xs-6 align-right to-bottom-xs">
+			<a href="#video-request-popup" class="btn btn-simple btn-xs open-popup-link">
+				<i class="icon icon-add2"></i>
+				Request Video Recommendation
+			</a>
+		</div>
+	</div>
+	<div class="nav-overflow">
+		<div class="slider-cover">
+			<div class="owl-carousel four-item-slider">
+				<div class="item">
+					<a href="https://www.youtube.com/watch?v=EkSyqM5wHfc" class="image-cover video-popup small-icon">
+						<img src="temp/recommendation/recommendation2.jpg" alt="">
+					</a>
+					<div class="caption">
+						<div class="name">Yana <span class="sec-name">Mirza</span></div>
+						<div class="position">ABC Production</div>
+						<!-- в атрибут data-add-video добавить следующие элементы через точку с запятой - ';': 0 - заголовок, 1 - описание, 2 - ссылка на видео -->
+						<a href="#recomendation-active-popup" class="link active open-popup-link"
+						data-add-video="заголовок модального окна;
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae praesentium animi autem iure enim quos nulla veniam atque consectetur eum. Tenetur doloribus possimus nisi beatae eligendi dicta quas voluptatibus aliquid.
+						Assumenda deserunt enim non nesciunt rerum, labore dolorem quas et voluptas neque aspernatur quo pariatur nemo officia reiciendis nostrum natus tempora. Ex distinctio, repudiandae maiores, placeat earum ducimus illum quae.
+						Excepturi error mollitia cumque voluptatibus, dicta ad enim fugit, possimus minima aspernatur quibusdam tenetur ducimus est officiis animi non inventore nihil beatae facere asperiores, eius voluptates corporis a. Voluptatibus, sunt!;
+						https://www.youtube.com/watch?v=3gxNW2Ulpwk">
+						<i class="icon icon-comment"></i>
+					</a>
+				</div>
+				<div class="checkbox-cover">
+					<input type="checkbox" class="checkbox-btn" id="checkUser1" checked data-onchange="sendVideoStatus" data-id="checkUser1" data-url="static/data/forms.json">
+					<label for="checkUser1" class="checkbox-label">Show on my profile</label>
+				</div>
+			</div>
+			<div class="item">
+				<a href="https://www.youtube.com/watch?v=EkSyqM5wHfc" class="image-cover video-popup small-icon">
+					<img src="temp/recommendation/recommendation2.jpg" alt="">
+				</a>
+				<div class="caption">
+					<div class="name">Yana <span class="sec-name">Mirza</span></div>
+					<div class="position">ABC Production</div>
+					<!-- в атрибут data-add-video добавить следующие элементы через точку с запятой - ';': 0 - заголовок, 1 - описание, 2 - ссылка на видео -->
+					<a href="#recomendation-active-popup" class="link active open-popup-link"
+					data-add-video="заголовок модального окна 2;
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae praesentium animi autem iure enim quos nulla veniam atque consectetur eum. Tenetur doloribus possimus nisi beatae eligendi dicta quas voluptatibus aliquid;
+					https://www.youtube.com/watch?v=EkSyqM5wHfc">
+					<i class="icon icon-comment"></i>
+				</a>
+			</div>
+			<div class="checkbox-cover">
+				<input type="checkbox" class="checkbox-btn" id="checkUser2" data-onchange="sendVideoStatus" data-id="checkUser2" data-url="static/data/forms.json">
+				<label for="checkUser2" class="checkbox-label">Show on my profile</label>
+			</div>
+		</div>
+		<div class="item">
+			<a href="https://www.youtube.com/watch?v=3gxNW2Ulpwk" class="image-cover video-popup small-icon">
+				<img src="temp/recommendation/recommendation1.jpg" alt="">
+			</a>
+			<div class="caption">
+				<div class="name">Yana <span class="sec-name">Mirza</span></div>
+				<div class="position">ABC Production</div>
+				<!-- if no commens need to change tag <a> to <span> -->
+					<span class="link"><i class="icon icon-comment"></i></span>
+				</div>
+				<div class="checkbox-cover">
+					<input type="checkbox" class="checkbox-btn" id="checkUser3" data-onchange="sendVideoStatus" data-id="checkUser3" data-url="static/data/forms.json">
+					<label for="checkUser3" class="checkbox-label">Show on my profile</label>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="slider-nav" id="sliderNav">
+		<div class="slider-prev"><i class="icon icon-keyboard-left-arrow-button"></i></div>
+		<div class="slider-next"><i class="icon icon-keyboard-right-arrow-button"></i></div>
+	</div>
+</div>
+</div>

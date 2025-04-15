@@ -1,0 +1,18 @@
+.show-more {
+
+	.inner {
+		display: none;
+	}
+	&.active {
+
+		.inner {
+			display: block;
+		}
+	}
+}
+[data-read] {
+
+	&.hidden {
+		display: none;
+	}
+}

@@ -1,0 +1,22 @@
+[{
+	"errors": {},
+	"progress": {
+		"progress_data": {
+			"interests": 0,
+			"bio": 15,
+			"certification": 5,
+			"education": 0,
+			"volunteering": 0,
+			"personal": 0,
+			"experience": 25,
+			"languages": 0,
+			"technical": 0,
+			"recommendations": 20,
+			"soft": 10
+		},
+		"percent": 100,
+		"active": "volunteering"
+	},
+	"certificate_img": "temp/sertificate3.jpg"
+}
+]

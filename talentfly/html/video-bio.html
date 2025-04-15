@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta name="format-detection" content="telephone=no">
+
+    <title>Talent Fly :: Video Bio</title>
+
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <link href="http://vjs.zencdn.net/6.2.8/video-js.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/perfect-scrollbar.min.css">
+    <link rel="stylesheet" href="css/bundle.min.css">
+
+</head>
+
+<body>
+
+    #=include includes/header-typical.html
+    <div class="interviews-background">
+    <main id="video-bio">
+        #=include includes/general-notifications.html
+        #=include includes/popup-video-bio-hint.html
+
+        <section class="section time-bar">
+            <div class="container large">
+
+
+                <div class="row">
+                    <div class="col-xs-6 col-md-2 col-ms-5 col-lg-3">
+                        <div class="section-title middle with-element" id="btnPositionTablet">Video Bio</div>
+                    </div>
+
+                    <div class="col-xs-6 col-ms-3 col-md-6 col-lg-6">
+                        <div class="row center-xs">
+                            <div class="record-timestamp-box">
+                                <div id="recordStatus" class="record-status">
+                                    <!-- if start recording add class "record-status-on" -->
+                                    <!-- if recording is complete add class "record-status-finished" -->
+                                    <i class="icon icon-start-rec"></i>
+                                    <i class="icon icon-checked2"></i>
+                                    <span id="textStatus">Not Started</span>
+                                    <!-- change to 'Recording' -->
+                                </div>
+                                <!-- if start recording toggle class to "record-time-on"  -->
+                                <div id="recordTime" class="record-time">
+                                    <span id="hours">00</span>:
+                                    <span id="minutes">00</span>:
+                                    <span id="seconds">00</span>
+                                </div>
+                                <div id="connectingBox" class="connecting-box hidden">
+                                    <div class="timestamp-preloader"></div>
+                                    <span id="timeBoxStatus" class="">Connecting</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+
+        <section class="section interview-section practice-section">
+            <div class="container large">
+
+                <div id="interviewVideoBox" class="row interview-video-box flexible-mode-box practice-box">
+                    <div class="interview-advices-box">
+                        <div class="advice">
+                            <i class="icon icon-boy-broad-smile"></i>
+                            <div class="advice-description">
+                                <h4 class="advice-title">SMILE and have no worries</h4>
+                                <p class="advice-text">Lorem ipsum dolor sit amet, consectetur, adipicing edit, Aeoun euismod bibendum loareet.</p>
+                            </div>
+                        </div>
+                        <div class="advice">
+                            <i class="icon icon-smiling-lips"></i>
+                            <div class="advice-description">
+                                <h4 class="advice-title">Speak clearly and legibly</h4>
+                                <p class="advice-text">Lorem ipsum dolor sit amet, consectetur, adipicing edit, Aeoun euismod bibendum loareet.</p>
+                            </div>
+                        </div>
+                        <div class="advice">
+                            <i class="icon icon-eye-big"></i>
+                            <div class="advice-description">
+                                <h4 class="advice-title">look at the camera</h4>
+                                <p class="advice-text">Lorem ipsum dolor sit amet, consectetur, adipicing edit, Aeoun euismod bibendum loareet.</p>
+                            </div>
+                        </div>
+                        <div class="advice">
+                            <i class="icon icon-book"></i>
+                            <div class="advice-description">
+                                <h4 class="advice-title">be respectful</h4>
+                                <p class="advice-text">Lorem ipsum dolor sit amet, consectetur, adipicing edit, Aeoun euismod bibendum loareet.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="firstVideoBox" class="main-video-frame">
+                        <div class="video-head">
+                            <h3 class="name">Your Video Bio</h3>
+                            <span class="position">Start to rec your first videobio</span>
+                        </div>
+                        <div class="video-hint">
+                          <a href="#hint-popup" class="open-popup-link wrap">
+                            <i class="icon icon-show-off-your-skills"></i>
+                            how to record awesome video
+                          </a>
+                        </div>
+
+                        <div id="myVideoFrame" class="frame user-frame-main">
+                            <video id="myVideo" class="video-js video-interview" controls preload="auto" height="440px" poster="temp/user1.jpg" data-setup="{}">
+                                <source src="video/oceans.mp4" type='video/mp4'>
+                                <p class="vjs-no-js">
+                                    To view this video please enable JavaScript, and consider upgrading to a web browser that
+                                    <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
+                                </p>
+                            </video>
+                        </div>
+                    </div>
+
+                    <div class="interview-advices-box">
+                        <div class="advice">
+                            <i class="icon icon-boy-broad-smile"></i>
+                            <div class="advice-description">
+                                <h4 class="advice-title">SMILE and have no worries</h4>
+                                <p class="advice-text">Lorem ipsum dolor sit amet, consectetur, adipicing edit, Aeoun euismod bibendum loareet.</p>
+                            </div>
+                        </div>
+                        <div class="advice">
+                            <i class="icon icon-smiling-lips"></i>
+                            <div class="advice-description">
+                                <h4 class="advice-title">Speak clearly and legibly</h4>
+                                <p class="advice-text">Lorem ipsum dolor sit amet, consectetur, adipicing edit, Aeoun euismod bibendum loareet.</p>
+                            </div>
+                        </div>
+                        <div class="advice">
+                            <i class="icon icon-eye-big"></i>
+                            <div class="advice-description">
+                                <h4 class="advice-title">look at the camera</h4>
+                                <p class="advice-text">Lorem ipsum dolor sit amet, consectetur, adipicing edit, Aeoun euismod bibendum loareet.</p>
+                            </div>
+                        </div>
+                        <div class="advice">
+                            <i class="icon icon-book"></i>
+                            <div class="advice-description">
+                                <h4 class="advice-title">be respectful</h4>
+                                <p class="advice-text">Lorem ipsum dolor sit amet, consectetur, adipicing edit, Aeoun euismod bibendum loareet.</p>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+
+                <div class="row center-xs">
+                    <div class="video-interview-bar">
+                        <div class="gear-controls">
+                            <div class="control-item">
+                                <button type="button" id="videoHandler" class="btn-control btn-control-on">
+                                    <!-- For enabled state add class: btn-control-on -->
+                                    <i class="icon icon-video-camera"></i>
+                                </button>
+                                <span id="videoStatusTest" class="control-title">video test</span>
+                            </div>
+                            <div class="control-item">
+                                <button type="button" id="micHandler" class="btn-control ">
+                                    <i class="icon icon-voice-message-microphone-button"></i>
+                                </button>
+                                <span id="micStatusTest" class="control-title">mic test</span>
+                            </div>
+                            <div class="control-item">
+                                <button type="button" id="speakerHandler" class="btn-control btn-control-on">
+                                    <i class="icon icon-speaker"></i>
+                                </button>
+                                <span id="speakerStatusTest" class="control-title">speaker test</span>
+                            </div>
+                        </div>
+
+                        <div class="interview-controls">
+                            <div class="control-item">
+                                <button type="button" id="recordingStop" class="btn-control">
+                                    <!-- btn-control-on -->
+                                    <i class="icon icon-stop-rec"></i>
+                                </button>
+                                <span class="control-title">stop</span>
+                            </div>
+                            <div class="control-item">
+                                <!--btn-process-pause, btn-record-play, btn-record-pause -->
+                                <button type="button" id="recordingStart" class="recording-start btn-process-on">
+                                    <i class="icon icon-start-rec"></i>
+                                </button>
+                                <button type="button" id="recordingPause" class="recording-start btn-process-pause'">
+                                    <i class="icon icon-pause-rec"></i>
+                                </button>
+                                <button type="button" id="recordingContinue" class="recording-start btn-process-on">
+                                    <i class="icon icon-start-rec"></i>
+                                </button>
+                                <button type="button" id="recordPlay" class="recording-start btn-record-play">
+                                    <i class="icon icon-play-rec"></i>
+                                </button>
+                                <button type="button" id="recordPause" class="recording-start btn-record-pause">
+                                    <i class="icon icon-pause-rec"></i>
+                                </button>
+                                <span id="recordingStartStatus" class="control-title">start</span>
+                            </div>
+                            <div class="control-item">
+                                <button type="button" id="recordSave" class="btn-control btn-control-on btn-record-control">
+                                    <!-- btn-control-on -->
+                                    <i class="icon icon-save"></i>
+                                </button>
+                                <span class="control-title">save</span>
+                            </div>
+                            <div class="control-item">
+                                <button type="button" id="recordDelete" class="btn-control btn-control-on btn-record-control">
+                                    <!-- btn-control-on -->
+                                    <i class="icon icon-delete"></i>
+                                </button>
+                                <span class="control-title">delete</span>
+                            </div>
+                        </div>
+
+                        <div class="volume-controls">
+                            <div id="volume-item">
+                                <div class="volume-hints">
+                                    <span class="title-volume">Interviewer volume</span>
+                                </div>
+                                <input type="range" min="1" max="100" value="50" class="volume-line" id="simpleVolumeLine">
+                            </div>
+
+                            <div class="volume-item">
+                                <div class="volume-hints">
+                                    <span class="title-volume">Microphone volume</span>
+                                </div>
+                                <div class="volume-mic-line" id="">
+                                    <!-- Here is another ID because we need another behavior -->
+                                    <input type="range" min="1" max="100" value="0" class="volume-mic-slider" id="volumeMicSliderView" disabled>
+                                    <div class="volume-mic-subline" id="volumeMicSubline"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+        <div class="mobile-stub default-shadow">
+            <i class="icon  icon-video-recording"></i>
+            <h3 class="stub-title">Video recording on phones is not supported yet</h3>
+            <p class="stub-text">We recommend using tablet, laptop or desktop</p>
+            <a href="/profile/" class="btn btn-grey">back to main page</a>
+        </div>
+    </main>
+    </div>
+
+
+    #=include includes/footer.html
+
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,300,400,500,600,700" rel="stylesheet">
+    <script src="js/lib/jquery.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/plugins/jquery.magnific-popup.min.js"></script>
+
+    <script src="js/init/main-menu-dropdown.js"></script>
+    <script src="js/init/video-interview-bar.js"></script>
+    <script src="js/init/interview-timers.js"></script>
+    <script src="js/init/general-notifications.js"></script>
+
+    <!-- video js -->
+    <script src="http://vjs.zencdn.net/6.2.8/video.js"></script>
+
+</body>
+
+</html>

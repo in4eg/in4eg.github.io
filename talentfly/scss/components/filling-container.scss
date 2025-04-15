@@ -1,0 +1,155 @@
+.filling-container {
+	height: 22px; width: 22px;
+	max-width: 165px;
+	padding: 0 4px;
+	transform: translateY(3px);
+	margin-left: 10px;
+	text-align: left;
+	line-height: 2.1;
+	border: 2px solid #ffcb5d;
+	background-color: #ffe7b5;
+	color: #465264;
+	font-size: 10px;
+	display: inline-block;
+	border-radius: 24px;
+	position: relative;
+	overflow: hidden;
+	z-index: 5;
+	transition: width .3s;
+	font-weight: 400;
+
+	.icon {
+		color: #465264;
+		font-size: 10px;
+		position: static;
+	}
+	.help-text {
+		opacity: 0;
+		transform: translateY(-10px);
+		transition-delay: .1s;
+		transition: transform .3s, opacity .3s;
+		width: 134px;
+		display: inline-block;
+		left: 20px; top: 0px;
+		position: absolute;
+		padding-right: 0;
+
+	}
+	&:hover {
+		width: 165px;
+
+		.help-text {
+			opacity: 1;
+			transform: translateY(0px);
+		}
+	}
+}
+
+/* custom */
+.block-info.edited {
+
+	.title {
+
+		.filling-container {
+			font-weight: 400;
+			transform: translateY(5px);
+			position: static;
+
+			.icon {
+				font-weight: 400;
+			}
+		}
+	}
+}
+
+.filling-container.right-position {
+	margin-left: 0;
+	margin-right: 10px;
+	transform: translateY(7px);
+
+	.help-text {
+		transform: translateY(0px);
+	}
+}
+
+@media (max-width: 640px) {
+
+
+	.block-info.edited {
+
+		.title {
+
+			.filling-container {
+				margin: 0 0 0 auto;
+				transform: translateX(21px) translateY(20px);
+			}
+		}
+	}
+
+	.block-info.detail {
+
+		.title {
+
+			.filling-container {
+
+				.help-text {
+					padding-right: 0;
+				}
+			}
+		}
+	}
+
+	.filling-container {
+		display: block;
+		margin-left: 0;
+		position: absolute;
+		transform: translateY(0);
+		top: -1px; right: 50px;
+
+
+		.help-text {
+			transform: translateY(0px);
+		}
+	}
+
+	.card {
+
+		.h5-title.title-icon {
+
+			.filling-container {
+				right: -25%;
+			}
+		}
+	}
+
+	.filling-container.right-position {
+		margin-right: 0;
+		transform: translateY(0);
+	}
+}
+
+@media (max-width: 480px) {
+
+
+	.filling-container {
+		position: static;
+		right: 0; left: auto;
+		margin: 10px 0 0 -38px;
+		transform: translateX(0);
+
+
+		.help-text {
+			transform: translateY(0px);
+		}
+	}
+
+	.filling-container.right-position {
+		margin: 0;
+		position: absolute;
+		right: 15px; top: 35px;
+
+		~ .open-popup-link {
+			margin-bottom: 30px;
+		}
+	}
+}

@@ -1,0 +1,199 @@
+/* VOLUME */
+.video-interview-bar {
+    $turquoise: #79e8d4;
+
+    ::-moz-focus-outer, ::-moz-focus-inner {
+        border: none;
+    }
+
+    .volume-controls {
+        width: 235px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        
+        .volume-hints {
+            display: flex;
+            justify-content: space-between;
+
+            & .title-volume {
+                font-size: 12px;
+                color: rgb(81,92,110);
+            }
+
+            & .subtitle-volume {
+                font-size: 11px;
+                color: rgb(81,92,110);
+                text-transform: uppercase;
+            }
+        }
+
+        .volume-hints:nth-child(0) {
+            margin-bottom: -5px;
+        }
+
+        .volume-line {
+            width: 100%;
+        }
+
+        #volume-item {
+            margin-bottom: 10px;
+            
+            & .volume-hints {
+                margin-bottom: -5px;
+            }   
+        }
+
+        .volume-line {
+            -webkit-appearance: none;
+            width: 100%;
+            height: 3px;
+            background: #4fe1c7;
+            border-radius: 5px;
+            outline: none;
+        }
+
+        .volume-line::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: #ecf5fd;
+            border: 3px solid #4fe1c7;
+            cursor: pointer;
+        }
+
+        .volume-line:active::-webkit-slider-thumb {
+            background: #051b2f;
+        }
+
+        .volume-line::-moz-range-thumb {
+            width: 5px;
+            height: 5px;
+            border-radius: 50%;
+            background: #ecf5fd;
+            border: 3px solid #4fe1c7;
+            cursor: pointer;
+        }
+
+        .volume-line:active::-moz-range-thumb {
+            background: #051b2f;
+        }
+
+        .volume-line::-moz-range-track {
+            height: 0px;
+        }
+
+        @media screen and (-webkit-min-device-pixel-ratio: 0) {
+            .volume-line {
+                height: 3px;  
+            }
+        }
+
+        .volume-line::-ms-thumb {
+            width: 7px;
+            height: 7px;
+            position: absolute;
+            border-radius: 50%;
+            background: #ecf5fd;
+            border: 7px solid #4fe1c7;
+            cursor: pointer;
+        }
+
+        .volume-line:active::-ms-thumb {
+            background: #051b2f;
+        }
+
+        
+        /* SECOND VOLUME */
+        .volume-mic-subline {
+            width: 0%;
+            height: 3px;
+            background: linear-gradient(to right, #4fe1c7 75%, transparent 75%);
+            background-size: 15px 2px;
+            position: relative;
+            bottom: 20px;
+        }
+        .volume-mic-line {
+            margin-top: 5px;
+            height: 3px;
+            background: linear-gradient(to right, #ecf5fd 75%, transparent 75%);
+            background-size: 15px 2px;
+            background-position: 0px, 10px;
+        }
+
+        .volume-mic-slider {
+            -webkit-appearance: none;
+            z-index: 1;
+            width: 100%;
+            height: 0px;
+            outline: none;
+            position: relative;
+            bottom: 13px;
+            right: 11px;
+        }
+
+        .volume-mic-slider::-webkit-slider-thumb {
+            opacity: 0;
+        }
+
+        .volume-mic-slider::-moz-range-thumb {
+            width: 3;
+            height: 3;
+            background: #ecf5fd;
+            opacity: 0;
+        }
+        .volume-mic-slider::-moz-range-track {
+            height: 15px;
+            background: transparent;
+        }
+
+        @media screen and (-webkit-min-device-pixel-ratio: 0) {
+            .volume-mic-subline {
+                position: relative;
+                bottom: 18px;
+            }
+            .volume-mic-slider{
+                right: 5px; 
+            }
+        }
+    }
+
+
+    /*Hides the slider thumb. Use it if need:*/
+    & .volume-controls.volume-view{
+
+        .volume-line::-webkit-slider-thumb {
+            height: 0;
+            width: 0;
+            border: none;
+        }
+
+        .volume-line::-moz-range-thumb {
+            height: 0;
+            width: 0;
+            border: none;
+        }
+        .volume-mic-slider::-webkit-slider-thumb {
+            height: 0;
+            width: 0;
+            border: none;
+            cursor: default;
+        }
+
+        .volume-mic-slider::-moz-range-thumb {
+            height: 0;
+            width: 0;
+            border: none;
+            cursor: default;
+        }
+
+        .volume-mic-slider {
+            cursor: default;
+        }
+
+    }
+    
+
+}

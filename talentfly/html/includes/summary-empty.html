@@ -1,0 +1,22 @@
+<div class="card spaced offset-bottom editable">
+
+	<div class="row header">
+		<div class="col-xs-9">
+			<div class="h5-title no-margin title-icon">
+				<span class="icon-holder">
+					<i class="icon icon-summary"></i>
+				</span>
+				<span class="text">Summary</span>
+			</div>
+		</div>
+		<div class="col-xs-3 align-right">
+			<button data-call="#edit-summary-popup" data-edit="#summaryMess" class="btn btn-simple btn-xs btn-round">
+				<i class="icon icon-pencil-edit"></i>
+			</button>
+		</div>
+	</div>
+
+	<!-- в data-text-limit передавать длину строки -->
+	<div class="h2-title no-margin card-title edited change-text hidden" id="summaryMess" data-text="textarea" data-input="#summary-edit" data-edit="#summaryMess" data-length="264" data-main data-text-limit="700" data-call="#edit-summary-popup"></div>
+	<div class="hidden-helper active">Summarize your experience, current occupation and career goals in a brief summary.</div>
+</div>

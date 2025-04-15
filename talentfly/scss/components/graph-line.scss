@@ -1,0 +1,52 @@
+.graph-line {
+	background: $light-grey;
+	transform: translateZ(0);
+	perspective: 1;
+	height: 4px;
+	border-radius: 4px;
+	margin-top: 60px;
+	margin-bottom: 33px;
+	position: relative;
+
+	.progress {
+		display: block;
+		height: 100%;
+		background: $blue;
+		border-radius: 4px;
+		transform: translateZ(0);
+		perspective: 1;
+	}
+	.label,
+	.text {
+		position: absolute;
+		font-size: 14px;
+		line-height: 20px;
+		bottom: 100%;
+		margin-bottom: 10px;
+	}
+	.label {
+		left: 0;
+		font-weight: 500;
+	}
+	.text {
+		right: 0;
+		font-weight: 300;
+		color: $grey;
+	}
+}
+
+@media (max-width: 480px){
+
+	.graph-line {
+		margin-top: 40px;
+		margin-bottom: 20px;
+		height: 2px;
+
+		.label,
+		.text {
+			font-size: 12px;
+			margin-bottom: 5px;
+		}
+	}
+
+}

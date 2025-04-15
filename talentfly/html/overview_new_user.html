@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+  <meta name="format-detection" content="telephone=no">
+
+  <title>Talent Fly :: Overview</title>
+
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  <link rel="mask-icon" href="safari-pinned-tab.svg" color="#469aeb">
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="android-chrome-192x192.png">
+  <link rel="icon" type="image/png" sizes="256x256" href="android-chrome-256x256.png">
+  <link rel="manifest" href="site.webmanifest">
+  <meta name="msapplication-TileColor" content="#469aeb">
+  <meta name="msapplication-config" content="browserconfig.xml">
+  <meta name="theme-color" content="#469aeb">
+
+  <link rel="stylesheet" href="css/bundle.min.css">
+
+
+</head>
+<body>
+
+  #=include includes/header-typical.html
+
+  <main>
+
+
+    <section class="section section-xs collapsed-bottom">
+      <div class="container large">
+
+        <div class="row">
+          <div class="col-xs-12 col-md-2 col-lg-3">
+            <div class="section-title middle with-element" id="btnPositionTablet">Overview</div>
+          </div>
+          <div class="col-xs-12 col-md-10 col-lg-9">
+            #=include includes/progress.html
+          </div>
+        </div>
+
+        #=include includes/overview-video.html
+
+        <div class="row card-row">
+        <!-- summary -->
+          <div class="col-xs-12 col-md-6 offset-bottom">
+            <div class="card spaced">
+              <div class="row header empty_card">
+                <div class="col-xs-12 align-center">
+                  <span class="icon-holder-w">
+                    <i class="icon icon-summary"></i>
+                  </span>
+                  <div class="h5-title">Summary</div>
+                  <div class="hidden-helper active">Summarize your experience, current occupation and career goals in a brief summary.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- skills -->
+          <div class="col-xs-12 col-md-6 offset-bottom">
+            <div class="card spaced">
+              <div class="row header">
+                <div class="tabs-nav col-xs-8">
+                  <ul class="clear tabs" data-tabs="#skillsTabs1">
+                    <li class="active">Technical Skills</li>
+                    <li>Soft Skills</li>
+                  </ul>
+                </div>
+              </div>
+              <div id="skillsTabs1" class="tabs-content">
+                <div class="content active">
+
+                  <!-- content btn -->
+                  <div class="btn-nav col-xs-4 align-right content-btn">
+                    <div class="tabs-content empty_card" id="skillsTabsButtons">
+                      <div class="content active">
+                        <button type="button" class="btn btn-grey btn-xs spaced" data-set-tab="1|#skillsTabsButtons,#skillsTabs1_1">
+                          <i class="icon icon-list btn-icon"></i>
+                          list<span class="sm-inline"> view</span>
+                        </button>
+                      </div>
+                      <div class="content">
+                        <button type="button" class="btn btn-grey btn-xs spaced" data-set-tab="0|#skillsTabsButtons,#skillsTabs1_1">
+                          <i class="icon icon-chart btn-icon"></i>
+                          chart<span class="sm-inline"> view</span>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- tech -->
+                  <div class="tabs-content empty_card" id="skillsTabs1_1">
+                    <div class="content active graph-content align-center">
+                      <span class="icon-holder-w">
+                        <i class="icon icon-technical-skills"></i>
+                      </span>
+                      <span class="text h5-title">Technical Skills</span>
+                      <div class="hidden-helper active">List the core technical skills your have or used in the past</div>
+                    </div>
+                    <div class="content text-content">
+                      <!-- list technical skills view -->
+                      <div class="wrap-info" data-limit="3">
+                        List view 
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="content">
+                  <div class="tabs-content empty_card" id="skillsTabs1_2">
+                    <!-- soft skills lists -->
+                    <div class="wrap-info align-center" data-limit="3">
+                      <span class="icon-holder-w">
+                        <i class="icon icon-soft-skills"></i>
+                      </span>
+                      <span class="text h5-title">Soft Skills</span>
+                      <div class="hidden-helper active">Think of what soft skills make you a great team player</div>
+                      <!-- view more link -->
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- experience -->
+        <div class="row card-row">
+          <div class="col-xs-12 col-md-6 offset-bottom">
+            <div class="card spaced">
+              <div class="row header empty_card">
+                <div class="col-xs-12 align-center">
+                  <span class="icon-holder-w">
+                    <i class="icon icon-experience"></i>
+                  </span>
+                  <div class="h5-title">Experience</div>
+                  <div class="hidden-helper active">
+                    <div class="paragraph">Describe your work experience in this section. The more effort you invest in describing your past and current work, the more the return.</div>
+                    <div class="paragraph">Focus on success, on the challenges you overcame, on specific roles you help in the team.</div>
+                    <div class="paragraph">You'll be able to provide:</div>
+                    <ul class="clear list bullet-list align-center">
+                      <li>Job title</li>
+                      <li>Company</li>
+                      <li>Timeframe you worked at this position</li>
+                      <li>Detailed description</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-xs-12 col-md-6 offset-bottom">
+            <div class="card spaced">
+              <div class="header">
+                <ul class="clear tabs" data-tabs="#educationTabs">
+                  <li class="active">Education</li>
+                  <li>Certification</li>
+                  <li>Languages</li>
+                </ul>
+              </div>
+              <div class="tabs-content" id="educationTabs">
+                <div class="content active empty_card_tabs">
+                  <!-- Education -->
+                  <div class="wrap-info align-center" data-limit="3">
+                    <span class="icon-holder-w">
+                      <i class="icon icon-education"></i>
+                    </span>
+                     <div class="h5-title">Education</div>
+                     <div class="hidden-helper active">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo.</div>
+                  </div>
+                </div>
+                <div class="content">
+                  <!-- Certification -->
+                  <div class="wrap-info align-center" data-limit="3">
+                    <span class="icon-holder-w">
+                      <i class="icon icon-certification"></i>
+                    </span>
+                     <div class="h5-title">Certification</div>
+                     <div class="hidden-helper active">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo.</div>
+                    <!-- view more link -->
+                    <div class="scrolled-more hidden">
+                      <a href="full_profile.html">+ <span class="count"></span> More</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="content">
+                  <!-- Languages -->
+                  <div class="wrap-info align-center" data-limit="3">
+                    <span class="icon-holder-w">
+                      <i class="icon icon-languages"></i>
+                    </span>
+                     <div class="h5-title">Languages</div>
+                     <div class="hidden-helper active">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo.</div>
+                    <!-- view more link -->
+                    <div class="scrolled-more hidden">
+                      <a href="full_profile.html">+ <span class="count"></span> More</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- recommendations -->
+        <div class="row card-row">
+          <div class="col-xs-12 col-md-6 offset-bottom">
+            <div class="card spaced">
+              <div class="row header empty_card">
+                <div class="col-xs-12 align-center">
+                  <span class="icon-holder-w">
+                    <i class="icon icon-experience"></i>
+                  </span>
+                  <div class="h5-title">Video recommendations / endorsements</div>
+                  <div class="hidden-helper active">
+                    Describe your work experience in this section. The more effort you invest in describing your past and current work, the more the return.
+                  </div>
+                </div>
+              </div>
+              <!-- dfgfd -->
+            </div>
+          </div>
+          <div class="col-xs-12 col-md-6 offset-bottom">
+            <div class="card spaced">
+              <div class="row header">
+                <div class="col-xs-12">
+                  <ul class="clear tabs" data-tabs="#interestTabs1">
+                    <li class="active">
+                      Interests, 
+                      <span class="xs-block-ins">Hobbies &amp; Links</span>
+                    </li>
+                    <li>
+                      Volunteering
+                      <span class="xs-block-ins"> Experience</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div id="interestTabs1" class="tabs-content empty_card">
+                <div class="content active">
+                  <!-- Interests and other view -->
+                  <div class="wrap-info align-center" data-limit="12">
+                    <span class="icon-holder-w">
+                      <i class="icon icon-interests"></i>
+                    </span>
+                     <div class="h5-title">Interests</div>
+                     <div class="hidden-helper active">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo.</div>
+                    <!-- view more link -->
+                    <div class="scrolled-more hidden">
+                      <a href="full_profile.html">+ <span class="count"></span> More</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="content">
+                  <ul class="clear spaced-top wrap-info align-center" data-limit="4">
+                    <li>
+                      <span class="icon-holder-w">
+                        <i class="icon icon-volunteering"></i>
+                      </span>
+                       <div class="h5-title">Volunteering</div>
+                       <div class="hidden-helper active">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo.</div>
+                    </li>                   
+                    <!-- view more link -->
+                    <li class="scrolled-more hidden">
+                      <a href="full_profile.html">+ <span class="count"></span> More</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- popup -->
+    #=include includes/popup-experience.html
+    #=include includes/popup-interview.html
+    #=include includes/popup-share-profile.html
+    #=include includes/footer.html
+
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,300,400,500,600,700" rel="stylesheet">
+
+
+    <script src="js/lib/jquery.min.js"></script>
+
+    <script src="js/plugins/owl.carousel.min.js"></script>
+    <script src="js/plugins/perfect-scrollbar.min.js"></script>
+    <script src="js/plugins/jquery.magnific-popup.min.js"></script>
+    <script src="js/plugins/d3.v3.min.js"></script>
+
+    <!-- video js -->
+    <script src="js/plugins/video.js"></script>
+    <script src="js/plugins/videojs-markers.min.js"></script>
+
+    <script src="js/main.js"></script>
+    <script src="js/validator.js"></script>
+
+    <script src="js/init/buttons.js"></script>
+    <script src="js/init/validation.js"></script>
+    <script src="js/init/toggler.js"></script>
+    <script src="js/init/main-menu-dropdown.js"></script>
+    <script src="js/init/progress.js"></script>
+    <script src="js/init/set-overview-size.js"></script>
+    <script src="js/init/tabs.js"></script>
+    <script src="js/init/graph.js"></script>
+    <script src="js/init/read-more.js"></script>
+    <script src="js/init/dropdown.js"></script>
+    <script src="js/init/limit-block.js"></script>
+    <script src="js/init/mask.js"></script>
+    <script src="js/init/clipboard-copy.js"></script>
+    <script src="js/init/notification.js"></script>
+    <script src="js/init/keyword-search.js"></script>
+    <script src="js/init/video-data.js"></script>
+    <script src="js/init/popup-helper.js"></script>
+    <script src="js/init/active-link.js"></script>
+  </body>
+  </html>

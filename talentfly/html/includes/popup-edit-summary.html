@@ -1,0 +1,32 @@
+<div id="edit-summary-popup" class="popup simple-popup">
+	<div class="inner">
+		<button class="close-popup" type="button">
+			<i class="icon icon-close"></i>
+		</button>
+		<div class="header">
+			<div class="title">Edit Summary</div>
+		</div>
+		<div class="content">
+			<form action="static/data/progress.json" class="simple-form modal-form" method="post" data-onsubmit="modalOnSubmitSummary">
+				<textarea name="summary" id="summaryEdit" rows="10" cols="80" class="ignored" data-push="#summaryMess" data-minlength="10" data-id="summaryMess" data-view="true"></textarea>
+
+				<script>
+					CKEDITOR.replace( 'summaryEdit', {
+						customConfig: '/js/plugins/config.js',
+						contentsCss: '/css/editor/editor.css'
+					});
+				</script>
+				<div class="btn-group align-left">
+					<button class="btn form-btn btn-grey" type="button" data-dismiss="#edit-summary-popup">
+						<span class="text">cancel</span>
+						<span class="fade"></span>
+					</button>
+					<button class="btn form-btn btn-simple" type="submit">
+						<span class="text">save</span>
+						<span class="fade"></span>
+					</button>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>

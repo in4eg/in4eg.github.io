@@ -1,0 +1,145 @@
+<div class="overview-buttons">
+	<div class="row">
+		<div class="col-xs-12 align-right" id="btnPositionDesktop">
+
+			<a href="#updateProfileCv" class="btn btn-dark profile-btn simple open-popup-link" data-tablet="#btnPositionTablet" data-desktop="#btnPositionDesktop">
+				<span class="text">
+					<i class="icon icon-download-folder btn-icon"></i>
+					Upload from CV file
+				</span>
+			</a>
+			<a href="#updateProfileLinkedin" class="btn btn-dark profile-btn simple open-popup-link" data-tablet="#btnPositionTablet" data-desktop="#btnPositionDesktop">
+				<span class="text">
+					<i class="icon icon-linkedin btn-icon"></i>
+					Update from LinkedIn
+				</span>
+			</a>
+			<a href="#" class="btn btn-dark profile-btn simple" data-tablet="#btnPositionTablet" data-desktop="#btnPositionDesktop">
+				<span class="text">
+					<i class="icon icon-eye btn-icon large-icon"></i>
+					How other see it
+				</span>
+			</a>
+		</div>
+	</div>
+</div>
+<!-- overview body -->
+<div class="card overview-body collapsed-part" id="overviewBody">
+	<div class="title">Recorded <span id="videoDate">Jun 14 2017</span></div>
+	<div class="row collapsed-row">
+		<div class="col-xs-12 col-md-8 blue-part">
+			<button class="collapsed-btn" data-toggle="#overviewBody">
+				<i class="icon icon-keyboard-right-arrow-button first-icon"></i>
+				<i class="icon icon-keyboard-left-arrow-button next-icon"></i>
+			</button>
+			<div class="frame user-frame-main">
+				<video id="demo" class="video-js" controls preload="auto"
+				data-setup="{}">
+				<source src="video/video2.mp4" type='video/mp4'>
+					<p class="vjs-no-js">
+						To view this video please enable JavaScript, and consider upgrading to a web browser that
+						<a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
+					</p>
+				</video>
+				<!-- contorls at top -->
+				<div class="controls">
+					<div class="row">
+						<div class="full-mobile col-xs-8 col-md-9">
+							<div class="action-links">
+								<div class="dropdown" data-dropdown>
+									<div class="anchor">
+										<div class="text">Digital Marketind Interview</div>
+									</div>
+									<div class="inner">
+										<ul class="clear dropdown-list" id="changeVideo" data-url="static/data/video.json?video=">
+											<li data-video-id="1">Interview #1</li>
+											<li data-video-id="2">Interview #2</li>
+											<li data-video-id="3">Interview #3</li>
+											<li>Interview #4</li>
+										</ul>
+									</div>
+								</div>
+								<div class="setting">
+									<a href="#interview-popup" class="open-popup-link btn dark-round-btn">
+										<i class="icon icon-settings"></i>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- change video btn -->
+				<button type="button" class="btn dark-btn change-btn" data-interviewer-mp4="video/video2.mp4" data-interviewer-ogg="video/video2.ogg" data-candidate-mp4="video/oceans.mp4" data-candidate-ogg="video/oceans.ogg" id="changeBtn" data-active="candidate">
+					<span class="text">
+						<i class="icon icon-change-view"></i>
+						<span class="caption">Candidate</span>
+						<span class="caption active">Interviewer</span>
+					</span>
+					<span class="soan fade"></span>
+				</button>
+			</div>
+			<form action="" class="overview-search" id="overviewSearchForm" data-video-id="videoId" data-url="static/data/keywords.json?keywords=">
+				<div class="search-title">Search Keywords in video</div>
+
+				<!-- add class with-tag if there are tags inside if there no tags inside add class rounded-->
+				<div class="form-group tags-group rounded">
+					<div class="tag-wrap" data-oninput="#tagInput">
+						<div class="scrolled-block">
+							<div id="tagCover" class="in-bl"></div>
+							<!-- input for a keyword request -->
+							<input type="text" id="tagInput" name="keyword">
+							<label for="tagInput">Keywords...</label> 
+						</div>
+					</div>
+					<div class="btn-wrap">
+						<span data-tooltip="Some little text here but not very large">
+							<span class="btn btn-light btn-round btn-xs btn-tooltip">
+								<i class="icon icon-info"></i>
+							</span>
+						</span>
+						<button type="submit" class="btn btn-round gradient-border">
+							<span class="text"><i class="icon icon-search"></i></span>
+							<span class="fade"></span>
+						</button>
+					</div>
+				</div>
+
+				<div class="overview-keywords hidden" id="totalOverviewKey"><span id="totalKeyCount">1 result</span> founded</div>
+			</form>
+		</div>
+		<div class="col-xs-12 col-md-4 white-part">
+			<div class="h5-title overview-title">System Recognized Questions</div>
+			<div class="overview-content">
+				<div class="scrolled">
+					<ol class="clear list time-list" id="videoLinks">
+						<li data-time="8">
+							<span class="link">
+								Active link
+								<span class="time">00:00:08</span>
+							</span>
+						</li>
+						<li data-time="2">
+							<span class="link">
+								Lorem ipsum dolor sit
+								<span class="time">00:00:02</span>
+							</span>
+						</li>
+					</ol>
+				</div>
+			</div>
+			<div class="overview-footer">
+				<div class="row">
+					<div class="col-xs-12 col-ms-1 icon-wrap">
+						<i class="icon icon-show-off-your-skills"></i>
+					</div>
+					<div class="col-xs-12 col-ms-11">
+						For an accelerated viewing experience, our AI system has identified question phrases from the interview and provided a list below.
+						<br><br>
+						Please excuse any inconsistencies as our technology is constantly improving.
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- / overview body -->

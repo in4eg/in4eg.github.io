@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta name="format-detection" content="telephone=no">
+
+    <title>Talent Fly :: Interviews</title>
+
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <link href="http://vjs.zencdn.net/6.2.8/video-js.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/perfect-scrollbar.min.css">
+    <link rel="stylesheet" href="css/bundle.min.css">
+
+</head>
+
+<body>
+
+    #=include includes/header-admin.html
+
+    <main data-pages-link="">
+
+        <section class="section usual-padding-top interviews-list-section">
+            <div class="container large">
+                <div class="row">
+                    <div class="col-xs-12 col-md-12">
+                        <div class="section-title middle with-element" id="btnPositionTablet">Recorded interviews</div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12 col-md-3">
+                        <form class="simple-form filter-form default-shadow">
+                            <div class="header">Filters</div>
+                            <div class="content">
+                                <div class="input-title">Interviewer</div>
+                                <div class="form-group spaced">
+                                    <input class="input-simple" id="interviewer" minlength="2" placeholder="Enter the name" data-push="#" type="text">
+                                </div>
+                                <div class="input-title">Candidate</div>
+                                <div class="form-group spaced">
+                                    <input class="input-simple" id="candidate" minlength="2" placeholder="Enter the name" data-push="#" type="text">
+                                </div>
+                                <div class="input-title">Date Range</div>
+
+                                <div class="calendar-from-to">
+                                    <input id="datepicker-from" class="calendar-input datepicker-from" name="calendar" placeholder="MM/DD/YYYY">
+                                    <i class="icon icon-event calendar-left-icon datepicker-from"></i>
+                                    <div class="calendars-separators">
+                                        <svg>
+                                            <line x1="0" y1="5" x2="5" y2="5"></line>
+                                        </svg>
+                                    </div>
+                                    <input id="datepicker-to" class="calendar-input datepicker-to" name="calendar" placeholder="MM/DD/YYYY">
+                                    <i class="icon icon-event calendar-right-icon datepicker-to"></i>    
+                                </div>
+
+                                <button class="btn form-btn btn-simple" type="submit">
+                                    <span class="text">Apply</span>
+                                    <span class="fade"></span>
+                                </button>
+
+                                <button type="button" class="btn btn-default form-btn single-block-element" data-on-edit="" data-removeon="">
+                                    <span class="text">
+                                        Clear filter
+                                    </span>
+                                    <span class="fade"></span>
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="col-xs-12 col-md-9">
+                        <ul class="interviews-list records-interviews default-shadow">
+                            <li class="intrview-item record-interview title-item">
+                                <div class="interviewer">
+                                    Interviewer
+                                    <span class="arrow">
+                                        <i class="icon icon-chevron-down"></i>
+                                    </span>
+                                </div>
+                            
+                                <div class="candidate">
+                                    candidate
+                                    <span class="arrow">
+                                        <i class="icon icon-chevron-down"></i>
+                                    </span>
+                                </div>
+                            
+                                <div class="date">
+                                    interview date
+                                    <span class="arrow">
+                                        <i class="icon icon-chevron-down"></i>
+                                    </span>
+                                </div>
+                            
+                                <div class="visability">
+                                    Visible on Profile
+                                </div>
+
+                                <div class="edit-button-box">
+
+                                </div>
+                            
+                            </li>
+                            <!-- элемент для клонирования -->
+                            <li class="intrview-item record-interview hidden" data-root-item="">
+                                <div class="interviewer">
+                                    <a href="#" class="name">Peter Swissels</a>
+                                    <div class="position">Junior Frontend Engineer</div>
+                                    <i class="icon icon-maps"></i>
+                                    <span class="location">Brazil, San Paolo</span>
+                                </div>
+                            
+                                <div class="candidate">
+                                    <a href="#" class="name">Peter Swissels</a>
+                                    <div class="position">Junior Frontend Engineer</div>
+                                    <i class="icon icon-maps"></i>
+                                    <span class="location">Brazil, San Paolo</span>
+                                </div>
+                            
+                                <div class="date">
+                                    <div class="inner">JUN 22, 2017</div>
+                                </div>
+                            
+                                <div class="visability vh-center">
+                                    <div class="checkbox-cover">
+                                        <input class="checkbox-btn" id="checkInterview1" type="checkbox">
+                                        <label for="checkInterview1" class="checkbox-label"></label>
+                                    </div>
+                                </div>
+                            
+                                <div class="edit-button-box vh-center">
+                                    <a class="gray-slim-btn" data-edit-interview>Edit interview</a>
+                                </div>
+                            </li>
+                            <!-- далее для примера и красоты на фронт репе -->
+                            <li class="intrview-item record-interview">
+                                <div class="interviewer">
+                                    <a href="#" class="name">Peter Swissels</a>
+                                    <div class="position">Junior Frontend Engineer</div>
+                                    <i class="icon icon-maps"></i>
+                                    <span class="location">Brazil, San Paolo</span>
+                                </div>
+                            
+                                <div class="candidate">
+                                    <a href="#" class="name">Peter Swissels</a>
+                                    <div class="position">Junior Frontend Engineer</div>
+                                    <i class="icon icon-maps"></i>
+                                    <span class="location">Brazil, San Paolo</span>
+                                </div>
+                            
+                                <div class="date">
+                                    <div class="inner">JUN 22, 2017</div>
+                                </div>
+                            
+                                <div class="visability vh-center">
+                                    <div class="checkbox-cover">
+                                        <input class="checkbox-btn" id="checkInterview2" type="checkbox">
+                                        <label for="checkInterview2" class="checkbox-label"></label>
+                                    </div>
+                                </div>
+                            
+                                <div class="edit-button-box vh-center">
+                                    <a class="gray-slim-btn" data-edit-interview>Edit interview</a>
+                                </div>
+                            
+                            </li>
+                            <li class="intrview-item record-interview">
+                                <div class="interviewer">
+                                    <a href="#" class="name">Peter Swissels</a>
+                                    <div class="position">Junior Frontend Engineer</div>
+                                    <i class="icon icon-maps"></i>
+                                    <span class="location">Brazil, San Paolo</span>
+                                </div>
+                            
+                                <div class="candidate">
+                                    <a href="#" class="name">Peter Swissels</a>
+                                    <div class="position">Junior Frontend Engineer</div>
+                                    <i class="icon icon-maps"></i>
+                                    <span class="location">Brazil, San Paolo</span>
+                                </div>
+                            
+                                <div class="date">
+                                    <div class="inner">JUN 22, 2017</div>
+                                </div>
+                            
+                                <div class="visability vh-center">
+                                    <div class="checkbox-cover">
+                                        <input class="checkbox-btn" id="checkInterview3" type="checkbox">
+                                        <label for="checkInterview3" class="checkbox-label"></label>
+                                    </div>
+                                </div>
+                            
+                                <div class="edit-button-box vh-center">
+                                    <a class="gray-slim-btn" data-edit-interview>Edit interview</a>
+                                </div>
+                            
+                            </li>
+                            <li class="intrview-item record-interview">
+                                <div class="interviewer">
+                                    <a href="#" class="name">Peter Swissels</a>
+                                    <div class="position">Junior Frontend Engineer</div>
+                                    <i class="icon icon-maps"></i>
+                                    <span class="location">Brazil, San Paolo</span>
+                                </div>
+                            
+                                <div class="candidate">
+                                    <a href="#" class="name">Peter Swissels</a>
+                                    <div class="position">Junior Frontend Engineer</div>
+                                    <i class="icon icon-maps"></i>
+                                    <span class="location">Brazil, San Paolo</span>
+                                </div>
+                            
+                                <div class="date">
+                                    <div class="inner">JUN 22, 2017</div>
+                                </div>
+                            
+                                <div class="visability vh-center">
+                                    <div class="checkbox-cover">
+                                        <input class="checkbox-btn" id="checkInterview4" type="checkbox">
+                                        <label for="checkInterview4" class="checkbox-label"></label>
+                                    </div>
+                                </div>
+                            
+                                <div class="edit-button-box vh-center">
+                                    <a class="gray-slim-btn" data-edit-interview>Edit interview</a>
+                                </div>
+                            
+                            </li>
+                            <li class="intrview-item record-interview">
+                                <div class="interviewer">
+                                    <a href="#" class="name">Peter Swissels</a>
+                                    <div class="position">Junior Frontend Engineer</div>
+                                    <i class="icon icon-maps"></i>
+                                    <span class="location">Brazil, San Paolo</span>
+                                </div>
+                            
+                                <div class="candidate">
+                                    <a href="#" class="name">Peter Swissels</a>
+                                    <div class="position">Junior Frontend Engineer</div>
+                                    <i class="icon icon-maps"></i>
+                                    <span class="location">Brazil, San Paolo</span>
+                                </div>
+                            
+                                <div class="date">
+                                    <div class="inner">JUN 22, 2017</div>
+                                </div>
+                            
+                                <div class="visability vh-center">
+                                    <div class="checkbox-cover">
+                                        <input class="checkbox-btn" id="checkInterview5" type="checkbox">
+                                        <label for="checkInterview5" class="checkbox-label"></label>
+                                    </div>
+                                </div>
+                            
+                                <div class="edit-button-box vh-center">
+                                    <a class="gray-slim-btn" data-edit-interview>Edit interview</a>
+                                </div>
+                            </li>
+                            <li class="intrview-item record-interview">
+                                <div class="interviewer">
+                                    <a href="#" class="name">Peter Swissels</a>
+                                    <div class="position">Junior Frontend Engineer</div>
+                                    <i class="icon icon-maps"></i>
+                                    <span class="location">Brazil, San Paolo</span>
+                                </div>
+                            
+                                <div class="candidate">
+                                    <a href="#" class="name">Peter Swissels</a>
+                                    <div class="position">Junior Frontend Engineer</div>
+                                    <i class="icon icon-maps"></i>
+                                    <span class="location">Brazil, San Paolo</span>
+                                </div>
+                            
+                                <div class="date">
+                                    <div class="inner">JUN 22, 2017</div>
+                                </div>
+                            
+                                <div class="visability vh-center">
+                                    <div class="checkbox-cover">
+                                        <input class="checkbox-btn" id="checkInterview6" type="checkbox">
+                                        <label for="checkInterview6" class="checkbox-label"></label>
+                                    </div>
+                                </div>
+                            
+                                <div class="edit-button-box vh-center">
+                                    <a class="gray-slim-btn" data-edit-interview>Edit interview</a>
+                                </div>
+                            
+                            </li>
+                            <li class="intrview-item record-interview">
+                                <div class="interviewer">
+                                    <a href="#" class="name">Peter Swissels</a>
+                                    <div class="position">Junior Frontend Engineer</div>
+                                    <i class="icon icon-maps"></i>
+                                    <span class="location">Brazil, San Paolo</span>
+                                </div>
+                            
+                                <div class="candidate">
+                                    <a href="#" class="name">Peter Swissels</a>
+                                    <div class="position">Junior Frontend Engineer</div>
+                                    <i class="icon icon-maps"></i>
+                                    <span class="location">Brazil, San Paolo</span>
+                                </div>
+                            
+                                <div class="date">
+                                    <div class="inner">JUN 22, 2017</div>
+                                </div>
+                            
+                                <div class="visability vh-center">
+                                    <div class="checkbox-cover">
+                                        <input class="checkbox-btn" id="checkInterview7" type="checkbox">
+                                        <label for="checkInterview7" class="checkbox-label"></label>
+                                    </div>
+                                </div>
+                            
+                                <div class="edit-button-box vh-center">
+                                    <a class="gray-slim-btn" data-edit-interview>
+                                        <span>Edit interview</span>
+                                    </a>
+                                    
+                                </div>
+                            
+                            </li>
+
+                        </ul>
+                    </div>
+                    <!-- ANOTHER PAGINATION [STATIC] -->
+                    <div class="col-xs-12 col-md-9 pagination col-md-offset-3">
+                        <div id="pagination-box" class="simple-pagination">
+                            <ul class="page-list">
+                                <li class="prev-li">
+                                    <a href="#page-prev" class="page-link prev">
+                                        <i class="icon icon-angle-down" data-icon-left=""></i>
+                                        <div class="previous">Previous</div>
+                                    </a>
+                                </li>
+                                <li class="active hidden" data-prototype-pageItem>
+                                    <a href="#page-1" class="page-link page">1</a>
+                                    <span class="current">1</span>
+                                </li>
+                                <li class="active page-1">
+                                    <a href="#page-1" class="page-link page">1</a>
+                                    <span class="current">1</span>
+                                </li>
+                                <li class="next-li">
+                                    <a href="#page-next" class="page-link next">
+                                        <div class="previous">Next</div>
+                                        <i class="icon icon-angle-down" data-icon-right=""></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div id="page-state">
+                            <div>Page</div>
+                            <div class="select-outer">
+                                <select class="select" data-page-select="">
+                                    <option value="1">1</option>
+                                </select>
+                                <span class="arrow">
+                                    <i class="icon icon-angle-down"></i>
+                                </span>
+                            </div>
+                            <span class="pages-txt">of
+                                <span class="pages-date" data-count-page>1</span>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+
+    </main>
+
+    #=include includes/footer-admin.html
+
+
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,300,400,500,600,700" rel="stylesheet">
+    <script src="js/lib/jquery.min.js"></script>
+    <script src="js/plugins/legacy.js"></script>
+    <script src="js/plugins/picker.js"></script>
+    <script src="js/plugins/picker.date.js"></script>
+    <script src="js/plugins/picker.time.js"></script>
+    <script src="js/plugins/jquery.simplePagination.js"></script>
+    <script src="js/init/calendar.js"></script>
+
+    <script src="js/validator.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/init/toggler.js"></script>
+    <script src="js/init/validation.js"></script>
+    <script src="js/init/buttons.js"></script>
+
+
+    <script src="js/init/search-input.js"></script>
+    <script src="js/init/pagination.js"></script>
+
+    <script src="js/init/interviews-list.js"></script>
+
+    <script src="js/init/main-menu-dropdown.js"></script>
+
+
+
+</body>
+
+</html>

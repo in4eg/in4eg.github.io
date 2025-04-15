@@ -1,0 +1,182 @@
+.view-interviews-block .benefit-title:before{
+	background-image: url('../temp/view-interviews.svg');
+	width: 95px;
+	left: -158px;
+	top: -5px;
+}
+
+.candidates-block .benefit-title:before{
+	background-image: url('../temp/candidates.svg');
+	width: 88px;
+	left: -155px;
+}
+
+@media (max-width: 320px){
+	.benefit-title:before{
+		left: -20px;
+		top: -64px;
+		width: 90px;
+		height: 90px;
+	}
+	.benefit-block{
+		margin-bottom: 40px;
+		padding: 45px 25px 25px;
+	}
+	.view-interviews-block .benefit-title:before{
+		width: 70px;
+		left: -3px;
+		top: -80px;
+	}
+	.view-interviews-block .benefit-title:before{
+		width: 60px;
+		left: -3px;
+		top: -75px;
+	}
+
+	.candidates-block .benefit-title:before{
+		width: 55px;
+		left: 0px;
+		top: -77px;
+	}
+}
+
+@media (min-width: 321px) and (max-width: 425px){
+	.benefit-title:before{
+		left: -24px;
+		top: -75px;
+		width: 110px;
+		height: 110px;
+		height: 90px;
+	}
+	.benefit-block{
+		margin-bottom: 40px;
+		padding: 45px 25px 25px;
+	}
+	.view-interviews-block .benefit-title:before{
+		width: 70px;
+		left: -3px;
+		top: -80px;
+	}
+
+	.candidates-block .benefit-title:before{
+		width: 65px;
+		left: 0px;
+		top: -82px;
+	}
+}
+
+@media (min-width: 426px) and (max-width: 600px){
+	.benefit-title:before{
+		left: -28px;
+		top: -85px;
+		width: 130px;
+		height: 130px;
+		height: 90px;
+	}
+	.view-interviews-block .benefit-title:before{
+		width: 78px;
+		left: -3px;
+		top: -89px;
+	}
+
+	.candidates-block .benefit-title:before{
+		width: 75px;
+		left: 0px;
+		top: -94px;
+	}
+}
+
+@media (min-width: 601px) and (max-width: 768px){
+	.benefit-title:before{
+		left: -29px;
+		top: -87px;
+		width: 140px;
+		height: 140px;
+		height: 90px;
+	}
+	.view-interviews-block .benefit-title:before{
+		width: 82px;
+		left: -3px;
+		top: -91px;
+	}
+
+	.candidates-block .benefit-title:before{
+		width: 80px;
+		left: 0px;
+		top: -94px;
+	}
+}
+
+@media (min-width: 769px) and (max-width: 992px){
+	.benefit-title:before{
+		left: -31px;
+		top: -95px;
+		width: 145px;
+		height: 145px;
+		height: 90px;
+	}
+	.view-interviews-block .benefit-title:before{
+		width: 87px;
+		left: -4px;
+		top: -99px;
+	}
+
+	.candidates-block .benefit-title:before{
+		width: 85px;
+		left: 0px;
+		top: -103px;
+	}
+}
+
+@media (min-width: 993px) and (max-width: 1024px){
+	.benefit-title:before{
+		left: -163px;
+	}
+	.view-interviews-block .benefit-title:before{
+		width: 90px;
+		left: -137px;
+		top: -5px;
+	}
+
+	.candidates-block .benefit-title:before{
+		width: 85px;
+		left: -133px;
+	}
+}
+
+
+@media (min-width: 1025px) and (max-width: 1152px){
+	.benefit-title:before{
+		left: -182px;
+	}
+	.view-interviews-block .benefit-title:before{
+		width: 90px;
+		left: -154px;
+		top: -5px;
+	}
+
+	.candidates-block .benefit-title:before{
+		width: 85px;
+		left: -150px;
+	}
+}
+
+@media (min-width: 1153px) and (max-width: 1280px){
+	.benefit-title:before{
+		left: -178px;
+	}
+	.view-interviews-block .benefit-title:before{
+		width: 90px;
+		left: -150px;
+		top: -5px;
+	}
+
+	.candidates-block .benefit-title:before{
+		width: 85px;
+		left: -146px;
+	}
+}
+
+@media (min-width: 1281px) and (max-width: 1366px){
+
+}

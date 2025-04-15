@@ -1,0 +1,185 @@
+<div id="edit-certification-popup" class="white-popup mfp-hide skills-popup with-helper">
+	<div class="inner">
+		<div class="header">
+			<div class="title"><span class="for-edit">Edit</span><span class="for-add hidden">Add New</span> Certification</div>
+
+			<button class="mobile-helper" data-toggle-helper="#edit-certification-popup" type="button">
+				<i class="icon icon-show-off-your-skills"></i>
+			</button>
+
+			<button class="btn btn-grey btn-xs btn-round helper-toggle" data-toggle-helper="#edit-certification-popup" type="button">
+				<i class="icon icon-info"></i>
+				<span class="fade"></span>
+			</button>
+		</div>
+		<div class="content">
+			<form action="static/data/progress.json" class="simple-form modal-form" data-clear data-on-edit data-onsubmit="modalOnSubmitCertificate" method="post" data-append="#certificationMore">
+				<div class="row paddless-row">
+					<div class="col-xs-12">
+						<div class="form-group last">
+							<div class="input-title">Certification name</div>
+							<input type="text" class="input-simple call-focus" id="certifName" data-push data-minlength="2" data-id maxlength="200" data-characters="200" maxlength="200" data-view="true">
+							<div class="alert">Minimum 2 characters</div>
+							<div class="count-help spaced-top">
+								<span class="count">200</span>
+								characters left
+							</div>
+						</div>
+					</div>
+					<div class="col-xs-12">
+						<div class="form-group last">
+							<div class="input-title">Certification Authority <span class="optional">(optional)</span></div>
+							<input type="text" class="input-simple ignored" id="certifAuth" data-push data-minlength="2">
+							<div class="alert">Minimum 2 characters</div>
+						</div>
+					</div>
+					<div class="col-xs-12 col-sm-6">
+						<div class="form-group last">
+							<div class="input-title">Upload scanned document <span class="optional">(optional)</span></div>
+							<div class="file-group">
+								<input type="file" class="file-input ignored" id="sertifPhoto">
+								<label for="sertifPhoto" class="file-label btn form-btn btn-simple">
+									<span class="text">Browse...</span>
+									<span class="fade"></span>
+								</label>
+								<div class="file-name empty">Your document</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-xs-12 col-sm-6">
+						<div class="form-group last">
+							<div class="input-title">City <span class="optional">(optional)</span></div>
+							<input type="text" class="input-simple ignored" id="sertifCity" data-push data-minlength="2">
+							<div class="alert">Minimum 2 characters</div>
+						</div>
+					</div>
+					<div class="col-xs-12 col-sm-6">
+						<div class="form-group last">
+							<div class="input-title">Location <span class="optional">(optional)</span></div>
+							<input type="text" class="input-simple ignored" id="sertifLocation" data-push data-minlength="2">
+							<div class="alert">Minimum 2 characters</div>
+						</div>
+					</div>
+					<div class="col-xs-12 col-sm-6">
+						<div class="form-group last">
+							<div class="input-title">Country</div>
+							<div class="select-outer">
+								<select name="sertifCountry" class="select" data-push id="sertifCountry" data-country-select>
+									<option value="default" disabled>Choose Country</option>
+								</select>
+								<span class="arrow">
+									<i class="icon icon-angle-down"></i>
+								</span>
+							</div>
+						</div>
+					</div>
+					<div class="col-xs-12 col-sm-6">
+						<div class="form-group spaced">
+							<div class="input-title">Start Date</div>
+							<div class="row paddless-row">
+								<div class="col-xs-12 col-sm-6 offset-bottom-xs">
+									<div class="select-outer">
+										<select name="sertifStartMonth" class="select" data-push id="sertifStartMonth" data-month-select data-month-start>
+											<option value="default" disabled>Choose Month</option>
+										</select>
+										<span class="arrow">
+											<i class="icon icon-angle-down"></i>
+										</span>
+									</div>
+								</div>
+								<div class="col-xs-12 col-sm-6 offset-bottom-xs">
+									<div class="select-outer">
+										<select name="sertifStartYear" class="select" data-push id="sertifStartYear" data-year-select data-start>
+											<option value="default" disabled>Choose Year</option>
+										</select>
+										<span class="arrow">
+											<i class="icon icon-angle-down"></i>
+										</span>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-xs-12 col-sm-6" data-not-current>
+						<div class="form-group spaced">
+							<div class="input-title">End Date</div>
+							<div class="row paddless-row">
+								<div class="col-xs-12 col-sm-6 offset-bottom-xs">
+									<div class="select-outer">
+										<select name="monthAfter" class="select" data-push id="sertifEndMonth" data-month-select data-month-end>
+											<option value="default" disabled>Choose Month</option>
+										</select>
+										<span class="arrow">
+											<i class="icon icon-angle-down"></i>
+										</span>
+									</div>
+								</div>
+								<div class="col-xs-12 col-sm-6">
+									<div class="select-outer">
+										<select name="afterYear" class="select" data-push id="sertifEndYear" data-year-select data-end>
+											<option value="default" disabled>Choose Year</option>
+										</select>
+										<span class="arrow">
+											<i class="icon icon-angle-down"></i>
+										</span>
+									</div>
+								</div>
+							</div>
+							<div class="year-alert">
+								Your end date can't be earluer than your start date
+							</div>
+							<div class="month-alert">
+								End date can’t be past today’s date
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="checkbox spaced" data-current-work>
+					<input type="checkbox" data-current-input id="presSertif">
+					<label for="presSertif">To present</label>
+				</div>
+				<div class="btn-group align-left collapsed">
+					<button class="btn form-btn btn-grey close-modal" type="button">
+						<span class="text">cancel</span>
+						<span class="fade"></span>
+					</button>
+					<button class="btn form-btn btn-simple" type="submit">
+						<span class="text">save</span>
+						<span class="fade"></span>
+					</button>
+					<button type="button" class="btn btn-default form-btn single-block-element" data-removeon>
+						<span class="text">
+							<i class="icon icon-close btn-icon"></i>
+							Remove
+						</span>
+						<span class="fade"></span>
+					</button>
+				</div>
+			</form>
+		</div>
+		<!-- helper -->
+		<div class="helper">
+			<div class="arrow-card">
+				<div class="row top-xs paddless-row">
+					<div class="col-xs-12 col-lg-2 align-center icon-cover">
+						<i class="icon icon-show-off-your-skills"></i>
+					</div>
+					<div class="col-xs-12 col-lg-10">
+						<div class="h5-title">Important tips for Certification Section</div>
+						<div class="paragraph">
+							Having a comprehensive list of skills will help get your profile noticed by connections and recruiters. When recruiters search for candidates, skills will be one of the criteria they use.
+						</div>
+						<div class="paragraph">
+							If you’re not sure what to include, review the list below of the top LinkedIn skills. Before you add a skill, make sure it matches the job responsibilities in your profile and on your resume. Prospective employers will notice if there’s a mismatch.
+						</div>
+					</div>
+				</div>
+				<button type="button" class="btn btn-grey btn-round close-helper">
+					<i class="icon icon-close"></i>
+				</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+

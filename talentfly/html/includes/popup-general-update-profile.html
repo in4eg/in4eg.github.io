@@ -1,0 +1,49 @@
+<div id="generalUpdateProfile" class="white-popup mfp-hide">
+    <div class="inner">
+        <div class="header">
+            <div class="title">
+                Update profile from CV/LinkedIn
+                <span data-tooltip="Some little text here but not very large">
+                    <span class="btn btn-light btn-round btn-xs btn-tooltip">
+                        <i class="icon icon-info"></i>
+                    </span>
+                </span>
+            </div>
+        </div>
+        <div class="content">
+            <form action="#" class="simple-form modal-form">
+                <div id="dismissed" class="align-center hidden">
+                    <i class="icon icon-info-round"></i>
+                    <span class="h5-title">Information was dismissed!</span>
+                </div>
+
+                #=include popup-new-content.html
+                <div class="separator"></div>
+                #=include popup-updated-content.html
+                
+                <div class="btn-group align-center collapsed space-between btns-bottom">
+                    <button class="btn form-btn btn-grey four-btn" type="button" data-update-popup >
+                        <span class="text">update again</span>
+                        <span class="fade"></span>
+                    </button>
+                    <button class="btn form-btn btn-grey four-btn" type="button" data-dismiss-all >
+                        <span class="text">dismiss all</span>
+                        <span class="fade"></span>
+                    </button>
+                    <button class="btn form-btn btn-grey four-btn close-modal" type="button" date-review-later>
+                        <span class="text">review later</span>
+                        <span class="fade"></span>
+                    </button>
+                    <button type="button" class="btn form-btn btn-simple four-btn close-modal" data-profile-submit >
+                        <span class="text">save changes</span>
+                        <span class="fade"></span>
+                    </button>
+                    <button type="button" class="btn form-btn btn-simple four-btn close-modal hidden" data-dissmised-done>
+                        <span class="text">ok</span>
+                        <span class="fade"></span>
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

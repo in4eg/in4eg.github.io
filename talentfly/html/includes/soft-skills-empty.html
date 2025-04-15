@@ -1,0 +1,32 @@
+<div class="card spaced offset-bottom editable">
+	<div class="row header">
+		<div class="col-xs-6">
+			<div class="h5-title no-margin title-icon">
+				<span class="icon-holder">
+					<i class="icon icon-soft-skills"></i>
+				</span>
+				<span class="text">Soft Skills</span>
+			</div>
+		</div>
+		<div class="col-xs-6 align-right">
+			<div class="filling-container right-position">
+				<i class="icon icon-exclamation"></i>
+				<span class="uppercase help-text">Some details are missing...</span>
+			</div>
+
+			<a href="#edit-softskills-popup" class="btn btn-simple btn-xs btn-round open-popup-link" data-list="#softskill-list" data-add="#softskill-list">
+				<i class="icon icon-add2"></i>
+			</a>
+		</div>
+	</div>
+	<!-- в data-url="" передавать адрес для ajax-запроса на удаление элементов -->
+	<div data-call-popup="#edit-softskills-popup" class="skill-link lint-inside parent-cover hidden" data-text="select-list" data-addto="#generalSoftSkills" data-edit="#generalSoftSkills" id="generalSoftSkills" data-list="#softskill-list" data-url="static/data/forms.json">
+		<div class="cover"></div>
+		<span class="edit-link">
+			<i class="icon icon-pencil-edit"></i>
+		</span>
+	</div>
+	<div class="hidden-helper active">Think of what soft skills make you a great team player</div>
+</div>
+
+ <!-- data-add="#softskill-list" -->

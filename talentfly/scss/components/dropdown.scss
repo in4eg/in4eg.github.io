@@ -1,0 +1,46 @@
+@media screen and (max-width: 640px) {
+
+	.card.dropdown-xs {
+		padding: 0;
+		position: relative;
+
+		.header.anchor-xs {
+			margin: 0;
+			border-radius: 3px;
+			padding-left: 35px;
+			position: relative;
+			cursor: pointer;
+
+			&:before {
+				content: '\e916';
+				font-family: 'icomoon';
+				position: absolute;
+				left: 11px; top: 19px;
+				font-size: 10px;
+			}
+
+			.h5-title {
+				margin: 0;
+			}
+		}
+		.inner {
+			padding: 0 10px 20px;
+			/*position: absolute;*/
+			z-index: 2;
+			background-color: #fff;
+			box-shadow: 0 5px 15px #d5e6f8;
+			top: 100%; left: 0;
+			display: none;
+		}
+		&.active {
+
+			.header.anchor-xs {
+				border-radius: 3px 3px 0 0;
+			}
+
+			.inner {
+				display: block;
+			}
+		}
+	}
+}

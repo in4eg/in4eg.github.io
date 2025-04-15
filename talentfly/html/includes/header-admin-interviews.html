@@ -1,0 +1,162 @@
+<header class="main-header inner-header default-shadow" id="mainHeader">
+    <div class="container large">
+        <div class="row middle-xs">
+            <div class="col-xs-2 hidden-lg menu-left">
+                <button class="none main-menu-toggle">
+                    <i></i>
+                    <i></i>
+                    <i></i>
+                </button>
+            </div>
+            <div class="col-xs-8 col-md-2">
+                <a href="index.html" class="logo">
+                    <img src="img/logo.svg" alt="">
+                </a>
+            </div>
+            <div class="col-xs-2 col-md-10 no-font align-right menu-right">
+                <div id="notification-sm" class="notification-sm"></div>
+
+                <div class="main-menu small" id="notification-lg">
+                    <div id="menuDesktop" class="menu-desktop"></div>
+                    <nav data-tablet="#menuTablet" data-desktop="#menuDesktop">
+                        <ul class="clear menu">
+
+
+                            <li class="active">
+                                <a href="#">
+                                    <span class="text">Interviews</span>
+                                </a>
+                            </li>
+                            <li class="separator"></li>
+                            <li>
+                                <a href="#">
+                                    <span class="text">Overview</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <span class="text">Profile</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <span class="text">Video Bio</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <span class="text">Practice Interview</span>
+                                </a>
+                            </li>
+                            <li id="toggleMenuDropdown" class="menu-dropdown">
+                                <a href="#" class="bull">
+                                    <div class="separator"></div>
+                                    &bull;&bull;&bull;
+                                </a>
+                                <ul class="clear dropdown"></ul>
+                            </li>
+                        </ul>
+                    </nav>
+                    <div class="notification-link" data-tablet="#notification-sm" data-desktop="#notification-lg">
+                        <div class="separator"></div>
+                        <!-- add class animated for a new notification in a real time-->
+                        <button class="notification btn" type="button" data-toggle="#notificationToggle" data-scroll-hide>
+                            <i class="icon icon-bell"></i>
+                            <span class="counter">3</span>
+                            <span class="fade"></span>
+                        </button>
+                        <div class="separator"></div>
+
+                        <!-- notification details -->
+                        <div class="notification-details" id="notificationToggle">
+                            <div class="inner">
+                                <div class="header">
+                                    <div class="text">Notification</div>
+                                    <div class="counter">3</div>
+                                </div>
+                                <!-- 1 -->
+                                <div class="notification-item">
+                                    <a href="#" class="title">
+                                        Interview
+                                        <span class="name">Peter Brown</span> with
+                                        <span class="name">Alex Stepanuk.</span>
+                                    </a>
+                                    <span data-tooltip="Mark as read" class="light tooltip-icon small">
+                                        <button type="button" class="btn-tooltip">
+                                            <i class="icon icon-eye"></i>
+                                        </button>
+                                    </span>
+                                    <div class="lead">Lorem ipsum dolor sit amet</div>
+                                    <ul class="clear details">
+                                        <li>Date 10.13.2017</li>
+                                        <li>Time 19:00</li>
+                                    </ul>
+                                </div>
+                                <!-- 2 -->
+                                <div class="notification-item">
+                                    <a href="#" class="title">
+                                        Interview
+                                        <span class="name">Peter Brown</span> with
+                                        <span class="name">Alex Stepanuk.</span>
+                                    </a>
+                                    <span data-tooltip="Mark as read" class="light tooltip-icon small">
+                                        <button type="button" class="btn-tooltip">
+                                            <i class="icon icon-eye"></i>
+                                        </button>
+                                    </span>
+                                    <div class="lead">Lorem ipsum dolor sit amet</div>
+                                    <ul class="clear details">
+                                        <li>Date 10.13.2017</li>
+                                        <li>Time 19:00</li>
+                                    </ul>
+                                </div>
+                                <!-- 3 -->
+                                <div class="notification-item">
+                                    <a href="#" class="title">
+                                        Interview
+                                        <span class="name">Peter Brown</span> with
+                                        <span class="name">Alex Stepanuk.</span>
+                                    </a>
+                                    <span data-tooltip="Mark as read" class="light tooltip-icon small">
+                                        <button type="button" class="btn-tooltip">
+                                            <i class="icon icon-eye"></i>
+                                        </button>
+                                    </span>
+                                    <div class="lead">Lorem ipsum dolor sit amet</div>
+                                    <ul class="clear details">
+                                        <li>Date 10.13.2017</li>
+                                        <li>Time 19:00</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="user-col small" id="signButtonsDesktop">
+                    <a href="index.html" class="btn btn-default" data-tablet="#signInButtonTablet" data-desktop="#signButtonsDesktop">
+                        <span class="text">
+                            <i class="icon icon-logout btn-icon"></i> sign out</span>
+                            <span class="fade"></span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- sign in -->
+            #=include sign-in.html
+            <!-- / sign in -->
+
+            <!-- sign up -->
+            #=include sign-up.html
+            <!-- / sign up -->
+
+        </div>
+    </header>
+
+    <div class="none mobile-nav">
+        <div id="menuTablet"></div>
+        <div class="row buttons-row">
+            <div class="col-xs-12" id="signInButtonTablet"></div>
+        </div>
+    </div>

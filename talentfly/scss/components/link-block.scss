@@ -1,0 +1,46 @@
+.link-block {
+	margin-top: 20px;
+	padding: 20px;
+	background-color: $blue;
+	background-image: url(../img/link-block-back.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+
+	.title {
+		display: block;
+		text-align: right;
+		color: #fff;
+		margin: 0;
+	}
+	.btn.btn-white {
+		background: #fff;
+		border: 2px solid #fff;
+		display: inline-block;
+
+		&:hover {
+			color: #fff;
+		}
+	}
+}
+
+@media (max-width: 992px) {
+
+	.link-block {
+		margin-left: -15px;
+		margin-right: -15px;
+		padding: 15px;
+	}
+}
+
+@media (max-width: 768px) {
+
+	.link-block {
+		text-align: center;
+
+		.title {
+			padding-right: 0;
+			padding-bottom: 10px;
+			text-align: center;
+		}
+	}
+}

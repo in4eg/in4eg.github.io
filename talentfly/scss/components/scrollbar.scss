@@ -1,0 +1,45 @@
+.ps__scrollbar-x-rail {
+	display: none !important;
+}
+.ps > .ps__scrollbar-y-rail {
+	opacity: 1 !important;
+	background: $light-grey !important;
+	width: 5px !important;
+	z-index: 2;
+	border-radius: 5px;
+
+	.ps__scrollbar-y {
+		background: darken($light-grey, 10) !important;
+		opacity: 1 !important;
+		border-radius: 5px !important;
+		width: 5px !important;
+		right: 0 !important;
+		cursor: pointer;
+
+		&:before {
+			content: '';
+			position: absolute;
+			display: block;
+			z-index: 2;
+			width: 25px; height: 100%;
+			top: 0; right: -10px;
+			background: transparent;
+		}
+		&:active {
+			background: $blue !important;
+		}
+	}
+	&:hover, &:focus {
+
+		.ps__scrollbar-y {
+			background: $blue !important;
+			width: 5px !important;
+		}
+	}
+}
+.ps:hover {
+
+	.ps__scrollbar-y {
+		background: $blue !important;
+	}
+}

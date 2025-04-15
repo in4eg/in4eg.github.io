@@ -1,0 +1,43 @@
+.video-item {
+	width: 100%;
+	/*max-width: 220px;*/
+
+	.user-icon {
+		background-color: #b4bdca;
+		position: relative;
+		padding-top: 140px;
+		margin-bottom: 20px;
+
+		.icon {
+			color: #fff;
+			font-size: 110px;
+			position: absolute;
+			bottom: 0; left: 50%;
+			transform: translateX(-50%);
+		}
+	}
+		.caption {
+			margin: 18px 0 0;
+			position: relative;
+			display: block;
+
+			.name {
+				color: #5d6778;
+				font-size: 14px;
+				font-weight: 600;
+				margin: 0 0 3px;
+				padding-right: 25px;
+			}
+			.position {
+				color: $lead-color;
+				font-size: 12px;
+			}
+			.link {
+				position: absolute;
+				right: 1px; top: 0;
+				font-size: 18px;
+				color: #b4bdca;
+				transition: .3s;
+			}
+		}
+}

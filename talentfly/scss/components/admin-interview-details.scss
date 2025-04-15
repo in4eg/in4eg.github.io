@@ -1,0 +1,280 @@
+.interview-info-details {
+    background-color: #fff;
+    height: 100px;
+    padding: 15px 20px;
+    margin-bottom: 20px;
+
+    .interviewer {
+        width: 32%;
+    }
+
+    .candidate {
+        width: 34%;
+    }
+
+    .date {
+        width: 17%;
+
+        .inner {
+            margin-top: 6px;
+        }
+    }
+
+    .visability {
+        width: 11%;
+        text-align: center;
+        padding-right: 2%;
+
+        .checkbox-cover {
+            margin-top: 6px;
+        }
+    }
+
+    .name {
+        display: block;
+        color: #465264;
+        font-size: 18px;
+        margin-right: 15px;
+    }
+
+    .name:hover {
+        color: #469AEB;
+        cursor: pointer;
+    }
+
+    .position {
+        display: inline-block;
+        margin-right: 10px;
+        color: #8A98AD;
+        font-size: 12px;
+    }
+
+    .location, .icon-maps {
+        color: #505C6E;
+        font-size: 12px;
+    }
+
+}
+
+.interview-title {
+    display: flex;
+    justify-content: space-between;
+    text-transform: uppercase;
+    color: #B0BCCF;
+    font-weight: bold;
+    font-size: 12px;
+}
+
+.interview-content {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5px;
+}
+
+
+
+.details-box {
+    background-color: #fff;
+    border-radius: 3px;
+    position: relative;
+
+    .head-box {
+        font-size: 16px;
+        padding: 20px;
+        border-bottom: 1px solid #EDF2FA;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+
+        .btn-category {
+            font-size: 12px;
+            line-height: 19px;
+            color: #B0BCCF;
+            font-weight: 500;
+            padding: 2px 15px;
+            border: 1px solid #B0BCCF;
+            background-color: transparent;
+            border-radius: 15px;
+            text-transform: uppercase;
+            cursor: pointer;
+        }
+
+        .btn-category:hover {
+            background-color: #e7edf6 !important;
+            border-color: #e7edf6;
+        }
+
+        .btn-category.btn-active {
+            background-color: #B0BCCF;
+            color: #fff;
+        }
+    }
+
+    .content-box {
+        padding: 0 20px 20px 20px;
+        padding-right: 30px;
+        list-style-type: none;
+        max-height: 480px;
+        position: relative;
+
+        .item {
+            margin-bottom: 10px;
+        }
+
+        li.item:last-child {
+            margin-bottom: 0;
+        }
+
+        .item-view {
+            position: relative;
+            max-width: 100%;
+            background-color: #F3F9FF;
+            border-radius: 3px;
+            font-size: 14px;
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+
+            //display: none;
+
+            .question {
+                display: flex;
+                .number {
+                    margin-right: 10px;
+                }
+            }
+
+            .button-close {
+                background-color: transparent;
+                border: none;
+                display: flex;
+                cursor: pointer;
+                margin-left: 5px;
+            }
+            
+        }
+
+        .item-view:hover {
+            background-color: #e3f3f9;
+            cursor: pointer;
+        }
+
+        .item-edit {
+            border-radius: 3px;
+            font-size: 14px;
+            padding: 4px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border: 1px solid #D8DBE5;
+            width: 100%;
+            
+            .question-edit {
+                width: calc(100% - 167px);
+                height: 32px;
+                resize: none;
+                border: none;
+                padding-left: 5px;
+                line-height: 32px;
+            }
+
+            .form-btn {
+                min-width: 105px;
+                width: 80px;
+                padding: 0 10px;
+                height: 32px;
+                border-radius: 3px;
+                margin: 0;
+            }
+        }
+
+        .ps__scrollbar-y-rail {
+            right: 15px;
+        }
+
+        // Second box
+        .text-item {            
+            display: block;
+            margin-bottom: 10px;
+
+            .info-box {
+                width: auto;
+                display: flex;
+                flex-direction: row;
+                justify-content: flex-start;
+                align-items: center;
+
+                .info {
+                    font-size: 10px;
+                    display: inline-block;
+                    margin-right: 7px;
+
+                    .owner {
+                        display: inline-block;
+                        color: #469AEB;
+                        margin-right: 10px;
+                        text-transform: uppercase;
+                        font-weight: 600;
+                    }
+                }
+
+                .play {
+                    background: transparent;
+                    border: none;
+                    font-size: 16px;
+                    color: #8A98AD;
+                    cursor: pointer;
+
+                    .icon {
+                        font-weight: 600;
+                    }
+                }
+
+                .play:hover {
+                    color: #469AEB;
+                }
+            }
+
+            .edit-box {
+                width: 100%;
+                display: flex;
+                flex-direction: row;
+            }
+        }
+
+        .text-item.interviewer-item{
+            .info-box {
+                justify-content: flex-start;
+            }
+            .edit-box{
+                justify-content: flex-start;
+                margin: 0 auto 0 0;
+            }
+        }
+        .text-item.candidate-item{
+            .info-box {
+                justify-content: flex-end;
+            }
+            .edit-box{
+                justify-content: flex-end;
+                margin: 0 0 0 auto;
+            }
+        }
+
+        .text-item:last-child {
+            margin: 0;
+        }
+    }
+
+    .spacer {
+        background-color: #fff;
+        width: 100%;
+        height: 25px;
+    }
+    // for buttons
+    .btn .text {
+        padding: 0;
+    }
+}

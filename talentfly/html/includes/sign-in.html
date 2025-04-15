@@ -1,0 +1,39 @@
+<form action="#" class="user-form validate-form" id="signInForm" method="post">
+	<div class="inner">
+		#=include general-notifications.html
+		<div class="h3-title primary">Sign in</div>
+		<button type="button" class="form-close">&times;</button>
+		<div class="form-group">
+			<input type="text" class="input email" id="signInEmail" maxlength="30" data-minlength="2" autocapitalize="off" autocorrect="off">
+			<span class="line"></span>
+			<label for="signInEmail">E-Mail</label>
+			<i class="icon icon-checked2 icon-success"></i>
+			<i class="icon icon-close2 icon-error"></i>
+			<div class="alert">Type a correct E-mail. It must include "@"</div>
+		</div>
+		<div class="form-group last">
+			<input type="password" class="input" id="signInPassword" maxlength="30" data-minlength="6" autocapitalize="off" autocorrect="off">
+			<span class="line"></span>
+			<label for="signInPassword">Enter your password</label>
+			<i class="icon icon-checked2 icon-success"></i>
+			<i class="icon icon-close2 icon-error"></i>
+			<div class="alert">Minimum 6 characters</div>
+		</div>
+		<div class="checkbox">
+			<input type="checkbox" id="signInMember">
+			<label for="signInMember">Remember me</label>
+		</div>
+		<div class="row btn-wrap">
+			<div class="col-xs-12 col-ms-8 col-ms-offset-2">
+				<button type="submit" class="btn btn-primary btn-lg btn-block">
+					<span class="text">Sign In</span>
+					<span class="fade"></span>
+				</button>
+			</div>
+		</div>
+		<div class="align-center form-caption">Forgot your password? <a href="#">Restore password</a></div>
+		<div class="align-center form-caption footer-lastLine">Don't have an account? 
+			<a href="#" class="low-1000-hidden" data-toggle="#signUpForm,#signInForm" data-tablet="#signUpButtonTablet">Sign up</a>
+		</div>
+	</div>
+</form>

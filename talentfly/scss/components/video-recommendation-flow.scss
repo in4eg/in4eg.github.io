@@ -1,0 +1,34 @@
+.recommendation-text {
+    height: 50px;
+    margin-top: 10px;
+}
+
+.popup-footer {
+    color: #8a98ad;
+    display: flex;
+    font-size: 10px;
+    justify-content: center;
+    margin-top: 5px;
+}
+
+
+#popupAfterRecommendation {
+    .content {
+        padding-top: 20px;
+    }
+
+
+    .form-group:first-child {
+        margin-bottom: 25px;
+    }
+}
+
+#successPopup {
+    padding: 50px 20px;
+}
+
+#video-request-popup {
+    .btn-group.align-center.collapsed {
+        padding-bottom: 5px;
+    }
+}

@@ -1,0 +1,56 @@
+<form action="#" class="user-form validate-form" id="signUpForm">
+	<div class="inner">
+		 #=include general-notifications.html
+		<div class="h3-title primary">Sign up</div>
+		<button type="button" class="form-close">&times;</button>
+		<div class="form-group">
+			<input type="text" class="input" id="signUpFirstName" maxlength="30" data-minlength="2" autocomplete="off">
+			<span class="line"></span>
+			<label for="signUpFirstName">First name</label>
+			<i class="icon icon-checked2 icon-success"></i>
+			<i class="icon icon-close2 icon-error"></i>
+			<div class="alert">Minimum 2 characters. Must include only letters</div>
+		</div>
+		<div class="form-group">
+			<input type="text" class="input" id="signUpLastName" maxlength="30" data-minlength="2" autocomplete="off">
+			<span class="line"></span>
+			<label for="signUpLastName">Last name</label>
+			<i class="icon icon-checked2 icon-success"></i>
+			<i class="icon icon-close2 icon-error"></i>
+			<div class="alert">Minimum 2 characters. Must include only letters</div>
+		</div>
+		<div class="form-group">
+			<input type="text" class="input email" id="signUpEmail" maxlength="30" data-minlength="2" autocomplete="off" autocapitalize="off" autocorrect="off">
+			<span class="line"></span>
+			<label for="signUpEmail">E-Mail</label>
+			<i class="icon icon-checked2 icon-success"></i>
+			<i class="icon icon-close2 icon-error"></i>
+			<div class="alert">Type a correct E-mail. It must include "@"</div>
+		</div>
+		<div class="form-group last">
+			<!-- password-input -->
+			<input type="password" class="input" id="signUpPassword" maxlength="30" data-minlength="6" autocomplete="off" autocapitalize="off" autocorrect="off">
+			<span class="line"></span>
+			<label for="signUpPassword">Create password</label>
+			<i class="icon icon-checked2 icon-success"></i>
+			<i class="icon icon-close2 icon-error"></i>
+			<div class="alert">Minimum 6 characters</div>
+		</div>
+		<div class="checkbox">
+			<input type="checkbox" id="signUpMember">
+			<label for="signUpMember">I represent a business</label>
+		</div>
+		<div class="row btn-wrap">
+			<div class="col-xs-12 col-ms-8 col-ms-offset-2">
+				<button type="submit" class="btn btn-primary btn-lg btn-block">
+					<span class="text">Sign up now</span>
+					<span class="fade"></span>
+				</button>
+			</div>
+		</div>
+		<small>
+			By signing up, you agree to the <a href="#" class="lined">Terms of Service</a> and <a href="#" class="lined">Privacy Policy</a>,
+			including <a href="#" class="lined">Cookie Use</a>.
+		</small>
+	</div>
+</form>

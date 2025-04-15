@@ -1,0 +1,218 @@
+.access-name-input{
+	background-color: #fff;
+    border: 1px solid #d8dbe6;
+    display: block;
+    color: #5d6778;
+    padding: 0 15px;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 4px;
+    transition: .3s;
+    margin: auto;
+    position: relative;
+}
+textarea.access-name-input{
+	height: auto;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	line-height: 20px;
+}
+.access-one-profile-popup, .access-few-profiles-popup{
+	.container.content{
+		padding: 15px 30px 25px 30px;
+	}
+	div.header{
+		padding: 20px 20px 20px 30px;
+		.mfp-close.btn-round{
+			right: 25px;
+		}
+	}
+	.access-name-input:hover, .access-name-input:focus{
+		border-color: #469aeb;
+	}
+	.content{
+		max-height: 80%;
+		overflow: auto;
+	}
+}
+.admin-list-users{
+	.mfp-content{
+		margin-top: 30px;
+	}
+}
+.access-one-profile-inputs, .access-few-profiles-inputs{
+	position: relative;
+	.access-name-input{
+		width: 100%;
+	}
+	.select{
+		width: 100%;
+	}
+	div.picker .picker__holder{
+		bottom: 305px;
+		left: 50%;
+		transform: translateX(0%);
+	}
+}
+.access-field, .name-field, .message-field{
+	padding-bottom: 20px;
+}
+.remove-access-btn{
+	border: 1px solid #8A98AD;
+    border-radius: 100%;
+    color: #8A98AD;
+    line-height: 18px;
+    text-align: center;
+    height: 15px;
+    width: 15px;
+    font-size: 11px;
+    z-index: 3;
+    position: relative;
+    top: calc(50% + 3px);
+    left: 50%;
+    background-color: white;
+    cursor: pointer;
+	min-width: 15px;
+}
+.remove-access-btn:hover{
+	background: #d0dbec;
+	border-color: transparent;
+}
+.already-generated-link{
+	color: #465264;
+	width: 100%;
+	height: 38px;
+	line-height: 38px;
+	text-decoration: underline;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+.already-generated-link:hover{
+	color: #465264;
+}
+.access-generate-link{
+	color: #469AEB;
+	width: 100%;
+	height: 38px;
+	line-height: 38px;
+	text-decoration: underline;
+	cursor: pointer;
+	display: none;
+}
+.access-generate-link:hover{
+	color: #469AEB;
+	text-decoration: none;
+}
+.already-generated{
+	.access-generate-link{
+		display: block;
+	}
+	.already-generated-link{
+		display: none;
+	}
+}
+.icon-close-access{
+	border-color: #8A98AD;
+	position: absolute;
+	top: 50%;
+	right: 50%;
+	transform: translate(42%, -58%);
+	font-size: 0.6em;
+}
+.access-one-profile-buttons, .access-few-profiles-buttons{
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	padding-top: 20px;
+	.access-one-profile-popup-btn, .access-few-profiles-popup-btn{
+		border-radius: 4px;
+		margin: 0 5px;
+		min-width: 107px;
+		height: 40px;
+	}
+	.btn.btn-simple.access-one-profile-popup-btn, .btn.btn-simple.access-few-profiles-popup-btn{
+		border-width: 1px;
+		background-color: #469aeb;
+		color: #fff;
+	}
+}
+.add-access-btn{
+	font-weight: bold;
+	color: #8A98AD;
+	cursor: pointer;
+}
+.message-optional{
+	color: #c9d3e1;
+}
+
+#assignPopup.access-one-profile-popup .check-container {
+	padding-top: 0;
+}
+
+.access-one-profile-popup {	
+
+	.checkbox label::before {
+		content: '\e927';
+		display: block;
+		position: absolute;
+		top: 0px;
+		left: 0;
+		line-height: 20px;
+		text-align: center;
+		font-size: 12px;
+		font-family: icomoon;
+		width: 20px;
+		height: 20px;
+		border: 1px solid #becee4;
+		border-radius: 2px;
+		color: transparent;
+	}
+}
+
+#accessOneProfilePopup {
+	.remove-access-block {
+		display: flex;
+	}
+	.remove-access-btn {
+		top: calc(50% + 6px);
+	}
+}
+
+
+
+.copy-btn {
+	width: 20px;
+    background: transparent;
+    border: none;
+    margin-top: 30px;
+    color: #8a98ad;
+    cursor: pointer;
+}
+
+@media (max-width: 480px) {
+	.access-one-profile-buttons, .access-few-profiles-buttons{
+		.access-one-profile-popup-btn:nth-child(1){
+			margin: 0;
+			margin-right: 5px;
+		}
+		.access-one-profile-popup-btn:nth-child(2), .access-few-profiles-popup-btn:nth-child(2){
+			margin: 0;
+			margin-left: 5px;			
+		}
+	}
+}
+
+@media (max-width: 992px) {
+	.remove-access-btn{
+		top: 50%;
+		left: 0%;
+		transform: translateY(-50%);
+	}
+	.access-expiration-field{
+		padding-top: 5px;
+	}
+	.access-link-field{
+		padding-top: 5px;
+	}
+}

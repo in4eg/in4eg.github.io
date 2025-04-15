@@ -1,0 +1,917 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+		<meta name="format-detection" content="telephone=no">
+
+		<title>Talent Fly :: Video Recommendation</title>
+
+		<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+		<link href="http://vjs.zencdn.net/6.2.8/video-js.css" rel="stylesheet">
+		<link rel="stylesheet" href="css/perfect-scrollbar.min.css">
+		<link rel="stylesheet" href="css/bundle.min.css">
+
+</head>
+
+<body>
+
+		<header class="main-header inner-header" id="mainHeader">
+			<div class="container large">
+				<div class="row middle-xs">
+					<div class="col-xs-2 hidden-lg menu-left">
+						<button class="none main-menu-toggle">
+							<i></i><i></i><i></i>
+						</button>
+					</div>
+					<div class="col-xs-8 col-md-2">
+						<a href="index.html" class="logo">
+							<img src="img/logo.svg" alt="">
+						</a>
+					</div>
+					<div class="col-xs-2 col-md-10 no-font align-right menu-right">
+						<div id="notification-sm" class="notification-sm"></div>
+		
+						<div class="main-menu small" id="notification-lg">
+							<div id="menuDesktop" class="menu-desktop"></div>
+							<nav data-tablet="#menuTablet" data-desktop="#menuDesktop">
+								<ul class="clear menu">
+									<li>
+										<a href="overview.html">
+											<span class="text">Overview</span>
+										</a>
+									</li>
+									<li>
+										<a href="full_profile.html">
+											<span class="text">Full profile</span>
+										</a>
+									</li>
+									<li>
+										<a href="interview.html">
+											<span class="text">Interviews</span>
+										</a>
+									</li>
+									<li>
+										<a href="settings.html">
+											<span class="text">Settings</span>
+										</a>
+									</li>
+									<li class="separator"></li>
+									<li>
+										<a href="how_it_works.html">
+											<span class="text">How it works</span>
+										</a>
+									</li>
+									<li>
+										<a href="what-is-talentfly.html">
+											<span class="text">What is TalentFly</span>
+										</a>
+									</li>
+									<li>
+										<a href="contact-us.html">
+											<span class="text">Contact Us</span>
+										</a>
+									</li>
+									<li id="toggleMenuDropdown" class="menu-dropdown">
+										<a href="#" class="bull">
+											<div class="separator"></div>
+											&bull;&bull;&bull;
+										</a>
+										<ul class="clear dropdown"></ul>
+									</li>
+								</ul>
+							</nav>
+							<div class="notification-link" data-tablet="#notification-sm" data-desktop="#notification-lg">
+								<div class="separator"></div>
+								<!-- add class animated for a new notification in a real time-->
+								<button class="notification btn" type="button" data-toggle="#notificationToggle" data-scroll-hide>
+									<i class="icon icon-bell"></i>
+									<span class="counter notification-total">0</span>
+									<span class="fade"></span>
+								</button>
+								<div class="separator"></div>
+		
+								<!-- notification details -->
+								<div class="notification-details" id="notificationToggle" data-scroll-hide data-url="full_profile.html">
+									<div class="inner">
+										<div class="header">
+											<div class="text">Notification</div>
+											<div class="counter notification-total">0</div>
+										</div>
+										<div class="wrap-info" data-limit="2" id="notificationInner">
+											<!-- 1 -->
+											<div class="notification-item hidden" id="1" data-has-actions>
+												<a href="#" class="title">
+													Interview <span class="name">Peter Brown</span> with <span class="name">Alex Stepanuk.</span>
+												</a>
+												<span data-tooltip="Mark as read" class="light tooltip-icon small" data-remove="#1" data-link="">
+													<button type="button" class="btn-tooltip">
+														<i class="icon icon-eye"></i>
+													</button>
+												</span>
+												<div class="lead">Lorem ipsum dolor sit amet</div>
+												<ul class="clear details">
+													<li>Date <span data-date>10.13.2017</span></li>
+													<li>Time <span data-time>19:00</span></li>
+												</ul>
+												<ul class="buttons-list">
+													<li>
+														<button class="btn ghost-btn green" type="button" data-accept-notification>
+															<span class="text">Accept</span>
+															<span class="fade"></span>
+														</button>
+													</li>
+													<li>
+														<a class="btn ghost-btn grey open-popup-link" href="#change-time-popup" data-change-time>
+															<span class="text">Change Time</span>
+															<span class="fade"></span>
+														</a>
+													</li>
+													<li>
+														<button class="btn ghost-btn grey" type="button" data-reject-notification>
+															<span class="text">Reject</span>
+															<span class="fade"></span>
+														</button>
+													</li>
+												</ul>
+											</div>
+											<!-- 2 -->
+											<div class="notification-item hidden" id="2" data-without-actions>
+												<span data-tooltip="Mark as read" class="light tooltip-icon small" data-remove-item  data-link=""> <!-- data-remove="#2"-->
+													<button type="button" class="btn-tooltip">
+														<i class="icon icon-eye"></i>
+													</button>
+												</span>
+												<div class="lead">Lorem ipsum dolor sit amet</div>
+												<ul class="buttons-list">
+													<li>
+														<a class="btn ghost-btn full-blue" data-open-notification>
+															<span class="text">Open</span>
+															<span class="fade"></span>
+														</a>
+													</li>
+												</ul>
+											</div>
+											<!-- view more link -->
+											<div class="scrolled-more hidden">
+												<a href="full_profile.html" data-show-notifications >+ <span class="count"></span> Notifications More</a>
+											</div>
+											<div class="inner-items hidden"></div>
+										</div>
+									</div>
+								</div>
+		
+							</div>
+						</div>
+						<div class="user-col small" id="signButtonsDesktop">
+							<a href="index.html" class="btn btn-default" data-tablet="#signInButtonTablet" data-desktop="#signButtonsDesktop">
+								<span class="text"><i class="icon icon-logout btn-icon"></i> sign out</span>
+								<span class="fade"></span>
+							</a>
+						</div>
+					</div>
+				</div>
+		
+				<!-- sign in -->
+				<form action="#" class="user-form validate-form" id="signInForm" method="post">
+					<div class="inner">
+						<!-- Types of messages: notice, warning, error, success -->
+						<div id="gNotification" class="general-notification display-none">
+						    <i class="icon icon-info-round"></i>
+						    <i class="icon icon-attention"></i>
+						    <i class="icon icon-close-round"></i>
+						    <i class="icon icon-success-round"></i>
+						    <div class="timestamp-preloader display-none"></div>
+						
+						    <!-- <span id="gType" class="type">success:</span> -->
+						    <div class="rows-box">
+						        <span id="gMessage" class="message">Your don’t save video.</span>
+						        <span id="gEndMessage" class="end-message"> Save it too keep changes!</span>
+						    </div>
+						</div>
+						<div class="h3-title primary">Sign in</div>
+						<button type="button" class="form-close">&times;</button>
+						<div class="form-group">
+							<input type="text" class="input email" id="signInEmail" maxlength="30" data-minlength="2" autocapitalize="off" autocorrect="off">
+							<span class="line"></span>
+							<label for="signInEmail">E-Mail</label>
+							<i class="icon icon-checked2 icon-success"></i>
+							<i class="icon icon-close2 icon-error"></i>
+							<div class="alert">Type a correct E-mail. It must include "@"</div>
+						</div>
+						<div class="form-group last">
+							<input type="password" class="input" id="signInPassword" maxlength="30" data-minlength="6" autocapitalize="off" autocorrect="off">
+							<span class="line"></span>
+							<label for="signInPassword">Enter your password</label>
+							<i class="icon icon-checked2 icon-success"></i>
+							<i class="icon icon-close2 icon-error"></i>
+							<div class="alert">Minimum 6 characters</div>
+						</div>
+						<div class="checkbox">
+							<input type="checkbox" id="signInMember">
+							<label for="signInMember">Remember me</label>
+						</div>
+						<div class="row btn-wrap">
+							<div class="col-xs-12 col-ms-8 col-ms-offset-2">
+								<button type="submit" class="btn btn-primary btn-lg btn-block">
+									<span class="text">Sign In</span>
+									<span class="fade"></span>
+								</button>
+							</div>
+						</div>
+						<div class="align-center form-caption">Forgot your password? <a href="#">Restore password</a></div>
+						<div class="align-center form-caption footer-lastLine">Don't have an account? 
+							<a href="#" class="low-1000-hidden" data-toggle="#signUpForm,#signInForm" data-tablet="#signUpButtonTablet">Sign up</a>
+						</div>
+					</div>
+				</form>
+				<!-- / sign in -->
+		
+				<!-- sign up -->
+				<form action="#" class="user-form validate-form" id="signUpForm">
+					<div class="inner">
+						 <!-- Types of messages: notice, warning, error, success -->
+						 <div id="gNotification" class="general-notification display-none">
+						     <i class="icon icon-info-round"></i>
+						     <i class="icon icon-attention"></i>
+						     <i class="icon icon-close-round"></i>
+						     <i class="icon icon-success-round"></i>
+						     <div class="timestamp-preloader display-none"></div>
+						 
+						     <!-- <span id="gType" class="type">success:</span> -->
+						     <div class="rows-box">
+						         <span id="gMessage" class="message">Your don’t save video.</span>
+						         <span id="gEndMessage" class="end-message"> Save it too keep changes!</span>
+						     </div>
+						 </div>
+						<div class="h3-title primary">Sign up</div>
+						<button type="button" class="form-close">&times;</button>
+						<div class="form-group">
+							<input type="text" class="input" id="signUpFirstName" maxlength="30" data-minlength="2" autocomplete="off">
+							<span class="line"></span>
+							<label for="signUpFirstName">First name</label>
+							<i class="icon icon-checked2 icon-success"></i>
+							<i class="icon icon-close2 icon-error"></i>
+							<div class="alert">Minimum 2 characters. Must include only letters</div>
+						</div>
+						<div class="form-group">
+							<input type="text" class="input" id="signUpLastName" maxlength="30" data-minlength="2" autocomplete="off">
+							<span class="line"></span>
+							<label for="signUpLastName">Last name</label>
+							<i class="icon icon-checked2 icon-success"></i>
+							<i class="icon icon-close2 icon-error"></i>
+							<div class="alert">Minimum 2 characters. Must include only letters</div>
+						</div>
+						<div class="form-group">
+							<input type="text" class="input email" id="signUpEmail" maxlength="30" data-minlength="2" autocomplete="off" autocapitalize="off" autocorrect="off">
+							<span class="line"></span>
+							<label for="signUpEmail">E-Mail</label>
+							<i class="icon icon-checked2 icon-success"></i>
+							<i class="icon icon-close2 icon-error"></i>
+							<div class="alert">Type a correct E-mail. It must include "@"</div>
+						</div>
+						<div class="form-group last">
+							<!-- password-input -->
+							<input type="password" class="input" id="signUpPassword" maxlength="30" data-minlength="6" autocomplete="off" autocapitalize="off" autocorrect="off">
+							<span class="line"></span>
+							<label for="signUpPassword">Create password</label>
+							<i class="icon icon-checked2 icon-success"></i>
+							<i class="icon icon-close2 icon-error"></i>
+							<div class="alert">Minimum 6 characters</div>
+						</div>
+						<div class="checkbox">
+							<input type="checkbox" id="signUpMember">
+							<label for="signUpMember">I represent a business</label>
+						</div>
+						<div class="row btn-wrap">
+							<div class="col-xs-12 col-ms-8 col-ms-offset-2">
+								<button type="submit" class="btn btn-primary btn-lg btn-block">
+									<span class="text">Sign up now</span>
+									<span class="fade"></span>
+								</button>
+							</div>
+						</div>
+						<small>
+							By signing up, you agree to the <a href="#" class="lined">Terms of Service</a> and <a href="#" class="lined">Privacy Policy</a>,
+							including <a href="#" class="lined">Cookie Use</a>.
+						</small>
+					</div>
+				</form>
+				<!-- / sign up -->
+		
+			</div>
+		</header>
+		
+		<!-- change time popup -->
+		<div id="change-time-popup" class="white-popup mfp-hide with-helper">
+			<div class="inner">
+				<div class="header">
+					<div class="title">Change Interview Time with User Name</div>
+		
+					<button class="mobile-helper" data-toggle-helper="#change-time-popup" type="button">
+						<i class="icon icon-show-off-your-skills"></i>
+					</button>
+		
+					<button class="btn btn-grey btn-xs btn-round helper-toggle" data-toggle-helper="#change-time-popup" type="button">
+						<i class="icon icon-info"></i>
+						<span class="fade"></span>
+					</button>
+				</div>
+				<div class="content">
+					<form action="#" class="simple-form modal-form">
+						<table class="simple-table">
+							<thead>
+								<tr>
+									<td class="large">
+										Date
+									</td>
+									<td class="small">
+										Hour
+									</td>
+									<td class="small">
+										Minutes
+									</td>
+									<td class="smaller"></td>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>
+										<div class="form-group spaced">
+											<input type="date" class="input-simple" id="date">
+										</div>
+									</td>
+									<td>
+										<div class="select-outer">
+											<select name="hours" class="select" id="hours" >
+												<option value="01">01</option>
+												<option value="02">02</option>
+												<option value="03">03</option>
+												<option value="04">04</option>
+												<option value="05">05</option>
+											</select>
+											<span class="arrow">
+												<i class="icon icon-angle-down"></i>
+											</span>
+										</div>
+									</td>
+									<td>
+										<div class="select-outer">
+											<select name="minutes" class="select" id="minutes">
+												<option value="10">10</option>
+												<option value="15">15</option>
+												<option value="20">20</option>
+												<option value="25">25</option>
+												<option value="30">30</option>
+											</select>
+											<span class="arrow">
+												<i class="icon icon-angle-down"></i>
+											</span>
+										</div>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+		
+						<div class="btn-group align-center">
+							<button class="btn form-btn btn-simple" type="submit" data-send-time>
+								<span class="text">invite</span>
+								<span class="fade"></span>
+							</button>
+							<button class="btn form-btn btn-grey close-modal" type="button">
+								<span class="text">cancel</span>
+								<span class="fade"></span>
+							</button>
+						</div>
+					</form>
+				</div>
+				<!-- helper -->
+				<div class="helper">
+					<div class="arrow-card">
+						<div class="row top-xs paddless-row">
+							<div class="col-xs-12 col-lg-2 align-center icon-cover">
+								<i class="icon icon-show-off-your-skills"></i>
+							</div>
+							<div class="col-xs-12 col-lg-10">
+								<div class="h5-title">Change Interview Time</div>
+								<div class="paragraph">
+									Having a comprehensive list of skills will help get your profile noticed by connections and recruiters. When recruiters search for candidates, skills will be one of the criteria they use.
+								</div>
+							</div>
+						</div>
+						<button type="button" class="btn btn-grey btn-round close-helper">
+							<i class="icon icon-close"></i>
+						</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- / change time popup -->
+		
+		<div class="none mobile-nav">
+			<div id="menuTablet"></div>
+			<div class="row buttons-row">
+				<div class="col-xs-12" id="signInButtonTablet"></div>
+			</div>
+		</div>
+		
+		
+		
+		<!-- <a href="#disclaimer-popup" id="showDisclaimer" class="hidden open-popup-link"></a> -->
+		<main id="video-bio">
+				<!-- Types of messages: notice, warning, error, success -->
+				<div id="gNotification" class="general-notification display-none">
+				    <i class="icon icon-info-round"></i>
+				    <i class="icon icon-attention"></i>
+				    <i class="icon icon-close-round"></i>
+				    <i class="icon icon-success-round"></i>
+				    <div class="timestamp-preloader display-none"></div>
+				
+				    <!-- <span id="gType" class="type">success:</span> -->
+				    <div class="rows-box">
+				        <span id="gMessage" class="message">Your don’t save video.</span>
+				        <span id="gEndMessage" class="end-message"> Save it too keep changes!</span>
+				    </div>
+				</div>
+				<div id="hint-popup" class="white-popup mfp-hide">
+				  <div class="inner">
+				    <div class="header">
+				        <div class="title">
+				            <span>Technical Skills</span>
+				        </div>
+				        </div>
+				        <div class="advice">
+				        <i class="icon icon-boy-broad-smile"></i>
+				        <div class="advice-description">
+				            <h4 class="advice-title">SMILE and have no worries</h4>
+				            <p class="advice-text">Lorem ipsum dolor sit amet, consectetur, adipicing edit, Aeoun euismod bibendum loareet.</p>
+				        </div>
+				        </div>
+				        <div class="advice">
+				            <i class="icon icon-smiling-lips"></i>
+				            <div class="advice-description">
+				                <h4 class="advice-title">Speak clearly and legibly</h4>
+				                <p class="advice-text">Lorem ipsum dolor sit amet, consectetur, adipicing edit, Aeoun euismod bibendum loareet.</p>
+				            </div>
+				        </div>
+				        <div class="advice">
+				            <i class="icon icon-eye-big"></i>
+				            <div class="advice-description">
+				                <h4 class="advice-title">look at the camera</h4>
+				                <p class="advice-text">Lorem ipsum dolor sit amet, consectetur, adipicing edit, Aeoun euismod bibendum loareet.</p>
+				            </div>
+				        </div>
+				        <div class="advice">
+				            <i class="icon icon-book"></i>
+				            <div class="advice-description">
+				                <h4 class="advice-title">be respectful</h4>
+				                <p class="advice-text">Lorem ipsum dolor sit amet, consectetur, adipicing edit, Aeoun euismod bibendum loareet.</p>
+				            </div>
+				        </div>
+				    <div class="advice">
+				        <i class="icon icon-boy-broad-smile"></i>
+				        <div class="advice-description">
+				            <h4 class="advice-title">SMILE and have no worries</h4>
+				            <p class="advice-text">Lorem ipsum dolor sit amet, consectetur, adipicing edit, Aeoun euismod bibendum loareet.</p>
+				        </div>
+				    </div>
+				    <div class="advice">
+				        <i class="icon icon-smiling-lips"></i>
+				        <div class="advice-description">
+				            <h4 class="advice-title">Speak clearly and legibly</h4>
+				            <p class="advice-text">Lorem ipsum dolor sit amet, consectetur, adipicing edit, Aeoun euismod bibendum loareet.</p>
+				        </div>
+				    </div>
+				    <div class="advice">
+				        <i class="icon icon-eye-big"></i>
+				        <div class="advice-description">
+				            <h4 class="advice-title">look at the camera</h4>
+				            <p class="advice-text">Lorem ipsum dolor sit amet, consectetur, adipicing edit, Aeoun euismod bibendum loareet.</p>
+				        </div>
+				    </div>
+				    <div class="advice">
+				        <i class="icon icon-book"></i>
+				        <div class="advice-description">
+				            <h4 class="advice-title">be respectful</h4>
+				            <p class="advice-text">Lorem ipsum dolor sit amet, consectetur, adipicing edit, Aeoun euismod bibendum loareet.</p>
+				        </div>
+				    </div>
+				  </div>
+				</div>
+				<section class="section time-bar">
+						<div class="container large">
+
+
+								<div class="row">
+										<div class="col-xs-6 col-md-2 col-ms-5 col-lg-3">
+												<div class="section-title middle with-element" id="btnPositionTablet">Video Recommendation</div>
+										</div>
+
+										<div class="col-xs-6 col-ms-3 col-md-6 col-lg-6">
+												<div class="row center-xs">
+														<div class="record-timestamp-box">
+																<div id="recordStatus" class="record-status">
+																		<!-- if start recording add class "record-status-on" -->
+																		<!-- if recording is complete add class "record-status-finished" -->
+																		<i class="icon icon-start-rec"></i>
+																		<i class="icon icon-checked2"></i>
+																		<span id="textStatus">Not Started</span>
+																		<!-- change to 'Recording' -->
+																</div>
+																<!-- if start recording toggle class to "record-time-on"  -->
+																<div id="recordTime" class="record-time">
+																		<span id="hours">00</span>:
+																		<span id="minutes">00</span>:
+																		<span id="seconds">00</span>
+																</div>
+																<div id="connectingBox" class="connecting-box hidden">
+																		<div class="timestamp-preloader"></div>
+																		<span id="timeBoxStatus" class="">Connecting</span>
+																</div>
+														</div>
+												</div>
+										</div>
+								</div>
+						</div>
+				</section>
+
+
+				<section class="section interview-section practice-section">
+						<div class="container large">
+
+								<div id="interviewVideoBox" class="row interview-video-box flexible-mode-box practice-box">
+										<div class="interview-advices-box">
+												<div class="advice">
+														<i class="icon icon-boy-broad-smile"></i>
+														<div class="advice-description">
+																<h4 class="advice-title">SMILE and have no worries</h4>
+																<p class="advice-text">Lorem ipsum dolor sit amet, consectetur, adipicing edit, Aeoun euismod bibendum loareet.</p>
+														</div>
+												</div>
+												<div class="advice">
+														<i class="icon icon-smiling-lips"></i>
+														<div class="advice-description">
+																<h4 class="advice-title">Speak clearly and legibly</h4>
+																<p class="advice-text">Lorem ipsum dolor sit amet, consectetur, adipicing edit, Aeoun euismod bibendum loareet.</p>
+														</div>
+												</div>
+												<div class="advice">
+														<i class="icon icon-eye-big"></i>
+														<div class="advice-description">
+																<h4 class="advice-title">look at the camera</h4>
+																<p class="advice-text">Lorem ipsum dolor sit amet, consectetur, adipicing edit, Aeoun euismod bibendum loareet.</p>
+														</div>
+												</div>
+												<div class="advice">
+														<i class="icon icon-book"></i>
+														<div class="advice-description">
+																<h4 class="advice-title">be respectful</h4>
+																<p class="advice-text">Lorem ipsum dolor sit amet, consectetur, adipicing edit, Aeoun euismod bibendum loareet.</p>
+														</div>
+												</div>
+										</div>
+
+										<div id="firstVideoBox" class="main-video-frame">
+												<div class="video-head">
+														<h3 class="name">Your Video Recommendation for <span>User Full_Name</span></h3>
+														<span class="position">Start to rec your recommendation</span>
+												</div>
+												<div class="video-hint">
+													<a href="#hint-popup" class="open-popup-link wrap">
+														<i class="icon icon-show-off-your-skills"></i>
+														how to record awesome video
+													</a>
+												</div>
+
+												<div id="myVideoFrame" class="frame user-frame-main">
+														<video id="myVideo" class="video-js video-interview" controls preload="auto" height="440px" poster="temp/user1.jpg" data-setup="{}">
+																<source src="video/oceans.mp4" type='video/mp4'>
+																<p class="vjs-no-js">
+																		To view this video please enable JavaScript, and consider upgrading to a web browser that
+																		<a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
+																</p>
+														</video>
+												</div>
+										</div>
+
+										<div class="interview-advices-box">
+												<div class="advice">
+														<i class="icon icon-boy-broad-smile"></i>
+														<div class="advice-description">
+																<h4 class="advice-title">SMILE and have no worries</h4>
+																<p class="advice-text">Lorem ipsum dolor sit amet, consectetur, adipicing edit, Aeoun euismod bibendum loareet.</p>
+														</div>
+												</div>
+												<div class="advice">
+														<i class="icon icon-smiling-lips"></i>
+														<div class="advice-description">
+																<h4 class="advice-title">Speak clearly and legibly</h4>
+																<p class="advice-text">Lorem ipsum dolor sit amet, consectetur, adipicing edit, Aeoun euismod bibendum loareet.</p>
+														</div>
+												</div>
+												<div class="advice">
+														<i class="icon icon-eye-big"></i>
+														<div class="advice-description">
+																<h4 class="advice-title">look at the camera</h4>
+																<p class="advice-text">Lorem ipsum dolor sit amet, consectetur, adipicing edit, Aeoun euismod bibendum loareet.</p>
+														</div>
+												</div>
+												<div class="advice">
+														<i class="icon icon-book"></i>
+														<div class="advice-description">
+																<h4 class="advice-title">be respectful</h4>
+																<p class="advice-text">Lorem ipsum dolor sit amet, consectetur, adipicing edit, Aeoun euismod bibendum loareet.</p>
+														</div>
+												</div>
+										</div>
+
+
+								</div>
+
+								<div class="row center-xs">
+										<div class="video-interview-bar">
+												<div class="gear-controls">
+														<div class="control-item">
+																<button type="button" id="videoHandler" class="btn-control btn-control-on">
+																		<!-- For enabled state add class: btn-control-on -->
+																		<i class="icon icon-video-camera"></i>
+																</button>
+																<span id="videoStatusTest" class="control-title">video test</span>
+														</div>
+														<div class="control-item">
+																<button type="button" id="micHandler" class="btn-control ">
+																		<i class="icon icon-voice-message-microphone-button"></i>
+																</button>
+																<span id="micStatusTest" class="control-title">mic test</span>
+														</div>
+														<div class="control-item">
+																<button type="button" id="speakerHandler" class="btn-control btn-control-on">
+																		<i class="icon icon-speaker"></i>
+																</button>
+																<span id="speakerStatusTest" class="control-title">speaker test</span>
+														</div>
+												</div>
+
+												<div class="interview-controls">
+														<div class="control-item">
+																<button type="button" id="recordingStop" class="btn-control">
+																		<!-- btn-control-on -->
+																		<i class="icon icon-stop-rec"></i>
+																</button>
+																<span class="control-title">stop</span>
+														</div>
+														<div class="control-item">
+																<!--btn-process-pause, btn-record-play, btn-record-pause -->
+																<button type="button" id="recordingStart" class="recording-start btn-process-on">
+																		<i class="icon icon-start-rec"></i>
+																</button>
+																<button type="button" id="recordingPause" class="recording-start btn-process-pause'">
+																		<i class="icon icon-pause-rec"></i>
+																</button>
+																<button type="button" id="recordingContinue" class="recording-start btn-process-on">
+																		<i class="icon icon-start-rec"></i>
+																</button>
+																<button type="button" id="recordPlay" class="recording-start btn-record-play">
+																		<i class="icon icon-play-rec"></i>
+																</button>
+																<button type="button" id="recordPause" class="recording-start btn-record-pause">
+																		<i class="icon icon-pause-rec"></i>
+																</button>
+																<span id="recordingStartStatus" class="control-title">start</span>
+														</div>
+														<div class="control-item">
+																<button type="button" id="recordSave" data-save-recommendation class="btn-control btn-control-on btn-record-control">
+																		<!-- btn-control-on -->
+																		<i class="icon icon-save"></i>
+																</button>
+																<span class="control-title">save</span>
+														</div>
+														<div class="control-item">
+																<button type="button" id="recordDelete" class="btn-control btn-control-on btn-record-control">
+																		<!-- btn-control-on -->
+																		<i class="icon icon-delete"></i>
+																</button>
+																<span class="control-title">delete</span>
+														</div>
+												</div>
+
+												<div class="volume-controls">
+														<div id="volume-item">
+																<div class="volume-hints">
+																		<span class="title-volume">Interviewer volume</span>
+																</div>
+																<input type="range" min="1" max="100" value="50" class="volume-line" id="simpleVolumeLine">
+														</div>
+
+														<div class="volume-item">
+																<div class="volume-hints">
+																		<span class="title-volume">Microphone volume</span>
+																</div>
+																<div class="volume-mic-line" id="">
+																		<!-- Here is another ID because we need another behavior -->
+																		<input type="range" min="1" max="100" value="0" class="volume-mic-slider" id="volumeMicSliderView" disabled>
+																		<div class="volume-mic-subline" id="volumeMicSubline"></div>
+																</div>
+														</div>
+												</div>
+										</div>
+								</div>
+						</div>
+
+						 <div id="popupAfterRecommendation" class="white-popup mfp-hide with-helper">
+						 	<div class="inner">
+						 		<div class="header">
+						 			<div class="title">Recommendation to <span data-full-name>User Full_Name</span>
+						 				<span data-tooltip="Some little text here but not very large">
+						 					<span class="btn btn-light btn-round btn-xs btn-tooltip">
+						 						<i class="icon icon-info"></i>
+						 					</span>
+						 				</span>
+						 			</div>
+						 		</div>
+						 		<div class="content">
+						 			<form action="" class="simple-form modal-form validate-form" data-recommendation-sent data-clear data-on-edit method="post">
+						 				<div class="row paddless-row">
+						 					<div class="col-xs-12 col-sm-12 form-group">
+						 						<div class="help">Thanks for recording a recommendation! Few details before sending it to <span data-full-name>User Full_Name</span>'s profile.</div>
+						 					</div>
+						 					<div class="col-xs-12 col-sm-6">
+						 						<div class="form-group last">
+						 							<div class="input-title">Your name</div>
+						 							<input type="text" class="input-simple call-focus" id="name" data-push data-minlength="2" data-id>
+						 							<div class="alert">Minimum 2 characters</div>
+						 						</div>
+						 					</div>
+						 					<div class="col-xs-12 col-sm-6">
+						 						<div class="form-group last">
+						 							<div class="input-title">your position &amp; company</div>
+						 							<input type="text" class="input-simple" id="position" data-push data-minlength="2">
+						 							<div class="alert">Minimum 2 characters</div>
+						 						</div>
+						 					</div>
+						 				</div>
+						 				<div class="form-group last">
+						 					<div class="input-title">A few words about <span data-name>User JUST_Name</span> <span class="optional">(optional)</span> </div>
+						 					<div class="help">To be featured next to your video recommendation on <span data-name>User Full_Name</span>'s profile</div>
+						 					<textarea name="recommendation-text" id="recommendationText" class="textarea recommendation-text ignored" data-push data-minlength="10" data-characters="400" maxlength="400" data-view="true"></textarea>
+						 					<div class="help">E.g. I enjoyed working with <span data-name>User JUST_Name</span>, we've gone through a lot of tough projects together. </div>
+						 					<!--<div class="alert">Minimum 10 characters</div>-->
+						 					<div class="count-help">
+						 						<span class="count">400</span>
+						 						characters left
+						 					</div>
+						 				</div>
+						 				<div class="btn-group align-center collapsed">
+						 					<button class="btn form-btn btn-simple" type="submit" data-success-show>
+						 						<span class="text">send</span>
+						 						<span class="fade"></span>
+						 					</button>
+						 					<button class="btn form-btn btn-grey close-modal" type="button">
+						 						<span class="text">back to recording</span>
+						 						<span class="fade"></span>
+						 					</button>
+						 				</div>
+						 				<div class="popup-footer">
+						 					<small class="help popup-footer">
+						 						By sending this, you agree with TalentFly 
+						 						<a href="/terms-and-conditions/" class="lined">Terms and Conditions</a>
+						 					</small>
+						 				</div>
+						 			</form>
+						 		</div>
+						 	</div>
+						 </div>
+						 
+						 <div id="successPopup" class="white-popup mfp-hide">
+						 	<div class="content">
+						 		<div class="success-fadein success-message verticaly-middle active">
+						 			<div class="inner simple-form">
+						 				<i class="icon icon-check-green"></i>
+						 				<div class="success-title">Thank you!</div>
+						 				<div id="emailRequest" class="paragraph">Your recommendation is very much appreciated.</div>
+						 				<button class="btn form-btn btn-grey close-modal" type="button" data-redirect="https://new.talentfly.com/how-it-works-for-you/">
+						 					<span class="text">about talentfly</span>
+						 					<span class="fade"></span>
+						 				</button>
+						 			</div>
+						 		</div>
+						 	</div>
+						 </div>
+						<!-- <div id="disclaimer-popup" class="white-popup mfp-hide mini-popup">
+								<div class="inner">
+										<div class="header">
+												<div class="title">Disclaimer</div>
+										</div>
+										<div class="content">
+												<div class="simple-form">
+														<p class="paragraph">
+																{{ interview_disclaimer }}
+														</p>
+														<div class="btn-group align-center collapsed">
+																<button class="btn form-btn btn-simple close-modal" type="button">
+																		<span class="text">accept</span>
+																		<span class="fade"></span>
+																</button>
+														</div>
+												</div>
+										</div>
+								</div>
+						</div> -->
+						 
+
+				</section>
+		</main>
+
+
+
+		<footer class="main-footer">
+
+
+			<div class="container">
+
+
+				<ul class="clear socials-list">
+
+
+					<li><a href="#"><i class="icon icon-facebook"></i></a></li>
+
+
+					<li><a href="#"><i class="icon icon-twitter"></i></a></li>
+
+
+					<li><a href="#"><i class="icon icon-googleplus"></i></a></li>
+
+
+				</ul>
+
+
+				<div id="tablet-links">
+
+
+					<div class="inner" data-tablet="#tablet-links" data-mobile="#mobile-links">
+
+
+						<a href="#">Support</a>
+
+
+						<span class="separator">|</span>
+
+
+						<a href="#">Terms and Conditions</a>
+
+
+					</div>
+
+
+				</div>
+
+
+				<div class="copyright">
+
+
+					<img src="img/logo.svg" alt="">
+
+
+					<div id="mobile-links" class="sm-hide"></div>
+
+
+					Copyright © 2017 TalentFly,
+
+
+					All rights reserved
+
+
+				</div>
+
+
+			</div>
+
+
+		</footer>
+
+		<link href="https://fonts.googleapis.com/css?family=Poppins:100,300,400,500,600,700" rel="stylesheet">
+		<script src="js/lib/jquery.min.js"></script>
+		<script src="js/main.js"></script>
+		<script src="js/plugins/jquery.magnific-popup.min.js"></script>
+
+		<!-- <script src="js/init/validation.js"></script> -->
+		<script src="js/validator.js"></script>
+		<script src="js/init/buttons.js"></script>
+
+		<script src="js/init/main-menu-dropdown.js"></script>
+		<script src="js/init/video-interview-bar.js"></script>
+		<script src="js/init/interview-timers.js"></script>
+		<script src="js/init/general-notifications.js"></script>
+		<script src="js/init/video-recommendation.js"></script>
+		<script src="js/init/limit-block.js"></script>
+
+
+		<!-- video js -->
+		<script src="http://vjs.zencdn.net/6.2.8/video.js"></script>
+
+
+</body>
+
+</html>

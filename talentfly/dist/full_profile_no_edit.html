@@ -1,0 +1,2979 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+	<meta name="format-detection" content="telephone=no">
+
+	<title>Talent Fly :: New User Full Profile</title>
+
+	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+	<link rel="mask-icon" href="safari-pinned-tab.svg" color="#469aeb">
+	<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon-180x180.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="192x192" href="android-chrome-192x192.png">
+	<link rel="icon" type="image/png" sizes="256x256" href="android-chrome-256x256.png">
+	<link rel="manifest" href="site.webmanifest">
+	<meta name="msapplication-TileColor" content="#469aeb">
+	<meta name="msapplication-config" content="browserconfig.xml">
+	<meta name="theme-color" content="#469aeb">
+
+	<link rel="stylesheet" href="css/bundle.min.css">
+
+
+</head>
+<body>
+
+	<header class="main-header inner-header" id="mainHeader">
+		<div class="container large">
+			<div class="row middle-xs">
+				<div class="col-xs-2 hidden-lg menu-left">
+					<button class="none main-menu-toggle">
+						<i></i><i></i><i></i>
+					</button>
+				</div>
+				<div class="col-xs-8 col-md-2">
+					<a href="index.html" class="logo">
+						<img src="img/logo.svg" alt="">
+					</a>
+				</div>
+				<div class="col-xs-2 col-md-10 no-font align-right menu-right">
+					<div id="notification-sm" class="notification-sm"></div>
+	
+					<div class="main-menu small" id="notification-lg">
+						<div id="menuDesktop" class="menu-desktop"></div>
+						<nav data-tablet="#menuTablet" data-desktop="#menuDesktop">
+							<ul class="clear menu">
+								<li>
+									<a href="overview.html">
+										<span class="text">Overview</span>
+									</a>
+								</li>
+								<li>
+									<a href="full_profile.html">
+										<span class="text">Full profile</span>
+									</a>
+								</li>
+								<li>
+									<a href="interview.html">
+										<span class="text">Interviews</span>
+									</a>
+								</li>
+								<li>
+									<a href="settings.html">
+										<span class="text">Settings</span>
+									</a>
+								</li>
+								<li class="separator"></li>
+								<li>
+									<a href="how_it_works.html">
+										<span class="text">How it works</span>
+									</a>
+								</li>
+								<li>
+									<a href="what-is-talentfly.html">
+										<span class="text">What is TalentFly</span>
+									</a>
+								</li>
+								<li>
+									<a href="contact-us.html">
+										<span class="text">Contact Us</span>
+									</a>
+								</li>
+								<li id="toggleMenuDropdown" class="menu-dropdown">
+									<a href="#" class="bull">
+										<div class="separator"></div>
+										&bull;&bull;&bull;
+									</a>
+									<ul class="clear dropdown"></ul>
+								</li>
+							</ul>
+						</nav>
+						<div class="notification-link" data-tablet="#notification-sm" data-desktop="#notification-lg">
+							<div class="separator"></div>
+							<!-- add class animated for a new notification in a real time-->
+							<button class="notification btn" type="button" data-toggle="#notificationToggle" data-scroll-hide>
+								<i class="icon icon-bell"></i>
+								<span class="counter notification-total">0</span>
+								<span class="fade"></span>
+							</button>
+							<div class="separator"></div>
+	
+							<!-- notification details -->
+							<div class="notification-details" id="notificationToggle" data-scroll-hide data-url="full_profile.html">
+								<div class="inner">
+									<div class="header">
+										<div class="text">Notification</div>
+										<div class="counter notification-total">0</div>
+									</div>
+									<div class="wrap-info" data-limit="2" id="notificationInner">
+										<!-- 1 -->
+										<div class="notification-item hidden" id="1" data-has-actions>
+											<a href="#" class="title">
+												Interview <span class="name">Peter Brown</span> with <span class="name">Alex Stepanuk.</span>
+											</a>
+											<span data-tooltip="Mark as read" class="light tooltip-icon small" data-remove="#1" data-link="">
+												<button type="button" class="btn-tooltip">
+													<i class="icon icon-eye"></i>
+												</button>
+											</span>
+											<div class="lead">Lorem ipsum dolor sit amet</div>
+											<ul class="clear details">
+												<li>Date <span data-date>10.13.2017</span></li>
+												<li>Time <span data-time>19:00</span></li>
+											</ul>
+											<ul class="buttons-list">
+												<li>
+													<button class="btn ghost-btn green" type="button" data-accept-notification>
+														<span class="text">Accept</span>
+														<span class="fade"></span>
+													</button>
+												</li>
+												<li>
+													<a class="btn ghost-btn grey open-popup-link" href="#change-time-popup" data-change-time>
+														<span class="text">Change Time</span>
+														<span class="fade"></span>
+													</a>
+												</li>
+												<li>
+													<button class="btn ghost-btn grey" type="button" data-reject-notification>
+														<span class="text">Reject</span>
+														<span class="fade"></span>
+													</button>
+												</li>
+											</ul>
+										</div>
+										<!-- 2 -->
+										<div class="notification-item hidden" id="2" data-without-actions>
+											<span data-tooltip="Mark as read" class="light tooltip-icon small" data-remove-item  data-link=""> <!-- data-remove="#2"-->
+												<button type="button" class="btn-tooltip">
+													<i class="icon icon-eye"></i>
+												</button>
+											</span>
+											<div class="lead">Lorem ipsum dolor sit amet</div>
+											<ul class="buttons-list">
+												<li>
+													<a class="btn ghost-btn full-blue" data-open-notification>
+														<span class="text">Open</span>
+														<span class="fade"></span>
+													</a>
+												</li>
+											</ul>
+										</div>
+										<!-- view more link -->
+										<div class="scrolled-more hidden">
+											<a href="full_profile.html" data-show-notifications >+ <span class="count"></span> Notifications More</a>
+										</div>
+										<div class="inner-items hidden"></div>
+									</div>
+								</div>
+							</div>
+	
+						</div>
+					</div>
+					<div class="user-col small" id="signButtonsDesktop">
+						<a href="index.html" class="btn btn-default" data-tablet="#signInButtonTablet" data-desktop="#signButtonsDesktop">
+							<span class="text"><i class="icon icon-logout btn-icon"></i> sign out</span>
+							<span class="fade"></span>
+						</a>
+					</div>
+				</div>
+			</div>
+	
+			<!-- sign in -->
+			<form action="#" class="user-form validate-form" id="signInForm" method="post">
+				<div class="inner">
+					<!-- Types of messages: notice, warning, error, success -->
+					<div id="gNotification" class="general-notification display-none">
+					    <i class="icon icon-info-round"></i>
+					    <i class="icon icon-attention"></i>
+					    <i class="icon icon-close-round"></i>
+					    <i class="icon icon-success-round"></i>
+					    <div class="timestamp-preloader display-none"></div>
+					
+					    <!-- <span id="gType" class="type">success:</span> -->
+					    <div class="rows-box">
+					        <span id="gMessage" class="message">Your don’t save video.</span>
+					        <span id="gEndMessage" class="end-message"> Save it too keep changes!</span>
+					    </div>
+					</div>
+					<div class="h3-title primary">Sign in</div>
+					<button type="button" class="form-close">&times;</button>
+					<div class="form-group">
+						<input type="text" class="input email" id="signInEmail" maxlength="30" data-minlength="2" autocapitalize="off" autocorrect="off">
+						<span class="line"></span>
+						<label for="signInEmail">E-Mail</label>
+						<i class="icon icon-checked2 icon-success"></i>
+						<i class="icon icon-close2 icon-error"></i>
+						<div class="alert">Type a correct E-mail. It must include "@"</div>
+					</div>
+					<div class="form-group last">
+						<input type="password" class="input" id="signInPassword" maxlength="30" data-minlength="6" autocapitalize="off" autocorrect="off">
+						<span class="line"></span>
+						<label for="signInPassword">Enter your password</label>
+						<i class="icon icon-checked2 icon-success"></i>
+						<i class="icon icon-close2 icon-error"></i>
+						<div class="alert">Minimum 6 characters</div>
+					</div>
+					<div class="checkbox">
+						<input type="checkbox" id="signInMember">
+						<label for="signInMember">Remember me</label>
+					</div>
+					<div class="row btn-wrap">
+						<div class="col-xs-12 col-ms-8 col-ms-offset-2">
+							<button type="submit" class="btn btn-primary btn-lg btn-block">
+								<span class="text">Sign In</span>
+								<span class="fade"></span>
+							</button>
+						</div>
+					</div>
+					<div class="align-center form-caption">Forgot your password? <a href="#">Restore password</a></div>
+					<div class="align-center form-caption footer-lastLine">Don't have an account? 
+						<a href="#" class="low-1000-hidden" data-toggle="#signUpForm,#signInForm" data-tablet="#signUpButtonTablet">Sign up</a>
+					</div>
+				</div>
+			</form>
+			<!-- / sign in -->
+	
+			<!-- sign up -->
+			<form action="#" class="user-form validate-form" id="signUpForm">
+				<div class="inner">
+					 <!-- Types of messages: notice, warning, error, success -->
+					 <div id="gNotification" class="general-notification display-none">
+					     <i class="icon icon-info-round"></i>
+					     <i class="icon icon-attention"></i>
+					     <i class="icon icon-close-round"></i>
+					     <i class="icon icon-success-round"></i>
+					     <div class="timestamp-preloader display-none"></div>
+					 
+					     <!-- <span id="gType" class="type">success:</span> -->
+					     <div class="rows-box">
+					         <span id="gMessage" class="message">Your don’t save video.</span>
+					         <span id="gEndMessage" class="end-message"> Save it too keep changes!</span>
+					     </div>
+					 </div>
+					<div class="h3-title primary">Sign up</div>
+					<button type="button" class="form-close">&times;</button>
+					<div class="form-group">
+						<input type="text" class="input" id="signUpFirstName" maxlength="30" data-minlength="2" autocomplete="off">
+						<span class="line"></span>
+						<label for="signUpFirstName">First name</label>
+						<i class="icon icon-checked2 icon-success"></i>
+						<i class="icon icon-close2 icon-error"></i>
+						<div class="alert">Minimum 2 characters. Must include only letters</div>
+					</div>
+					<div class="form-group">
+						<input type="text" class="input" id="signUpLastName" maxlength="30" data-minlength="2" autocomplete="off">
+						<span class="line"></span>
+						<label for="signUpLastName">Last name</label>
+						<i class="icon icon-checked2 icon-success"></i>
+						<i class="icon icon-close2 icon-error"></i>
+						<div class="alert">Minimum 2 characters. Must include only letters</div>
+					</div>
+					<div class="form-group">
+						<input type="text" class="input email" id="signUpEmail" maxlength="30" data-minlength="2" autocomplete="off" autocapitalize="off" autocorrect="off">
+						<span class="line"></span>
+						<label for="signUpEmail">E-Mail</label>
+						<i class="icon icon-checked2 icon-success"></i>
+						<i class="icon icon-close2 icon-error"></i>
+						<div class="alert">Type a correct E-mail. It must include "@"</div>
+					</div>
+					<div class="form-group last">
+						<!-- password-input -->
+						<input type="password" class="input" id="signUpPassword" maxlength="30" data-minlength="6" autocomplete="off" autocapitalize="off" autocorrect="off">
+						<span class="line"></span>
+						<label for="signUpPassword">Create password</label>
+						<i class="icon icon-checked2 icon-success"></i>
+						<i class="icon icon-close2 icon-error"></i>
+						<div class="alert">Minimum 6 characters</div>
+					</div>
+					<div class="checkbox">
+						<input type="checkbox" id="signUpMember">
+						<label for="signUpMember">I represent a business</label>
+					</div>
+					<div class="row btn-wrap">
+						<div class="col-xs-12 col-ms-8 col-ms-offset-2">
+							<button type="submit" class="btn btn-primary btn-lg btn-block">
+								<span class="text">Sign up now</span>
+								<span class="fade"></span>
+							</button>
+						</div>
+					</div>
+					<small>
+						By signing up, you agree to the <a href="#" class="lined">Terms of Service</a> and <a href="#" class="lined">Privacy Policy</a>,
+						including <a href="#" class="lined">Cookie Use</a>.
+					</small>
+				</div>
+			</form>
+			<!-- / sign up -->
+	
+		</div>
+	</header>
+	
+	<!-- change time popup -->
+	<div id="change-time-popup" class="white-popup mfp-hide with-helper">
+		<div class="inner">
+			<div class="header">
+				<div class="title">Change Interview Time with User Name</div>
+	
+				<button class="mobile-helper" data-toggle-helper="#change-time-popup" type="button">
+					<i class="icon icon-show-off-your-skills"></i>
+				</button>
+	
+				<button class="btn btn-grey btn-xs btn-round helper-toggle" data-toggle-helper="#change-time-popup" type="button">
+					<i class="icon icon-info"></i>
+					<span class="fade"></span>
+				</button>
+			</div>
+			<div class="content">
+				<form action="#" class="simple-form modal-form">
+					<table class="simple-table">
+						<thead>
+							<tr>
+								<td class="large">
+									Date
+								</td>
+								<td class="small">
+									Hour
+								</td>
+								<td class="small">
+									Minutes
+								</td>
+								<td class="smaller"></td>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>
+									<div class="form-group spaced">
+										<input type="date" class="input-simple" id="date">
+									</div>
+								</td>
+								<td>
+									<div class="select-outer">
+										<select name="hours" class="select" id="hours" >
+											<option value="01">01</option>
+											<option value="02">02</option>
+											<option value="03">03</option>
+											<option value="04">04</option>
+											<option value="05">05</option>
+										</select>
+										<span class="arrow">
+											<i class="icon icon-angle-down"></i>
+										</span>
+									</div>
+								</td>
+								<td>
+									<div class="select-outer">
+										<select name="minutes" class="select" id="minutes">
+											<option value="10">10</option>
+											<option value="15">15</option>
+											<option value="20">20</option>
+											<option value="25">25</option>
+											<option value="30">30</option>
+										</select>
+										<span class="arrow">
+											<i class="icon icon-angle-down"></i>
+										</span>
+									</div>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+	
+					<div class="btn-group align-center">
+						<button class="btn form-btn btn-simple" type="submit" data-send-time>
+							<span class="text">invite</span>
+							<span class="fade"></span>
+						</button>
+						<button class="btn form-btn btn-grey close-modal" type="button">
+							<span class="text">cancel</span>
+							<span class="fade"></span>
+						</button>
+					</div>
+				</form>
+			</div>
+			<!-- helper -->
+			<div class="helper">
+				<div class="arrow-card">
+					<div class="row top-xs paddless-row">
+						<div class="col-xs-12 col-lg-2 align-center icon-cover">
+							<i class="icon icon-show-off-your-skills"></i>
+						</div>
+						<div class="col-xs-12 col-lg-10">
+							<div class="h5-title">Change Interview Time</div>
+							<div class="paragraph">
+								Having a comprehensive list of skills will help get your profile noticed by connections and recruiters. When recruiters search for candidates, skills will be one of the criteria they use.
+							</div>
+						</div>
+					</div>
+					<button type="button" class="btn btn-grey btn-round close-helper">
+						<i class="icon icon-close"></i>
+					</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- / change time popup -->
+	
+	<div class="none mobile-nav">
+		<div id="menuTablet"></div>
+		<div class="row buttons-row">
+			<div class="col-xs-12" id="signInButtonTablet"></div>
+		</div>
+	</div>
+	
+	
+	
+
+	<main>
+
+		<section class="section collapsed-bottom">
+			<div class="container large">
+
+				<div class="row header" id="open_view">
+					<!-- заголовок с вкладками -->
+					<div class="col-xs-12 col-md-3 col-lg-4">
+						<ul class="clear tabs no-margin header-tabs" data-tabs="#pageTabs">
+							<li  class="active">
+								<div class="section-title middle with-element">Overview</div>
+							</li>
+              <li>
+                <div class="section-title middle with-element">Full Profile</div>
+              </li>
+						</ul>
+					</div>
+					<div class="col-xs-12 col-md-7 col-lg-8 align-right">
+						<ul class="buttons-list clear">
+							<li>
+								<!-- если кнопка активна удалить класс disabled и data-tooltip="Please complete your profile" -->
+								<a href="#share-profile-popup" class="btn btn-sm btn-block open-popup-link disabled" data-tooltip="Please complete your profile">
+									<span class="text">
+										<i class="icon icon-share btn-icon"></i>
+										Share profile
+									</span>
+									<span class="fade"></span>
+								</a>
+							</li>
+							<li>
+								<a href="test.txt" class="btn btn-sm btn-block disabled" download data-tooltip="Please complete your profile">
+									<span class="text">
+										<i class="icon icon-download-folder btn-icon"></i>
+										Download
+									</span>
+									<span class="fade"></span>
+								</a>
+							</li>
+						</ul>
+					</div>
+          <div class ="grey-line"></div> 
+        </div>
+
+
+				<!-- overview head -->
+
+				<div class="overview-head spaced">
+
+					<div class="row middle-xs spaced-row">
+
+								<div class="col-xs-12 col-sm-8 col-md-8 col-lg-5 left-side">
+
+									<div class="row middle-xs">
+
+										<div class="image-holder">
+
+											<figure class="round-image absolute icon-figure">
+
+												<!-- its not necessary to remove span when we have a user photo -->
+
+												<span class="caption-nophoto">
+
+													<i class="icon icon-photo"></i>
+
+													<span class="text">profile photo</span>
+
+												</span>
+
+												<!-- if there is user photo just put it below span -->
+
+												<img src="temp/user1.jpg" alt="" id="userPhoto">
+
+											</figure>
+
+										</div>
+
+										<div class="user-name">
+
+											<div class="h4-title no-margin">Vladimir Tereschenko</div>
+
+											<span class="position">Digital Marketing Professional</span>
+
+										</div>
+
+									</div>
+
+								</div>
+
+								<div class="col-xs-12 col-sm-4 col-md-4 col-lg-7" id="contact-sm">
+
+									<ul class="clear contacts-list">
+
+										<li><i class="icon icon-maps"></i>Kiev,  Ukraine</li>
+
+										<li><i class="icon icon-email"></i>vovat@gmail.com</li>
+
+										<li><i class="icon icon-telephone"></i>+38(097) 123-45-54</li>
+
+									</ul>
+
+								</div>
+
+					</div>
+
+				</div>
+
+				<!-- / overview head -->
+
+				
+
+				<!-- overview body -->
+
+				<div class="card overview-body collapsed-part" id="overviewBody">
+
+					<div class="title">Recorded <span id="videoDate">Jun 14 2017</span></div>
+
+					<div class="row collapsed-row">
+
+						<div class="col-xs-12 col-md-8 blue-part">
+
+							<button class="collapsed-btn" data-toggle="#overviewBody">
+
+								<i class="icon icon-keyboard-right-arrow-button first-icon"></i>
+
+								<i class="icon icon-keyboard-left-arrow-button next-icon"></i>
+
+							</button>
+
+							<div class="frame user-frame-main">
+
+								<video id="demo" class="video-js" controls preload="auto"
+
+								data-setup="{}">
+
+								<source src="video/video2.mp4" type='video/mp4'>
+
+									<p class="vjs-no-js">
+
+										To view this video please enable JavaScript, and consider upgrading to a web browser that
+
+										<a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
+
+									</p>
+
+								</video>
+
+								<!-- contorls at top -->
+
+								<div class="controls">
+
+									<div class="row">
+
+										<div class="full-mobile col-xs-8 col-md-9">
+
+											<div class="action-links">
+
+												<div class="dropdown" data-dropdown>
+
+													<div class="anchor">
+
+														<div class="text">Digital Marketind Interview</div>
+
+													</div>
+
+													<div class="inner">
+
+														<ul class="clear dropdown-list" id="changeVideo" data-url="static/data/video.json?video=">
+
+															<li data-video-id="1">Interview #1</li>
+
+															<li data-video-id="2">Interview #2</li>
+
+															<li data-video-id="3">Interview #3</li>
+
+															<li>Interview #4</li>
+
+														</ul>
+
+													</div>
+
+												</div>
+
+												<div class="setting">
+
+													<a href="#interview-popup" class="open-popup-link btn dark-round-btn">
+
+														<i class="icon icon-settings"></i>
+
+													</a>
+
+												</div>
+
+											</div>
+
+										</div>
+
+									</div>
+
+								</div>
+
+								<!-- change video btn -->
+
+								<button type="button" class="btn dark-btn change-btn" data-interviewer-mp4="video/video2.mp4" data-interviewer-ogg="video/video2.ogg" data-candidate-mp4="video/oceans.mp4" data-candidate-ogg="video/oceans.ogg" id="changeBtn" data-active="candidate">
+
+									<span class="text">
+
+										<i class="icon icon-change-view"></i>
+
+										<span class="caption active">Candidate</span>
+
+										<span class="caption">Interviewer</span>
+
+									</span>
+
+									<span class="soan fade"></span>
+
+								</button>
+
+							</div>
+
+							<form action="" class="overview-search" id="overviewSearchForm" data-video-id="videoId" data-url="static/data/keywords.json?keywords=">
+
+								<div class="search-title">Search Keywords in video</div>
+
+				
+
+								<!-- add class with-tag if there are tags inside if there no tags inside add class rounded-->
+
+								<div class="form-group tags-group rounded">
+
+									<div class="tag-wrap" data-oninput="#tagInput">
+
+										<div class="scrolled-block">
+
+											<div id="tagCover" class="in-bl"></div>
+
+											<!-- input for a keyword request -->
+
+											<input type="text" id="tagInput" name="keyword">
+
+											<label for="tagInput">Keywords...</label> 
+
+										</div>
+
+									</div>
+
+									<div class="btn-wrap">
+
+										<span data-tooltip="Some little text here but not very large">
+
+											<span class="btn btn-light btn-round btn-xs btn-tooltip">
+
+												<i class="icon icon-info"></i>
+
+											</span>
+
+										</span>
+
+										<button type="submit" class="btn btn-round gradient-border">
+
+											<span class="text"><i class="icon icon-search"></i></span>
+
+											<span class="fade"></span>
+
+										</button>
+
+									</div>
+
+								</div>
+
+				
+
+								<div class="overview-keywords hidden" id="totalOverviewKey"><span id="totalKeyCount">1 result</span> founded</div>
+
+							</form>
+
+						</div>
+
+						<div class="col-xs-12 col-md-4 white-part">
+
+							<div class="h5-title overview-title">System Recognized Questions</div>
+
+							<div class="overview-content">
+
+								<div class="scrolled">
+
+									<ol class="clear list time-list" id="videoLinks">
+
+										<li data-time="8">
+
+											<span class="link">
+
+												Active link
+
+												<span class="time">00:00:08</span>
+
+											</span>
+
+										</li>
+
+										<li data-time="2">
+
+											<span class="link">
+
+												Lorem ipsum dolor sit
+
+												<span class="time">00:00:02</span>
+
+											</span>
+
+										</li>
+
+									</ol>
+
+								</div>
+
+							</div>
+
+							<div class="overview-footer">
+
+								<div class="row">
+
+									<div class="col-xs-12 col-ms-1 icon-wrap">
+
+										<i class="icon icon-show-off-your-skills"></i>
+
+									</div>
+
+									<div class="col-xs-12 col-ms-11">
+
+										For an accelerated viewing experience, our AI system has identified question phrases from the interview and provided a list below.
+
+										<br><br>
+
+										Please excuse any inconsistencies as our technology is constantly improving.
+
+									</div>
+
+								</div>
+
+							</div>
+
+						</div>
+
+					</div>
+
+				</div>
+
+				<!-- / overview body -->
+
+				<div id="pageTabs" class="tabs-content">
+
+					<!-- это вкладка для full profile -->
+					<div class="content active">
+						<!-- cards row-->
+						<div class="row card-row top-xs profile-main">
+							<!-- left side -->
+							<div class="col-xs-12 col-md-8 offset-bottom main-info">
+								<!-- Summary -->
+								<div class="card spaced offset-bottom" id="summary-scroll">
+									<div class="row header">
+										<div class="col-xs-12">
+											<div class="h5-title no-margin">Summary</div>
+										</div>
+									</div>
+									<!-- если блок с информацией не заполнен, то к блоку  h2-title добавить класс .hidden-->
+									<div class="h2-title no-margin card-title change-text" id="summaryMess" data-length="264">
+										I’m on a journey to help make changes that improve the society we live in and find the best ways to unlock potential in others. I’m on a journey to help make changes that improve the society we live in and find the best ways to unlock potential in others.
+									</div>
+									<!-- если блок с информацией не заполнен, то к блоку  hidden-helper добавить класс .active-->
+									<div class="hidden-helper">Summarize your experience, current occupation and career goals in a brief summary.</div>
+								</div>
+								<!-- / Summary -->
+
+								<!-- Technical Skills -->
+								<div class="card spaced offset-bottom" id="technical-scroll">
+									<div class="row header">
+										<div class="col-xs-12">
+											<div class="h5-title no-margin">Technical Skills</div>
+										</div>
+									</div>
+									<!-- если блок с информацией не заполнен, то к блоку  parent-cover добавить класс .hidden-->
+									<!-- добавлен класс not-editable для того, чтоб не было ховера и редактирования -->
+									<div class="skill-link lint-inside parent-cover not-editable">
+										<ul class="clear skills-list full-list" id="technicalskills-list">
+											<li>
+												<div class="title tech-title" id="titleChange1">
+													Time Management
+													<span class="years" id="yearChange1">7 years</span>
+													<span class="last-year">Last uses: <span class="value" id="lastYear1">2017</span></span>
+												</div>
+											</li>
+											<li>
+												<div class="title tech-title" id="titleChange2">
+													Communication
+													<span class="years" id="yearChange2">1 year</span>
+													<span class="last-year">Last uses: <span class="value" id="lastYear2">2014</span></span>
+												</div>
+											</li>
+											<li>
+												<div class="title tech-title" id="titleChange3">
+													Interfaces
+													<span class="years" id="yearChange3">1 year</span>
+													<span class="last-year">Last uses: <span class="value" id="lastYear3">2010</span></span>
+												</div>
+											</li>
+											<li>
+												<div class="title tech-title" id="titleChange4">
+													Interpersonal skills
+													<span class="years" id="yearChange4">1 year</span>
+													<span class="last-year">Last uses: <span class="value" id="lastYear4">2010</span></span>
+												</div>
+											</li>
+											<li>
+												<div class="title tech-title" id="titleChange5">
+													Visual Design
+													<span class="years" id="yearChange5">3 years</span>
+													<span class="last-year">Last uses: <span class="value" id="lastYear5">2015</span></span>
+												</div>
+											</li>
+										</ul>
+									</div>
+									<!-- если блок с информацией не заполнен, то к блоку  hidden-helper добавить класс .active-->
+									<div class="hidden-helper">List the core technical skills your have or used in the past</div>
+								</div>
+								<!-- / Technical Skills -->
+
+								<!-- Soft Skills -->
+								<div class="card spaced offset-bottom" id="soft-scroll">
+									<div class="row header">
+										<div class="col-xs-12">
+											<div class="h5-title no-margin">Soft Skills</div>
+										</div>
+									</div>
+										<!-- если блок с информацией не заполнен, то к блоку  parent-cover добавить класс .hidden-->
+									<!-- добавлен класс not-editable для того, чтоб не было ховера и редактирования -->
+									<div class="skill-link lint-inside parent-cover not-editable" id="softGeneral">
+										<div class="cover">
+											<div class="skill-list-title" id="listCategory1" data-soft-category>Professional skills</div>
+											<ul class="clear skills-list auto-width full-list" data-title="#listCategory1">
+												<li><div class="title" id="titleChange11">Communication</div></li>
+												<li><div class="title" id="titleChange12">Teamwork</div></li>
+											</ul>
+											<div class="skill-list-title" id="listCategory2" data-soft-category>Interpersonal skills</div>
+											<ul class="clear skills-list auto-width full-list" data-title="#listCategory2">
+												<li><div class="title" id="titleChange21">Courtesy</div></li>
+												<li><div class="title" id="titleChange22">Positive attitude</div></li>
+												<li><div class="title" id="titleChange23">Responsibility</div></li>
+											</ul>
+											<div class="skill-list-title" id="listCategory3" data-soft-category>Other skills</div>
+											<ul class="clear skills-list auto-width full-list" data-title="#listCategory3">
+												<li><div class="title" id="titleChange31">Integrity</div></li>
+												<li><div class="title" id="titleChange32">Work ethic</div></li>
+											</ul>
+										</div>
+										<span class="edit-link">
+											<i class="icon icon-pencil-edit"></i>
+										</span>
+									</div>
+									<!-- если блок с информацией не заполнен, то к блоку  hidden-helper добавить класс .active-->
+									<div class="hidden-helper">Think of what soft skills make you a great team player</div>
+								</div>
+								<!-- / Soft Skills -->
+
+								<!-- Experience -->
+								<div class="card spaced offset-bottom" id="experience-scroll">
+									<div class="row header">
+										<div class="col-xs-12">
+											<div class="h5-title no-margin">Experience</div>
+										</div>
+									</div>
+									<!-- если блок с информацией не заполнен, то к блоку block-info-wrap добавить класс .hidden-->
+									<div class="description block-info-wrap" id="experienceMore" data-text="block" data-main>
+										<!-- 1 -->
+										<!-- добавлен класс not-editable для того, чтоб не было ховера и редактирования -->
+										<div class="block-info detail not-editable">
+											<div class="head">
+												<div class="title">
+												<!-- удалить иконку с карандашиком у заголовков -->
+													<span id="job1">Title 1</span>
+												</div>
+												<div class="position" id="company1">Another Company</div>
+												<div class="date">
+													<i class="icon icon-event"></i>
+													<span id="monthbefore1">July</span>
+													<span id="yearbefore1">2011</span> - 
+													<span id="monthafter1" class="if-not-current">August</span>
+													<span id="yearafter1" class="if-not-current">2017</span>
+													<span id="total1">(1 YEARS)</span>
+													<div class="place">
+														<span id="city1">Dallas</span><span>,</span>
+														<span id="location1">TX</span>
+													</div>
+												</div>
+											</div>
+											<div class="description full-length">
+												<div class="paragraph" id="description1">
+													I study how the design, affordances and choice architectures on digital screens affect users' behavior, thought patterns, relationships and general wellbeing. And using the intersection of behavioral science, cognitive neuroscience, psychology, habit-formation, social systems and ethics, I help invent and advocate for new designs that embed mindfulness into the screens people use. Ag between Thich Nhat Hanh, international spokesperson for Mindfulness and Zen meditation, and Google's leading product designers.
+												</div>
+											</div>
+										</div>
+										<!-- 2 -->
+										<div class="block-info detail not-editable">
+											<div class="head">
+												<div class="title">
+													<span id="job2">Title 2</span>
+												</div>
+												<div class="position" id="company2">Another Company</div>
+												<div class="date" data-current="true">
+													<i class="icon icon-event"></i>
+													<span id="monthbefore2">July</span>
+													<span id="yearbefore2">2012</span> - 
+													<span class="present-on">Present</span>
+													<span id="total2">(2 YEARS)</span>
+													<div class="place">
+														<span id="city2">Dallas</span><span>,</span>
+														<span id="location2">TX</span>
+													</div>
+												</div>
+											</div>
+											<div class="description full-length">
+												<div class="paragraph" id="description2">
+													I study how the design, affordances and choice architectures on digital screens affect users' behavior.
+												</div>
+											</div>
+										</div>
+									</div>
+									<!-- если блок с информацией не заполнен, то к блоку  hidden-helper добавить класс .active-->
+									<div class="hidden-helper">
+										<div class="paragraph">Describe your work experience in this section. The more effort you invest in describing your past and current work, the more the return.</div>
+										<div class="paragraph">Focus on success, on the challenges you overcame, on specific roles you help in the team.</div>
+										<div class="paragraph">You'll be able to provide:</div>
+										<ul class="clear list bullet-list">
+											<li>Job title</li>
+											<li>Company</li>
+											<li>Timeframe you worked at this position</li>
+											<li>Detailed description</li>
+										</ul>
+									</div>
+								</div>
+								<!-- / Experience -->
+
+								<!-- Education -->
+								<div class="card spaced offset-bottom" id="education-scroll">
+									<div class="row header">
+										<div class="col-xs-12">
+											<div class="h5-title no-margin">Education</div>
+										</div>
+									</div>
+										<!-- если блок с информацией не заполнен, то к блоку block-info-wrap добавить класс .hidden-->
+									<div id="educationMore" class="block-info-wrap">
+										<!-- 1 -->
+										<!-- добавлен класс not-editable для того, чтоб не было ховера и редактирования -->
+										<div class="block-info detail not-editable" id="educationInfo1">
+											<div class="head">
+												<div class="title">
+													<span id="instName1">State University Of Information and Communication Technologies</span>
+												</div>
+												<div class="position"><span data-change="#studyDegree" id="stDeg1">Bachelor of Science</span>, <span data-change="#fieldOfStudy" id="field1">Information Technology</span></div>
+												<div class="date" data-current="true">
+													<i class="icon icon-event"></i>
+													<span id="educStMonth1"">July</span>
+													<span id="educStYear1">2016</span> - 
+													<span id="educEndMonth1" class="if-not-current">August</span>
+													<span id="educEndYear1" class="if-not-current">2017</span>
+													<span id="totalEduc1" class="if-not-current">(6 YEARS)</span>
+													<span class="present-on">Present</span>
+													<div class="place">
+														<span id="educCity1 >Dallas</span><span>,</span>
+														<span id="educLoc1">LX</span>
+													</div>
+												</div>
+											</div>
+										</div>
+										<!-- 2 -->
+										<div class="block-info detail not-editable" class="block-info detail edited" id="educationInfo2">
+											<div class="head">
+												<div class="title">
+													<span id="instName2">State University Of Information and Communication Technologies</span>
+												</div>
+												<div class="position"><span id="stDeg2">Master of Science</span>, <span  id="field2">Communication Technology</span></div>
+												<div class="date" data-current="false">
+													<i class="icon icon-event"></i>
+													<span id="educStMonth2">April</span>
+													<span id="educStYear2">2010</span> - 
+													<span id="educEndMonth2" class="if-not-current">August</span>
+													<span id="educEndYear2"  class="if-not-current">2017</span>
+													<span id="totalEduc2" class="if-not-current">(6 YEARS)</span>
+													<span class="present-on">Present</span>
+													<div class="place">
+														<span id="educCity2">New York</span><span>,</span>
+														<span id="educLoc2">LX</span>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<!-- если блок с информацией не заполнен, то к блоку  hidden-helper добавить класс .active-->
+									<div class="hidden-helper">
+										Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo.
+									</div>
+								</div>
+								<!-- / Education -->
+
+								<!-- Certification -->
+								<div class="card spaced offset-bottom" id="certification-scroll">
+									<div class="row header">
+										<div class="col-xs-12">
+											<div class="h5-title no-margin">Certification</div>
+										</div>
+									</div>
+									<div class="description block-info-wrap" id="certificationMore">
+										<!-- 1 -->
+										<div class="block-info detail with-image not-editable" id="certificationInfo1">
+											<div class="head">
+												<div class="main">
+													<div class="title">
+														<span id="certTit1">Human - Computer Interaction</span>
+													</div>
+													<div class="position" id="certAut1">School of Visual Communications</div>
+												</div>
+												<div class="image">
+													<a href="temp/sertificate.jpg" class="image-cover gallery-link">
+														<img src="temp/sertificate.jpg" alt="sertificate">
+													</a>
+												</div>
+												<div class="date" data-current="false">
+													<i class="icon icon-event"></i>
+													<span id="certStMonth1">April</span>
+													<span id="certStYear1">2010</span><span>-</span>
+													<span id="certEndMonth1" class="if-not-current">May</span>
+													<span id="certEndYear1" class="if-not-current">2017</span>
+													<span id="totalCert1" class="if-not-current">(1 YEARS)</span>
+													<span class="present-on">Present</span>
+													<div class="place">
+														<span id="certCity1">Dallas</span><span>,</span>
+														<span id="certLoc1">TX</span>
+													</div>
+												</div>
+											</div>
+										</div>
+										<!-- 2 -->
+										<div class="block-info detail not-editable" id="certificationInfo2">
+											<div class="head">
+												<div class="title">
+													<span id="certTit2">Visual Design</span>
+												</div>
+												<div class="position" id="certAut2">School of Visual Communications</div>
+												<div class="date" data-current="false">
+													<i class="icon icon-event"></i>
+													<span id="certStMonth2">April</span>
+													<span id="certStYear2">2010</span><span>-</span>
+													<span id="certEndMonth2" class="if-not-current">May</span>
+													<span id="certEndYear2" class="if-not-current">2017</span>
+													<span id="totalCert2" class="if-not-current">(2 YEARS)</span>
+													<span class="present-on">Present</span>
+													<div class="place">
+														<span id="certCity2">New York</span><span>,</span>
+														<span id="certLoc2">LA</span>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="hidden-helper">
+										Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo.
+									</div>
+								</div>
+								<!-- / Certification -->
+
+								<!-- Languages -->
+								<div class="card spaced offset-bottom" id="languages-scroll">
+									<div class="row header">
+										<div class="col-xs-12">
+											<div class="h5-title no-margin">Languages</div>
+										</div>
+									</div>
+									<ul class="clear skills-list partical-mobile" id="languages-list">
+										<li>
+											<!-- not-editable добавить -->
+											<div class="skill-link not-editable">
+												<div class="title" id="langEd1">
+													Ukrainian
+												</div>
+												<div class="lead" id="langLead1">Native</div>
+											</div>
+										</li>
+										<li>
+											<div class="skill-link not-editable">
+												<div class="title" id="langEd2">
+													English
+												</div>
+												<div class="lead" id="langLead2">Professional</div>
+											</div>
+										</li>
+										<li>
+											<div class="skill-link not-editable">
+												<div class="title" id="langEd3">
+													Franch
+												</div>
+												<span class="lead" id="langLead3">Limited</span>
+											</div>
+										</li>
+									</ul>
+									<div class="hidden-helper">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo.</div>
+								</div>
+								<!-- / Languages -->
+
+								<!-- Recommendations &amp; Endorsements -->
+								<div class="card spaced offset-bottom space-bottom-xs" id="video-scroll">
+									<div class="row header">
+										<div class="col-xs-12 title-wrap">
+											<div class="h5-title no-margin">Video recommendations / endorsements</div>
+										</div>
+									</div>
+									<div class="nav-overflow">
+										<div class="slider-cover">
+											<div class="owl-carousel four-item-slider">
+												<div class="item">
+													<a href="https://www.youtube.com/watch?v=3gxNW2Ulpwk" class="frame static video-popup small-icon">
+														<img src="temp/recommendation/recommendation1.jpg" alt="">
+													</a>
+													<div class="caption">
+														<div class="name">Yana <span class="sec-name">Mirza</span></div>
+														<div class="position">ABC Production</div>
+														<!-- if no commens need to change tag <a> to <span> -->
+															<span class="link"><i class="icon icon-comment"></i></span>
+														</div>
+													</div>
+													<div class="item">
+														<a href="https://www.youtube.com/watch?v=3gxNW2Ulpwk" class="frame static video-popup small-icon">
+															<img src="temp/recommendation/recommendation1.jpg" alt="">
+														</a>
+														<div class="caption">
+															<div class="name">Yana <span class="sec-name">Mirza</span></div>
+															<div class="position">ABC Production</div>
+															<!-- if no commens need to change tag <a> to <span> -->
+																<span class="link"><i class="icon icon-comment"></i></span>
+															</div>
+														</div>
+														<div class="item">
+															<a href="https://www.youtube.com/watch?v=3gxNW2Ulpwk" class="frame static video-popup small-icon">
+																<img src="temp/recommendation/recommendation1.jpg" alt="">
+															</a>
+															<div class="caption">
+																<div class="name">Yana <span class="sec-name">Mirza</span></div>
+																<div class="position">ABC Production</div>
+																<!-- if no commens need to change tag <a> to <span> -->
+																	<span class="link"><i class="icon icon-comment"></i></span>
+																</div>
+															</div>
+															<div class="item">
+																<a href="https://www.youtube.com/watch?v=3gxNW2Ulpwk" class="frame static video-popup small-icon">
+																	<img src="temp/recommendation/recommendation1.jpg" alt="">
+																</a>
+																<div class="caption">
+																	<div class="name">Yana <span class="sec-name">Mirza</span></div>
+																	<div class="position">ABC Production</div>
+																	<!-- if no commens need to change tag <a> to <span> -->
+																		<span class="link"><i class="icon icon-comment"></i></span>
+																	</div>
+																</div>
+																<div class="item">
+																	<a href="https://www.youtube.com/watch?v=3gxNW2Ulpwk" class="frame static video-popup small-icon">
+																		<img src="temp/recommendation/recommendation1.jpg" alt="">
+																	</a>
+																	<div class="caption">
+																		<div class="name">Yana <span class="sec-name">Mirza</span></div>
+																		<div class="position">ABC Production</div>
+																		<!-- if no commens need to change tag <a> to <span> -->
+																			<span class="link"><i class="icon icon-comment"></i></span>
+																		</div>
+																	</div>
+																</div>
+															</div>
+															<div class="slider-nav" id="sliderNav">
+																<div class="slider-prev"><i class="icon icon-keyboard-left-arrow-button"></i></div>
+																<div class="slider-next"><i class="icon icon-keyboard-right-arrow-button"></i></div>
+															</div>
+														</div>
+													</div>
+								<!-- / Recommendations &amp; Endorsements -->
+
+								<!-- Interests, Hobbies & Links -->
+								<div class="card spaced offset-bottom" id="interests-scroll">
+									<div class="row header">
+										<div class="col-xs-12">
+											<div class="h5-title no-margin">Interests, Hobbies &amp; Links</div>
+										</div>
+									</div>
+									<ul class="clear skills-list" id="interests-list">
+										<li>
+											<div class="skill-link not-editable">
+												<div class="title" id="interestTitle1">
+													Title 1
+												</div>
+												<div class="lead" id="intLead1">Some caption</div>
+												<a href="https://talentfly.com/" class="tag-link" id="interestLink1"><i class="icon icon-link"></i></a>
+											</div>
+										</li>
+										<li>
+											<div class="skill-link not-editable">
+												<div class="title" id="interestTitle2">
+													Hiking
+												</div>
+												<div class="lead" id="intLead2">Some caption</div>
+											</div>
+										</li>
+									</ul>
+									<div class="hidden-helper">
+										Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo.
+									</div>
+								</div>
+								<!-- / Interests, Hobbies & Links -->
+
+								<!-- Volunteering Experience -->
+								<div class="card spaced" id="volunteering-scroll">
+									<div class="row header">
+										<div class="col-xs-12">
+											<div class="h5-title no-margin">Volunteering Experience</div>
+										</div>
+									</div>
+									<ul class="clear two-lines-list" id="volunteeringMore">
+										<!-- 1 -->
+										<li>
+											<div class="block-info detail not-editable" id="volInfo1">
+												<div class="head">
+													<div class="title">
+														<span  id="volOrg1">Volunteer</span>
+													</div>
+													<div class="position" id="volRol1" >Simple Solutions</div>
+													<div class="date" data-current="true">
+														<i class="icon icon-event"></i>
+														<span id="volStMonth1">July</span>
+														<span id="volStYear1">2016</span><span>-</span>
+														<span id="volEndMonth1" class="if-not-current">August</span>
+														<span id="volEndYear1" class="if-not-current">2017</span>
+														<span id="totalVol1" class="if-not-current">(6 YEARS)</span>
+														<span class="present-on">Present</span>
+														<div class="place">
+															<span id="volC1">Dallas</span><span>,</span>
+															<span id="volLoc1">TX</span>
+														</div>
+													</div>
+												</div>
+											</a>
+										</li>
+										<!-- 2 -->
+										<li>
+											<div class="block-info detail not-editable" id="volInfo2">
+												<div class="head">
+													<div class="title">
+														<span  id="volOrg2">Other Volunteer</span>
+													</div>
+													<div class="position" id="volRol2" >Some Role</div>
+													<div class="date" data-current="false">
+														<i class="icon icon-event"></i>
+														<span id="volStMonth2">July</span>
+														<span id="volStYear2">2016</span><span>-</span>
+														<span id="volEndMonth2" class="if-not-current">August</span>
+														<span id="volEndYear2" class="if-not-current">2017</span>
+														<span id="totalVol2" class="if-not-current">(6 YEARS)</span>
+														<span class="present-on">Present</span>
+														<div class="place">
+															<span id="volC2">Las Vegas</span><span>,</span>
+															<span id="volLoc2">NV</span>
+														</div>
+													</div>
+												</div>
+											</a>
+										</li>
+									</ul>
+									<div class="hidden-helper">
+										Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo.
+									</div>
+								</div>
+								<!-- / Volunteering Experience -->
+							</div>
+							<!-- / left side -->
+
+							<!-- right side -->
+							<div class="col-xs-12 col-md-4 offset-bottom fixed-parent tips-info">
+								<div class="card spaced fixed-block dropdown-xs">
+									<div class="header anchor-xs">
+										<div class="h5-title">Navigation</div>
+									</div>
+									<nav class="inner spy-nav">
+										<div class="block-simple link-inside">
+											<a href="#summary-scroll" class="title" data-scrollto="#summary-scroll">
+												<i class="icon icon-keyboard-right-arrow-button"></i> Summary
+											</a>
+										</div>
+										<div class="block-simple link-inside">
+											<a href="#technical-scroll" class="title" data-scrollto="#technical-scroll">
+												<i class="icon icon-keyboard-right-arrow-button"></i> Technical Skills
+											</a>
+										</div>
+										<div class="block-simple link-inside">
+											<a href="#soft-scrol" class="title" data-scrollto="#soft-scroll">
+												<i class="icon icon-keyboard-right-arrow-button"></i> Soft Skills
+											</a>
+										</div>
+										<div class="block-simple link-inside">
+											<a href="#experience-scrol" class="title" data-scrollto="#experience-scroll">
+												<i class="icon icon-keyboard-right-arrow-button"></i> Experience
+											</a>
+										</div>
+										<div class="block-simple link-inside">
+											<a href="#education-scroll" class="title" data-scrollto="#education-scroll">
+												<i class="icon icon-keyboard-right-arrow-button"></i> Education
+											</a>
+										</div>
+										<div class="block-simple link-inside">
+											<a href="#certification-scroll" class="title" data-scrollto="#certification-scroll">
+												<i class="icon icon-keyboard-right-arrow-button"></i> Certification
+											</a>
+										</div>
+										<div class="block-simple link-inside">
+											<a href="#languages-scroll" class="title" data-scrollto="#languages-scroll">
+												<i class="icon icon-keyboard-right-arrow-button"></i> Languages
+											</a>
+										</div>
+										<div class="block-simple link-inside">
+											<a href="#video-scroll" class="title" data-scrollto="#video-scroll">
+												<i class="icon icon-keyboard-right-arrow-button"></i> Video recommendations
+											</a>
+										</div>
+										<div class="block-simple link-inside">
+											<a href="#iinterests-scroll" class="title" data-scrollto="#interests-scroll">
+												<i class="icon icon-keyboard-right-arrow-button"></i> Interests, Hobbies &amp; Links
+											</a>
+										</div>
+										<div class="block-simple link-inside">
+											<a href="#volunteering-scroll" class="title" data-scrollto="#volunteering-scroll">
+												<i class="icon icon-keyboard-right-arrow-button"></i> Volunteering Experience
+											</a>
+										</div>
+									</nav>
+								</div>
+							</div>
+							<!-- / right side -->
+						</div>
+					</div>
+					<!-- / вкладка для full profile -->
+
+					<!-- это вкладка для overview -->
+					<div class="content">
+						<!-- summary / skills -->
+						<div class="row card-row">
+							<div class="col-xs-12 col-md-6 offset-bottom">
+								<div class="card spaced">
+									<div class="row header">
+										<div class="col-xs-12">
+											<div class="h5-title no-margin">Summary</div>
+										</div>
+									</div>
+									<div class="h2-title no-margin card-title change-text" data-length data-text="210">
+										I’m on a journey to help make changes that improve the society we live in and find the best ways to unlock potential in others.
+									</div>
+								</div>
+							</div>
+							<div class="col-xs-12 col-md-6 offset-bottom">
+								<div class="card spaced">
+									<div class="row header">
+										<div class="tabs-nav col-xs-8">
+											<ul class="clear tabs no-margin" data-tabs="#skillsTabs1">
+												<li class="active">Technical Skills</li>
+												<li>Soft Skills</li>
+											</ul>
+										</div>
+									</div>
+									<div id="skillsTabs1" class="tabs-content">
+										<div class="content active">
+
+											<!-- content btn -->
+											<div class="btn-nav col-xs-4 align-right content-btn">
+												<div class="tabs-content" id="skillsTabsButtons">
+													<div class="content active">
+														<button type="button" class="btn btn-grey btn-xs spaced" data-set-tab="1|#skillsTabsButtons,#skillsTabs1_1">
+															<i class="icon icon-list btn-icon"></i>
+															list<span class="sm-inline"> view</span>
+														</button>
+													</div>
+													<div class="content">
+														<button type="button" class="btn btn-grey btn-xs spaced" data-set-tab="0|#skillsTabsButtons,#skillsTabs1_1">
+															<i class="icon icon-chart btn-icon"></i>
+															chart<span class="sm-inline"> view</span>
+														</button>
+													</div>
+												</div>
+											</div>
+
+											<div class="tabs-content" id="skillsTabs1_1">
+												<div class="content active graph-content">
+													<div class="relative">
+														<div id="chart1" class="graph" data-labels="Digital marketing, Time Management, Digital marketing, Mentoring, Time Management, Mentoring, WEB Analytics, Media, Anyway, Something else, more info, Other" data-values="3,1,2,2,1,1,2,2,1,3,2,5" data-text="text1, text2, text3, text4, text5, text6, text7, text6, text9, text10, text11" data-subtext="subtext1, subtext2, subtext3, subtext4, subtext5, subtext6, subtext7, subtext6, subtext9, text, text" data-color="#1c4e9b" data-suffix="7 years,5 years,2 years,1 year,2 years,1 year,1 year,1 year,1 year,(+ 3 MORE)">
+															<div class="caption">
+																<strong>12</strong>
+																technical skills
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="content text-content">
+													<!-- list technical skills view -->
+													<div class="wrap-info" data-limit="3">
+														<div class="block-info">
+															<div class="head">
+																<div class="title">
+																	Time Management
+																</div>
+																<div class="position">
+																	<i class="icon icon-settings left-icon"></i>
+																	Last uses: 2017
+																</div>
+																<div class="date">
+																	<div class="place">8 years</div>
+																</div>
+															</div>
+														</div>
+														<div class="block-info">
+															<div class="head">
+																<div class="title">
+																	Prototyping
+																</div>
+																<div class="position">
+																	<i class="icon icon-settings left-icon"></i>
+																	Last uses: 2014
+																</div>
+																<div class="date">
+																	<div class="place">3 years</div>
+																</div>
+															</div>
+														</div>
+														<div class="block-info">
+															<div class="head">
+																<div class="title">
+																	Web Analytics
+																</div>
+																<div class="position">
+																	<i class="icon icon-settings left-icon"></i>
+																	Last uses: 2015
+																</div>
+																<div class="date">
+																	<div class="place">2 years</div>
+																</div>
+															</div>
+														</div>
+														<div class="block-info">
+															<div class="head">
+																<div class="title">
+																	Web Analytics
+																</div>
+																<div class="position">
+																	<i class="icon icon-settings left-icon"></i>
+																	Last uses: 2015
+																</div>
+																<div class="date">
+																	<div class="place">2 years</div>
+																</div>
+															</div>
+														</div>
+														<div class="block-info">
+															<div class="head">
+																<div class="title">
+																	Web Analytics
+																</div>
+																<div class="position">
+																	<i class="icon icon-settings left-icon"></i>
+																	Last uses: 2015
+																</div>
+																<div class="date">
+																	<div class="place">2 years</div>
+																</div>
+															</div>
+														</div>
+														<!-- view more link -->
+														<div class="scrolled-more hidden">
+															<a href="full_profile.html">+ <span class="count"></span> More</a>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="content">
+											<div class="tabs-content" id="skillsTabs1_2">
+												<!-- soft skills lists -->
+												<div class="wrap-info" data-limit="3">
+													<div class="block-info no-margin">
+														<div class="skill-list-title">Category 1</div>
+														<ul class="clear skills-list fifth-item">
+															<li>
+																<div class="title">
+																	<span class="skill-link not-editable">
+																		Soft Skill 1
+																		<span class="edit-link">
+																			<i class="icon icon-pencil-edit"></i>
+																		</span>
+																	</span>
+																</div>
+															</li>
+															<li>
+																<div class="title">
+																	<span class="skill-link not-editable">
+																		Soft Skill 2
+																		<span class="edit-link">
+																			<i class="icon icon-pencil-edit"></i>
+																		</span>
+																	</span>
+																</div>
+															</li>
+															<li>
+																<div class="title">
+																	<span class="skill-link not-editable">
+																		Soft Skill 3
+																		<span class="edit-link">
+																			<i class="icon icon-pencil-edit"></i>
+																		</span>
+																	</span>
+																</div>
+															</li>
+															<li>
+																<div class="title">
+																	<span class="skill-link not-editable">
+																		Soft Skill 4
+																		<span class="edit-link">
+																			<i class="icon icon-pencil-edit"></i>
+																		</span>
+																	</span>
+																</div>
+															</li>
+															<li>
+																<div class="title">
+																	<span class="skill-link not-editable">
+																		Soft Skill 5
+																		<span class="edit-link">
+																			<i class="icon icon-pencil-edit"></i>
+																		</span>
+																	</span>
+																</div>
+															</li>
+														</ul>
+													</div>
+													<div class="block-info no-margin">
+														<div class="skill-list-title">Category 2</div>
+														<ul class="clear skills-list fifth-item">
+															<li>
+																<div class="title">
+																	<span class="skill-link not-editable">
+																		Soft Skill 1
+																		<span class="edit-link">
+																			<i class="icon icon-pencil-edit"></i>
+																		</span>
+																	</span>
+																</div>
+															</li>
+															<li>
+																<div class="title">
+																	<span class="skill-link not-editable">
+																		Soft Skill 2
+																		<span class="edit-link">
+																			<i class="icon icon-pencil-edit"></i>
+																		</span>
+																	</span>
+																</div>
+															</li>
+															<li>
+																<div class="title">
+																	<span class="skill-link not-editable">
+																		Soft Skill 3
+																		<span class="edit-link">
+																			<i class="icon icon-pencil-edit"></i>
+																		</span>
+																	</span>
+																</div>
+															</li>
+															<li>
+																<div class="title">
+																	<span class="skill-link not-editable">
+																		Soft Skill 4
+																		<span class="edit-link">
+																			<i class="icon icon-pencil-edit"></i>
+																		</span>
+																	</span>
+																</div>
+															</li>
+															<li>
+																<div class="title">
+																	<a href="full_profile.html" class="skill-link view-more not-editable">
+																		More Skills
+																	</a>
+																</div>
+															</li>
+														</ul>
+													</div>
+													<div class="block-info no-margin">
+														<div class="skill-list-title">Category 3</div>
+														<ul class="clear skills-list fifth-item">
+															<li>
+																<div class="title">
+																	<span class="skill-link not-editable">
+																		Soft Skill 1
+																		<span class="edit-link">
+																			<i class="icon icon-pencil-edit"></i>
+																		</span>
+																	</span>
+																</div>
+															</li>
+															<li>
+																<div class="title">
+																	<span class="skill-link not-editable">
+																		Soft Skill 2
+																		<span class="edit-link">
+																			<i class="icon icon-pencil-edit"></i>
+																		</span>
+																	</span>
+																</div>
+															</li>
+															<li>
+																<div class="title">
+																	<span class="skill-link not-editable">
+																		Soft Skill 3
+																		<span class="edit-link">
+																			<i class="icon icon-pencil-edit"></i>
+																		</span>
+																	</span>
+																</div>
+															</li>
+															<li>
+																<div class="title">
+																	<span class="skill-link not-editable">
+																		Soft Skill 4
+																		<span class="edit-link">
+																			<i class="icon icon-pencil-edit"></i>
+																		</span>
+																	</span>
+																</div>
+															</li>
+															<li>
+																<div class="title">
+																	<a href="full_profile.html" class="skill-link view-more not-editable">
+																		More Skills
+																	</a>
+																</div>
+															</li>
+														</ul>
+													</div>
+													<div class="block-info no-margin">
+														<div class="skill-list-title">Category 3</div>
+														<ul class="clear skills-list fifth-item">
+															<li>
+																<div class="title">
+																	<span class="skill-link not-editable">
+																		Soft Skill 1
+																		<span class="edit-link">
+																			<i class="icon icon-pencil-edit"></i>
+																		</span>
+																	</span>
+																</div>
+															</li>
+															<li>
+																<div class="title">
+																	<span class="skill-link not-editable">
+																		Soft Skill 2
+																		<span class="edit-link">
+																			<i class="icon icon-pencil-edit"></i>
+																		</span>
+																	</span>
+																</div>
+															</li>
+															<li>
+																<div class="title">
+																	<span class="skill-link not-editable">
+																		Soft Skill 3
+																		<span class="edit-link">
+																			<i class="icon icon-pencil-edit"></i>
+																		</span>
+																	</span>
+																</div>
+															</li>
+															<li>
+																<div class="title">
+																	<span class="skill-link not-editable">
+																		Soft Skill 4
+																		<span class="edit-link">
+																			<i class="icon icon-pencil-edit"></i>
+																		</span>
+																	</span>
+																</div>
+															</li>
+															<li>
+																<div class="title">
+																	<a href="full_profile.html" class="skill-link view-more not-editable">
+																		More Skills
+																	</a>
+																</div>
+															</li>
+														</ul>
+													</div>
+													<div class="block-info no-margin">
+														<div class="skill-list-title">Category 3</div>
+														<ul class="clear skills-list fifth-item">
+															<li>
+																<div class="title">
+																	<span class="skill-link not-editable">
+																		Soft Skill 1
+																		<span class="edit-link">
+																			<i class="icon icon-pencil-edit"></i>
+																		</span>
+																	</span>
+																</div>
+															</li>
+															<li>
+																<div class="title">
+																	<span class="skill-link not-editable">
+																		Soft Skill 2
+																		<span class="edit-link">
+																			<i class="icon icon-pencil-edit"></i>
+																		</span>
+																	</span>
+																</div>
+															</li>
+															<li>
+																<div class="title">
+																	<span class="skill-link not-editable">
+																		Soft Skill 3
+																		<span class="edit-link">
+																			<i class="icon icon-pencil-edit"></i>
+																		</span>
+																	</span>
+																</div>
+															</li>
+															<li>
+																<div class="title">
+																	<span class="skill-link not-editable">
+																		Soft Skill 4
+																		<span class="edit-link">
+																			<i class="icon icon-pencil-edit"></i>
+																		</span>
+																	</span>
+																</div>
+															</li>
+															<li>
+																<div class="title">
+																	<a href="full_profile.html" class="skill-link view-more not-editable">
+																		More Skills
+																	</a>
+																</div>
+															</li>
+														</ul>
+													</div>
+													<!-- view more link -->
+													<div class="scrolled-more hidden">
+														<a href="full_profile.html" class="link">+ <span class="count"></span> More</a>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<!-- experience -->
+						<div class="row card-row">
+							<div class="col-xs-12 col-md-6 offset-bottom">
+								<div class="card spaced">
+									<div class="row header">
+										<div class="col-xs-8 tabs-nav">
+											<div class="h5-title no-margin">Experience <small class="helper">(9 years)</small></div>
+										</div>
+										<div class="col-xs-4 align-right btn-nav">
+											<div class="tabs-content" id="skillsTabsButtons2">
+												<div class="content">
+													<button type="button" class="btn btn-grey btn-xs spaced" data-set-tab="1|#skillsTabsButtons2,#experienceTabs">
+														<i class="icon icon-list btn-icon"></i>
+														list<span class="sm-inline"> view</span>
+													</button>
+												</div>
+												<div class="content active">
+													<button type="button" class="btn btn-grey btn-xs spaced" data-set-tab="0|#skillsTabsButtons2,#experienceTabs">
+														<i class="icon icon-chart btn-icon"></i>
+														chart<span class="sm-inline"> view</span>
+													</button>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="tabs-content" id="experienceTabs">
+										<div class="content graph-content">
+											<div class="relative">
+
+												<div id="chart2" class="graph" data-labels="Digital marketing, Mentoring, Something else" data-values="5,4,2" data-text="text1, text2, text" data-subtext="subtext1, subtext2, subtext" data-color="#3a6cb9" data-suffix="5 years,2 years, 1 year">
+													<div class="caption">
+														<strong>7</strong>
+														years of experience
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="content text-content active">
+											<!-- list experience view -->
+											<div class="wrap-info" data-limit="3">
+												<div class="block-info">
+													<div class="head">
+														<div class="title">
+															Senior Project Manager
+														</div>
+														<div class="position">ABC Production</div>
+														<div class="date">
+															<i class="icon icon-event"></i>
+															April 2016 - Present (2 YEARS)
+															<div class="place">Dallas, TX</div>
+														</div>
+													</div>
+												</div>
+												<div class="block-info">
+													<div class="head">
+														<div class="title">
+															Senior Project Manager
+														</div>
+														<div class="position">ABC Production</div>
+														<div class="date">
+															<i class="icon icon-event"></i>
+															April 2016 - Present (2 YEARS)
+															<div class="place">Dallas, TX</div>
+														</div>
+													</div>
+												</div>
+												<div class="block-info">
+													<div class="head">
+														<div class="title">
+															Senior Project Manager
+														</div>
+														<div class="position">ABC Production</div>
+														<div class="date">
+															<i class="icon icon-event"></i>
+															April 2016 - Present (2 YEARS)
+															<div class="place">Dallas, TX</div>
+														</div>
+													</div>
+												</div>
+												<div class="block-info">
+													<div class="head">
+														<div class="title">
+															Senior Project Manager
+														</div>
+														<div class="position">ABC Production</div>
+														<div class="date">
+															<i class="icon icon-event"></i>
+															April 2016 - Present (2 YEARS)
+															<div class="place">Dallas, TX</div>
+														</div>
+													</div>
+												</div>
+												<div class="block-info">
+													<div class="head">
+														<div class="title">
+															Senior Project Manager
+														</div>
+														<div class="position">ABC Production</div>
+														<div class="date">
+															<i class="icon icon-event"></i>
+															April 2016 - Present (2 YEARS)
+															<div class="place">Dallas, TX</div>
+														</div>
+													</div>
+												</div>
+												<div class="block-info">
+													<div class="head">
+														<div class="title">
+															Senior Project Manager
+														</div>
+														<div class="position">ABC Production</div>
+														<div class="date">
+															<i class="icon icon-event"></i>
+															April 2016 - Present (2 YEARS)
+															<div class="place">Dallas, TX</div>
+														</div>
+													</div>
+												</div>
+												<div class="block-info">
+													<div class="head">
+														<div class="title">
+															Senior Project Manager
+														</div>
+														<div class="position">ABC Production</div>
+														<div class="date">
+															<i class="icon icon-event"></i>
+															April 2016 - Present (2 YEARS)
+															<div class="place">Dallas, TX</div>
+														</div>
+													</div>
+												</div>
+												<!-- view more link -->
+												<div class="scrolled-more hidden">
+													<a href="#test-popup" class="open-popup-link">+ <span class="count"></span> More</a>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-xs-12 col-md-6 offset-bottom">
+								<div class="card spaced">
+									<div class="header">
+										<ul class="clear tabs no-margin" data-tabs="#educationTabs">
+											<li class="active">Education</li>
+											<li>Certification</li>
+											<li>Languages</li>
+										</ul>
+									</div>
+									<div class="tabs-content" id="educationTabs">
+										<div class="content active">
+											<!-- Education -->
+											<div class="wrap-info" data-limit="3">
+												<div class="block-info">
+													<div class="head">
+														<div class="title">
+															State University Of Communication Technologies
+														</div>
+														<div class="position">Bachelor of Science (BS)</div>
+														<div class="date">
+															<i class="icon icon-event"></i>
+															April 2016 - Present (2 YEARS)
+															<div class="place">Dallas, TX</div>
+														</div>
+													</div>
+												</div>
+												<div class="block-info">
+													<div class="head">
+														<div class="title">
+															State University
+														</div>
+														<div class="position">Bachelor of Science (BS), Information Technology</div>
+														<div class="date">
+															<i class="icon icon-event"></i>
+															April 2016 - April 2016 (2 YEARS)
+															<div class="place">Dallas, TX</div>
+														</div>
+													</div>
+												</div>
+												<div class="block-info">
+													<div class="head">
+														<div class="title">
+															State University Of Communication Technologies
+														</div>
+														<div class="position">Bachelor of Science (BS), Information Technology</div>
+														<div class="date">
+															<i class="icon icon-event"></i>
+															April 2016 - Present (2 YEARS)
+															<div class="place">Dallas, TX</div>
+														</div>
+													</div>
+												</div>
+												<!-- view more link -->
+												<div class="scrolled-more hidden">
+													<a href="full_profile.html">+ <span class="count"></span> More</a>
+												</div>
+											</div>
+										</div>
+										<div class="content">
+											<!-- Certification -->
+											<div class="wrap-info" data-limit="3">
+												<!-- 1 -->
+												<div class="block-info with-image">
+													<div class="head">
+														<div class="main">
+															<div class="title">
+																<span>Human - Computer Interaction</span>
+															</div>
+															<div class="position">School of Visual Communications</div>
+														</div>
+														<div class="image">
+															<!-- class gallery-link inits gallery use only for the visible blocks (data-limit="3")-->
+															<a href="temp/sertificate2.jpg" class="image-cover gallery-link">
+																<img src="temp/sertificate2.jpg" alt="sertificate">
+															</a>
+														</div>
+														<div class="date">
+															<i class="icon icon-event"></i>
+															April 2016 - April 2016 (2 YEARS)
+															<div class="place">Dallas, TX</div>
+														</div>
+													</div>
+												</div>
+												<!-- 2 -->
+												<div class="block-info with-image">
+													<div class="head">
+														<div class="main">
+															<div class="title">
+																<span>Human - Computer Interaction</span>
+															</div>
+															<div class="position">School of Visual Communications</div>
+														</div>
+														<div class="image">
+															<a href="temp/sertificate3.jpg" class="image-cover gallery-link">
+																<img src="temp/sertificate3.jpg" alt="sertificate">
+															</a>
+														</div>
+														<div class="date">
+															<i class="icon icon-event"></i>
+															April 2016 - Present (2 YEARS)
+															<div class="place">Dallas, TX</div>
+														</div>
+													</div>
+												</div>
+												<!-- 3 -->
+												<div class="block-info with-image">
+													<div class="head">
+														<div class="main">
+															<div class="title">
+																<span>Human - Computer Interaction</span>
+															</div>
+															<div class="position">School of Visual Communications</div>
+														</div>
+														<div class="image">
+															<a href="temp/sertificate.jpg" class="image-cover gallery-link">
+																<img src="temp/sertificate.jpg" alt="sertificate">
+															</a>
+														</div>
+														<div class="date">
+															<i class="icon icon-event"></i>
+															April 2016 - Present (2 YEARS)
+															<div class="place">Dallas, TX</div>
+														</div>
+													</div>
+												</div>
+												<!-- 4 -->
+												<div class="block-info with-image">
+													<div class="head">
+														<div class="main">
+															<div class="title">
+																<span>Human - Computer Interaction</span>
+															</div>
+															<div class="position">School of Visual Communications</div>
+														</div>
+														<div class="image">
+															<figure class="image-cover">
+																<img src="temp/sertificate.jpg" alt="sertificate">
+															</figure>
+														</div>
+														<div class="date">
+															<i class="icon icon-event"></i>
+															April 2016 - Present (2 YEARS)
+															<div class="place">Dallas, TX</div>
+														</div>
+													</div>
+												</div>
+												<!-- 5 -->
+												<div class="block-info with-image">
+													<div class="head">
+														<div class="main">
+															<div class="title">
+																<span>Human - Computer Interaction</span>
+															</div>
+															<div class="position">School of Visual Communications</div>
+														</div>
+														<div class="image">
+															<figure class="image-cover">
+																<img src="temp/sertificate.jpg" alt="sertificate">
+															</figure>
+														</div>
+														<div class="date">
+															<i class="icon icon-event"></i>
+															April 2016 - Present (2 YEARS)
+															<div class="place">Dallas, TX</div>
+														</div>
+													</div>
+												</div>
+												<!-- view more link -->
+												<div class="scrolled-more hidden">
+													<a href="full_profile.html">+ <span class="count"></span> More</a>
+												</div>
+											</div>
+										</div>
+										<div class="content">
+											<!-- Languages -->
+											<div class="wrap-info" data-limit="3">
+												<div class="graph-line">
+													<div class="label">Ukrainian</div>
+													<div class="text">Native</div>
+													<div class="progress" style="width: 50%"></div>
+												</div>
+												<div class="graph-line">
+													<div class="label">English</div>
+													<div class="text">Native</div>
+													<div class="progress" style="width: 60%"></div>
+												</div>
+												<div class="graph-line">
+													<div class="label">Ukrainian</div>
+													<div class="text">Native</div>
+													<div class="progress" style="width: 100%"></div>
+												</div>
+												<div class="graph-line">
+													<div class="label">Ukrainian</div>
+													<div class="text">Native</div>
+													<div class="progress" style="width: 100%"></div>
+												</div>
+												<!-- view more link -->
+												<div class="scrolled-more hidden">
+													<a href="full_profile.html">+ <span class="count"></span> More</a>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<!-- recommendations -->
+						<div class="row card-row">
+							<div class="col-xs-12 col-md-6 offset-bottom">
+								<div class="card spaced">
+									<div class="row header">
+										<div class="col-xs-12">
+											<div class="h5-title no-margin">Video recommendations / endorsements</div>
+										</div>
+									</div>
+									<div class="nav-overflow">
+										<div class="slider-cover">
+											<div class="recommendation-slider owl-carousel">
+												<div class="item">
+													<a href="https://www.youtube.com/watch?v=3gxNW2Ulpwk" class="frame static video-popup small-icon">
+														<img src="temp/recommendation/recommendation1.jpg" alt="">
+													</a>
+													<a href="#" class="caption">
+														<div class="name">Oleksandr <span class="sec-name">Stepanuk</span></div>
+														<div class="position">Alpha Industries</div>
+														<span class="link"><i class="icon icon-comment"></i></span>
+													</a>
+												</div>
+												<div class="item">
+													<a href="https://www.youtube.com/watch?v=EkSyqM5wHfc" class="frame static video-popup small-icon">
+														<img src="temp/recommendation/recommendation2.jpg" alt="">
+													</a>
+													<a href="#" class="caption">
+														<div class="name">Yana <span class="sec-name">Mirza</span></div>
+														<div class="position">ABC Production</div>
+														<!-- add class active if there are comments -->
+														<span class="link"><i class="icon icon-comment"></i></span>
+													</a>
+												</div>
+												<div class="item">
+													<a href="https://www.youtube.com/watch?v=3gxNW2Ulpwk" class="frame static video-popup small-icon">
+														<img src="temp/recommendation/recommendation1.jpg" alt="">
+													</a>
+													<a href="#" class="caption">
+														<div class="name">Oleksandr <span class="sec-name">Stepanuk</span></div>
+														<div class="position">Alpha Industries</div>
+														<span class="link"><i class="icon icon-comment"></i></span>
+													</a>
+												</div>
+												<div class="item">
+													<a href="https://www.youtube.com/watch?v=EkSyqM5wHfc" class="frame static video-popup small-icon">
+														<img src="temp/recommendation/recommendation2.jpg" alt="">
+													</a>
+													<a href="#" class="caption">
+														<div class="name">Yana <span class="sec-name">Mirza</span></div>
+														<div class="position">ABC Production</div>
+														<span class="link"><i class="icon icon-comment"></i></span>
+													</a>
+												</div>
+											</div>
+										</div>
+										<div class="slider-nav">
+											<div class="slider-prev"><i class="icon icon-keyboard-left-arrow-button"></i></div>
+											<div class="slider-next"><i class="icon icon-keyboard-right-arrow-button"></i></div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-xs-12 col-md-6 offset-bottom">
+								<div class="card spaced">
+									<div class="row header">
+										<div class="col-xs-12">
+											<ul class="clear tabs no-margin" data-tabs="#interestTabs1">
+												<li class="active">
+													Interests, 
+													<span class="xs-block-ins">Hobbies &amp; Links</span>
+												</li>
+												<li>
+													Volunteering
+													<span class="xs-block-ins"> Experience</span>
+												</li>
+											</ul>
+										</div>
+									</div>
+									<div id="interestTabs1" class="tabs-content">
+										<div class="content active">
+											<!-- Interests and other view -->
+											<div class="wrap-info tags-row" data-limit="12">
+												<div class="tag-cover">
+													<div class="large tag">
+														<div class="title">Psychology</div>
+														<div class="details">
+															Knowing customers' &amp; team members psyche is key...
+														</div>
+													</div>
+												</div>
+												<div class="tag-cover">
+													<div class="large tag">
+														<div class="title">Hiking</div>
+														<div class="details">
+															Bachelor of Science (BS), Information Technology
+														</div>
+													</div>
+												</div>
+												<div class="tag-cover">
+													<a href="#" class="large tag link-inside">
+														<div class="title">Photography</div>
+														<div class="details">
+															Best shots for best memory moments
+														</div>
+														<span class="tag-link"><i class="icon icon-link"></i></span>
+													</a>
+												</div>
+												<div class="tag-cover">
+													<a href="#" class="large tag link-inside">
+														<div class="title">Photography</div>
+														<div class="details">
+															Best shots for best memory moments
+														</div>
+														<span class="tag-link"><i class="icon icon-link"></i></span>
+													</a>
+												</div>
+												<div class="tag-cover">
+													<div class="large tag">
+														<div class="title">Psychology</div>
+														<div class="details">
+															Knowing customers' &amp; team members psyche is key...
+														</div>
+													</div>
+												</div>
+												<div class="tag-cover">
+													<div class="large tag">
+														<div class="title">Yoga</div>
+													</div>
+												</div>
+												<div class="tag-cover">
+													<div class="large tag">
+														<div class="title">Yoga</div>
+													</div>
+												</div>
+												<div class="tag-cover">
+													<div class="large tag">
+														<div class="title">Psychology</div>
+														<div class="details">
+															Knowing customers' &amp; team members psyche is key...
+														</div>
+													</div>
+												</div>
+												<div class="tag-cover">
+													<div class="large tag">
+														<div class="title">Psychology</div>
+														<div class="details">
+															Knowing customers' &amp; team members psyche is key...
+														</div>
+													</div>
+												</div>
+												<div class="tag-cover">
+													<div class="large tag">
+														<div class="title">Psychology</div>
+														<div class="details">
+															Knowing customers' &amp; team members psyche is key...
+														</div>
+													</div>
+												</div>
+												<div class="tag-cover">
+													<div class="large tag">
+														<div class="title">Psychology</div>
+														<div class="details">
+															Knowing customers' &amp; team members psyche is key...
+														</div>
+													</div>
+												</div>
+												<div class="tag-cover">
+													<div class="large tag">
+														<div class="title">Yoga</div>
+													</div>
+												</div>
+												<div class="tag-cover">
+													<div class="large tag">
+														<div class="title">Yoga</div>
+													</div>
+												</div>
+												<div class="tag-cover">
+													<div class="large tag">
+														<div class="title">Psychology</div>
+														<div class="details">
+															Knowing customers' &amp; team members psyche is key...
+														</div>
+													</div>
+												</div>
+
+												<div class="tag-cover">
+													<div class="large tag">
+														<div class="title">Yoga</div>
+													</div>
+												</div>
+												<div class="tag-cover">
+													<div class="large tag">
+														<div class="title">Photography</div>
+													</div>
+												</div>
+												<div class="tag-cover">
+													<div class="large tag">
+														<div class="title">Joggling</div>
+													</div>
+												</div>
+												<div class="tag-cover">
+													<div class="large tag">
+														<div class="title">Yoga</div>
+													</div>
+												</div>
+
+												<!-- view more link -->
+												<div class="scrolled-more hidden">
+													<a href="full_profile.html">+ <span class="count"></span> More</a>
+												</div>
+											</div>
+										</div>
+										<div class="content">
+											<ul class="clear two-lines-list spaced-top wrap-info" data-limit="4">
+												<!-- 1 -->
+												<li>
+													<div class="block-info">
+														<div class="head">
+															<div class="title">
+																<span>Other Volunteer</span>
+															</div>
+															<div class="position">Some Role</div>
+															<div class="date">
+																<i class="icon icon-event"></i>
+																<span>July</span>
+																<span>2016</span> - 
+																<span>Present</span>
+																<span>(6 YEARS)</span>
+																<div class="place">
+																	<span>Las Vegas</span>,
+																	<span>NV</span>
+																</div>
+															</div>
+														</div>
+													</div>
+												</li>
+												<!-- 2 -->
+												<li>
+													<div class="block-info">
+														<div class="head">
+															<div class="title">
+																<span>Other Volunteer</span>
+															</div>
+															<div class="position">Some Role</div>
+															<div class="date">
+																<i class="icon icon-event"></i>
+																<span>July</span>
+																<span>2016</span> - 
+																<span>Present</span>
+																<span>(6 YEARS)</span>
+																<div class="place">
+																	<span>Las Vegas</span>,
+																	<span>NV</span>
+																</div>
+															</div>
+														</div>
+													</div>
+												</li>
+												<!-- 3 -->
+												<li>
+													<div class="block-info">
+														<div class="head">
+															<div class="title">
+																<span>Other Volunteer</span>
+															</div>
+															<div class="position">Some Role</div>
+															<div class="date">
+																<i class="icon icon-event"></i>
+																<span>July</span>
+																<span>2016</span> - 
+																<span>Present</span>
+																<span>(6 YEARS)</span>
+																<div class="place">
+																	<span>Las Vegas</span>,
+																	<span>NV</span>
+																</div>
+															</div>
+														</div>
+													</div>
+												</li>
+												<!-- 4 -->
+												<li>
+													<div class="block-info">
+														<div class="head">
+															<div class="title">
+																<span>Other Volunteer</span>
+															</div>
+															<div class="position">Some Role</div>
+															<div class="date">
+																<i class="icon icon-event"></i>
+																<span>July</span>
+																<span>2016</span> - 
+																<span>Present</span>
+																<span>(6 YEARS)</span>
+																<div class="place">
+																	<span>Las Vegas</span>,
+																	<span>NV</span>
+																</div>
+															</div>
+														</div>
+													</div>
+												</li>
+												<!-- 5 -->
+												<li>
+													<div class="block-info">
+														<div class="head">
+															<div class="title">
+																<span>Other Volunteer</span>
+															</div>
+															<div class="position">Some Role</div>
+															<div class="date">
+																<i class="icon icon-event"></i>
+																<span>July</span>
+																<span>2016</span> - 
+																<span>Present</span>
+																<span>(6 YEARS)</span>
+																<div class="place">
+																	<span>Las Vegas</span>,
+																	<span>NV</span>
+																</div>
+															</div>
+														</div>
+													</div>
+												</li>
+												<!-- 6 -->
+												<li>
+													<div class="block-info">
+														<div class="head">
+															<div class="title">
+																<span>Other Volunteer</span>
+															</div>
+															<div class="position">Some Role</div>
+															<div class="date">
+																<i class="icon icon-event"></i>
+																<span>July</span>
+																<span>2016</span> - 
+																<span>Present</span>
+																<span>(6 YEARS)</span>
+																<div class="place">
+																	<span>Las Vegas</span>,
+																	<span>NV</span>
+																</div>
+															</div>
+														</div>
+													</div>
+												</li>
+												<!-- view more link -->
+												<li class="scrolled-more hidden">
+													<a href="full_profile.html">+ <span class="count"></span> More</a>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- / вкладка для overview -->
+				</div>
+
+			</section>
+		</main>
+
+
+
+		<div id="test-popup" class="white-popup mfp-hide large-popup">
+
+
+			<div class="inner">
+
+
+				<div class="header">
+
+
+					<div class="title">Experience</div>
+
+
+				</div>
+
+
+				<div class="content">
+
+
+					<div class="block-info detail">
+
+
+						<div class="head">
+
+
+							<div class="title">
+
+
+								<span>Senior Project Manager</span>
+
+
+								<button class="edit btn btn-round btn-grey" type="button"><i class="icon icon-pencil-edit"></i></button>
+
+
+							</div>
+
+
+							<div class="position">ABC Productiony</div>
+
+
+							<div class="date">
+
+
+								<i class="icon icon-event"></i>
+
+
+								April 2016 - Present (2 YEARS)
+
+
+								<div class="place">Dallas, TX</div>
+
+
+							</div>
+
+
+						</div>
+
+
+						<div class="description show-more">
+
+
+							<div class="paragraph">
+
+
+								I study how the design, affordances and choice architectures on digital screens affect users' behavior, thought patterns, relationships and general wellbeing. And using the intersection of behavioral science, cognitive neuroscience, psychology, habit-formation, social systems and ethics, I help invent and advocate for new designs that embed mindfulness into the screens people use.
+
+
+							</div>
+
+
+							<div class="paragraph">
+
+
+								A career highlight was helping to organize a meeting between Thich Nhat Hanh, international spokesperson for Mindfulness and Zen meditation, and Google's leading product designers.
+
+
+							</div>
+
+
+							<div class="paragraph">
+
+
+								A career highlight was helping to organize a meeting between Thich Nhat Hanh, international spokesperson for Mindfulness and Zen meditation, and Google's leading product designers.
+
+
+							</div>
+
+
+							<div class="paragraph">
+
+
+								I study how the design, affordances and choice architectures on digital screens affect users' behavior, thought patterns, relationships and general wellbeing. And using the intersection of behavioral science, cognitive neuroscience, psychology, habit-formation, social systems and ethics, I help invent and advocate for new designs that embed mindfulness into the screens people use.
+
+
+							</div>
+
+
+							<div class="paragraph">
+
+
+								I study how the design, affordances and choice architectures on digital screens affect users' behavior, thought patterns, relationships and general wellbeing. And using the intersection of behavioral science, cognitive neuroscience, psychology, habit-formation, social systems and ethics, I help invent and advocate for new designs that embed mindfulness into the screens people use.
+
+
+							</div>
+
+
+						</div>
+
+
+						<!-- add this link when text length more than 220 characters -->
+
+
+						<div class="read-more description" data-read>
+
+
+							<span class="link">More...</span>
+
+
+						</div>
+
+
+					</div>
+
+
+					<!-- other -->
+
+
+					<div class="block-info detail">
+
+
+						<div class="head">
+
+
+							<div class="title">
+
+
+								<span>Project Manager</span>
+
+
+							</div>
+
+
+							<div class="position">ABC Production</div>
+
+
+							<div class="date">
+
+
+								<i class="icon icon-event"></i>
+
+
+								April 2016 - Present (2 YEARS)
+
+
+								<div class="place">Dallas, TX</div>
+
+
+							</div>
+
+
+						</div>
+
+
+						<div class="description show-more">
+
+
+							<div class="paragraph">
+
+
+								A career highlight was helping to organize a meeting between Thich Nhat Hanh, international spokesperson for Mindfulness and Zen meditation, and Google's leading product designers.
+
+
+							</div>
+
+
+						</div>
+
+
+						<!-- add this link when text length more than 220 characters -->
+
+
+						<div class="read-more description" data-read>
+
+
+							<span class="link">More...</span>
+
+
+						</div>
+
+
+					</div>
+
+
+					<div class="block-info detail">
+
+
+						<div class="head">
+
+
+							<div class="title">
+
+
+								<span>Project Manager</span>
+
+
+							</div>
+
+
+							<div class="position">ABC Production</div>
+
+
+							<div class="date">
+
+
+								<i class="icon icon-event"></i>
+
+
+								April 2016 - Present (2 YEARS)
+
+
+								<div class="place">Dallas, TX</div>
+
+
+							</div>
+
+
+						</div>
+
+
+					</div>
+
+
+					<div class="block-info detail">
+
+
+						<div class="head">
+
+
+							<div class="title">
+
+
+								<span>Project Manager</span>
+
+
+							</div>
+
+
+							<div class="position">ABC Production</div>
+
+
+							<div class="date">
+
+
+								<i class="icon icon-event"></i>
+
+
+								April 2016 - Present (2 YEARS)
+
+
+								<div class="place">Dallas, TX</div>
+
+
+							</div>
+
+
+						</div>
+
+
+					</div>
+
+
+				</div>
+
+
+			</div>
+
+
+		</div>
+		<div id="interview-popup" class="white-popup mfp-hide large-popup">
+			<div class="inner">
+				<div class="header">
+					<div class="title">Interviews</div>
+				</div>
+				<div class="content">
+					<form action="#" class="simple-form validate-form" data-onsubmit="modalOnSubmit" method="post">
+						<div class="lead">
+							Choose which interviews you want to show on your public profile
+						</div>
+						<div class="inner">
+							<div class="interview-info">
+								<div class="row middle-sm">
+									<div class="mobile-full col-xs-5 col-sm-3">
+										<figure class="image-cover">
+											<img src="temp/user3.jpg" alt="">
+										</figure>
+									</div>
+									<div class="mobile-full col-xs-7 col-sm-6">
+										<div class="title">Digital marketing interview</div>
+										<div class="caption">Interviever: Sam Green</div>
+										<div class="time">
+											<i class="icon icon-event"></i>
+											3 month ago
+										</div>
+									</div>
+									<div class="spaced-xs col-xs-12 col-sm-3">
+										<div class="checkbox-cover">
+											<input type="checkbox" class="checkbox-btn" id="user1" checked data-onchange="sendVideoStatus" data-id="video1" data-url="static/data/forms.json">
+											<label for="user1" class="checkbox-label">Show on my profile</label>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="interview-info">
+								<div class="row middle-sm">
+									<div class="mobile-full col-xs-5 col-sm-3">
+										<figure class="image-cover">
+											<img src="temp/user1.jpg" alt="">
+										</figure>
+									</div>
+									<div class="mobile-full col-xs-7 col-sm-6">
+										<div class="title">Digital marketing interview</div>
+										<div class="caption">Interviever: Sam Green</div>
+										<div class="time">
+											<i class="icon icon-event"></i>
+											3 month ago
+										</div>
+									</div>
+									<div class="spaced-xs col-xs-12 col-sm-3">
+										<div class="checkbox-cover">
+											<input type="checkbox" class="checkbox-btn" id="user2" data-onchange="sendVideoStatus" data-id="video2" data-url="static/data/forms.json">
+											<label for="user2" class="checkbox-label">Show on my profile</label>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="interview-info">
+								<div class="row middle-sm">
+									<div class="mobile-full col-xs-5 col-sm-3">
+										<figure class="image-cover">
+											<img src="temp/user2.jpg" alt="">
+										</figure>
+									</div>
+									<div class="mobile-full col-xs-7 col-sm-6">
+										<div class="title">Digital marketing interview</div>
+										<div class="caption">Interviever: Sam Green</div>
+										<div class="time">
+											<i class="icon icon-event"></i>
+											3 month ago
+										</div>
+									</div>
+									<div class="spaced-xs col-xs-12 col-sm-3">
+										<div class="checkbox-cover">
+											<input type="checkbox" class="checkbox-btn" id="user3" data-onchange="sendVideoStatus" data-id="video3" data-url="static/data/forms.json">
+											<label for="user3" class="checkbox-label">Show on my profile</label>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="btn-group">
+							<button class="btn form-btn btn-simple" type="submit">
+								<span class="text">save</span>
+								<span class="fade"></span>
+							</button>
+							<button class="btn form-btn btn-grey close-modal" type="button">
+								<span class="text">cancel</span>
+								<span class="fade"></span>
+							</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+		<div id="share-profile-popup" class="white-popup mfp-hide">
+			<div class="inner">
+				<div class="header">
+					<div class="title">Share profile</div>
+				</div>
+				<div class="content">
+					<form action="#" class="simple-form modal-form">
+						<div class="form-group last">
+							<div class="form-group last">
+								<div class="input-title">Copy this link to share</div>
+								<div class="input input-simple copy-content" id="copiedLink" data-clipboard-text="tessxt to copy">https://talentfly.com/</div>
+							</div>
+						</div>
+						<div class="btn-group align-left collapsed">
+							<button class="btn form-btn btn-grey close-modal" type="button">
+								<span class="text">Cancel</span>
+								<span class="fade"></span>
+							</button>
+							<button class="btn form-btn btn-simple" type="button" id="copyButton" data-clipboard-text="tessxt to copy">
+								<span class="text">Copy</span>
+								<span class="fade"></span>
+							</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+		<!-- main footer -->
+		<footer class="main-footer">
+			<div class="container">
+				<ul class="clear socials-list">
+					<li><a href="#"><i class="icon icon-facebook"></i></a></li>
+					<li><a href="#"><i class="icon icon-twitter"></i></a></li>
+					<li><a href="#"><i class="icon icon-googleplus"></i></a></li>
+				</ul>
+				<div id="tablet-links">
+					<div class="inner" data-tablet="#tablet-links" data-mobile="#mobile-links">
+						<a href="#">Support</a>
+						<span class="separator">|</span>
+						<a href="#">Terms and Conditions</a>
+					</div>
+				</div>
+				<div class="copyright">
+					<img src="img/logo.svg" alt="">
+					<div id="mobile-links" class="sm-hide"></div>
+					Copyright © 2017 TalentFly,
+					All rights reserved
+				</div>
+			</div>
+		</footer>
+
+
+		<link href="https://fonts.googleapis.com/css?family=Poppins:100,300,400,500,600,700" rel="stylesheet">
+
+		<script src="js/lib/jquery.min.js"></script>
+
+
+
+
+		<script src="js/plugins/owl.carousel.min.js"></script>
+		<script src="js/plugins/perfect-scrollbar.min.js"></script>
+		<script src="js/plugins/jquery.magnific-popup.min.js"></script>
+		<script src="js/plugins/jquery.maskedinput.min.js"></script>
+		<script src="js/plugins/d3.v3.min.js"></script>
+
+		<!-- video js -->
+		<script src="js/plugins/video.js"></script>
+		<script src="js/plugins/videojs-markers.min.js"></script>
+		
+		<script src="js/main.js"></script>
+		<script src="js/validator.js"></script>
+
+		<script src="js/init/accordeon.js"></script>
+		<script src="js/init/popups-update-profile.js"></script>
+
+		<script src="js/init/buttons.js"></script>
+		<script src="js/init/data-onsubmit.js"></script>
+		<script src="js/init/validation.js"></script>
+		<script src="js/init/toggler.js"></script>
+		<script src="js/init/random-id.js"></script>
+		<script src="js/init/main-menu-dropdown.js"></script>
+		<script src="js/init/progress.js"></script>
+		<script src="js/init/set-overview-size.js"></script>
+		<script src="js/init/tabs.js"></script>
+		<script src="js/init/read-more.js"></script>
+		<script src="js/init/dropdown.js"></script>
+		<script src="js/init/limit-block.js"></script>
+		<script src="js/init/fixed-elements.js"></script>
+		<script src="js/init/mask.js"></script>
+		<script src="js/init/clipboard-copy.js"></script>
+		<script src="js/init/clear-image.js"></script>
+		<script src="js/init/notification.js"></script>
+		<script src="js/init/keyword-search.js"></script>
+		<script src="js/init/video-data.js"></script>
+		<script src="js/init/data-onchange.js"></script>
+		<script src="js/init/graph.js"></script>
+		<script src="js/init/scrollspy.js"></script>
+		<script>
+			var csrf_token = 'token'
+		</script>
+	</body>
+	</html>

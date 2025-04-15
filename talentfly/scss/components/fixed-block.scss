@@ -1,0 +1,13 @@
+.fixed-block {
+	position: static;
+	height: auto;
+
+	&.card.spaced {
+		height: auto;
+	}
+
+	&.fixed {
+		position: fixed;
+		z-index: 5;
+	}
+}

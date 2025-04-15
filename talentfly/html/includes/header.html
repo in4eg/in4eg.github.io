@@ -1,0 +1,71 @@
+<header class="main-header fixed" id="mainHeader">
+	<div class="container large">
+		<div class="row middle-xs">
+			<div class="col-sm-2 hidden-lg btn-tablet" id="signInButtonTablet"></div>
+			<div class="col-sm-8 col-md-2 logo-cover">
+				<a href="index.html" class="logo">
+					<img src="img/logo.svg" alt="">
+				</a>
+			</div>
+			<div class="col-sm-2 col-md-10 no-font menu-cover">
+				<button class="none main-menu-toggle">
+					<i></i><i></i><i></i>
+				</button>
+				<div class="main-menu" id="menuDesktop">
+					<nav data-tablet="#menuTablet" data-desktop="#menuDesktop">
+						<ul class="clear menu">
+							<li>
+								<a href="how_it_works.html">
+									<span class="text">How it works</span>
+								</a>
+							</li>
+							<li>
+								<a href="what-is-talentfly.html">
+									<span class="text">What is TalentFly</span>
+								</a>
+							</li>
+							<li>
+								<a href="contact-us.html">
+									<span class="text">Contact Us</span>
+								</a>
+							</li>
+						</ul>
+					</nav>
+				</div>
+				<div class="user-col" id="signButtonsDesktop">
+					<button type="button"
+					class="btn btn-link" data-toggle="#signInForm,#signUpForm"
+					data-tablet="#signInButtonTablet" data-desktop="#signButtonsDesktop"
+					>
+					<i class="icon icon-logout"></i>
+					<span class="text">sign in</span>
+					<span class="fade"></span>
+				</button>
+				<button type="button"
+				class="btn gradient-border" data-toggle="#signUpForm,#signInForm"
+				data-tablet="#signUpButtonTablet" data-desktop="#signButtonsDesktop"
+				>
+				<span class="text">sign up</span>
+				<span class="fade"></span>
+			</button>
+		</div>
+	</div>
+</div>
+
+<!-- sign in -->
+#=include sign-in.html
+<!-- / sign in -->
+
+<!-- sign up -->
+#=include sign-up.html
+<!-- / sign up -->
+
+</div>
+</header>
+
+<div class="none mobile-nav">
+	<div id="menuTablet"></div>
+	<div class="row buttons-row">
+		<div class="col-xs-6 col-ms-4" id="signUpButtonTablet"></div>
+	</div>
+</div>

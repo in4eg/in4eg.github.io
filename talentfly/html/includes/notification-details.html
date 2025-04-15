@@ -1,0 +1,68 @@
+<div class="notification-details" id="notificationToggle" data-scroll-hide data-url="full_profile.html">
+	<div class="inner">
+		<div class="header">
+			<div class="text">Notification</div>
+			<div class="counter notification-total">0</div>
+		</div>
+		<div class="wrap-info" data-limit="2" id="notificationInner">
+			<!-- 1 -->
+			<div class="notification-item hidden" id="1" data-has-actions>
+				<a href="#" class="title">
+					Interview <span class="name">Peter Brown</span> with <span class="name">Alex Stepanuk.</span>
+				</a>
+				<span data-tooltip="Mark as read" class="light tooltip-icon small" data-remove="#1" data-link="">
+					<button type="button" class="btn-tooltip">
+						<i class="icon icon-eye"></i>
+					</button>
+				</span>
+				<div class="lead">Lorem ipsum dolor sit amet</div>
+				<ul class="clear details">
+					<li>Date <span data-date>10.13.2017</span></li>
+					<li>Time <span data-time>19:00</span></li>
+				</ul>
+				<ul class="buttons-list">
+					<li>
+						<button class="btn ghost-btn green" type="button" data-accept-notification>
+							<span class="text">Accept</span>
+							<span class="fade"></span>
+						</button>
+					</li>
+					<li>
+						<a class="btn ghost-btn grey open-popup-link" href="#change-time-popup" data-change-time>
+							<span class="text">Change Time</span>
+							<span class="fade"></span>
+						</a>
+					</li>
+					<li>
+						<button class="btn ghost-btn grey" type="button" data-reject-notification>
+							<span class="text">Reject</span>
+							<span class="fade"></span>
+						</button>
+					</li>
+				</ul>
+			</div>
+			<!-- 2 -->
+			<div class="notification-item hidden" id="2" data-without-actions>
+				<span data-tooltip="Mark as read" class="light tooltip-icon small" data-remove-item  data-link=""> <!-- data-remove="#2"-->
+					<button type="button" class="btn-tooltip">
+						<i class="icon icon-eye"></i>
+					</button>
+				</span>
+				<div class="lead">Lorem ipsum dolor sit amet</div>
+				<ul class="buttons-list">
+					<li>
+						<a class="btn ghost-btn full-blue" data-open-notification>
+							<span class="text">Open</span>
+							<span class="fade"></span>
+						</a>
+					</li>
+				</ul>
+			</div>
+			<!-- view more link -->
+			<div class="scrolled-more hidden">
+				<a href="full_profile.html" data-show-notifications >+ <span class="count"></span> Notifications More</a>
+			</div>
+			<div class="inner-items hidden"></div>
+		</div>
+	</div>
+</div>

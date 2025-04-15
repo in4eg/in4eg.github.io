@@ -1,0 +1,72 @@
+/*primary font*/
+$font: 'Poppins', sans-serif;
+/*secondary font*/
+$font2: 'Roboto Condensed', sans-serif;
+
+$thin: 100;
+$light: 300;
+$normal: 400;
+$medium: 500;
+$semi: 600;
+$bold: 700;
+
+
+$blue: #469aeb;
+$light-blue: #6bc7ee;
+$dark-blue: #404c60;
+$grey: #8696b0;
+$green: #3FDEC2;
+
+$light-grey: #E2E9F3;
+$success: #82F2C3;
+$danger: #FF5E5E;
+
+/* Название страницы  */
+$title-color: #324054;
+/* Темные (Заголовки и тд.) */
+$subtitle-color: #505C6E;
+/* Средние серые (Подзаголовки, количество лет, местоположение, описание, подсказка в блоке интервью и тд) */
+$lead-color: #8A98AD;
+/* Светлые серые (нективные табы) */
+$not-active: #B0BCCF;
+
+
+
+$ligh-dark: #515c6e;
+
+/*link*/
+$link: $blue;
+$link-hover: $light-blue;
+
+@mixin border-gradient() {
+	border-image: linear-gradient(to bottom, $blue, $light-blue) 1 100%;
+}
+@mixin border-gradient-horizontal() {
+	border-image: linear-gradient(to right, $blue, $light-blue) 1 round round;
+}
+@mixin background-gradient() {
+	background: $blue;
+	background-image: linear-gradient(to right, $blue 0%, $light-blue 100%);
+}
+@mixin background-gradient-inverse() {
+	background: $blue;
+	background-image: linear-gradient(to right, $light-blue 0%, $blue 100%);
+}
+@mixin gradient-text() {
+	background: -webkit-linear-gradient(right, $link, lighten($blue, 20));
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+@mixin background-gradient-dark() {
+	background: #8a98ad;
+	background-image: linear-gradient(to right, #8a98ad 0%, #b3bfcf 100%);
+}
+
+@font-face {
+	font-family: 'text-security-disc';
+	src: url('../fonts/disc/text-security-disc.eot');
+	src: url('../fonts/disc/text-security-disc.eot?#iefix') format('embedded-opentype'),
+	url('../fonts/disc/text-security-disc.woff') format('woff'),
+	url('../fonts/disc/text-security-disc.ttf') format('truetype'),
+	url('../fonts/disc/text-security-disc.svg#text-security') format('svg');
+}

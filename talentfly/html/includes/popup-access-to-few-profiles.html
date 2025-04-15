@@ -1,0 +1,69 @@
+<div id="accessFewProfilesPopup" class="access-few-profiles-popup white-popup mfp-hide">
+	<div class="inner">
+		<div class="header">
+			<div class="title" id="accessFewProfilesTitle">Access to <span data-countChecked-users>3</span> profiles
+				<span data-tooltip="Some little text here but not very large">
+					<span class="btn btn-light btn-round btn-xs btn-tooltip">
+						<i class="icon icon-info"></i>
+					</span>
+				</span>
+			</div>
+			<button class="mfp-close btn btn-grey btn-round">
+				<i class="icon icon-close"></i>
+			</button>
+		</div>
+		<div class="content container">
+			<div class="access-few-profiles-inputs" id="placeForAccess">
+				<div class="name-field row">
+					<div class="col-xs-12 col-sm-6">
+						<div class="input-title">Name</div>
+						<input value="ABC Studio" class="access-name-input" name="name">
+						<span class="error-tip hidden">Please, enter at least 2 characters.</span>
+					</div>
+					<div class="col-xs-12 col-sm-6">
+						<div class="input-title">E-mail</div>
+						<input value="careers@abcstudio.com" class="access-name-input email" name="email">
+						<span class="error-tip hidden">Please, enter the email</span>
+					</div>
+				</div>
+				<div class="message-field row">
+					<div class="col-xs-12">
+						<div class="input-title">Message <span class="message-optional">(optional)</span></div>
+						<textarea rows="3" class="access-name-input" name="message"></textarea>
+					</div>
+				</div>
+				<div class="expiration-field row">
+					<div class="col-xs-12 col-sm-3">
+						<div class="input-title">Expiration Date</div>
+						<div class="select-outer">
+						    <select name="date" class="select" data-push="#date" data-date-select="">
+						        <option class="default-exp-date">Choose</option>
+								<option>Never</option>
+								<option value="364">1 year</option>
+								<option value="91">3 months</option>
+								<option value="30">1 month</option>
+								<option value="20">3 weeks</option>
+								<option value="7">1 week</option>
+						    </select>
+						    <span class="arrow">
+						        <i class="icon icon-angle-down"></i>
+						    </span>
+						</div>
+						<span class="error-tip hidden">Please, choose a date</span>
+					</div>
+				</div>
+			</div>
+			
+			<div class="access-few-profiles-buttons">
+				<button class="btn form-btn btn-simple access-few-profiles-popup-btn" type="button" data-send-request data-share-profiles>
+					<span class="text">invite</span>
+					<span class="fade"></span>
+				</button>
+				<button class="btn form-btn btn-grey close-modal access-few-profiles-popup-btn close-modal" type="button">
+				    <span class="text">cancel</span>
+				    <span class="fade"></span>
+				</button>
+			</div>
+		</div>
+	</div>
+</div>

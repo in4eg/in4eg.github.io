@@ -1,0 +1,694 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta name="format-detection" content="telephone=no">
+
+    <title>Talent Fly :: Interviews</title>
+
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <link href="http://vjs.zencdn.net/6.2.8/video-js.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/perfect-scrollbar.min.css">
+    <link rel="stylesheet" href="css/bundle.min.css">
+
+</head>
+
+<body>
+
+    <header class="main-header inner-header default-shadow" id="mainHeader">
+        <div class="container large">
+            <div class="row middle-xs">
+                <div class="col-xs-2 hidden-lg menu-left">
+                    <button class="none main-menu-toggle">
+                        <i></i>
+                        <i></i>
+                        <i></i>
+                    </button>
+                </div>
+                <div class="col-xs-8 col-md-2">
+                    <a href="index.html" class="logo">
+                        <img src="img/logo.svg" alt="">
+                    </a>
+                </div>
+                <div class="col-xs-2 col-md-10 no-font align-right menu-right">
+                    <div id="notification-sm" class="notification-sm"></div>
+    
+                    <div class="main-menu small" id="notification-lg">
+                        <div id="menuDesktop" class="menu-desktop"></div>
+                        <nav data-tablet="#menuTablet" data-desktop="#menuDesktop">
+                            <ul class="clear menu">
+    
+    
+                                <li class="active">
+                                    <a href="#">
+                                        <span class="text">Users</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <span class="text">Recorded Interviews</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <span class="text">Django Admin Panel</span>
+                                    </a>
+                                </li>
+                                <li id="toggleMenuDropdown" class="menu-dropdown">
+                                    <a href="#" class="bull">
+                                        <div class="separator"></div>
+                                        &bull;&bull;&bull;
+                                    </a>
+                                    <ul class="clear dropdown"></ul>
+                                </li>
+                            </ul>
+                        </nav>
+                        <div class="notification-link" data-tablet="#notification-sm" data-desktop="#notification-lg">
+                            <div class="separator"></div>
+                            <!-- add class animated for a new notification in a real time-->
+                            <button class="notification btn" type="button" data-toggle="#notificationToggle" data-scroll-hide>
+                                <i class="icon icon-bell"></i>
+                                <span class="counter">3</span>
+                                <span class="fade"></span>
+                            </button>
+                            <div class="separator"></div>
+    
+                            <!-- notification details -->
+                            <div class="notification-details" id="notificationToggle">
+                                <div class="inner">
+                                    <div class="header">
+                                        <div class="text">Notification</div>
+                                        <div class="counter">3</div>
+                                    </div>
+                                    <!-- 1 -->
+                                    <div class="notification-item">
+                                        <a href="#" class="title">
+                                            Interview
+                                            <span class="name">Peter Brown</span> with
+                                            <span class="name">Alex Stepanuk.</span>
+                                        </a>
+                                        <span data-tooltip="Mark as read" class="light tooltip-icon small">
+                                            <button type="button" class="btn-tooltip">
+                                                <i class="icon icon-eye"></i>
+                                            </button>
+                                        </span>
+                                        <div class="lead">Lorem ipsum dolor sit amet</div>
+                                        <ul class="clear details">
+                                            <li>Date 10.13.2017</li>
+                                            <li>Time 19:00</li>
+                                        </ul>
+                                    </div>
+                                    <!-- 2 -->
+                                    <div class="notification-item">
+                                        <a href="#" class="title">
+                                            Interview
+                                            <span class="name">Peter Brown</span> with
+                                            <span class="name">Alex Stepanuk.</span>
+                                        </a>
+                                        <span data-tooltip="Mark as read" class="light tooltip-icon small">
+                                            <button type="button" class="btn-tooltip">
+                                                <i class="icon icon-eye"></i>
+                                            </button>
+                                        </span>
+                                        <div class="lead">Lorem ipsum dolor sit amet</div>
+                                        <ul class="clear details">
+                                            <li>Date 10.13.2017</li>
+                                            <li>Time 19:00</li>
+                                        </ul>
+                                    </div>
+                                    <!-- 3 -->
+                                    <div class="notification-item">
+                                        <a href="#" class="title">
+                                            Interview
+                                            <span class="name">Peter Brown</span> with
+                                            <span class="name">Alex Stepanuk.</span>
+                                        </a>
+                                        <span data-tooltip="Mark as read" class="light tooltip-icon small">
+                                            <button type="button" class="btn-tooltip">
+                                                <i class="icon icon-eye"></i>
+                                            </button>
+                                        </span>
+                                        <div class="lead">Lorem ipsum dolor sit amet</div>
+                                        <ul class="clear details">
+                                            <li>Date 10.13.2017</li>
+                                            <li>Time 19:00</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="user-col small" id="signButtonsDesktop">
+                        <a href="index.html" class="btn btn-default" data-tablet="#signInButtonTablet" data-desktop="#signButtonsDesktop">
+                            <span class="text">
+                                <i class="icon icon-logout btn-icon"></i> sign out</span>
+                            <span class="fade"></span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+    
+    
+            <!-- sign in -->
+            <form action="#" class="user-form validate-form" id="signInForm" method="post">
+            	<div class="inner">
+            		<!-- Types of messages: notice, warning, error, success -->
+            		<div id="gNotification" class="general-notification display-none">
+            		    <i class="icon icon-info-round"></i>
+            		    <i class="icon icon-attention"></i>
+            		    <i class="icon icon-close-round"></i>
+            		    <i class="icon icon-success-round"></i>
+            		    <div class="timestamp-preloader display-none"></div>
+            		
+            		    <!-- <span id="gType" class="type">success:</span> -->
+            		    <div class="rows-box">
+            		        <span id="gMessage" class="message">Your don’t save video.</span>
+            		        <span id="gEndMessage" class="end-message"> Save it too keep changes!</span>
+            		    </div>
+            		</div>
+            		<div class="h3-title primary">Sign in</div>
+            		<button type="button" class="form-close">&times;</button>
+            		<div class="form-group">
+            			<input type="text" class="input email" id="signInEmail" maxlength="30" data-minlength="2" autocapitalize="off" autocorrect="off">
+            			<span class="line"></span>
+            			<label for="signInEmail">E-Mail</label>
+            			<i class="icon icon-checked2 icon-success"></i>
+            			<i class="icon icon-close2 icon-error"></i>
+            			<div class="alert">Type a correct E-mail. It must include "@"</div>
+            		</div>
+            		<div class="form-group last">
+            			<input type="password" class="input" id="signInPassword" maxlength="30" data-minlength="6" autocapitalize="off" autocorrect="off">
+            			<span class="line"></span>
+            			<label for="signInPassword">Enter your password</label>
+            			<i class="icon icon-checked2 icon-success"></i>
+            			<i class="icon icon-close2 icon-error"></i>
+            			<div class="alert">Minimum 6 characters</div>
+            		</div>
+            		<div class="checkbox">
+            			<input type="checkbox" id="signInMember">
+            			<label for="signInMember">Remember me</label>
+            		</div>
+            		<div class="row btn-wrap">
+            			<div class="col-xs-12 col-ms-8 col-ms-offset-2">
+            				<button type="submit" class="btn btn-primary btn-lg btn-block">
+            					<span class="text">Sign In</span>
+            					<span class="fade"></span>
+            				</button>
+            			</div>
+            		</div>
+            		<div class="align-center form-caption">Forgot your password? <a href="#">Restore password</a></div>
+            		<div class="align-center form-caption footer-lastLine">Don't have an account? 
+            			<a href="#" class="low-1000-hidden" data-toggle="#signUpForm,#signInForm" data-tablet="#signUpButtonTablet">Sign up</a>
+            		</div>
+            	</div>
+            </form>
+            <!-- / sign in -->
+    
+            <!-- sign up -->
+            <form action="#" class="user-form validate-form" id="signUpForm">
+            	<div class="inner">
+            		 <!-- Types of messages: notice, warning, error, success -->
+            		 <div id="gNotification" class="general-notification display-none">
+            		     <i class="icon icon-info-round"></i>
+            		     <i class="icon icon-attention"></i>
+            		     <i class="icon icon-close-round"></i>
+            		     <i class="icon icon-success-round"></i>
+            		     <div class="timestamp-preloader display-none"></div>
+            		 
+            		     <!-- <span id="gType" class="type">success:</span> -->
+            		     <div class="rows-box">
+            		         <span id="gMessage" class="message">Your don’t save video.</span>
+            		         <span id="gEndMessage" class="end-message"> Save it too keep changes!</span>
+            		     </div>
+            		 </div>
+            		<div class="h3-title primary">Sign up</div>
+            		<button type="button" class="form-close">&times;</button>
+            		<div class="form-group">
+            			<input type="text" class="input" id="signUpFirstName" maxlength="30" data-minlength="2" autocomplete="off">
+            			<span class="line"></span>
+            			<label for="signUpFirstName">First name</label>
+            			<i class="icon icon-checked2 icon-success"></i>
+            			<i class="icon icon-close2 icon-error"></i>
+            			<div class="alert">Minimum 2 characters. Must include only letters</div>
+            		</div>
+            		<div class="form-group">
+            			<input type="text" class="input" id="signUpLastName" maxlength="30" data-minlength="2" autocomplete="off">
+            			<span class="line"></span>
+            			<label for="signUpLastName">Last name</label>
+            			<i class="icon icon-checked2 icon-success"></i>
+            			<i class="icon icon-close2 icon-error"></i>
+            			<div class="alert">Minimum 2 characters. Must include only letters</div>
+            		</div>
+            		<div class="form-group">
+            			<input type="text" class="input email" id="signUpEmail" maxlength="30" data-minlength="2" autocomplete="off" autocapitalize="off" autocorrect="off">
+            			<span class="line"></span>
+            			<label for="signUpEmail">E-Mail</label>
+            			<i class="icon icon-checked2 icon-success"></i>
+            			<i class="icon icon-close2 icon-error"></i>
+            			<div class="alert">Type a correct E-mail. It must include "@"</div>
+            		</div>
+            		<div class="form-group last">
+            			<!-- password-input -->
+            			<input type="password" class="input" id="signUpPassword" maxlength="30" data-minlength="6" autocomplete="off" autocapitalize="off" autocorrect="off">
+            			<span class="line"></span>
+            			<label for="signUpPassword">Create password</label>
+            			<i class="icon icon-checked2 icon-success"></i>
+            			<i class="icon icon-close2 icon-error"></i>
+            			<div class="alert">Minimum 6 characters</div>
+            		</div>
+            		<div class="checkbox">
+            			<input type="checkbox" id="signUpMember">
+            			<label for="signUpMember">I represent a business</label>
+            		</div>
+            		<div class="row btn-wrap">
+            			<div class="col-xs-12 col-ms-8 col-ms-offset-2">
+            				<button type="submit" class="btn btn-primary btn-lg btn-block">
+            					<span class="text">Sign up now</span>
+            					<span class="fade"></span>
+            				</button>
+            			</div>
+            		</div>
+            		<small>
+            			By signing up, you agree to the <a href="#" class="lined">Terms of Service</a> and <a href="#" class="lined">Privacy Policy</a>,
+            			including <a href="#" class="lined">Cookie Use</a>.
+            		</small>
+            	</div>
+            </form>
+            <!-- / sign up -->
+    
+        </div>
+    </header>
+    
+    <div class="none mobile-nav">
+        <div id="menuTablet"></div>
+        <div class="row buttons-row">
+            <div class="col-xs-12" id="signInButtonTablet"></div>
+        </div>
+    </div>
+
+    <main data-pages-link="">
+
+        <section class="section usual-padding-top interviews-list-section">
+            <div class="container large">
+                <div class="row">
+                    <div class="col-xs-12 col-md-12">
+                        <div class="section-title middle with-element" id="btnPositionTablet">Recorded interviews</div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12 col-md-3">
+                        <form class="simple-form filter-form default-shadow">
+                            <div class="header">Filters</div>
+                            <div class="content">
+                                <div class="input-title">Interviewer</div>
+                                <div class="form-group spaced">
+                                    <input class="input-simple" id="interviewer" minlength="2" placeholder="Enter the name" data-push="#" type="text">
+                                </div>
+                                <div class="input-title">Candidate</div>
+                                <div class="form-group spaced">
+                                    <input class="input-simple" id="candidate" minlength="2" placeholder="Enter the name" data-push="#" type="text">
+                                </div>
+                                <div class="input-title">Date Range</div>
+
+                                <div class="calendar-from-to">
+                                    <input id="datepicker-from" class="calendar-input datepicker-from" name="calendar" placeholder="MM/DD/YYYY">
+                                    <i class="icon icon-event calendar-left-icon datepicker-from"></i>
+                                    <div class="calendars-separators">
+                                        <svg>
+                                            <line x1="0" y1="5" x2="5" y2="5"></line>
+                                        </svg>
+                                    </div>
+                                    <input id="datepicker-to" class="calendar-input datepicker-to" name="calendar" placeholder="MM/DD/YYYY">
+                                    <i class="icon icon-event calendar-right-icon datepicker-to"></i>    
+                                </div>
+
+                                <button class="btn form-btn btn-simple" type="submit">
+                                    <span class="text">Apply</span>
+                                    <span class="fade"></span>
+                                </button>
+
+                                <button type="button" class="btn btn-default form-btn single-block-element" data-on-edit="" data-removeon="">
+                                    <span class="text">
+                                        Clear filter
+                                    </span>
+                                    <span class="fade"></span>
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="col-xs-12 col-md-9">
+                        <ul class="interviews-list records-interviews default-shadow">
+                            <li class="intrview-item record-interview title-item">
+                                <div class="interviewer">
+                                    Interviewer
+                                    <span class="arrow">
+                                        <i class="icon icon-chevron-down"></i>
+                                    </span>
+                                </div>
+                            
+                                <div class="candidate">
+                                    candidate
+                                    <span class="arrow">
+                                        <i class="icon icon-chevron-down"></i>
+                                    </span>
+                                </div>
+                            
+                                <div class="date">
+                                    interview date
+                                    <span class="arrow">
+                                        <i class="icon icon-chevron-down"></i>
+                                    </span>
+                                </div>
+                            
+                                <div class="visability">
+                                    Visible on Profile
+                                </div>
+
+                                <div class="edit-button-box">
+
+                                </div>
+                            
+                            </li>
+                            <!-- элемент для клонирования -->
+                            <li class="intrview-item record-interview hidden" data-root-item="">
+                                <div class="interviewer">
+                                    <a href="#" class="name">Peter Swissels</a>
+                                    <div class="position">Junior Frontend Engineer</div>
+                                    <i class="icon icon-maps"></i>
+                                    <span class="location">Brazil, San Paolo</span>
+                                </div>
+                            
+                                <div class="candidate">
+                                    <a href="#" class="name">Peter Swissels</a>
+                                    <div class="position">Junior Frontend Engineer</div>
+                                    <i class="icon icon-maps"></i>
+                                    <span class="location">Brazil, San Paolo</span>
+                                </div>
+                            
+                                <div class="date">
+                                    <div class="inner">JUN 22, 2017</div>
+                                </div>
+                            
+                                <div class="visability vh-center">
+                                    <div class="checkbox-cover">
+                                        <input class="checkbox-btn" id="checkInterview1" type="checkbox">
+                                        <label for="checkInterview1" class="checkbox-label"></label>
+                                    </div>
+                                </div>
+                            
+                                <div class="edit-button-box vh-center">
+                                    <a class="gray-slim-btn" data-edit-interview>Edit interview</a>
+                                </div>
+                            </li>
+                            <!-- далее для примера и красоты на фронт репе -->
+                            <li class="intrview-item record-interview">
+                                <div class="interviewer">
+                                    <a href="#" class="name">Peter Swissels</a>
+                                    <div class="position">Junior Frontend Engineer</div>
+                                    <i class="icon icon-maps"></i>
+                                    <span class="location">Brazil, San Paolo</span>
+                                </div>
+                            
+                                <div class="candidate">
+                                    <a href="#" class="name">Peter Swissels</a>
+                                    <div class="position">Junior Frontend Engineer</div>
+                                    <i class="icon icon-maps"></i>
+                                    <span class="location">Brazil, San Paolo</span>
+                                </div>
+                            
+                                <div class="date">
+                                    <div class="inner">JUN 22, 2017</div>
+                                </div>
+                            
+                                <div class="visability vh-center">
+                                    <div class="checkbox-cover">
+                                        <input class="checkbox-btn" id="checkInterview2" type="checkbox">
+                                        <label for="checkInterview2" class="checkbox-label"></label>
+                                    </div>
+                                </div>
+                            
+                                <div class="edit-button-box vh-center">
+                                    <a class="gray-slim-btn" data-edit-interview>Edit interview</a>
+                                </div>
+                            
+                            </li>
+                            <li class="intrview-item record-interview">
+                                <div class="interviewer">
+                                    <a href="#" class="name">Peter Swissels</a>
+                                    <div class="position">Junior Frontend Engineer</div>
+                                    <i class="icon icon-maps"></i>
+                                    <span class="location">Brazil, San Paolo</span>
+                                </div>
+                            
+                                <div class="candidate">
+                                    <a href="#" class="name">Peter Swissels</a>
+                                    <div class="position">Junior Frontend Engineer</div>
+                                    <i class="icon icon-maps"></i>
+                                    <span class="location">Brazil, San Paolo</span>
+                                </div>
+                            
+                                <div class="date">
+                                    <div class="inner">JUN 22, 2017</div>
+                                </div>
+                            
+                                <div class="visability vh-center">
+                                    <div class="checkbox-cover">
+                                        <input class="checkbox-btn" id="checkInterview3" type="checkbox">
+                                        <label for="checkInterview3" class="checkbox-label"></label>
+                                    </div>
+                                </div>
+                            
+                                <div class="edit-button-box vh-center">
+                                    <a class="gray-slim-btn" data-edit-interview>Edit interview</a>
+                                </div>
+                            
+                            </li>
+                            <li class="intrview-item record-interview">
+                                <div class="interviewer">
+                                    <a href="#" class="name">Peter Swissels</a>
+                                    <div class="position">Junior Frontend Engineer</div>
+                                    <i class="icon icon-maps"></i>
+                                    <span class="location">Brazil, San Paolo</span>
+                                </div>
+                            
+                                <div class="candidate">
+                                    <a href="#" class="name">Peter Swissels</a>
+                                    <div class="position">Junior Frontend Engineer</div>
+                                    <i class="icon icon-maps"></i>
+                                    <span class="location">Brazil, San Paolo</span>
+                                </div>
+                            
+                                <div class="date">
+                                    <div class="inner">JUN 22, 2017</div>
+                                </div>
+                            
+                                <div class="visability vh-center">
+                                    <div class="checkbox-cover">
+                                        <input class="checkbox-btn" id="checkInterview4" type="checkbox">
+                                        <label for="checkInterview4" class="checkbox-label"></label>
+                                    </div>
+                                </div>
+                            
+                                <div class="edit-button-box vh-center">
+                                    <a class="gray-slim-btn" data-edit-interview>Edit interview</a>
+                                </div>
+                            
+                            </li>
+                            <li class="intrview-item record-interview">
+                                <div class="interviewer">
+                                    <a href="#" class="name">Peter Swissels</a>
+                                    <div class="position">Junior Frontend Engineer</div>
+                                    <i class="icon icon-maps"></i>
+                                    <span class="location">Brazil, San Paolo</span>
+                                </div>
+                            
+                                <div class="candidate">
+                                    <a href="#" class="name">Peter Swissels</a>
+                                    <div class="position">Junior Frontend Engineer</div>
+                                    <i class="icon icon-maps"></i>
+                                    <span class="location">Brazil, San Paolo</span>
+                                </div>
+                            
+                                <div class="date">
+                                    <div class="inner">JUN 22, 2017</div>
+                                </div>
+                            
+                                <div class="visability vh-center">
+                                    <div class="checkbox-cover">
+                                        <input class="checkbox-btn" id="checkInterview5" type="checkbox">
+                                        <label for="checkInterview5" class="checkbox-label"></label>
+                                    </div>
+                                </div>
+                            
+                                <div class="edit-button-box vh-center">
+                                    <a class="gray-slim-btn" data-edit-interview>Edit interview</a>
+                                </div>
+                            </li>
+                            <li class="intrview-item record-interview">
+                                <div class="interviewer">
+                                    <a href="#" class="name">Peter Swissels</a>
+                                    <div class="position">Junior Frontend Engineer</div>
+                                    <i class="icon icon-maps"></i>
+                                    <span class="location">Brazil, San Paolo</span>
+                                </div>
+                            
+                                <div class="candidate">
+                                    <a href="#" class="name">Peter Swissels</a>
+                                    <div class="position">Junior Frontend Engineer</div>
+                                    <i class="icon icon-maps"></i>
+                                    <span class="location">Brazil, San Paolo</span>
+                                </div>
+                            
+                                <div class="date">
+                                    <div class="inner">JUN 22, 2017</div>
+                                </div>
+                            
+                                <div class="visability vh-center">
+                                    <div class="checkbox-cover">
+                                        <input class="checkbox-btn" id="checkInterview6" type="checkbox">
+                                        <label for="checkInterview6" class="checkbox-label"></label>
+                                    </div>
+                                </div>
+                            
+                                <div class="edit-button-box vh-center">
+                                    <a class="gray-slim-btn" data-edit-interview>Edit interview</a>
+                                </div>
+                            
+                            </li>
+                            <li class="intrview-item record-interview">
+                                <div class="interviewer">
+                                    <a href="#" class="name">Peter Swissels</a>
+                                    <div class="position">Junior Frontend Engineer</div>
+                                    <i class="icon icon-maps"></i>
+                                    <span class="location">Brazil, San Paolo</span>
+                                </div>
+                            
+                                <div class="candidate">
+                                    <a href="#" class="name">Peter Swissels</a>
+                                    <div class="position">Junior Frontend Engineer</div>
+                                    <i class="icon icon-maps"></i>
+                                    <span class="location">Brazil, San Paolo</span>
+                                </div>
+                            
+                                <div class="date">
+                                    <div class="inner">JUN 22, 2017</div>
+                                </div>
+                            
+                                <div class="visability vh-center">
+                                    <div class="checkbox-cover">
+                                        <input class="checkbox-btn" id="checkInterview7" type="checkbox">
+                                        <label for="checkInterview7" class="checkbox-label"></label>
+                                    </div>
+                                </div>
+                            
+                                <div class="edit-button-box vh-center">
+                                    <a class="gray-slim-btn" data-edit-interview>
+                                        <span>Edit interview</span>
+                                    </a>
+                                    
+                                </div>
+                            
+                            </li>
+
+                        </ul>
+                    </div>
+                    <!-- ANOTHER PAGINATION [STATIC] -->
+                    <div class="col-xs-12 col-md-9 pagination col-md-offset-3">
+                        <div id="pagination-box" class="simple-pagination">
+                            <ul class="page-list">
+                                <li class="prev-li">
+                                    <a href="#page-prev" class="page-link prev">
+                                        <i class="icon icon-angle-down" data-icon-left=""></i>
+                                        <div class="previous">Previous</div>
+                                    </a>
+                                </li>
+                                <li class="active hidden" data-prototype-pageItem>
+                                    <a href="#page-1" class="page-link page">1</a>
+                                    <span class="current">1</span>
+                                </li>
+                                <li class="active page-1">
+                                    <a href="#page-1" class="page-link page">1</a>
+                                    <span class="current">1</span>
+                                </li>
+                                <li class="next-li">
+                                    <a href="#page-next" class="page-link next">
+                                        <div class="previous">Next</div>
+                                        <i class="icon icon-angle-down" data-icon-right=""></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div id="page-state">
+                            <div>Page</div>
+                            <div class="select-outer">
+                                <select class="select" data-page-select="">
+                                    <option value="1">1</option>
+                                </select>
+                                <span class="arrow">
+                                    <i class="icon icon-angle-down"></i>
+                                </span>
+                            </div>
+                            <span class="pages-txt">of
+                                <span class="pages-date" data-count-page>1</span>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+
+    </main>
+
+    <footer class="main-footer admin-footer">
+        <div class="admin-inner">
+            <div class="container large">
+                <div class="copyright">
+                    <img src="img/logo.svg" alt="">
+                    <div id="mobile-links" class="sm-hide"></div>
+                    Copyright © 2017 TalentFly, All rights reserved
+                </div>
+                <div id="tablet-links" class="links-box">
+                    <div class="inner" data-tablet="#tablet-links" data-mobile="#mobile-links">
+                        <a href="#">Support</a>
+                        <span class="separator">|</span>
+                        <a href="#">Terms and Conditions</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,300,400,500,600,700" rel="stylesheet">
+    <script src="js/lib/jquery.min.js"></script>
+    <script src="js/plugins/legacy.js"></script>
+    <script src="js/plugins/picker.js"></script>
+    <script src="js/plugins/picker.date.js"></script>
+    <script src="js/plugins/picker.time.js"></script>
+    <script src="js/plugins/jquery.simplePagination.js"></script>
+    <script src="js/init/calendar.js"></script>
+
+    <script src="js/validator.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/init/toggler.js"></script>
+    <script src="js/init/validation.js"></script>
+    <script src="js/init/buttons.js"></script>
+
+
+    <script src="js/init/search-input.js"></script>
+    <script src="js/init/pagination.js"></script>
+
+    <script src="js/init/interviews-list.js"></script>
+
+    <script src="js/init/main-menu-dropdown.js"></script>
+
+
+
+</body>
+
+</html>

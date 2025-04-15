@@ -1,0 +1,1643 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta name="format-detection" content="telephone=no">
+
+    <title>Talent Fly :: Interviews</title>
+
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <link href="http://vjs.zencdn.net/6.2.8/video-js.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/perfect-scrollbar.min.css">
+    <link rel="stylesheet" href="css/bundle.min.css">
+
+</head>
+
+<body class="admin-list-users">
+
+    <header class="main-header inner-header default-shadow" id="mainHeader">
+        <div class="container large">
+            <div class="row middle-xs">
+                <div class="col-xs-2 hidden-lg menu-left">
+                    <button class="none main-menu-toggle">
+                        <i></i>
+                        <i></i>
+                        <i></i>
+                    </button>
+                </div>
+                <div class="col-xs-8 col-md-2">
+                    <a href="index.html" class="logo">
+                        <img src="img/logo.svg" alt="">
+                    </a>
+                </div>
+                <div class="col-xs-2 col-md-10 no-font align-right menu-right">
+                    <div id="notification-sm" class="notification-sm"></div>
+    
+                    <div class="main-menu small" id="notification-lg">
+                        <div id="menuDesktop" class="menu-desktop"></div>
+                        <nav data-tablet="#menuTablet" data-desktop="#menuDesktop">
+                            <ul class="clear menu">
+    
+    
+                                <li class="active">
+                                    <a href="#">
+                                        <span class="text">Users</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <span class="text">Recorded Interviews</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <span class="text">Django Admin Panel</span>
+                                    </a>
+                                </li>
+                                <li id="toggleMenuDropdown" class="menu-dropdown">
+                                    <a href="#" class="bull">
+                                        <div class="separator"></div>
+                                        &bull;&bull;&bull;
+                                    </a>
+                                    <ul class="clear dropdown"></ul>
+                                </li>
+                            </ul>
+                        </nav>
+                        <div class="notification-link" data-tablet="#notification-sm" data-desktop="#notification-lg">
+                            <div class="separator"></div>
+                            <!-- add class animated for a new notification in a real time-->
+                            <button class="notification btn" type="button" data-toggle="#notificationToggle" data-scroll-hide>
+                                <i class="icon icon-bell"></i>
+                                <span class="counter">3</span>
+                                <span class="fade"></span>
+                            </button>
+                            <div class="separator"></div>
+    
+                            <!-- notification details -->
+                            <div class="notification-details" id="notificationToggle">
+                                <div class="inner">
+                                    <div class="header">
+                                        <div class="text">Notification</div>
+                                        <div class="counter">3</div>
+                                    </div>
+                                    <!-- 1 -->
+                                    <div class="notification-item">
+                                        <a href="#" class="title">
+                                            Interview
+                                            <span class="name">Peter Brown</span> with
+                                            <span class="name">Alex Stepanuk.</span>
+                                        </a>
+                                        <span data-tooltip="Mark as read" class="light tooltip-icon small">
+                                            <button type="button" class="btn-tooltip">
+                                                <i class="icon icon-eye"></i>
+                                            </button>
+                                        </span>
+                                        <div class="lead">Lorem ipsum dolor sit amet</div>
+                                        <ul class="clear details">
+                                            <li>Date 10.13.2017</li>
+                                            <li>Time 19:00</li>
+                                        </ul>
+                                    </div>
+                                    <!-- 2 -->
+                                    <div class="notification-item">
+                                        <a href="#" class="title">
+                                            Interview
+                                            <span class="name">Peter Brown</span> with
+                                            <span class="name">Alex Stepanuk.</span>
+                                        </a>
+                                        <span data-tooltip="Mark as read" class="light tooltip-icon small">
+                                            <button type="button" class="btn-tooltip">
+                                                <i class="icon icon-eye"></i>
+                                            </button>
+                                        </span>
+                                        <div class="lead">Lorem ipsum dolor sit amet</div>
+                                        <ul class="clear details">
+                                            <li>Date 10.13.2017</li>
+                                            <li>Time 19:00</li>
+                                        </ul>
+                                    </div>
+                                    <!-- 3 -->
+                                    <div class="notification-item">
+                                        <a href="#" class="title">
+                                            Interview
+                                            <span class="name">Peter Brown</span> with
+                                            <span class="name">Alex Stepanuk.</span>
+                                        </a>
+                                        <span data-tooltip="Mark as read" class="light tooltip-icon small">
+                                            <button type="button" class="btn-tooltip">
+                                                <i class="icon icon-eye"></i>
+                                            </button>
+                                        </span>
+                                        <div class="lead">Lorem ipsum dolor sit amet</div>
+                                        <ul class="clear details">
+                                            <li>Date 10.13.2017</li>
+                                            <li>Time 19:00</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="user-col small" id="signButtonsDesktop">
+                        <a href="index.html" class="btn btn-default" data-tablet="#signInButtonTablet" data-desktop="#signButtonsDesktop">
+                            <span class="text">
+                                <i class="icon icon-logout btn-icon"></i> sign out</span>
+                            <span class="fade"></span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+    
+    
+            <!-- sign in -->
+            <form action="#" class="user-form validate-form" id="signInForm" method="post">
+            	<div class="inner">
+            		<!-- Types of messages: notice, warning, error, success -->
+            		<div id="gNotification" class="general-notification display-none">
+            		    <i class="icon icon-info-round"></i>
+            		    <i class="icon icon-attention"></i>
+            		    <i class="icon icon-close-round"></i>
+            		    <i class="icon icon-success-round"></i>
+            		    <div class="timestamp-preloader display-none"></div>
+            		
+            		    <!-- <span id="gType" class="type">success:</span> -->
+            		    <div class="rows-box">
+            		        <span id="gMessage" class="message">Your don’t save video.</span>
+            		        <span id="gEndMessage" class="end-message"> Save it too keep changes!</span>
+            		    </div>
+            		</div>
+            		<div class="h3-title primary">Sign in</div>
+            		<button type="button" class="form-close">&times;</button>
+            		<div class="form-group">
+            			<input type="text" class="input email" id="signInEmail" maxlength="30" data-minlength="2" autocapitalize="off" autocorrect="off">
+            			<span class="line"></span>
+            			<label for="signInEmail">E-Mail</label>
+            			<i class="icon icon-checked2 icon-success"></i>
+            			<i class="icon icon-close2 icon-error"></i>
+            			<div class="alert">Type a correct E-mail. It must include "@"</div>
+            		</div>
+            		<div class="form-group last">
+            			<input type="password" class="input" id="signInPassword" maxlength="30" data-minlength="6" autocapitalize="off" autocorrect="off">
+            			<span class="line"></span>
+            			<label for="signInPassword">Enter your password</label>
+            			<i class="icon icon-checked2 icon-success"></i>
+            			<i class="icon icon-close2 icon-error"></i>
+            			<div class="alert">Minimum 6 characters</div>
+            		</div>
+            		<div class="checkbox">
+            			<input type="checkbox" id="signInMember">
+            			<label for="signInMember">Remember me</label>
+            		</div>
+            		<div class="row btn-wrap">
+            			<div class="col-xs-12 col-ms-8 col-ms-offset-2">
+            				<button type="submit" class="btn btn-primary btn-lg btn-block">
+            					<span class="text">Sign In</span>
+            					<span class="fade"></span>
+            				</button>
+            			</div>
+            		</div>
+            		<div class="align-center form-caption">Forgot your password? <a href="#">Restore password</a></div>
+            		<div class="align-center form-caption footer-lastLine">Don't have an account? 
+            			<a href="#" class="low-1000-hidden" data-toggle="#signUpForm,#signInForm" data-tablet="#signUpButtonTablet">Sign up</a>
+            		</div>
+            	</div>
+            </form>
+            <!-- / sign in -->
+    
+            <!-- sign up -->
+            <form action="#" class="user-form validate-form" id="signUpForm">
+            	<div class="inner">
+            		 <!-- Types of messages: notice, warning, error, success -->
+            		 <div id="gNotification" class="general-notification display-none">
+            		     <i class="icon icon-info-round"></i>
+            		     <i class="icon icon-attention"></i>
+            		     <i class="icon icon-close-round"></i>
+            		     <i class="icon icon-success-round"></i>
+            		     <div class="timestamp-preloader display-none"></div>
+            		 
+            		     <!-- <span id="gType" class="type">success:</span> -->
+            		     <div class="rows-box">
+            		         <span id="gMessage" class="message">Your don’t save video.</span>
+            		         <span id="gEndMessage" class="end-message"> Save it too keep changes!</span>
+            		     </div>
+            		 </div>
+            		<div class="h3-title primary">Sign up</div>
+            		<button type="button" class="form-close">&times;</button>
+            		<div class="form-group">
+            			<input type="text" class="input" id="signUpFirstName" maxlength="30" data-minlength="2" autocomplete="off">
+            			<span class="line"></span>
+            			<label for="signUpFirstName">First name</label>
+            			<i class="icon icon-checked2 icon-success"></i>
+            			<i class="icon icon-close2 icon-error"></i>
+            			<div class="alert">Minimum 2 characters. Must include only letters</div>
+            		</div>
+            		<div class="form-group">
+            			<input type="text" class="input" id="signUpLastName" maxlength="30" data-minlength="2" autocomplete="off">
+            			<span class="line"></span>
+            			<label for="signUpLastName">Last name</label>
+            			<i class="icon icon-checked2 icon-success"></i>
+            			<i class="icon icon-close2 icon-error"></i>
+            			<div class="alert">Minimum 2 characters. Must include only letters</div>
+            		</div>
+            		<div class="form-group">
+            			<input type="text" class="input email" id="signUpEmail" maxlength="30" data-minlength="2" autocomplete="off" autocapitalize="off" autocorrect="off">
+            			<span class="line"></span>
+            			<label for="signUpEmail">E-Mail</label>
+            			<i class="icon icon-checked2 icon-success"></i>
+            			<i class="icon icon-close2 icon-error"></i>
+            			<div class="alert">Type a correct E-mail. It must include "@"</div>
+            		</div>
+            		<div class="form-group last">
+            			<!-- password-input -->
+            			<input type="password" class="input" id="signUpPassword" maxlength="30" data-minlength="6" autocomplete="off" autocapitalize="off" autocorrect="off">
+            			<span class="line"></span>
+            			<label for="signUpPassword">Create password</label>
+            			<i class="icon icon-checked2 icon-success"></i>
+            			<i class="icon icon-close2 icon-error"></i>
+            			<div class="alert">Minimum 6 characters</div>
+            		</div>
+            		<div class="checkbox">
+            			<input type="checkbox" id="signUpMember">
+            			<label for="signUpMember">I represent a business</label>
+            		</div>
+            		<div class="row btn-wrap">
+            			<div class="col-xs-12 col-ms-8 col-ms-offset-2">
+            				<button type="submit" class="btn btn-primary btn-lg btn-block">
+            					<span class="text">Sign up now</span>
+            					<span class="fade"></span>
+            				</button>
+            			</div>
+            		</div>
+            		<small>
+            			By signing up, you agree to the <a href="#" class="lined">Terms of Service</a> and <a href="#" class="lined">Privacy Policy</a>,
+            			including <a href="#" class="lined">Cookie Use</a>.
+            		</small>
+            	</div>
+            </form>
+            <!-- / sign up -->
+    
+        </div>
+    </header>
+    
+    <div class="none mobile-nav">
+        <div id="menuTablet"></div>
+        <div class="row buttons-row">
+            <div class="col-xs-12" id="signInButtonTablet"></div>
+        </div>
+    </div>
+
+    <main>
+
+        <section class="section usual-padding-top">
+            <div class="container large">
+
+                <div class="row">
+                    <div class="col-xs-12 col-md-6">
+                        <div class="section-title middle with-element" id="btnPositionTablet">Users</div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-xs-12 col-md-3">
+                        <form id="filterForm" class="simple-form filter-form default-shadow">
+                            <div class="header">Filter by</div>
+                            <div class="content">
+                                <div class="input-title">Country</div>
+                                <div class="select-outer">
+                                    <select name="country" class="select" data-push="#" id="countrySelect" data-country-select="">
+                                        <option value="January">January</option>
+                                        <option value="Fabuary">Fabuary</option>
+                                        <option value="March">March</option>
+                                    </select>
+                                    <span class="arrow">
+                                        <i class="icon icon-angle-down"></i>
+                                    </span>
+                                </div>
+
+                                <div class="input-title">City</div>
+                                <div class="select-outer">
+                                    <select name="city" class="select" data-push="#" id="citySelect" data-city-select="">
+                                        <option value="January">January</option>
+                                        <option value="Fabuary">Fabuary</option>
+                                        <option value="March">March</option>
+                                    </select>
+                                    <span class="arrow">
+                                        <i class="icon icon-angle-down"></i>
+                                    </span>
+                                </div>
+                                <div class="input-title">Role</div>
+                                <div class="select-outer">
+                                    <select name="role" class="select" data-push="#" id="roleSelect" data-role-select="">
+                                        <option value="All">All</option>
+                                        <option value="Interviewers">Interviewers</option>
+                                        <option value="Candidates">Candidates</option>
+                                    </select>
+                                    <span class="arrow">
+                                        <i class="icon icon-angle-down"></i>
+                                    </span>
+                                </div>
+                                <div class="input-title">Interviewer</div>
+                                <div class="form-group spaced">
+                                    <input class="input-simple" id="interviewer" minlength="2" placeholder="Enter the name" data-push="#" type="text">
+                                </div>
+                                <div class="input-title">Candidate</div>
+                                <div class="form-group spaced">
+                                    <input class="input-simple" id="candidate" minlength="2" placeholder="Enter the name" data-push="#" type="text">
+                                </div>
+                                <div class="input-title">Email</div>
+                                <div class="form-group spaced">
+                                    <input class="input-simple" id="email" minlength="6" placeholder="" data-push="#" type="text">
+                                </div>
+
+                                <div class="check-container">
+                                    <div class="checkbox-cover">
+                                        <input class="checkbox-btn" id="withInterviewChecker" type="checkbox">
+                                        <label for="withInterviewChecker" class="checkbox-label">With interview</label>
+                                    </div>
+                                    <div class="checkbox-cover">
+                                        <input class="checkbox-btn" id="withoutInterviewChecker" type="checkbox">
+                                        <label for="withoutInterviewChecker" class="checkbox-label">Without interview</label>
+                                    </div>
+                                </div>
+                                <button class="btn form-btn btn-simple" type="submit">
+                                    <span class="text">Apply</span>
+                                    <span class="fade"></span>
+                                </button>
+
+                                <button id="clearBtn" type="button" class="btn btn-default form-btn single-block-element" data-on-edit="" data-removeon="">
+                                    <span class="text">
+                                        Clear filter
+                                    </span>
+                                    <span class="fade"></span>
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+
+                    <div class="col-xs-12 col-md-9 p-relative">
+                        <span data-tooltip="Choose at least one user of this list" class="white-tooltip">
+                            <span class="btn btn-light btn-round btn-xs btn-tooltip">
+                                <i class="icon icon-info"></i>
+                            </span>
+                        </span>
+                        <div class="c-dropdown js-dropdown common-actions box-disabled">
+                            <input type="hidden" name="Framework" id="Framework" class="js-dropdown__input ">
+                            <span class="c-button c-button--dropdown js-dropdown__current">Bulk actions</span>
+                            <span class="arrow">
+                                <i class="icon icon-angle-down"></i>
+                            </span>
+                            <ul class="c-dropdown__list" data-general-actions>
+                                <li class="c-dropdown__item" data-dropdown-value="Assign interviewers">
+                                    <i class="icon icon-assign"></i>
+                                    Assign interviewer
+                                </li>
+                                <li class="c-dropdown__item" data-dropdown-value="Assign candidates">
+                                    <i class="icon icon-assign"></i>
+                                    Assign candidate
+                                </li>
+                                <li class="c-dropdown__item" data-dropdown-value="Share profiles">
+                                    <i class="icon icon-share"></i>
+                                    Share profile
+                                </li>
+                                <!--<li class="c-dropdown__item" data-dropdown-value="Edit Access">
+                                    <i class="icon icon-key"></i>
+                                    Edit Access
+                                </li>
+                                <li class="c-dropdown__item" data-dropdown-value="Archive profile">
+                                    <i class="icon icon-folder"></i>
+                                    Archive profile
+                                </li>
+                                <li class="c-dropdown__item" data-dropdown-value="Block profile">
+                                    <i class="icon icon-padlock"></i>
+                                    Block profile
+                                </li>-->
+                                <li class="c-dropdown__item" data-dropdown-value="Deactivate profiles">
+                                    <i class="icon icon-padlock"></i>
+                                    Deactivate profile
+                                </li>
+                                <li class="c-dropdown__item" data-dropdown-value="Reactivate profiles">
+                                    <i class="icon icon-padlock"></i>
+                                    Reactivate profile
+                                </li>
+                                <li href="#warnPopup" class="c-dropdown__item open-popup-link" data-dropdown-value="Delete items">
+                                    <i class="icon icon-cancel"></i>
+                                    Delete
+                                </li>
+                                <a href="#assignPopup" id="openAssignPopupLink" class="hidden open-popup-link"></a>
+                            </ul>
+                        </div>
+
+
+                        <!-- СПИСОК ЗАПИСЕЙ -->
+                        <ul class="interviews-list users">
+                            
+                            <!-- Эти элементы нужны мне скрытыми, использую их как прототип, для размножения :) -->
+                            <li class="intrview-item default-shadow " data-root-user>
+                                <div class="photo-box">
+                                    <div class="checker">
+                                        <div class="checkbox">
+                                            <input class="choose-user" id="chooseUser-2" type="checkbox">
+                                            <label for="chooseUser-2"></label>
+                                        </div>
+                                    </div>
+                                    <img class="photo" src="" alt="avatar">
+                                </div>
+                            
+                                <div class="inner">
+                                    <div class="info-box">
+                                        <div class="info">
+                                            <a href="#" class="name">Peter Swissels</a>
+                                            <span class="user-id">ID123456789</span>
+                                        </div>
+                                        <div class="info">
+                                            <span href="#" class="group">Candidate</span>
+                                            <div class="position">Junior Frontend Engineer</div>
+                                        </div>
+                                        <div class="info">
+                                            <div class="contact-box">
+                                                <i class="icon icon-maps"></i>
+                                                <span class="location">Brazil, San Paolo</span>
+                                            </div>
+                                            <div class="contact-box">
+                                                <i class="icon icon-email"></i>
+                                                <span class="email">email@gmail.com</span>
+                                            </div>
+                                            <div class="contact-box">
+                                                <i class="icon icon-telephone"></i>
+                                                <span class="phone">+123(000)456-78-90</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="additional-box">
+                                        <div class="additional-info">
+                                            <i class="icon icon-video-player"></i>
+                                            <span class="date">
+                                                <span class="upper" data-date>jul 12, 2017</span> at
+                                                <span data-time> 05:30 PM</span>
+                                                <span class="color-gray">with</span>
+                                                <span data-interlocutor>Liz Freefall</span>
+                                            </span>
+                                        </div>
+                                        <div class="c-dropdown js-dropdown">
+                                            <input type="hidden" name="Framework" id="Framework" class="js-dropdown__input">
+                                            <span class="c-button c-button--dropdown js-dropdown__current">Actions</span>
+                                            <span class="arrow">
+                                                <i class="icon icon-angle-down"></i>
+                                            </span>
+                                            <ul class="c-dropdown__list" id="interviewCandidate2">
+                                                <li class="c-dropdown__item" data-dropdown-value="Assign interviewer">
+                                                    <i class="icon icon-assign"></i>
+                                                    Assign interviewer
+                                                </li>
+                                                <!-- элемент для назначения кандидата интервьюеру -->
+                                                <!-- <li class="c-dropdown__item hidden" data-dropdown-value="Assign candidate">
+                                                    <i class="icon icon-assign"></i>
+                                                    Assign candidate
+                                                </li> -->
+                                                <li class="c-dropdown__item" data-dropdown-value="Share profile">
+                                                    <i class="icon icon-share"></i>
+                                                    Share profile
+                                                </li>
+                                                <!--<li class="c-dropdown__item" data-dropdown-value="Edit Access">
+                                                    <i class="icon icon-key"></i>
+                                                    Edit Access
+                                                </li>
+                                                <li class="c-dropdown__item" data-dropdown-value="Reschedule">
+                                                    <i class="icon icon-day-10-on-calendar-page"></i>
+                                                    Reschedule
+                                                </li>-->
+                                                <li class="c-dropdown__item" data-dropdown-value="View Interviews">
+                                                    <i class="icon icon-play"></i>
+                                                    View Interviews
+                                                </li>
+                                                <!--<li class="c-dropdown__item" data-dropdown-value="Archive profile">
+                                                    <i class="icon icon-folder"></i>
+                                                    Archive profile
+                                                </li>
+                                                <li class="c-dropdown__item" data-dropdown-value="Block profile">
+                                                    <i class="icon icon-padlock"></i>
+                                                    Block profile
+                                                </li>-->
+                                                <li class="c-dropdown__item hidden" data-dropdown-value="Deactivate profile">
+                                                    <i class="icon icon-padlock"></i>
+                                                    Deactivate profile
+                                                </li>
+                                                <li class="c-dropdown__item" data-dropdown-value="Reactivate profile">
+                                                    <i class="icon icon-padlock"></i>
+                                                    Reactivate profile
+                                                </li>
+                                                <li href="#warnPopup" class="c-dropdown__item open-popup-link" data-dropdown-value="Delete">
+                                                    <i class="icon icon-cancel"></i>
+                                                    Delete
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <!-- потом эта лишка (если у юзера есть хотя бы одно интервью) -->
+                            <li class="accordeon-default" data-root-interviewsList-box>
+                                <div class="accordeon-title ">
+                                    <span class="state">show</span> interviews (
+                                    <span class="interviewsCount">3</span>)
+                                </div>
+                                <ul class="accordeon-content" data-root-interviewsList>
+                                    <li class="interview-item " data-root-interview-item>
+                                        <div class="date-box">
+                                            <div class="date">
+                                                <i class="icon icon-video-player"></i>
+                                                <span class="upper">jul 12, 2017</span>
+                                            </div>
+                                            <div class="time">5:30 PM</div>
+                                        </div>
+                                        <div class="user-info-box">
+                                            <a href="#" class="name">Siesto Bambino Gonsales</a>
+                                            <span class="user-id">ID1234567890</span>
+                                            <div>
+                                                <span class="position">Junior Data Engineer</span>
+                                            </div>
+                                        </div>
+                                        <div class="info">
+                                            <div class="contact-box">
+                                                <i class="icon icon-maps"></i>
+                                                <span class="location">Brazil, San Paolo</span>
+                                            </div>
+                                            <div class="contact-box">
+                                                <i class="icon icon-email"></i>
+                                                <span class="email">email@gmail.com</span>
+                                            </div>
+                                            <div class="contact-box">
+                                                <i class="icon icon-telephone"></i>
+                                                <span class="phone">+123(000)456-78-90</span>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </li>
+                            <!-- ТУТ заканчиваются элементы, которые нужны как прототипы для клонирования -->
+
+                            <!-- Если у юзера есть хотябы одно интервью, то сначало такая лишка, потом (смотреть ниже)   -->
+                            <li class="intrview-item default-shadow">
+                                <div class="photo-box">
+                                    <div class="checker">
+                                        <div class="checkbox">
+                                            <input class="choose-user" id="chooseUser-12" type="checkbox">
+                                            <label for="chooseUser-12"></label>
+                                        </div>
+                                    </div>
+                                    <img class="photo" src="" alt="avatar">
+                                </div>
+                            
+                                <div class="inner">
+                                    <div class="info-box">
+                                        <div class="info">
+                                            <a href="#" class="name">Peter Swissels</a>
+                                            <span class="user-id">ID123456789</span>
+                                        </div>
+                                        <div class="info">
+                                            <span href="#" class="group">Candidate</span>
+                                            <div class="position">Junior Frontend Engineer</div>
+                                        </div>
+                                        <div class="info">
+                                            <div class="contact-box">
+                                                <i class="icon icon-maps"></i>
+                                                <span class="location">Brazil, San Paolo</span>
+                                            </div>
+                                            <div class="contact-box">
+                                                <i class="icon icon-email"></i>
+                                                <span class="email">email@gmail.com</span>
+                                            </div>
+                                            <div class="contact-box">
+                                                <i class="icon icon-telephone"></i>
+                                                <span class="phone">+123(000)456-78-90</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="additional-box">
+                                        <div class="additional-info">
+                                            <i class="icon icon-video-player"></i>
+                                            <span class="date">
+                                                <span class="upper" data-date>jul 12, 2017</span> at
+                                                <span data-time> 05:30 PM</span>
+                                                <span class="color-gray">with</span>
+                                                <span data-interlocutor>Liz Freefall</span>
+                                            </span>
+                                        </div>
+                                        <div class="c-dropdown js-dropdown">
+                                            <input type="hidden" name="Framework" id="Framework" class="js-dropdown__input">
+                                            <span class="c-button c-button--dropdown js-dropdown__current">Actions</span>
+                                            <span class="arrow">
+                                                <i class="icon icon-angle-down"></i>
+                                            </span>
+                                            <ul class="c-dropdown__list" id="interviewCandidate2">
+                                                <li class="c-dropdown__item" data-dropdown-value="Assign interviewer">
+                                                    <i class="icon icon-assign"></i>
+                                                    Assign interviewer
+                                                </li>
+                                                <li class="c-dropdown__item" data-dropdown-value="Share profile">
+                                                    <i class="icon icon-share"></i>
+                                                    Share profile
+                                                </li>
+                                                <li class="c-dropdown__item" data-dropdown-value="Edit Access">
+                                                    <i class="icon icon-key"></i>
+                                                    Edit Access
+                                                </li>
+                                                <li class="c-dropdown__item" data-dropdown-value="Reschedule">
+                                                    <i class="icon icon-day-10-on-calendar-page"></i>
+                                                    Reschedule
+                                                </li>
+                                                <li class="c-dropdown__item" data-dropdown-value="View Interviews">
+                                                    <i class="icon icon-play"></i>
+                                                    View Interviews
+                                                </li>
+                                                <li class="c-dropdown__item" data-dropdown-value="Archive profile">
+                                                    <i class="icon icon-folder"></i>
+                                                    Archive profile
+                                                </li>
+                                                <li class="c-dropdown__item" data-dropdown-value="Block profile">
+                                                    <i class="icon icon-padlock"></i>
+                                                    Block profile
+                                                </li>
+                                                <li class="c-dropdown__item" data-dropdown-value="Delete">
+                                                    <i class="icon icon-cancel"></i>
+                                                    Delete
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <!-- потом эта лишка (если у юзера есть хотя бы одно интервью) -->                            
+                            <li class="accordeon-default">
+                                <div class="accordeon-title ">
+                                    <span class="state">show</span> interviews (<span>3</span>)
+                                </div>
+                                <ul class="accordeon-content">
+                                    <li class="interview-item">
+                                        <div class="date-box">
+                                            <div class="date">
+                                                <i class="icon icon-video-player"></i>
+                                                <span class="upper">jul 12, 2017</span>
+                                            </div>
+                                            <div class="time"></div>
+                                        </div>
+                                        <div class="user-info-box">
+                                            <a href="#" class="name">Siesto Bambino Gonsales</a>
+                                            <span class="user-id">ID1234567890</span>
+                                            <div>
+                                                <span class="position">Junior Data Engineer</span>
+                                            </div>
+                                        </div>
+                                        <div class="info">
+                                            <div class="contact-box">
+                                                <i class="icon icon-maps"></i>
+                                                <span class="location">Brazil, San Paolo</span>
+                                            </div>
+                                            <div class="contact-box">
+                                                <i class="icon icon-email"></i>
+                                                <span class="email">email@gmail.com</span>
+                                            </div>
+                                            <div class="contact-box">
+                                                <i class="icon icon-telephone"></i>
+                                                <span class="phone">+123(000)456-78-90</span>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="interview-item">
+                                        <div class="date-box">
+                                            <div class="date">
+                                                <i class="icon icon-video-player"></i>
+                                                <span class="upper">jul 12, 2017</span>
+                                            </div>
+                                            <div class="time">5:30 PM</div>
+                                        </div>
+                                        <div class="user-info-box">
+                                            <a href="#" class="name">Siesto Bambino Gonsales</a>
+                                            <span class="user-id">ID1234567890</span>
+                                            <div>
+                                                <span class="position">Junior Data Engineer</span>
+                                            </div>
+                                        </div>
+                                        <div class="info">
+                                            <div class="contact-box">
+                                                <i class="icon icon-maps"></i>
+                                                <span class="location">Brazil, San Paolo</span>
+                                            </div>
+                                            <div class="contact-box">
+                                                <i class="icon icon-email"></i>
+                                                <span class="email">email@gmail.com</span>
+                                            </div>
+                                            <div class="contact-box">
+                                                <i class="icon icon-telephone"></i>
+                                                <span class="phone">+123(000)456-78-90</span>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="interview-item">
+                                        <div class="date-box">
+                                            <div class="date">
+                                                <i class="icon icon-video-player"></i>
+                                                <span class="upper">jul 12, 2017</span>
+                                            </div>
+                                            <div class="time">5:30 PM</div>
+                                        </div>
+                                        <div class="user-info-box">
+                                            <a href="#" class="name">Siesto Bambino Gonsales</a>
+                                            <span class="user-id">ID1234567890</span>
+                                            <div>
+                                                <span class="position">Junior Data Engineer</span>
+                                            </div>
+                                        </div>
+                                        <div class="info">
+                                            <div class="contact-box">
+                                                <i class="icon icon-maps"></i>
+                                                <span class="location">Brazil, San Paolo</span>
+                                            </div>
+                                            <div class="contact-box">
+                                                <i class="icon icon-email"></i>
+                                                <span class="email">email@gmail.com</span>
+                                            </div>
+                                            <div class="contact-box">
+                                                <i class="icon icon-telephone"></i>
+                                                <span class="phone">+123(000)456-78-90</span>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </li>
+
+                            <!-- Если у юзера нету интервью то такая лишка -->
+                            <li class="intrview-item default-shadow">
+                                <div class="photo-box">
+                                    <div class="checker">
+                                        <div class="checkbox">
+                                            <input class="choose-user" id="chooseUser-1" type="checkbox">
+                                            <label for="chooseUser-1"></label>
+                                        </div>
+                                    </div>
+                                    <img class="photo" src="" alt="avatar">
+                                </div>
+                            
+                                <div class="inner">
+                                    <div class="info-box">
+                                        <div class="info">
+                                            <a href="#" class="name">Peter Swissels</a>
+                                            <span class="user-id">ID123456789</span>
+                                        </div>
+                                        <div class="info">
+                                            <span href="#" class="group">Candidate</span>
+                                            <div class="position">Junior Frontend Engineer</div>
+                                        </div>
+                                        <div class="info">
+                                            <div class="contact-box">
+                                                <i class="icon icon-maps"></i>
+                                                <span class="location">Brazil, San Paolo</span>
+                                            </div>
+                                            <div class="contact-box">
+                                                <i class="icon icon-email"></i>
+                                                <span class="email">email@gmail.com</span>
+                                            </div>
+                                            <div class="contact-box">
+                                                <i class="icon icon-telephone"></i>
+                                                <span class="phone">+123(000)456-78-90</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="additional-box">
+                                        <div class="additional-info">
+                                            <i class="icon icon-video-player"></i>
+                                            <span class="date">
+                                                <span class="upper" data-date>jul 12, 2017</span> at
+                                                <span data-time> 05:30 PM</span>
+                                                <span class="color-gray">with</span>
+                                                <span data-interlocutor>Liz Freefall</span>
+                                            </span>
+                                        </div>
+                                        <div class="c-dropdown js-dropdown">
+                                            <input type="hidden" name="Framework" id="Framework" class="js-dropdown__input">
+                                            <span class="c-button c-button--dropdown js-dropdown__current">Actions</span>
+                                            <span class="arrow">
+                                                <i class="icon icon-angle-down"></i>
+                                            </span>
+                                            <ul class="c-dropdown__list" id="interviewCandidate1">
+                                                <li class="c-dropdown__item" data-dropdown-value="Assign interviewer">
+                                                    <i class="icon icon-assign"></i>
+                                                    Assign interviewer
+                                                </li>
+                                                <li class="c-dropdown__item" data-dropdown-value="Share profile">
+                                                    <i class="icon icon-share"></i>
+                                                    Share profile
+                                                </li>
+                                                <li class="c-dropdown__item" data-dropdown-value="Edit Access">
+                                                    <i class="icon icon-key"></i>
+                                                    Edit Access
+                                                </li>
+                                                <li class="c-dropdown__item" data-dropdown-value="Reschedule">
+                                                    <i class="icon icon-day-10-on-calendar-page"></i>
+                                                    Reschedule
+                                                </li>
+                                                <li class="c-dropdown__item" data-dropdown-value="View Interviews">
+                                                    <i class="icon icon-play"></i>
+                                                    View Interviews
+                                                </li>
+                                                <li class="c-dropdown__item" data-dropdown-value="Archive profile">
+                                                    <i class="icon icon-folder"></i>
+                                                    Archive profile
+                                                </li>
+                                                <li class="c-dropdown__item" data-dropdown-value="Block profile">
+                                                    <i class="icon icon-padlock"></i>
+                                                    Block profile
+                                                </li>
+                                                <li class="c-dropdown__item" data-dropdown-value="Delete">
+                                                    <i class="icon icon-cancel"></i>
+                                                    Delete
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="intrview-item default-shadow">
+                                <div class="photo-box">
+                                    <div class="checker">
+                                        <div class="checkbox">
+                                            <input class="choose-user" id="chooseUser-3" type="checkbox">
+                                            <label for="chooseUser-3"></label>
+                                        </div>
+                                    </div>
+                                    <img class="photo" src="" alt="avatar">
+                                </div>
+                            
+                                <div class="inner">
+                                    <div class="info-box">
+                                        <div class="info">
+                                            <a href="#" class="name">Peter Swissels</a>
+                                            <span class="user-id">ID123456789</span>
+                                        </div>
+                                        <div class="info">
+                                            <span href="#" class="group">Candidate</span>
+                                            <div class="position">Junior Frontend Engineer</div>
+                                        </div>
+                                        <div class="info">
+                                            <div class="contact-box">
+                                                <i class="icon icon-maps"></i>
+                                                <span class="location">Brazil, San Paolo</span>
+                                            </div>
+                                            <div class="contact-box">
+                                                <i class="icon icon-email"></i>
+                                                <span class="email">email@gmail.com</span>
+                                            </div>
+                                            <div class="contact-box">
+                                                <i class="icon icon-telephone"></i>
+                                                <span class="phone">+123(000)456-78-90</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="additional-box">
+                                        <div class="additional-info">
+                                            <i class="icon icon-video-player"></i>
+                                            <span class="date">
+                                                <span class="upper" data-date>jul 12, 2017</span> at
+                                                <span data-time> 05:30 PM</span>
+                                                <span class="color-gray">with</span>
+                                                <span data-interlocutor>Liz Freefall</span>
+                                            </span>
+                                        </div>
+                                        <div class="c-dropdown js-dropdown">
+                                            <input type="hidden" name="Framework" id="Framework" class="js-dropdown__input">
+                                            <span class="c-button c-button--dropdown js-dropdown__current">Actions</span>
+                                            <span class="arrow">
+                                                <i class="icon icon-angle-down"></i>
+                                            </span>
+                                            <ul class="c-dropdown__list" id="interviewCandidate3">
+                                                <li class="c-dropdown__item" data-dropdown-value="Assign interviewer">
+                                                    <i class="icon icon-assign"></i>
+                                                    Assign interviewer
+                                                </li>
+                                                <li class="c-dropdown__item" data-dropdown-value="Share profile">
+                                                    <i class="icon icon-share"></i>
+                                                    Share profile
+                                                </li>
+                                                <li class="c-dropdown__item" data-dropdown-value="Edit Access">
+                                                    <i class="icon icon-key"></i>
+                                                    Edit Access
+                                                </li>
+                                                <li class="c-dropdown__item" data-dropdown-value="Reschedule">
+                                                    <i class="icon icon-day-10-on-calendar-page"></i>
+                                                    Reschedule
+                                                </li>
+                                                <li class="c-dropdown__item" data-dropdown-value="View Interviews">
+                                                    <i class="icon icon-play"></i>
+                                                    View Interviews
+                                                </li>
+                                                <li class="c-dropdown__item" data-dropdown-value="Archive profile">
+                                                    <i class="icon icon-folder"></i>
+                                                    Archive profile
+                                                </li>
+                                                <li class="c-dropdown__item" data-dropdown-value="Block profile">
+                                                    <i class="icon icon-padlock"></i>
+                                                    Block profile
+                                                </li>
+                                                <li class="c-dropdown__item" data-dropdown-value="Delete">
+                                                    <i class="icon icon-cancel"></i>
+                                                    Delete
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="intrview-item default-shadow">
+                                <div class="photo-box">
+                                    <div class="checker">
+                                        <div class="checkbox">
+                                            <input class="choose-user" id="chooseUser-4" type="checkbox">
+                                            <label for="chooseUser-4"></label>
+                                        </div>
+                                    </div>
+                                    <img class="photo" src="" alt="avatar">
+                                </div>
+                            
+                                <div class="inner">
+                                    <div class="info-box">
+                                        <div class="info">
+                                            <a href="#" class="name">Peter Swissels</a>
+                                            <span class="user-id">ID123456789</span>
+                                        </div>
+                                        <div class="info">
+                                            <span href="#" class="group">Candidate</span>
+                                            <div class="position">Junior Frontend Engineer</div>
+                                        </div>
+                                        <div class="info">
+                                            <div class="contact-box">
+                                                <i class="icon icon-maps"></i>
+                                                <span class="location">Brazil, San Paolo</span>
+                                            </div>
+                                            <div class="contact-box">
+                                                <i class="icon icon-email"></i>
+                                                <span class="email">email@gmail.com</span>
+                                            </div>
+                                            <div class="contact-box">
+                                                <i class="icon icon-telephone"></i>
+                                                <span class="phone">+123(000)456-78-90</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="additional-box">
+                                        <div class="additional-info">
+                                            <i class="icon icon-video-player"></i>
+                                            <span class="date">
+                                                <span class="upper" data-date>jul 12, 2017</span> at
+                                                <span data-time> 05:30 PM</span>
+                                                <span class="color-gray">with</span>
+                                                <span data-interlocutor>Liz Freefall</span>
+                                            </span>
+                                        </div>
+                                        <div class="c-dropdown js-dropdown">
+                                            <input type="hidden" name="Framework" id="Framework" class="js-dropdown__input">
+                                            <span class="c-button c-button--dropdown js-dropdown__current">Actions</span>
+                                            <span class="arrow">
+                                                <i class="icon icon-angle-down"></i>
+                                            </span>
+                                            <ul class="c-dropdown__list" id="interviewCandidate4">
+                                                <li class="c-dropdown__item" data-dropdown-value="Assign interviewer">
+                                                    <i class="icon icon-assign"></i>
+                                                    Assign interviewer
+                                                </li>
+                                                <li class="c-dropdown__item" data-dropdown-value="Share profile">
+                                                    <i class="icon icon-share"></i>
+                                                    Share profile
+                                                </li>
+                                                <li class="c-dropdown__item" data-dropdown-value="Edit Access">
+                                                    <i class="icon icon-key"></i>
+                                                    Edit Access
+                                                </li>
+                                                <li class="c-dropdown__item" data-dropdown-value="Reschedule">
+                                                    <i class="icon icon-day-10-on-calendar-page"></i>
+                                                    Reschedule
+                                                </li>
+                                                <li class="c-dropdown__item" data-dropdown-value="View Interviews">
+                                                    <i class="icon icon-play"></i>
+                                                    View Interviews
+                                                </li>
+                                                <li class="c-dropdown__item" data-dropdown-value="Archive profile">
+                                                    <i class="icon icon-folder"></i>
+                                                    Archive profile
+                                                </li>
+                                                <li class="c-dropdown__item" data-dropdown-value="Block profile">
+                                                    <i class="icon icon-padlock"></i>
+                                                    Block profile
+                                                </li>
+                                                <li class="c-dropdown__item" data-dropdown-value="Delete">
+                                                    <i class="icon icon-cancel"></i>
+                                                    Delete
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="intrview-item default-shadow">
+                                <div class="photo-box">
+                                    <div class="checker">
+                                        <div class="checkbox">
+                                            <input class="choose-user" id="chooseUser-5" type="checkbox">
+                                            <label for="chooseUser-5"></label>
+                                        </div>
+                                    </div>
+                                    <img class="photo" src="" alt="avatar">
+                                </div>
+                            
+                                <div class="inner">
+                                    <div class="info-box">
+                                        <div class="info">
+                                            <a href="#" class="name">Peter Swissels</a>
+                                            <span class="user-id">ID123456789</span>
+                                        </div>
+                                        <div class="info">
+                                            <span href="#" class="group">Candidate</span>
+                                            <div class="position">Junior Frontend Engineer</div>
+                                        </div>
+                                        <div class="info">
+                                            <div class="contact-box">
+                                                <i class="icon icon-maps"></i>
+                                                <span class="location">Brazil, San Paolo</span>
+                                            </div>
+                                            <div class="contact-box">
+                                                <i class="icon icon-email"></i>
+                                                <span class="email">email@gmail.com</span>
+                                            </div>
+                                            <div class="contact-box">
+                                                <i class="icon icon-telephone"></i>
+                                                <span class="phone">+123(000)456-78-90</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="additional-box">
+                                        <div class="additional-info">
+                                            <i class="icon icon-video-player"></i>
+                                            <span class="date">
+                                                <span class="upper" data-date>jul 12, 2017</span> at
+                                                <span data-time> 05:30 PM</span>
+                                                <span class="color-gray">with</span>
+                                                <span data-interlocutor>Liz Freefall</span>
+                                            </span>
+                                        </div>
+                                        <div class="c-dropdown js-dropdown">
+                                            <input name="Framework" id="Framework" class="js-dropdown__input" value="Delete" type="hidden">
+                                            <span class="c-button c-button--dropdown js-dropdown__current">
+                            
+                                                Delete
+                                            </span>
+                                            <span class="arrow">
+                                                <i class="icon icon-angle-down"></i>
+                                            </span>
+                                            <ul class="c-dropdown__list" id="interviewCandidate5">
+                                                <li class="c-dropdown__item" data-dropdown-value="Assign interviewer">
+                                                    <i class="icon icon-assign"></i>
+                                                    Assign interviewer
+                                                </li>
+                                                <li class="c-dropdown__item" data-dropdown-value="Share profile">
+                                                    <i class="icon icon-share"></i>
+                                                    Share profile
+                                                </li>
+                                                <li class="c-dropdown__item" data-dropdown-value="Edit Access">
+                                                    <i class="icon icon-key"></i>
+                                                    Edit Access
+                                                </li>
+                                                <li class="c-dropdown__item" data-dropdown-value="Reschedule">
+                                                    <i class="icon icon-day-10-on-calendar-page"></i>
+                                                    Reschedule
+                                                </li>
+                                                <li class="c-dropdown__item" data-dropdown-value="View Interviews">
+                                                    <i class="icon icon-play"></i>
+                                                    View Interviews
+                                                </li>
+                                                <li class="c-dropdown__item" data-dropdown-value="Archive profile">
+                                                    <i class="icon icon-folder"></i>
+                                                    Archive profile
+                                                </li>
+                                                <li class="c-dropdown__item" data-dropdown-value="Block profile">
+                                                    <i class="icon icon-padlock"></i>
+                                                    Block profile
+                                                </li>
+                                                <li class="c-dropdown__item" data-dropdown-value="Delete">
+                                                    <i class="icon icon-cancel"></i>
+                                                    Delete
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                           
+                    </div>
+                    <!-- ANOTHER PAGINATION [STATIC] -->
+                    <div class="col-xs-12 col-md-9 pagination col-md-offset-3">
+                        <div id="pagination-box" class="simple-pagination">
+                            <ul class="page-list">
+                                <li class="prev-li">
+                                    <a href="#page-prev" class="page-link prev">
+                                        <i class="icon icon-angle-down" data-icon-left=""></i>
+                                        <div class="previous">Previous</div>
+                                    </a>
+                                </li>
+                                <li class="active hidden" data-prototype-pageItem>
+                                    <a href="#page-1" class="page-link page">1</a>
+                                    <span class="current">1</span>
+                                </li>
+                                <li class="active page-1">
+                                    <a href="#page-1" class="page-link page">1</a>
+                                    <span class="current">1</span>
+                                </li>
+                                <li class="next-li">
+                                    <a href="#page-next" class="page-link next">
+                                        <div class="previous">Next</div>
+                                        <i class="icon icon-angle-down" data-icon-right=""></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div id="page-state">
+                            <div>Page</div>
+                            <div class="select-outer">
+                                <select class="select" data-page-select="">
+                                    <option value="1">1</option>
+                                </select>
+                                <span class="arrow">
+                                    <i class="icon icon-angle-down"></i>
+                                </span>
+                            </div>
+                            <span class="pages-txt">of
+                                <span class="pages-date" data-count-page>1</span>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            
+            </div>
+        </section>
+    
+    </main>
+
+     <footer class="main-footer admin-footer">
+         <div class="admin-inner">
+             <div class="container large">
+                 <div class="copyright">
+                     <img src="img/logo.svg" alt="">
+                     <div id="mobile-links" class="sm-hide"></div>
+                     Copyright © 2017 TalentFly, All rights reserved
+                 </div>
+                 <div id="tablet-links" class="links-box">
+                     <div class="inner" data-tablet="#tablet-links" data-mobile="#mobile-links">
+                         <a href="#">Support</a>
+                         <span class="separator">|</span>
+                         <a href="#">Terms and Conditions</a>
+                     </div>
+                 </div>
+             </div>
+         </div>
+     </footer>
+
+     <div id="accessOneProfilePopup" class="access-one-profile-popup white-popup mfp-hide">
+     	<div class="inner">
+     		<div class="header">
+     			<div class="title">Access to <span class="full-name">User Name </span> profile
+     				<span data-tooltip="Some little text here but not very large">
+     					<span class="btn btn-light btn-round btn-xs btn-tooltip">
+     						<i class="icon icon-info"></i>
+     					</span>
+     				</span>
+     			</div>
+     			<button class="mfp-close btn btn-grey btn-round">
+     				<i class="icon icon-close"></i>
+     			</button>
+     		</div>
+     		<div class="content container">
+     			<div class="access-one-profile-inputs" id="placeForAccesses">
+     				<div class="access-field row hidden" id="access1">
+     					<div class="col-xs-11">
+     						<div class="row">
+     							<div class="col-xs-12 col-md-5">
+     								<div class="input-title">Name</div>
+     								<input class="access-name-input" name="name">
+     								<span class="error-tip hidden">Please, enter the name</span>
+     							</div>
+     							<div class="col-xs-12 col-sm-6 col-md-3 access-expiration-field">
+     								<div class="input-title">Expiration Date</div>
+     								<div class="select-outer">
+     									<select name="date" class="select" data-push="#date" data-date-select="">
+     										<option class="default-exp-date" selected="selected">Choose</option>
+     										<option>Never</option>
+     										<option value="364">1 year</option>
+     										<option value="91">3 months</option>
+     										<option value="30">1 month</option>
+     										<option value="20">3 weeks</option>
+     										<option value="7">1 week</option>
+     									</select>
+     									<span class="arrow">
+     										<i class="icon icon-angle-down"></i>
+     									</span>
+     								</div>
+     								<span class="error-tip hidden">Choose date</span>
+     							</div>
+     							<div class="col-xs-12 col-sm-6 col-md-4 access-link-field already-generated">
+     								<div class="input-title">Link</div>
+     								<a class="already-generated-link" href="#">talentfly.com/qweuoqh</a>
+     								<span class="access-generate-link">Generate Link</span>
+     								<button class="copy-btn">
+     									<i class="icon icon-upload"></i>
+     								</button>
+     							</div>
+     						</div>
+     					</div>
+     					<div class="col-xs-1 remove-access-block">
+     						<button class="remove-access-btn" id="removeAccessBtn3">
+     							<i class="icon icon-close icon-close-access"></i>
+     						</button>
+     					</div>
+     				</div>
+     				
+     			</div>
+     
+     			<div class="add-access-block">
+     				<span class="add-access-btn">&#43; Add Access</span>
+     			</div>
+     			
+     			<!--<div class="access-one-profile-buttons">
+     				<button class="btn form-btn btn-simple access-one-profile-popup-btn" type="submit">
+     					<span class="text">invite</span>
+     					<span class="fade"></span>
+     				</button>
+     				<button class="btn form-btn btn-grey close-modal access-one-profile-popup-btn" type="button">
+     				    <span class="text">cancel</span>
+     				    <span class="fade"></span>
+     				</button>
+     			</div>-->
+     		</div>
+     	</div>
+     </div>
+
+     <div id="accessFewProfilesPopup" class="access-few-profiles-popup white-popup mfp-hide">
+     	<div class="inner">
+     		<div class="header">
+     			<div class="title" id="accessFewProfilesTitle">Access to <span data-countChecked-users>3</span> profiles
+     				<span data-tooltip="Some little text here but not very large">
+     					<span class="btn btn-light btn-round btn-xs btn-tooltip">
+     						<i class="icon icon-info"></i>
+     					</span>
+     				</span>
+     			</div>
+     			<button class="mfp-close btn btn-grey btn-round">
+     				<i class="icon icon-close"></i>
+     			</button>
+     		</div>
+     		<div class="content container">
+     			<div class="access-few-profiles-inputs" id="placeForAccess">
+     				<div class="name-field row">
+     					<div class="col-xs-12 col-sm-6">
+     						<div class="input-title">Name</div>
+     						<input value="ABC Studio" class="access-name-input" name="name">
+     						<span class="error-tip hidden">Please, enter at least 2 characters.</span>
+     					</div>
+     					<div class="col-xs-12 col-sm-6">
+     						<div class="input-title">E-mail</div>
+     						<input value="careers@abcstudio.com" class="access-name-input email" name="email">
+     						<span class="error-tip hidden">Please, enter the email</span>
+     					</div>
+     				</div>
+     				<div class="message-field row">
+     					<div class="col-xs-12">
+     						<div class="input-title">Message <span class="message-optional">(optional)</span></div>
+     						<textarea rows="3" class="access-name-input" name="message"></textarea>
+     					</div>
+     				</div>
+     				<div class="expiration-field row">
+     					<div class="col-xs-12 col-sm-3">
+     						<div class="input-title">Expiration Date</div>
+     						<div class="select-outer">
+     						    <select name="date" class="select" data-push="#date" data-date-select="">
+     						        <option class="default-exp-date">Choose</option>
+     								<option>Never</option>
+     								<option value="364">1 year</option>
+     								<option value="91">3 months</option>
+     								<option value="30">1 month</option>
+     								<option value="20">3 weeks</option>
+     								<option value="7">1 week</option>
+     						    </select>
+     						    <span class="arrow">
+     						        <i class="icon icon-angle-down"></i>
+     						    </span>
+     						</div>
+     						<span class="error-tip hidden">Please, choose a date</span>
+     					</div>
+     				</div>
+     			</div>
+     			
+     			<div class="access-few-profiles-buttons">
+     				<button class="btn form-btn btn-simple access-few-profiles-popup-btn" type="button" data-send-request data-share-profiles>
+     					<span class="text">invite</span>
+     					<span class="fade"></span>
+     				</button>
+     				<button class="btn form-btn btn-grey close-modal access-few-profiles-popup-btn close-modal" type="button">
+     				    <span class="text">cancel</span>
+     				    <span class="fade"></span>
+     				</button>
+     			</div>
+     		</div>
+     	</div>
+     </div>
+
+     <div id="assignPopup" class="access-one-profile-popup white-popup mfp-hide">
+     	<div class="inner">
+     		<div class="header">
+     			<div class="title">Choose <span data-role>an interviewer</span>
+     				<span data-tooltip="Some little text here but not very large">
+     					<span class="btn btn-light btn-round btn-xs btn-tooltip">
+     						<i class="icon icon-info"></i>
+     					</span>
+     				</span>
+     			</div>
+     			<button class="mfp-close btn btn-grey btn-round">
+     				<i class="icon icon-close"></i>
+     			</button>
+     		</div>
+     		<div class="content container">
+     			<div class="access-one-profile-inputs" data-list>
+     				<div class="access-field row" id="" data-root-item>
+     					<div class="col-xs-12">
+     						<div class="row">
+     							<div class="col-xs-1 col-md-1 check-container">
+     								<div class="checker">
+     									<div class="checkbox">
+     										<input class="choose-user" id="chooseUserPopup-1" type="checkbox" data-checker>
+     										<label for="chooseUserPopup-1" data-label></label>
+     									</div>
+     								</div>
+     							</div>
+     							<div class="col-xs-12 col-md-5">
+     								<div class="input-title">Name</div>
+     								<span data-full-name>Peter Gonsales</span>
+     							</div>
+     							<div class="col-xs-12 col-sm-8 col-md-4 access-expiration-field">
+     								<div class="input-title">Position</div>
+     								<span data-position>Senior Full Stack Developer</span>
+     							</div>
+     							<div class="col-xs-12 col-sm-6 col-md-2 access-link-field already-generated">
+     								<div class="input-title">ID</div>
+     								<span class="" data-id>83490830</span>
+     							</div>
+     						</div>
+     					</div>
+     				</div>
+     				<div class="access-one-profile-inputs" id="">
+     					<div class="access-field row" id="">
+     						<div class="col-xs-12">
+     							<div class="row">
+     								<div class="col-xs-1 col-md-1 check-container">
+     									<div class="checker">
+     										<div class="checkbox">
+     											<input class="choose-user" id="chooseUserPopup-2" type="checkbox">
+     											<label for="chooseUserPopup-2"></label>
+     										</div>
+     									</div>
+     								</div>
+     								<div class="col-xs-12 col-md-5">
+     									<div class="input-title">Name</div>
+     									<span>Peter Gonsales</span>
+     								</div>
+     								<div class="col-xs-12 col-sm-8 col-md-4 access-expiration-field">
+     									<div class="input-title">Position</div>
+     									<span>Senior Full Stack Developer</span>
+     								</div>
+     								<div class="col-xs-12 col-sm-6 col-md-2 access-link-field already-generated">
+     									<div class="input-title">ID</div>
+     									<span class="">83490830</span>
+     								</div>
+     							</div>
+     						</div>
+     					</div>
+     				</div>
+     			</div>
+     			<div class="access-one-profile-buttons">
+     				<button class="btn form-btn btn-simple access-one-profile-popup-btn box-disabled" type="button" data-assign >
+     					<span class="text">assign</span>
+     					<span class="fade"></span>
+     				</button>
+     				<button class="btn form-btn btn-grey close-modal access-one-profile-popup-btn" type="button" data-cancel-assign>
+     				    <span class="text">cancel</span>
+     				    <span class="fade"></span>
+     				</button>
+     			</div>
+     		</div>
+     	</div>
+     </div>
+
+     <div id="share-profile-popup" class="white-popup mfp-hide">
+     	<div class="inner">
+     		<div class="header">
+     			<div class="title">Share profile</div>
+     		</div>
+     		<div class="content">
+     			<form action="#" class="simple-form modal-form">
+     				<div class="form-group last">
+     					<div class="form-group last">
+     						<div class="input-title">Copy this link to share</div>
+     						<div class="input input-simple copy-content" id="copiedLink" data-clipboard-text="tessxt to copy">https://talentfly.com/</div>
+     					</div>
+     				</div>
+     				<div class="btn-group align-left collapsed">
+     					<button class="btn form-btn btn-grey close-modal" type="button">
+     						<span class="text">Cancel</span>
+     						<span class="fade"></span>
+     					</button>
+     					<button class="btn form-btn btn-simple" type="button" id="copyButton" data-clipboard-text="tessxt to copy">
+     						<span class="text">Copy</span>
+     						<span class="fade"></span>
+     					</button>
+     				</div>
+     			</form>
+     		</div>
+     	</div>
+     </div>
+
+     <div id="reschedulePopup" class="reschedule-popup white-popup mfp-hide">
+     	<div class="inner">
+     		<div class="header">
+     			<div class="title">Interview with <span class="full-name">User Name </span>
+     				<span data-tooltip="Some little text here but not very large">
+     					<span class="btn btn-light btn-round btn-xs btn-tooltip">
+     						<i class="icon icon-info"></i>
+     					</span>
+     				</span>
+     			</div>
+     			<button class="mfp-close btn btn-grey btn-round">
+     				<i class="icon icon-close"></i>
+     			</button>
+     		</div>
+     		<div class="content container">
+     			<div class="reschedule-inputs row">
+     				<div class="col-xs-12 col-sm-6 col-modified">
+     					<div class="input-title">Date</div> 
+     					<input class="calendar-input datepicker" id="dateSelect" name="calendar" placeholder="MM/DD/YYYY">
+     					<i class="icon icon-event calendar-icon datepicker"></i>
+     					<span class="error-hint hidden">Please, choose a date</span>
+     				</div>
+     				<div class="col-sm-6 col-modified">
+     					<div class="row">
+     						<div class="col-xs-6 subcol-modified">
+     							<div class="input-title">Hour</div>
+     							<div class="select-outer">
+     							    <select name="hours" class="select" data-push="#hours" id="hourSelect" data-hour-select="">
+     									<option>01</option>
+     									<option>02</option>
+     									<option>03</option>
+     									<option>04</option>
+     									<option>05</option>
+     									<option>06</option>
+     									<option>07</option>
+     									<option>08</option>
+     									<option>09</option>
+     									<option>10</option>
+     									<option>11</option>
+     									<option>12</option>
+     									<option>13</option>
+     									<option>14</option>
+     									<option>15</option>
+     									<option>16</option>
+     									<option>17</option>
+     									<option>18</option>
+     									<option>19</option>
+     									<option>20</option>
+     									<option>21</option>
+     									<option>22</option>
+     									<option>23</option>
+     									<option>24</option>
+     							    </select>
+     							    <span class="arrow">
+     							        <i class="icon icon-angle-down"></i>
+     							    </span>
+     							</div>
+     						</div>
+     						<div class="col-xs-6 subcol-modified">
+     							<div class="input-title">Minute</div>
+     							<div class="select-outer">
+     							    <select name="minutes" class="select" data-push="#minutes" id="minuteSelect" data-minute-select="">
+     							        <option>01</option>
+     							        <option>02</option>
+     							        <option>03</option>
+     							        <option>04</option>
+     							        <option>05</option>
+     							        <option>06</option>
+     							        <option>07</option>
+     							        <option>08</option>
+     							        <option>09</option>
+     							        <option>10</option>
+     							        <option>11</option>
+     							        <option>12</option>
+     							        <option>13</option>
+     							        <option>14</option>
+     							        <option>15</option>
+     							        <option>16</option>
+     							        <option>17</option>
+     							        <option>18</option>
+     							        <option>19</option>
+     							        <option>20</option>
+     							        <option>21</option>
+     							        <option>22</option>
+     							        <option>23</option>
+     							        <option>24</option>
+     							        <option>25</option>
+     							        <option>26</option>
+     							        <option>27</option>
+     							        <option>28</option>
+     							        <option>29</option>
+     							        <option>30</option>
+     							        <option>31</option>
+     							        <option>32</option>
+     							        <option>33</option>
+     							        <option>34</option>
+     							        <option>35</option>
+     							        <option>36</option>
+     							        <option>37</option>
+     							        <option>38</option>
+     							        <option>39</option>
+     							        <option>40</option>
+     							        <option>41</option>
+     							        <option>42</option>
+     							        <option>43</option>
+     							        <option>44</option>
+     							        <option>45</option>
+     							        <option>46</option>
+     							        <option>47</option>
+     							        <option>48</option>
+     							        <option>49</option>
+     							        <option>50</option>
+     							        <option>51</option>
+     							        <option>52</option>
+     							        <option>53</option>
+     							        <option>54</option>
+     							        <option>55</option>
+     							        <option>56</option>
+     							        <option>57</option>
+     							        <option>58</option>
+     							        <option>59</option>
+     							        <option>60</option>
+     							    </select>
+     							    <span class="arrow">
+     							        <i class="icon icon-angle-down"></i>
+     							    </span>
+     							</div>
+     						</div>
+     					</div>
+     				</div>
+     			
+     			</div>
+     			
+     			<div class="reschedule-buttons">
+     				<button class="btn form-btn btn-simple reschedule-popup-btn" type="submit" data-list-users-invite>
+     					<span class="text">invite</span>
+     					<span class="fade"></span>
+     				</button>
+     				<button class="btn form-btn btn-grey close-modal reschedule-popup-btn" type="button">
+     				    <span class="text">cancel</span>
+     				    <span class="fade"></span>
+     				</button>
+     			</div>
+     		</div>
+     	</div>
+     </div>
+
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,300,400,500,600,700" rel="stylesheet">
+    <script src="js/lib/jquery.min.js"></script>
+    <script src="js/plugins/jquery.magnific-popup.min.js"></script>
+    <script src="js/plugins/picker.js"></script>
+    <script src="js/plugins/picker.date.js"></script>
+    <script src="js/plugins/picker.time.js"></script>
+
+    <script src="js/validator.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/init/toggler.js"></script>
+    <script src="js/init/validation.js"></script>
+    <script src="js/init/buttons.js"></script>
+
+    <script src="js/init/search-input.js"></script>
+    <script src="js/init/custom-dropdown.js"></script>
+
+    <script src="js/init/calendar.js"></script>
+    <script src="js/init/list-users-handler.js"></script>
+    <script src="js/init/pagination.js"></script>
+
+    <script src="js/init/main-menu-dropdown.js"></script>
+    <script src="js/init/popup-access-to-profiles.js"></script>
+    
+
+</body>
+</html>

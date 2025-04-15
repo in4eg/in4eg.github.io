@@ -1,0 +1,105 @@
+<div class="overview-head">
+	<div class="row middle-xs spaced-row">
+		<div class="col-xs-12 col-sm-9 col-md-9" data-call-popup="#edit-gereral-popup" data-edit="#userMainInfo" id="userMainInfo" data-text="edit">
+			<div class="row">
+				<div class="col-xs-12 col-sm-8 col-md-8 col-lg-7 left-side">
+					<div class="row middle-xs">
+						<div class="image-holder">
+							<figure class="round-image absolute icon-figure userpic" id="genPhoto">
+								<!-- its not necessary to remove span when we have a user photo -->
+								<span class="caption-nophoto">
+									<i class="icon icon-photo"></i>
+									<span class="text">profile photo</span>
+								</span>
+								<!-- if there is user photo just put it below span -->
+								<img src="temp/user4.jpg" alt="" id="userPhoto" class="cropped-photo">
+							</figure>
+						</div>
+						<div class="user-name">
+							<div class="h4-title no-margin" data-text-length="27">
+								<div class="inner">
+									<span id="userFNameEdit" data-change="#personFName">Lorem ipsum</span>
+									<span id="userMidNameEdit" data-change="#personMName">dolor sit amet</span>
+									<span id="userLNameEdit" data-change="#personLastName">consectetur adipisicing elit</span>
+								</div>
+								<button class="btn ghost-btn grey" type="button">
+									<span class="text">
+										<i class="icon icon-pencil-edit"></i>
+										Edit
+									</span>
+									<span class="fade"></span>
+								</button>
+							</div>
+							<span class="position" id="userTitleEdit" data-change="#personTitle">Senior Profile Developer</span>
+
+						</div>
+					</div>
+				</div>
+				<div class="col-xs-12 col-sm-4 col-md-4 col-lg-5" id="contact-sm">
+					<ul class="clear contacts-list">
+						<li class="place"><i class="icon icon-maps"></i>
+							<span id="userCountryEd" data-change="#countryMainInfo">USA</span><span class="comma">,</span>
+							<span id="userCityEdit" data-change="#personCity">Charleston</span><span class="comma">,</span>
+							<span id="userLocationEdit" data-change="#personLocation">West Virginia</span>
+						</li>
+						<li><i class="icon icon-email"></i><span id="userMailEdit" data-change="#personEmail">my@mail.mail</span></li>
+						<li><i class="icon icon-telephone"></i><span id="userPhoneEdit" data-change="#personPhone">+9 (899) 999 99 99</span></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+
+		<div class="col-xs-12 col-sm-3 col-md-3 head-buttons">
+			<a href="#share-profile-popup" class="btn btn-sm btn-block open-popup-link">
+				<span class="text">
+					<i class="icon icon-share btn-icon"></i>
+					Share profile
+				</span>
+				<span class="fade"></span>
+			</a>
+
+			<a href="test.txt" class="btn btn-sm btn-block" download>
+				<span class="text">
+					<i class="icon icon-download-folder btn-icon"></i>
+					Download
+				</span>
+				<span class="fade"></span>
+			</a>
+			<!-- эту кнопку выводить если есть видео -->
+<!-- 			<a href="https://www.youtube.com/watch?v=3gxNW2Ulpwk" class="btn btn-sm btn-block show-sm video-popup">
+				<span class="text">
+					<i class="icon icon-play btn-icon"></i>
+					Video Bio
+				</span>
+				<span class="fade"></span>
+			</a> -->
+			<!-- эту кнопку выводить если есть нет видео-->
+			<a href="#" class="btn btn-sm btn-block show-sm">
+				<span class="text">
+					<i class="icon icon-video-player btn-icon"></i>
+					Add video bio
+				</span>
+				<span class="fade"></span>
+			</a>
+		</div>
+	</div>
+
+
+	<div class="video">
+		<!-- зависимо от того, есть видео или нет оставить кнопку или ссылку с видео -->
+		<!-- video block -->
+		<a href="https://www.youtube.com/watch?v=3gxNW2Ulpwk" class="frame video-popup small width-caption">
+			<span class="text">video bio</span>
+		</a>
+		<!-- / video block -->
+
+		<!-- if there are no video -->
+<!-- 		<button class="btn blue-btn">
+			<i class="icon icon-video-player"></i>
+			<span class="text">Add video bio</span>
+			<span class="fade"></span>
+		</button> -->
+		<!-- / if there are no video -->
+	</div>
+</div>
+<!-- / overview head -->

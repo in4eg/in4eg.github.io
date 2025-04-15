@@ -1,0 +1,848 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta name="format-detection" content="telephone=no">
+
+    <title>Talent Fly :: Interviews</title>
+
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <link href="http://vjs.zencdn.net/6.2.8/video-js.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/perfect-scrollbar.min.css">
+    <link rel="stylesheet" href="css/classic.css">
+    <link rel="stylesheet" href="css/classic.date.css">
+    <link rel="stylesheet" href="css/classic.time.css">
+    <link rel="stylesheet" href="css/bundle.min.css">
+
+</head>
+
+<body>
+
+    #=include includes/header-admin-interviews.html
+
+    <main data-pages-link="url_for_ajax">
+
+        <section class="section usual-padding-top">
+            <div class="container large">
+
+                <div class="row">
+                    <div class="col-xs-12 col-md-6">
+                        <div class="section-title middle with-element" id="btnPositionTablet">Interviews</div>
+                    </div>
+                    <div class="col-xs-12 col-md-6">
+                        <div class="form-group form-questions-search">
+                            <div id="searchBox" class="search-box">
+                                <input id="inputSearch" class="input input-round input-question" type="text" placeholder="Search by name...">
+                                <button type="submit" class="btn-search">
+                                    <span class="text">
+                                        <i class="icon icon-search"></i>
+                                    </span>
+                                    <span class="fade"></span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-xs-12 col-md-3">
+                        <form id="filterForm" class="simple-form filter-form default-shadow">
+                            <div class="header">Filters</div>
+                            <div class="content">
+                                <div class="input-title">Country</div>
+                                <div class="select-outer">
+                                    <select name="country" class="select" data-push="#country" id="countrySelect" data-country-select="">
+                                        <option value="Ukraine">Ukraine</option>
+                                        <option value="Canada">Canada</option>
+                                        <option value="United">United Kingdom</option>
+                                    </select>
+                                    <span class="arrow">
+                                        <i class="icon icon-angle-down"></i>
+                                    </span>
+                                </div>
+
+                                <div class="input-title">City</div>
+                                <div class="select-outer">
+                                    <select name="city" class="select" data-push="#city" id="citySelect" data-city-select="">
+                                        <option value="January">Kiev</option>
+                                        <option value="Fabuary">Riga</option>
+                                        <option value="March">London</option>
+                                    </select>
+                                    <span class="arrow">
+                                        <i class="icon icon-angle-down"></i>
+                                    </span>
+                                </div>
+
+                                <div class="input-title">Date Range</div>
+
+                                <div class="calendar-from-to">
+                                    <input id="datepicker-from" class="calendar-input datepicker-from" name="calendar" placeholder="MM/DD/YYYY">
+                                    <i class="icon icon-event calendar-left-icon datepicker-from"></i>
+                                    <div class="calendars-separators">
+                                        <svg>
+                                            <line x1="0" y1="5" x2="5" y2="5"></line>
+                                        </svg>
+                                    </div>
+                                    <input id="datepicker-to" class="calendar-input datepicker-to" name="calendar" placeholder="MM/DD/YYYY">
+                                    <i class="icon icon-event calendar-right-icon datepicker-to"></i>    
+                                </div>
+                                <div class="checkbox">
+                                    <input id="pastInterviews" type="checkbox">
+                                    <label for="pastInterviews">Past Interviews</label>
+                                </div>
+                                <button class="btn form-btn btn-simple" type="submit">
+                                    <span class="text">Apply</span>
+                                    <span class="fade"></span>
+                                </button>
+
+                                <button type="button" id="clearBtn" class="btn btn-default form-btn single-block-element" data-on-edit="" data-removeon="">
+                                    <span class="text">
+                                        Clear filter
+                                    </span>
+                                    <span class="fade"></span>
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                    <ul class="col-xs-12 col-md-9 interviews-list">
+                        <li class="intrview-item default-shadow hidden" data-root-item data-id>
+                            <div class="warn-notif">
+                                <div class="info">
+                                    <p>New time proposed:
+                                        <span class="date-time">
+                                            <span class="day">23</span>
+                                            <span class="month">JAN</span>,
+                                            <span class="year">2018</span>
+                                            <span class="time">07:00 PM</span>
+                                        </span>
+                                    </p>
+                                </div>
+                                <div class="notif">
+                                    Please choose Action
+                                </div>
+                            </div>
+                            <div class="date-box">
+                                <div class="date">
+                                    <div class="day">08</div>
+                                    <div class="month">nov</div>
+                                </div>
+                                <div class="time-box">
+                                    <span class="time">07:00</span>
+                                    <span class="">PM</span>
+                                </div>
+                                <div class="status-uninvited">
+                                    <i class="icon icon-checked"></i>
+                                    Not Invited
+                                </div>
+                                <div class="status-already-invited">
+                                    <div class="state">
+                                        <i class="icon icon-checked"></i>
+                                        Invited
+                                    </div>
+                                    <div>
+                                        <span class="day">23</span><span class="month">JAN</span>,
+                                        <span class="year">2018</span><span class="time">07:00 PM</span>
+                                    </div>
+                                </div>
+                                <div class="status-already-recorded">
+                                    <div class="state">
+                                        <i class="icon icon-checked"></i>
+                                        Already recorded
+                                    </div>
+                                </div>
+                            </div>data-id
+                            
+                            <div class="name-box">
+                                <a href="#" class="name">Peter Swissels</a>
+                                <div class="position">Junior Frontend Engineer</div>
+                            </div>
+                            
+                            <div class="contact-box">
+                                <i class="icon icon-maps"></i>
+                                <span class="location">Brazil, San Paolo</span>
+                            </div>
+                            
+                            <div class="id-box">
+                                <span class="user-id">ID123456789</span>
+                                <span class="room-id">ID123456789</span>
+                            </div>
+                            
+                            <div class="control-box">
+                                <button href="#reschedulePopup" class="gray-slim-btn reschdule-btn open-popup-link" data-reschedule>Reschedule</button>
+                                <a class="btn form-btn btn-simple fill-blue-btn start-interview-btn">
+                                    <span class="text">start interview</span>
+                                    <span class="fade"></span>
+                                </a>
+                                <a href="#reschedulePopup" class="btn form-btn btn-simple fill-blue-btn invite-btn open-popup-link">
+                                    <span class="text">invite</span>
+                                    <span class="fade"></span>
+                                </a>
+                                <button class="gray-slim-btn reject-btn open-popup-link" data-reject>Reject</button>
+                                
+                                <div class="c-dropdown js-dropdown actions">
+                                    <input name="Framework" id="Framework" class="js-dropdown__input" type="hidden">
+                                    <span class="c-button c-button--dropdown js-dropdown__current">Actions</span>
+                                    <span class="arrow">
+                                        <i class="icon icon-angle-down"></i>
+                                    </span>
+                                    <ul class="c-dropdown__list">
+                                        <li class="c-dropdown__item" data-dropdown-value="accept" data-accept-item>
+                                            Accept
+                                        </li>
+                                        <li href="#reschedulePopup" class="c-dropdown__item open-popup-link" data-dropdown-value="reschedule" data-reschedule-item>
+                                            Reschedule
+                                        </li>
+                                        <li class="c-dropdown__item" data-dropdown-value="reject" data-reject-item>
+                                            Reject
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="intrview-item default-shadow invited-user" data-id>
+                            <div class="warn-notif">
+                                <div class="info">
+                                    <p>New time proposed:
+                                        <span class="date-time">
+                                            <span class="day">23</span>
+                                            <span class="month">JAN</span>,
+                                            <span class="year">2018</span>
+                                            <span class="time">07:00 PM</span>
+                                        </span>
+                                    </p>
+                                </div>
+                                <div class="notif">
+                                    Please choose Action
+                                </div>
+                            </div>
+                            <div class="date-box">
+                                <div class="date">
+                                    <div class="day">08</div>
+                                    <div class="month">nov</div>
+                                </div>
+                                <div class="time-box">
+                                    <span class="time">07:00</span>
+                                    <span class="">PM</span>
+                                </div>
+                                <div class="status-uninvited">
+                                    <i class="icon icon-checked"></i>
+                                    Not Invited
+                                </div>
+                                <div class="status-already-invited">
+                                    <div class="state">
+                                        <i class="icon icon-checked"></i>
+                                        Invited
+                                    </div>
+                                    <div>
+                                        <span class="day">23</span>
+                                        <span class="month">JAN</span>,
+                                        <span class="year">2018</span>
+                                        <span class="time">07:00 PM</span>
+                                    </div>
+                                </div>
+                                <div class="status-already-recorded">
+                                    <div class="state">
+                                        <i class="icon icon-checked"></i>
+                                        Already recorded
+                                    </div>
+                                </div>
+                            </div>
+                        
+                            <div class="name-box">
+                                <a href="#" class="name">Peter Swissels</a>
+                                <div class="position">Junior Frontend Engineer</div>
+                            </div>
+                        
+                            <div class="contact-box">
+                                <i class="icon icon-maps"></i>
+                                <span class="location">Brazil, San Paolo</span>
+                            </div>
+                        
+                            <div class="id-box">
+                                <span class="user-id">ID123456789</span>
+                            </div>
+                            
+                            <div class="control-box">
+                                <button href="#reschedulePopup" class="gray-slim-btn reschdule-btn open-popup-link" data-reschedule>Reschedule</button>
+                                <a class="btn form-btn btn-simple fill-blue-btn start-interview-btn">
+                                    <span class="text">start interview</span>
+                                    <span class="fade"></span>
+                                </a>
+                                <a href="#reschedulePopup" class="btn form-btn btn-simple fill-blue-btn invite-btn open-popup-link">
+                                    <span class="text">invite</span>
+                                    <span class="fade"></span>
+                                </a>
+                                <div class="c-dropdown js-dropdown actions">
+                                    <input name="Framework" id="Framework" class="js-dropdown__input" type="hidden">
+                                    <span class="c-button c-button--dropdown js-dropdown__current">Actions</span>
+                                    <span class="arrow">
+                                        <i class="icon icon-angle-down"></i>
+                                    </span>
+                                    <ul class="c-dropdown__list">
+                                        <li class="c-dropdown__item" data-dropdown-value="accept" data-accept-item>
+                                            Accept
+                                        </li>
+                                        <li href="#reschedulePopup" class="c-dropdown__item open-popup-link" data-dropdown-value="reschedule" data-reschedule-item>
+                                            Reschedule
+                                        </li>
+                                        <li class="c-dropdown__item" data-dropdown-value="reject" data-reject-item>
+                                            Reject
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="intrview-item default-shadow uninvited-user" data-id>
+                            <div class="warn-notif">
+                                <div class="info">
+                                    <p>New time proposed:
+                                        <span class="date-time">
+                                            <span class="day">23</span>
+                                            <span class="month">JAN</span>,
+                                            <span class="year">2018</span>
+                                            <span class="time">07:00 PM</span>
+                                        </span>
+                                    </p>
+                                </div>
+                                <div class="notif">
+                                    Please choose Action
+                                </div>
+                            </div>
+                            <div class="date-box">
+                                <div class="date">
+                                    <div class="day">08</div>
+                                    <div class="month">nov</div>
+                                </div>
+                                <div class="time-box">
+                                    <span class="time">07:00</span>
+                                    <span class="">PM</span>
+                                </div>
+                                <div class="status-uninvited">
+                                    <i class="icon icon-checked"></i>
+                                    Not Invited
+                                </div>
+                                <div class="status-already-invited">
+                                    <div class="state">
+                                        <i class="icon icon-checked"></i>
+                                        Invited
+                                    </div>
+                                    <div>
+                                        <span class="day">23</span>
+                                        <span class="month">JAN</span>,
+                                        <span class="year">2018</span>
+                                        <span class="time">07:00 PM</span>
+                                    </div>
+                                </div>
+                                <div class="status-already-recorded">
+                                    <div class="state">
+                                        <i class="icon icon-checked"></i>
+                                        Already recorded
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="name-box">
+                                <a href="#" class="name">Peter Swissels</a>
+                                <div class="position">Junior Frontend Engineer</div>
+                            </div>
+                            
+                            <div class="contact-box">
+                                <i class="icon icon-maps"></i>
+                                <span class="location">Brazil, San Paolo</span>
+                            </div>
+                            
+                            <div class="id-box">
+                                <span class="user-id">ID123456789</span>
+                            </div>
+                            
+                            <div class="control-box">
+                                <button href="#reschedulePopup" class="gray-slim-btn reschdule-btn open-popup-link" data-reschedule>Reschedule</button>
+                                <a class="btn form-btn btn-simple fill-blue-btn start-interview-btn">
+                                    <span class="text">start interview</span>
+                                    <span class="fade"></span>
+                                </a>
+                                <a href="#reschedulePopup" class="btn form-btn btn-simple fill-blue-btn invite-btn open-popup-link">
+                                    <span class="text">invite</span>
+                                    <span class="fade"></span>
+                                </a>
+                                <div class="c-dropdown js-dropdown actions">
+                                    <input name="Framework" id="Framework" class="js-dropdown__input" type="hidden">
+                                    <span class="c-button c-button--dropdown js-dropdown__current">Actions</span>
+                                    <span class="arrow">
+                                        <i class="icon icon-angle-down"></i>
+                                    </span>
+                                    <ul class="c-dropdown__list">
+                                        <li class="c-dropdown__item" data-dropdown-value="accept" data-accept-item>
+                                            Accept
+                                        </li>
+                                        <li href="#reschedulePopup" class="c-dropdown__item open-popup-link" data-dropdown-value="reschedule" data-reschedule-item>
+                                            Reschedule
+                                        </li>
+                                        <li class="c-dropdown__item" data-dropdown-value="reject" data-reject-item>
+                                            Reject
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        
+                        </li>
+                        <li class="intrview-item default-shadow already-invited-user" data-id>
+                            <div class="warn-notif">
+                                <div class="info">
+                                    <p>New time proposed:
+                                        <span class="date-time">
+                                            <span class="day">23</span>
+                                            <span class="month">JAN</span>,
+                                            <span class="year">2018</span>
+                                            <span class="time">07:00 PM</span>
+                                        </span>
+                                    </p>
+                                </div>
+                                <div class="notif">
+                                    Please choose Action
+                                </div>
+                            </div>
+                            <div class="date-box">
+                                <div class="date">
+                                    <div class="day">08</div>
+                                    <div class="month">nov</div>
+                                </div>
+                                <div class="time-box">
+                                    <span class="time">07:00</span>
+                                    <span class="">PM</span>
+                                </div>
+                                <div class="status-uninvited">
+                                    <i class="icon icon-checked"></i>
+                                    Not Invited
+                                </div>
+                                <div class="status-already-invited">
+                                    <div class="state">
+                                        <i class="icon icon-checked"></i>
+                                        Invited
+                                    </div>
+                                    <div>
+                                        <span class="day">23</span>
+                                        <span class="month">JAN</span>,
+                                        <span class="year">2018</span>
+                                        <span class="time">07:00 PM</span>
+                                    </div>
+                                </div>
+                                <div class="status-already-recorded">
+                                    <div class="state">
+                                        <i class="icon icon-checked"></i>
+                                        Already recorded
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="name-box">
+                                <a href="#" class="name">Peter Swissels</a>
+                                <div class="position">Junior Frontend Engineer</div>
+                            </div>
+                            
+                            <div class="contact-box">
+                                <i class="icon icon-maps"></i>
+                                <span class="location">Brazil, San Paolo</span>
+                            </div>
+                            
+                            <div class="id-box">
+                                <span class="user-id">ID123456789</span>
+                            </div>
+                            
+                            <div class="control-box">
+                                <button href="#reschedulePopup" class="gray-slim-btn reschdule-btn open-popup-link" data-reschedule>Reschedule</button>
+                                <a class="btn form-btn btn-simple fill-blue-btn start-interview-btn">
+                                    <span class="text">start interview</span>
+                                    <span class="fade"></span>
+                                </a>
+                                <a href="#reschedulePopup" class="btn form-btn btn-simple fill-blue-btn invite-btn open-popup-link" disabled="">
+                                    <span class="text">invite</span>
+                                    <span class="fade"></span>
+                                </a>
+                                <div class="c-dropdown js-dropdown actions">
+                                    <input name="Framework" id="Framework" class="js-dropdown__input" type="hidden">
+                                    <span class="c-button c-button--dropdown js-dropdown__current">Actions</span>
+                                    <span class="arrow">
+                                        <i class="icon icon-angle-down"></i>
+                                    </span>
+                                    <ul class="c-dropdown__list">
+                                        <li class="c-dropdown__item" data-dropdown-value="accept" data-accept-item>
+                                            Accept
+                                        </li>
+                                        <li href="#reschedulePopup" class="c-dropdown__item open-popup-link" data-dropdown-value="reschedule" data-reschedule-item>
+                                            Reschedule
+                                        </li>
+                                        <li class="c-dropdown__item" data-dropdown-value="reject" data-reject-item>
+                                            Reject
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="intrview-item default-shadow has-offered-user" data-id>
+                            <div class="warn-notif">
+                                <div class="info">
+                                    <p>New time proposed: 
+                                        <span class="date-time">
+                                            <span class="day">23</span> <span class="month">JAN</span>,
+                                            <span class="year">2018</span><span class="time">07:00 PM</span>
+                                        </span>
+                                    </p>
+                                </div>
+                                <div class="notif">
+                                    Please choose Action
+                                </div>
+                            </div>
+                            <div class="date-box">
+                                <div class="date">
+                                    <div class="day">08</div>
+                                    <div class="month">nov</div>
+                                </div>
+                                <div class="time-box">
+                                    <span class="time">07:00</span>
+                                    <span class="">PM</span>
+                                </div>
+                                <div class="status-uninvited">
+                                    <i class="icon icon-checked"></i>
+                                    Not Invited
+                                </div>
+                                <div class="status-already-invited">
+                                    <div class="state">
+                                        <i class="icon icon-checked"></i>
+                                        Invited
+                                    </div>
+                                    <div>
+                                        <span class="day">23</span>
+                                        <span class="month">JAN</span>,
+                                        <span class="year">2018</span>
+                                        <span class="time">07:00 PM</span>
+                                    </div>
+                                </div>
+                                <div class="status-already-recorded">
+                                    <div class="state">
+                                        <i class="icon icon-checked"></i>
+                                        Already recorded
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="name-box">
+                                <a href="#" class="name">Peter Swissels</a>
+                                <div class="position">Junior Frontend Engineer</div>
+                            </div>
+                            
+                            <div class="contact-box">
+                                <i class="icon icon-maps"></i>
+                                <span class="location">Brazil, San Paolo</span>
+                            </div>
+                            
+                            <div class="id-box">
+                                <span class="user-id">ID123456789</span>
+                            </div>
+                            
+                            <div class="control-box">
+                                <button href="#reschedulePopup" class="gray-slim-btn reschdule-btn open-popup-link" data-reschedule>Reschedule</button>
+                                <a class="btn form-btn btn-simple fill-blue-btn start-interview-btn">
+                                    <span class="text">start interview</span>
+                                    <span class="fade"></span>
+                                </a>
+                                <a href="#reschedulePopup" class="btn form-btn btn-simple fill-blue-btn invite-btn open-popup-link">
+                                    <span class="text">invite</span>
+                                    <span class="fade"></span>
+                                </a>
+                                <div class="c-dropdown js-dropdown actions">
+                                    <input name="Framework" id="Framework" class="js-dropdown__input" type="hidden">
+                                    <span class="c-button c-button--dropdown js-dropdown__current">Actions</span>
+                                    <span class="arrow">
+                                        <i class="icon icon-angle-down"></i>
+                                    </span>
+                                    <ul class="c-dropdown__list">
+                                        <li class="c-dropdown__item" data-dropdown-value="accept" data-accept-item>
+                                            Accept
+                                        </li>
+                                        <li href="#reschedulePopup" class="c-dropdown__item open-popup-link" data-dropdown-value="reschedule" data-reschedule-item>
+                                            Reschedule
+                                        </li>
+                                        <li class="c-dropdown__item" data-dropdown-value="reject" data-reject-item>
+                                            Reject
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="intrview-item default-shadow already-recorded" data-id>
+                            <div class="warn-notif">
+                                <div class="info">
+                                    <p>New time proposed:
+                                        <span class="date-time">
+                                            <span class="day">23</span>
+                                            <span class="month">JAN</span>,
+                                            <span class="year">2018</span>
+                                            <span class="time">07:00 PM</span>
+                                        </span>
+                                    </p>
+                                </div>
+                                <div class="notif">
+                                    Please choose Action
+                                </div>
+                            </div>
+                            <div class="date-box">
+                                <div class="date">
+                                    <div class="day">08</div>
+                                    <div class="month">nov</div>
+                                </div>
+                                <div class="time-box">
+                                    <span class="time">07:00</span>
+                                    <span class="">PM</span>
+                                </div>
+                                <div class="status-uninvited">
+                                    <i class="icon icon-checked"></i>
+                                    Not Invited
+                                </div>
+                                <div class="status-already-invited">
+                                    <div class="state">
+                                        <i class="icon icon-checked"></i>
+                                        Invited
+                                    </div>
+                                    <div>
+                                        <span class="day">23</span>
+                                        <span class="month">JAN</span>,
+                                        <span class="year">2018</span>
+                                        <span class="time">07:00 PM</span>
+                                    </div>
+                                </div>
+                                <div class="status-already-recorded">
+                                    <div class="state">
+                                        <i class="icon icon-checked"></i>
+                                        Already recorded
+                                    </div>
+                                </div>
+                            </div>
+                        
+                            <div class="name-box">
+                                <a href="#" class="name">Peter Swissels</a>
+                                <div class="position">Junior Frontend Engineer</div>
+                            </div>
+                        
+                            <div class="contact-box">
+                                <i class="icon icon-maps"></i>
+                                <span class="location">Brazil, San Paolo</span>
+                            </div>
+                        
+                            <div class="id-box">
+                                <span class="user-id">ID123456789</span>
+                            </div>
+                            
+                            <div class="control-box">
+                                <button href="#reschedulePopup" class="gray-slim-btn reschdule-btn open-popup-link" data-reschedule>Reschedule</button>
+                                <a class="btn form-btn btn-simple fill-blue-btn start-interview-btn">
+                                    <span class="text">start interview</span>
+                                    <span class="fade"></span>
+                                </a>
+                                <a href="#reschedulePopup" class="btn form-btn btn-simple fill-blue-btn invite-btn open-popup-link" disabled="">
+                                    <span class="text">invite</span>
+                                    <span class="fade"></span>
+                                </a>
+                                <div class="c-dropdown js-dropdown actions">
+                                    <input name="Framework" id="Framework" class="js-dropdown__input" type="hidden">
+                                    <span class="c-button c-button--dropdown js-dropdown__current">Actions</span>
+                                    <span class="arrow">
+                                        <i class="icon icon-angle-down"></i>
+                                    </span>
+                                    <ul class="c-dropdown__list">
+                                        <li class="c-dropdown__item" data-dropdown-value="accept" data-accept-item>
+                                            Accept
+                                        </li>
+                                        <li href="#reschedulePopup" class="c-dropdown__item open-popup-link" data-dropdown-value="reschedule" data-reschedule-item>
+                                            Reschedule
+                                        </li>
+                                        <li class="c-dropdown__item" data-dropdown-value="reject" data-reject-item>
+                                            Reject
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        
+                        </li>
+                        <li class="intrview-item default-shadow invited-user" data-id>
+                            <div class="warn-notif">
+                                <div class="info">
+                                    <p>New time proposed:
+                                        <span class="date-time">
+                                            <span class="day">23</span>
+                                            <span class="month">JAN</span>,
+                                            <span class="year">2018</span>
+                                            <span class="time">07:00 PM</span>
+                                        </span>
+                                    </p>
+                                </div>
+                                <div class="notif">
+                                    Please choose Action
+                                </div>
+                            </div>
+                            <div class="date-box">
+                                <div class="date">
+                                    <div class="day">08</div>
+                                    <div class="month">nov</div>
+                                </div>
+                                <div class="time-box">
+                                    <span class="time">07:00</span>
+                                    <span class="">PM</span>
+                                </div>
+                                <div class="status-uninvited">
+                                    <i class="icon icon-checked"></i>
+                                    Not Invited
+                                </div>
+                                <div class="status-already-invited">
+                                    <div class="state">
+                                        <i class="icon icon-checked"></i>
+                                        Invited
+                                    </div>
+                                    <div>
+                                        <span class="day">23</span>
+                                        <span class="month">JAN</span>,
+                                        <span class="year">2018</span>
+                                        <span class="time">07:00 PM</span>
+                                    </div>
+                                </div>
+                                <div class="status-already-recorded">
+                                    <div class="state">
+                                        <i class="icon icon-checked"></i>
+                                        Already recorded
+                                    </div>
+                                </div>
+                            </div>
+                        
+                            <div class="name-box">
+                                <a href="#" class="name">Peter Swissels</a>
+                                <div class="position">Junior Frontend Engineer</div>
+                            </div>
+                        
+                            <div class="contact-box">
+                                <i class="icon icon-maps"></i>
+                                <span class="location">Brazil, San Paolo</span>
+                            </div>
+                        
+                            <div class="id-box">
+                                <span class="user-id">ID123456789</span>
+                            </div>
+                            
+                            <div class="control-box">
+                                <button href="#reschedulePopup" class="gray-slim-btn reschdule-btn open-popup-link" data-reschedule>Reschedule</button>
+                                <a class="btn form-btn btn-simple fill-blue-btn start-interview-btn">
+                                    <span class="text">start interview</span>
+                                    <span class="fade"></span>
+                                </a>
+                                <a href="#reschedulePopup" class="btn form-btn btn-simple fill-blue-btn invite-btn open-popup-link">
+                                    <span class="text">invite</span>
+                                    <span class="fade"></span>
+                                </a>
+                                <div class="c-dropdown js-dropdown actions">
+                                    <input name="Framework" id="Framework" class="js-dropdown__input" type="hidden">
+                                    <span class="c-button c-button--dropdown js-dropdown__current">Actions</span>
+                                    <span class="arrow">
+                                        <i class="icon icon-angle-down"></i>
+                                    </span>
+                                    <ul class="c-dropdown__list">
+                                        <li class="c-dropdown__item" data-dropdown-value="accept" data-accept-item>
+                                            Accept
+                                        </li>
+                                        <li href="#reschedulePopup" class="c-dropdown__item open-popup-link" data-dropdown-value="reschedule" data-reschedule-item>
+                                            Reschedule
+                                        </li>
+                                        <li class="c-dropdown__item" data-dropdown-value="reject" data-reject-item>
+                                            Reject
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        
+                        </li>
+                    </ul>
+                    <!-- ANOTHER PAGINATION [STATIC] -->
+                    <div class="col-xs-12 col-md-9 pagination col-md-offset-3">
+                        <div id="pagination-box" class="simple-pagination">
+                            <ul class="page-list">
+                                <li class="prev-li">
+                                    <a href="#page-prev" class="page-link prev">
+                                        <i class="icon icon-angle-down" data-icon-left=""></i>
+                                        <div class="previous">Previous</div>
+                                    </a>
+                                </li>
+                                <li class="active hidden" data-prototype-pageItem>
+                                    <a href="#page-1" class="page-link page">1</a>
+                                    <span class="current">1</span>
+                                </li>
+                                <li class="active page-1">
+                                    <a href="#page-1" class="page-link page">1</a>
+                                    <span class="current">1</span>
+                                </li>
+                                <li class="next-li">
+                                    <a href="#page-next" class="page-link next">
+                                        <div class="previous">Next</div>
+                                        <i class="icon icon-angle-down" data-icon-right=""></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div id="page-state">
+                            <div>Page</div>
+                            <div class="select-outer">
+                                <select class="select" data-page-select="">
+                                    <option value="1">1</option>
+                                </select>
+                                <span class="arrow">
+                                    <i class="icon icon-angle-down"></i>
+                                </span>
+                            </div>
+                            <span class="pages-txt">of
+                                <span class="pages-date" data-count-page>1</span>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            
+            </div>
+        </section>
+    
+    </main>
+
+    #=include includes/popup-reschedule.html
+
+    #=include includes/footer-admin.html
+
+
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,300,400,500,600,700" rel="stylesheet">
+    <script src="js/lib/jquery.min.js"></script>
+    <script src="js/plugins/jquery.magnific-popup.min.js"></script>
+    <script src="js/plugins/legacy.js"></script>
+    <script src="js/plugins/picker.js"></script>
+    <script src="js/plugins/picker.date.js"></script>
+    <script src="js/plugins/picker.time.js"></script>
+    <script src="js/plugins/jquery.simplePagination.js"></script>
+
+    <script src="js/validator.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/init/toggler.js"></script>
+    <script src="js/init/validation.js"></script>
+    <script src="js/init/buttons.js"></script>
+
+    <script src="js/init/custom-dropdown.js"></script>
+    <script src="js/init/pagination.js"></script>
+    <script src="js/init/calendar.js"></script>
+    <script src="js/init/popup-helper.js"></script>
+    <script src="js/init/popup-reschedule.js"></script>
+    <script src="js/init/admin-views-handler.js"></script>
+    
+    <script src="js/init/search-input.js"></script>
+    
+    
+    <script src="js/init/main-menu-dropdown.js"></script>
+    
+    
+
+</body>
+</html>

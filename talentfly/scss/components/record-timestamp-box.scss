@@ -1,0 +1,97 @@
+.record-timestamp-box {
+    background-color: #fff;
+    display: flex;
+    align-items: stretch;
+    width: 220px;
+    height: 41px;
+    border-radius: 3px;
+    box-shadow: 0.5px 0.866px 15px rgba(94,158,219,0.3);
+
+    & .icon-start-rec {
+        color: #adb9cb;
+        font-size: 10px;
+    }
+
+    & .record-status {
+        color: #8A98AD;
+        width: 60%;
+        line-height: 41px;
+        border-right: 1px solid #e9eff3;
+
+        & .icon-checked2 {
+            display: none;
+        }
+    
+        & #textStatus {
+            margin-left: 5px;
+        }
+    }
+
+    & .record-time {
+        width: 40%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 10pt;
+        font-weight: 600;
+        color: rgb(214,220,229);
+
+        span {
+            width: 18px;
+        }
+    }
+
+    /* RECORDING */
+
+    & .record-status-on {
+
+        .icon-start-rec {
+            color: red;
+        }
+
+        .icon-checked2 {
+            display: none;
+        }
+    }
+
+    .record-time-on {
+        color: #000;
+    }
+
+    /* FINISHED */
+
+    & .record-status-finished {
+
+        color: #3fddc1;
+        
+        .icon-start-rec {
+            display: none;
+        }
+
+        .icon-checked2 {
+            display: inline-block;
+            color: #3fddc1;
+        }
+    }
+}
+
+.connecting {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #adb9cb;
+}
+
+.connecting-box {
+    display: flex;
+    align-items: center;
+}
+
+.timestamp-preloader {
+    background-image: url('https://raw.githubusercontent.com/niklausgerber/PreLoadMe/master/img/status.gif');
+    background-size: 15px;
+    width: 15px;
+    height: 15px;
+    display: inline-block;
+    margin-right: 5px;
+}

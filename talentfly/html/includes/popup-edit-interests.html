@@ -1,0 +1,64 @@
+<div id="edit-interests-popup" class="white-popup mfp-hide skills-popup with-helper">
+	<div class="inner">
+		<div class="header">
+			<div class="title">Edit Interests, Hobbies &amp; Links</div>
+			
+			<button class="mobile-helper" data-toggle-helper="#edit-interests-popup" type="button">
+				<i class="icon icon-show-off-your-skills"></i>
+			</button>
+
+			<button class="btn btn-grey btn-xs btn-round helper-toggle" data-toggle-helper="#edit-interests-popup" type="button">
+				<i class="icon icon-info"></i>
+				<span class="fade"></span>
+			</button>
+		</div>
+		<div class="content">
+			<form action="static/data/progress.json" class="simple-form modal-form sortable-form" data-onsubmit="modalOnSubmitInterests" method="post" data-multiply>
+				<div id="interestsBody" data-url="static/data/forms.json?data="></div>
+
+				<div class="form-options">
+					<button type="button" class="btn btn-default capitalize form-btn" data-add="#interests-list">
+						<span class="text">
+							<i class="icon icon-add2 btn-icon icon-smaller"></i>
+							Add Interest, Hobby or Link
+						</span>
+						<span class="fade"></span>
+					</button>
+				</div>
+				<!-- buttons -->
+				<div class="btn-group align-left collapsed">
+					<button class="btn form-btn btn-grey close-modal" type="button" id="cancelInterests">
+						<span class="text">cancel</span>
+						<span class="fade"></span>
+					</button>
+					<button class="btn form-btn btn-simple" type="submit" id="saveInterests">
+						<span class="text">save</span>
+						<span class="fade"></span>
+					</button>
+				</div>
+			</form>
+		</div>
+		<!-- helper -->
+		<div class="helper">
+			<div class="arrow-card">
+				<div class="row top-xs paddless-row">
+					<div class="col-xs-12 col-lg-2 align-center icon-cover">
+						<i class="icon icon-show-off-your-skills"></i>
+					</div>
+					<div class="col-xs-12 col-lg-10">
+						<div class="h5-title">How Interests Help You Get Noticed</div>
+						<div class="paragraph">
+							Having a comprehensive list of skills will help get your profile noticed by connections and recruiters. When recruiters search for candidates, skills will be one of the criteria they use.
+						</div>
+						<div class="paragraph">
+							If you’re not sure what to include, review the list below of the top LinkedIn skills. Before you add a skill, make sure it matches the job responsibilities in your profile and on your resume. Prospective employers will notice if there’s a mismatch.
+						</div>
+					</div>
+				</div>
+				<button type="button" class="btn btn-grey btn-round close-helper">
+					<i class="icon icon-close"></i>
+				</button>
+			</div>
+		</div>
+	</div>
+</div>

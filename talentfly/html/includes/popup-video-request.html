@@ -1,0 +1,83 @@
+<div id="video-request-popup" class="white-popup mfp-hide with-helper">
+	<div class="inner">
+		<div class="header">
+			<div class="title">
+				Request Video Recommendation/Endorsement
+				<button class="mobile-helper" data-toggle-helper="#video-request-popup" type="button">
+					<i class="icon icon-show-off-your-skills"></i>
+				</button>
+
+				<button class="btn btn-grey btn-xs btn-round helper-toggle" data-toggle-helper="#video-request-popup" type="button">
+					<i class="icon icon-info"></i>
+					<span class="fade"></span>
+				</button>
+			</div>
+		</div>
+		<div class="content">
+			<form action="static/data/progress.json" class="simple-form modal-form validate-form info-form" data-onsubmit="modalOnSubmitVideoRequest" method="post" data-clear>
+				<div class="success-fadein success-message verticaly-middle">
+					<div class="inner">
+						<i class="icon icon-check-green"></i>
+						<div class="success-title">Request successfully send to</div>
+						<div id="emailVideoRequest" class="paragraph"></div>
+						<button class="btn form-btn btn-grey close-modal" type="button">
+							<span class="text">ok</span>
+							<span class="fade"></span>
+						</button>
+					</div>
+				</div>
+				<div class="success-fadeout">
+					<div class="form-group last">
+						<div class="input-title">Email of Your Colleague</div>
+						<input type="email" class="input input-simple email call-focus" placeholder="E-mail" data-to="#emailVideoRequest" id="emailRequest">
+						<div class="alert">Type a correct E-mail. It must include "@"</div>
+					</div>
+					<div class="lead">We'll only use this to send a request for a video recommendation on your behalf, no spam</div>
+					<div class="form-group last">
+						<div class="input-title">Note to Your Colleague</div>
+						<textarea name="note" class="textarea" placeholder="Put some text here" id="messageVideoRequest" data-minlength="10" data-characters="150" maxlength="150" data-push></textarea>
+						<div class="help">E.g. Hey Jessica, building a profile here on TalentFly, care to share a few words about our collaboration on Project X? Appreciate it! </div>
+						<div class="alert">Minimum 10 characters</div>
+						<div class="count-help">
+							<span class="count">150</span>
+							characters left
+						</div>
+					</div>
+					<div class="btn-group align-center collapsed">
+						<button class="btn form-btn btn-simple validate-btn" type="submit">
+							<span class="text">Send Request</span>
+							<span class="fade"></span>
+						</button>
+						<button class="btn form-btn btn-grey close-modal" type="button">
+							<span class="text">cancel</span>
+							<span class="fade"></span>
+						</button>
+					</div>
+				</div>
+
+			</form>
+		</div>
+		<!-- helper -->
+		<div class="helper">
+			<div class="arrow-card">
+				<div class="row top-xs paddless-row">
+					<div class="col-xs-12 col-lg-2 align-center icon-cover">
+						<i class="icon icon-show-off-your-skills"></i>
+					</div>
+					<div class="col-xs-12 col-lg-10">
+						<div class="h5-title">Request Video Recommendation/Endorsement</div>
+						<div class="paragraph">
+							Having a comprehensive list of skills will help get your profile noticed by connections and recruiters. When recruiters search for candidates, skills will be one of the criteria they use.
+						</div>
+						<div class="paragraph">
+							If you’re not sure what to include, review the list below of the top LinkedIn skills. Before you add a skill, make sure it matches the job responsibilities in your profile and on your resume. Prospective employers will notice if there’s a mismatch.
+						</div>
+					</div>
+				</div>
+				<button type="button" class="btn btn-grey btn-round close-helper">
+					<i class="icon icon-close"></i>
+				</button>
+			</div>
+		</div>
+	</div>
+</div>

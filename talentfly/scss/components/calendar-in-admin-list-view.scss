@@ -1,0 +1,94 @@
+.calendar-from-to{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 20px;
+	position: relative;
+	.calendar-input{
+		width: 47%;
+		padding-left: 7px;
+		padding-right: 7px;
+		transition: all .3s;
+		cursor: pointer;
+	}
+	.calendar-input:hover{
+		border-color: #469aeb;
+	}
+	.calendar-input::placeholder{
+		font-size: 0.95em;
+		color: #324054;
+	}
+}
+.calendar-input-wrapper{
+	position: relative;
+}
+.calendars-separators{
+	padding: 6px;
+	svg{
+		width: 4px;
+		height: 10px;
+	}
+	line{
+		fill: #324054;
+		stroke: #324054;
+		color: #324054;
+	}
+}
+i.calendar-left-icon, i.calendar-right-icon{
+	position: absolute;
+	color: #324054;
+	font-size: 1.1em;
+	top: 11px;
+	right: 7px;
+	cursor: pointer;
+}
+i.calendar-left-icon{
+	right: calc(50% + 15px);
+}
+
+
+div.picker .picker__holder{
+	top: 200px;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+@media (min-width: 993px) and (max-width: 1151px) {
+	.calendar-from-to{
+		.calendar-input::placeholder{
+			font-size: .6em;
+			position: relative;
+			bottom: 1px;
+		}
+	}
+	.calendar-left-icon, .calendar-right-icon{
+		font-size: .9em;
+		top: 13px;
+	}
+	div.picker .picker__holder{
+		transform: translateX(-37%);
+	}
+}
+
+@media (min-width: 1152px) and (max-width: 1230px) {
+	.calendar-from-to{
+		.calendar-input::placeholder{
+			font-size: .8em;
+		}
+	}
+	.calendar-left-icon, .calendar-right-icon{
+		font-size: 1em;
+		top: 12px;
+	}
+	div.picker .picker__holder{
+		transform: translateX(-44%);
+	}
+}
+@media (min-width: 1231px) and (max-width: 1325px) {
+	.calendar-from-to{
+		.calendar-input::placeholder{
+			font-size: .9em;
+		}
+	}
+}

@@ -1,0 +1,1322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+	<meta name="format-detection" content="telephone=no">
+
+	<title>Talent Fly :: New User Full Profile</title>
+
+	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+	<link rel="mask-icon" href="safari-pinned-tab.svg" color="#469aeb">
+	<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon-180x180.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="192x192" href="android-chrome-192x192.png">
+	<link rel="icon" type="image/png" sizes="256x256" href="android-chrome-256x256.png">
+	<link rel="manifest" href="site.webmanifest">
+	<meta name="msapplication-TileColor" content="#469aeb">
+	<meta name="msapplication-config" content="browserconfig.xml">
+	<meta name="theme-color" content="#469aeb">
+
+	<link rel="stylesheet" href="css/bundle.min.css">
+
+
+</head>
+<body>
+
+	#=include includes/header-typical.html
+
+	<main>
+
+		<section class="section collapsed-bottom">
+			<div class="container large">
+
+				<div class="row header" id="open_view">
+					<!-- заголовок с вкладками -->
+					<div class="col-xs-12 col-md-3 col-lg-4">
+						<ul class="clear tabs no-margin header-tabs" data-tabs="#pageTabs">
+							<li  class="active">
+								<div class="section-title middle with-element">Overview</div>
+							</li>
+              <li>
+                <div class="section-title middle with-element">Full Profile</div>
+              </li>
+						</ul>
+					</div>
+					<div class="col-xs-12 col-md-7 col-lg-8 align-right">
+						<ul class="buttons-list clear">
+							<li>
+								<!-- если кнопка активна удалить класс disabled и data-tooltip="Please complete your profile" -->
+								<a href="#share-profile-popup" class="btn btn-sm btn-block open-popup-link disabled" data-tooltip="Please complete your profile">
+									<span class="text">
+										<i class="icon icon-share btn-icon"></i>
+										Share profile
+									</span>
+									<span class="fade"></span>
+								</a>
+							</li>
+							<li>
+								<a href="test.txt" class="btn btn-sm btn-block disabled" download data-tooltip="Please complete your profile">
+									<span class="text">
+										<i class="icon icon-download-folder btn-icon"></i>
+										Download
+									</span>
+									<span class="fade"></span>
+								</a>
+							</li>
+						</ul>
+					</div>
+          <div class ="grey-line"></div> 
+        </div>
+
+
+				#=include includes/overview-video-unedit.html
+
+				<div id="pageTabs" class="tabs-content">
+
+					<!-- это вкладка для full profile -->
+					<div class="content active">
+						<!-- cards row-->
+						<div class="row card-row top-xs profile-main">
+							<!-- left side -->
+							<div class="col-xs-12 col-md-8 offset-bottom main-info">
+								<!-- Summary -->
+								#=include includes/summary-unedit.html
+								<!-- / Summary -->
+
+								<!-- Technical Skills -->
+								#=include includes/technical-skills-unedit.html
+								<!-- / Technical Skills -->
+
+								<!-- Soft Skills -->
+								#=include includes/soft-skills-unedit.html
+								<!-- / Soft Skills -->
+
+								<!-- Experience -->
+								#=include includes/experience-unedit.html
+								<!-- / Experience -->
+
+								<!-- Education -->
+								#=include includes/education-unedit.html
+								<!-- / Education -->
+
+								<!-- Certification -->
+								#=include includes/certification-unedit.html
+								<!-- / Certification -->
+
+								<!-- Languages -->
+								#=include includes/languages-unedit.html
+								<!-- / Languages -->
+
+								<!-- Recommendations &amp; Endorsements -->
+								#=include includes/recommendations-unedit.html
+								<!-- / Recommendations &amp; Endorsements -->
+
+								<!-- Interests, Hobbies & Links -->
+								#=include includes/interests-unedit.html
+								<!-- / Interests, Hobbies & Links -->
+
+								<!-- Volunteering Experience -->
+								#=include includes/volunteering-unedit.html
+								<!-- / Volunteering Experience -->
+							</div>
+							<!-- / left side -->
+
+							<!-- right side -->
+							<div class="col-xs-12 col-md-4 offset-bottom fixed-parent tips-info">
+								#=include includes/building-sections.html
+							</div>
+							<!-- / right side -->
+						</div>
+					</div>
+					<!-- / вкладка для full profile -->
+
+					<!-- это вкладка для overview -->
+					<div class="content">
+						<!-- summary / skills -->
+						<div class="row card-row">
+							<div class="col-xs-12 col-md-6 offset-bottom">
+								<div class="card spaced">
+									<div class="row header">
+										<div class="col-xs-12">
+											<div class="h5-title no-margin">Summary</div>
+										</div>
+									</div>
+									<div class="h2-title no-margin card-title change-text" data-length data-text="210">
+										I’m on a journey to help make changes that improve the society we live in and find the best ways to unlock potential in others.
+									</div>
+								</div>
+							</div>
+							<div class="col-xs-12 col-md-6 offset-bottom">
+								<div class="card spaced">
+									<div class="row header">
+										<div class="tabs-nav col-xs-8">
+											<ul class="clear tabs no-margin" data-tabs="#skillsTabs1">
+												<li class="active">Technical Skills</li>
+												<li>Soft Skills</li>
+											</ul>
+										</div>
+									</div>
+									<div id="skillsTabs1" class="tabs-content">
+										<div class="content active">
+
+											<!-- content btn -->
+											<div class="btn-nav col-xs-4 align-right content-btn">
+												<div class="tabs-content" id="skillsTabsButtons">
+													<div class="content active">
+														<button type="button" class="btn btn-grey btn-xs spaced" data-set-tab="1|#skillsTabsButtons,#skillsTabs1_1">
+															<i class="icon icon-list btn-icon"></i>
+															list<span class="sm-inline"> view</span>
+														</button>
+													</div>
+													<div class="content">
+														<button type="button" class="btn btn-grey btn-xs spaced" data-set-tab="0|#skillsTabsButtons,#skillsTabs1_1">
+															<i class="icon icon-chart btn-icon"></i>
+															chart<span class="sm-inline"> view</span>
+														</button>
+													</div>
+												</div>
+											</div>
+
+											<div class="tabs-content" id="skillsTabs1_1">
+												<div class="content active graph-content">
+													<div class="relative">
+														<div id="chart1" class="graph" data-labels="Digital marketing, Time Management, Digital marketing, Mentoring, Time Management, Mentoring, WEB Analytics, Media, Anyway, Something else, more info, Other" data-values="3,1,2,2,1,1,2,2,1,3,2,5" data-text="text1, text2, text3, text4, text5, text6, text7, text6, text9, text10, text11" data-subtext="subtext1, subtext2, subtext3, subtext4, subtext5, subtext6, subtext7, subtext6, subtext9, text, text" data-color="#1c4e9b" data-suffix="7 years,5 years,2 years,1 year,2 years,1 year,1 year,1 year,1 year,(+ 3 MORE)">
+															<div class="caption">
+																<strong>12</strong>
+																technical skills
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="content text-content">
+													<!-- list technical skills view -->
+													<div class="wrap-info" data-limit="3">
+														<div class="block-info">
+															<div class="head">
+																<div class="title">
+																	Time Management
+																</div>
+																<div class="position">
+																	<i class="icon icon-settings left-icon"></i>
+																	Last uses: 2017
+																</div>
+																<div class="date">
+																	<div class="place">8 years</div>
+																</div>
+															</div>
+														</div>
+														<div class="block-info">
+															<div class="head">
+																<div class="title">
+																	Prototyping
+																</div>
+																<div class="position">
+																	<i class="icon icon-settings left-icon"></i>
+																	Last uses: 2014
+																</div>
+																<div class="date">
+																	<div class="place">3 years</div>
+																</div>
+															</div>
+														</div>
+														<div class="block-info">
+															<div class="head">
+																<div class="title">
+																	Web Analytics
+																</div>
+																<div class="position">
+																	<i class="icon icon-settings left-icon"></i>
+																	Last uses: 2015
+																</div>
+																<div class="date">
+																	<div class="place">2 years</div>
+																</div>
+															</div>
+														</div>
+														<div class="block-info">
+															<div class="head">
+																<div class="title">
+																	Web Analytics
+																</div>
+																<div class="position">
+																	<i class="icon icon-settings left-icon"></i>
+																	Last uses: 2015
+																</div>
+																<div class="date">
+																	<div class="place">2 years</div>
+																</div>
+															</div>
+														</div>
+														<div class="block-info">
+															<div class="head">
+																<div class="title">
+																	Web Analytics
+																</div>
+																<div class="position">
+																	<i class="icon icon-settings left-icon"></i>
+																	Last uses: 2015
+																</div>
+																<div class="date">
+																	<div class="place">2 years</div>
+																</div>
+															</div>
+														</div>
+														<!-- view more link -->
+														<div class="scrolled-more hidden">
+															<a href="full_profile.html">+ <span class="count"></span> More</a>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="content">
+											<div class="tabs-content" id="skillsTabs1_2">
+												<!-- soft skills lists -->
+												<div class="wrap-info" data-limit="3">
+													<div class="block-info no-margin">
+														<div class="skill-list-title">Category 1</div>
+														<ul class="clear skills-list fifth-item">
+															<li>
+																<div class="title">
+																	<span class="skill-link not-editable">
+																		Soft Skill 1
+																		<span class="edit-link">
+																			<i class="icon icon-pencil-edit"></i>
+																		</span>
+																	</span>
+																</div>
+															</li>
+															<li>
+																<div class="title">
+																	<span class="skill-link not-editable">
+																		Soft Skill 2
+																		<span class="edit-link">
+																			<i class="icon icon-pencil-edit"></i>
+																		</span>
+																	</span>
+																</div>
+															</li>
+															<li>
+																<div class="title">
+																	<span class="skill-link not-editable">
+																		Soft Skill 3
+																		<span class="edit-link">
+																			<i class="icon icon-pencil-edit"></i>
+																		</span>
+																	</span>
+																</div>
+															</li>
+															<li>
+																<div class="title">
+																	<span class="skill-link not-editable">
+																		Soft Skill 4
+																		<span class="edit-link">
+																			<i class="icon icon-pencil-edit"></i>
+																		</span>
+																	</span>
+																</div>
+															</li>
+															<li>
+																<div class="title">
+																	<span class="skill-link not-editable">
+																		Soft Skill 5
+																		<span class="edit-link">
+																			<i class="icon icon-pencil-edit"></i>
+																		</span>
+																	</span>
+																</div>
+															</li>
+														</ul>
+													</div>
+													<div class="block-info no-margin">
+														<div class="skill-list-title">Category 2</div>
+														<ul class="clear skills-list fifth-item">
+															<li>
+																<div class="title">
+																	<span class="skill-link not-editable">
+																		Soft Skill 1
+																		<span class="edit-link">
+																			<i class="icon icon-pencil-edit"></i>
+																		</span>
+																	</span>
+																</div>
+															</li>
+															<li>
+																<div class="title">
+																	<span class="skill-link not-editable">
+																		Soft Skill 2
+																		<span class="edit-link">
+																			<i class="icon icon-pencil-edit"></i>
+																		</span>
+																	</span>
+																</div>
+															</li>
+															<li>
+																<div class="title">
+																	<span class="skill-link not-editable">
+																		Soft Skill 3
+																		<span class="edit-link">
+																			<i class="icon icon-pencil-edit"></i>
+																		</span>
+																	</span>
+																</div>
+															</li>
+															<li>
+																<div class="title">
+																	<span class="skill-link not-editable">
+																		Soft Skill 4
+																		<span class="edit-link">
+																			<i class="icon icon-pencil-edit"></i>
+																		</span>
+																	</span>
+																</div>
+															</li>
+															<li>
+																<div class="title">
+																	<a href="full_profile.html" class="skill-link view-more not-editable">
+																		More Skills
+																	</a>
+																</div>
+															</li>
+														</ul>
+													</div>
+													<div class="block-info no-margin">
+														<div class="skill-list-title">Category 3</div>
+														<ul class="clear skills-list fifth-item">
+															<li>
+																<div class="title">
+																	<span class="skill-link not-editable">
+																		Soft Skill 1
+																		<span class="edit-link">
+																			<i class="icon icon-pencil-edit"></i>
+																		</span>
+																	</span>
+																</div>
+															</li>
+															<li>
+																<div class="title">
+																	<span class="skill-link not-editable">
+																		Soft Skill 2
+																		<span class="edit-link">
+																			<i class="icon icon-pencil-edit"></i>
+																		</span>
+																	</span>
+																</div>
+															</li>
+															<li>
+																<div class="title">
+																	<span class="skill-link not-editable">
+																		Soft Skill 3
+																		<span class="edit-link">
+																			<i class="icon icon-pencil-edit"></i>
+																		</span>
+																	</span>
+																</div>
+															</li>
+															<li>
+																<div class="title">
+																	<span class="skill-link not-editable">
+																		Soft Skill 4
+																		<span class="edit-link">
+																			<i class="icon icon-pencil-edit"></i>
+																		</span>
+																	</span>
+																</div>
+															</li>
+															<li>
+																<div class="title">
+																	<a href="full_profile.html" class="skill-link view-more not-editable">
+																		More Skills
+																	</a>
+																</div>
+															</li>
+														</ul>
+													</div>
+													<div class="block-info no-margin">
+														<div class="skill-list-title">Category 3</div>
+														<ul class="clear skills-list fifth-item">
+															<li>
+																<div class="title">
+																	<span class="skill-link not-editable">
+																		Soft Skill 1
+																		<span class="edit-link">
+																			<i class="icon icon-pencil-edit"></i>
+																		</span>
+																	</span>
+																</div>
+															</li>
+															<li>
+																<div class="title">
+																	<span class="skill-link not-editable">
+																		Soft Skill 2
+																		<span class="edit-link">
+																			<i class="icon icon-pencil-edit"></i>
+																		</span>
+																	</span>
+																</div>
+															</li>
+															<li>
+																<div class="title">
+																	<span class="skill-link not-editable">
+																		Soft Skill 3
+																		<span class="edit-link">
+																			<i class="icon icon-pencil-edit"></i>
+																		</span>
+																	</span>
+																</div>
+															</li>
+															<li>
+																<div class="title">
+																	<span class="skill-link not-editable">
+																		Soft Skill 4
+																		<span class="edit-link">
+																			<i class="icon icon-pencil-edit"></i>
+																		</span>
+																	</span>
+																</div>
+															</li>
+															<li>
+																<div class="title">
+																	<a href="full_profile.html" class="skill-link view-more not-editable">
+																		More Skills
+																	</a>
+																</div>
+															</li>
+														</ul>
+													</div>
+													<div class="block-info no-margin">
+														<div class="skill-list-title">Category 3</div>
+														<ul class="clear skills-list fifth-item">
+															<li>
+																<div class="title">
+																	<span class="skill-link not-editable">
+																		Soft Skill 1
+																		<span class="edit-link">
+																			<i class="icon icon-pencil-edit"></i>
+																		</span>
+																	</span>
+																</div>
+															</li>
+															<li>
+																<div class="title">
+																	<span class="skill-link not-editable">
+																		Soft Skill 2
+																		<span class="edit-link">
+																			<i class="icon icon-pencil-edit"></i>
+																		</span>
+																	</span>
+																</div>
+															</li>
+															<li>
+																<div class="title">
+																	<span class="skill-link not-editable">
+																		Soft Skill 3
+																		<span class="edit-link">
+																			<i class="icon icon-pencil-edit"></i>
+																		</span>
+																	</span>
+																</div>
+															</li>
+															<li>
+																<div class="title">
+																	<span class="skill-link not-editable">
+																		Soft Skill 4
+																		<span class="edit-link">
+																			<i class="icon icon-pencil-edit"></i>
+																		</span>
+																	</span>
+																</div>
+															</li>
+															<li>
+																<div class="title">
+																	<a href="full_profile.html" class="skill-link view-more not-editable">
+																		More Skills
+																	</a>
+																</div>
+															</li>
+														</ul>
+													</div>
+													<!-- view more link -->
+													<div class="scrolled-more hidden">
+														<a href="full_profile.html" class="link">+ <span class="count"></span> More</a>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<!-- experience -->
+						<div class="row card-row">
+							<div class="col-xs-12 col-md-6 offset-bottom">
+								<div class="card spaced">
+									<div class="row header">
+										<div class="col-xs-8 tabs-nav">
+											<div class="h5-title no-margin">Experience <small class="helper">(9 years)</small></div>
+										</div>
+										<div class="col-xs-4 align-right btn-nav">
+											<div class="tabs-content" id="skillsTabsButtons2">
+												<div class="content">
+													<button type="button" class="btn btn-grey btn-xs spaced" data-set-tab="1|#skillsTabsButtons2,#experienceTabs">
+														<i class="icon icon-list btn-icon"></i>
+														list<span class="sm-inline"> view</span>
+													</button>
+												</div>
+												<div class="content active">
+													<button type="button" class="btn btn-grey btn-xs spaced" data-set-tab="0|#skillsTabsButtons2,#experienceTabs">
+														<i class="icon icon-chart btn-icon"></i>
+														chart<span class="sm-inline"> view</span>
+													</button>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="tabs-content" id="experienceTabs">
+										<div class="content graph-content">
+											<div class="relative">
+
+												<div id="chart2" class="graph" data-labels="Digital marketing, Mentoring, Something else" data-values="5,4,2" data-text="text1, text2, text" data-subtext="subtext1, subtext2, subtext" data-color="#3a6cb9" data-suffix="5 years,2 years, 1 year">
+													<div class="caption">
+														<strong>7</strong>
+														years of experience
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="content text-content active">
+											<!-- list experience view -->
+											<div class="wrap-info" data-limit="3">
+												<div class="block-info">
+													<div class="head">
+														<div class="title">
+															Senior Project Manager
+														</div>
+														<div class="position">ABC Production</div>
+														<div class="date">
+															<i class="icon icon-event"></i>
+															April 2016 - Present (2 YEARS)
+															<div class="place">Dallas, TX</div>
+														</div>
+													</div>
+												</div>
+												<div class="block-info">
+													<div class="head">
+														<div class="title">
+															Senior Project Manager
+														</div>
+														<div class="position">ABC Production</div>
+														<div class="date">
+															<i class="icon icon-event"></i>
+															April 2016 - Present (2 YEARS)
+															<div class="place">Dallas, TX</div>
+														</div>
+													</div>
+												</div>
+												<div class="block-info">
+													<div class="head">
+														<div class="title">
+															Senior Project Manager
+														</div>
+														<div class="position">ABC Production</div>
+														<div class="date">
+															<i class="icon icon-event"></i>
+															April 2016 - Present (2 YEARS)
+															<div class="place">Dallas, TX</div>
+														</div>
+													</div>
+												</div>
+												<div class="block-info">
+													<div class="head">
+														<div class="title">
+															Senior Project Manager
+														</div>
+														<div class="position">ABC Production</div>
+														<div class="date">
+															<i class="icon icon-event"></i>
+															April 2016 - Present (2 YEARS)
+															<div class="place">Dallas, TX</div>
+														</div>
+													</div>
+												</div>
+												<div class="block-info">
+													<div class="head">
+														<div class="title">
+															Senior Project Manager
+														</div>
+														<div class="position">ABC Production</div>
+														<div class="date">
+															<i class="icon icon-event"></i>
+															April 2016 - Present (2 YEARS)
+															<div class="place">Dallas, TX</div>
+														</div>
+													</div>
+												</div>
+												<div class="block-info">
+													<div class="head">
+														<div class="title">
+															Senior Project Manager
+														</div>
+														<div class="position">ABC Production</div>
+														<div class="date">
+															<i class="icon icon-event"></i>
+															April 2016 - Present (2 YEARS)
+															<div class="place">Dallas, TX</div>
+														</div>
+													</div>
+												</div>
+												<div class="block-info">
+													<div class="head">
+														<div class="title">
+															Senior Project Manager
+														</div>
+														<div class="position">ABC Production</div>
+														<div class="date">
+															<i class="icon icon-event"></i>
+															April 2016 - Present (2 YEARS)
+															<div class="place">Dallas, TX</div>
+														</div>
+													</div>
+												</div>
+												<!-- view more link -->
+												<div class="scrolled-more hidden">
+													<a href="#test-popup" class="open-popup-link">+ <span class="count"></span> More</a>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-xs-12 col-md-6 offset-bottom">
+								<div class="card spaced">
+									<div class="header">
+										<ul class="clear tabs no-margin" data-tabs="#educationTabs">
+											<li class="active">Education</li>
+											<li>Certification</li>
+											<li>Languages</li>
+										</ul>
+									</div>
+									<div class="tabs-content" id="educationTabs">
+										<div class="content active">
+											<!-- Education -->
+											<div class="wrap-info" data-limit="3">
+												<div class="block-info">
+													<div class="head">
+														<div class="title">
+															State University Of Communication Technologies
+														</div>
+														<div class="position">Bachelor of Science (BS)</div>
+														<div class="date">
+															<i class="icon icon-event"></i>
+															April 2016 - Present (2 YEARS)
+															<div class="place">Dallas, TX</div>
+														</div>
+													</div>
+												</div>
+												<div class="block-info">
+													<div class="head">
+														<div class="title">
+															State University
+														</div>
+														<div class="position">Bachelor of Science (BS), Information Technology</div>
+														<div class="date">
+															<i class="icon icon-event"></i>
+															April 2016 - April 2016 (2 YEARS)
+															<div class="place">Dallas, TX</div>
+														</div>
+													</div>
+												</div>
+												<div class="block-info">
+													<div class="head">
+														<div class="title">
+															State University Of Communication Technologies
+														</div>
+														<div class="position">Bachelor of Science (BS), Information Technology</div>
+														<div class="date">
+															<i class="icon icon-event"></i>
+															April 2016 - Present (2 YEARS)
+															<div class="place">Dallas, TX</div>
+														</div>
+													</div>
+												</div>
+												<!-- view more link -->
+												<div class="scrolled-more hidden">
+													<a href="full_profile.html">+ <span class="count"></span> More</a>
+												</div>
+											</div>
+										</div>
+										<div class="content">
+											<!-- Certification -->
+											<div class="wrap-info" data-limit="3">
+												<!-- 1 -->
+												<div class="block-info with-image">
+													<div class="head">
+														<div class="main">
+															<div class="title">
+																<span>Human - Computer Interaction</span>
+															</div>
+															<div class="position">School of Visual Communications</div>
+														</div>
+														<div class="image">
+															<!-- class gallery-link inits gallery use only for the visible blocks (data-limit="3")-->
+															<a href="temp/sertificate2.jpg" class="image-cover gallery-link">
+																<img src="temp/sertificate2.jpg" alt="sertificate">
+															</a>
+														</div>
+														<div class="date">
+															<i class="icon icon-event"></i>
+															April 2016 - April 2016 (2 YEARS)
+															<div class="place">Dallas, TX</div>
+														</div>
+													</div>
+												</div>
+												<!-- 2 -->
+												<div class="block-info with-image">
+													<div class="head">
+														<div class="main">
+															<div class="title">
+																<span>Human - Computer Interaction</span>
+															</div>
+															<div class="position">School of Visual Communications</div>
+														</div>
+														<div class="image">
+															<a href="temp/sertificate3.jpg" class="image-cover gallery-link">
+																<img src="temp/sertificate3.jpg" alt="sertificate">
+															</a>
+														</div>
+														<div class="date">
+															<i class="icon icon-event"></i>
+															April 2016 - Present (2 YEARS)
+															<div class="place">Dallas, TX</div>
+														</div>
+													</div>
+												</div>
+												<!-- 3 -->
+												<div class="block-info with-image">
+													<div class="head">
+														<div class="main">
+															<div class="title">
+																<span>Human - Computer Interaction</span>
+															</div>
+															<div class="position">School of Visual Communications</div>
+														</div>
+														<div class="image">
+															<a href="temp/sertificate.jpg" class="image-cover gallery-link">
+																<img src="temp/sertificate.jpg" alt="sertificate">
+															</a>
+														</div>
+														<div class="date">
+															<i class="icon icon-event"></i>
+															April 2016 - Present (2 YEARS)
+															<div class="place">Dallas, TX</div>
+														</div>
+													</div>
+												</div>
+												<!-- 4 -->
+												<div class="block-info with-image">
+													<div class="head">
+														<div class="main">
+															<div class="title">
+																<span>Human - Computer Interaction</span>
+															</div>
+															<div class="position">School of Visual Communications</div>
+														</div>
+														<div class="image">
+															<figure class="image-cover">
+																<img src="temp/sertificate.jpg" alt="sertificate">
+															</figure>
+														</div>
+														<div class="date">
+															<i class="icon icon-event"></i>
+															April 2016 - Present (2 YEARS)
+															<div class="place">Dallas, TX</div>
+														</div>
+													</div>
+												</div>
+												<!-- 5 -->
+												<div class="block-info with-image">
+													<div class="head">
+														<div class="main">
+															<div class="title">
+																<span>Human - Computer Interaction</span>
+															</div>
+															<div class="position">School of Visual Communications</div>
+														</div>
+														<div class="image">
+															<figure class="image-cover">
+																<img src="temp/sertificate.jpg" alt="sertificate">
+															</figure>
+														</div>
+														<div class="date">
+															<i class="icon icon-event"></i>
+															April 2016 - Present (2 YEARS)
+															<div class="place">Dallas, TX</div>
+														</div>
+													</div>
+												</div>
+												<!-- view more link -->
+												<div class="scrolled-more hidden">
+													<a href="full_profile.html">+ <span class="count"></span> More</a>
+												</div>
+											</div>
+										</div>
+										<div class="content">
+											<!-- Languages -->
+											<div class="wrap-info" data-limit="3">
+												<div class="graph-line">
+													<div class="label">Ukrainian</div>
+													<div class="text">Native</div>
+													<div class="progress" style="width: 50%"></div>
+												</div>
+												<div class="graph-line">
+													<div class="label">English</div>
+													<div class="text">Native</div>
+													<div class="progress" style="width: 60%"></div>
+												</div>
+												<div class="graph-line">
+													<div class="label">Ukrainian</div>
+													<div class="text">Native</div>
+													<div class="progress" style="width: 100%"></div>
+												</div>
+												<div class="graph-line">
+													<div class="label">Ukrainian</div>
+													<div class="text">Native</div>
+													<div class="progress" style="width: 100%"></div>
+												</div>
+												<!-- view more link -->
+												<div class="scrolled-more hidden">
+													<a href="full_profile.html">+ <span class="count"></span> More</a>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<!-- recommendations -->
+						<div class="row card-row">
+							<div class="col-xs-12 col-md-6 offset-bottom">
+								<div class="card spaced">
+									<div class="row header">
+										<div class="col-xs-12">
+											<div class="h5-title no-margin">Video recommendations / endorsements</div>
+										</div>
+									</div>
+									<div class="nav-overflow">
+										<div class="slider-cover">
+											<div class="recommendation-slider owl-carousel">
+												<div class="item">
+													<a href="https://www.youtube.com/watch?v=3gxNW2Ulpwk" class="frame static video-popup small-icon">
+														<img src="temp/recommendation/recommendation1.jpg" alt="">
+													</a>
+													<a href="#" class="caption">
+														<div class="name">Oleksandr <span class="sec-name">Stepanuk</span></div>
+														<div class="position">Alpha Industries</div>
+														<span class="link"><i class="icon icon-comment"></i></span>
+													</a>
+												</div>
+												<div class="item">
+													<a href="https://www.youtube.com/watch?v=EkSyqM5wHfc" class="frame static video-popup small-icon">
+														<img src="temp/recommendation/recommendation2.jpg" alt="">
+													</a>
+													<a href="#" class="caption">
+														<div class="name">Yana <span class="sec-name">Mirza</span></div>
+														<div class="position">ABC Production</div>
+														<!-- add class active if there are comments -->
+														<span class="link"><i class="icon icon-comment"></i></span>
+													</a>
+												</div>
+												<div class="item">
+													<a href="https://www.youtube.com/watch?v=3gxNW2Ulpwk" class="frame static video-popup small-icon">
+														<img src="temp/recommendation/recommendation1.jpg" alt="">
+													</a>
+													<a href="#" class="caption">
+														<div class="name">Oleksandr <span class="sec-name">Stepanuk</span></div>
+														<div class="position">Alpha Industries</div>
+														<span class="link"><i class="icon icon-comment"></i></span>
+													</a>
+												</div>
+												<div class="item">
+													<a href="https://www.youtube.com/watch?v=EkSyqM5wHfc" class="frame static video-popup small-icon">
+														<img src="temp/recommendation/recommendation2.jpg" alt="">
+													</a>
+													<a href="#" class="caption">
+														<div class="name">Yana <span class="sec-name">Mirza</span></div>
+														<div class="position">ABC Production</div>
+														<span class="link"><i class="icon icon-comment"></i></span>
+													</a>
+												</div>
+											</div>
+										</div>
+										<div class="slider-nav">
+											<div class="slider-prev"><i class="icon icon-keyboard-left-arrow-button"></i></div>
+											<div class="slider-next"><i class="icon icon-keyboard-right-arrow-button"></i></div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-xs-12 col-md-6 offset-bottom">
+								<div class="card spaced">
+									<div class="row header">
+										<div class="col-xs-12">
+											<ul class="clear tabs no-margin" data-tabs="#interestTabs1">
+												<li class="active">
+													Interests, 
+													<span class="xs-block-ins">Hobbies &amp; Links</span>
+												</li>
+												<li>
+													Volunteering
+													<span class="xs-block-ins"> Experience</span>
+												</li>
+											</ul>
+										</div>
+									</div>
+									<div id="interestTabs1" class="tabs-content">
+										<div class="content active">
+											<!-- Interests and other view -->
+											<div class="wrap-info tags-row" data-limit="12">
+												<div class="tag-cover">
+													<div class="large tag">
+														<div class="title">Psychology</div>
+														<div class="details">
+															Knowing customers' &amp; team members psyche is key...
+														</div>
+													</div>
+												</div>
+												<div class="tag-cover">
+													<div class="large tag">
+														<div class="title">Hiking</div>
+														<div class="details">
+															Bachelor of Science (BS), Information Technology
+														</div>
+													</div>
+												</div>
+												<div class="tag-cover">
+													<a href="#" class="large tag link-inside">
+														<div class="title">Photography</div>
+														<div class="details">
+															Best shots for best memory moments
+														</div>
+														<span class="tag-link"><i class="icon icon-link"></i></span>
+													</a>
+												</div>
+												<div class="tag-cover">
+													<a href="#" class="large tag link-inside">
+														<div class="title">Photography</div>
+														<div class="details">
+															Best shots for best memory moments
+														</div>
+														<span class="tag-link"><i class="icon icon-link"></i></span>
+													</a>
+												</div>
+												<div class="tag-cover">
+													<div class="large tag">
+														<div class="title">Psychology</div>
+														<div class="details">
+															Knowing customers' &amp; team members psyche is key...
+														</div>
+													</div>
+												</div>
+												<div class="tag-cover">
+													<div class="large tag">
+														<div class="title">Yoga</div>
+													</div>
+												</div>
+												<div class="tag-cover">
+													<div class="large tag">
+														<div class="title">Yoga</div>
+													</div>
+												</div>
+												<div class="tag-cover">
+													<div class="large tag">
+														<div class="title">Psychology</div>
+														<div class="details">
+															Knowing customers' &amp; team members psyche is key...
+														</div>
+													</div>
+												</div>
+												<div class="tag-cover">
+													<div class="large tag">
+														<div class="title">Psychology</div>
+														<div class="details">
+															Knowing customers' &amp; team members psyche is key...
+														</div>
+													</div>
+												</div>
+												<div class="tag-cover">
+													<div class="large tag">
+														<div class="title">Psychology</div>
+														<div class="details">
+															Knowing customers' &amp; team members psyche is key...
+														</div>
+													</div>
+												</div>
+												<div class="tag-cover">
+													<div class="large tag">
+														<div class="title">Psychology</div>
+														<div class="details">
+															Knowing customers' &amp; team members psyche is key...
+														</div>
+													</div>
+												</div>
+												<div class="tag-cover">
+													<div class="large tag">
+														<div class="title">Yoga</div>
+													</div>
+												</div>
+												<div class="tag-cover">
+													<div class="large tag">
+														<div class="title">Yoga</div>
+													</div>
+												</div>
+												<div class="tag-cover">
+													<div class="large tag">
+														<div class="title">Psychology</div>
+														<div class="details">
+															Knowing customers' &amp; team members psyche is key...
+														</div>
+													</div>
+												</div>
+
+												<div class="tag-cover">
+													<div class="large tag">
+														<div class="title">Yoga</div>
+													</div>
+												</div>
+												<div class="tag-cover">
+													<div class="large tag">
+														<div class="title">Photography</div>
+													</div>
+												</div>
+												<div class="tag-cover">
+													<div class="large tag">
+														<div class="title">Joggling</div>
+													</div>
+												</div>
+												<div class="tag-cover">
+													<div class="large tag">
+														<div class="title">Yoga</div>
+													</div>
+												</div>
+
+												<!-- view more link -->
+												<div class="scrolled-more hidden">
+													<a href="full_profile.html">+ <span class="count"></span> More</a>
+												</div>
+											</div>
+										</div>
+										<div class="content">
+											<ul class="clear two-lines-list spaced-top wrap-info" data-limit="4">
+												<!-- 1 -->
+												<li>
+													<div class="block-info">
+														<div class="head">
+															<div class="title">
+																<span>Other Volunteer</span>
+															</div>
+															<div class="position">Some Role</div>
+															<div class="date">
+																<i class="icon icon-event"></i>
+																<span>July</span>
+																<span>2016</span> - 
+																<span>Present</span>
+																<span>(6 YEARS)</span>
+																<div class="place">
+																	<span>Las Vegas</span>,
+																	<span>NV</span>
+																</div>
+															</div>
+														</div>
+													</div>
+												</li>
+												<!-- 2 -->
+												<li>
+													<div class="block-info">
+														<div class="head">
+															<div class="title">
+																<span>Other Volunteer</span>
+															</div>
+															<div class="position">Some Role</div>
+															<div class="date">
+																<i class="icon icon-event"></i>
+																<span>July</span>
+																<span>2016</span> - 
+																<span>Present</span>
+																<span>(6 YEARS)</span>
+																<div class="place">
+																	<span>Las Vegas</span>,
+																	<span>NV</span>
+																</div>
+															</div>
+														</div>
+													</div>
+												</li>
+												<!-- 3 -->
+												<li>
+													<div class="block-info">
+														<div class="head">
+															<div class="title">
+																<span>Other Volunteer</span>
+															</div>
+															<div class="position">Some Role</div>
+															<div class="date">
+																<i class="icon icon-event"></i>
+																<span>July</span>
+																<span>2016</span> - 
+																<span>Present</span>
+																<span>(6 YEARS)</span>
+																<div class="place">
+																	<span>Las Vegas</span>,
+																	<span>NV</span>
+																</div>
+															</div>
+														</div>
+													</div>
+												</li>
+												<!-- 4 -->
+												<li>
+													<div class="block-info">
+														<div class="head">
+															<div class="title">
+																<span>Other Volunteer</span>
+															</div>
+															<div class="position">Some Role</div>
+															<div class="date">
+																<i class="icon icon-event"></i>
+																<span>July</span>
+																<span>2016</span> - 
+																<span>Present</span>
+																<span>(6 YEARS)</span>
+																<div class="place">
+																	<span>Las Vegas</span>,
+																	<span>NV</span>
+																</div>
+															</div>
+														</div>
+													</div>
+												</li>
+												<!-- 5 -->
+												<li>
+													<div class="block-info">
+														<div class="head">
+															<div class="title">
+																<span>Other Volunteer</span>
+															</div>
+															<div class="position">Some Role</div>
+															<div class="date">
+																<i class="icon icon-event"></i>
+																<span>July</span>
+																<span>2016</span> - 
+																<span>Present</span>
+																<span>(6 YEARS)</span>
+																<div class="place">
+																	<span>Las Vegas</span>,
+																	<span>NV</span>
+																</div>
+															</div>
+														</div>
+													</div>
+												</li>
+												<!-- 6 -->
+												<li>
+													<div class="block-info">
+														<div class="head">
+															<div class="title">
+																<span>Other Volunteer</span>
+															</div>
+															<div class="position">Some Role</div>
+															<div class="date">
+																<i class="icon icon-event"></i>
+																<span>July</span>
+																<span>2016</span> - 
+																<span>Present</span>
+																<span>(6 YEARS)</span>
+																<div class="place">
+																	<span>Las Vegas</span>,
+																	<span>NV</span>
+																</div>
+															</div>
+														</div>
+													</div>
+												</li>
+												<!-- view more link -->
+												<li class="scrolled-more hidden">
+													<a href="full_profile.html">+ <span class="count"></span> More</a>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- / вкладка для overview -->
+				</div>
+
+			</section>
+		</main>
+
+
+
+		#=include includes/popup-experience.html
+		#=include includes/popup-interview.html
+		#=include includes/popup-share-profile.html
+		<!-- main footer -->
+		#=include includes/footer.html
+
+
+		<link href="https://fonts.googleapis.com/css?family=Poppins:100,300,400,500,600,700" rel="stylesheet">
+
+		<script src="js/lib/jquery.min.js"></script>
+
+
+
+
+		<script src="js/plugins/owl.carousel.min.js"></script>
+		<script src="js/plugins/perfect-scrollbar.min.js"></script>
+		<script src="js/plugins/jquery.magnific-popup.min.js"></script>
+		<script src="js/plugins/jquery.maskedinput.min.js"></script>
+		<script src="js/plugins/d3.v3.min.js"></script>
+
+		<!-- video js -->
+		<script src="js/plugins/video.js"></script>
+		<script src="js/plugins/videojs-markers.min.js"></script>
+		
+		<script src="js/main.js"></script>
+		<script src="js/validator.js"></script>
+
+		<script src="js/init/accordeon.js"></script>
+		<script src="js/init/popups-update-profile.js"></script>
+
+		<script src="js/init/buttons.js"></script>
+		<script src="js/init/data-onsubmit.js"></script>
+		<script src="js/init/validation.js"></script>
+		<script src="js/init/toggler.js"></script>
+		<script src="js/init/random-id.js"></script>
+		<script src="js/init/main-menu-dropdown.js"></script>
+		<script src="js/init/progress.js"></script>
+		<script src="js/init/set-overview-size.js"></script>
+		<script src="js/init/tabs.js"></script>
+		<script src="js/init/read-more.js"></script>
+		<script src="js/init/dropdown.js"></script>
+		<script src="js/init/limit-block.js"></script>
+		<script src="js/init/fixed-elements.js"></script>
+		<script src="js/init/mask.js"></script>
+		<script src="js/init/clipboard-copy.js"></script>
+		<script src="js/init/clear-image.js"></script>
+		<script src="js/init/notification.js"></script>
+		<script src="js/init/keyword-search.js"></script>
+		<script src="js/init/video-data.js"></script>
+		<script src="js/init/data-onchange.js"></script>
+		<script src="js/init/graph.js"></script>
+		<script src="js/init/scrollspy.js"></script>
+		<script>
+			var csrf_token = 'token'
+		</script>
+	</body>
+	</html>

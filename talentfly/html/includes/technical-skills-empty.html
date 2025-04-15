@@ -1,0 +1,32 @@
+<div class="card spaced offset-bottom editable">
+
+	<div class="row header">
+		<div class="col-xs-9">
+
+			<div class="h5-title no-margin title-icon">
+				<span class="icon-holder">
+					<i class="icon icon-technical-skills"></i>
+				</span>
+				<span class="text">Technical Skills</span>
+				<div class="filling-container">
+					<i class="icon icon-exclamation"></i>
+					<span class="uppercase help-text">Some details are missing...</span>
+				</div>
+			</div>
+		</div>
+		<div class="col-xs-3 align-right">
+			<button type="button" data-call-popup="#edit-technicalskills-popup" class="btn btn-simple btn-xs btn-round" data-edit="#technicalskills-list" data-list="#technicalskills-list" data-add="#technicalskills-list" id="newItemSkill">
+				<i class="icon icon-add2"></i>
+			</button>
+<!-- 			<a href="#edit-technicalskills-popup" >
+			</a> -->
+		</div>
+	</div>
+	<a href="#edit-technicalskills-popup" class="skill-link lint-inside parent-cover open-popup-link hidden" data-edit="#technicalskills-list">
+		<ul class="clear skills-list full-list" id="technicalskills-list" data-text="list" data-addto="#technicalSkillsTable" data-url="static/data/forms.json"></ul>
+		<span class="edit-link">
+			<i class="icon icon-pencil-edit"></i>
+		</span>
+	</a>
+	<div class="hidden-helper active">List the core technical skills your have or used in the past</div>
+</div>

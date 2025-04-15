@@ -1,0 +1,56 @@
+{
+	"id": 1,
+	"date": "MAY 15 2018",
+	"interviewer_src_mp4": "video/oceans.mp4",
+	"interviewer_src_ogg": "video/oceans.ogg",
+	"interviewer_poster": "video/oceans.jpg",
+	"candidate_src_mp4": "video/video.mp4",
+	"candidate_src_ogg": "video/video.ogg",
+	"candidate_poster": "video/video.jpg",
+	"questions": [{
+		"text": "Some text",
+		"time": 556
+	}, {
+		"text": "Another text",
+		"time": 10
+	}, {
+		"text": "Another text",
+		"time": 23.6
+	},{
+		"text": "Another text",
+		"time": 45
+	},{
+		"text": "Another text",
+		"time": 122
+	},{
+		"text": "Another text",
+		"time": 23.6
+	},{
+		"text": "Another text",
+		"time": 345
+	},{
+		"text": "Another text",
+		"time": 24
+	},{
+		"text": "Another text",
+		"time": 122
+	},{
+		"text": "Another text",
+		"time": 122
+	},{
+		"text": "Another text",
+		"time": 122
+	},{
+		"text": "Another text",
+		"time": 122
+	},{
+		"text": "Another text",
+		"time": 122
+	},{
+		"text": "Another text",
+		"time": 122
+	},{
+		"text": "Text",
+		"time": 239
+	}]
+}

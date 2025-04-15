@@ -1,0 +1,112 @@
+<header class="main-header inner-header" id="mainHeader">
+	<div class="container large">
+		<div class="row middle-xs">
+			<div class="col-xs-2 hidden-lg menu-left">
+				<button class="none main-menu-toggle">
+					<i></i><i></i><i></i>
+				</button>
+			</div>
+			<div class="col-xs-8 col-md-2">
+				<a href="index.html" class="logo">
+					<img src="img/logo.svg" alt="">
+				</a>
+			</div>
+			<div class="col-xs-2 col-md-10 no-font align-right menu-right">
+				<div id="notification-sm" class="notification-sm"></div>
+
+				<div class="main-menu small" id="notification-lg">
+					<div id="menuDesktop" class="menu-desktop"></div>
+					<nav data-tablet="#menuTablet" data-desktop="#menuDesktop">
+						<ul class="clear menu">
+							<li>
+								<a href="overview.html">
+									<span class="text">Overview</span>
+								</a>
+							</li>
+							<li>
+								<a href="full_profile.html">
+									<span class="text">Full profile</span>
+								</a>
+							</li>
+							<li>
+								<a href="interview.html">
+									<span class="text">Interviews</span>
+								</a>
+							</li>
+							<li>
+								<a href="settings.html">
+									<span class="text">Settings</span>
+								</a>
+							</li>
+							<li class="separator"></li>
+							<li>
+								<a href="how_it_works.html">
+									<span class="text">How it works</span>
+								</a>
+							</li>
+							<li>
+								<a href="what-is-talentfly.html">
+									<span class="text">What is TalentFly</span>
+								</a>
+							</li>
+							<li>
+								<a href="contact-us.html">
+									<span class="text">Contact Us</span>
+								</a>
+							</li>
+							<li id="toggleMenuDropdown" class="menu-dropdown">
+								<a href="#" class="bull">
+									<div class="separator"></div>
+									&bull;&bull;&bull;
+								</a>
+								<ul class="clear dropdown"></ul>
+							</li>
+						</ul>
+					</nav>
+					<div class="notification-link" data-tablet="#notification-sm" data-desktop="#notification-lg">
+						<div class="separator"></div>
+						<!-- add class animated for a new notification in a real time-->
+						<button class="notification btn" type="button" data-toggle="#notificationToggle" data-scroll-hide>
+							<i class="icon icon-bell"></i>
+							<span class="counter notification-total">0</span>
+							<span class="fade"></span>
+						</button>
+						<div class="separator"></div>
+
+						<!-- notification details -->
+						#=include notification-details.html
+
+					</div>
+				</div>
+				<div class="user-col small" id="signButtonsDesktop">
+					<a href="index.html" class="btn btn-default" data-tablet="#signInButtonTablet" data-desktop="#signButtonsDesktop">
+						<span class="text"><i class="icon icon-logout btn-icon"></i> sign out</span>
+						<span class="fade"></span>
+					</a>
+				</div>
+			</div>
+		</div>
+
+		<!-- sign in -->
+		#=include sign-in.html
+		<!-- / sign in -->
+
+		<!-- sign up -->
+		#=include sign-up.html
+		<!-- / sign up -->
+
+	</div>
+</header>
+
+<!-- change time popup -->
+#=include popup-change-time.html
+<!-- / change time popup -->
+
+<div class="none mobile-nav">
+	<div id="menuTablet"></div>
+	<div class="row buttons-row">
+		<div class="col-xs-12" id="signInButtonTablet"></div>
+	</div>
+</div>
+
+

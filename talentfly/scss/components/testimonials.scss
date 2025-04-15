@@ -1,0 +1,201 @@
+.block-review {
+	background: #fff;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+
+	.info {
+		flex-basis: 60%;
+		max-width: 60%;
+		padding: 15px 30px;
+	}
+	.video-review {
+		flex-basis: 40%;
+		max-width: 40%;
+	}
+}
+.message {
+	line-height: 1.7;
+	font-size: 16px;
+	max-height: 56px;
+	overflow: hidden;
+}
+.dots-slider {
+	padding-top: 30px;
+	list-style-type: none;
+	display: block;
+	font-size: 0;
+
+	li {
+		padding: 0 2px;
+		display: inline-block;
+		cursor: pointer;
+
+		span {
+			height: 10px;
+			width: 10px;
+			border: 1px solid $blue;
+			border-radius: 50%;
+			display: inline-block;
+			margin-right: 0px;
+			transition: .3s;
+		}
+		&.active {
+
+			span {
+				width: 22px;
+				transition: .3s;
+				border-radius: 8px;
+				background: $blue;
+			}
+		}
+	}
+}
+.head-info {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	padding-bottom: 20px;
+	align-items: center;
+
+	.ava-picture {
+		flex-basis: 15%;
+		max-width: 15%;
+		text-align: left;
+
+		figure {
+			display: inline-block;
+			height: 60px;
+			width: 60px;
+			border-radius: 50%;
+			overflow: hidden;
+		}
+		img {
+			width: 100%;
+		}
+	}
+	.name {
+		flex-basis: 85%;
+		max-width: 85%;
+		padding-left: 25px;
+		color: #b9d7f2;
+		font-size: 14px;
+		
+		.title {
+			font-weight: $medium;
+			font-size: 16px;
+			color: #76b6f0;
+		}
+	}
+}
+
+.review-section {
+
+	.section-caption {
+		font-size: 16px;
+	}
+}
+.review-slider {
+	white-space: nowrap;
+	overflow: hidden;
+
+	.item {
+		display: inline-block;
+		white-space: normal;
+		width: 100%;
+	}
+
+	&.owl-loaded {
+
+		.item {
+			display: inline-block;
+			width: 100%;
+		}
+	}
+}
+@media (max-width: 1440px) {
+
+	.message {
+		font-size: 14px;
+		max-height: 68px;
+	}
+}
+
+@media (max-width: 1150px) {
+
+	.block-review {
+
+		.info {
+			padding: 30px;
+		}
+	}
+}
+
+
+@media (max-width: 992px) {
+
+	.head-info {
+
+		.name {
+			text-align: left;
+		}
+	}
+	.message {
+		text-align: left;
+	}
+	.review-section {
+		display: block;
+	}
+	.dots-slider {
+
+		li {
+
+			span {
+				height: 13px;
+				width: 13px;
+			}
+			&.active {
+
+				span {
+					width: 30px;
+				}
+			}
+		}
+	}
+	.block-review {
+		margin-top: 40px;
+
+		.info {
+			flex-basis: 100%;
+			max-width: 100%;
+		}
+		.video-review {
+			flex-basis: 100%;
+			max-width: 100%;
+			overflow: hidden;
+
+			.video-block {
+				
+				&.third {
+					background-position: center;
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: 640px) {
+
+	.block-review {
+
+		.info {
+			padding: 15px;
+		}
+	}
+	.head-info {
+
+		.name {
+			padding-left: 35px;
+		}
+	}
+}

@@ -1,0 +1,365 @@
+@font-face {
+  font-family: 'icomoon';
+  src:  url('../fonts/icons/icomoon.eot?7kjwzl');
+  src:  url('../fonts/icons/icomoon.eot?7kjwzl#iefix') format('embedded-opentype'),
+    url('../fonts/icons/icomoon.ttf?7kjwzl') format('truetype'),
+    url('../fonts/icons/icomoon.woff?7kjwzl') format('woff'),
+    url('../fonts/icons/icomoon.svg?7kjwzl#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-check-green:before {
+  content: "\e900";
+}
+.icon-angle-down:before {
+  content: "\e901";
+}
+.icon-success-round:before {
+  content: "\e902";
+}
+.icon-attention:before {
+  content: "\e903";
+}
+.icon-close-round:before {
+  content: "\e904";
+}
+.icon-info-round:before {
+  content: "\e905";
+}
+.icon-up-down:before {
+  content: "\e906";
+}
+.icon-video-conference:before {
+  content: "\e907";
+}
+.icon-video:before {
+  content: "\e908";
+}
+.icon-technical-skills:before {
+  content: "\e909";
+}
+.icon-summary:before {
+  content: "\e90a";
+}
+.icon-soft-skills:before {
+  content: "\e90b";
+}
+.icon-refresh:before {
+  content: "\e90c";
+}
+.icon-reco-endor:before {
+  content: "\e90d";
+}
+.icon-photo:before {
+  content: "\e90e";
+}
+.icon-volunteering:before {
+  content: "\e90f";
+}
+.icon-languages:before {
+  content: "\e910";
+}
+.icon-interests:before {
+  content: "\e911";
+}
+.icon-education:before {
+  content: "\e912";
+}
+.icon-experience:before {
+  content: "\e913";
+}
+.icon-certification:before {
+  content: "\e914";
+}
+.icon-up-arrow-key:before {
+  content: "\e915";
+}
+.icon-down-arrow-key:before {
+  content: "\e916";
+}
+.icon-video-player:before {
+  content: "\e917";
+}
+.icon-settings:before {
+  content: "\e918";
+}
+.icon-cancel:before {
+  content: "\e919";
+}
+.icon-assign:before {
+  content: "\e91a";
+}
+.icon-play:before {
+  content: "\e91b";
+}
+.icon-day-10-on-calendar-page:before {
+  content: "\e91c";
+}
+.icon-folder:before {
+  content: "\e91d";
+}
+.icon-padlock:before {
+  content: "\e91e";
+}
+.icon-key:before {
+  content: "\e91f";
+}
+.icon-right-arrow-play-button:before {
+  content: "\e920";
+}
+.icon-share:before {
+  content: "\e921";
+}
+.icon-play-audio:before {
+  content: "\e922";
+}
+.icon-chevron-right:before {
+  content: "\e923";
+}
+.icon-chevron-left:before {
+  content: "\e924";
+}
+.icon-chevron-up:before {
+  content: "\e925";
+}
+.icon-chevron-down:before {
+  content: "\e926";
+}
+.icon-checked2:before {
+  content: "\e927";
+}
+.icon-close2:before {
+  content: "\e928";
+}
+.icon-boy-broad-smile:before {
+  content: "\e929";
+}
+.icon-smiling-lips:before {
+  content: "\e92a";
+}
+.icon-book:before {
+  content: "\e92b";
+}
+.icon-voice-recording:before {
+  content: "\e92c";
+}
+.icon-power-of-video:before {
+  content: "\e92d";
+}
+.icon-show-off-your-skills:before {
+  content: "\e92e";
+}
+.icon-your-brand:before {
+  content: "\e92f";
+}
+.icon-recruiting-tool:before {
+  content: "\e930";
+}
+.icon-best-fit-right:before {
+  content: "\e931";
+}
+.icon-save-your-time:before {
+  content: "\e932";
+}
+.icon-access-candidates:before {
+  content: "\e933";
+}
+.icon-facebook:before {
+  content: "\e934";
+}
+.icon-vk2:before {
+  content: "\e935";
+}
+.icon-instagram2:before {
+  content: "\e936";
+}
+.icon-linkedin:before {
+  content: "\e937";
+}
+.icon-googleplus:before {
+  content: "\e938";
+}
+.icon-ok2:before {
+  content: "\e939";
+}
+.icon-twitter:before {
+  content: "\e93a";
+}
+.icon-play2:before {
+  content: "\e93b";
+}
+.icon-bell:before {
+  content: "\e93c";
+}
+.icon-eye:before {
+  content: "\e93d";
+}
+.icon-email:before {
+  content: "\e93e";
+}
+.icon-maps:before {
+  content: "\e93f";
+}
+.icon-telephone:before {
+  content: "\e940";
+}
+.icon-share2:before {
+  content: "\e941";
+}
+.icon-download-folder:before {
+  content: "\e942";
+}
+.icon-logout:before {
+  content: "\e943";
+}
+.icon-settings2:before {
+  content: "\e944";
+}
+.icon-search:before {
+  content: "\e945";
+}
+.icon-list:before {
+  content: "\e946";
+}
+.icon-pencil-edit:before {
+  content: "\e947";
+}
+.icon-chart:before {
+  content: "\e948";
+}
+.icon-comment:before {
+  content: "\e949";
+}
+.icon-event:before {
+  content: "\e94a";
+}
+.icon-keyboard-right-arrow-button:before {
+  content: "\e94b";
+}
+.icon-info:before {
+  content: "\e94c";
+}
+.icon-link:before {
+  content: "\e94d";
+}
+.icon-large-video:before {
+  content: "\e94e";
+}
+.icon-enlarge-video:before {
+  content: "\e94f";
+}
+.icon-close:before {
+  content: "\e950";
+}
+.icon-send:before {
+  content: "\e951";
+}
+.icon-speaker:before {
+  content: "\e952";
+}
+.icon-voice-message-microphone-button:before {
+  content: "\e953";
+}
+.icon-video-camera:before {
+  content: "\e954";
+}
+.icon-chat:before {
+  content: "\e955";
+}
+.icon-phone-call-button:before {
+  content: "\e956";
+}
+.icon-add2:before {
+  content: "\e957";
+}
+.icon-checked:before {
+  content: "\e958";
+}
+.icon-eye-big:before {
+  content: "\e959";
+}
+.icon-delete:before {
+  content: "\e95a";
+}
+.icon-save:before {
+  content: "\e95b";
+}
+.icon-start-rec:before {
+  content: "\e95c";
+}
+.icon-stop-rec:before {
+  content: "\e95d";
+}
+.icon-pause-rec:before {
+  content: "\e95e";
+}
+.icon-play-rec:before {
+  content: "\e95f";
+}
+.icon-youtube:before {
+  content: "\e960";
+}
+.icon-vimeo:before {
+  content: "\e961";
+}
+.icon-behance:before {
+  content: "\e962";
+}
+.icon-dribbble:before {
+  content: "\e963";
+}
+.icon-slideshare:before {
+  content: "\e964";
+}
+.icon-keyboard-left-arrow-button:before {
+  content: "\e965";
+}
+.icon-more:before {
+  content: "\e966";
+}
+.icon-access-candidates2:before {
+  content: "\e967";
+}
+.icon-upload:before {
+  content: "\e968";
+}
+.icon-linkedin3:before {
+  content: "\e969";
+}
+.icon-change-view:before {
+  content: "\e96a";
+}
+.icon-warning-big:before {
+  content: "\e96b";
+}
+.icon-phone-call-start:before {
+  content: "\e96c";
+}
+.icon-boy-interviewer:before {
+  content: "\e96d";
+}
+.icon-boy-candidate:before {
+  content: "\e96e";
+}
+.icon-video-recording:before {
+  content: "\e96f";
+}
+.icon-exclamation:before {
+  content: "\e970";
+}

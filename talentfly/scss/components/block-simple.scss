@@ -1,0 +1,77 @@
+.block-simple {
+	padding: 25px 0 10px;
+
+	.title {
+		font-size: 12px;
+		font-weight: $semi;
+		color: #687181;
+		margin-bottom: 12px;
+	}
+	.caption {
+		color: #8392a6;
+		font-size: 12px;
+		font-weight: $light;
+		margin: 17px 0;
+		line-height: 1.6;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+	&.link-inside {
+		padding: 0;
+
+		a {
+			padding: 15px 0 15px 15px;
+			margin-bottom: 0;
+			display: block;
+			font-weight: 400;
+			font-size: 14px;
+			border-bottom: 1px solid #eee;
+
+			&:hover {
+				color: $grey;
+			}
+			.icon {
+				font-size: 7px;
+				position: absolute;
+				left: 0; top: 22px;
+
+				&:before {
+					position: relative;
+					top: -1px;
+				}
+			}
+		}
+		&:last-child {
+
+			a {
+				border-bottom: 0;
+			}
+		}
+
+		&.active {
+			
+			a {
+				color: $blue;
+				font-weight: $bold;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 1440px) {
+	
+	.block-simple {
+		padding-bottom: 0;
+		padding-top: 20px;
+
+		.title {
+			margin-bottom: 0;
+		}
+		.caption {
+			margin-top: 5px;
+			margin-bottom: 5px;
+		}
+	}
+}

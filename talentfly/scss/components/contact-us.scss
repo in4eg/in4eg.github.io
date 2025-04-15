@@ -1,0 +1,281 @@
+#contact-us {
+	overflow: hidden;
+
+	.section-contact-us{
+		padding: 0;
+	}
+
+	.general-notification {
+		top: 12%;
+		left: 37.7vw;
+	}
+
+	.main-notif {
+		top: 10%;
+	}
+}
+
+.contact-us-block {
+	background: url('../img/contact-us-bg.jpg') no-repeat top;
+	background-size: cover;
+	text-align: center;
+
+	padding: 40px 30px 80px;
+	margin: 0;
+	position: relative;
+	height: 520px;
+	
+	.contact-us-bg {
+		min-height: 520px;
+		width: 100%;
+		background-color: rgba(94, 166, 235, .8);
+		position: absolute;
+		left:0;
+		top: 0;
+		z-index: 8;
+	}
+}
+.contact-us-message-block{
+	margin-top: 3vh;
+	position: relative;
+	z-index: 9;
+	color: #fff;
+	font-family: Poppins;
+
+	.contact-us-section-title:after {
+		margin: 20px auto 0;
+		background: #fff;
+		content: '';
+		display: block;
+		width: 40px;
+		height: 2px;
+	}
+	.contact-us-title{
+		font-size: 52px;
+		line-height: 1.2;
+		padding: 10px 0;
+		font-weight: 700;
+	}
+	.contact-us-sub-title{
+		font-weight: 500;
+		font-size: 18px;
+		line-height: 32px;
+	}
+}
+
+#txta-full .error {
+	textarea {
+		border-bottom: 1px red solid;
+	}
+}
+
+.contact-us-form-block {
+	padding: 0 10px;
+	transform: translateY(-186%);
+	z-index: 9;
+	padding: 0 30px 0 20px;
+	display: flex;
+
+	.contact-us-form{
+		border-radius: 3px;
+		opacity: 1;
+		box-shadow: 0 5px 20px rgba(70,154,235,.2);
+		background-color: #fff;
+		padding: 20px 20px 44px 20px;
+		margin-bottom: -264px;
+
+		.inner{
+			height: 100%;
+			opacity: 1;
+			background-color: #fff;
+
+			textarea {
+				resize: none; 
+				height: auto;
+				padding: 9px;
+				padding-left: 0;
+				&:focus {
+					border: none;
+				}
+			}     
+		}
+	}
+}
+
+
+/* MEDIA QUERIES */
+@media screen and (max-width: 1420px) {
+	#contact-us {
+		.main-notif {
+			top: 37%;
+		}
+	}
+}
+
+@media screen and (max-width: 1367px) {
+
+	#contact-us {
+
+		.general-notification {
+			top: 13%;
+			left: 35%;
+			width: 30%;
+		}
+
+		.contact-us-message-block{
+			margin-top: 30px;
+
+			.contact-us-sub-title{
+				font-size: 21px;
+			}
+		}
+		.contact-us-form-block {
+			transform: translateY(-190%);
+		}
+		.contact-us-block {
+			 height: 500px;
+
+			.contact-us-bg {
+				min-height: 500px;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 1280px) {
+	#contact-us {
+		.general-notification {
+			top: 15%;
+		}
+	}
+}
+
+@media screen and (max-width: 1024px) {
+	#contact-us {
+		.general-notification {
+			top: 44%;
+			left: 27%;
+		}
+	}
+}
+
+
+@media screen and (max-width: 820px) {
+	#contact-us {
+		.general-notification {			
+			top: 6%;
+			left: 25%;
+			width: 50%;
+		}
+	}
+}
+
+@media screen and (max-width: 768px) {
+	#contact-us {
+		.general-notification {
+			left: 25%;
+		}
+	}
+}
+
+@media screen and (max-width: 640px) {
+	
+	#contact-us {
+		.contact-us-form-block {
+			padding: 0px 10px;
+		}
+		
+		.contact-us-title {
+			font-size: 32px;
+		}
+		.contact-us-sub-title {
+			font-size: 14px;
+		}
+		.main-notif {
+			left: 14.5%;
+		}
+
+		.contact-us-form-block .contact-us-form {
+			padding: 20px 5px 44px;
+			padding-top: 5px;
+		}
+
+		#contactUsSend {
+			.btn.btn-primary {
+				border: none;
+				width: auto;
+				padding: 0px 30px;
+			}
+		}
+
+		.contact-us-message-block {
+			margin-top: -20px;
+		}
+	}
+
+	#contact-us + .main-footer {
+		border: none;
+	}
+}
+@media screen and (max-width: 480px) {
+
+	#contact-us {
+		.contact-us-title {
+			font-size: 32px;
+		}
+		.contact-us-sub-title {
+			font-size: 14px;
+		}
+
+		.general-notification {
+			width: 80%;
+			top: 10%;
+			left: 10%;
+		}
+	}
+
+	.contact-us-form-block {
+
+		.contact-us-form{
+			margin-bottom: -285px;
+		}
+	}	
+
+	#contact-us {
+		padding-bottom: 0px !important;
+	}
+}
+
+@media screen and (max-width: 420px) {
+	#contact-us {
+		padding-top: 0px !important;
+	}
+	.section-contact-us {
+		margin-bottom: 300px;
+	}
+}
+
+@media screen and (max-width: 414px) {
+
+	.section-contact-us {
+		margin-bottom: 200px;
+	}
+
+}
+
+@media screen and (max-width: 380px) {
+
+	.contact-us-form-block {
+		.contact-us-form{
+			margin-bottom: -305px;
+		}
+	}
+
+	.section-contact-us {
+		margin-bottom: 70px;
+	}
+
+	#contact-us + .main-footer {
+		margin-top: 0 !important;
+	}
+}

@@ -1,0 +1,42 @@
+.socials-list {
+	display: block;
+	padding: 30px 0 0;
+	margin-bottom: 30px;
+	font-size: 0;
+
+	> li {
+		display: inline-block;
+		vertical-align: middle;
+		padding: 0 5px;
+	}
+	a {
+		display: block;
+		width: 32px; height: 32px;
+		line-height: 35px;
+		background: #c5cacf;
+		border-radius: 50%;
+		color: #fff;
+		text-align: center;
+		font-size: 16px;
+
+		&:hover {
+			background: $blue;
+		}
+	}
+}
+
+@media screen and (max-width: 1440px) {
+	
+	.socials-list {
+
+		a {
+			height: 24px; width: 24px;
+			line-height: 26px;
+			font-size: 12px;
+
+			.icon-twitter {
+				margin-right: -1px;
+			}
+		}
+	}
+}

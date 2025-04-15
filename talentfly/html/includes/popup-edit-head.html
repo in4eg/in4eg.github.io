@@ -1,0 +1,139 @@
+<div id="edit-gereral-popup" class="white-popup mfp-hide">
+	<div class="inner">
+		<div class="header">
+			<div class="title">Edit General information</div>
+		</div>
+		<div class="content">
+			<form action="static/data/progress.json" class="simple-form modal-form info-form" data-clear data-on-edit data-onsubmit="modalOnSubmitGeneral" method="post" novalidate>
+				<div class="success-fadein success-message verticaly-middle">
+					<div class="inner">
+						<i class="icon icon-check-green"></i>
+						<div class="success-title">General information successfully changed</div>
+						<button class="btn form-btn btn-grey close-window" type="button">
+							<span class="text">ok</span>
+							<span class="fade"></span>
+						</button>
+					</div>
+				</div>
+				<div class="success-fadeout">
+					<div class="row paddless-row">
+						<div class="col-xs-12">
+							<div class="form-group last photo-group">
+								<!--  data-call-popup="#crop-photo-popup" -->
+								<figure class="profile-photo userpic" id="profileImage">
+									<!-- icon for a block with no photo -->
+									<i class="icon icon-photo"></i>
+									<!-- / icon for a block with no photo -->
+									<img src="temp/user4.jpg" alt="" class="cropped-photo">
+								</figure>
+								<div class="caption">
+									<div class="input-title">Profile Photo</div>
+									<div class="file-group photo-file">
+										<input type="file" class="file-input ignored" id="personPhoto" data-popup="#crop-photo-popup">
+										<label for="personPhoto" class="file-label btn form-btn btn-grey">
+											<span class="text">Update</span>
+											<span class="fade"></span>
+										</label>
+										<!-- <div class="file-name empty">png, .jpg, .jpeg, up to 2MB</div> -->
+										<div class="file-name empty">filename.jpg</div>
+										<div class="alert">Choose your photo</div>
+									</div>
+									<button type="button" class="btn btn-default simple-btn spaced-top" data-photo-remove>
+										<span class="text">
+											<i class="icon icon-close btn-icon"></i>
+											Remove Photo
+										</span>
+									</button>
+								</div>
+							</div>
+						</div>
+						<div class="col-xs-12">
+							<div class="form-group last">
+								<div class="input-title">First Name</div>
+								<input type="text" class="input input-simple call-focus name-change" id="personFName" data-push>
+								<div class="alert">Minimum 2 characters</div>
+							</div>
+						</div>
+					</div>
+					<div class="row changed-info">
+						<div class="col-xs-12 col-sm-6">
+							<div class="form-group last">
+								<div class="input-title">Last Name</div>
+								<input type="text" class="input input-simple name-change" id="personLastName" data-push>
+								<div class="alert">Minimum 2 characters</div>
+							</div>
+						</div>
+						<div class="col-xs-12 col-sm-6">
+							<div class="form-group last">
+								<div class="input-title">Middle Name <span class="optional">(optional)</span></div>
+								<input type="text" class="input input-simple ignored name-change" id="personMName" data-push>
+								<div class="alert">Minimum 2 characters</div>
+							</div>
+						</div>
+						<div class="col-xs-12 col-sm-6">
+							<div class="form-group last">
+								<div class="input-title">Your Profile Title <span class="optional">(optional)</span></div>
+								<input type="text" class="input input-simple ignored" id="personTitle" data-push>
+								<div class="help">E.g. Marketing Specialist</div>
+								<div class="alert">Minimum 2 characters</div>
+							</div>
+						</div>
+						<div class="col-xs-12 col-sm-6">
+							<div class="form-group last">
+								<div class="input-title">Phone Number <span class="optional">(optional)</span></div>
+								<!-- add data-mask="+9 (999) 999-99-99" if needed -->
+								<input type="text" class="input input-simple ignored" id="personPhone" data-push>
+								<div class="help">E.g. +X (YYY) ZZZ-ZZZZ</div>
+								<div class="alert">Numbers only</div>
+							</div>
+						</div>
+						<div class="col-xs-12 col-sm-6">
+							<div class="form-group last">
+								<div class="input-title">E-mail</div>
+								<input type="email" class="input input-simple email" id="personEmail" data-push>
+								<div class="alert">Type a correct E-mail. It must include "@"</div>
+							</div>
+						</div>
+						<div class="col-xs-12 col-sm-6">
+							<div class="form-group last">
+								<div class="input-title">Country</div>
+								<div class="select-outer">
+									<select name="countryMainInfo" class="select" data-push id="countryMainInfo" data-country-select>
+										<option value="default" disabled>Choose Country</option>
+									</select>
+									<span class="arrow">
+										<i class="icon icon-angle-down"></i>
+									</span>
+								</div>
+							</div>
+						</div>
+						<div class="col-xs-12 col-sm-6">
+							<div class="form-group last">
+								<div class="input-title">State <span class="optional">(optional)</span></div>
+								<input type="text" class="input input-simple ignored" id="personLocation" data-push>
+								<div class="alert">Minimum 2 characters</div>
+							</div>
+						</div>
+						<div class="col-xs-12 col-sm-6">
+							<div class="form-group last">
+								<div class="input-title">City <span class="optional">(optional)</span></div>
+								<input type="text" class="input input-simple ignored" id="personCity" data-push>
+								<div class="alert">Minimum 2 characters</div>
+							</div>
+						</div>
+					</div>
+					<div class="btn-group align-left collapsed">
+						<button class="btn form-btn btn-grey" type="button" id="cancelGereral">
+							<span class="text">cancel</span>
+							<span class="fade"></span>
+						</button>
+						<button class="btn form-btn btn-simple" type="submit" id="saveGeneral">
+							<span class="text">save</span>
+							<span class="fade"></span>
+						</button>
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>

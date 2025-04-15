@@ -1,0 +1,45 @@
+.main-reistration-page{
+  @extend .main-limited-access
+}
+.registration-page-form{
+  @extend .limited-access-form;
+  height: 530px;
+  width: 368px;
+  .btn-wrap {
+    margin: 15px 0 20px;
+  }
+  small {
+    display: block;
+    width: 100%;
+    color: $grey;
+    font-size: 10px;
+    text-align: center;
+  }
+}
+
+.registration-page-sighnup-btn {
+  margin: 10 0;
+}
+
+.section-limited-access.height-80 {
+  height: 80% ;
+}
+
+.registration-complete-box {
+  align-self: center;
+  height: 370px;
+}
+
+
+@media screen and (max-width: 800px) {
+  .registration-complete-box {
+    height: 170px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .registration-page-form {
+    padding: 20px;
+    width: 95%;
+  }
+}

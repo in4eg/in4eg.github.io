@@ -1,0 +1,80 @@
+<div id="edit-softskills-popup" class="white-popup mfp-hide skills-popup with-helper">
+	<div class="inner">
+		<div class="header">
+			<div class="title">Edit Soft Skills</div>
+
+			<button class="mobile-helper" data-toggle-helper="#edit-softskills-popup" type="button">
+				<i class="icon icon-show-off-your-skills"></i>
+			</button>
+
+			<button class="btn btn-grey btn-xs btn-round helper-toggle" data-toggle-helper="#edit-softskills-popup" type="button">
+				<i class="icon icon-info"></i>
+				<span class="fade"></span>
+			</button>
+		</div>
+		<div class="content">
+			<form action="static/data/progress.json" class="simple-form modal-form" data-onsubmit="modalOnSubmitSoftSkills" data-multiply>
+				<table class="simple-table skill-table clear-table hidden" id="softSkillsTableAdd">
+					<thead>
+						<tr>
+							<td class="middle" data-caption="Skill category">
+								Skill category
+							</td>
+							<td data-caption="Skill name">
+								Skill name
+							</td>
+						</tr>
+					</thead>
+					<tbody></tbody>
+				</table>
+
+				<div class="form-options">
+					<button type="button" class="btn btn-default capitalize form-btn" data-list="#softskill-list" data-add="#softskill-list">
+						<span class="text">
+							<i class="icon icon-add2 btn-icon icon-smaller"></i>
+							Add Skill
+						</span>
+						<span class="fade"></span>
+					</button>
+				</div>
+
+				<table class="simple-table skill-table vertically-top clear-table" id="softSkillsTable" data-appendto>
+					<tbody></tbody>
+				</table>
+
+				<div class="btn-group align-left collapsed">
+					<button class="btn form-btn btn-grey close-modal" type="button">
+						<span class="text">cancel</span>
+						<span class="fade"></span>
+					</button>
+					<button class="btn form-btn btn-simple" type="submit" id="appendSkills">
+						<span class="text">save</span>
+						<span class="fade"></span>
+					</button>
+				</div>
+			</form>
+		</div>
+		<!-- helper -->
+		<div class="helper">
+			<div class="arrow-card">
+				<div class="row top-xs paddless-row">
+					<div class="col-xs-12 col-lg-2 align-center icon-cover">
+						<i class="icon icon-show-off-your-skills"></i>
+					</div>
+					<div class="col-xs-12 col-lg-10">
+						<div class="h5-title">How Skills Help You Get Noticed</div>
+						<div class="paragraph">
+							Having a comprehensive list of skills will help get your profile noticed by connections and recruiters. When recruiters search for candidates, skills will be one of the criteria they use.
+						</div>
+						<div class="paragraph">
+							If you’re not sure what to include, review the list below of the top LinkedIn skills. Before you add a skill, make sure it matches the job responsibilities in your profile and on your resume. Prospective employers will notice if there’s a mismatch.
+						</div>
+					</div>
+				</div>
+				<button type="button" class="btn btn-grey btn-round close-helper">
+					<i class="icon icon-close"></i>
+				</button>
+			</div>
+		</div>
+	</div>
+</div>

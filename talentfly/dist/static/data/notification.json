@@ -1,0 +1,129 @@
+{
+  "interviews": [
+    {
+      "id": 1,
+      "interviewer": "Interviewer #1",
+      "candidate": "Candidate #1",
+      "inv_date": "03/18/2018",
+      "inv_time": "18:30",
+      "action": "start",
+      "title": "Interview <b>Candidate #1</b> with <b>Interviewer #1</b>.",
+      "message": "Should be started soon.",
+      "buttons": [{
+        "label": "Begin interview",
+        "url": "url_to_interview"
+      }]
+    },
+    {
+      "id": 2,
+      "interviewer": "Interviewer #2",
+      "candidate": "Candidate #2",
+      "inv_date": "03/18/2018",
+      "inv_time": "18:30",
+      "action": "join",
+      "title": "Interview <b>Candidate #2</b> with <b>Interviewer #2</b>.",
+      "message": "Should be started soon, interviewer is waiting You.",
+      "buttons": [{
+        "label": "Join interview",
+        "url": "url_to_join_interview"
+      }]
+    },
+    {
+      "id": 3,
+      "interviewer": "Interviewer #3",
+      "candidate": "Candidate #3",
+      "inv_date": "03/18/2018",
+      "inv_time": "18:30",
+      "action": "actions",
+      "title": "Interview <b>Candidate #3</b> with <b>Interviewer #3</b>.",
+      "message": "Invite to this interview was changed, need Your action.",
+      "buttons": [{
+        "label": "Accept",
+        "url": "url_to_accept_interview",
+        "action": "accepted"
+      },
+      {
+        "label": "Reject",
+        "url": "url_to_reject_interview",
+        "action": "rejected"
+      },
+      {
+        "label": "Re-schedule",
+        "url": "url_to_reschedule_interview",
+        "action": "change"
+      }]
+    },
+    {
+      "id": 4,
+      "interviewer": "Interviewer #4",
+      "candidate": "Candidate #4",
+      "inv_date": "03/18/2018",
+      "inv_time": "18:30",
+      "action": "waiting_interview",
+      "title": "Interview <b>Candidate #4</b> with <b>Interviewer #4</b>.",
+      "message": "Will be started in a few days.",
+      "buttons": []
+    },
+    {
+      "id": 5,
+      "interviewer": "Interviewer #5",
+      "candidate": "Candidate #5",
+      "inv_date": "03/18/2018",
+      "inv_time": "18:30",
+      "action": "rejected_interview_by_candidate",
+      "title": "Interview <b>Candidate #5</b> with <b>Interviewer #5</b>.",
+      "message": "Candidate #5 reject invite to this interview.",
+      "buttons": []
+    },
+    {
+      "id": 6,
+      "interviewer": "Interviewer #6",
+      "candidate": "Candidate #6",
+      "inv_date": "03/18/2018",
+      "inv_time": "18:30",
+      "action": "rejected_interview_by_interviewer",
+      "title": "Interview <b>Candidate #6</b> with <b>Interviewer #6</b>.",
+      "message": "Interviewer #6 reject invite to this interview.",
+      "buttons": []
+    },
+    {
+      "id": 7,
+      "interviewer": "Interviewer #7",
+      "candidate": "Candidate #7",
+      "inv_date": "03/18/2018",
+      "inv_time": "18:30",
+      "action": "waiting_candidate",
+      "title": "Interview <b>Candidate #7</b> with <b>Interviewer #7</b>.",
+      "message": "The candidate has not yet decided on this invitation.",
+      "buttons": []
+    },
+    {
+      "id": 8,
+      "interviewer": "Interviewer #8",
+      "candidate": "Candidate #8",
+      "inv_date": "03/18/2018",
+      "inv_time": "18:30",
+      "action": "waiting_interviewer",
+      "title": "Interview <b>Candidate #8</b> with <b>Interviewer #8</b>.",
+      "message": "The interviewer has not yet decided on this invitation.",
+      "buttons": []
+    }
+  ],
+  "notifications": [
+    {
+      "message": "Notification message",
+      "url": "",
+      "watch": "link_to_post_for_watch"
+    },
+    {
+      "message": "Notification message",
+      "url": "",
+      "watch": "link_to_post_for_watch"
+    },
+    {
+      "message": "Notification message",
+      "url": "url_to_some_place",
+      "watch": "link_to_post_for_watch"
+    }
+  ]
+}
