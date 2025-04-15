@@ -1,0 +1,152 @@
+.tabs-content {
+	position: fixed;
+	top: 0; left: 0;
+	right: 0; bottom: 0;
+	z-index: 5;
+	color: #fff;
+	padding: 28px;
+	display: none;
+
+	&.active {
+		display: block;
+
+		&.fade-show {
+
+			.fake-round {
+				transform: translate(-50%, -50%) scale(18);
+				opacity: 1;
+			}
+		}
+
+		&.animated {
+
+			.tabs-container {
+				opacity: 1;
+			}
+			.calendar-container {
+				opacity: 1;
+				transform: translateY(0);
+				transition: transform .3s, opacity .3s;
+			}
+		}
+	}
+
+	.users-list {
+
+		.item {
+			transform: translateY(40px);
+			opacity: 0;
+			transition: transform .3s, opacity .3s;
+		}
+
+		@for $i from 1 through 71 {
+
+			.item:nth-child(#{$i}) {
+				transition-delay: #{$i * .07s };
+			}
+		}
+	}
+	.calendar-container {
+		opacity: 0;
+		transform: translateY(120%);
+	}
+
+	.fake-round {
+		position: fixed;
+		top: 0; left: 0;
+		height: 15vh; width: 15vh;
+		background-color: $dark;
+		border-radius: 50%;
+		transform: translate(-50%, -50%) scale(.2);
+		opacity: 0;
+		transition: transform .4s, opacity .4s;
+	}
+
+	.tabs-container {
+		opacity: 0;
+		position: relative;
+		z-index: 2;
+
+		.tabs-nav {
+			margin: 0 -16px 0;
+			font-size: 0;
+			white-space: nowrap;
+			position: relative;
+
+			.item {
+				opacity: .4;
+				display: inline-block;
+				vertical-align: top;
+				text-align: center;
+				cursor: pointer;
+				width: 25%;
+				padding: 0 16px;
+
+				&.active {
+					opacity: 1;
+				}
+				.count {
+					font-size: 60px;
+					line-height: 77px;
+					letter-spacing: -0.08em;
+					margin: 0 0 14px;
+					@include grotesklight();
+				}
+				.cover-icon {
+					width: 80px; height: 80px;
+					margin: 0 auto;
+					border-radius: 50%;
+					line-height: 80px;
+					padding: 12px 0;
+				}
+				.title {
+					font-size: 30px;
+					line-height: 41px;
+					margin: 14px 0 0; 
+				}
+			}
+
+		}
+
+		.content {
+			font-size: 20px;
+			position: relative;
+
+/*			&:before {
+				content: '';
+				position: absolute;
+				left: -28px; right: -28px;
+				top: -2px;
+				height: 60px;
+				background-image: linear-gradient(to top, transparent, $dark);
+				z-index: 2;
+			}*/
+
+			.list-cover {
+				height: 70vh;
+				padding-top: 60px;
+				padding-bottom: 128px;
+				overflow: auto;
+
+				&::-webkit-scrollbar { 
+					display: none; 
+				}
+			}
+		}
+
+		.active {
+
+			.users-list {
+
+				.item {
+					transform: translateY(0);
+					opacity: 1;
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: 480px) {
+
+}

@@ -1,0 +1,71 @@
+.home-screen {
+	padding-top: 120px;
+
+	.caption {
+		color: $grey;
+		position: relative;
+		z-index: 1;
+	}
+	.hide-on-login {
+		display: block;
+	}
+	.form-part {
+		display: none;
+		position: relative;
+		background-color: transparent;
+
+		.input-outer,
+		.btn-group {
+			opacity: 0;
+			transition: opacity .3s;
+			position: relative;
+			z-index: 1;
+		}
+		.step:not(.active) {
+			display: none;
+		}
+	}
+
+	&.active {
+		padding-top: 0;
+
+		.hide-on-login {
+			display: none;
+		}
+		.form-part {
+			display: block;
+		}
+
+		&.animated {
+
+			.form-part {
+
+				.input-outer,
+				.btn-group {
+					opacity: 1;
+				}
+			}
+		}
+	}
+}
+
+@media (max-height: 850px) {
+
+	.home-screen {
+		padding-top: 50px;
+	}
+}
+
+@media (min-width: 1240px) {
+
+	.home-screen {
+		padding-top: 220px;
+		padding-bottom: 63px;
+
+		.bottom-part {
+			width: 488px;
+			margin-left: auto;
+			margin-right: auto;
+		}
+	}
+}

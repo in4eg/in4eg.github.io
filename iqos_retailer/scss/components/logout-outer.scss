@@ -1,0 +1,80 @@
+.logout-outer {
+	position: absolute;
+	height: 350px;
+	background-color: #fff;
+	box-shadow: 0px 20px 40px rgba(124, 124, 124, 0.42);
+	border-radius: 80px;
+	bottom: 28px; right: 28px;
+	left: 28px;
+	z-index: 2;
+	padding: 40px;
+	transform: translateY(150%);
+	transition: transform .3s;
+
+	&.clicked {
+		transform: translateY(0);
+	}
+
+	&.large {
+		height: 475px;
+	}
+
+	&.action-outer {
+		background-color: $action;
+		height: auto;
+
+		.btn-action {
+			background: #EFBE60;
+		}
+		.btn-dark {
+			color: $action;
+		}
+	}
+
+	.header {
+		font-size: 0;
+		margin: 0 -17px 80px;
+
+		.logout-part,
+		.user-part {
+			padding: 0 17px;
+			width: 50%;
+			display: inline-block;
+			vertical-align: middle;
+		}
+
+		.user-info {
+			padding: 0;
+			background-color: #fff;
+			box-shadow: none;
+			border-radius: 80px;
+
+			.outer {
+				padding: 0;
+			}
+
+			.name {
+				display: inline-block;
+				vertical-align: middle;
+				font-size: 20px;
+				font-weight: $bold;
+				margin-right: 14px;
+			}
+			.btn-icon {
+				display: inline-block;
+				vertical-align: middle;
+			}
+		}
+	}
+	.image-large {
+		height: 454px;
+
+		img {
+			max-height: 100%;
+			width: auto;
+		}
+	}
+	.spaced-both {
+		margin: 60px 0 140px;
+	}
+}

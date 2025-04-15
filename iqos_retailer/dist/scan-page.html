@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="format-detection" content="telephone=no">
+
+	<title>IQOS Retailer :: Serial number</title>
+
+	<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+	<link rel="stylesheet" href="https://use.typekit.net/smw6uta.css">
+	<link rel="stylesheet" href="css/bundle.min.css">
+</head>
+<body class="main-page">
+	<!-- header -->
+	<header class="main-header fixed-header light-buttons" id="mainHeader">
+		<div class="logo-part">
+			<figure class="main-logo">
+				<img src="img/logo-small.svg" alt="main logo" draggable="false">
+			</figure>
+		</div>
+		<div class="user-part align-right">
+			<ul class="btn-list clear small-list hidden-list active" id="btnList">
+				<li class="item">
+					<a href="user-page.html" class="btn btn-grey btn-block btn-collapsed align-right">
+						<span class="outer">
+							Back
+							<i class="icon icon-arrow-left left-icon btn-icon"></i>
+						</span>
+					</a>
+				</li>
+				<li class="item">
+					<button class="btn btn-grey btn-round close-register-btn active" data-toggle-clicked="#userCancel">
+						<span class="outer">
+							<span class="btn-icon">
+								<img src="img/close-icon.svg" alt="user icon" class="grey-icon">
+								<img src="img/close-light.svg" alt="user icon" class="light-icon">
+							</span>
+						</span>
+					</button>
+				</li>
+			</ul>
+			<!-- close page -->
+			<button class="btn btn-grey btn-round btn-dark close-register-btn" id="totalClose">
+				<span class="outer">
+					<span class="btn-icon">
+						<img src="img/close-dark.svg" alt="user icon" class="dark-icon">
+					</span>
+				</span>
+			</button>
+		</div>
+	</header>
+	<!-- / header -->
+
+	<!-- main screen -->
+	<main class="main-container home-screen form-container active animated" id="homeScreen">
+		<div class="relative">
+			<div class="bottom-part">
+				<div class="form-part">
+					<!-- step 1 login form-->
+					<!-- needs to be active at first time -->
+					<div class="step active" id="step1">
+						<form action="#" class="validate-form simple-form small-form" data-next="#step2">
+							<div class="input-outer">
+								<div class="bordered-caption paragraph">
+									<div class="section-title">Serial number</div>
+									<div class="paragraph">
+										Please take a picture or type the IQOS kit Codentify code.
+									</div>
+								</div>
+								<div class="spaced-bottom">
+									<a href="#" class="btn btn-grey btn-block">
+										<span class="outer">
+											<img src="img/scanner.svg" alt="scanner" class="image-icon static">
+											<img src="img/scanner-light.svg" alt="scanner" class="image-icon hover">
+											Take a picture
+										</span>
+									</a>
+								</div>
+								<div class="section-title align-center">or</div>
+								<div class="form-group with-tooltip spaced-group">
+									<input type="text" class="input lined-input number-font" id="codeNumber" autocomplete="off" data-minlength="5">
+									<label for="codeNumber" class="label">Insert code</label>
+									<div class="error-text">Wrong code</div>
+									<div class="line"></div>
+									<div class="tooltip" data-tooltip>
+										<button type="button" class="anchor">
+											<img src="img/info-icon.svg" alt="icon">
+										</button>
+										<div class="tooltip-inner">
+											<div class="paragraph">
+												Lorem ipsum dolor sit amet
+											</div>
+											<img src="img/code-withbarcode.png" alt="code">
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="btn-group">
+								<ul class="btn-list clear align-right">
+									<li class="item">
+										<button type="submit" class="btn btn-grey btn-block next-btn align-left disabled">
+											<span class="outer">
+												Next
+												<i class="icon icon-arrow-right2 right-icon btn-icon"></i>
+											</span>
+										</button>
+									</li>
+								</ul>
+							</div>
+						</form>
+					</div>
+					<!-- / step 1 login form-->
+					<!-- step 2 success -->
+					<div class="step" id="step2">
+						<form action="#" class="simple-form full-transparent success-form validate-form" data-next="#step3">
+							<div class="success-caption collapsed-bottom">
+								<div class="align-center icon-group hidden-small-screen">
+									<img src="img/scanner.svg" alt="scanner" class="middle-icon">
+								</div>
+								<div class="section-title align-center">
+									Successful!
+								</div>
+								<div class="align-center paragraph">
+									<span class="bold">Serial number</span> recognized Successfully.
+								</div>
+								<div class="spaced-left spaced-right">
+									<button type="button" class="btn btn-action btn-block align-center btn-middle shadow" data-toggle-clicked="#addAnotherDevice">
+										<span class="outer">
+											Add another device
+											<i class="icon icon-add left-icon btn-icon"></i>
+										</span>
+									</button>
+								</div>
+							</div>
+							<div class="btn-group">
+								<button type="submit" class="btn btn-grey btn-block next-btn align-center" data-show="#totalClose" data-hide="#btnList">
+									<span class="outer">
+										Complete
+										<i class="icon icon-check right-icon btn-icon primary"></i>
+									</button>
+								</div>
+							</form>
+						</div>
+						<!-- / step 2 success -->
+						<!-- step 3 final -->
+						<div class="step" id="step3">
+							<div class="simple-form">
+								<div class="spaced-top">
+									<div class="align-center icon-group spaced-bottom">
+										<img src="img/success-icon-blue.svg" alt="icon success">
+									</div>
+									<div class="section-title align-center">
+										The proccess is completed!
+									</div>
+									<div class="paragraph align-center">
+										Complete your order via
+										<span class="bold">INTALE</span>
+									</div>
+								</div>
+								<div class="outer-overlay">
+									<div class="scrolled-outer">
+										<div class="input-outer">
+											<div class="form-group">
+												<input type="text" class="input lined-input disabled labeled" id="customerName2" autocomplete="off" data-minlength="2" value="George" disabled>
+												<label for="customerName" class="label">Name</label>
+											</div>
+											<div class="form-group">
+												<input type="text" class="input lined-input disabled labeled" id="customerSurname2" autocomplete="off" data-minlength="2" value="Misailidis" disabled>
+												<label for="customerSurname" class="label">Surame</label>
+											</div>
+											<div class="form-group">
+												<input type="text" class="input phone lined-input disabled labeled number-font" id="customerPhone2" autocomplete="off" disabled value="•••••••960">
+												<label for="customerPhone" class="label">Phone number</label>
+											</div>
+											<!-- checkbox -->
+											<div class="form-group checkbox-group">
+												<input type="checkbox" class="checkbox input disabled" id="checkbox1" disabled checked>
+												<label for="checkbox1" class="checkbox-label">
+													T&Cs of www.iqos.com & Privacy Policy of Papastratos S.A. (device registration
+												</label>
+											</div>
+											<!-- checkbox -->
+											<div class="form-group checkbox-group">
+												<input type="checkbox" class="checkbox input disabled" id="checkbox2" disabled checked>
+												<label for="checkbox2" class="checkbox-label">
+													Mass Communication (terms)
+												</label>
+											</div>
+											<!-- checkbox -->
+											<div class="parent-group">
+												<div class="form-group checkbox-group">
+													<input type="checkbox" class="checkbox input disabled" id="checkbox3" disabled checked>
+													<label for="checkbox3" class="checkbox-label">
+														360o Profiling Consent (terms) [Accept All] 
+													</label>
+												</div>
+												<div class="children">
+													<div class="form-group checkbox-group">
+														<input type="checkbox" class="checkbox input disabled" id="checkbox4" disabled checked>
+														<label for="checkbox4" class="checkbox-label">
+															Digital Channels
+														</label>
+													</div>
+													<div class="form-group checkbox-group">
+														<input type="checkbox" class="checkbox input disabled" id="checkbox5" disabled checked>
+														<label for="checkbox5" class="checkbox-label">
+															Offline Channels
+														</label>
+													</div>
+												</div>
+											</div>
+											<!-- checkbox -->
+											<div class="form-group checkbox-group">
+												<input type="checkbox" class="checkbox input disabled" id="checkbox6" disabled checked>
+												<label for="checkbox6" class="checkbox-label">
+													QOACH Programme
+												</label>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- / step 3 final -->
+					</div>
+				</div>
+
+				<!-- user logout screen -->
+				<div class="logout-outer toggle-outer large" id="userCancel">
+					<div class="align-center spaced-bottom">
+						<div class="section-title spaced-both">Are you sure you want to cancel the register process? The whole process will be lost.</div>
+					</div>
+					<div class="btn-group">
+						<ul class="btn-list clear">
+							<li class="item">
+								<button type="button" class="btn btn-grey btn-block" data-toggle-clicked="#userCancel">
+									<span class="outer">
+										Cancel
+									</span>
+								</button>
+							</li>
+							<li class="item">
+								<button type="button" class="btn btn-dark btn-block">
+									<span class="fake"></span>
+									<span class="outer">
+										Ok
+									</span>
+								</button>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<!-- / user logout screen -->
+
+				<!-- add another device -->
+				<div class="logout-outer toggle-outer large action-outer" id="addAnotherDevice">
+					<div class="align-center spaced-bottom spaced-top">
+						<div class="section-title">New Device</div>
+						<div class="paragraph">
+							You want to add new device?
+						</div>
+						<figure class="image-large">
+							<img src="img/device-image.png" alt="device">
+						</figure>
+					</div>
+					<div class="btn-group">
+						<ul class="btn-list clear">
+							<li class="item">
+								<button type="button" class="btn btn-action btn-block" data-toggle-clicked="#addAnotherDevice">
+									<span class="outer">
+										Cancel
+									</span>
+								</button>
+							</li>
+							<li class="item">
+								<button type="button" class="btn btn-dark btn-block">
+									<span class="fake"></span>
+									<span class="outer">
+										Add new
+									</span>
+								</button>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</main>
+		<!-- main screen -->
+
+
+
+		<script src="js/lib/jquery.min.js"></script>
+		<script src="js/plugins/jquery.maskedinput.min.js"></script>
+
+		<script src="js/main.js"></script>
+		<script src="js/validator.js"></script>
+
+		<script src="js/init/tabs.js"></script>
+		<script src="js/init/validation.js"></script>
+
+		<!-- action -->
+		<script src="js/init/data-toggle-clicked.js"></script>
+		<script src="js/init/data-show-hide.js"></script>
+		<script src="js/init/data-form-show.js"></script>
+		<script src="js/init/data-toggle-pass.js"></script>
+		<script src="js/init/back-to-prev.js"></script>
+		<script src="js/init/data-code-send.js"></script>
+		<script src="js/init/tooltip.js"></script>
+
+		<script>
+			window.sendCodeFunction = function(){
+				console.log('send new code');
+			};
+		</script>
+	</body>
+	</html>

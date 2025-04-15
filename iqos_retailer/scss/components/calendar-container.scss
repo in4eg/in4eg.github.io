@@ -1,0 +1,26 @@
+.calendar-container {
+	position: absolute;
+	bottom: 38px; left: 38px;
+	right: 38px;
+	transform: translateZ(0);
+	font-size: 0;
+	z-index: 4;
+
+	.calendar-part {
+		display: inline-block;
+		vertical-align: top;
+		width: calc(100% - 80px);
+	}
+	.close-part {
+		display: inline-block;
+		vertical-align: top;
+		width: 80px;
+
+		.close-tab-btn {
+
+			&:focus {
+				box-shadow: 0 0 0 2px $danger;
+			}
+		}
+	}
+}

@@ -1,0 +1,40 @@
+/*primary font*/
+$font: 'Noto Sans Bengali UI', sans-serif;
+/*secondary font*/
+
+/*link*/
+$action: #FFCC68;
+$action-darken: #B7924B;
+$danger: #FF6868;
+$primary: #687BFF;
+$dark: #2C2C2C;
+$grey: #8692A5;
+
+
+$bold: bold;
+
+
+@mixin placeholder($color){
+	&::-webkit-input-placeholder {
+		color: #{$color};
+	}
+	&:-moz-placeholder {
+		color: #{$color};
+	}
+	&::-moz-placeholder {
+		color: #{$color};
+	}
+	&:-ms-input-placeholder {
+		color: #{$color};
+	}
+}
+
+@mixin grotesklight(){
+	font-family: "aktiv-grotesk", sans-serif;
+	font-weight: 300;
+}
+
+@mixin groteskbold(){
+	font-family: "aktiv-grotesk", sans-serif;
+	font-weight: 700;
+}

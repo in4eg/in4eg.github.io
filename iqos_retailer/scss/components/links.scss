@@ -1,0 +1,36 @@
+.grey-link {
+	color: $grey;
+	font-weight: $bold;
+	font-size: 20px;
+	display: inline-block;
+	border: 0;
+	cursor: pointer;
+	background-color: transparent;
+
+	&.underlined {
+		border-bottom: 1px solid;
+	}
+	&:hover {
+		color: $grey;
+	}
+	&:focus {
+		color: $primary;
+	}
+}
+
+.simple-link {
+
+	&.light-link {
+		color: #fff;
+	}
+	&.dark-link {
+		color: $dark;
+	}
+}
+
+@media (min-width: 1240px) {
+
+	.grey-link {
+		font-size: 14px;
+	}
+}

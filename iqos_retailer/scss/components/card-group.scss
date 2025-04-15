@@ -1,0 +1,133 @@
+.card-group {
+	margin: 0 -28px;
+	padding: 0 10px;
+	white-space: nowrap;
+	overflow: auto;
+	transform: translateZ(0);
+
+	&::-webkit-scrollbar { 
+		display: none; 
+	}
+
+	.card-single {
+		padding: 0 17px;
+		display: inline-block;
+		width: 40%;
+		vertical-align: top;
+		position: relative;
+		transform: translateZ(0);
+		perspective: 1;
+
+		&[data-tab] {
+			cursor: pointer;
+		}
+
+		.outer {
+			background: #F6F6F6;
+			border-radius: 40px;
+			padding: 50px 40px;
+			height: 44vh;
+			text-align: center;
+			white-space: normal;
+			transition: color .3s;
+			overflow: hidden;
+			position: relative;
+
+			.relative-cover {
+				position: relative;
+				z-index: 1;
+			}
+
+			&:before {
+				position: absolute;
+				content: '';
+				top: 0; left: 0;
+				right: 0; bottom: 0;
+				background-color: $dark;
+				border-radius: 40px;
+				transform: scale(.8);
+				opacity: 0;
+				transition: transform .3s, opacity .3s;
+			}
+		}
+		.count {
+			font-size: 100px;
+			white-space: nowrap;
+			overflow: hidden;
+			margin: 0 0 3.5vh;
+			
+			@include grotesklight();
+		}
+		.caption {
+			font-size: 20px;
+			line-height: 27px;
+			text-align: center;
+			letter-spacing: -0.02em;
+			color: #8692A5;
+			height: 54px;
+			overflow: hidden;
+			margin: 0 0 5vh;
+		}
+		.bottom-icon {
+
+			.cover-icon {
+				height: 80px; width: 80px;
+				background-color: #fff;
+				border-radius: 50%;
+				line-height: 80px;
+				text-align: center;
+				padding: 7px 5px;
+				margin: 0 auto;
+				transition: background-color .3s;
+
+				.path {
+					transition: stroke .3s;
+				}
+			}
+		}
+		&.active {
+			color: #fff;
+
+			.outer {
+
+				&:before {
+					transform: scale(1);
+					opacity: 1;
+				}
+			}
+
+			.caption {
+				color: #B3B3B3;
+			}
+
+			.bottom-icon {
+
+				.cover-icon {
+					background-color: $dark;
+
+					.path {
+						stroke: $action;
+					}
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: 480px) {
+
+	.card-group {
+
+		.card-single {
+			width: 80%;
+
+			.outer {
+				padding: 2vh 2vw;
+				height: 42vh;
+			}
+			.count {
+				font-size: 80px;
+			}
+		}
+	}
+}
