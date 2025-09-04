@@ -2401,6 +2401,24 @@ img.adaptive {
     position: relative
   }
 }
+@media (max-width:993px) {
+  .hero-section .canvas {
+    display: none
+  }
+  .hero-section:before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-image: url(../img/wave.png);
+    height: 300px;
+    background-size: 100% 50%;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    pointer-events: none
+  }
+}
 @media (max-width:768px) {
   .hero-section .subtitle {
     max-width: 80%
