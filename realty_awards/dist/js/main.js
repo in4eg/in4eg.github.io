@@ -392,15 +392,14 @@ var detectScrolledSection = function(element){
 	});
 };
 $('[data-scrollto]').click(function(e) {
-	e.preventDefault();
+	var headerOffset;
 	var target = $(this).attr('data-scrollto');
-	var sectionHeight = $(target).offset().top;
-
+	e.preventDefault();
+	headerOffset = $('.main-header').hasClass('fixed') ? $('.main-header').outerHeight() : 0;
 	$('html,body').animate({
-		scrollTop: sectionHeight
+		scrollTop: $($(this).data('scrollto')).offset().top - headerOffset
 	}, 500);
-	
 	setTimeout(function(){
 		location.hash = target.replace(/\#/gim ,'')
-	}, 510);
+	}, 100);
 });
