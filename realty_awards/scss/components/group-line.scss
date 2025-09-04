@@ -1,0 +1,48 @@
+@import '../variables.scss';
+
+.group-line {
+
+	.icons-group {
+		height: 48px; width: 48px;
+		border-radius: 100%;
+		background-color: rgba($color_primary, 0.1);
+		color: $color_primary;
+		margin-bottom: 8px;
+		text-align: center;
+		line-height: 44px;
+		transition: .2s;
+
+		.icon {
+			font-size: 24px;
+		}
+	}
+
+	.title {
+		font-size: var(--subheader3-font-size);
+		font-weight: bold;
+		margin-bottom: 8px;
+	}
+
+	.text {
+		font-size: var(--font-size-medium);
+	}
+
+	&.left-position {
+		position: relative;
+		padding-left: 72px;
+
+		.icons-group {
+			margin-bottom: 0;
+			position: absolute;
+			left: 0; top: 4px;
+		}
+	}
+
+	&:hover {
+
+		.icons-group {
+			background-color: rgba($color_secondary, 0.1);
+			color: $color_secondary;
+		}
+	}
+}

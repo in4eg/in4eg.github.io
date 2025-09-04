@@ -1,0 +1,58 @@
+@import '../variables.scss';
+
+.section-prizes {
+
+	.additional-info {
+		background-image: $theme_gradient_transparent;
+		border-radius: 24px;
+		padding: 32px 24px;
+		margin-top: 32px;
+
+		.inner {
+			display: flex;
+			justify-content: space-between;
+			gap: 24px;
+		}
+
+		.group-line {
+			background-color: $color_white;
+			padding: 24px;
+			border-radius: 24px;
+			width: 100%;
+		}
+	}
+}
+
+@media (max-width: 993px) {
+
+	.section-prizes {
+
+		.additional-info {
+
+			.inner {
+				flex-wrap: wrap;
+			}
+
+			.group-line {
+				width: calc(50% - 12px);
+			}
+		}
+	}
+}
+
+@media (max-width: 640px) {
+
+	.section-prizes {
+
+		.additional-info {
+
+			.inner {
+				gap: 16px;
+			}
+
+			.group-line {
+				width: 100%;
+			}
+		}
+	}
+}

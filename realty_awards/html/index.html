@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ua">
+<head>
+
+	<meta charset="UTF-8">
+	<title>Leaders :: Main Page</title>
+
+	<link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
+	<link rel="manifest" href="/favicon/site.webmanifest">
+	<link rel="mask-icon" href="/favicon/safari-pinned-tab.svg" color="#201f20">
+	<meta name="msapplication-TileColor" content="#201f20">
+	<meta name="theme-color" content="#201f20">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+	<meta name="format-detection" content="telephone=no">
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Wix+Madefor+Display:wght@400..800&display=swap" rel="stylesheet">
+
+	<link rel="stylesheet" href="css/bundle.min.css">
+
+</head>
+<body>
+	<!-- header -->
+	@@include('./includes/header.html')
+
+	<main class="page-main" id="pageMain">
+		<!-- hero -->
+		<section class="hero-section section" id="heroSection">
+			<canvas id="canvasWave" class="canvas"></canvas>
+			<div class="container">
+				<div class="verticaly-middle">
+					<div class="inner align-center">
+						<h1 class="primary-title">
+							Національний рейтинг
+							<span class="mark">«Лідери Ринку Нерухомості України»</span>
+						</h1>
+						<div class="subtitle">
+							Покажи свої досягнення у сфері нерухомості та стань визнаним лідером галузі! Приєднуйся до найпрестижнішого рейтингу року
+						</div>
+						<div class="buttons-group">
+							<a class="button button-primary" href="https://secure.wayforpay.com/button/bfd7c7e402207" target="_blank" rel="noopener noreferrer" role="link">
+								<span class="text">Зареєструватись</span>
+							</a>
+							<a class="button button-secondary-transparent" href="#ratingSection" data-scrollto="#ratingSection" role="link">
+								<span class="text">Дізнатись більше</span>
+							</a>
+						</div>
+						<div class="details">
+							<div class="item">
+								<div class="title">Престиж</div>
+								<div class="caption">Визнання галузі</div>
+							</div>
+							<div class="item">
+								<div class="title">1000+</div>
+								<div class="caption">Учасників</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- / hero -->
+
+		<!-- section-rating -->
+		@@include('./includes/section-rating.html')
+		<!-- / section-rating -->
+
+		<!-- section-category -->
+		@@include('./includes/section-category.html')
+		<!-- / section-category -->
+
+		<!-- section-prizes -->
+		@@include('./includes/section-prizes.html')
+		<!-- / section-prizes -->
+
+		<!-- section-participate -->
+		@@include('./includes/section-participate.html')
+		<!-- / section-participate -->
+
+	</main>
+
+
+	<!-- footer -->
+	@@include('./includes/footer.html')
+
+	<script src="js/lib/jquery.min.js"></script>
+	<!-- bundle -->
+	<script src="js/main.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,17 @@
+@import '../variables.scss';
+
+.section-rating {
+
+	.simple-list {
+
+		.item {
+			margin-bottom: 40px;
+
+
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+	}
+
+}

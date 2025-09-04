@@ -1,0 +1,152 @@
+/*primary font*/
+$font: "Open Sans", serif;
+
+/* typography */
+$font-size: 18px;
+$h1-font-size: 60px;
+$h2-font-size: 48px;
+$h3-font-size: 34px;
+$h4-font-size: 28px;
+$subheader1-font-size: 34px;
+$subheader2-font-size: 26px;
+$subheader3-font-size: 20px;
+$font-size-small: 14px;
+$font-size-medium: 16px;
+$font-size-large: 24px;
+
+$border-width: 1px;
+$border-radius: 0px;
+$margin: 15px;
+$padding: 20px;
+
+/*icons*/
+$icon_height: 20px;
+$icon-large_height: 48px;
+
+/*pagination*/
+$pagination-link_size: 38px;
+
+/*colors*/
+$color_primary: #295872;
+$color_secondary: #cfa85b;
+
+$color_white: #f7f8f9;
+$color_white_clear: #ffffff;
+$color_info: #696969;
+
+$color_black: #201f20;
+
+$text_color: #212838;
+$color_gray: #4c5561;
+
+$color_error: #cb5149;
+
+/*document*/
+$header_height: 92px;
+$section-padding: 60px;
+$space-gap: 5px;
+
+$theme_box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+$theme_gradient: linear-gradient(100deg, $color_secondary, $color_primary);
+$theme_gradient_transparent: linear-gradient(100deg, rgba($color_secondary, 0.6), rgba($color_primary, 0.6));
+$theme_gradient_hover: linear-gradient(250deg, $color_secondary, $color_primary);
+
+
+:root {
+	--font-size: #{$font-size};
+	--h1-font-size: #{$h1-font-size};
+	--h2-font-size: #{$h2-font-size};
+	--h3-font-size: #{$h3-font-size};
+	--h4-font-size: #{$h4-font-size};
+	--subheader1-font-size: #{$subheader1-font-size};
+	--subheader2-font-size: #{$subheader2-font-size};
+	--subheader3-font-size: #{$subheader3-font-size};
+	--font-size-small: #{$font-size-small};
+	--font-size-medium: #{$font-size-medium};
+	--font-size-large: #{$font-size-large};
+
+	--border-width: #{$border-width};
+	--margin: #{$margin};
+	--padding: #{$padding};
+	--border-radius: #{$border-radius};
+
+	--icon_height: #{$icon_height};
+	--icon-large_height: #{$icon-large_height};
+	--pagination-link_size: #{$pagination-link_size};
+
+	--header_height: #{$header_height};
+	--section-padding: #{$section-padding};
+	--space-gap: #{$space-gap};
+}
+
+@media (max-width: 1440px) {
+	$h1-font-size: 48px;
+	$h2-font-size: 36px;
+	$h3-font-size: 30px;
+
+	$font-size-large: 20px;
+	$subheader3-font-size: 18px;
+
+	:root {
+		--h1-font-size: #{$h1-font-size};
+		--h2-font-size: #{$h2-font-size};
+		--h3-font-size: #{$h3-font-size};
+		--font-size-large: #{$font-size-large};
+		--subheader3-font-size: #{$subheader3-font-size};
+	}
+}
+
+@media (max-width: 1199px) {
+	$h1-font-size: 40px;
+	$h2-font-size: 34px;
+	$h3-font-size: 28px;
+
+	$font-size-large: 18px;
+	$subheader3-font-size: 18px;
+
+	:root {
+		--h1-font-size: #{$h1-font-size};
+		--h2-font-size: #{$h2-font-size};
+		--h3-font-size: #{$h3-font-size};
+		--font-size-large: #{$font-size-large};
+		--subheader3-font-size: #{$subheader3-font-size};
+	}
+}
+
+@media (max-width: 993px) {
+	$section-padding: 40px;
+
+	:root {
+		--section-padding: #{$section-padding};
+	}
+}
+
+@media (max-width: 768px) {
+	$h1-font-size: 32px;
+	$h2-font-size: 30px;
+	$h3-font-size: 28px;
+
+	$font-size-large: 16px;
+	$font-size-medium: 14px;
+	$subheader3-font-size: 18px;
+
+	:root {
+		--h1-font-size: #{$h1-font-size};
+		--h2-font-size: #{$h2-font-size};
+		--h3-font-size: #{$h3-font-size};
+		--font-size-large: #{$font-size-large};
+		--subheader3-font-size: #{$subheader3-font-size};
+	}
+}
+
+@media (max-width: 640px) {
+	$h1-font-size: 24px;
+	$h2-font-size: 22px;
+	$h3-font-size: 20px;
+
+	:root {
+		--h1-font-size: #{$h1-font-size};
+		--h2-font-size: #{$h2-font-size};
+		--h3-font-size: #{$h3-font-size};
+	}
+}

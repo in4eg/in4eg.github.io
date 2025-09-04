@@ -1,0 +1,97 @@
+@import '../variables.scss';
+
+.dotted-list {
+	counter-reset: count;
+
+	.item {
+		position: relative;
+		padding-left: 72px;
+		margin-bottom: 24px;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+
+		.text {
+			padding: 10px 0;
+		}
+
+		.mark {
+			color: $color_secondary;
+			font-weight: bold;
+		}
+
+		&:before {
+			content: '';
+			position: absolute;
+			left: 0; top: 0;
+			height: 48px; width: 48px;
+			border-radius: 100%;
+			background-color: rgba($color_secondary, 0.1);
+			color: $color_secondary;
+			margin-bottom: 8px;
+			text-align: center;
+			line-height: 44px;
+			transition: .2s;
+			content: counter(count);
+			counter-increment: count;
+			font-weight: bold;
+		}
+
+		&:hover {
+
+			&:before {
+				background-color: rgba($color_primary, 0.1);
+				color: $color_primary;
+				}
+		}
+	}
+
+
+	&.horizontal {
+		display: flex;
+		gap: 24px;
+
+		.item {
+
+			&:before {
+				top: 6px;
+			}
+		}
+	}
+}
+
+@media (max-width: 1199px) {
+
+	.dotted-list.horizontal {
+		flex-wrap: wrap;
+		justify-content: center;
+
+		.item {
+			margin-bottom: 0;
+
+			.text {
+				padding: 16px 0;
+			}
+		}
+	}
+}
+
+
+@media (max-width: 768px) {
+
+	.dotted-list {
+
+		.item {
+			margin-bottom: 16px;
+		}
+	}
+
+	.dotted-list.horizontal {
+		display: block;
+
+		.item {
+			display: block;
+		}
+	}
+}

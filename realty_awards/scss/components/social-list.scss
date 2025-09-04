@@ -1,0 +1,40 @@
+@import '../variables.scss';
+
+.social-list {
+	display: flex;
+	gap: 8px;
+
+	.link {
+		height: 40px; width: 40px;
+		border-radius: 100%;
+		overflow: hidden;
+		position: relative;
+		text-align: center;
+		line-height: 34px;
+
+		&:before {
+			content: '';
+			position: absolute;
+			top: 0; left: 0;
+			width: 200%; height: 200%;
+			background-image: $theme_gradient;
+			transform: translate(-35%, -10%) rotate(5deg);
+			transition: .2s;
+		}
+
+		.icon {
+			position: relative;
+			color: $color_white;
+			z-index: 1;
+		}
+
+
+		&:hover,
+		&:focus {
+
+			&:before {
+				transform: translate(0, 0) rotate(0deg);
+			}
+		}
+	}
+}
