@@ -13,16 +13,14 @@ $(document).ready(function() {
 
 	setTimeout(function() {
 		$('.hero-section').addClass('loaded');
-	}, 50);
+	}, 1);
 	setTimeout(function() {
 		$('.hero-section').addClass('animated');
-	}, 150);
+	}, 10);
 
 	$('.section:not(.hero-section)').each(function(i, section) {
-		if ($(document).scrollTop() + $(window).outerHeight() / 2 > $(section).offset().top) {
-			setTimeout(function() {
-				$(section).addClass('animated');
-			}, 50);
+		if ($(document).scrollTop() + $(window).outerHeight()/2 > $(section).offset().top) {
+			$(section).addClass('animated');
 		}
 	});
 
