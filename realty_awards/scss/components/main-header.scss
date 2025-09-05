@@ -5,7 +5,7 @@
 }
 
 .logo {
-	width: 220px;
+	width: 180px;
 
 	img {
 		max-width: 100%;
@@ -52,6 +52,13 @@
 
 	.menu-toggle {
 		display: none;
+	}
+}
+
+@media (max-width: 1199px) {
+
+	.logo {
+		width: 150px;
 	}
 }
 

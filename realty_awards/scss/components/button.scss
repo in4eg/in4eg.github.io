@@ -32,14 +32,13 @@
 		z-index: 1;
 	}
 
-
 	&:before {
 		content: '';
 		position: absolute;
 		top: 0; left: 0;
 		width: 350%; height: 350%;
 		background-image: $theme_gradient;
-		transform: translate(-35%, -10%) rotate(5deg);
+		transform: translate(-17%, -10%) rotate(5deg);
 		transition: .2s;
 	}
 
@@ -67,6 +66,7 @@
 .button.button-secondary-transparent {
 	position: relative;
 	background-color: $color_white;
+	border: 0;
 
 	&:after {
 		content: '';

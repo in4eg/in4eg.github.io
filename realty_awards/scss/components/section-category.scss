@@ -1,0 +1,18 @@
+@import '../variables.scss';
+
+.section-category {
+	position: relative;
+
+	&:before {
+		content: '';
+		position: absolute;
+		bottom: -5%;
+		left: 0; right: 0;
+		background-image: url('../img/wave.png');
+		height: 600px;
+		background-size: 100% 50%;
+		background-repeat: no-repeat;
+		background-position: bottom;
+		pointer-events: none;
+	}
+}

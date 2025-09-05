@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'icomoon';
-  src:  url('fonts/icomoon.eot?bnae4q');
-  src:  url('fonts/icomoon.eot?bnae4q#iefix') format('embedded-opentype'),
-    url('fonts/icomoon.ttf?bnae4q') format('truetype'),
-    url('fonts/icomoon.woff?bnae4q') format('woff'),
-    url('fonts/icomoon.svg?bnae4q#icomoon') format('svg');
+  src:  url('fonts/icomoon.eot?m68onc');
+  src:  url('fonts/icomoon.eot?m68onc#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?m68onc') format('truetype'),
+    url('fonts/icomoon.woff?m68onc') format('woff'),
+    url('fonts/icomoon.svg?m68onc#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -78,4 +78,10 @@
 }
 .icon-phone:before {
   content: "\e911";
+}
+.icon-whatsapp:before {
+  content: "\e912";
+}
+.icon-viber:before {
+  content: "\e913";
 }

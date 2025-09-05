@@ -779,9 +779,9 @@ img.adaptive {
   width: 350%;
   height: 350%;
   background-image: linear-gradient(100deg,#cfa85b,#295872);
-  -webkit-transform: translate(-35%,-10%) rotate(5deg);
-  -ms-transform: translate(-35%,-10%) rotate(5deg);
-  transform: translate(-35%,-10%) rotate(5deg);
+  -webkit-transform: translate(-17%,-10%) rotate(5deg);
+  -ms-transform: translate(-17%,-10%) rotate(5deg);
+  transform: translate(-17%,-10%) rotate(5deg);
   -webkit-transition: .2s;
   transition: .2s
 }
@@ -805,7 +805,8 @@ img.adaptive {
 }
 .button.button-secondary-transparent {
   position: relative;
-  background-color: #f7f8f9
+  background-color: #f7f8f9;
+  border: 0
 }
 .button.button-secondary-transparent:after {
   content: "";
@@ -898,7 +899,9 @@ img.adaptive {
   border-radius: 24px 24px 0 0
 }
 .category-card .caption {
-  padding: 24px 24px 56px
+  padding: 24px 24px 56px;
+  background-color: #f7f8f9;
+  border-radius: 0 0 24px 24px
 }
 .category-card .caption .group-line {
   margin-bottom: 24px
@@ -2337,7 +2340,7 @@ img.adaptive {
   }
 }
 .hero-section {
-  height: calc(100vh - var(--header_height));
+  min-height: calc(100vh - var(--header_height));
   position: relative
 }
 .hero-section .canvas {
@@ -2347,6 +2350,10 @@ img.adaptive {
   right: 0;
   width: 100%;
   height: 50%
+}
+.hero-section .logo-main {
+  width: 160px;
+  margin-bottom: 32px
 }
 .hero-section .container {
   position: relative;
@@ -2399,6 +2406,11 @@ img.adaptive {
   .hero-section {
     height: calc(80vh - var(--header_height));
     position: relative
+  }
+}
+@media (max-width:1199px) {
+  .hero-section .logo-main {
+    width: 140px
   }
 }
 @media (max-width:768px) {
@@ -2490,6 +2502,12 @@ img.adaptive {
 }
 .icon-phone:before {
   content: "\e911"
+}
+.icon-whatsapp:before {
+  content: "\e912"
+}
+.icon-viber:before {
+  content: "\e913"
 }
 :root {
   --font-size: 18px;
@@ -2611,6 +2629,12 @@ img.adaptive {
 .main-footer .footer-link:visited {
   color: #295872
 }
+@media (max-width:1199px) {
+  .main-footer .text {
+    max-width: 100%;
+    font-size: var(--font-size-small)
+  }
+}
 @media (max-width:993px) {
   .main-footer {
     padding: 24px 0
@@ -2703,7 +2727,7 @@ img.adaptive {
   }
 }
 .logo {
-  width: 220px
+  width: 180px
 }
 .logo img {
   max-width: 100%
@@ -2752,6 +2776,11 @@ img.adaptive {
 }
 .main-header .menu-toggle {
   display: none
+}
+@media (max-width:1199px) {
+  .logo {
+    width: 150px
+  }
 }
 @media (max-width:993px) {
   .main-header .menu .link {
@@ -3102,6 +3131,84 @@ img.adaptive {
 .section.animated li {
   -webkit-animation: fade-in-animation .3s forwards;
   animation: fade-in-animation .3s forwards
+}
+:root {
+  --font-size: 18px;
+  --h1-font-size: 60px;
+  --h2-font-size: 48px;
+  --h3-font-size: 34px;
+  --h4-font-size: 28px;
+  --subheader1-font-size: 34px;
+  --subheader2-font-size: 26px;
+  --subheader3-font-size: 20px;
+  --font-size-small: 14px;
+  --font-size-medium: 16px;
+  --font-size-large: 24px;
+  --border-width: 1px;
+  --margin: 15px;
+  --padding: 20px;
+  --border-radius: 0px;
+  --icon_height: 20px;
+  --icon-large_height: 48px;
+  --pagination-link_size: 38px;
+  --header_height: 92px;
+  --section-padding: 60px;
+  --space-gap: 5px
+}
+@media (max-width:1440px) {
+  :root {
+    --h1-font-size: 48px;
+    --h2-font-size: 36px;
+    --h3-font-size: 30px;
+    --font-size-large: 20px;
+    --subheader3-font-size: 18px
+  }
+}
+@media (max-width:1199px) {
+  :root {
+    --h1-font-size: 40px;
+    --h2-font-size: 34px;
+    --h3-font-size: 28px;
+    --font-size-large: 18px;
+    --subheader3-font-size: 18px
+  }
+}
+@media (max-width:993px) {
+  :root {
+    --section-padding: 40px
+  }
+}
+@media (max-width:768px) {
+  :root {
+    --h1-font-size: 32px;
+    --h2-font-size: 30px;
+    --h3-font-size: 28px;
+    --font-size-large: 16px;
+    --subheader3-font-size: 18px
+  }
+}
+@media (max-width:640px) {
+  :root {
+    --h1-font-size: 24px;
+    --h2-font-size: 22px;
+    --h3-font-size: 20px
+  }
+}
+.section-category {
+  position: relative
+}
+.section-category:before {
+  content: "";
+  position: absolute;
+  bottom: -5%;
+  left: 0;
+  right: 0;
+  background-image: url(../img/wave.png);
+  height: 600px;
+  background-size: 100% 50%;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  pointer-events: none
 }
 :root {
   --font-size: 18px;
@@ -3528,7 +3635,8 @@ img.adaptive {
   overflow: hidden;
   position: relative;
   text-align: center;
-  line-height: 34px
+  line-height: 38px;
+  font-size: 20px
 }
 .social-list .link:before {
   content: "";
@@ -3554,6 +3662,14 @@ img.adaptive {
   -webkit-transform: translate(0,0) rotate(0);
   -ms-transform: translate(0,0) rotate(0);
   transform: translate(0,0) rotate(0)
+}
+@media (max-width:1199px) {
+  .social-list .link {
+    height: 32px;
+    width: 32px;
+    line-height: 28px;
+    font-size: 16px
+  }
 }
 :root {
   --font-size: 18px;

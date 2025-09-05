@@ -67,6 +67,17 @@
 	}
 }
 
+@media (max-width: 1199px) {
+
+	.main-footer {
+
+		.text {
+			max-width: 100%;
+			font-size: var(--font-size-small);
+		}
+	}
+}
+
 @media (max-width: 993px) {
 
 	.main-footer {

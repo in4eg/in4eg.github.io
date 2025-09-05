@@ -10,7 +10,8 @@
 		overflow: hidden;
 		position: relative;
 		text-align: center;
-		line-height: 34px;
+		line-height: 38px;
+		font-size: 20px;
 
 		&:before {
 			content: '';
@@ -35,6 +36,18 @@
 			&:before {
 				transform: translate(0, 0) rotate(0deg);
 			}
+		}
+	}
+}
+
+@media (max-width: 1199px) {
+
+	.social-list {
+
+		.link {
+			height: 32px; width: 32px;
+			line-height: 28px;
+			font-size: 16px;
 		}
 	}
 }
