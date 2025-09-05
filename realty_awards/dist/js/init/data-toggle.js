@@ -36,6 +36,7 @@ document.addEventListener('DOMContentLoaded', function(){
 			this.toggleButton.classList.remove(this.activeButtonClassName);
 			this.menuEl.classList.remove(this.animatedMenuClassName);
 			setTimeout(()=>{
+				document.body.classList.remove('overlayed');
 				this.menuEl.classList.remove(this.activeMenuClassName);
 			},50);
 		};
@@ -44,6 +45,7 @@ document.addEventListener('DOMContentLoaded', function(){
 			this.toggleButton.classList.add(this.activeButtonClassName);
 			this.menuEl.classList.add(this.activeMenuClassName);
 			setTimeout(()=>{
+				document.body.classList.add('overlayed');
 				this.menuEl.classList.add(this.animatedMenuClassName);
 			},50);
 		}
