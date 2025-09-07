@@ -2404,7 +2404,7 @@ img.adaptive {
 }
 @media (max-width:1440px) {
   .hero-section {
-    height: calc(80vh - var(--header_height));
+    min-height: calc(80vh - var(--header_height));
     position: relative
   }
 }
@@ -3535,6 +3535,11 @@ img.adaptive {
 }
 .section.collapsed-bottom {
   padding-bottom: 0
+}
+@media (max-width:1199px) {
+  .spaced-top-md {
+    margin-top: 32px
+  }
 }
 @media (max-width:993px) {
   .section .titles-group {
