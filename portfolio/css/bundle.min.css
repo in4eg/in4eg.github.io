@@ -84,7 +84,8 @@ a {
   text-decoration: none;
   -webkit-transition: .2s;
   transition: .2s;
-  position: relative
+  position: relative;
+  color: inherit
 }
 a:focus,
 a:hover {
