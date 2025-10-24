@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+	<meta charset="UTF-8">
+	<title>RieltorOnline :: Contacts Page</title>
+
+	<link rel="icon" type="image/png" href="/favicon/favicon-96x96.png" sizes="96x96">
+	<link rel="icon" type="image/svg+xml" href="/favicon/favicon.svg">
+	<link rel="shortcut icon" href="/favicon/favicon.ico">
+	<link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
+	<meta name="apple-mobile-web-app-title" content="RieltorOnline">
+	<link rel="manifest" href="/favicon/site.webmanifest">
+
+	<meta name="msapplication-TileColor" content="#576F80">
+	<meta name="theme-color" content="#576F80">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+	<meta name="format-detection" content="telephone=no">
+	<meta name="description" content="description">
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+
+	<link rel="stylesheet" href="css/bundle.min.css">
+</head>
+<body id="innerBody">
+	<!-- header -->
+	<header class="main-header light fixed" id="mainHeader" data-scroll-check=".section-dark">
+	<div class="container">
+		<div class="header-container" id="headerContainer">
+			<div class="left-side">
+				<div class="logo-cover">
+					<a href="index.html" class="logo light-theme" aria-label="main page"><img src="img/logo.svg" alt="logo" draggable="false" aria-label="main page"></a>
+					<a href="index.html" class="logo dark-theme" aria-label="main page"><img src="img/logo.svg" alt="logo" draggable="false" aria-label="main page"></a>
+				</div>
+				<div class="language">
+					<div class="dropdown-select">
+						<div class="title item">Укр</div>
+						<div class="inner">
+							<a href="#" class="item" aria-label="eng">Eng</a>
+							<a href="#" class="item" aria-label="ru">Рус</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<nav class="header-navigation" id="mainNavigation">
+				<div class="inner">
+					<ul class="clear" data-hover-show="#menuResult" data-escape-container="#mainHeader">
+						<!-- class .active for active link -->
+						<li><a href="about.html" aria-label="detail link" class="active"><span class="text">Про нас</span></a></li>
+						<li><a href="catalog.html" aria-label="detail link"><span class="text">Каталог</span></a></li>
+						<li><a href="works.html" aria-label="detail link"><span class="text">Як це працює</span></a></li>
+						<li><a href="telegram.html" aria-label="detail link"><span class="text">Telegram-автоматизація</span></a></li>
+						<li><a href="tarif.html" aria-label="detail link"><span class="text">Тарифи</span></a></li>
+						<li><a href="blog.html" aria-label="detail link"><span class="text">Блог</span></a></li>Блог
+						<li><a href="faq.html" aria-label="detail link"><span class="text">FAQ</span></a></li>
+						<li><a href="contacts.html" aria-label="detail link"><span class="text">Контакти</span></a></li>
+					</ul>
+					<!-- BOTTOM -->
+					<!-- VISIBLE ONLY <= 768 -->
+					<!-- language for mobile -->
+					<div class="mobile-bottom">
+						<div class="bordered-top">
+							<div class="language-mobile">
+								<div class="dropdown" data-dropdown>
+									<div class="dropdown-header"><div class="item">Українська</div></div>
+									<div class="dropdown-inner origin-top">
+										<a href="#" class="item" aria-label="eng">English</a>
+										<a href="#" class="item" aria-label="ru">Русский</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- / language for mobile -->
+			</nav>
+			<div class="right-side">
+				<!-- user header menu -->
+				<div class="user-cover">
+					<a href="#" class="favourites-link round-link">
+						<i class="icon icon-heart-empty"></i>
+						<!-- if there are some items in fav need to show counter -->
+						<!-- <span class="couner">7</span> -->
+					</a>
+					<a href="personal_registration.html" class="user-link round-link">
+						<i class="icon icon-user"></i>
+						<!-- user photo if user is authorized -->
+						<!-- <img src="../img/temp/user.png" alt="user" class="userpic"> -->
+					</a>
+				</div>
+				<!-- / user header menu -->
+				<!-- mobile menu toggle button -->
+				<button type="button" class="button menu-button round-link" data-toggle-element="#mainNavigation">
+					<div class="lines">
+						<span></span>
+					</div>
+				</button>
+				<!-- /mobile menu toggle button -->
+			</div>
+		</div>
+	</div>
+</header>
+	<!-- / header -->
+	<!-- class inner-page -->
+	<main class="page-main inner-page" id="pageMain">
+		<!-- breadcrumbs -->
+		<div class="breadcrumbs">
+			<div class="container">
+				<ul class="breadcrumbs-list clear">
+					<li><a href="index.html" class="text" aria-label="main page">Головна</a></li>
+					<li><span class="text">Контакти</span></li>
+				</ul>
+			</div>
+		</div>
+		<!-- / breadcrumbs -->
+
+		<section class="inner-section section" id="companyAbout">
+			<div class="container">
+				<div class="title-group">
+					<div class="section-subtitle">Завжди на зв’язку</div>
+					<h1 class="h1-title">Наші контакти</h1>
+				</div>
+				<div class="contact-line">
+					<div class="row bottom-xs">
+						<div class="col-xs-12 col-sm-9">
+							<div class="paragraph">
+								Київ, Україна, 01001<br>
+								БЦ Valmi (Валмі), вул. Новокостянтинівська 2, поверх 10, офіс 12
+							</div>
+						</div>
+						<div class="col-xs-12 col-sm-3 social-cell">
+							<a href="https://maps.app.goo.gl/ADGAAGm1zN52QRfp8" class="location-link" target="_blank" rel="noopener noreferrer" aria-label="maps link">
+								<i class="icon icon-map"></i>
+								<span class="text">Як дістатися?</span>
+							</a>
+						</div>
+					</div>
+				</div>
+				<div class="divider centered"></div>
+				<ul class="clear unordered-list contact-list">
+					<li class="vertical-top">
+						<div class="stage">
+							<div class="title">Номера телефонів:</div>
+							<div class="paragraph">
+								<a href="tel:+3800500000000" class="link block-link">+380 (050) 000 00 00</a>
+								<a href="tel:+3800502222222" class="link block-link">+380 (050) 222 22 22</a>
+							</div>
+						</div>
+					</li>
+					<li class="vertical-top">
+						<div class="stage">
+							<div class="title">E-mail:</div>
+							<div class="paragraph">
+									<a href="mailto:rieltoronline@rieltoronline.com" class="link block-link">rieltoronline@rieltoronline.com</a>
+									<a href="mailto:info@rieltoronline.com" class="link block-link">info@rieltoronline.com</a>
+							</div>
+						</div>
+					</li>
+					<li class="vertical-top">
+						<div class="stage">
+							<div class="title">Ми працюємо:</div>
+							<div class="paragraph">
+								Понеділок - Пʼятниця <br>
+								09:30 - 19:00
+							</div>
+						</div>
+					</li>
+					<li class="vertical-top">
+						<div class="stage">
+							<div class="title">Ми онлайн:</div>
+							<div class="paragraph">
+								<ul class="social-list-small clear">
+									<li><a href="#" target="_blank" aria-label="social link"><i class="icon icon-insta"></i></a></li>
+									<li><a href="#" target="_blank" aria-label="social link"><i class="icon icon-threads"></i></a></li>
+									<li><a href="#" target="_blank" aria-label="social link"><i class="icon icon-telegram"></i></a></li>
+								</ul>
+							</div>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</section>
+
+		<!-- contact form -->
+		<section class="contact-section section section-dark" id="contactForm">
+	<div class="container">
+		<div class="contact-inner">
+			<div class="title-group">
+				<div class="section-subtitle">Залишились питання?</div>
+				<h2 class="section-title-large">Ми допоможемо вирішити вашу проблему швидко та ефективно!</h2>
+				<div class="paragraph">
+					Заповніть форму нижче, і наші фахівці зв'яжуться з вами для надання необхідної інформації або консультації.
+				</div>
+			</div>
+			<form action="javascript:void(0)" class="form contact-form validate-form">
+				<div class="form-group input-group">
+					<div class="alert">Мінімум 2 символа</div>
+					<input type="text" class="input" id="name" name="name" data-minlength="2" placeholder="Ім’я">
+					<label for="name" class="label">Ваше ім’я:</label>
+				</div>
+				<div class="form-group input-group">
+					<div class="alert">Не коректний Email</div>
+					<input type="tel" class="input email" id="email" name="email" placeholder="Email">
+					<label for="email" class="label">Ваш Email:</label>
+				</div>
+				<div class="form-group input-group textarea-group">
+					<textarea class="textarea ignored" name="message" id="message" maxlength="100"></textarea>
+					<label for="message" class="label">Повідомлення:</label>
+					<div class="input-helper"><span class="chart-counter">0</span>/100</div>
+				</div>
+				<button type="submit" class="button button-primary-invert button-arrow button-block full-sm">
+					<span class="text">Залишити заявку</span>
+					<span class="button-icon">
+						<i class="icon icon-arrow-right"></i>
+					</span>
+				</button>
+			</form>
+		</div>
+		<ul class="clear inline-list collapsed-xs unordered-list">
+			<li>Актуальна база даних</li>
+			<li>Контаки власників напряму</li>
+			<li>Безпека угоди</li>
+			<li>Надійність та довіра</li>
+		</ul>
+	</div>
+</section>
+		<!-- / contact form -->
+
+	</main>
+
+	<!-- footer -->
+	<footer class="main-footer section-dark">
+	<div class="container">
+		<!-- sroll to top -->
+		<a class="button button-default button-round" href="#pageMain" data-scrollto="#pageMain">
+			<span class="button-icon"><i class="icon icon-arrow-up"></i></span>
+		</a>
+		<!-- sroll to top -->
+		<div class="footer-inner">
+			<div class="top">
+				<div class="logo-cover">
+					<a href="index.html" class="logo" aria-label="main page"><img src="img/logo-light.svg" alt="logo" draggable="false"></a>
+				</div>
+			</div>
+			<div class="middle">
+				<ul class="clear footer-links">
+					<li><a href="about.html" aria-label="detail link"><span class="text">Про нас</span></a></li>
+					<li><a href="catalog.html" aria-label="detail link"><span class="text">Каталог</span></a></li>
+					<li><a href="works.html" aria-label="detail link"><span class="text">Як це працює</span></a></li>
+					<li><a href="telegram.html" aria-label="detail link"><span class="text">Telegram-автоматизація</span></a></li>
+					<li><a href="tarif.html" aria-label="detail link"><span class="text">Тарифи</span></a></li>
+					<li><a href="blog.html" aria-label="detail link"><span class="text">Блог</span></a></li>
+					<li><a href="faq.html" aria-label="detail link"><span class="text">FAQ</span></a></li>
+					<li><a href="contacts.html" aria-label="detail link"><span class="text">Контакти</span></a></li>
+				</ul>
+					<ul class="clear social-list">
+					<li><a href="tel:+380" aria-label="phone link" target="_blank" rel="noopener noreferrer"><i class="icon icon-phone"></i></a></li>
+					<li><a href="mailto:" aria-label="email link" target="_blank" rel="noopener noreferrer"><i class="icon icon-mail"></i></a></li>
+					<li><a href="tg://resolve?domain=@" target="_blank" rel="noopener noreferrer" aria-label="telegram link"><i class="icon icon-telegram"></i></a></li>
+				</ul>
+			</div>
+			<div class="bottom">
+				<div class="copy">
+					© 2025 RieltorOnline. Всі права захищені
+				</div>
+				<div class="links">
+				<ul class="clear footer-links">
+					<li><a href="#" aria-label="link"><span class="text">Політика конфіденційності</span></a></li>
+					<li><a href="#" aria-label="link"><span class="text">Публічна оферта / Умови</span></a></li>
+				</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</footer>
+	<!-- / footer -->
+
+	<script src="js/main.js"></script>
+</body>
+</html>

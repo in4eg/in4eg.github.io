@@ -1,0 +1,105 @@
+@font-face {
+  font-family: 'icomoon';
+  src:  url('fonts/icomoon.eot?we99ai');
+  src:  url('fonts/icomoon.eot?we99ai#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?we99ai') format('truetype'),
+    url('fonts/icomoon.woff?we99ai') format('woff'),
+    url('fonts/icomoon.svg?we99ai#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-search:before {
+  content: "\e900";
+}
+.icon-heart-empty:before {
+  content: "\e901";
+}
+.icon-heart-filled:before {
+  content: "\e902";
+}
+.icon-user:before {
+  content: "\e903";
+}
+.icon-phone:before {
+  content: "\e904";
+}
+.icon-insta:before {
+  content: "\e905";
+}
+.icon-threads:before {
+  content: "\e906";
+}
+.icon-mail:before {
+  content: "\e907";
+}
+.icon-telegram:before {
+  content: "\e908";
+}
+.icon-arrow-down:before {
+  content: "\e909";
+}
+.icon-arrow-up:before {
+  content: "\e90a";
+}
+.icon-arrow-left:before {
+  content: "\e90b";
+}
+.icon-arrow-right:before {
+  content: "\e90c";
+}
+.icon-check:before {
+  content: "\e90d";
+}
+.icon-chevron-left:before {
+  content: "\e90e";
+}
+.icon-chevron-right:before {
+  content: "\e90f";
+}
+.icon-chevron-up:before {
+  content: "\e910";
+}
+.icon-chevron-down:before {
+  content: "\e911";
+}
+.icon-cross:before {
+  content: "\e912";
+}
+.icon-shield-check:before {
+  content: "\e913";
+}
+.icon-lock:before {
+  content: "\e914";
+}
+.icon-operation-plus:before {
+  content: "\e915";
+}
+.icon-operation-minus:before {
+  content: "\e916";
+}
+.icon-map:before {
+  content: "\e917";
+}
+.icon-mouse:before {
+  content: "\e918";
+}
+.icon-calendar:before {
+  content: "\e919";
+}

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+	<meta charset="UTF-8">
+	<title>RieltorOnline :: Article Page</title>
+
+	<link rel="icon" type="image/png" href="/favicon/favicon-96x96.png" sizes="96x96">
+	<link rel="icon" type="image/svg+xml" href="/favicon/favicon.svg">
+	<link rel="shortcut icon" href="/favicon/favicon.ico">
+	<link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
+	<meta name="apple-mobile-web-app-title" content="RieltorOnline">
+	<link rel="manifest" href="/favicon/site.webmanifest">
+
+	<meta name="msapplication-TileColor" content="#576F80">
+	<meta name="theme-color" content="#576F80">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+	<meta name="format-detection" content="telephone=no">
+	<meta name="description" content="description">
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+
+	<link rel="stylesheet" href="css/bundle.min.css">
+</head>
+<body id="innerBody">
+	<!-- header -->
+	@@include('./includes/header-main.html')
+	<!-- / header -->
+	<!-- class inner-page -->
+	<main class="page-main inner-page" id="pageMain">
+		<!-- breadcrumbs -->
+		<div class="breadcrumbs">
+			<div class="container">
+				<ul class="breadcrumbs-list clear">
+					<li><a href="index.html" class="text" aria-label="main page">Головна</a></li>
+					<li><a href="blog.html" class="text" aria-label="blog page">Блог</a></li>
+					<li><span class="text">Будівництво нового масиву під Києвом</span></li>
+				</ul>
+			</div>
+		</div>
+		<!-- / breadcrumbs -->
+
+		<section class="section">
+			<div class="container">
+				<div class="title-group">
+					<div class="section-subtitle">25 березня 2025</div>
+					<h1 class="h1-title">Будівництво нового масиву під Києвом</h1>
+				</div>
+			</div>
+
+			<!-- main image -->
+			<div class="image-section section-dark">
+				<img src="img/temp/image_article.png" alt="image">
+			</div>
+			<!-- / main image -->
+
+			<!-- page content -->
+			<div class="container-small article-container">
+				<article>
+					<h2>Під Києвом стартував масштабний проєкт Vlasne Misto</h2>
+					<p>
+						Автономного житлового кластера на 600 гектарах у Дмитрівській ОТГ. Тут планують збудувати житло, школи, лікарні та інфраструктуру для 47 000 людей. Водночас розслідування Absolution Leaks виявило, що землі під забудову могли перейти до приватних компаній незаконно: державне підприємство "Дослідне господарство Дмитрівка" втратило більшість ділянок через підміну реєстраційних документів.
+					</p>
+					<h3>Забудовниками виступають одразу кілька структур</h3>
+					<p>
+						серед яких "Власне місто" та "КГЛ Груп", пов’язані з родинами колишніх посадовців Держземагентства та прокуратури. Ключовим ініціатором називають ексзаступника керівника обласного управління Держземагентства Ярослава Корняченка, тоді як співзасновницею "Власного міста" є його дружина Наталія.
+					</p>
+					<ol>
+						<li>Елемент списку</li>
+						<li>Елемент списку</li>
+						<li>Елемент списку</li>
+						<li>Елемент списку</li>
+						<li>Елемент списку</li>
+					</ol>
+					<h4>Інша співвласниця</h4>
+					<p>
+						— Оксана Гуцуляк, чоловік якої, колишній високопосадовець Генпрокуратури Володимир Гуцуляк, опинився у центрі підозр у незаконному збагаченні. За підсумками реалізації
+					</p>
+					<h5>мешканці "Власного міста"</h5>
+					<p>
+						ризикують отримати місто без самоврядування, фактично підконтрольне приватним інвесторам.
+					</p>
+					<ul>
+						<li>Елемент списку</li>
+						<li>Елемент списку</li>
+						<li>Елемент списку</li>
+						<li>Елемент списку</li>
+						<li>Елемент списку</li>
+					</ul>
+					<blockquote cite="https://www.example.com/source-document">
+						<p>Мешканці "Власного міста" ризикують отримати місто без самоврядування</p>
+					</blockquote>
+					<cite>- Дослідне господарство Дмитрівка</cite>
+				</article>
+				<div class="divider centered"></div>
+			</div>
+			<!-- / page content -->
+
+			<!-- pagination -->
+			<div class="container-small">
+				<div class="article-navigation">
+					<a class="navigation-link prev" href="article.html" aria-label="Read more">
+						<span class="button-icon"><i class="icon icon-chevron-left"></i></span>
+						<span class="helper">Попередня стаття</span>
+						<span class="link-title">Ситуація на ринку нерухомості</span>
+					</a>
+					<a class="navigation-link next" href="article.html" aria-label="Read more">
+						<span class="button-icon"><i class="icon icon-chevron-right"></i></span>
+						<span class="helper">Наступна стаття</span>
+						<span class="link-title">Пожвавлення будівництва</span>
+					</a>
+				</div>
+			</div>
+			<!-- / pagination -->
+		</section>
+	</main>
+
+	<!-- footer -->
+	@@include('./includes/footer-main.html')
+	<!-- / footer -->
+
+	<script src="js/main.js"></script>
+</body>
+</html>

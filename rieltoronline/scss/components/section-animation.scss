@@ -1,0 +1,141 @@
+.main-header {
+
+	.header-container {
+		opacity: 0;
+		transform: translateY(20px);
+		transition: opacity .2s, transform .2s;
+	}
+
+	&.animated {
+
+		.header-container {
+			transform: translateY(0);
+			opacity: 1;
+		}
+	}
+}
+
+.section {
+
+	.divider {
+		transition-delay: 20s;
+		transform: scale(0);
+		transition: transform .7s;
+	}
+
+	.section-subtitle {
+		transform: translateY(20px);
+		opacity: 0;
+		transition: transform .2s, opacity .2s;
+	}
+
+	.scroll-bottom {
+		transform: translateY(20px) translateX(-15px) translateZ(0);
+		transition: transform .2s;
+	}
+
+	.button,
+	.form-group,
+	h1, h2, h3,
+	.paragraph,
+	.article-subtitle,
+	article,
+	.tabs,
+	.paragraph,
+	.theme-text {
+		transform: translateY(15px);
+		transition: transform .5s;
+		opacity: 0;
+	}
+
+	.social {
+		opacity: 0;
+		transition-delay: 0.5s;
+		transition: transform .2s;
+	}
+
+	li {
+		transition: .2s opacity;
+		opacity: 0;
+
+		&:first-child + li { animation-delay: .05s }
+		&:first-child + * + li { animation-delay: .1s }
+		&:first-child + * + * + li { animation-delay: .15s }
+		&:first-child + * + * + * + li { animation-delay: .2s }
+		&:first-child + * + * + * + * + li { animation-delay: .25s }
+		&:first-child + * + * + * + * + * + li { animation-delay: .3s }
+		&:first-child + * + * + * + * + * + * + li { animation-delay: .35s }
+		&:first-child + * + * + * + * + * + * + * + li { animation-delay: .4s }
+		&:first-child + * + * + * + * + * + * + * + * + li { animation-delay: .45s }
+		&:first-child + * + * + * + * + * + * + * + * + * + li { animation-delay: .5s }
+		&:first-child + * + * + * + * + * + * + * + * + * + * + li { animation-delay: .55s }
+		&:first-child + * + * + * + * + * + * + * + * + * + * + * + li { animation-delay: .6s }
+		&:first-child + * + * + * + * + * + * + * + * + * + * + * + * + li { animation-delay: .65s }
+		&:first-child + * + * + * + * + * + * + * + * + * + * + * + * + * + li { animation-delay: .7s }
+		&:first-child + * + * + * + * + * + * + * + * + * + * + * + * + * + * + li { animation-delay: .75s }
+		&:first-child + * + * + * + * + * + * + * + * + * + * + * + * + * + * + * + li { animation-delay: .8s }
+		&:first-child + * + * + * + * + * + * + * + * + * + * + * + * + * + * + * + * + li { animation-delay: .85s }
+	}
+
+	.animated-item {
+		transition: .2s opacity;
+		opacity: 0;
+
+		&:first-child + .animated-item { animation-delay: .05s }
+		&:first-child + * + .animated-item { animation-delay: .1s }
+		&:first-child + * + * + .animated-item { animation-delay: .15s }
+		&:first-child + * + * + * + .animated-item { animation-delay: .2s }
+		&:first-child + * + * + * + * + .animated-item { animation-delay: .25s }
+		&:first-child + * + * + * + * + * + .animated-item { animation-delay: .3s }
+		&:first-child + * + * + * + * + * + * + .animated-item { animation-delay: .35s }
+		&:first-child + * + * + * + * + * + * + * + .animated-item { animation-delay: .4s }
+		&:first-child + * + * + * + * + * + * + * + * + .animated-item { animation-delay: .45s }
+		&:first-child + * + * + * + * + * + * + * + * + * + .animated-item { animation-delay: .5s }
+		&:first-child + * + * + * + * + * + * + * + * + * + * + .animated-item { animation-delay: .55s }
+		&:first-child + * + * + * + * + * + * + * + * + * + * + * + .animated-item { animation-delay: .6s }
+		&:first-child + * + * + * + * + * + * + * + * + * + * + * + * + .animated-item { animation-delay: .65s }
+		&:first-child + * + * + * + * + * + * + * + * + * + * + * + * + * + .animated-item { animation-delay: .7s }
+		&:first-child + * + * + * + * + * + * + * + * + * + * + * + * + * + * + .animated-item { animation-delay: .75s }
+		&:first-child + * + * + * + * + * + * + * + * + * + * + * + * + * + * + * + .animated-item { animation-delay: .8s }
+		&:first-child + * + * + * + * + * + * + * + * + * + * + * + * + * + * + * + * + .animated-item { animation-delay: .85s }
+	}
+
+	@keyframes fade-in-animation {
+		0% { opacity: 0; }
+		100% { opacity: 1; }
+	}
+}
+
+.section.animated {
+
+	.social {
+		opacity: 1;
+	}
+
+	.divider {
+		transform: scale(1);
+	}
+
+	h1, h2, h3,
+	.section-subtitle,
+	.button,
+	.form-group,
+	.paragraph,
+	.article-subtitle,
+	article,
+	.tabs,
+	.paragraph,
+	.theme-text {
+		transform: translateY(0);
+		opacity: 1;
+	}
+
+	.scroll-bottom {
+		transform: translateY(0) translateX(-15px) translateZ(0);
+	}
+
+	li,
+	.animated-item {
+		animation: fade-in-animation .3s forwards;
+	}
+}

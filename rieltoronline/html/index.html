@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+	<meta charset="UTF-8">
+	<title>RieltorOnline :: Main Page</title>
+
+	<link rel="icon" type="image/png" href="/favicon/favicon-96x96.png" sizes="96x96">
+	<link rel="icon" type="image/svg+xml" href="/favicon/favicon.svg">
+	<link rel="shortcut icon" href="/favicon/favicon.ico">
+	<link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
+	<meta name="apple-mobile-web-app-title" content="RieltorOnline">
+	<link rel="manifest" href="/favicon/site.webmanifest">
+
+	<meta name="msapplication-TileColor" content="#576F80">
+	<meta name="theme-color" content="#576F80">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+	<meta name="format-detection" content="telephone=no">
+	<meta name="description" content="description">
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+
+	<link rel="stylesheet" href="css/bundle.min.css">
+</head>
+<body id="innerBody">
+	<!-- header -->
+	@@include('./includes/header-main.html')
+	<!-- / header -->
+	<main class="page-main" id="pageMain">
+		<!-- banner -->
+		<section class="section-banner first-section section section-light">
+			<div class="banner-cover">
+				<img src="img/banner_main.png" draggable="false" alt="image">
+			</div>
+			<div class="caption">
+				<div class="container">
+					<div class="top">
+						<div class="section-subtitle">Сервіс з пошуку нерухомості</div>
+					</div>
+					<div class="divider"></div>
+					<div class="bottom">
+						<div class="row bottom-sm">
+							<div class="col-xs-12 col-md-7">
+								<h1 class="banner-title h1-title">Знайдіть своє житло швидко та без посередників</h1>
+							</div>
+							<div class="col-xs-12 col-md-5 align-right">
+								<a aria-label="catalog page" class="button button-secondary button-arrow full-sm" href="catalog.html">
+									<span class="text">Перейти до каталогу</span>
+									<span class="button-icon">
+										<i class="icon icon-arrow-right"></i>
+									</span>
+								</a>
+							</div>
+						</div>
+						<form action="#" class="form search-form">
+							<!-- 1 -->
+							<div class="form-group select-group">
+								<select name="city" id="city" class="select">
+									<option value="Усі" selected>Усі</option>
+									<option value="Київ">Київ</option>
+									<option value="Харків">Харків</option>
+									<option value="Донецьк">Донецьк</option>
+									<option value="Лівьв">Лівьв</option>
+									<option value="Дніпро">Дніпро</option>
+								</select>
+								<label for="city" class="label">Місто</label>
+							</div>
+							<!-- 2 -->
+							<div class="form-group select-group">
+								<select name="disctrict" id="disctrict" class="select">
+									<option value="Усі" selected>Усі</option>
+									<option value="Дарницький">Дарницький</option>
+									<option value="Голосіївський">Голосіївський</option>
+									<option value="Деснянський">Деснянський</option>
+									<option value="Дніпровський">Дніпровський</option>
+									<option value="Оболонський">Оболонський</option>
+								</select>
+								<label for="disctrict" class="label">Район</label>
+							</div>
+							<!-- 3 -->
+							<div class="form-group range-group">
+								<div class="dropdown" data-dropdown>
+									<div class="dropdown-header">Бюджет</div>
+									<div class="dropdown-inner">
+										<div class="range-group">
+											<div class="range-inputs">
+												<div class="form-group input-group">
+													<label class="label">Від (грн)</label>
+													<input type="number" class="input input-min">
+												</div>
+												<div class="form-group input-group">
+													<label class="label">До (грн)</label>
+													<input type="number" class="input input-max">
+												</div>
+											</div>
+											<div class="range-group">
+												<div class="range"
+													data-min="1000"
+													data-max="20000"
+													data-step="100"
+													data-ticks="5"
+													data-value-min="1000"
+													data-value-max="20000">
+													<input type="range" class="range-min" aria-label="Minimum">
+													<input type="range" class="range-max" aria-label="Maximum">
+													<div class="range-progress">
+														<div class="range-track"></div>
+														<div class="range-fill"></div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<span class="label">Бюджет</span>
+							</div>
+							<!-- submit -->
+							<button type="submit" class="button button-primary-invert button-arrow full-sm" aria-label="submit">
+								<span class="text">Знайти</span>
+								<span class="button-icon">
+									<i class="icon icon-arrow-right"></i>
+								</span>
+							</button>
+						</form>
+						<div class="button-cover">
+							<a class="button button-transparent button-round" href="#companyAdvantages" data-scrollto="#companyAdvantages" aria-label="scroll top">
+								<span class="button-icon"><i class="icon icon-arrow-down"></i></span>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- / banner -->
+
+		<!-- company advantages -->
+		<section class="section-spaced section" id="companyAdvantages">
+			<div class="container">
+				<div class="title-group">
+					<div class="section-subtitle">База нерухомості</div>
+					<h2 class="h2-title">RieltorOnline - це</h2>
+				</div>
+				<ul class="clear counter-list collapsed-xs">
+					<li><div class="paragraph">Унікальні об’єкти <br>безпосередньо від власників</div></li>
+					<li><div class="paragraph">Квартири,які будуть <br>здаватись «завтра»</div></li>
+					<li><div class="paragraph">Подвійна перевірка: <br>нейромережа + людина</div></li>
+					<li><div class="paragraph">Ваш захист <br>від шахраїв</div></li>
+				</ul>
+				<div class="divider centered"></div>
+			</div>
+		</section>
+		<!-- / company advantages -->
+
+		<!-- about company -->
+		<section class="section-spaced section" id="companyAbout">
+			<div class="container">
+				<div class="title-group">
+					<div class="section-subtitle">Про нас</div>
+					<h2 class="section-title h2-title">
+						RieltorOnline — це не просто база квартир, а сервіс, створений командою фахівців із багаторічним досвідом у сфері нерухомості
+					</h2>
+				</div>
+				<div class="column-side">
+					<div class="cell">
+						<div class="paragraph">
+							Ми зібрали унікальну базу об’єктів, які здавалися за останні 15 років, і використовуємо нейромережі, щоб уточнювати, коли квартира стане доступною для оренди.
+						</div>
+						<div class="paragraph">
+							Після цього кожен об’єкт додатково перевіряється людиною. Завдяки цьому ми знаємо, які квартири з’являться на ринку заздалегідь.
+						</div>
+					</div>
+					<div class="cell">
+						<div class="paragraph">
+							Оренда квартири — це двостороння угода, тому посередник не потрібен.
+						</div>
+						<div class="paragraph">
+							Ми надаємо можливість напряму зв’язуватися з власниками без комісій. Крім того, ми забезпечуємо підтримку під час оренди — перевіряємо документи власника, надаємо готовий договір оренди та, за потреби, можемо бути присутніми при його підписанні.Таким чином, RieltorOnline захищає вас від шахрайських дій і робить оренду житла чесною, безпечною та прозорою.
+						</div>
+					</div>
+				</div>
+				<div class="align-right">
+					<a href="about.html" class="button button-primary-invert button-arrow full-sm" aria-label="Details">
+						<span class="text">Читати про нас</span>
+						<span class="button-icon">
+							<i class="icon icon-arrow-right"></i>
+						</span>
+					</a>
+				</div>
+			</div>
+		</section>
+		<!-- / about company -->
+
+		<div class="image-section section-dark">
+			<img src="img/home_screen1.png" alt="home screen">
+		</div>
+
+		<!-- company services -->
+		<section class="section-spaced section" id="companyAdvantages">
+			<div class="container">
+				<div class="title-group">
+					<div class="section-subtitle">Наш Сервіс</div>
+					<h2 class="h2-title">Ми гарантуємо прозорість і безпеку</h2>
+				</div>
+				<ul class="clear counter-list with-title collapsed-xs">
+					<li>
+						<h4 class="title">Прозорість</h4>
+						<div class="paragraph">Безпека угоди <br> і відповідальність</div>
+					</li>
+					<li>
+						<h4 class="title">Швидкість</h4>
+						<div class="paragraph">Доступ <br>до унікальних об’єктів</div>
+					</li>
+					<li>
+						<h4 class="title">Безпека</h4>
+						<div class="paragraph">Ранній доступ до квартир ще до ринку</div>
+					</li>
+					<li>
+						<h4 class="title">Довіра</h4>
+						<div class="paragraph">Контакти власників <br>напряму</div>
+					</li>
+				</ul>
+				<div class="divider centered"></div>
+			</div>
+		</section>
+		<!-- / company services -->
+
+		<!-- stages -->
+		<section class="section-spaced section" id="companyStages">
+			<div class="container">
+				<div class="title-group">
+					<div class="section-subtitle">Етапи роботи</div>
+					<h2 class="section-title">
+						Ми цінуємо довіру наших клієнтів, тому забезпечуємо прозорість та комфорт на кожному етапі співпраці:
+					</h2>
+				</div>
+				<ul class="clear progress-list">
+					<li>
+						<div class="progress-inner">
+							<div class="stage">
+								<h4 class="title">Вибір об’єкта</h4>
+								<div class="paragraph">Обери <br>квартиру</div>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="progress-inner">
+							<div class="stage">
+								<h4 class="title">Покупка тарифу</h4>
+								<div class="paragraph">Придбай пакет контактів <br>(1, 10 або 30)</div>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="progress-inner">
+							<div class="stage">
+								<h4 class="title">Відкриття контакту</h4>
+								<div class="paragraph">Натисни «Показати контакти» <br>і отримай дані власника</div>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="progress-inner">
+							<div class="stage">
+								<h4 class="title">Перегляд квартири</h4>
+								<div class="paragraph">Зустрінься <br>з власником</div>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="progress-inner">
+							<div class="stage">
+								<h4 class="title">Підписання договору</h4>
+								<div class="paragraph">Надай нам документи <br>на перевірку</div>
+							</div>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</section>
+		<!-- / stages -->
+
+		<!-- tariffs -->
+		<section class="section-spaced section" id="companyStages">
+			<div class="container">
+				<div class="title-group">
+					<div class="section-subtitle">Прості та зрозумілі тарифи</div>
+					<h2 class="section-title">Оберіть найкращий тариф</h2>
+				</div>
+				@@include('./includes/tariffs.html')
+			</div>
+		</section>
+		<!-- / tariffs -->
+
+		<!-- contact form -->
+		@@include('./includes/contact-section.html')
+		<!-- / contact form -->
+
+	</main>
+
+	<!-- footer -->
+	@@include('./includes/footer-main.html')
+
+	<script src="js/main.js"></script>
+</body>
+</html>

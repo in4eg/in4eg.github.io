@@ -1,0 +1,169 @@
+@import '../variables.scss';
+
+$banner-mask-color: $color-bright-gray;
+
+.banner-cover {
+	height: 100vh;
+	max-height: 100%;
+	position: relative;
+	overflow: hidden;
+	background-color: $banner-mask-color;
+
+	img {
+		position: absolute;
+		top: 0; left: 0;
+		width: 100%; height: 100%;
+		box-sizing: border-box;
+		object-fit: cover;
+		object-position: center;
+		transition: .2s;
+	}
+}
+
+.section.section-banner {
+	position: relative;
+	padding: 0;
+
+	.divider {
+		margin-top: 56px;
+		margin-bottom: 56px;
+	}
+
+	a,
+	button {
+		color: inherit;
+	}
+
+	.caption {
+		position: absolute;
+		bottom: 50px; left: 0;
+		width: 100%;
+		z-index: 1;
+		top: 150px;
+
+		.section-subtitle {
+			margin-bottom: 0;
+		}
+
+		> .container {
+			display: flex;
+			justify-content: center;
+			flex-direction: column;
+			height: 100%;
+		}
+	}
+
+	.search-form  {
+		margin: 56px 0 40px;
+	}
+
+	.button-cover {
+		text-align: right;
+
+		.button-round {
+
+			.button-icon {
+				transition: transform .2s;
+			}
+		}
+	}
+
+	.social {
+		position: absolute;
+		top: 50%; right: 20px;
+		transform: translateY(-50%);
+		z-index: 1;
+
+		a {
+			opacity: 0.8;
+			transition: .2s;
+
+			&:hover {
+				opacity: 1;
+			}
+		}
+	}
+}
+
+@media (max-width: 1199px) {
+
+	.section.section-banner {
+
+		.search-form {
+			margin: 32px 0 24px;
+
+			.selecter .dropdown,
+			.dropdown.opened .dropdown-inner {
+				position: static;
+			}
+		}
+	}
+}
+
+@media (max-width: 993px) {
+
+	.section.section-banner {
+
+		.bottom {
+
+			.col-md-7 {
+				margin-bottom: 32px;
+			}
+		}
+
+		.caption {
+			bottom: 32px; top: 120px;
+		}
+	}
+}
+
+
+@media (max-width: 768px) {
+
+	.section.section-banner {
+		min-height: calc(100vh - 70px);
+
+		.search-form {
+			margin-bottom: 40px;
+		}
+
+		.banner-cover {
+			position: absolute;
+			top: 0; left: 0;
+			bottom: 0; right: 0;
+			height: auto;
+		}
+
+		.caption {
+			position: static;
+			height: 100%;
+			display: flex;
+			flex-direction: column;
+			justify-content: flex-end;
+			padding-top: 80px;
+
+			.button-cover {
+				position: absolute;
+				bottom: 0; right: 24px;
+				transform: translateY(50%);
+			}
+		}
+	}
+
+}
+
+@media (max-width: 375px) {
+
+	.section.section-banner {
+
+		.button.full-sm {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+
+			.button-icon {
+				margin-left: 0;
+			}
+		}
+	}
+}

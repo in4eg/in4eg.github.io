@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+	<meta charset="UTF-8">
+	<title>RieltorOnline :: Telegram-automation Page</title>
+
+	<link rel="icon" type="image/png" href="/favicon/favicon-96x96.png" sizes="96x96">
+	<link rel="icon" type="image/svg+xml" href="/favicon/favicon.svg">
+	<link rel="shortcut icon" href="/favicon/favicon.ico">
+	<link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
+	<meta name="apple-mobile-web-app-title" content="RieltorOnline">
+	<link rel="manifest" href="/favicon/site.webmanifest">
+
+	<meta name="msapplication-TileColor" content="#576F80">
+	<meta name="theme-color" content="#576F80">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+	<meta name="format-detection" content="telephone=no">
+	<meta name="description" content="description">
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+
+	<link rel="stylesheet" href="css/bundle.min.css">
+</head>
+<body id="innerBody">
+	<!-- header -->
+	@@include('./includes/header-main.html')
+	<!-- / header -->
+
+	<!-- class inner-page -->
+	<main class="page-main inner-page" id="pageMain">
+		<!-- breadcrumbs -->
+		<div class="breadcrumbs">
+			<div class="container">
+				<ul class="breadcrumbs-list clear">
+					<li><a href="index.html" class="text" aria-label="main page">Головна</a></li>
+					<li><span class="text">Telegram-автоматизація</span></li>
+				</ul>
+			</div>
+		</div>
+		<!-- / breadcrumbs -->
+
+		<!-- top section -->
+		<section class="section inner-section">
+			<div class="container">
+				<div class="title-group">
+					<div class="section-subtitle secondary">Незабаром</div>
+					<h1 class="h1-title">Отримуй нові квартири одразу в месенджері. Швидко, зручно та без зайвих кроків</h1>
+				</div>
+				<ul class="clear counter-list with-title collapsed-xs">
+					<li>
+						<h4 class="title">Миттєві сповіщення</h4>
+						<div class="paragraph">Отримуй нові об’єкти <br>без затримки</div>
+					</li>
+					<li>
+						<h4 class="title">Фільтри за параметрами</h4>
+						<div class="paragraph">місто, район, <br>бюджет, кімнати</div>
+					</li>
+					<li>
+						<h4 class="title">Економія часу</h4>
+						<div class="paragraph">Все в Telegram,<br> одразу доступно</div>
+					</li>
+					<li>
+						<h4 class="title">Довіра</h4>
+						<div class="paragraph">Відкривай власників <br>напряму </div>
+					</li>
+				</ul>
+				<div class="divider"></div>
+			</div>
+		</section>
+		<!-- / top section -->
+
+		<!-- form section -->
+		<section class="form-section section section-light">
+			<div class="banner-cover">
+				<img src="img/telegram_screen1.png" draggable="false" alt="image">
+			</div>
+			<div class="caption">
+				<div class="container">
+					<form action="#" class="form search-form disabled">
+						<div class="badge">Функціонал з’явиться найближчим часом</div>
+						<!-- 1 -->
+						<div class="form-group select-group">
+							<select name="city" id="city" class="select disabled">
+								<option value="Усі" selected>Усі</option>
+								<option value="Київ">Київ</option>
+								<option value="Харків">Харків</option>
+								<option value="Донецьк">Донецьк</option>
+								<option value="Лівьв">Лівьв</option>
+								<option value="Дніпро">Дніпро</option>
+							</select>
+							<label for="city" class="label">Місто</label>
+						</div>
+						<!-- 2 -->
+						<div class="form-group select-group">
+							<select name="disctrict" id="disctrict" class="select disabled">
+								<option value="Усі" selected>Усі</option>
+								<option value="Дарницький">Дарницький</option>
+								<option value="Голосіївський">Голосіївський</option>
+								<option value="Деснянський">Деснянський</option>
+								<option value="Дніпровський">Дніпровський</option>
+								<option value="Оболонський">Оболонський</option>
+							</select>
+							<label for="disctrict" class="label">Район</label>
+						</div>
+						<!-- 3 -->
+						<div class="form-group range-group">
+							<div class="dropdown disabled" data-dropdown>
+								<div class="dropdown-header">Бюджет</div>
+								<div class="dropdown-inner">
+									<div class="range-group">
+										<div class="range-inputs">
+											<div class="form-group input-group">
+												<label class="label">Від (грн)</label>
+												<input type="number" class="input input-min">
+											</div>
+											<div class="form-group input-group">
+												<label class="label">До (грн)</label>
+												<input type="number" class="input input-max">
+											</div>
+										</div>
+										<div class="range-group">
+											<div class="range"
+												data-min="1000"
+												data-max="20000"
+												data-step="100"
+												data-ticks="5"
+												data-value-min="1000"
+												data-value-max="20000">
+												<input type="range" class="range-min" aria-label="Minimum">
+												<input type="range" class="range-max" aria-label="Maximum">
+												<div class="range-progress">
+													<div class="range-track"></div>
+													<div class="range-fill"></div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<span class="label">Бюджет</span>
+						</div>
+						<!-- submit -->
+						<button type="submit" class="button button-primary-invert button-arrow full-sm disabled" aria-label="submit">
+							<span class="text">Знайти</span>
+							<span class="button-icon">
+								<i class="icon icon-arrow-right"></i>
+							</span>
+						</button>
+					</form>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- / form section -->
+
+
+		<!-- subscribtion -->
+		<section class="contact-section section" id="subscribeForm">
+			<div class="container">
+				<div class="contact-inner">
+					<div class="title-group">
+						<div class="section-subtitle">Telegram-автоматизація</div>
+						<h2 class="section-title-large">Скоро ти зможеш отримувати нові квартири одразу в Telegram</h2>
+					</div>
+					<form action="javascript:void(0)" class="form contact-form validate-form">
+						<div class="form-group input-group">
+							<div class="alert">Не коректний Email</div>
+							<input type="tel" class="input email" id="email" name="email" placeholder="Email">
+							<label for="email" class="label">Ваш Email:</label>
+						</div>
+						<button type="submit" class="button button-secondary-invert button-arrow button-block full-sm">
+							<span class="text">Дізнатись першим</span>
+							<span class="button-icon">
+								<i class="icon icon-arrow-right"></i>
+							</span>
+						</button>
+					</form>
+				</div>
+			</div>
+		</section>
+		<!-- / subscribtion -->
+
+		<!-- contact form -->
+		@@include('./includes/contact-section.html')
+		<!-- / contact form -->
+
+	</main>
+
+
+	<!-- footer -->
+	@@include('./includes/footer-main.html')
+	<!-- / footer -->
+
+	<script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,108 @@
+@import '../variables.scss';
+
+.accordeon {
+	border-bottom: 1px solid $color-light-silver;
+	padding: 16px 0;
+	position: relative;
+
+	&:before {
+		content: '';
+		position: absolute;
+		bottom: -1px; left: 0;
+		width: 100%; height: 1px;
+		margin-top: -1px;
+		background-color: $color-primary;
+		transform-origin: center;
+		transition: .3s;
+		transform: scaleX(0.7);
+		opacity: 0;
+		z-index: 1;
+	}
+
+	.accordeon-title {
+		cursor: pointer;
+		position: relative;
+
+		&:after {
+			content: '\e915';
+			font-family: 'icomoon';
+			position: absolute;
+			right: 0; top: 50%;
+			transform: translateY(-50%);
+		}
+	}
+
+	.accordeon-inner {
+		display: none;
+		opacity: 0;
+		will-change: max-height;
+		padding-top: 16px;
+		transition: 0.3s ease-out;
+	}
+
+	.search-tooltip {
+		position: absolute;
+		left: 16px; bottom: 0;
+		padding: 3px 7px;
+		font-size: 12px;
+		opacity: 0;
+		transform: translateY(5px);
+		transition: .3s;
+		background-color: $color-primary-hover;
+		bottom: 100%;
+		left: 0;
+
+		&:after {
+			content: '';
+			position: absolute;
+			width: 0; height: 0;
+			top: 100%; left: 50%;
+			transform: translateX(-50%);
+			border-left: 8px solid transparent;
+			border-right: 8px solid transparent;
+			border-top: 8px solid $color-primary-hover;
+			clear: both;
+		}
+	}
+
+	.item-title {
+		font-size: var(--h2-subtitle-font-size);
+		font-weight: 400;
+		text-transform: uppercase;
+		padding-right: 32px;
+	}
+
+
+	&.active {
+
+		.accordeon-inner {
+			display: block;
+			opacity: 1;
+		}
+
+		.item-title { color: $color-primary; }
+
+		.accordeon-title:after {
+			content: "\e912";
+		}
+	}
+
+
+	&:hover {
+
+		.item-title { color: $color-primary; }
+
+		&:before {
+			transform: scaleX(1);
+			opacity: 1;
+		}
+	}
+}
+
+.accordeon.success {
+
+	.search-tooltip {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}

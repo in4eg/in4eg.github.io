@@ -1,0 +1,259 @@
+@import '../variables.scss';
+
+.tariffs-cards {
+	display: flex;
+	gap: $column-gap;
+	flex-direction: row;
+	align-items: stretch;
+	width: 100%;
+
+	.tariff-item {
+		flex: 1;
+		background-color: $color-cultured;
+		padding: 32px 48px;
+		position: relative;
+		text-align: center;
+
+		&.popular {
+			background-color: $color-seashell;
+		}
+
+		.badge {
+			position: absolute;
+			left: 32px; top: -18px;
+		}
+
+		.top {
+			text-align: center;
+			padding-bottom: 32px;
+			margin-bottom: 32px;
+			border-bottom: 1px solid $color-light-silver;
+
+			img {
+				height: 64px; width: 64px;
+				margin-bottom: 16px;
+			}
+
+			.title {
+				font-size: $h2-font-size;
+			}
+		}
+
+		svg { transition: .2s; }
+
+		.theme-text {
+			margin-top: 32px;
+		}
+
+		.price {
+			text-align: center;
+			font-size: $h1-font-size;
+			font-weight: bold;
+		}
+
+		.button {
+			margin: 32px 0;
+		}
+
+		.tariff-list {
+			text-align: left;
+			display: inline-block;
+		}
+	}
+}
+
+.tariff-item:hover {
+
+	.animated-rotate {
+		transform-origin: center;
+		animation: spin 4s linear infinite;
+		fill: $color-secondary;
+	}
+
+	.square {
+
+		rect {
+			transition: fill 0.5s ease;
+		}
+
+		rect:nth-of-type(1) {
+			animation: color-cycle 4s infinite;
+			animation-delay: 0s;
+		}
+
+		rect:nth-of-type(2) {
+			animation: color-cycle 4s infinite;
+			animation-delay: 1s;
+		}
+
+		rect:nth-of-type(3) {
+			animation: color-cycle 4s infinite;
+			animation-delay: 2s;
+		}
+
+		rect:nth-of-type(4) {
+			animation: color-cycle 4s infinite;
+			animation-delay: 3s;
+		}
+	}
+}
+
+@keyframes spin {
+
+	from {
+		transform: rotate(0deg);
+	}
+
+	to {
+		transform: rotate(360deg);
+	}
+}
+
+@keyframes color-cycle {
+
+	0%, 100% { fill: #576F80; }
+
+	50% { fill: #D7957D; }
+}
+
+
+
+@media (max-width: 1440px) {
+
+	.tariffs-cards {
+
+		.tariff-item {
+			padding: 32px;
+
+			.badge { top: -12px; }
+		}
+	}
+}
+
+@media (max-width: 1199px) {
+
+	.tariffs-cards {
+		justify-content: center;
+
+		.tariff-item {
+			padding: 32px 24px;
+
+			.theme-text {
+				margin-top: 24px;
+			}
+
+			.top {
+				margin-bottom: 24px;
+				padding-bottom: 24px;
+
+				.title {
+					font-size: var(--h3-font-size);
+				}
+			}
+
+			.price {
+				font-size: var(--h2-font-size);
+			}
+
+			.button {
+				margin: 24px 0;
+			}
+		}
+	}
+}
+
+@media (max-width: 993px) {
+
+	.tariffs-cards {
+		flex-direction: column;
+
+		.tariff-item {
+			display: flex;
+			gap: 24px;
+
+			.top {
+				padding-bottom: 0;
+				margin-bottom: 0;
+				border-bottom: 0;
+				padding-right: 24px;
+				border-right: 1px solid $color-light-silver;
+				flex-basis: 40%;
+
+				.title {
+					font-size: var(--h1-font-size);
+				}
+			}
+
+			.price {
+				text-align: left;
+			}
+
+			.bottom {
+				display: flex;
+				flex-direction: column;
+				flex-basis: 60%;
+				position: relative;
+				gap: 24px;
+				padding-bottom: 80px;
+
+				.button {
+					display: block;
+					width: 100%;
+					margin: 0;
+					position: absolute;
+					bottom: 0;
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: 768px) {
+
+	.tariffs-cards {
+
+		.tariff-item {
+
+			.top {
+				flex-basis: 50%;
+			}
+
+			.bottom {
+				flex-basis: 50%;
+			}
+		}
+	}
+}
+
+@media (max-width: 640px) {
+
+	.tariffs-cards {
+
+		.tariff-item {
+			flex-direction: column;
+			gap: 16px;
+
+			.top {
+				padding-right: 0;
+				border-right: 0;
+				padding-bottom: 24px;
+				border-bottom: 1px solid $color-light-silver;
+			}
+
+			.theme-text {
+				margin-top: 16px;
+				font-size: var(--font-size-small);
+			}
+
+			.price {
+				font-size: calc(var(--h1-font-size)*1.4);
+				text-align: center;
+				font-weight: bold;
+			}
+
+			.bottom {
+				gap: 16px;
+			}
+		}
+	}
+}

@@ -1,0 +1,155 @@
+@import '../variables.scss';
+
+.contact-section {
+	padding-top: 0;
+
+	&.section-dark {
+
+		.contact-inner {
+			padding-top: 64px;
+			background-image: url(../img/mask-logo.png);
+			background-size: contain;
+			background-position: right top;
+			background-repeat: no-repeat;
+		}
+	}
+
+	.title-side {
+		margin-bottom: 25px;
+	}
+
+	.section-title {
+		max-width: none;
+	}
+
+	.subtitle {
+		margin-bottom: 0;
+	}
+}
+
+.contact-inner {
+
+	.contact-form {
+		max-width: 592px;
+	}
+}
+
+.contact-line {
+	padding-bottom: 64px;
+
+	.location-link {
+		display: inline-block;
+		vertical-align: middle;
+		white-space: nowrap;
+
+		.icon {
+			font-size: 24px;
+			display: inline-block;
+			vertical-align: middle;
+			margin-right: 12px;
+		}
+
+		.text {
+			font-size: var(--font-size-large);
+			line-height: 24px;
+			display: inline-block;
+			vertical-align: middle;
+		}
+
+		&:hover {
+			color: $color-secondary;
+		}
+	}
+
+	.social-cell {
+		text-align: right;
+	}
+}
+
+.unordered-list.contact-list {
+	margin-bottom: 0;
+
+	.stage .title {
+		width: 100%;
+	}
+
+	.paragraph br {
+		display: block;
+	}
+}
+
+.social-list-small {
+	display: inline-block;
+	vertical-align: middle;
+	font-size: 0;
+
+	li {
+		display: inline-block;
+		vertical-align: middle;
+		margin-right: 16px;
+
+		&:last-child { margin-right: 0; }
+	}
+
+	a {
+		font-size: 24px;
+		height: 24px; width: 24px;
+		color: $color-dark;
+		text-align: center;
+		line-height: 24px;
+
+		&:hover {
+			color: $color-secondary;
+		}
+	}
+}
+
+@media (max-width: 1199px) {
+
+	.section.contact-section {
+		padding-top: 0;
+
+		.contact-inner {
+			padding-top: 40px;
+			background-size: 315px;
+		}
+	}
+
+	.social-list-small {
+		margin-top: 8px;
+	}
+
+	.contact-inner {
+
+		.contact-form {
+			max-width: 450px;
+		}
+	}
+}
+
+
+@media (max-width: 993px) {
+
+	.section.contact-section {
+
+		.contact-form {
+			max-width: 100%;
+		}
+	}
+
+	.contact-inner {
+
+		.contact-form {
+			max-width: 100%;
+		}
+	}
+
+	.contact-line {
+		padding-bottom: 32px;
+
+		.social-cell {
+			text-align: left;
+			margin-top: 32px;
+		}
+	}
+}

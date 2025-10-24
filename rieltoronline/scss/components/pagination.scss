@@ -1,0 +1,102 @@
+@import '../variables.scss';
+
+$pagination-size: 44px;
+
+:root {
+	--pagination-size: #{$pagination-size}
+}
+
+.pagination {
+	margin-top: 64px;
+
+	.top {
+		text-align: center;
+		margin-bottom: 32px;
+	}
+
+	.caption {
+		margin-top: 16px;
+		font-size: var(--font-size-small);
+	}
+
+	.pagination-nav {
+		$gap: 8px;
+
+		justify-content: center;
+		display: flex;
+		flex-wrap: wrap;
+		gap: $gap;
+
+		a {
+			color: $color-dark;
+			font-size: var(--font-size-small);
+			height: var(--pagination-size); width: var(--pagination-size);
+			border: 1px solid $color-platinum;
+			text-align: center;
+			line-height: var(--pagination-size);
+			border-radius: 50%;
+
+			.icon {
+				font-size: 32px;
+
+				&:before {
+					position: relative;
+					top: 6px;
+				}
+			}
+
+			&.active {
+				background-color: $color-primary;
+				color: $color-white;
+			}
+
+			&:hover:not(.active) {
+				color: $color-primary;
+				border-color: $color-primary-hover;
+			}
+
+			&.disabled {
+				color: $color-spanish-gray;
+				background-color: $color-cultured;
+				color: $color-spanish-gray;
+				pointer-events: none;
+			}
+		}
+
+		span {
+			color: $color-primary;
+			font-size: var(--font-size);
+			height: var(--pagination-size); width: var(--pagination-size);
+			border: 1px solid $color-secondary;
+			text-align: center;
+			line-height: var(--pagination-size);
+			cursor: default;
+		}
+	}
+}
+
+@media (max-width: 1199px) {
+
+	.pagination {
+		margin-top: 40px;
+	}
+}
+
+@media (max-width: 993px) {
+
+	$pagination-size: 40px;
+
+	:root {
+		--pagination-size: #{$pagination-size}
+	}
+
+	.pagination {
+
+		.pagination-nav {
+
+			a .icon {
+				font-size: 24px;
+			}
+		}
+	}
+}

@@ -1,0 +1,177 @@
+/*primary font*/
+$font: "Inter", sans-serif;
+
+/* typography */
+$font-size: 20px;
+$font-size-small: 16px;
+
+$h1-font-size: 56px;
+$h2-font-size: 40px;
+$h2-subtitle-font-size: 20px;
+$h3-font-size: 36px;
+$h4-font-size: 32px;
+$h5-font-size: 24px;
+$subtitle-font-size: 18px;
+$buttons-font-size: 16px;
+
+$color-dark-electric-blue: #576F80;
+$color-cadet-grey: #A1B1BE;
+$color-light-silver: #D3D8D8;
+$color-cultured: #F6F7F8;
+$color-bright-gray: #E3E7ED;
+$color-lotion: #FDFDFD;
+$color-lotion-transparent: rgba($color-lotion, 0.5);
+$color-chinese-black: #131516;
+$color-gray: #7C7C7C;
+$color-spanish-gray: #999999;
+$color-platinum: #E8E8E8;
+$color-antique-brass: #D7957D;
+$color-dark-vanilla: #D5B3A6;
+$color-seashell: #FDF3EF;
+
+$color-error: #B13F3F;
+$color-success: #1C744B;
+
+
+/* colors theme */
+$color-primary: $color-dark-electric-blue;
+$color-primary-hover: $color-cadet-grey;
+
+$color-secondary: $color-antique-brass;
+$color-secondary-hover: $color-dark-vanilla;
+
+$color-white: $color-lotion;
+$color-white-clear: #ffffff;
+
+$color-dark: $color-chinese-black;
+$color-light: $color-light-silver;
+
+$color-info: $color-spanish-gray;
+$color-red: $color-error;
+$color-green: $color-success;
+
+
+/* pages */
+$body-background-color: $color-lotion;
+$gap: 8px;
+$column-gap: 24px;
+$popup-background: $color-lotion;
+$close-button-hover: $color-red;
+$text-color: $color-dark;
+
+:root {
+	--font-size: #{$font-size};
+	--font-size-small: #{$font-size-small};
+
+	--h1-font-size: #{$h1-font-size};
+	--h2-font-size: #{$h2-font-size};
+	--h2-subtitle-font-size: #{$h2-subtitle-font-size};
+	--h3-font-size: #{$h3-font-size};
+	--h4-font-size: #{$h4-font-size};
+	--h5-font-size: #{$h5-font-size};
+	--subtitle-font-size: #{$subtitle-font-size};
+	--buttons-font-size: #{$buttons-font-size};
+
+	--gap: #{$gap};
+	--column-gap: #{$column-gap};
+}
+
+
+@mixin background-blur(){
+	background-color: rgba($color-white, 0.5);
+	backdrop-filter: blur(22px);
+}
+
+@mixin placeholder($color){
+	&::-webkit-input-placeholder {
+		color: #{$color};
+	}
+	&:-moz-placeholder {
+		color: #{$color};
+	}
+	&::-moz-placeholder {
+		color: #{$color};
+	}
+	&:-ms-input-placeholder {
+		color: #{$color};
+	}
+}
+
+@media (max-width: 1440px) {
+
+	$font-size: 18px;
+	$font-size-small: 14px;
+	$h2-subtitle-font-size: 18px;
+
+	:root {
+		--font-size: #{$font-size};
+		--font-size-small: #{$font-size-small};
+		--h2-subtitle-font-size: #{$h2-subtitle-font-size};
+	}
+}
+
+@media (max-width: 1199px) {
+	$h1-font-size: 48px;
+	$h2-font-size: 38px;
+	$h2-subtitle-font-size: 18px;
+	$h3-font-size: 32px;
+	$h4-font-size: 30px;
+	$h5-font-size: 22px;
+	$font-size: 16px;
+
+	:root {
+		--font-size: #{$font-size};
+		--h1-font-size: #{$h1-font-size};
+		--h2-font-size: #{$h2-font-size};
+		--h2-subtitle-font-size: #{$h2-subtitle-font-size};
+		--h3-font-size: #{$h3-font-size};
+		--h4-font-size: #{$h4-font-size};
+		--h5-font-size: #{$h5-font-size};
+	}
+}
+
+@media (max-width: 993px) {
+	$h1-font-size: 40px;
+	$h2-font-size: 32px;
+	$h3-font-size: 24px;
+	$h4-font-size: 20px;
+	$h2-subtitle-font-size: 16px;
+
+	:root {
+		--h1-font-size: #{$h1-font-size};
+		--h2-font-size: #{$h2-font-size};
+		--h3-font-size: #{$h3-font-size};
+		--h4-font-size: #{$h4-font-size};
+		--h2-subtitle-font-size: #{$h2-subtitle-font-size};
+	}
+}
+
+@media (max-width: 768px) {
+	$h1-font-size: 32px;
+	$h2-font-size: 24px;
+	$h3-font-size: 20px;
+	$h4-font-size: 18px;
+	$h2-subtitle-font-size: 14px;
+
+	:root {
+		--h1-font-size: #{$h1-font-size};
+		--h2-font-size: #{$h2-font-size};
+		--h3-font-size: #{$h3-font-size};
+		--h4-font-size: #{$h4-font-size};
+		--h2-subtitle-font-size: #{$h2-subtitle-font-size};
+	}
+}
+
+@media (max-width: 640px) {
+	$h1-font-size: 28px;
+	$h2-font-size: 20px;
+	$h3-font-size: 18px;
+	$buttons-font-size: 14px;
+
+	:root {
+		--h1-font-size: #{$h1-font-size};
+		--h2-font-size: #{$h2-font-size};
+		--h3-font-size: #{$h3-font-size};
+		--buttons-font-size: #{$buttons-font-size};
+	}
+}

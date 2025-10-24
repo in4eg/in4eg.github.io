@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+	<meta charset="UTF-8">
+	<title>RieltorOnline :: Contacts Page</title>
+
+	<link rel="icon" type="image/png" href="/favicon/favicon-96x96.png" sizes="96x96">
+	<link rel="icon" type="image/svg+xml" href="/favicon/favicon.svg">
+	<link rel="shortcut icon" href="/favicon/favicon.ico">
+	<link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
+	<meta name="apple-mobile-web-app-title" content="RieltorOnline">
+	<link rel="manifest" href="/favicon/site.webmanifest">
+
+	<meta name="msapplication-TileColor" content="#576F80">
+	<meta name="theme-color" content="#576F80">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+	<meta name="format-detection" content="telephone=no">
+	<meta name="description" content="description">
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+
+	<link rel="stylesheet" href="css/bundle.min.css">
+</head>
+<body id="innerBody">
+	<!-- header -->
+	@@include('./includes/header-main.html')
+	<!-- / header -->
+	<!-- class inner-page -->
+	<main class="page-main inner-page" id="pageMain">
+		<!-- breadcrumbs -->
+		<div class="breadcrumbs">
+			<div class="container">
+				<ul class="breadcrumbs-list clear">
+					<li><a href="index.html" class="text" aria-label="main page">Головна</a></li>
+					<li><span class="text">Контакти</span></li>
+				</ul>
+			</div>
+		</div>
+		<!-- / breadcrumbs -->
+
+		<section class="inner-section section" id="companyAbout">
+			<div class="container">
+				<div class="title-group">
+					<div class="section-subtitle">Завжди на зв’язку</div>
+					<h1 class="h1-title">Наші контакти</h1>
+				</div>
+				<div class="contact-line">
+					<div class="row bottom-xs">
+						<div class="col-xs-12 col-sm-9">
+							<div class="paragraph">
+								Київ, Україна, 01001<br>
+								БЦ Valmi (Валмі), вул. Новокостянтинівська 2, поверх 10, офіс 12
+							</div>
+						</div>
+						<div class="col-xs-12 col-sm-3 social-cell">
+							<a href="https://maps.app.goo.gl/ADGAAGm1zN52QRfp8" class="location-link" target="_blank" rel="noopener noreferrer" aria-label="maps link">
+								<i class="icon icon-map"></i>
+								<span class="text">Як дістатися?</span>
+							</a>
+						</div>
+					</div>
+				</div>
+				<div class="divider centered"></div>
+				<ul class="clear unordered-list contact-list">
+					<li class="vertical-top">
+						<div class="stage">
+							<div class="title">Номера телефонів:</div>
+							<div class="paragraph">
+								<a href="tel:+3800500000000" class="link block-link">+380 (050) 000 00 00</a>
+								<a href="tel:+3800502222222" class="link block-link">+380 (050) 222 22 22</a>
+							</div>
+						</div>
+					</li>
+					<li class="vertical-top">
+						<div class="stage">
+							<div class="title">E-mail:</div>
+							<div class="paragraph">
+									<a href="mailto:rieltoronline@rieltoronline.com" class="link block-link">rieltoronline@rieltoronline.com</a>
+									<a href="mailto:info@rieltoronline.com" class="link block-link">info@rieltoronline.com</a>
+							</div>
+						</div>
+					</li>
+					<li class="vertical-top">
+						<div class="stage">
+							<div class="title">Ми працюємо:</div>
+							<div class="paragraph">
+								Понеділок - Пʼятниця <br>
+								09:30 - 19:00
+							</div>
+						</div>
+					</li>
+					<li class="vertical-top">
+						<div class="stage">
+							<div class="title">Ми онлайн:</div>
+							<div class="paragraph">
+								<ul class="social-list-small clear">
+									<li><a href="#" target="_blank" aria-label="social link"><i class="icon icon-insta"></i></a></li>
+									<li><a href="#" target="_blank" aria-label="social link"><i class="icon icon-threads"></i></a></li>
+									<li><a href="#" target="_blank" aria-label="social link"><i class="icon icon-telegram"></i></a></li>
+								</ul>
+							</div>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</section>
+
+		<!-- contact form -->
+		@@include('./includes/contact-section-large.html')
+		<!-- / contact form -->
+
+	</main>
+
+	<!-- footer -->
+	@@include('./includes/footer-main.html')
+	<!-- / footer -->
+
+	<script src="js/main.js"></script>
+</body>
+</html>

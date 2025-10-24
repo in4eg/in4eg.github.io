@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+	<meta charset="UTF-8">
+	<title>RieltorOnline :: Personal Account Page</title>
+
+	<link rel="icon" type="image/png" href="/favicon/favicon-96x96.png" sizes="96x96">
+	<link rel="icon" type="image/svg+xml" href="/favicon/favicon.svg">
+	<link rel="shortcut icon" href="/favicon/favicon.ico">
+	<link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
+	<meta name="apple-mobile-web-app-title" content="RieltorOnline">
+	<link rel="manifest" href="/favicon/site.webmanifest">
+
+	<meta name="msapplication-TileColor" content="#576F80">
+	<meta name="theme-color" content="#576F80">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+	<meta name="format-detection" content="telephone=no">
+	<meta name="description" content="description">
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+
+	<link rel="stylesheet" href="css/bundle.min.css">
+</head>
+<body id="innerBody">
+	<!-- header -->
+	@@include('./includes/header-main.html')
+	<!-- / header -->
+	<!-- class inner-page -->
+	<!-- class auto-height -->
+	<main class="page-main inner-page auto-height" id="pageMain">
+		<!-- breadcrumbs -->
+		<div class="breadcrumbs">
+			<div class="container">
+				<ul class="breadcrumbs-list clear">
+					<li><a href="index.html" class="text" aria-label="main page">Головна</a></li>
+					<li><span class="text">Мій кабінет</span></li>
+				</ul>
+			</div>
+		</div>
+		<!-- / breadcrumbs -->
+
+		<!-- section-->
+		<section class="section">
+			<div class="container">
+				<div class="background-inner">
+					<div class="title-group">
+						<div class="section-subtitle">Вхід в кабінет</div>
+						<h2 class="section-title-large">Відновлення паролю</h2>
+					</div>
+					<div class="step-cover">
+						<!-- add class .active on page load -->
+						<div class="step step-1 active">
+							<div class="step-title">Крок 1/2</div>
+							<div class="step-helper">
+								Введіть свій номер телефону нижче. Ми надішлемо вам SMS із тимчасовим паролем для входу в систему. Після входу ви зможете змінити його на власний у налаштуваннях.
+							</div>
+							<div class="contact-inner">
+								<form action="javascript:void(0)" class="form contact-form validate-form">
+									<div class="form-group input-group">
+										<div class="alert">Не коректний телефон</div>
+										<input type="tel" class="input phone" id="phone" name="phone" placeholder="+38 (0__) ___ __ __">
+										<label for="phone" class="label">Ваш телефон:</label>
+									</div>
+									<button type="submit" class="button button-primary button-arrow button-block full-sm">
+										<span class="text">Отримати код</span>
+										<span class="button-icon">
+											<i class="icon icon-arrow-right"></i>
+										</span>
+									</button>
+								</form>
+							</div>
+						</div>
+						<!-- add class .active on form serialization callback -->
+						<div class="step step-2">
+							<div class="step-title">Крок 2/2</div>
+							<div class="step-helper">
+								Тимчасовий пароль відправлено на ваш номер телефону. Будь ласка, введіть його у форму для підтвердження доступу.
+							</div>
+							<div class="contact-inner">
+								<form action="javascript:void(0)" class="form contact-form validate-form">
+									<div class="form-group input-group-number">
+										<input type="number" class="input number-single-input" maxlength="1">
+										<input type="number" class="input number-single-input" maxlength="1">
+										<input type="number" class="input number-single-input" maxlength="1">
+										<input type="number" class="input number-single-input" maxlength="1">
+										<input type="number" class="input number-single-input" maxlength="1">
+										<input type="number" class="input number-single-input" maxlength="1">
+									</div>
+									<button type="submit" class="button button-primary button-arrow button-block full-sm">
+										<span class="text">Підтвердити</span>
+										<span class="button-icon">
+											<i class="icon icon-arrow-right"></i>
+										</span>
+									</button>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- / section-->
+	</main>
+
+
+	<!-- footer -->
+	@@include('./includes/footer-main.html')
+	<!-- /footer -->
+	<script src="js/main.js"></script>
+
+	<script>
+		window.onFormSubmit = function() {
+			const step1 = document.querySelector(".step-1");
+			const step2 = document.querySelector(".step-2");
+			const form = step1.querySelector("form");
+
+			const allGroups = form.querySelectorAll(".form-group");
+			const allSuccess = Array.from(allGroups).every(group => 
+				group.classList.contains("success")
+			);
+
+			if (allSuccess) {
+				step1.classList.remove("active");
+				step2.classList.add("active");
+			}
+		};
+	</script>
+
+</body>
+</html>

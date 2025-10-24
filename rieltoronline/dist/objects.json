@@ -1,0 +1,155 @@
+[
+	{
+		"link": "object.html",
+		"image": "img/temp/obj1.jpg",
+		"date": "від 11.07.2025",
+		"title": "вул. Липницька, буд. 9",
+		"location": "Київ, Баришівка",
+		"details": "5 кімнат, 15 соток, 208м2",
+		"price": "7 202 210 грн"
+	},
+	{
+		"link": "object.html",
+		"image": "img/temp/obj2.jpg",
+		"date": "від 15.07.2025",
+		"title": "просп. Перемоги, буд. 45",
+		"location": "Київ, Святошин",
+		"details": "3 кімнати, 8 соток, 120м2",
+		"price": "3 800 000 грн"
+	},
+	{
+		"link": "object.html",
+		"image": "img/temp/obj3.jpg",
+		"date": "від 20.07.2025",
+		"title": "вул. Соборна, буд. 17",
+		"location": "Львів, Залізничний",
+		"details": "4 кімнати, 10 соток, 160м2",
+		"price": "5 150 000 грн"
+	},
+	{
+		"link": "object.html",
+		"image": "img/temp/obj4.jpg",
+		"date": "від 25.07.2025",
+		"title": "пров. Шевченка, буд. 3",
+		"location": "Одеса, Малиновський",
+		"details": "2 кімнати, 5 соток, 95м2",
+		"price": "2 950 000 грн"
+	},
+	{
+		"link": "object.html",
+		"image": "img/temp/obj5.jpg",
+		"date": "від 28.07.2025",
+		"title": "вул. Франка, буд. 10",
+		"location": "Харків, Шевченківський",
+		"details": "6 кімнат, 20 соток, 250м2",
+		"price": "8 750 000 грн"
+	},
+	{
+		"link": "object.html",
+		"image": "img/temp/obj6.jpg",
+		"date": "від 30.07.2025",
+		"title": "вул. Грушевського, буд. 8",
+		"location": "Дніпро, Амур-Нижньодніпровський",
+		"details": "4 кімнати, 12 соток, 180м2",
+		"price": "4 600 000 грн"
+	},
+	{
+		"link": "object.html",
+		"image": "img/temp/obj5.jpg",
+		"date": "від 02.08.2025",
+		"title": "вул. Шевченка, буд. 21",
+		"location": "Чернівці, Центр",
+		"details": "3 кімнати, 7 соток, 140м2",
+		"price": "3 950 000 грн"
+	},
+	{
+		"link": "object.html",
+		"image": "img/temp/obj1.jpg",
+		"date": "від 05.08.2025",
+		"title": "вул. Незалежності, буд. 12",
+		"location": "Івано-Франківськ, Пасічна",
+		"details": "5 кімнат, 18 соток, 210м2",
+		"price": "6 700 000 грн"
+	},
+	{
+		"link": "object.html",
+		"image": "img/temp/obj4.jpg",
+		"date": "від 08.08.2025",
+		"title": "просп. Миру, буд. 4",
+		"location": "Запоріжжя, Вознесенівський",
+		"details": "4 кімнати, 9 соток, 170м2",
+		"price": "4 200 000 грн"
+	},
+	{
+		"link": "object.html",
+		"image": "img/temp/obj5.jpg",
+		"date": "від 10.08.2025",
+		"title": "вул. Кобзаря, буд. 6",
+		"location": "Полтава, Київський",
+		"details": "2 кімнати, 6 соток, 100м2",
+		"price": "2 350 000 грн"
+	},
+	{
+		"link": "object.html",
+		"image": "img/temp/obj2.jpg",
+		"date": "від 12.08.2025",
+		"title": "вул. Хмельницького, буд. 14",
+		"location": "Рівне, Центр",
+		"details": "3 кімнати, 8 соток, 135м2",
+		"price": "3 400 000 грн"
+	},
+	{
+		"link": "object.html",
+		"image": "img/temp/obj5.jpg",
+		"date": "від 15.08.2025",
+		"title": "вул. Сагайдачного, буд. 7",
+		"location": "Чернігів, Деснянський",
+		"details": "4 кімнати, 10 соток, 160м2",
+		"price": "4 100 000 грн"
+	},
+	{
+		"link": "object.html",
+		"image": "img/temp/obj4.jpg",
+		"date": "від 17.08.2025",
+		"title": "вул. Дорошенка, буд. 25",
+		"location": "Тернопіль, Східний",
+		"details": "5 кімнат, 14 соток, 200м2",
+		"price": "5 800 000 грн"
+	},
+	{
+		"link": "object.html",
+		"image": "img/temp/obj3.jpg",
+		"date": "від 19.08.2025",
+		"title": "вул. Героїв, буд. 11",
+		"location": "Вінниця, Замостя",
+		"details": "3 кімнати, 9 соток, 145м2",
+		"price": "3 650 000 грн"
+	},
+	{
+		"link": "object.html",
+		"image": "img/temp/obj2.jpg",
+		"date": "від 21.08.2025",
+		"title": "вул. Князя Острозького, буд. 30",
+		"location": "Луцьк, Центр",
+		"details": "6 кімнат, 19 соток, 260м2",
+		"price": "7 900 000 грн"
+	},
+	{
+		"link": "object.html",
+		"image": "img/temp/obj1.jpg",
+		"date": "від 23.08.2025",
+		"title": "вул. Гагаріна, буд. 2",
+		"location": "Херсон, Дніпровський",
+		"details": "4 кімнати, 11 соток, 175м2",
+		"price": "4 500 000 грн"
+	},
+	{
+		"link": "object.html",
+		"image": "img/temp/obj4.jpg",
+		"date": "від 17.08.2025",
+		"title": "вул. Дорошенка, буд. 25",
+		"location": "Тернопіль, Східний",
+		"details": "5 кімнат, 14 соток, 200м2",
+		"price": "5 800 000 грн"
+	}
+]

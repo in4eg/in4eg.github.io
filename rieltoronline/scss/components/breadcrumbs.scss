@@ -1,0 +1,54 @@
+@import '../variables.scss';
+
+.breadcrumbs-list {
+	$gap: 32px;
+
+	display: flex;
+	flex-wrap: wrap;
+
+
+	li {
+		font-size: var(--font-size-small);
+		position: relative;
+		line-height: 1;
+		margin-right: $gap;
+
+		&:after {
+			position: absolute;
+			content: '';
+			background-color: $color-primary;
+			width: 1px; height: 100%;
+			right: calc($gap/2*-1); top: 0;
+		}
+
+		&:last-child {
+			margin-right: 0;
+
+			&:after { display: none; }
+		}
+	}
+
+	.text {
+		line-height: 1;
+		display: inline-block;
+	}
+
+	span.text {
+		color: $color-primary;
+		cursor: default;
+	}
+
+	a.text:hover {
+		color: $color-primary;
+	}
+}
+
+@media (max-width: 768px) {
+
+
+}
+
+@media (max-width: 420px) {
+
+
+}

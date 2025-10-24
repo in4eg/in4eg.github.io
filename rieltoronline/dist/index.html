@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+	<meta charset="UTF-8">
+	<title>RieltorOnline :: Main Page</title>
+
+	<link rel="icon" type="image/png" href="/favicon/favicon-96x96.png" sizes="96x96">
+	<link rel="icon" type="image/svg+xml" href="/favicon/favicon.svg">
+	<link rel="shortcut icon" href="/favicon/favicon.ico">
+	<link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
+	<meta name="apple-mobile-web-app-title" content="RieltorOnline">
+	<link rel="manifest" href="/favicon/site.webmanifest">
+
+	<meta name="msapplication-TileColor" content="#576F80">
+	<meta name="theme-color" content="#576F80">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+	<meta name="format-detection" content="telephone=no">
+	<meta name="description" content="description">
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+
+	<link rel="stylesheet" href="css/bundle.min.css">
+</head>
+<body id="innerBody">
+	<!-- header -->
+	<header class="main-header light fixed" id="mainHeader" data-scroll-check=".section-dark">
+	<div class="container">
+		<div class="header-container" id="headerContainer">
+			<div class="left-side">
+				<div class="logo-cover">
+					<a href="index.html" class="logo light-theme" aria-label="main page"><img src="img/logo.svg" alt="logo" draggable="false" aria-label="main page"></a>
+					<a href="index.html" class="logo dark-theme" aria-label="main page"><img src="img/logo.svg" alt="logo" draggable="false" aria-label="main page"></a>
+				</div>
+				<div class="language">
+					<div class="dropdown-select">
+						<div class="title item">Укр</div>
+						<div class="inner">
+							<a href="#" class="item" aria-label="eng">Eng</a>
+							<a href="#" class="item" aria-label="ru">Рус</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<nav class="header-navigation" id="mainNavigation">
+				<div class="inner">
+					<ul class="clear" data-hover-show="#menuResult" data-escape-container="#mainHeader">
+						<!-- class .active for active link -->
+						<li><a href="about.html" aria-label="detail link" class="active"><span class="text">Про нас</span></a></li>
+						<li><a href="catalog.html" aria-label="detail link"><span class="text">Каталог</span></a></li>
+						<li><a href="works.html" aria-label="detail link"><span class="text">Як це працює</span></a></li>
+						<li><a href="telegram.html" aria-label="detail link"><span class="text">Telegram-автоматизація</span></a></li>
+						<li><a href="tarif.html" aria-label="detail link"><span class="text">Тарифи</span></a></li>
+						<li><a href="blog.html" aria-label="detail link"><span class="text">Блог</span></a></li>Блог
+						<li><a href="faq.html" aria-label="detail link"><span class="text">FAQ</span></a></li>
+						<li><a href="contacts.html" aria-label="detail link"><span class="text">Контакти</span></a></li>
+					</ul>
+					<!-- BOTTOM -->
+					<!-- VISIBLE ONLY <= 768 -->
+					<!-- language for mobile -->
+					<div class="mobile-bottom">
+						<div class="bordered-top">
+							<div class="language-mobile">
+								<div class="dropdown" data-dropdown>
+									<div class="dropdown-header"><div class="item">Українська</div></div>
+									<div class="dropdown-inner origin-top">
+										<a href="#" class="item" aria-label="eng">English</a>
+										<a href="#" class="item" aria-label="ru">Русский</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- / language for mobile -->
+			</nav>
+			<div class="right-side">
+				<!-- user header menu -->
+				<div class="user-cover">
+					<a href="#" class="favourites-link round-link">
+						<i class="icon icon-heart-empty"></i>
+						<!-- if there are some items in fav need to show counter -->
+						<!-- <span class="couner">7</span> -->
+					</a>
+					<a href="personal_registration.html" class="user-link round-link">
+						<i class="icon icon-user"></i>
+						<!-- user photo if user is authorized -->
+						<!-- <img src="../img/temp/user.png" alt="user" class="userpic"> -->
+					</a>
+				</div>
+				<!-- / user header menu -->
+				<!-- mobile menu toggle button -->
+				<button type="button" class="button menu-button round-link" data-toggle-element="#mainNavigation">
+					<div class="lines">
+						<span></span>
+					</div>
+				</button>
+				<!-- /mobile menu toggle button -->
+			</div>
+		</div>
+	</div>
+</header>
+	<!-- / header -->
+	<main class="page-main" id="pageMain">
+		<!-- banner -->
+		<section class="section-banner first-section section section-light">
+			<div class="banner-cover">
+				<img src="img/banner_main.png" draggable="false" alt="image">
+			</div>
+			<div class="caption">
+				<div class="container">
+					<div class="top">
+						<div class="section-subtitle">Сервіс з пошуку нерухомості</div>
+					</div>
+					<div class="divider"></div>
+					<div class="bottom">
+						<div class="row bottom-sm">
+							<div class="col-xs-12 col-md-7">
+								<h1 class="banner-title h1-title">Знайдіть своє житло швидко та без посередників</h1>
+							</div>
+							<div class="col-xs-12 col-md-5 align-right">
+								<a aria-label="catalog page" class="button button-secondary button-arrow full-sm" href="catalog.html">
+									<span class="text">Перейти до каталогу</span>
+									<span class="button-icon">
+										<i class="icon icon-arrow-right"></i>
+									</span>
+								</a>
+							</div>
+						</div>
+						<form action="#" class="form search-form">
+							<!-- 1 -->
+							<div class="form-group select-group">
+								<select name="city" id="city" class="select">
+									<option value="Усі" selected>Усі</option>
+									<option value="Київ">Київ</option>
+									<option value="Харків">Харків</option>
+									<option value="Донецьк">Донецьк</option>
+									<option value="Лівьв">Лівьв</option>
+									<option value="Дніпро">Дніпро</option>
+								</select>
+								<label for="city" class="label">Місто</label>
+							</div>
+							<!-- 2 -->
+							<div class="form-group select-group">
+								<select name="disctrict" id="disctrict" class="select">
+									<option value="Усі" selected>Усі</option>
+									<option value="Дарницький">Дарницький</option>
+									<option value="Голосіївський">Голосіївський</option>
+									<option value="Деснянський">Деснянський</option>
+									<option value="Дніпровський">Дніпровський</option>
+									<option value="Оболонський">Оболонський</option>
+								</select>
+								<label for="disctrict" class="label">Район</label>
+							</div>
+							<!-- 3 -->
+							<div class="form-group range-group">
+								<div class="dropdown" data-dropdown>
+									<div class="dropdown-header">Бюджет</div>
+									<div class="dropdown-inner">
+										<div class="range-group">
+											<div class="range-inputs">
+												<div class="form-group input-group">
+													<label class="label">Від (грн)</label>
+													<input type="number" class="input input-min">
+												</div>
+												<div class="form-group input-group">
+													<label class="label">До (грн)</label>
+													<input type="number" class="input input-max">
+												</div>
+											</div>
+											<div class="range-group">
+												<div class="range"
+													data-min="1000"
+													data-max="20000"
+													data-step="100"
+													data-ticks="5"
+													data-value-min="1000"
+													data-value-max="20000">
+													<input type="range" class="range-min" aria-label="Minimum">
+													<input type="range" class="range-max" aria-label="Maximum">
+													<div class="range-progress">
+														<div class="range-track"></div>
+														<div class="range-fill"></div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<span class="label">Бюджет</span>
+							</div>
+							<!-- submit -->
+							<button type="submit" class="button button-primary-invert button-arrow full-sm" aria-label="submit">
+								<span class="text">Знайти</span>
+								<span class="button-icon">
+									<i class="icon icon-arrow-right"></i>
+								</span>
+							</button>
+						</form>
+						<div class="button-cover">
+							<a class="button button-transparent button-round" href="#companyAdvantages" data-scrollto="#companyAdvantages" aria-label="scroll top">
+								<span class="button-icon"><i class="icon icon-arrow-down"></i></span>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- / banner -->
+
+		<!-- company advantages -->
+		<section class="section-spaced section" id="companyAdvantages">
+			<div class="container">
+				<div class="title-group">
+					<div class="section-subtitle">База нерухомості</div>
+					<h2 class="h2-title">RieltorOnline - це</h2>
+				</div>
+				<ul class="clear counter-list collapsed-xs">
+					<li><div class="paragraph">Унікальні об’єкти <br>безпосередньо від власників</div></li>
+					<li><div class="paragraph">Квартири,які будуть <br>здаватись «завтра»</div></li>
+					<li><div class="paragraph">Подвійна перевірка: <br>нейромережа + людина</div></li>
+					<li><div class="paragraph">Ваш захист <br>від шахраїв</div></li>
+				</ul>
+				<div class="divider centered"></div>
+			</div>
+		</section>
+		<!-- / company advantages -->
+
+		<!-- about company -->
+		<section class="section-spaced section" id="companyAbout">
+			<div class="container">
+				<div class="title-group">
+					<div class="section-subtitle">Про нас</div>
+					<h2 class="section-title h2-title">
+						RieltorOnline — це не просто база квартир, а сервіс, створений командою фахівців із багаторічним досвідом у сфері нерухомості
+					</h2>
+				</div>
+				<div class="column-side">
+					<div class="cell">
+						<div class="paragraph">
+							Ми зібрали унікальну базу об’єктів, які здавалися за останні 15 років, і використовуємо нейромережі, щоб уточнювати, коли квартира стане доступною для оренди.
+						</div>
+						<div class="paragraph">
+							Після цього кожен об’єкт додатково перевіряється людиною. Завдяки цьому ми знаємо, які квартири з’являться на ринку заздалегідь.
+						</div>
+					</div>
+					<div class="cell">
+						<div class="paragraph">
+							Оренда квартири — це двостороння угода, тому посередник не потрібен.
+						</div>
+						<div class="paragraph">
+							Ми надаємо можливість напряму зв’язуватися з власниками без комісій. Крім того, ми забезпечуємо підтримку під час оренди — перевіряємо документи власника, надаємо готовий договір оренди та, за потреби, можемо бути присутніми при його підписанні.Таким чином, RieltorOnline захищає вас від шахрайських дій і робить оренду житла чесною, безпечною та прозорою.
+						</div>
+					</div>
+				</div>
+				<div class="align-right">
+					<a href="about.html" class="button button-primary-invert button-arrow full-sm" aria-label="Details">
+						<span class="text">Читати про нас</span>
+						<span class="button-icon">
+							<i class="icon icon-arrow-right"></i>
+						</span>
+					</a>
+				</div>
+			</div>
+		</section>
+		<!-- / about company -->
+
+		<div class="image-section section-dark">
+			<img src="img/home_screen1.png" alt="home screen">
+		</div>
+
+		<!-- company services -->
+		<section class="section-spaced section" id="companyAdvantages">
+			<div class="container">
+				<div class="title-group">
+					<div class="section-subtitle">Наш Сервіс</div>
+					<h2 class="h2-title">Ми гарантуємо прозорість і безпеку</h2>
+				</div>
+				<ul class="clear counter-list with-title collapsed-xs">
+					<li>
+						<h4 class="title">Прозорість</h4>
+						<div class="paragraph">Безпека угоди <br> і відповідальність</div>
+					</li>
+					<li>
+						<h4 class="title">Швидкість</h4>
+						<div class="paragraph">Доступ <br>до унікальних об’єктів</div>
+					</li>
+					<li>
+						<h4 class="title">Безпека</h4>
+						<div class="paragraph">Ранній доступ до квартир ще до ринку</div>
+					</li>
+					<li>
+						<h4 class="title">Довіра</h4>
+						<div class="paragraph">Контакти власників <br>напряму</div>
+					</li>
+				</ul>
+				<div class="divider centered"></div>
+			</div>
+		</section>
+		<!-- / company services -->
+
+		<!-- stages -->
+		<section class="section-spaced section" id="companyStages">
+			<div class="container">
+				<div class="title-group">
+					<div class="section-subtitle">Етапи роботи</div>
+					<h2 class="section-title">
+						Ми цінуємо довіру наших клієнтів, тому забезпечуємо прозорість та комфорт на кожному етапі співпраці:
+					</h2>
+				</div>
+				<ul class="clear progress-list">
+					<li>
+						<div class="progress-inner">
+							<div class="stage">
+								<h4 class="title">Вибір об’єкта</h4>
+								<div class="paragraph">Обери <br>квартиру</div>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="progress-inner">
+							<div class="stage">
+								<h4 class="title">Покупка тарифу</h4>
+								<div class="paragraph">Придбай пакет контактів <br>(1, 10 або 30)</div>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="progress-inner">
+							<div class="stage">
+								<h4 class="title">Відкриття контакту</h4>
+								<div class="paragraph">Натисни «Показати контакти» <br>і отримай дані власника</div>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="progress-inner">
+							<div class="stage">
+								<h4 class="title">Перегляд квартири</h4>
+								<div class="paragraph">Зустрінься <br>з власником</div>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="progress-inner">
+							<div class="stage">
+								<h4 class="title">Підписання договору</h4>
+								<div class="paragraph">Надай нам документи <br>на перевірку</div>
+							</div>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</section>
+		<!-- / stages -->
+
+		<!-- tariffs -->
+		<section class="section-spaced section" id="companyStages">
+			<div class="container">
+				<div class="title-group">
+					<div class="section-subtitle">Прості та зрозумілі тарифи</div>
+					<h2 class="section-title">Оберіть найкращий тариф</h2>
+				</div>
+				<div class="tariffs-cards">
+	<!-- 1 -->
+	<div class="tariff-item animated-item">
+		<div class="top">
+			<!-- svg image -->
+				<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<circle cx="45" cy="20" r="13" fill="#576F80" class="animated-rotate"/>
+					<circle cx="29.5" cy="33.5" r="22.5" fill="#576F80" stroke="#FDFDFD" stroke-width="2"/>
+				</svg>
+			<!-- svg image -->
+			<h4 class="title">«Старт»</h4>
+			<div class="theme-text">Ідеально для тих, хто хоче протестувати доступ до власників перед покупкою більшого пакета</div>
+		</div>
+		<div class="bottom">
+			<div class="price">500 грн</div>
+			<a href="#" class="button button-primary button-arrow" aria-label="Details">
+				<span class="text">Придбати Тариф</span>
+				<span class="button-icon">
+					<i class="icon icon-arrow-right"></i>
+				</span>
+			</a>
+			<ul class="tariff-list checked-list clear">
+				<li>1 контакт</li>
+				<li>30 днів</li>
+				<li class="through">Перевірка документів онлайн</li>
+			</ul>
+		</div>
+	</div>
+	<!-- 2 -->
+	<div class="tariff-item animated-item popular">
+		<div class="badge">Найпопулярніший</div>
+		<div class="top">
+			<!-- svg image -->
+			<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+				<rect width="43" height="43" rx="3" transform="matrix(0.709361 -0.704846 0.709361 0.704846 1 32)" fill="#576F80"/>
+				<circle cx="50" cy="30.1953" r="12" fill="#576F80" class="animated-rotate" stroke="#FDFDFD" stroke-width="2"/>
+			</svg>
+			<!-- svg image -->
+			<h4 class="title">«Базовий»</h4>
+			<div class="theme-text">Більше контактів та безкоштовна онлайн-перевірка документів, що економить час і знижує ризики</div>
+		</div>
+		<div class="bottom">
+			<div class="price">4 000 грн</div>
+			<a href="#" class="button button-secondary button-arrow" aria-label="Details">
+				<span class="text">Придбати Тариф</span>
+				<span class="button-icon">
+					<i class="icon icon-arrow-right"></i>
+				</span>
+			</a>
+			<ul class="tariff-list checked-list clear">
+				<li class="primary">1 контакт</li>
+				<li class="primary">30 днів</li>
+				<li class="primary">Перевірка документів онлайн</li>
+			</ul>
+		</div>
+	</div>
+	<!-- 3 -->
+	<div class="tariff-item animated-item">
+		<div class="top">
+			<!-- svg image -->
+			<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" class="square">
+				<g clip-path="url(#clip0_236_3019)">
+					<rect x="4" y="32.1416" width="20" height="20" rx="2" transform="rotate(-45 4 32.1416)" fill="#576F80"/>
+					<rect x="36" y="32.1416" width="20" height="20" rx="2" transform="rotate(-45 36 32.1416)" fill="#576F80"/>
+					<rect x="20" y="16.1416" width="20" height="20" rx="2" transform="rotate(-45 20 16.1416)" fill="#576F80"/>
+					<rect x="20" y="48.1416" width="20" height="20" rx="2" transform="rotate(-45 20 48.1416)" fill="#576F80"/>
+				</g>
+				<defs>
+					<clipPath id="clip0_236_3019">
+						<rect width="64" height="64" fill="white"/>
+					</clipPath>
+				</defs>
+			</svg>
+			<!-- svg image -->
+			<h4 class="title">«Преміум»</h4>
+			<div class="theme-text">Максимум контактів, повний доступ і перевірка документів онлайн - усе для впевненої угоди</div>
+		</div>
+		<div class="bottom">
+			<div class="price">8 000 грн</div>
+			<a href="#" class="button button-primary button-arrow" aria-label="Details">
+				<span class="text">Придбати Тариф</span>
+				<span class="button-icon">
+					<i class="icon icon-arrow-right"></i>
+				</span>
+			</a>
+			<ul class="tariff-list checked-list clear">
+				<li>30 контактів</li>
+				<li>30 днів</li>
+				<li class="primary">Перевірка документів онлайн</li>
+			</ul>
+		</div>
+	</div>
+</div>
+			</div>
+		</section>
+		<!-- / tariffs -->
+
+		<!-- contact form -->
+		<section class="contact-section section section-dark" id="contactForm">
+	<div class="container">
+		<div class="contact-inner">
+			<div class="title-group">
+				<div class="section-subtitle">Залишились питання?</div>
+				<h2 class="section-title-large">Ми допоможемо вирішити вашу проблему швидко та ефективно!</h2>
+			</div>
+			<form action="javascript:void(0)" class="form contact-form validate-form">
+				<div class="form-group input-group">
+					<div class="alert">Мінімум 2 символа</div>
+					<input type="text" class="input" id="name" name="name" data-minlength="2" placeholder="Ім’я">
+					<label for="name" class="label">Ваше ім’я:</label>
+				</div>
+				<div class="form-group input-group">
+					<div class="alert">Не коректний телефон</div>
+					<input type="tel" class="input phone" id="phone" name="phone" placeholder="+38 (0__) ___ __ __">
+					<label for="phone" class="label">Ваш телефон:</label>
+				</div>
+				<button type="submit" class="button button-primary button-arrow button-block full-sm">
+					<span class="text">Передзвоніть мені</span>
+					<span class="button-icon">
+						<i class="icon icon-arrow-right"></i>
+					</span>
+				</button>
+			</form>
+		</div>
+		<ul class="clear inline-list collapsed-xs unordered-list">
+			<li><div class="paragraph">Актуальна база даних</div></li>
+			<li><div class="paragraph">Контаки власників напряму</div></li>
+			<li><div class="paragraph">Безпека угоди</div></li>
+			<li><div class="paragraph">Надійність та довіра</div></li>
+		</ul>
+	</div>
+</section>
+
+<script>
+	window.onFormSubmit = function() {
+		console.log('send success');
+	};
+</script>
+		<!-- / contact form -->
+
+	</main>
+
+	<!-- footer -->
+	<footer class="main-footer section-dark">
+	<div class="container">
+		<!-- sroll to top -->
+		<a class="button button-default button-round" href="#pageMain" data-scrollto="#pageMain">
+			<span class="button-icon"><i class="icon icon-arrow-up"></i></span>
+		</a>
+		<!-- sroll to top -->
+		<div class="footer-inner">
+			<div class="top">
+				<div class="logo-cover">
+					<a href="index.html" class="logo" aria-label="main page"><img src="img/logo-light.svg" alt="logo" draggable="false"></a>
+				</div>
+			</div>
+			<div class="middle">
+				<ul class="clear footer-links">
+					<li><a href="about.html" aria-label="detail link"><span class="text">Про нас</span></a></li>
+					<li><a href="catalog.html" aria-label="detail link"><span class="text">Каталог</span></a></li>
+					<li><a href="works.html" aria-label="detail link"><span class="text">Як це працює</span></a></li>
+					<li><a href="telegram.html" aria-label="detail link"><span class="text">Telegram-автоматизація</span></a></li>
+					<li><a href="tarif.html" aria-label="detail link"><span class="text">Тарифи</span></a></li>
+					<li><a href="blog.html" aria-label="detail link"><span class="text">Блог</span></a></li>
+					<li><a href="faq.html" aria-label="detail link"><span class="text">FAQ</span></a></li>
+					<li><a href="contacts.html" aria-label="detail link"><span class="text">Контакти</span></a></li>
+				</ul>
+					<ul class="clear social-list">
+					<li><a href="tel:+380" aria-label="phone link" target="_blank" rel="noopener noreferrer"><i class="icon icon-phone"></i></a></li>
+					<li><a href="mailto:" aria-label="email link" target="_blank" rel="noopener noreferrer"><i class="icon icon-mail"></i></a></li>
+					<li><a href="tg://resolve?domain=@" target="_blank" rel="noopener noreferrer" aria-label="telegram link"><i class="icon icon-telegram"></i></a></li>
+				</ul>
+			</div>
+			<div class="bottom">
+				<div class="copy">
+					© 2025 RieltorOnline. Всі права захищені
+				</div>
+				<div class="links">
+				<ul class="clear footer-links">
+					<li><a href="#" aria-label="link"><span class="text">Політика конфіденційності</span></a></li>
+					<li><a href="#" aria-label="link"><span class="text">Публічна оферта / Умови</span></a></li>
+				</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</footer>
+
+	<script src="js/main.js"></script>
+</body>
+</html>

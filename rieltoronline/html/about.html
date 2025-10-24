@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+	<meta charset="UTF-8">
+	<title>RieltorOnline :: About Company</title>
+
+	<link rel="icon" type="image/png" href="/favicon/favicon-96x96.png" sizes="96x96">
+	<link rel="icon" type="image/svg+xml" href="/favicon/favicon.svg">
+	<link rel="shortcut icon" href="/favicon/favicon.ico">
+	<link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
+	<meta name="apple-mobile-web-app-title" content="RieltorOnline">
+	<link rel="manifest" href="/favicon/site.webmanifest">
+
+	<meta name="msapplication-TileColor" content="#576F80">
+	<meta name="theme-color" content="#576F80">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+	<meta name="format-detection" content="telephone=no">
+	<meta name="description" content="description">
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+
+	<link rel="stylesheet" href="css/bundle.min.css">
+</head>
+<body id="innerBody">
+	<!-- header -->
+	@@include('./includes/header-main.html')
+	<!-- / header -->
+
+	<!-- class inner-page -->
+	<main class="page-main inner-page" id="pageMain">
+		<!-- breadcrumbs -->
+		<div class="breadcrumbs">
+			<div class="container">
+				<ul class="breadcrumbs-list clear">
+					<li><a href="index.html" class="text" aria-label="main page">Головна</a></li>
+					<li><span class="text">Про нас</span></li>
+				</ul>
+			</div>
+		</div>
+		<!-- / breadcrumbs -->
+
+		<!-- about company -->
+		<section class="inner-section section" id="companyAbout">
+			<div class="container">
+				<div class="title-group">
+					<div class="section-subtitle">Історія компанії</div>
+					<h1 class="h1-title">Ми створили RieltorOnline, щоб зробити оренду житла в Україні швидкою, прозорою та безпечною</h1>
+				</div>
+				<div class="column-side">
+					<div class="cell">
+						<div class="paragraph">
+							Ми — команда фахівців із великим досвідом роботи в різних напрямах нерухомості, які роками спілкувалися з клієнтами, вивчали їхні потреби та бачили, з якими труднощами стикаються орендарі. Ми зрозуміли, що головне — чесність і доступ до реальної інформації. Тому створили сервіс, який спрощує пошук житла, прибирає зайвих посередників і дозволяє напряму контактувати з власниками квартири.
+						</div>
+						<div class="paragraph">
+							Ми зібрали унікальну базу квартир, що здавалися за останні 15 років, і поєднали сучасні технології з людським досвідом. Нейромережа щодня прозвонює власників і уточнює, коли житло стане вільним, після чого кожен об’єкт додатково перевіряється модератором. Так ми заздалегідь знаємо, які квартири з’являться на ринку, і додаємо їх до бази. 
+						</div>
+					</div>
+					<div class="cell">
+						<div class="paragraph">
+							Актуальність перевіряється кожні 2–3 дні — неактуальні об’єкти видаляються. Ми також допомагаємо користувачам перевірити документи власника, надаємо договір оренди та, за потреби, супроводжуємо підписання угоди. RieltorOnline захищає орендарів від шахрайства та робить процес оренди житла чесним, комфортним і безпечним для кожного
+						</div>
+					</div>
+				</div>
+				<div class="align-right">
+					<a href="catalog.html" class="button button-secondary-invert button-arrow" aria-label="Details">
+						<span class="text">Перейти до каталогу</span>
+						<span class="button-icon">
+							<i class="icon icon-arrow-right"></i>
+						</span>
+					</a>
+				</div>
+			</div>
+		</section>
+		<!-- / about company -->
+
+		<div class="image-section section-dark">
+			<img src="img/about_screen1.png" alt="about screen">
+		</div>
+
+		<!-- company values -->
+		<section class="section-spaced section" id="companyValues">
+			<div class="container">
+				<div class="title-group">
+					<div class="section-subtitle">Місія та цінності</div>
+					<h2 class="h2-title">Що ми гарантуємо нашим клієнтам</h2>
+				</div>
+				<ul class="clear counter-list inline-list with-title collapsed-xs">
+					<li>
+						<div class="title">Прозорість</div>
+						Безпека угоди <br> і відповідальність
+					</li>
+					<li>
+						<div class="title">Швидкість</div>
+						Доступ <br>до унікальних об’єктів
+					</li>
+					<li>
+						<div class="title">Безпека</div>
+						Ранній доступ до квартир<br> ще до ринку
+					</li>
+					<li>
+						<div class="title">Довіра</div>
+						Контакти власників <br>напряму
+					</li>
+				</ul>
+				<div class="divider centered"></div>
+			</div>
+		</section>
+		<!-- / company values -->
+
+		<!-- contact form -->
+		@@include('./includes/contact-section.html')
+		<!-- / contact form -->
+
+	</main>
+	<!-- footer -->
+	@@include('./includes/footer-main.html')
+	<!-- / footer -->
+
+	<script src="js/main.js"></script>
+</body>
+</html>
