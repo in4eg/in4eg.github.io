@@ -30,6 +30,9 @@ ul, ol {
 		padding-top: 8px;
 		padding-bottom: 8px;
 		font-size: var(--font-size);
+		min-height: 56px;
+		display: flex;
+		align-items: center;
 
 		&:before {
 			counter-increment: count;
@@ -53,6 +56,14 @@ ul, ol {
 				background-color: $color-light;
 				color: $color-white;
 			}
+		}
+	}
+
+	&.with-title {
+
+		li {
+			flex-direction: column;
+			align-items: flex-start;
 		}
 	}
 }
@@ -396,6 +407,8 @@ ul, ol {
 			&:before {
 				height: 48px; width: 48px;
 				line-height: 48px;
+				top: 0;
+				transform: translateY(0);
 			}
 		}
 
@@ -425,6 +438,10 @@ ul, ol {
 		> li {
 			min-height: 64px;
 			display: flex;
+
+			&:before {
+				top: 8px;
+			}
 		}
 
 		&.with-title {

@@ -31,6 +31,10 @@ class ObjectsPagerLoader {
 		const detailsHTML = this._formatM2(item.details);
 
 		li.innerHTML = `
+			<button type="button" class="button round-link" data-add-favourite>
+				<i class="icon icon-heart-empty active"></i>
+				<i class="icon icon-heart-full"></i>
+			</button>
 			<a href="${item.link}" aria-label="Read more" class="object-preview">
 				<div class="spaced-inner">
 					<figure class="object-image">

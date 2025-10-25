@@ -12,6 +12,12 @@
 		position: relative;
 		align-self: stretch;
 	}
+
+	.button.round-link {
+		position: absolute;
+		right: 32px; top: 24px;
+		z-index: 1;
+	}
 }
 
 .object-preview {
@@ -70,6 +76,11 @@
 		}
 	}
 
+	.price-primary {
+		margin-top: 8px;
+	}
+
+
 	&:hover {
 
 		.object-image {
@@ -108,6 +119,15 @@
 	}
 }
 
+@media (max-width: 993px) {
+
+	.objects-list {
+
+		.button.round-link {
+			right: 28px; top: 16px;
+		}
+	}
+}
 @media (max-width: 768px) {
 
 	.objects-list {

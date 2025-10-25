@@ -3,7 +3,7 @@
 <head>
 
 	<meta charset="UTF-8">
-	<title>RieltorOnline :: Article Page</title>
+	<title>RieltorOnline :: Catalog Page</title>
 
 	<link rel="icon" type="image/png" href="/favicon/favicon-96x96.png" sizes="96x96">
 	<link rel="icon" type="image/svg+xml" href="/favicon/favicon.svg">
@@ -104,6 +104,7 @@
 	</div>
 </header>
 	<!-- / header -->
+
 	<!-- class inner-page -->
 	<main class="page-main inner-page" id="pageMain">
 		<!-- breadcrumbs -->
@@ -111,90 +112,144 @@
 			<div class="container">
 				<ul class="breadcrumbs-list clear">
 					<li><a href="index.html" class="text" aria-label="main page">Головна</a></li>
-					<li><a href="blog.html" class="text" aria-label="blog page">Блог</a></li>
-					<li><span class="text">Будівництво нового масиву під Києвом</span></li>
+					<li><span class="text">Обране</span></li>
 				</ul>
 			</div>
 		</div>
 		<!-- / breadcrumbs -->
 
-		<section class="section">
+		<section class="section inner-section">
 			<div class="container">
-				<div class="title-group">
-					<div class="section-subtitle">25 березня 2025</div>
-					<h1 class="h1-title">Будівництво нового масиву під Києвом</h1>
+				<!-- header -->
+				<div class="title-filters spaced-bottom" id="favHeader">
+					<div class="title-group">
+						<div class="section-subtitle primary">Обране</div>
+						<h1 class="h2-title">Всього: <span class="counter">29</span></h1>
+					</div>
+					<div class="button-cover">
+						<!-- class .hidden if no items in fav -->
+						<button class="button-link button" data-clear-favourite>Очистити все</button>
+					</div>
 				</div>
+				<!-- / header -->
 			</div>
-
-			<!-- main image -->
-			<div class="image-section section-dark">
-				<img src="img/temp/image_article.png" alt="image">
-			</div>
-			<!-- / main image -->
-
-			<!-- page content -->
-			<div class="container-small article-container">
-				<article>
-					<h2>Під Києвом стартував масштабний проєкт Vlasne Misto</h2>
-					<blockquote cite="https://www.example.com/source-document">
-						<p>Мешканці "Власного міста" ризикують отримати місто без самоврядування</p>
-					</blockquote>
-					<cite>- Дослідне господарство Дмитрівка</cite>
-					<p>
-						Автономного житлового кластера на 600 гектарах у Дмитрівській ОТГ. Тут планують збудувати житло, школи, лікарні та інфраструктуру для 47 000 людей. Водночас розслідування Absolution Leaks виявило, що землі під забудову могли перейти до приватних компаній незаконно: державне підприємство "Дослідне господарство Дмитрівка" втратило більшість ділянок через підміну реєстраційних документів.
-					</p>
-					<h3>Забудовниками виступають одразу кілька структур</h3>
-					<p>
-						серед яких "Власне місто" та "КГЛ Груп", пов’язані з родинами колишніх посадовців Держземагентства та прокуратури. Ключовим ініціатором називають ексзаступника керівника обласного управління Держземагентства Ярослава Корняченка, тоді як співзасновницею "Власного міста" є його дружина Наталія.
-					</p>
-					<ol>
-						<li>Елемент списку</li>
-						<li>Елемент списку</li>
-						<li>Елемент списку</li>
-						<li>Елемент списку</li>
-						<li>Елемент списку</li>
-					</ol>
-					<h4>Інша співвласниця</h4>
-					<p>
-						— Оксана Гуцуляк, чоловік якої, колишній високопосадовець Генпрокуратури Володимир Гуцуляк, опинився у центрі підозр у незаконному збагаченні. За підсумками реалізації
-					</p>
-					<h5>мешканці "Власного міста"</h5>
-					<p>
-						ризикують отримати місто без самоврядування, фактично підконтрольне приватним інвесторам.
-					</p>
-					<ul>
-						<li>Елемент списку</li>
-						<li>Елемент списку</li>
-						<li>Елемент списку</li>
-						<li>Елемент списку</li>
-						<li>Елемент списку</li>
-					</ul>
-
-				</article>
-
-				<!-- divider -->
-				<div class="divider centered"></div>
-			</div>
-			<!-- / page content -->
-
-			<!-- pagination -->
-			<div class="container-small">
-				<div class="article-navigation">
-					<a class="navigation-link prev" href="article.html" aria-label="Read more">
-						<span class="button-icon"><i class="icon icon-chevron-left"></i></span>
-						<span class="helper">Попередня стаття</span>
-						<span class="link-title">Ситуація на ринку нерухомості</span>
-					</a>
-					<a class="navigation-link next" href="article.html" aria-label="Read more">
-						<span class="button-icon"><i class="icon icon-chevron-right"></i></span>
-						<span class="helper">Наступна стаття</span>
-						<span class="link-title">Пожвавлення будівництва</span>
-					</a>
-				</div>
-			</div>
-			<!-- / pagination -->
 		</section>
+
+		<!-- objects -->
+		<section class="section collapsed-top-section">
+			<div class="container">
+				<!-- objects list-->
+				<ul class="objects-list clear" id="loadContent" data-load-favourites>
+					<!-- 1 -->
+					<li class="item">
+						<button type="button" class="button round-link" data-add-favourite>
+							<!-- class .active if we have not this item in fav -->
+							<i class="icon icon-heart-empty"></i>
+							<!-- class .active if we have not this item in fav -->
+							<i class="icon icon-heart-filled active"></i>
+						</button>
+						<a href="object.html" aria-label="Read more" class="object-preview">
+							<div class="spaced-inner">
+								<figure class="object-image">
+									<img src="img/temp/obj1.jpg" draggable="false" alt="image">
+								</figure>
+							</div>
+							<div class="caption">
+								<div class="spaced-inner bordered">
+									<div class="date">від 11.07.2025</div>
+								</div>
+								<div class="spaced-inner stretch-inner">
+									<h2 class="object-title">вул. Героїв Дніпра,  буд.  10</h2>
+									<div class="description">
+										<div class="line">Київ, ЖК Республіка</div>
+										<div class="line">2 кімнати, 7 поверх з 10, 218м<sup>2</sup></div>
+										<div class="price-primary">3 202 210 грн</div>
+									</div>
+								</div>
+							</div>
+						</a>
+					</li>
+				</ul>
+				<!-- / objects list-->
+
+				<!-- pagination if more then 12 items -->
+				<!-- 12 items per page -->
+				<!-- if less then 12 class .hidden -->
+				<div class="pagination" id="pagination">
+					<div class="container">
+						<div class="top">
+							<button aria-label="catalog page" class="button button-loader full-sm" data-load-object="#loadContent">
+								<span class="text">Показати ще</span>
+								<span class="progress-bar"><span class="state" style="width: 25%;"></span></span>
+							</button>
+							<div class="caption">Залишилось ще 25 дописів</div>
+						</div>
+						<div class="pagination-nav">
+							<a href="#" class="item"><i class="icon icon-chevron-left"></i></a>
+							<a href="#" class="item active">1</a>
+							<a href="#" class="item">2</a>
+							<a href="#" class="item">3</a>
+							<a href="#" class="item"><i class="icon icon-chevron-right"></i></a>
+						</div>
+					</div>
+				</div>
+				<!-- / pagination -->
+
+				<!-- alert message if list is empty -->
+				<div id="searchEmptyMessage" class="hidden search-alert">
+					<div class="title">Немає жодного об'єкту у обраному</div>
+					<div class="theme-text">Перейдіть у <a href="catalog.html" class="link">Каталог</a> та оберіть об'єкт, що зацікавив</div>
+				</div>
+				<!-- alert message if list is empty -->
+			</div>
+		</section>
+		<!-- / objects -->
+
+		<!-- contact form -->
+		<section class="contact-section section section-dark" id="contactForm">
+	<div class="container">
+		<div class="contact-inner">
+			<div class="title-group">
+				<div class="section-subtitle">Залишились питання?</div>
+				<h2 class="section-title-large">Ми допоможемо вирішити вашу проблему швидко та ефективно!</h2>
+			</div>
+			<form action="javascript:void(0)" class="form contact-form validate-form">
+				<div class="form-group input-group">
+					<div class="alert">Мінімум 2 символа</div>
+					<input type="text" class="input" id="name" name="name" data-minlength="2" placeholder="Ім’я">
+					<label for="name" class="label">Ваше ім’я:</label>
+				</div>
+				<div class="form-group input-group">
+					<div class="alert">Не коректний телефон</div>
+					<input type="tel" class="input phone" id="phone" name="phone" placeholder="+38 (0__) ___ __ __">
+					<label for="phone" class="label">Ваш телефон:</label>
+				</div>
+				<button type="submit" class="button button-primary button-arrow button-block full-sm">
+					<span class="text">Передзвоніть мені</span>
+					<span class="button-icon">
+						<i class="icon icon-arrow-right"></i>
+					</span>
+				</button>
+			</form>
+		</div>
+		<ul class="clear inline-list collapsed-xs unordered-list">
+			<li><div class="paragraph">Актуальна база даних</div></li>
+			<li><div class="paragraph">Контаки власників напряму</div></li>
+			<li><div class="paragraph">Безпека угоди</div></li>
+			<li><div class="paragraph">Надійність та довіра</div></li>
+		</ul>
+	</div>
+</section>
+
+<script>
+	window.onFormSubmit = function() {
+		console.log('send success');
+	};
+</script>
+		<!-- / contact form -->
+
 	</main>
+
 
 	<!-- footer -->
 	<footer class="main-footer section-dark">
@@ -241,7 +296,7 @@
 		</div>
 	</div>
 </footer>
-	<!-- / footer -->
+	<!-- /	footer -->
 
 	<script src="js/main.js"></script>
 </body>

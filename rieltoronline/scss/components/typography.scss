@@ -9,7 +9,7 @@ h1, h2, h3, h4, h5, h6 {
 	}
 }
 
-div, a, p, input, li, select, span, i, svg, img {
+div, a, p, input, li, select, span, i, svg, img, blockquote {
 
 	&::selection {
 		color: $color-white;
@@ -90,12 +90,18 @@ mark {
 	display: block;
 }
 
+.link {
+	color: $color-dark;
+	text-decoration: underline;
+}
+
 .link:hover {
-	color: $color-secondary;
+	color: $color-primary;
+	text-decoration: none;
 }
 
 .link:visited {
-	color: $color-secondary-hover;
+	color: $color-primary-hover;
 }
 
 .theme-text {
@@ -118,7 +124,15 @@ article {
 		}
 	}
 
-	p, h5, h4, ul, ol {
+	cite {
+		display: inline-block;
+	}
+
+	blockquote + p {
+		margin-top: 24px;
+	}
+
+	p, h5, h4, ul, ol, cite {
 		margin-bottom: 24px;
 
 		&:last-child {
@@ -235,6 +249,7 @@ article {
 			position: absolute;
 			top: 0; left: 0;
 			color: $color-secondary;
+			font-style: italic;
 		}
 	}
 

@@ -314,6 +314,56 @@ $button-icon-size: 40px;
 	}
 }
 
+.button.round-link {
+	height: 48px; width: 48px;
+	border-radius: 50%;
+	overflow: hidden;
+	text-align: center;
+	line-height: 48px;
+	background-color: $color-cultured;
+	transition: background-color .2s;
+	color: $color-dark;
+
+	.icon {
+		font-size: 24px;
+
+		&:before {
+			position: relative;
+			top: 4px;
+		}
+	}
+
+	&:hover {
+		background-color: $color-bright-gray;
+	}
+
+	&[data-add-favourite] {
+
+		.icon {
+			position: absolute;
+			top: 0; left: 0;
+			right: 0; bottom: 0;
+			margin: auto;
+
+			&:before {
+				top: 50%;
+				transform: translateY(-50%) scale(1.8);
+				opacity: 0;
+				transition: .2s;
+				display: block;
+			}
+
+			&.active {
+				
+				&:before {
+					transform: translateY(-50%) scale(1);
+					opacity: 1;
+				}
+			}
+		}
+	}
+}
+
 @media (max-width: 993px) {
 
 	$button-round-size: 40px;
@@ -332,6 +382,18 @@ $button-icon-size: 40px;
 		.button-icon {
 			margin-left: 0;
 			font-size: 16px;
+		}
+	}
+}
+
+@media (max-width: 640px) {
+
+	.button.round-link {
+		height: 32px; width: 32px;
+		line-height: 32px;
+
+		.icon {
+			font-size: 20px;
 		}
 	}
 }

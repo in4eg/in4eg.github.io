@@ -175,6 +175,7 @@ $navigation-link-size: 44px;
 
 	.article-navigation {
 		padding-top: 40px;
+		padding-bottom: 64px;
 	}
 }
 
@@ -208,6 +209,10 @@ $navigation-link-size: 44px;
 			}
 		}
 	}
+
+	.article-navigation {
+		padding-bottom: 40px;
+	}
 }
 
 @media (max-width: 993px) {
@@ -230,6 +235,7 @@ $navigation-link-size: 44px;
 
 	.article-navigation {
 		padding-top: 24px;
+		padding-bottom: 24px;
 
 		.navigation-link {
 			display: flex;
