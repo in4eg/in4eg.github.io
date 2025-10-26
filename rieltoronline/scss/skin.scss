@@ -180,6 +180,33 @@ img.adaptive {
 	display: inline-block;
 }
 
+/* Chrome, Edge, Safari */
+html::-webkit-scrollbar {
+	width: 10px;
+	height: 10px;
+}
+
+/* Firefox */
+html {
+	scrollbar-width: thin;
+	scrollbar-color: #576F80 #f1f1f1;
+}
+
+html::-webkit-scrollbar-track {
+	background: #f1f1f1;
+}
+
+html::-webkit-scrollbar-thumb {
+	background-color: #576F80;
+	border-radius: 6px;
+	border: 2px solid #f1f1f1;
+}
+
+html::-webkit-scrollbar-thumb:hover {
+	background-color: #435564;
+}
+
+
 @media (max-width: 768px) {
 
 	.visible-sm {

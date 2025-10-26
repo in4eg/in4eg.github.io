@@ -10,4 +10,251 @@
 		<button class="button-link button">Очистити все</button>
 	</div>
 	<!-- if we have some selected filters need to show tag -->
+	<!-- header always visible -->
+	<div class="filter-header">
+		<div class="row bottom-xs">
+			<div class="col-xs-12 col-sm-9">
+				<!-- toggle fiter button -->
+				<button type="button" class="button button-primary button-arrow full-sm" aria-label="open filter" data-toggle="#filtersInner">
+					<span class="text">Фільтри</span>
+					<span class="button-icon">
+						<i class="icon icon-arrow-right"></i>
+					</span>
+				</button>
+				<!-- / toggle fiter button -->
+			</div>
+			<div class="col-xs-12 col-sm-3">
+				<!-- sorting select -->
+				<div class="form-group select-group labeled-group">
+					<label for="sorting" class="label">Сортувати за</label>
+					<select name="sorting" id="sorting" class="select">
+						<option value="Найновіші оголошення" selected>Найновіші оголошення</option>
+						<option value="Найстаріші оголошення">Найстаріші оголошення</option>
+						<option value="Дешевші спочатку">Дешевші спочатку</option>
+						<option value="Дорожчі спочатку">Дорожчі спочатку</option>
+					</select>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- header -->
+	<!-- inner content with filters and form -->
+	<div class="filters-inner" id="filtersInner">
+		<form action="#" class="filters-form form" id="filterForm">
+			<div class="row">
+				<div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+					<div class="labeled-group form-group">
+						<span class="label">Тип об’єкта</span>
+						<div class="inner">
+							<div class="filtered-list">
+								<div class="item">
+									<div class="checkbox-group">
+										<input type="checkbox" class="checkbox" id="flat">
+										<label for="flat" class="label">Квартира</label>
+									</div>
+								</div>
+								<div class="item">
+									<div class="checkbox-group">
+										<input type="checkbox" class="checkbox" id="house">
+										<label for="house" class="label">Будинок</label>
+									</div>
+								</div>
+								<div class="item">
+									<div class="checkbox-group">
+										<input type="checkbox" class="checkbox" id="plot">
+										<label for="plot" class="label">Ділянка</label>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+					<div class="labeled-group filter-group form-group" data-filter>
+						<span class="label">Місто</span>
+						<div class="inner">
+							<input type="text" class="input" id="city" name="city" data-minlength="2" placeholder="Введіть назву">
+							<i class="icon icon-search"></i>
+							<div class="filtered-list">
+								<div class="item">Київ</div>
+								<div class="item">Харків</div>
+								<div class="item">Дніпро</div>
+								<div class="item">Ужгород</div>
+								<div class="item">Миколаїв</div>
+								<div class="item">Кропивницький</div>
+								<div class="item">Вінниця</div>
+								<div class="item">Полтава</div>
+								<div class="item">Хмельницький</div>
+								<div class="item">Одеса</div>
+								<div class="item">Івано-Франківськ</div>
+								<div class="item">Чернігів</div>
+								<div class="item">Луцьк</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+					<div class="labeled-group filter-group form-group" data-filter>
+						<span class="label">Район</span>
+						<div class="inner">
+							<input type="text" class="input" id="district" name="district" data-minlength="2" placeholder="Введіть назву">
+							<i class="icon icon-search"></i>
+							<div class="filtered-list">
+								<div class="item">Голосіївський</div>
+								<div class="item">Дарницький</div>
+								<div class="item">Деснянський</div>
+								<div class="item">Дніпровський</div>
+								<div class="item">Оболонський</div>
+								<div class="item">Кропивницький</div>
+								<div class="item">Печерський</div>
+								<div class="item">Подільський</div>
+								<div class="item">Святошинський</div>
+								<div class="item">Солом’янський</div>
+								<div class="item">Шевченківський</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+					<div class="labeled-group date-group calendar-group" data-calendar>
+						<span class="label">Дата</span>
+						<div class="range-header">Не вибрано</div>
+						<div class="inner">
+							<div class="date-group">
+								<div class="date-select">
+									<label for="startDatetime" class="label">Початок</label>
+									<input type="date" id="startDatetime" name="startDatetime" data-start class="input">
+								</div>
+								<div class="date-select">
+									<label for="endDatetime" class="label">Кінець</label>
+									<input type="date" id="endDatetime" name="endDatetime" data-end class="input">
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row bottom-xs">
+				<div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+					<div class="labeled-group form-group" data-range>
+						<span class="label">Загальна площа</span>
+						<div class="range-header">Не вибрано</div>
+						<div class="inner">
+							<div class="range-group">
+								<div class="range-inputs">
+									<div class="form-group input-group">
+										<label class="label">Від м<sup>2</sup></label>
+										<input type="number" class="input input-min">
+									</div>
+									<div class="form-group input-group">
+										<label class="label">До м<sup>2</sup></label>
+										<input type="number" class="input input-max">
+									</div>
+								</div>
+								<div class="range-group">
+									<div class="range"
+										data-min="20"
+										data-max="1000"
+										data-step="10"
+										data-ticks="5"
+										data-value-min="50"
+										data-value-max="150">
+										<input type="range" class="range-min" aria-label="Minimum">
+										<input type="range" class="range-max" aria-label="Maximum">
+										<div class="range-progress">
+											<div class="range-track"></div>
+											<div class="range-fill"></div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+					<div class="form-group range-group labeled-group" data-range>
+						<span class="label">Поверх</span>
+						<div class="range-header">Не вибрано</div>
+						<div class="inner">
+							<div class="range-group">
+								<div class="range-inputs">
+									<div class="form-group input-group">
+										<label class="label">Від (поверх)</label>
+										<input type="number" class="input input-min">
+									</div>
+									<div class="form-group input-group">
+										<label class="label">До (поверх)</label>
+										<input type="number" class="input input-max">
+									</div>
+								</div>
+								<div class="range-group">
+									<div class="range"
+										data-min="1"
+										data-max="40"
+										data-step="1"
+										data-ticks="5"
+										data-value-min="3"
+										data-value-max="7">
+										<input type="range" class="range-min" aria-label="Minimum">
+										<input type="range" class="range-max" aria-label="Maximum">
+										<div class="range-progress">
+											<div class="range-track"></div>
+											<div class="range-fill"></div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+					<div class="form-group range-group labeled-group" data-range>
+						<span class="label">Бюджет</span>
+						<div class="range-header">Не вибрано</div>
+						<div class="inner">
+							<div class="range-group">
+								<div class="range-inputs">
+									<div class="form-group input-group">
+										<label class="label">Від (грн)</label>
+										<input type="number" class="input input-min">
+									</div>
+									<div class="form-group input-group">
+										<label class="label">До (грн)</label>
+										<input type="number" class="input input-max">
+									</div>
+								</div>
+								<div class="range-group">
+									<div class="range"
+										data-min="1000"
+										data-max="20000"
+										data-step="100"
+										data-ticks="5"
+										data-value-min="1000"
+										data-value-max="10000">
+										<input type="range" class="range-min" aria-label="Minimum">
+										<input type="range" class="range-max" aria-label="Maximum">
+										<div class="range-progress">
+											<div class="range-track"></div>
+											<div class="range-fill"></div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+					<!-- submit -->
+					<button type="submit" class="button button-block button-primary-invert button-arrow full-sm" aria-label="open filter">
+						<span class="text">Застосувати</span>
+						<span class="button-icon">
+							<i class="icon icon-arrow-right"></i>
+						</span>
+					</button>
+					<!-- / submit -->
+				</div>
+			</div>
+		</form>
+	</div>
+	<!-- / inner contents with filters and form -->
 </div>

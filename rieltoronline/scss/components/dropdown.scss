@@ -39,31 +39,12 @@
 		top: 100%; left: 0;
 		width: 100%;
 		z-index: 1;
-		max-height: 50vh;
+		max-height: 200px;
 		overflow: auto;
 		display: none;
 		z-index: 2;
 		background-color: rgba($color-white, 0.9);
 		backdrop-filter: blur(22px);
-
-		&::-webkit-scrollbar-thumb {
-			border: 1px solid transparent;
-			border-radius: 0;
-			background-color: $color-primary;
-			background-clip: content-box;
-			-webkit-background-clip: content-box;
-			transition: background-color .2s;
-		}
-
-		&::-webkit-scrollbar-thumb:hover {
-			background-color: $color-primary-hover;
-			background-clip: border-box;
-			-webkit-background-clip: border-box;
-		}
-
-		&::-webkit-scrollbar {
-			width: 6px; height: 6px;
-		}
 
 		.item {
 			padding: 8px 16px;

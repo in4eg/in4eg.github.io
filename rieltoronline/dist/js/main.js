@@ -405,6 +405,147 @@ document.addEventListener("DOMContentLoaded", () => {
 	pager.init();
 });
 
+class DateRange {
+	constructor(root, opts = {}) {
+		this.root   = root;
+		this.header = root.querySelector('.range-header');
+		this.iStart = root.querySelector('[data-start]');
+		this.iEnd   = root.querySelector('[data-end]');
+
+		if (!this.header || !this.iStart || !this.iEnd) {
+			throw new Error('DateRange: потрібні .range-header, [data-start], [data-end]');
+		}
+
+		this.placeholder = this.header.textContent?.trim() || 'Не вибрано';
+		this.formatter = opts.formatter || new Intl.DateTimeFormat('uk-UA', { 
+			day: '2-digit', month: '2-digit', year: 'numeric' 
+		});
+
+		this._onStartChange = this._onStartChange.bind(this);
+		this._onEndChange   = this._onEndChange.bind(this);
+		this._onClickWrap   = this._onClickWrap.bind(this);
+
+		this._bind();
+		this._render();
+	}
+
+	_bind() {
+		this.iStart.addEventListener('change', this._onStartChange, false);
+		this.iEnd.addEventListener('change', this._onEndChange, false);
+
+		this.root.addEventListener('click', this._onClickWrap, { passive: true });
+
+		this.header.addEventListener('click', () => {
+			if (typeof this.iStart.showPicker === 'function') {
+				this.iStart.showPicker();
+			} else {
+				this.iStart.focus();
+			}
+		});
+
+		const form = this.root.closest('form');
+		if (form) {
+			form.addEventListener('reset', () => {
+				requestAnimationFrame(() => {
+					this.iStart.value = '';
+					this.iEnd.value   = '';
+					this.root.classList.remove('focused');
+					this._render(true);
+				});
+			});
+		}
+	}
+
+	_onClickWrap() {
+		this.root.classList.add('focused');
+	}
+
+	_onStartChange() {
+		if (this.iStart.value) {
+			this.iEnd.min = this.iStart.value;
+			if (this.iEnd.value && this.iEnd.value < this.iStart.value) {
+				this.iEnd.value = this.iStart.value;
+			}
+		} else {
+			this.iEnd.removeAttribute('min');
+		}
+		this._render(true);
+	}
+
+	_onEndChange() {
+		if (this.iEnd.value) {
+			this.iStart.max = this.iEnd.value;
+			if (this.iStart.value && this.iStart.value > this.iEnd.value) {
+				this.iStart.value = this.iEnd.value;
+			}
+		} else {
+			this.iStart.removeAttribute('max');
+		}
+		this._render(true);
+	}
+
+	get values() {
+		return { start: this.iStart.value || null, end: this.iEnd.value || null };
+	}
+
+	set values({ start = null, end = null } = {}) {
+		this.iStart.value = start || '';
+		this.iEnd.value   = end || '';
+		this._onStartChange();
+		this._onEndChange();
+		this._render(true);
+	}
+
+	_formatISO(iso) {
+		if (!iso) return '';
+		const [y, m, d] = iso.split('-').map(Number);
+		const date = new Date(Date.UTC(y, m - 1, d, 12, 0, 0));
+		return this.formatter.format(date);
+	}
+
+	_render(emit = false) {
+		const { start, end } = this.values;
+		let text = this.placeholder;
+
+		if (start && end) {
+			text = `${this._formatISO(start)} — ${this._formatISO(end)}`;
+		} else if (start && !end) {
+			text = `з ${this._formatISO(start)}`;
+		} else if (!start && end) {
+			text = `до ${this._formatISO(end)}`;
+		}
+
+		this.header.textContent = text;
+
+		if (emit) {
+			this.root.dispatchEvent(new CustomEvent('daterangechange', {
+				bubbles: true,
+				detail: { start, end, label: text }
+			}));
+		}
+	}
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+	document.querySelectorAll('[data-calendar]').forEach((wrap) => {
+		new DateRange(wrap);
+	});
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+	document.querySelectorAll('input[type="date"]').forEach((el) => {
+		el.addEventListener('click', () => {
+			if (typeof el.showPicker === 'function') el.showPicker();
+		});
+		el.addEventListener('keydown', (e) => {
+			if ((e.key === 'Enter' || e.key === ' ') && typeof el.showPicker === 'function') {
+				e.preventDefault();
+				el.showPicker();
+			}
+		});
+	});
+});
+
 // ================= Helpers =================
 function strHash(s) {
 	let h = 5381;
@@ -714,6 +855,214 @@ document.addEventListener('DOMContentLoaded', () => {
 	});
 });
 
+class ToggleHandler {
+	constructor({ 
+		btnSelector = '[data-toggle]', 
+		activeClass = 'active', 
+		animatedClass = 'animated', 
+		openedClass = 'opened',
+		delay = 250 
+	} = {}) {
+		this.btnSelector = btnSelector;
+		this.activeClass = activeClass;
+		this.animatedClass = animatedClass;
+		this.openedClass = openedClass;
+		this.delay = delay;
+
+		this.buttons = Array.from(document.querySelectorAll(this.btnSelector));
+		this._onClick = this._onClick.bind(this);
+
+		this.init();
+	}
+
+	init() {
+		this.buttons.forEach(btn => {
+			btn.addEventListener('click', this._onClick, false);
+		});
+	}
+
+	_onClick(e) {
+		const button = e.currentTarget;
+		const targetSelector = button.getAttribute('data-toggle');
+		const target = document.querySelector(targetSelector);
+
+		if (!target) return;
+
+		const isActive = target.classList.contains(this.activeClass);
+
+		if (!isActive) {
+			target.classList.add(this.activeClass);
+			button.classList.add(this.openedClass);
+
+			setTimeout(() => {
+				target.classList.add(this.animatedClass);
+			}, this.delay);
+		} else {
+			target.classList.remove(this.activeClass, this.animatedClass);
+			button.classList.remove(this.openedClass);
+		}
+	}
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+	new ToggleHandler();
+});
+
+class HeaderToggler {
+	constructor({
+		headerSelector = '#mainHeader',
+		navSelector = '#mainNavigation',
+		toggleAttr = '[data-toggle-element]',
+		closeAttr = '[data-header-close]',
+		defaultActiveClass = 'active',
+		animatedClass = 'animated',
+		overlayClass = 'overlayed'
+	} = {}) {
+		this.header = document.querySelector(headerSelector);
+		this.nav = document.querySelector(navSelector);
+		this.toggleAttr = toggleAttr;
+		this.closeAttr = closeAttr;
+		this.DEFAULT_ACTIVE = defaultActiveClass;
+		this.ANIMATED = animatedClass;
+		this.OVERLAYED = overlayClass;
+
+		this.toggles = Array.from(document.querySelectorAll(this.toggleAttr));
+		this.closeButtons = Array.from(document.querySelectorAll(this.closeAttr));
+
+		this._onToggleClick = this._onToggleClick.bind(this);
+		this._onBodyClick = this._onBodyClick.bind(this);
+		this.hideMobileNav = this.hideMobileNav.bind(this);
+
+		this.init();
+	}
+
+	init() {
+		if (!this.header) return;
+
+		this.toggles.forEach((btn) => {
+			btn.addEventListener('click', this._onToggleClick, false);
+		});
+
+		this.closeButtons.forEach((btn) => {
+			btn.addEventListener('click', this.hideMobileNav, false);
+		});
+
+		document.body.addEventListener('click', this._onBodyClick, { passive: true });
+	}
+
+	destroy() {
+		this.toggles.forEach((btn) => {
+			btn.removeEventListener('click', this._onToggleClick);
+		});
+		this.closeButtons.forEach((btn) => {
+			btn.removeEventListener('click', this.hideMobileNav);
+		});
+		document.body.removeEventListener('click', this._onBodyClick, { passive: true });
+	}
+
+	_onToggleClick(e) {
+		const button = e.currentTarget;
+
+		// Original behavior: always remove 'menu-active' from header first
+		this.header.classList.remove('menu-active');
+
+		const defaultClass = this.DEFAULT_ACTIVE;
+		const toggleClass = button.dataset.toggleClass ? button.dataset.toggleClass : defaultClass;
+		const elementLink = button.dataset.toggleElement;
+
+		if (!elementLink) return;
+
+		const targets = Array.from(document.querySelectorAll(elementLink));
+		if (!targets.length) return;
+
+		targets.forEach((el) => {
+			const isOpen = el.classList.contains(toggleClass);
+
+			if (!isOpen) {
+				this._openElement(el, button, toggleClass, defaultClass);
+			} else {
+				this._closeElement(el, button, toggleClass, defaultClass);
+			}
+		});
+	}
+
+	_openElement(element, button, toggleClass, defaultClass) {
+		element.classList.add(toggleClass);
+		button.classList.add(defaultClass);
+
+		window.setTimeout(() => {
+			element.classList.add(this.ANIMATED);
+		}, 250);
+
+		if (element.classList.contains('header-navigation')) {
+			this._lockBody();
+		}
+	}
+
+	_closeElement(element, button, toggleClass, defaultClass) {
+		element.classList.remove(toggleClass);
+		button.classList.remove(defaultClass);
+
+		// Unlock body if it was overlayed
+		if (document.body.classList.contains(this.OVERLAYED)) {
+			this._unlockBody();
+		}
+
+		// Keep original exception: do not remove animated from .main-header
+		if (!element.classList.contains('main-header')) {
+			element.classList.remove(this.ANIMATED);
+		}
+	}
+
+	hideMobileNav() {
+		// Guard if nav missing
+		if (!this.nav) return;
+
+		if (this.nav.classList.contains(this.DEFAULT_ACTIVE)) {
+			const navToggleBtn = document.querySelector('[data-toggle-element="#mainNavigation"]');
+
+			if (navToggleBtn) {
+				navToggleBtn.classList.remove(this.DEFAULT_ACTIVE);
+			}
+
+			this.nav.classList.remove(this.DEFAULT_ACTIVE, this.ANIMATED);
+			this._unlockBody();
+		}
+	}
+
+	_onBodyClick(e) {
+		if (e.target.closest('[data-toggle-element="#mainNavigation"]')) return;
+		if (e.target.closest('#mainNavigation')) return;
+
+		this.hideMobileNav();
+	}
+
+	_lockBody() {
+		const bodyComputedWidth = window.getComputedStyle(document.body).width;
+		document.body.style.width = bodyComputedWidth;
+		document.body.classList.add(this.OVERLAYED);
+
+		if (this.header) {
+			const headerComputedWidth = window.getComputedStyle(this.header).width;
+			this.header.style.width = headerComputedWidth;
+		}
+	}
+
+	_unlockBody() {
+		document.body.classList.remove(this.OVERLAYED);
+		document.body.style.width = '';
+
+		if (this.header) {
+			this.header.style.width = '';
+		}
+	}
+}
+
+// Init immediately on DOM ready
+document.addEventListener('DOMContentLoaded', function () {
+	new HeaderToggler();
+});
+
 // smoth scroll
 document.addEventListener('DOMContentLoaded', function(){
 	Array.prototype.forEach.call(document.querySelectorAll("[data-scrollto]"), function(button){
@@ -852,82 +1201,6 @@ document.addEventListener('DOMContentLoaded', function(){
 		}
 	}
 });
-// toggle class event
-document.addEventListener('DOMContentLoaded', function(){
-	const headerContainer = document.getElementById('mainHeader');
-
-	Array.prototype.forEach.call(document.querySelectorAll("[data-toggle-element]"), function(button){
-		let defaultClass = 'active'
-		const ANIMATED_CLASS = 'animated';
-		let toggleClass = button.dataset.toggleClass ? button.dataset.toggleClass : defaultClass;
-		let elementLink = button.dataset.toggleElement;
-
-		button.addEventListener("click", function (e) {
-			headerContainer.classList.remove('menu-active');
-
-			Array.prototype.forEach.call(document.querySelectorAll(elementLink), function(element){
-				if (!element.classList.contains(toggleClass)) {
-					element.classList.add(toggleClass);
-					button.classList.add(defaultClass);
-					setTimeout(function(){
-						element.classList.add(ANIMATED_CLASS);
-					}, 250)
-					if (element.classList.contains('main-header') && element.querySelector('.search-input')) {
-						element.querySelector('.search-input').focus();
-					}
-					if (element.classList.contains('header-navigation')) {
-						document.body.style.width = window.getComputedStyle(document.body).width;
-						document.body.classList.add('overlayed');
-						document.getElementById('mainHeader').style.width = window.getComputedStyle(document.getElementById('mainHeader')).width;
-					}
-				} else {
-					element.classList.remove(toggleClass);
-					button.classList.remove(defaultClass);
-					if (document.body.classList.contains('overlayed')){
-						document.body.classList.remove('overlayed');
-						document.getElementById('mainHeader').style.width = '';
-						document.body.style.width = '';
-					};
-					if (!element.classList.contains('main-header')) {
-						element.classList.remove(ANIMATED_CLASS);
-					}
-				};
-			});
-		});
-	});
-
-	const mainNavigationContainer = document.getElementById('mainNavigation');
-
-	function hideMobileNav(){
-		if (mainNavigationContainer.classList.contains('active')) {
-			document.querySelector('[data-toggle-element="#mainNavigation"]').classList.remove('active');
-			mainNavigationContainer.classList.remove('active', 'animated');
-			document.body.classList.remove('overlayed');
-			document.body.style.width = '';
-			document.getElementById('mainHeader').style.width = '';
-		}
-	}
-
-	document.body.addEventListener(`click`, function(e){
-		if (e.target.closest('[data-toggle-element="#mainNavigation"]')) return;
-		if (e.target.closest('#mainNavigation')) return;
-
-		hideMobileNav();
-		if (headerContainer.classList.contains('form-search-active') && !e.target.closest('#mainHeader')) {
-			headerContainer.classList.remove('form-search-active');
-			document.body.classList.remove('overlayed');
-			document.getElementById('mainHeader').style.width = '';
-		}
-	}, {passive: true});
-
-
-	Array.prototype.forEach.call(document.querySelectorAll("[data-header-close]"), function(button){
-		button.addEventListener("click", function (e) {
-			hideMobileNav();
-		});
-	});
-});
-
 // show video modal
 document.addEventListener('DOMContentLoaded', function(){
 	let videoTriggerElemens = document.querySelectorAll("[data-video-src]");
@@ -1192,14 +1465,14 @@ class DualRange {
 const fmtUA = new Intl.NumberFormat('uk-UA');
 const headerText = (min, max, suffix = ' грн') => `${fmtUA.format(min)} — ${fmtUA.format(max)}${suffix}`;
 
-document.querySelectorAll('[data-dropdown]').forEach((dd) => {
+document.querySelectorAll('[data-range]').forEach((dd) => {
 	const parentFG = dd.closest('.form-group');
 
 	const rangeGroup = dd.querySelector('.range-group');
 	if (!rangeGroup) return;
 
 	const dr = new DualRange(rangeGroup, {});
-	const header = dd.querySelector('.dropdown-header');
+	const header = dd.querySelector('.range-header');
 
 	const initialHeaderText = header ? header.textContent : '';
 

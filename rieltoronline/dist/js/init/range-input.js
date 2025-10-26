@@ -146,14 +146,14 @@ class DualRange {
 const fmtUA = new Intl.NumberFormat('uk-UA');
 const headerText = (min, max, suffix = ' грн') => `${fmtUA.format(min)} — ${fmtUA.format(max)}${suffix}`;
 
-document.querySelectorAll('[data-dropdown]').forEach((dd) => {
+document.querySelectorAll('[data-range]').forEach((dd) => {
 	const parentFG = dd.closest('.form-group');
 
 	const rangeGroup = dd.querySelector('.range-group');
 	if (!rangeGroup) return;
 
 	const dr = new DualRange(rangeGroup, {});
-	const header = dd.querySelector('.dropdown-header');
+	const header = dd.querySelector('.range-header');
 
 	const initialHeaderText = header ? header.textContent : '';
 

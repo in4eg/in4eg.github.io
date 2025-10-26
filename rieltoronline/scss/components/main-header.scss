@@ -759,6 +759,16 @@ $header-borders-color-dark: rgba($color-dark-header, 0.3);
 				&:before { top: 3px; }
 			}
 
+			&.favourites-link {
+				overflow: visible;
+			}
+
+			.counter {
+				top: -2px; right: -2px;
+				height: 18px; width: 18px;
+				font-size: 12px;
+			}
+
 			.lines {
 				margin-bottom: 5px;
 				width: 16px;
