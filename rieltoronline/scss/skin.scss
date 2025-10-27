@@ -149,6 +149,7 @@ img.adaptive {
 		white-space: normal;
 	}
 }
+
 .verticaly-top:after,
 .verticaly-top .inner {
 	vertical-align: top;
@@ -180,30 +181,54 @@ img.adaptive {
 	display: inline-block;
 }
 
-/* Chrome, Edge, Safari */
-html::-webkit-scrollbar {
-	width: 10px;
-	height: 10px;
-}
 
-/* Firefox */
+/* === Глобально (html) === */
 html {
-	scrollbar-width: thin;
-	scrollbar-color: #576F80 #f1f1f1;
+	overflow: auto;
+	scrollbar-width: thin;                          /* Firefox */
+	scrollbar-color: rgba(87,111,128,.4) transparent;
 }
 
-html::-webkit-scrollbar-track {
-	background: #f1f1f1;
-}
-
+/* WebKit */
+html::-webkit-scrollbar { width: 10px; height: 10px; }
+html::-webkit-scrollbar-track { background: transparent; }
 html::-webkit-scrollbar-thumb {
-	background-color: #576F80;
+	background-color: rgba(87,111,128,.4);
 	border-radius: 6px;
-	border: 2px solid #f1f1f1;
+	border: 2px solid transparent; /* без сірого треку */
+}
+html::-webkit-scrollbar-thumb:hover { background-color: rgba(87,111,128,1); }
+
+/* === Локальні списки (дропдауни, фільтри) === */
+.dropdown .dropdown-inner,
+.selecter .dropdown,
+.filters-inner .filtered-list {
+	overflow-y: auto;
+	scrollbar-width: thin;
+	scrollbar-color: rgba(87,111,128,.4) transparent;  /* видно одразу (40%) */
 }
 
-html::-webkit-scrollbar-thumb:hover {
-	background-color: #435564;
+/* WebKit */
+.dropdown .dropdown-inner::-webkit-scrollbar,
+.selecter .dropdown::-webkit-scrollbar,
+.filters-inner .filtered-list::-webkit-scrollbar {
+	width: 8px; height: 8px;
+}
+.dropdown .dropdown-inner::-webkit-scrollbar-track,
+.selecter .dropdown::-webkit-scrollbar-track,
+.filters-inner .filtered-list::-webkit-scrollbar-track {
+	background: transparent;
+}
+.dropdown .dropdown-inner::-webkit-scrollbar-thumb,
+.selecter .dropdown::-webkit-scrollbar-thumb,
+.filters-inner .filtered-list::-webkit-scrollbar-thumb {
+	background-color: rgba(87,111,128,.4);  /* видно 40% */
+	border-radius: 6px;
+}
+.dropdown .dropdown-inner:hover::-webkit-scrollbar-thumb,
+.selecter .dropdown:hover::-webkit-scrollbar-thumb,
+.filters-inner .filtered-list:hover::-webkit-scrollbar-thumb {
+	background-color: rgba(87,111,128,1);   /* 100% на hover */
 }
 
 

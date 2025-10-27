@@ -5,19 +5,18 @@
 	.tag-cover {
 		display: flex;
 		gap: 24px;
-		margin-bottom: 24px;
-		align-items: end;
+		align-items: anchor-center;
+		flex-basis: calc(100% - 100%/4);
+
+		&.hidden {
+			display: none;
+		}
 
 		.tag-list {
 			display: flex;
 			gap: 8px;
 			flex: 1;
-			width: calc(100% - 120px);
 			flex-wrap: wrap;
-		}
-
-		.button {
-			width: 120px;
 		}
 	}
 
@@ -67,17 +66,36 @@
 				}
 			}
 		}
+
+		.round-link {
+			display: none;
+		}
+
+		.mobile-cover {
+
+			[data-toggle] {
+				display: none;
+			}
+		}
+	}
+
+	.tag-cover {
+		margin-bottom: 64px;
 	}
 
 	.filters-inner {
-		margin-bottom: 64px;
+		display: none;
 
-		.row {
+		[data-toggle] {
+			display: none;
+		}
+
+		.col-xs-12 {
 			margin-bottom: 48px;
 		}
 
 		.filtered-list {
-			max-height: 180px;
+			max-height: 150px;
 			overflow: auto;
 			margin-top: 16px;
 
@@ -85,13 +103,237 @@
 				padding: 0;
 				margin: 0;
 				cursor: pointer;
-				padding: 4px 16px;
+				padding: 4px 0;
 				transition: .2s;
 
 				&:hover,
 				&.active {
-					background-color: $color-light-silver;
 					color: $color-primary;
+				}
+			}
+
+			&.checkbox-list {
+
+				.item {
+
+					&:hover {
+						color: $color-primary;
+					}
+
+					&:hover,
+					&.active {
+						color: $color-secondary;
+					}
+				}
+			}
+		}
+
+		.filter-group {
+
+			.alert-helper {
+				display: none;
+				margin-top: 24px;
+				font-size: var(--font-size-small);
+				color: $color-primary
+			}
+
+			&.disabled {
+
+				.alert-helper {
+					display: block;
+				}
+
+				.filtered-list {
+					display: none;
+				}
+			}
+		}
+
+		.tag-cover,
+		.filters-form {
+			transform: translateY(10px);
+			opacity: 0;
+			transition: transform .1s;
+		}
+
+		&.active {
+			display: block;
+
+			&.animated {
+
+				.tag-cover,
+				.filters-form {
+					transform: translateY(0);
+					opacity: 1;
+				}
+			}
+		}
+	}
+
+	.button-cover {
+		height: 100%;
+		display: flex;
+		align-items: end;
+	}
+	.button {
+		min-width: auto;
+	}
+}
+
+@media (max-width: 1199px) {
+
+	.filters-cover {
+
+		.filter-header,
+		.tag-cover,
+		.filters-inner .row {
+			margin-bottom: 40px;
+		}
+
+		.tag {
+			padding-right: 40px;
+
+			&:before {
+				top: 2px; right: 8px;
+				font-size: 18px;
+			}
+		}
+	}
+}
+
+@media (max-width: 768px) {
+
+	.filters-cover {
+
+		.filter-header {
+
+			.hidden-xs {
+				display: none;
+			}
+
+			.mobile-cover {
+				display: flex;
+				gap: 24px;
+				justify-content: space-between;
+				width: 100%;
+				align-items: end;
+
+				[data-toggle] {
+					padding: 8px 0;
+					line-height: 32px;
+					display: block;
+					overflow: visible;
+					background-color: $color-round-link;
+
+					.counter {
+						font-size: 14px;
+						background-color: $color-secondary;
+						position: absolute;
+						top: 2px; right: 2px;
+						height: 20px; width: 20px;
+						line-height: 20px;
+						border-radius: 50%;
+						color: $color-white;
+					}
+				}
+			}
+
+			.form-group {
+				max-width: calc(50% - 12px);
+			}
+		}
+
+		.filters-inner {
+			position: fixed;
+			top: 0; left: 0;
+			bottom: 0; right: 0;
+			background: $color-lotion;
+			z-index: 20;
+			padding: 96px 24px 24px;
+			overflow: auto;
+
+			[data-toggle] {
+				position: absolute;
+				right: 24px; top: 24px;
+				z-index: 1;
+				background-color: $color-round-link;
+				display: block;
+			}
+		}
+	}
+
+	.filters-cover {
+
+		.filters-inner {
+
+			.filtered-list {
+				max-height: 200px;
+			}
+
+			.col-xs-12 {
+				margin-bottom: 32px;
+			}
+		}
+	}
+
+	.filters-cover {
+
+		.tag {
+			font-size: var(--font-size-small);
+
+			&:before { font-size: 16px; }
+		}
+	}
+}
+
+
+@media (max-width: 640px) {
+
+	.filters-cover {
+
+		.filter-header {
+
+			.mobile-cover {
+				display: flex;
+				gap: 24px;
+				justify-content: space-between;
+				width: 100%;
+				align-items: end;
+
+				[data-toggle] {
+					padding: 0;
+					height: 32px; width: 32px;
+					line-height: 32px;
+					background-color: $color-round-link;
+					border-radius: 50%;
+					font-size: 0;
+					text-align: center;
+					overflow: visible;
+
+					.icon {
+						display: block;
+						font-size: 20px;
+						margin-top: -6px;
+					}
+
+					.counter {
+						font-size: 12px;
+						background-color: $color-secondary;
+						position: absolute;
+						top: -4px; right: -4px;
+						height: 18px; width: 18px;
+						line-height: 18px;
+						border-radius: 50%;
+						color: $color-white;
+					}
+				}
+			}
+
+			.form-group {
+				max-width: calc(100% - 60px);
+
+				.label {
+					display: none;
 				}
 			}
 		}

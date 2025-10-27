@@ -33,7 +33,7 @@ class ObjectsPagerLoader {
 		li.innerHTML = `
 			<button type="button" class="button round-link" data-add-favourite>
 				<i class="icon icon-heart-empty active"></i>
-				<i class="icon icon-heart-full"></i>
+				<i class="icon icon-heart-filled"></i>
 			</button>
 			<a href="${item.link}" aria-label="Read more" class="object-preview">
 				<div class="spaced-inner">

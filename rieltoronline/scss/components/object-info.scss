@@ -1,0 +1,307 @@
+@import '../variables.scss';
+
+.object-info {
+
+	.preview-image {
+		position: relative;
+		height: 100%;
+
+		.object-image {
+			font-size: 0;
+			height: 100%;
+			min-height: 500px;
+			cursor: crosshair;
+			overflow: hidden;
+
+			&:hover {
+
+				img {
+					transform: translateZ(0) scale(1.02);
+				}
+			}
+		}
+
+		.badge {
+			position: absolute;
+			left: 24px; top: 26px;
+			z-index: 1;
+		}
+
+		[data-add-favourite] {
+			position: absolute;
+			right: 24px; top: 16px;
+			z-index: 1;
+		}
+
+		&:before {
+			content: '';
+			height: 62px; width: 66px;
+			position: absolute;
+			bottom: 16px; right: 16px;
+			background-image: url('../img/watermark.png');
+			z-index: 1;
+			background-size: contain;
+			background-repeat: no-repeat;
+			pointer-events: none;
+		}
+	}
+
+	.object-caption {
+		height: 100%;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+	}
+
+	.date {
+		margin-bottom: 32px;
+		padding-bottom: 16px;
+		font-size: var(--font-size-small);
+		color: $color-primary;
+		border-bottom: 1px solid $color-light-silver;
+	}
+
+	.detail-table {
+
+		dl {
+			display: flex;
+			gap: 24px;
+			margin-bottom: 16px;
+
+			dd {
+				flex: 1;
+				text-align: right;
+			}
+		}
+	}
+
+	.price-primary {
+		padding-bottom: 32px;
+		border-bottom: 1px solid $color-light-silver;
+	}
+
+	.owner-detail {
+
+		.title {
+			font-size: var(--h4-font-size);
+			font-weight: bold;
+			margin-bottom: 8px;
+		}
+
+		.detail {
+			padding-left: 48px;
+			background-color: $color-cultured;
+			min-height: 80px;
+			margin-bottom: 16px;
+			position: relative;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+
+			a {
+				width: fit-content;
+			}
+
+			&:before {
+				font-family: 'icomoon';
+				position: absolute;
+				font-size: 24px;
+				top: 8px; left: 16px;
+			}
+
+			&.locked {
+
+				&:before {
+					content: '\e914';
+				}
+			}
+
+			&.opened {
+
+				&:before {
+					content: '\e904';
+				}
+			}
+		}
+	}
+
+	.additional-thumbnails {
+		margin-top: 24px;
+		white-space: nowrap;
+		font-size: 0;
+		overflow: auto;
+		padding-bottom: 24px;
+		cursor: pointer;
+
+		.image-cover {
+			font-size: 0;
+			padding-top: 275px;
+			width: 275px;
+			display: inline-block;
+			margin-right: 24px;
+			overflow: hidden;
+
+			&:before {
+				content: '';
+				height: 62px; width: 66px;
+				position: absolute;
+				bottom: 16px; right: 16px;
+				background-image: url('../img/watermark.png');
+				z-index: 1;
+				background-size: contain;
+				background-repeat: no-repeat;
+				pointer-events: none;
+			}
+
+			&:hover {
+
+				img {
+					transform: translateZ(0) scale(1.02);
+				}
+			}
+		}
+	}
+}
+
+[data-scroll-slider] {
+	cursor: grab;
+	overflow-x: auto;
+	white-space: nowrap;
+}
+
+[data-scroll-slider].grabbing {
+	cursor: grabbing;
+}
+
+@media (max-width: 1199px) {
+
+	.object-info {
+
+		.col-lg-7 {
+			margin-bottom: 40px;
+		}
+	}
+
+	.object-info {
+
+		.additional-thumbnails {
+
+			.image-cover {
+				padding-top: 200px;
+				width: 200px;
+			}
+		}
+	}
+
+	.object-info {
+
+		.preview-image {
+
+			.object-image {
+				min-height: 350px;
+			}
+		}
+	}
+}
+
+@media (max-width: 768px) {
+
+	.object-info {
+
+		.col-lg-7 {
+			margin-bottom: 24px;
+		}
+
+		.detail-table {
+			font-size: var(--font-size-small);
+			margin-bottom: 24px;
+
+			dl {
+				margin-bottom: 8px;
+			}
+		}
+
+		.button.button-block.button-arrow {
+			padding-top: 12px;
+			padding-bottom: 12px;
+
+			.text {
+				white-space: normal;
+				width: 200px;
+				display: block;
+				margin: 0 auto;
+			}
+
+			.button-icon {
+				top: 6px; right: 6px;
+			}
+		}
+	}
+
+	.object-info {
+
+		.additional-thumbnails {
+
+			.image-cover {
+				padding-top: 140px;
+				width: 140px;
+			}
+		}
+	}
+
+	.object-info {
+
+		.preview-image {
+
+			.object-image {
+				min-height: 300px;
+			}
+		}
+	}
+}
+
+@media (max-width: 640px) {
+
+	.object-info {
+
+		.additional-thumbnails {
+
+			.image-cover {
+				padding-top: 100px;
+				width: 100px;
+			}
+		}
+	}
+
+	.object-info {
+
+		.preview-image {
+
+			.object-image {
+				min-height: 250px;
+			}
+		}
+	}
+}
+
+@media (max-width: 375px) {
+
+	.object-info {
+
+		.button.button-block.button-arrow {
+			padding-top: 14px;
+			padding-bottom: 14px;
+
+			.text {
+				font-size: 12px;
+			}
+		}
+
+		.preview-image {
+
+			.object-image {
+				min-height: 300px;
+			}
+		}
+	}
+}

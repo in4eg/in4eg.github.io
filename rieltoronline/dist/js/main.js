@@ -270,7 +270,7 @@ class ObjectsPagerLoader {
 		li.innerHTML = `
 			<button type="button" class="button round-link" data-add-favourite>
 				<i class="icon icon-heart-empty active"></i>
-				<i class="icon icon-heart-full"></i>
+				<i class="icon icon-heart-filled"></i>
 			</button>
 			<a href="${item.link}" aria-label="Read more" class="object-preview">
 				<div class="spaced-inner">
@@ -546,118 +546,572 @@ document.addEventListener('DOMContentLoaded', () => {
 	});
 });
 
-// ================= Helpers =================
-function strHash(s) {
-	let h = 5381;
-	for (let i = 0; i < s.length; i++) h = ((h << 5) + h) ^ s.charCodeAt(i);
-	return (h >>> 0).toString(36);
+class FiltersUI {
+	constructor(root = document.querySelector('.filters-cover'), storageKey = 'filtersState.v1') {
+		if (!root) {
+			console.warn('FiltersUI: .filters-cover не знайдено');
+			return;
+		}
+		this.root = root;
+		this.storageKey = storageKey;
+
+		// refs
+		this.tagCover = this.root.querySelector('.tag-cover');
+		this.tagList = this.root.querySelector('.tag-list');
+		this.clearAllBtn = this.root.querySelector('.tag-cover .button-link');
+		this.counterEl = this.root.querySelector('.counter');
+
+		this.tagCover?.classList.add('hidden');
+		this.updateCounter(0);
+
+		// підписки
+		this.bindInputs();
+		this.tagList?.addEventListener('click', this.onTagClick);
+		this.clearAllBtn?.addEventListener('click', this.onClearAll);
+		this.bindSearchBlocks();
+
+		// стан
+		this.loadState();
+		this.rebuildAllTags();
+		this.updateDistrictAvailability();
+	}
+
+	/* ===== utils ===== */
+	qs = (sel, ctx = this.root) => (ctx || this.root).querySelector(sel);
+	qsa = (sel, ctx = this.root) => Array.from((ctx || this.root).querySelectorAll(sel));
+	txt = (el) => (el ? el.textContent.trim() : '');
+	updateCounter = (n) => { if (this.counterEl) this.counterEl.textContent = n; };
+	refreshTagCover = () => {
+		const count = this.tagList?.querySelectorAll('[data-tag]').length || 0;
+		this.root.querySelectorAll('[data-toggle] .counter').forEach(span => { span.textContent = count; });
+		if (this.tagCover) this.tagCover.classList.toggle('hidden', count === 0);
+	};
+	numOrNull = (v) => (v === undefined || v === null || v === '' ? null : Number(v));
+
+	/* ===== search filter ===== */
+	bindSearchBlocks = () => {
+		this.qsa('[data-filter]').forEach(block => {
+			const input = block.querySelector('input[type="text"], .input');
+			if (!input) return;
+			input.addEventListener('input', this.onSearchInput, { passive: true });
+			block._itemsSel = (block.dataset.filter || '.filtered-list .item').trim();
+			if (!block._itemsSel.endsWith('.item')) block._itemsSel += ' .item';
+			block._fieldsSel = (block.dataset.filterFields || 'label').trim();
+		});
+	};
+	onSearchInput = (e) => {
+		const block = e.target.closest('[data-filter]');
+		if (!block) return;
+		const q = (e.target.value || '').trim().toLowerCase();
+
+		const items = this.qsa(block._itemsSel, block);
+		items.forEach(item => {
+			this.qsa(block._fieldsSel, item).forEach(field => this.stripMarks(field));
+			if (!q) { item.classList.remove('hidden'); return; }
+			const match = this.qsa(block._fieldsSel, item).some(field => {
+				const t = this.txt(field);
+				if (!t) return false;
+				if (t.toLowerCase().includes(q)) { this.highlight(field, q); return true; }
+				return false;
+			});
+			item.classList.toggle('hidden', !match);
+		});
+	};
+	clearFilterBlock = (container) => {
+		const input = container.querySelector('input[type="text"], .input');
+		if (input) { input.value = ''; input.parentElement?.classList.remove('focused'); }
+		const itemsSel = container._itemsSel || (container.dataset.filter || '.filtered-list .item') + (container.dataset.filter?.endsWith('.item') ? '' : ' .item');
+		const fieldsSel = container._fieldsSel || (container.dataset.filterFields || 'label');
+		this.qsa(itemsSel, container).forEach(item => {
+			this.qsa(fieldsSel, item).forEach(field => this.stripMarks(field));
+			item.classList.remove('hidden');
+		});
+	};
+	highlight = (field, query) => {
+		const esc = s => s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+		const re = new RegExp(esc(query), 'gi');
+		const html = field.innerHTML.replace(/<\/?mark>/g, '');
+		field.innerHTML = html.replace(re, m => `<mark>${m}</mark>`);
+	};
+	stripMarks = (field) => {
+		this.qsa('mark', field).forEach(mark => mark.replaceWith(document.createTextNode(mark.textContent)));
+	};
+
+	// ---- city → district dependency
+	updateDistrictAvailability() {
+		const anyCityChecked = !!this.root.querySelector('input[type="radio"][name="cityFilter"]:checked');
+		const districtGroup = this.root.querySelector('#district')?.closest('.labeled-group.filter-group.form-group');
+		if (!districtGroup) return;
+		districtGroup.classList.toggle('disabled', !anyCityChecked);
+		this.qsa('input, select, textarea, button', districtGroup).forEach(el => {
+			if (el.type === 'checkbox' || el.type === 'radio') el.disabled = !anyCityChecked;
+		});
+	}
+
+	/* ===== inputs ===== */
+	bindInputs = () => {
+		this.qsa('input[type="checkbox"], input[type="radio"]').forEach(inp => {
+			inp.addEventListener('change', this.onInputChange);
+		});
+		this.qsa('[data-calendar] input[type="date"]').forEach(inp => {
+			inp.addEventListener('change', this.onInputChange);
+		});
+		this.qsa('[data-range]').forEach(wrap => {
+			this.initRange(wrap); // ВАЖЛИВО: не виставляємо значення, якщо data-value-* порожні
+			this.updateRangeFill(wrap);
+			this.updateRangeHeader(wrap);
+			this.qsa('.input-min, .input-max, .range-min, .range-max', wrap).forEach(el => {
+				el.addEventListener('input', this.onInputChange);
+			});
+		});
+	};
+	// ініціалізація range без насильного підстановлення
+	initRange = (wrap) => {
+		const r = this.qs('.range', wrap);
+		if (!r) return;
+
+		const hasMin = r.dataset.valueMin !== undefined && r.dataset.valueMin !== '';
+		const hasMax = r.dataset.valueMax !== undefined && r.dataset.valueMax !== '';
+
+		const inMin = this.qs('.input-min', wrap);
+		const inMax = this.qs('.input-max', wrap);
+		const rMin  = this.qs('.range-min', r);
+		const rMax  = this.qs('.range-max', r);
+
+		// якщо обидва порожні — залишаємо все порожнім
+		if (!hasMin && !hasMax) {
+			if (inMin) inMin.value = '';
+			if (inMax) inMax.value = '';
+			// range-елементам НЕ задаємо value (щоб не провокувати відображення "обрано")
+			return;
+		}
+		// якщо хоч одне заповнене — синхронізуємо лише заповнені
+		if (hasMin) {
+			const v = Number(r.dataset.valueMin);
+			if (inMin) inMin.value = String(v);
+			if (rMin) rMin.value = v;
+		}
+		if (hasMax) {
+			const v = Number(r.dataset.valueMax);
+			if (inMax) inMax.value = String(v);
+			if (rMax) rMax.value = v;
+		}
+	};
+
+	onInputChange = (e) => {
+		const el = e.currentTarget;
+
+		if (el.closest('[data-range]')) {
+			const wrap = el.closest('[data-range]');
+			this.updateRangeFill(wrap);
+			this.updateRangeHeader(wrap);
+		}
+		if (el.closest('[data-calendar]')) {
+			this.updateCalendarHeader(el.closest('[data-calendar]'));
+		}
+
+		this.afterSelect(el);
+
+		const filterBlock = el.closest('[data-filter]');
+		if (filterBlock) this.clearFilterBlock(filterBlock);
+
+		if (el.matches('input[type="radio"][name="cityFilter"]')) {
+			this.updateDistrictAvailability();
+		}
+		this.saveState();
+	};
+
+	/* ===== tags ===== */
+	upsertTag = (key, labelText) => {
+		if (!key || !this.tagList) return;
+		let tag = this.tagList.querySelector(`[data-tag][data-key="${CSS.escape(key)}"]`);
+		if (!tag) {
+			tag = document.createElement('div');
+			tag.className = 'tag';
+			tag.setAttribute('data-tag', '');
+			tag.dataset.key = key;
+			this.tagList.appendChild(tag);
+		}
+		tag.textContent = labelText;
+		this.refreshTagCover();
+	};
+	removeTag = (key) => {
+		const tag = this.tagList?.querySelector(`[data-tag][data-key="${CSS.escape(key)}"]`);
+		tag?.remove();
+		this.refreshTagCover();
+	};
+	tagKeyFor = (el) => {
+		if (el.matches('input[type="checkbox"], input[type="radio"]')) return el.id || '';
+		const rg = el.closest('[data-range]');
+		if (rg) {
+			if (!rg.dataset.tagKey) rg.dataset.tagKey = 'range-' + this.qsa('[data-range]').indexOf(rg);
+			return rg.dataset.tagKey;
+		}
+		const cg = el.closest('[data-calendar]');
+		if (cg) {
+			if (!cg.dataset.tagKey) cg.dataset.tagKey = 'calendar-' + this.qsa('[data-calendar]').indexOf(cg);
+			return cg.dataset.tagKey;
+		}
+		return '';
+	};
+	tagTextFor = (el) => {
+		if (el.matches('input[type="checkbox"], input[type="radio"]')) {
+			const lab = this.root.querySelector(`label[for="${CSS.escape(el.id)}"]`);
+			return this.txt(lab);
+		}
+		const rg = el.closest('[data-range]');
+		if (rg) return this.updateRangeHeader(rg);
+		const cg = el.closest('[data-calendar]');
+		if (cg) return this.updateCalendarHeader(cg);
+		return '';
+	};
+	afterSelect = (el) => {
+		const key = this.tagKeyFor(el);
+		const txt = this.tagTextFor(el);
+
+		if (el.matches('input[type="checkbox"]')) {
+			el.checked ? this.upsertTag(key, txt) : this.removeTag(key);
+			return;
+		}
+		if (el.matches('input[type="radio"]')) {
+			const name = el.name;
+			this.qsa(`input[type="radio"][name="${CSS.escape(name)}"]`).forEach(r => this.removeTag(r.id));
+			if (el.checked) this.upsertTag(key, txt);
+			return;
+		}
+		// date / range
+		if (txt && txt !== 'Не вибрано') this.upsertTag(key, txt);
+		else this.removeTag(key);
+	};
+	onTagClick = (e) => {
+		const tag = e.target.closest('[data-tag]');
+		if (!tag) return;
+		const key = tag.dataset.key;
+		const byId = key && this.root.querySelector(`#${CSS.escape(key)}`);
+		if (byId) {
+			if (byId.type === 'checkbox' || byId.type === 'radio') byId.checked = false;
+		} else if (key?.startsWith('range-')) {
+			const idx = Number(key.split('-')[1] || 0);
+			const wrap = this.qsa('[data-range]')[idx];
+			if (wrap) this.resetRange(wrap);
+		} else if (key?.startsWith('calendar-')) {
+			const idx = Number(key.split('-')[1] || 0);
+			const wrap = this.qsa('[data-calendar]')[idx];
+			if (wrap) this.resetCalendar(wrap);
+		}
+		tag.remove();
+		this.refreshTagCover();
+		this.saveState();
+
+		if (byId && byId.name === 'cityFilter') {
+			this.updateDistrictAvailability();
+		}
+	};
+	onClearAll = (e) => {
+		e.preventDefault();
+		this.qsa('[data-tag]', this.tagList).forEach(t => t.remove());
+		this.refreshTagCover();
+
+		this.qsa('input[type="checkbox"], input[type="radio"]').forEach(i => i.checked = false);
+		this.qsa('[data-calendar]').forEach(w => this.resetCalendar(w));
+		this.qsa('[data-range]').forEach(w => this.resetRange(w));
+		this.qsa('.range-header').forEach(h => h.textContent = 'Не вибрано');
+		this.qsa('[data-filter]').forEach(b => this.clearFilterBlock(b));
+
+		localStorage.removeItem(this.storageKey);
+		this.updateDistrictAvailability();
+	};
+
+	/* ===== range/calendar helpers ===== */
+	updateRangeHeader = (wrap) => {
+		const hdr = this.qs('.range-header', wrap);
+		const minI = this.qs('.input-min', wrap);
+		const maxI = this.qs('.input-max', wrap);
+		let t = 'Не вибрано';
+		if (minI?.value !== '' && maxI?.value !== '') t = `Від ${minI.value} до ${maxI.value}`;
+		if (hdr) hdr.textContent = t;
+		return t;
+	};
+	updateRangeFill = (wrap) => {
+		const r = this.qs('.range', wrap);
+		if (!r) return;
+
+		const min = Number(r.dataset.min ?? 0);
+		const max = Number(r.dataset.max ?? 100);
+
+		const rMinEl = this.qs('.range-min', r);
+		const rMaxEl = this.qs('.range-max', r);
+
+		let curMin = this.numOrNull(rMinEl?.value);
+		let curMax = this.numOrNull(rMaxEl?.value);
+
+		if (curMin == null) curMin = this.numOrNull(r.dataset.valueMin);
+		if (curMax == null) curMax = this.numOrNull(r.dataset.valueMax);
+
+		const leftVal  = curMin == null ? min : curMin;
+		const rightVal = curMax == null ? max : curMax;
+
+		const fill = this.qs('.range-fill', r);
+		if (fill) {
+			const l  = ((Math.min(leftVal, rightVal) - min) * 100) / (max - min);
+			const rw = ((Math.max(leftVal, rightVal) - min) * 100) / (max - min);
+			fill.style.left  = l + '%';
+			fill.style.width = (rw - l) + '%';
+		}
+	};
+	resetRange = (wrap) => {
+		const r = this.qs('.range', wrap);
+		if (!r) return;
+
+		const vMin = (r.dataset.valueMin !== '' && r.dataset.valueMin != null) ? Number(r.dataset.valueMin) : null;
+		const vMax = (r.dataset.valueMax !== '' && r.dataset.valueMax != null) ? Number(r.dataset.valueMax) : null;
+
+		const inMin = this.qs('.input-min', wrap);
+		const inMax = this.qs('.input-max', wrap);
+		const rMin  = this.qs('.range-min', r);
+		const rMax  = this.qs('.range-max', r);
+
+		// якщо null — залишаємо порожнім
+		if (inMin) inMin.value = vMin != null ? String(vMin) : '';
+		if (inMax) inMax.value = vMax != null ? String(vMax) : '';
+		if (rMin && vMin != null) rMin.value = vMin;
+		if (rMax && vMax != null) rMax.value = vMax;
+
+		this.updateRangeFill(wrap);
+		this.updateRangeHeader(wrap);
+	};
+	updateCalendarHeader = (wrap) => {
+		const hdr = this.qs('.range-header', wrap);
+		const sInp = this.qs('input[type="date"][data-start]', wrap);
+		const eInp = this.qs('input[type="date"][data-end]', wrap);
+		const s = sInp?.value || '';
+		const e = eInp?.value || '';
+		let t = 'Не вибрано';
+		if (s && e) t = `${s} — ${e}`;
+		else if (s) t = `З ${s}`;
+		else if (e) t = `До ${e}`;
+		if (hdr) hdr.textContent = t;
+		return t;
+	};
+	resetCalendar = (wrap) => {
+		const s = this.qs('input[type="date"][data-start]', wrap);
+		const e = this.qs('input[type="date"][data-end]', wrap);
+		if (s) s.value = '';
+		if (e) e.value = '';
+		this.updateCalendarHeader(wrap);
+	};
+
+	/* ===== persistence ===== */
+	saveState = () => {
+		const state = {
+			checkboxes: this.qsa('input[type="checkbox"]').filter(i => i.checked).map(i => i.id),
+			radios: Object.fromEntries(this.qsa('input[type="radio"]:checked').map(i => [i.name, i.id])),
+			dates: this.qsa('[data-calendar]').map(cal => {
+				const s = this.qs('input[type="date"][data-start]', cal)?.value || '';
+				const e = this.qs('input[type="date"][data-end]', cal)?.value || '';
+				return { start: s, end: e };
+			}),
+			ranges: this.qsa('[data-range]').map(rw => ({
+				min: this.qs('.input-min', rw)?.value ?? '',
+				max: this.qs('.input-max', rw)?.value ?? ''
+			}))
+		};
+		localStorage.setItem(this.storageKey, JSON.stringify(state));
+	};
+	loadState = () => {
+		const raw = localStorage.getItem(this.storageKey);
+		if (!raw) return;
+		let state; try { state = JSON.parse(raw); } catch { return; }
+
+		this.qsa('input[type="checkbox"]').forEach(i => { i.checked = (state.checkboxes || []).includes(i.id); });
+
+		if (state.radios) {
+			Object.entries(state.radios).forEach(([name, id]) => {
+				const r = this.root.querySelector(`input[type="radio"][name="${CSS.escape(name)}"][id="${CSS.escape(id)}"]`);
+				if (r) r.checked = true;
+			});
+		}
+		this.qsa('[data-calendar]').forEach((cal, idx) => {
+			const rec = state.dates?.[idx];
+			if (!rec) return;
+			const s = this.qs('input[type="date"][data-start]', cal);
+			const e = this.qs('input[type="date"][data-end]', cal);
+			if (s) s.value = rec.start || '';
+			if (e) e.value = rec.end || '';
+			this.updateCalendarHeader(cal);
+		});
+		this.qsa('[data-range]').forEach((rw, idx) => {
+			const rec = state.ranges?.[idx];
+			if (!rec) return;
+			const inMin = this.qs('.input-min', rw);
+			const inMax = this.qs('.input-max', rw);
+			const rMin = this.qs('.range-min', rw);
+			const rMax = this.qs('.range-max', rw);
+			if (inMin) inMin.value = rec.min ?? '';
+			if (inMax) inMax.value = rec.max ?? '';
+			if (rMin && rec.min !== '') rMin.value = rec.min;
+			if (rMax && rec.max !== '') rMax.value = rec.max;
+			this.updateRangeFill(rw);
+			this.updateRangeHeader(rw);
+		});
+	};
+	rebuildAllTags = () => {
+		this.qsa('[data-tag]', this.tagList).forEach(t => t.remove());
+		this.qsa('input[type="checkbox"]:checked').forEach(inp => {
+			const lab = this.root.querySelector(`label[for="${CSS.escape(inp.id)}"]`);
+			this.upsertTag(inp.id, this.txt(lab));
+		});
+		this.qsa('input[type="radio"]:checked').forEach(inp => {
+			const lab = this.root.querySelector(`label[for="${CSS.escape(inp.id)}"]`);
+			this.upsertTag(inp.id, this.txt(lab));
+		});
+		this.qsa('[data-calendar]').forEach((cal, idx) => {
+			const t = this.updateCalendarHeader(cal);
+			if (t && t !== 'Не вибрано') this.upsertTag('calendar-' + idx, t);
+		});
+		this.qsa('[data-range]').forEach((rw, idx) => {
+			const t = this.updateRangeHeader(rw);
+			if (t && t !== 'Не вибрано') this.upsertTag('range-' + idx, t);
+		});
+		this.refreshTagCover();
+	};
 }
 
-// ================= Store =================
-class FavStore {
-	constructor(key = 'favourites') {
-		this.key = key;
-		this._listeners = new Set();
-		this._state = this._read();
-	}
-	_read() {
-		try {
-			const raw = JSON.parse(localStorage.getItem(this.key));
-			return {
-				items: Array.isArray(raw?.items) ? raw.items : [],
-				data:  raw?.data && typeof raw.data === 'object' ? raw.data : {}
-			};
-		} catch { return { items: [], data: {} }; }
-	}
-	_write() {
-		localStorage.setItem(this.key, JSON.stringify(this._state));
-		this._emit();
-	}
-	_emit() {
-		const payload = { items: this.items(), count: this.count(), data: this._state.data };
-		this._listeners.forEach(fn => fn(payload));
-	}
-	onChange(fn) {
-		this._listeners.add(fn);
-		fn({ items: this.items(), count: this.count(), data: this._state.data });
-		return () => this._listeners.delete(fn);
-	}
-	items() { return [...this._state.items]; }
-	count() { return this._state.items.length; }
-	has(id) { return this._state.items.includes(id); }
-	getAllData() { return this._state.items.map(id => this._state.data[id]).filter(Boolean); }
+// init
+document.addEventListener('DOMContentLoaded', () => {
+	document.querySelectorAll('.filters-cover').forEach(node => new FiltersUI(node));
+});
 
-	add(id, dataObj) {
-		if (!id) return;
-		if (!this._state.items.includes(id)) {
-			this._state.items.push(id);
-			if (dataObj && typeof dataObj === 'object') this._state.data[id] = dataObj;
+	// ================= Helpers =================
+	function strHash(s) {
+		let h = 5381;
+		for (let i = 0; i < s.length; i++) h = ((h << 5) + h) ^ s.charCodeAt(i);
+		return (h >>> 0).toString(36);
+	}
+
+	// ================= Store =================
+	class FavStore {
+		constructor(key = 'favourites') {
+			this.key = key;
+			this._listeners = new Set();
+			this._state = this._read();
+		}
+		_read() {
+			try {
+				const raw = JSON.parse(localStorage.getItem(this.key));
+				return {
+					items: Array.isArray(raw?.items) ? raw.items : [],
+					data:  raw?.data && typeof raw.data === 'object' ? raw.data : {}
+				};
+			} catch { return { items: [], data: {} }; }
+		}
+		_write() {
+			localStorage.setItem(this.key, JSON.stringify(this._state));
+			this._emit();
+		}
+		_emit() {
+			const payload = { items: this.items(), count: this.count(), data: this._state.data };
+			this._listeners.forEach(fn => fn(payload));
+		}
+		onChange(fn) {
+			this._listeners.add(fn);
+			fn({ items: this.items(), count: this.count(), data: this._state.data });
+			return () => this._listeners.delete(fn);
+		}
+		items() { return [...this._state.items]; }
+		count() { return this._state.items.length; }
+		has(id) { return this._state.items.includes(id); }
+		getAllData() { return this._state.items.map(id => this._state.data[id]).filter(Boolean); }
+
+		add(id, dataObj) {
+			if (!id) return;
+			if (!this._state.items.includes(id)) {
+				this._state.items.push(id);
+				if (dataObj && typeof dataObj === 'object') this._state.data[id] = dataObj;
+				this._write();
+				console.log('Added to favourites:', id);
+			}
+		}
+		remove(id) {
+			if (!id) return;
+			if (this._state.items.includes(id)) {
+				this._state.items = this._state.items.filter(x => x !== id);
+				delete this._state.data[id];
+				this._write();
+				console.log('Removed from favourites:', id);
+			}
+		}
+		toggle(id, dataObj) {
+			if (this.has(id)) return this.remove(id);
+			return this.add(id, dataObj);
+		}
+		clear() {
+			this._state = { items: [], data: {} };
 			this._write();
-			console.log('Added to favourites:', id);
+			console.log('Cleared all favourites');
 		}
 	}
-	remove(id) {
-		if (!id) return;
-		if (this._state.items.includes(id)) {
-			this._state.items = this._state.items.filter(x => x !== id);
-			delete this._state.data[id];
-			this._write();
-			console.log('Removed from favourites:', id);
+
+	// ================= Cards =================
+	class FavCards {
+		constructor(store, { rootSelector = 'body', itemSelector = '.item' } = {}) {
+			this.store = store;
+			this.root = document.querySelector(rootSelector) || document.body;
+			this.itemSelector = itemSelector;
+
+			this._onClick = this._onClick.bind(this);
+
+			this.root.addEventListener('click', this._onClick, false);
+			this.unsubscribe = this.store.onChange(() => this.syncAll());
+
+			this.syncAll();
 		}
-	}
-	toggle(id, dataObj) {
-		if (this.has(id)) return this.remove(id);
-		return this.add(id, dataObj);
-	}
-	clear() {
-		this._state = { items: [], data: {} };
-		this._write();
-		console.log('Cleared all favourites');
-	}
-}
 
-// ================= Cards =================
-class FavCards {
-	constructor(store, { rootSelector = 'body', itemSelector = '.item' } = {}) {
-		this.store = store;
-		this.root = document.querySelector(rootSelector) || document.body;
-		this.itemSelector = itemSelector;
+		destroy() {
+			this.root.removeEventListener('click', this._onClick, false);
+			this.unsubscribe?.();
+		}
 
-		this._onClick = this._onClick.bind(this);
-		this.root.addEventListener('click', this._onClick, false);
+		_onClick(e) {
+			const btn = e.target.closest('[data-add-favourite]');
+			if (!btn || !this.root.contains(btn)) return;
 
-		this.unsubscribe = this.store.onChange(() => this.syncAll());
-		this.syncAll();
-	}
-	_onClick(e) {
-		const btn = e.target.closest('[data-add-favourite]');
-		if (btn && this.root.contains(btn)) {
 			e.preventDefault();
 			const itemEl = btn.closest(this.itemSelector);
 			if (!itemEl) return;
-			const id = this._resolveId(itemEl);
+
+			const id = this._ensureId(itemEl);
 			if (!id) return;
+
 			const data = this._extractData(itemEl, id);
 			this.store.toggle(id, data);
+
 			this._applyIcons(btn, this.store.has(id));
 		}
-	}
-	_resolveId(itemEl) {
-		if (itemEl.dataset?.id) return itemEl.dataset.id;
+
+	// стабільний uid на основі вмісту картки (а не Date.now)
+	_ensureId(itemEl) {
+		if (itemEl.dataset?.id)  return itemEl.dataset.id;
 		if (itemEl.dataset?.uid) return itemEl.dataset.uid;
+
 		const href  = itemEl.querySelector('.object-preview[href]')?.getAttribute('href') || '';
 		const title = (itemEl.querySelector('.object-title')?.textContent || '').trim();
 		const date  = (itemEl.querySelector('.date')?.textContent || '').trim();
+
+		// локальний індекс серед сусідів .item — щоб уникнути колізій
+		let localIndex = 0;
 		const parent = itemEl.parentElement;
-		let localIndex = -1;
 		if (parent) {
 			const siblings = Array.from(parent.children).filter(el => el.matches?.(this.itemSelector));
 			localIndex = Math.max(0, siblings.indexOf(itemEl));
 		}
-		const uid = `fp-${strHash(`href=${href}|title=${title}|date=${date}|idx=${localIndex}`)}`;
+
+		const uid = `fav-${strHash(`href=${href}|title=${title}|date=${date}|idx=${localIndex}`)}`;
 		itemEl.dataset.uid = uid;
 		return uid;
 	}
+
+	// збираємо ВСІ потрібні поля для сторінки Обране
 	_extractData(itemEl, id) {
 		const a       = itemEl.querySelector('.object-preview[href]');
 		const img     = itemEl.querySelector('.object-image img');
@@ -667,191 +1121,249 @@ class FavCards {
 		const line1   = desc?.querySelector('.line:nth-child(1)');
 		const line2   = desc?.querySelector('.line:nth-child(2)');
 		const priceEl = desc?.querySelector('.price-primary');
+
 		return {
 			id,
-			href:  a ? a.getAttribute('href') : '#',
-			image: img ? img.getAttribute('src') : '',
-			imageAlt: img ? img.getAttribute('alt') || 'image' : 'image',
-			dateText: dateEl ? dateEl.textContent.trim() : '',
-			title:   titleEl ? titleEl.textContent.trim() : '',
+			href:      a ? a.getAttribute('href') : '#',
+			image:     img ? img.getAttribute('src') : '',
+			imageAlt:  img ? (img.getAttribute('alt') || 'image') : 'image',
+			dateText:  dateEl ? dateEl.textContent.trim() : '',
+			title:     titleEl ? titleEl.textContent.trim() : '',
 			line1Text: line1 ? line1.textContent.trim() : '',
 			line2HTML: line2 ? line2.innerHTML.trim() : '',
 			priceHTML: priceEl ? priceEl.innerHTML.trim() : ''
 		};
 	}
-	_applyIcons(btn, isFav) {
-		const emptyIcon  = btn.querySelector('.icon-heart-empty');
-		const filledIcon = btn.querySelector('.icon-heart-filled');
-		if (!emptyIcon || !filledIcon) return;
-		if (isFav) {
-			emptyIcon.classList.remove('active');
-			filledIcon.classList.add('active');
-		} else {
-			filledIcon.classList.remove('active');
-			emptyIcon.classList.add('active');
-		}
-	}
-	syncAll() {
-		const buttons = this.root.querySelectorAll('[data-add-favourite]');
-		buttons.forEach((btn) => {
-			const itemEl = btn.closest(this.itemSelector);
-			const id = itemEl ? (itemEl.dataset.id || itemEl.dataset.uid || null) : null;
-			this._applyIcons(btn, id ? this.store.has(id) : false);
-		});
-	}
-}
 
-// ================= Header (іконка у шапці) =================
-class FavHeaderNav {
-	constructor(store, { headerSelector = '#favButton' } = {}) {
-		this.store = store;
-		this.el = document.querySelector(headerSelector);
-		this.badge = null;
-		this.unsubscribe = this.store.onChange(({ count }) => this.render(count));
-		this.render(this.store.count());
-	}
-	render(count) {
-		if (!this.el) return;
-		if (!this.badge) {
-			this.badge = this.el.querySelector('.counter');
-			if (!this.badge) {
-				this.badge = document.createElement('span');
-				this.badge.className = 'counter';
-				this.el.appendChild(this.badge);
-			}
-		}
-		if (count > 0) {
-			this.badge.textContent = String(count);
-			this.badge.style.display = '';
-		} else {
-			this.badge.textContent = '';
-			this.badge.style.display = 'none';
-		}
-	}
-}
 
-// ================= Section header (Обране) =================
-class FavSectionHeader {
-	constructor(store, {
-		containerSelector = '#favHeader',
-		counterSelector   = '.h2-title .counter',
-		clearSelector     = '[data-clear-favourite]'
-	} = {}) {
-		this.store = store;
-		this.container = document.querySelector(containerSelector);
-		if (!this.container) return;
-		this.counterEl = this.container.querySelector(counterSelector);
-		this.clearBtn  = this.container.querySelector(clearSelector);
-		this._onClick = this._onClick.bind(this);
-		this.container.addEventListener('click', this._onClick, false);
-		this.unsubscribe = this.store.onChange(({ count }) => this.render(count));
-		this.render(this.store.count());
-	}
-	_onClick(e) {
-		const btn = e.target.closest('[data-clear-favourite]');
-		if (!btn || !this.container.contains(btn)) return;
-		e.preventDefault();
-		this.store.clear();
-		this.render(0);
-	}
-	render(count) {
-		if (this.counterEl) this.counterEl.textContent = String(count);
-		if (this.clearBtn) {
-			if (count > 0) this.clearBtn.classList.remove('hidden');
-			else this.clearBtn.classList.add('hidden');
-		}
-	}
-}
+		_applyIcons(btn, isFav) {
+			const emptyIcon  = btn.querySelector('.icon-heart-empty');
+			const filledIcon = btn.querySelector('.icon-heart-filled');
 
-// ================= Favourites Page Renderer =================
-class FavouritesPage {
-	constructor(store, {
-		listSelector   = '#loadContent[data-load-favourites]',
-		paginationId   = 'pagination',
-		alertSelector  = '.search-alert'
-	} = {}) {
-		this.store = store;
-		this.list  = document.querySelector(listSelector);
-		if (!this.list) return;
-		this.pagination = document.getElementById(paginationId);
-		this.alertEl    = document.querySelector(alertSelector);
-		this.unsubscribe = this.store.onChange(() => this.render());
-		this.render();
-	}
-	render() {
-		const data = this.store.getAllData();
-		this.list.innerHTML = '';
+			if (emptyIcon) emptyIcon.classList.remove('active');
+			if (filledIcon) filledIcon.classList.remove('active');
 
-		if (!data.length) {
-			this.list.style.display = 'none';
-			if (this.pagination) this.pagination.classList.add('hidden');
-			if (this.alertEl) this.alertEl.classList.remove('hidden');
-			return;
-		}
-
-		this.list.style.display = '';
-		if (this.alertEl) this.alertEl.classList.add('hidden');
-
-		const frag = document.createDocumentFragment();
-		data.forEach(d => frag.appendChild(this._makeLi(d)));
-		this.list.appendChild(frag);
-
-		// ховаємо пагінацію якщо менше 12
-		if (this.pagination) {
-			if (data.length < 12) {
-				this.pagination.classList.add('hidden');
+			if (isFav) {
+				if (filledIcon) filledIcon.classList.add('active');
 			} else {
-				this.pagination.classList.remove('hidden');
+				if (emptyIcon) emptyIcon.classList.add('active');
+			}
+		}
+
+		syncAll() {
+			const buttons = this.root.querySelectorAll('[data-add-favourite]');
+			buttons.forEach(btn => {
+				const itemEl = btn.closest(this.itemSelector);
+				if (!itemEl) return;
+				const id = this._ensureId(itemEl);
+				this._applyIcons(btn, this.store.has(id));
+			});
+		}
+	}
+
+
+
+	// ================= Header (іконка у шапці) =================
+	class FavHeaderNav {
+		constructor(store, { headerSelector = '#favButton' } = {}) {
+			this.store = store;
+			this.el = document.querySelector(headerSelector);
+			this.badge = null;
+			this.unsubscribe = this.store.onChange(({ count }) => this.render(count));
+			this.render(this.store.count());
+		}
+		render(count) {
+			if (!this.el) return;
+			if (!this.badge) {
+				this.badge = this.el.querySelector('.counter');
+				if (!this.badge) {
+					this.badge = document.createElement('span');
+					this.badge.className = 'counter';
+					this.el.appendChild(this.badge);
+				}
+			}
+			if (count > 0) {
+				this.badge.textContent = String(count);
+				this.badge.style.display = '';
+			} else {
+				this.badge.textContent = '';
+				this.badge.style.display = 'none';
 			}
 		}
 	}
-	_makeLi(d) {
-		const li = document.createElement('li');
-		li.className = 'item';
-		li.dataset.id = d.id;
-		li.innerHTML = `
-			<button type="button" class="button round-link" data-add-favourite>
-				<i class="icon icon-heart-empty"></i>
-				<i class="icon icon-heart-filled active"></i>
-			</button>
-			<a href="${d.href}" aria-label="Read more" class="object-preview">
-				<div class="spaced-inner">
-					<figure class="object-image">
-						<img src="${d.image}" draggable="false" alt="${d.imageAlt}">
-					</figure>
-				</div>
-				<div class="caption">
-					<div class="spaced-inner bordered">
-						<div class="date">${d.dateText || ''}</div>
+
+	// ================= Section header (Обране) =================
+	class FavSectionHeader {
+		constructor(store, {
+			containerSelector = '#favHeader',
+			counterSelector   = '.h2-title .counter',
+			clearSelector     = '[data-clear-favourite]'
+		} = {}) {
+			this.store = store;
+			this.container = document.querySelector(containerSelector);
+			if (!this.container) return;
+			this.counterEl = this.container.querySelector(counterSelector);
+			this.clearBtn  = this.container.querySelector(clearSelector);
+			this._onClick = this._onClick.bind(this);
+			this.container.addEventListener('click', this._onClick, false);
+			this.unsubscribe = this.store.onChange(({ count }) => this.render(count));
+			this.render(this.store.count());
+		}
+		_onClick(e) {
+			const btn = e.target.closest('[data-clear-favourite]');
+			if (!btn || !this.container.contains(btn)) return;
+			e.preventDefault();
+			this.store.clear();
+			this.render(0);
+		}
+		render(count) {
+			if (this.counterEl) this.counterEl.textContent = String(count);
+			if (this.clearBtn) {
+				if (count > 0) this.clearBtn.classList.remove('hidden');
+				else this.clearBtn.classList.add('hidden');
+			}
+		}
+	}
+
+	// ================= Favourites Page Renderer =================
+	class FavouritesPage {
+		constructor(store, {
+			listSelector   = '#loadContent[data-load-favourites]',
+			paginationId   = 'pagination',
+			alertSelector  = '.search-alert'
+		} = {}) {
+			this.store = store;
+			this.list  = document.querySelector(listSelector);
+			if (!this.list) return;
+			this.pagination = document.getElementById(paginationId);
+			this.alertEl    = document.querySelector(alertSelector);
+			this.unsubscribe = this.store.onChange(() => this.render());
+			this.render();
+		}
+		render() {
+			const data = this.store.getAllData();
+			this.list.innerHTML = '';
+
+			if (!data.length) {
+				this.list.style.display = 'none';
+				if (this.pagination) this.pagination.classList.add('hidden');
+				if (this.alertEl) this.alertEl.classList.remove('hidden');
+				return;
+			}
+
+			this.list.style.display = '';
+			if (this.alertEl) this.alertEl.classList.add('hidden');
+
+			const frag = document.createDocumentFragment();
+			data.forEach(d => frag.appendChild(this._makeLi(d)));
+			this.list.appendChild(frag);
+
+			// ховаємо пагінацію якщо менше 12
+			if (this.pagination) {
+				if (data.length < 12) {
+					this.pagination.classList.add('hidden');
+				} else {
+					this.pagination.classList.remove('hidden');
+				}
+			}
+		}
+		_makeLi(d) {
+			const li = document.createElement('li');
+			li.className = 'item';
+			li.dataset.id = d.id;
+			li.innerHTML = `
+				<button type="button" class="button round-link" data-add-favourite>
+					<i class="icon icon-heart-empty"></i>
+					<i class="icon icon-heart-filled active"></i>
+				</button>
+				<a href="${d.href}" aria-label="Read more" class="object-preview">
+					<div class="spaced-inner">
+						<figure class="object-image">
+							<img src="${d.image}" draggable="false" alt="${d.imageAlt}">
+						</figure>
 					</div>
-					<div class="spaced-inner stretch-inner">
-						<h2 class="object-title">${d.title || ''}</h2>
-						<div class="description">
-							<div class="line">${d.line1Text || ''}</div>
-							<div class="line">${d.line2HTML || ''}</div>
-							<div class="price-primary">${d.priceHTML || ''}</div>
+					<div class="caption">
+						<div class="spaced-inner bordered">
+							<div class="date">${d.dateText || ''}</div>
+						</div>
+						<div class="spaced-inner stretch-inner">
+							<h2 class="object-title">${d.title || ''}</h2>
+							<div class="description">
+								<div class="line">${d.line1Text || ''}</div>
+								<div class="line">${d.line2HTML || ''}</div>
+								<div class="price-primary">${d.priceHTML || ''}</div>
+							</div>
 						</div>
 					</div>
-				</div>
-			</a>`;
-		return li;
+				</a>`;
+			return li;
+		}
+	}
+
+	// ================= Init =================
+	document.addEventListener('DOMContentLoaded', () => {
+		const store = new FavStore('favourites');
+		new FavCards(store, { rootSelector: 'body', itemSelector: '.item' });
+		new FavHeaderNav(store, { headerSelector: '#favButton' });
+		new FavSectionHeader(store, {
+			containerSelector : '#favHeader',
+			counterSelector   : '.h2-title .counter',
+			clearSelector     : '[data-clear-favourite]'
+		});
+		new FavouritesPage(store, {
+			listSelector  : '#loadContent[data-load-favourites]',
+			paginationId  : 'pagination',
+			alertSelector : '.search-alert'
+		});
+	});
+
+
+
+class SimpleFavToggle {
+	constructor({ 
+		root = document, 
+		onAdd = () => {}, 
+		onRemove = () => {} 
+	} = {}) {
+		this.root = root;
+		this.onAdd = onAdd;
+		this.onRemove = onRemove;
+
+		this._onClick = this._onClick.bind(this);
+		this.root.addEventListener('click', this._onClick, false);
+	}
+
+	_onClick(e) {
+		const btn = e.target.closest('[data-add-favourite="simple"]');
+		if (!btn) return;
+
+		e.preventDefault();
+
+		const emptyIcon  = btn.querySelector('.icon-heart-empty');
+		const filledIcon = btn.querySelector('.icon-heart-filled');
+
+		// toggle
+		if (emptyIcon?.classList.contains('active')) {
+			emptyIcon.classList.remove('active');
+			filledIcon?.classList.add('active');
+			this.onAdd(btn); // виклик callback при додаванні
+		} else {
+			filledIcon?.classList.remove('active');
+			emptyIcon?.classList.add('active');
+			this.onRemove(btn); // виклик callback при видаленні
+		}
 	}
 }
 
-// ================= Init =================
+// init
 document.addEventListener('DOMContentLoaded', () => {
-	const store = new FavStore('favourites');
-	new FavCards(store, { rootSelector: 'body', itemSelector: '.item' });
-	new FavHeaderNav(store, { headerSelector: '#favButton' });
-	new FavSectionHeader(store, {
-		containerSelector : '#favHeader',
-		counterSelector   : '.h2-title .counter',
-		clearSelector     : '[data-clear-favourite]'
-	});
-	new FavouritesPage(store, {
-		listSelector  : '#loadContent[data-load-favourites]',
-		paginationId  : 'pagination',
-		alertSelector : '.search-alert'
+	new SimpleFavToggle({
+		onAdd: (btn) => {
+			console.log('Додано в обране', btn);
+		},
+		onRemove: (btn) => {
+			console.log('Видалено з обраного', btn);
+		}
 	});
 });
 
@@ -861,16 +1373,19 @@ class ToggleHandler {
 		activeClass = 'active', 
 		animatedClass = 'animated', 
 		openedClass = 'opened',
+		overlayClass = 'overlayed',
 		delay = 250 
 	} = {}) {
 		this.btnSelector = btnSelector;
 		this.activeClass = activeClass;
 		this.animatedClass = animatedClass;
 		this.openedClass = openedClass;
+		this.overlayClass = overlayClass;
 		this.delay = delay;
 
 		this.buttons = Array.from(document.querySelectorAll(this.btnSelector));
 		this._onClick = this._onClick.bind(this);
+		this._onResize = this._onResize.bind(this);
 
 		this.init();
 	}
@@ -879,6 +1394,7 @@ class ToggleHandler {
 		this.buttons.forEach(btn => {
 			btn.addEventListener('click', this._onClick, false);
 		});
+		window.addEventListener('resize', this._onResize, { passive: true });
 	}
 
 	_onClick(e) {
@@ -894,12 +1410,27 @@ class ToggleHandler {
 			target.classList.add(this.activeClass);
 			button.classList.add(this.openedClass);
 
+			if (window.innerWidth <= 768) {
+				document.documentElement.classList.add(this.overlayClass); // html
+				document.body.classList.add(this.overlayClass);           // body
+			}
+
 			setTimeout(() => {
 				target.classList.add(this.animatedClass);
 			}, this.delay);
 		} else {
 			target.classList.remove(this.activeClass, this.animatedClass);
 			button.classList.remove(this.openedClass);
+
+			document.documentElement.classList.remove(this.overlayClass);
+			document.body.classList.remove(this.overlayClass);
+		}
+	}
+
+	_onResize() {
+		if (window.innerWidth > 768) {
+			document.documentElement.classList.remove(this.overlayClass);
+			document.body.classList.remove(this.overlayClass);
 		}
 	}
 }
@@ -1061,6 +1592,208 @@ class HeaderToggler {
 // Init immediately on DOM ready
 document.addEventListener('DOMContentLoaded', function () {
 	new HeaderToggler();
+});
+
+class ScrollSliderLightbox {
+	constructor({
+		sliderSelector = '[data-scroll-slider]',
+		thumbSelector = '.thumb-item img',
+		targetAttr = 'image',          // data-image селектор головного зображення
+		overlayClass = 'overlayed',
+		modalIdPrefix = 'slb-'
+	} = {}) {
+		this.sliderSelector = sliderSelector;
+		this.thumbSelector = thumbSelector;
+		this.targetAttr = targetAttr;
+		this.overlayClass = overlayClass;
+		this.modalIdPrefix = modalIdPrefix;
+
+		this._instances = []; // [{container, target, images:[], index:0}]
+		this._build();
+		this._ensureModal();
+	}
+
+	_build() {
+		document.querySelectorAll(this.sliderSelector).forEach((container, idx) => {
+			const targetSel = container.dataset[this.targetAttr];
+			if (!targetSel) return;
+
+			const target = document.querySelector(targetSel);
+			if (!target) return;
+
+			// зібрати список картинок з контейнера
+			const imgs = Array.from(container.querySelectorAll(this.thumbSelector))
+				.map(img => img.getAttribute('src'))
+				.filter(Boolean);
+
+			if (!imgs.length) return;
+
+			// зберегти інстанс
+			const instance = { container, target, images: imgs, index: 0, id: this.modalIdPrefix + idx };
+			this._instances.push(instance);
+
+			// клік по main image -> відкрити модалку з першою відповідною картинкою
+			const mainImg = target.querySelector('img');
+			if (mainImg) {
+				target.style.cursor = 'zoom-in';
+				target.addEventListener('click', (e) => {
+					e.preventDefault();
+					// визначимо початковий індекс як перший збіг src, якщо є
+					const currentSrc = mainImg.getAttribute('src');
+					const startIndex = Math.max(0, instance.images.indexOf(currentSrc));
+					this.open(instance, startIndex);
+				});
+			}
+
+			// клік по тумбі — також оновлює main і відкриває конкретний слайд по бажанню (можеш лишити тільки оновлення main)
+			container.querySelectorAll(this.thumbSelector).forEach((thumb, i) => {
+				thumb.addEventListener('click', () => {
+					if (mainImg) mainImg.src = thumb.src;
+					// якщо потрібно одразу відкривати лайтбокс по кліку на тумбу, розкоментуй:
+					// this.open(instance, i);
+				});
+			});
+		});
+	}
+
+	// ---------- Modal core ----------
+	ensureStylesOnce() {
+		if (document.getElementById('slb-styles')) return;
+		const css = `
+.slb-modal{position:fixed;inset:0;z-index:9999;display:none;opacity:0;transition:opacity .2s ease}
+.slb-modal.show{display:flex;opacity:1}
+.slb-backdrop{position:absolute;inset:0;background:rgba(0,0,0,.85)}
+.slb-stage{position:relative;z-index:1;display:flex;align-items:center;justify-content:center;width:100%;height:100%;padding:4rem 5rem;box-sizing:border-box}
+.slb-img{max-width:100%;max-height:100%;object-fit:contain;box-shadow:0 10px 30px rgba(0,0,0,.6);border-radius:0}
+.slb-close,.slb-prev,.slb-next{position:absolute;z-index:2;border:none;background:rgba(255,255,255,.08);backdrop-filter:saturate(140%) blur(4px);cursor:pointer;line-height:1;padding:.75rem 1rem;border-radius:.5rem;transition:transform .12s ease, background .12s ease}
+.slb-close{top:1rem;right:1rem}
+.slb-prev{left:1rem;top:50%;transform:translateY(-50%)}
+.slb-next{right:1rem;top:50%;transform:translateY(-50%)}
+.slb-close:hover,.slb-prev:hover,.slb-next:hover{background:rgba(255,255,255,.16)}
+.slb-counter{position:absolute;left:50%;top:1rem;transform:translateX(-50%);color:#fff;font:500 14px/1.2 system-ui, -apple-system, Segoe UI, Roboto, Inter, Arial}
+@media (max-width:768px){
+	.slb-stage{padding:3rem 3.5rem}
+	.slb-prev{left:.5rem}
+	.slb-next{right:.5rem}
+	.slb-close{right:.5rem}
+}
+		`.trim();
+		const style = document.createElement('style');
+		style.id = 'slb-styles';
+		style.textContent = css;
+		document.head.appendChild(style);
+	}
+
+	_ensureModal() {
+		this.ensureStylesOnce();
+
+		if (this.modal) return;
+		const modal = document.createElement('div');
+		modal.className = 'slb-modal';
+		modal.setAttribute('role', 'dialog');
+		modal.setAttribute('aria-modal', 'true');
+		modal.innerHTML = `
+			<div class="slb-backdrop" data-slb="backdrop"></div>
+			<div class="slb-stage">
+				<img class="slb-img" alt="preview">
+				<button class="slb-prev" type="button" aria-label="Previous" data-slb="prev">‹</button>
+				<button class="slb-next" type="button" aria-label="Next" data-slb="next">›</button>
+				<button class="slb-close" type="button" aria-label="Close" data-slb="close">✕</button>
+				<div class="slb-counter" data-slb="counter">1 / 1</div>
+			</div>
+		`;
+
+		document.body.appendChild(modal);
+		this.modal = modal;
+		this.imgEl = modal.querySelector('.slb-img');
+		this.btnPrev = modal.querySelector('[data-slb="prev"]');
+		this.btnNext = modal.querySelector('[data-slb="next"]');
+		this.btnClose = modal.querySelector('[data-slb="close"]');
+		this.backdrop = modal.querySelector('[data-slb="backdrop"]');
+		this.counter = modal.querySelector('[data-slb="counter"]');
+
+		// події
+		this._onKey = this._onKey.bind(this);
+		this._onClose = this._onClose.bind(this);
+
+		this.backdrop.addEventListener('click', this._onClose);
+		this.btnPrev.addEventListener('click', () => this._onPrev());
+		this.btnNext.addEventListener('click', () => this._onNext());
+		this.btnClose.addEventListener('click', this._onClose);
+
+		// клік поза картинкою — теж закриває
+		this.modal.addEventListener('click', (e) => {
+			if (!e.target.closest('.slb-img') && !e.target.closest('button')) {
+				this._onClose();
+			}
+		});
+
+		// простий свайп на мобільних
+		let sx = 0, dx = 0;
+		this.modal.addEventListener('touchstart', (e) => { sx = e.touches[0].clientX; dx = 0; }, {passive:true});
+		this.modal.addEventListener('touchmove', (e) => { dx = e.touches[0].clientX - sx; }, {passive:true});
+		this.modal.addEventListener('touchend', () => {
+			if (dx > 60) this._onPrev();
+			else if (dx < -60) this._onNext();
+			sx = 0; dx = 0;
+		}, {passive:true});
+	}
+
+
+	open(instance, index = 0) {
+		this.active = instance;
+		this.index = this._clamp(index, 0, instance.images.length - 1);
+		this._render();
+
+		this.modal.classList.add('show');
+		document.body.classList.add(this.overlayClass);
+		document.documentElement.classList.add(this.overlayClass);
+		document.addEventListener('keydown', this._onKey);
+	}
+
+	close() {
+		this.modal.classList.remove('show');
+		document.body.classList.remove(this.overlayClass);
+		document.documentElement.classList.remove(this.overlayClass);
+		document.removeEventListener('keydown', this._onKey);
+		this.active = null;
+	}
+
+	_render() {
+		if (!this.active) return;
+		const src = this.active.images[this.index];
+		this.imgEl.src = src;
+		this.counter.textContent = `${this.index + 1} / ${this.active.images.length}`;
+		// дизейбл кнопок якщо 1 зображення
+		const single = this.active.images.length <= 1;
+		this.btnPrev.style.display = single ? 'none' : '';
+		this.btnNext.style.display = single ? 'none' : '';
+	}
+
+	_onPrev() {
+		if (!this.active) return;
+		this.index = (this.index - 1 + this.active.images.length) % this.active.images.length;
+		this._render();
+	}
+	_onNext() {
+		if (!this.active) return;
+		this.index = (this.index + 1) % this.active.images.length;
+		this._render();
+	}
+	_onClose() { this.close(); }
+	_onBackdrop() { this.close(); }
+	_onKey(e) {
+		if (e.key === 'Escape') this.close();
+		else if (e.key === 'ArrowLeft') this._onPrev();
+		else if (e.key === 'ArrowRight') this._onNext();
+	}
+
+	_clamp(n, a, b) { return Math.max(a, Math.min(b, n)); }
+}
+
+// ініт
+document.addEventListener('DOMContentLoaded', () => {
+	new ScrollSliderLightbox();
 });
 
 // smoth scroll
@@ -1315,6 +2048,110 @@ document.addEventListener('DOMContentLoaded', function(){
 	window.addEventListener('resize', function(event){
 		addHeaderColor();
 	});
+});
+
+class PopupWindow {
+	constructor({
+		popupSelector = '.popup',
+		closeSelector = '.close-popup',
+		callSelector = '[data-call]',
+		overlayClass = 'overlayed',
+		activeClass = 'active',
+		showedClass = 'showed',
+		delay = 300
+	} = {}) {
+		this.popupSelector = popupSelector;
+		this.closeSelector = closeSelector;
+		this.callSelector = callSelector;
+		this.overlayClass = overlayClass;
+		this.activeClass = activeClass;
+		this.showedClass = showedClass;
+		this.delay = delay;
+
+		this._onCloseClick = this._onCloseClick.bind(this);
+		this._onPopupClick = this._onPopupClick.bind(this);
+		this._onCallClick = this._onCallClick.bind(this);
+
+		this.init();
+	}
+
+	init() {
+		document.querySelectorAll(this.closeSelector).forEach(btn => {
+			btn.addEventListener('click', this._onCloseClick);
+		});
+
+		document.querySelectorAll(this.popupSelector).forEach(popup => {
+			popup.addEventListener('click', (e) => this._onPopupClick(e, popup));
+		});
+
+		document.querySelectorAll(this.callSelector).forEach(btn => {
+			btn.addEventListener('click', this._onCallClick);
+		});
+	}
+
+	_onCloseClick(e) {
+		e.preventDefault();
+		const popup = e.currentTarget.closest(this.popupSelector);
+		if (popup) this.hide(popup);
+	}
+
+	_onPopupClick(e, popup) {
+		if (!e.target.closest('.inner')) {
+			e.preventDefault();
+			this.hide(popup);
+		}
+	}
+
+	_onCallClick(e) {
+		e.preventDefault();
+		const btn = e.currentTarget;
+		const target = btn.dataset.call;
+		if (target) this.show(target);
+	}
+
+	show(popupId) {
+		const popup = document.querySelector(popupId);
+		if (!popup) return;
+
+		popup.classList.add(this.showedClass);
+
+		document.body.style.width = window.getComputedStyle(document.body).width;
+		document.getElementById('mainHeader').style.width = window.getComputedStyle(document.getElementById('mainHeader')).width;
+
+		document.body.classList.add(this.overlayClass);
+		document.documentElement.classList.add(this.overlayClass);
+
+		setTimeout(() => {
+			popup.classList.add(this.activeClass);
+			console.log('onopen', popupId);
+
+			if (popup.dataset.onopen && typeof window[popup.dataset.onopen] === 'function') {
+				window[popup.dataset.onopen](popup);
+			}
+		}, this.delay);
+	}
+
+	hide(popup) {
+		document.body.classList.remove(this.overlayClass);
+		document.documentElement.classList.remove(this.overlayClass);
+		document.body.style.width = '';
+		document.getElementById('mainHeader').style.width = '';
+
+		popup.classList.remove(this.activeClass);
+
+		setTimeout(() => {
+			popup.classList.remove(this.showedClass);
+			console.log('onclose', `#${popup.id}`);
+
+			if (popup.dataset.onclose && typeof window[popup.dataset.onclose] === 'function') {
+				window[popup.dataset.onclose](popup);
+			}
+		}, this.delay);
+	}
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+	new PopupWindow();
 });
 
 // DualRange

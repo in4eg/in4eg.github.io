@@ -676,7 +676,7 @@ $header-borders-color-dark: rgba($color-dark-header, 0.3);
 	.main-header {
 
 		.round-link {
-			background-color: #ebf0f5;
+			background-color: $color-round-link;
 		}
 
 		.mobile-bottom {

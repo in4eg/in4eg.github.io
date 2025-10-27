@@ -148,21 +148,21 @@
 		margin-bottom: 16px;
 	}
 
-		&:before {
-			counter-increment: count;
-			content: '!';
-			color: $color-primary;
-			font-size: 24px;
-			height: 56px; width: 56px;
-			border: 1px solid $color-light;
-			display: block;
-			text-align: center;
-			line-height: 56px;
-			border-radius: 50%;
-			position: absolute;
-			left: 0; top: 11px;
-			transition: .2s;
-		}
+	&:before {
+		counter-increment: count;
+		content: '!';
+		color: $color-primary;
+		font-size: 24px;
+		height: 56px; width: 56px;
+		border: 1px solid $color-light;
+		display: block;
+		text-align: center;
+		line-height: 56px;
+		border-radius: 50%;
+		position: absolute;
+		left: 0; top: 11px;
+		transition: .2s;
+	}
 }
 
 .title-filters {
@@ -208,6 +208,7 @@
 	background-color: $color-secondary;
 	padding: 4px 16px;
 	font-size: var(--font-size-small);
+	display: inline-block;
 
 	&.danger {
 		background-color: $color-error;
@@ -217,48 +218,21 @@
 	&.success {
 		background-color: $color-success;
 		color: $color-white;
+		padding-left: 40px;
+
+		&:before {
+			content: '\e913';
+			font-family: 'icomoon';
+			font-size: 24px;
+			position: absolute;
+			left: 12px; top: -1px;
+		}
 	}
-}
 
-/* Chrome, Edge, Safari */
-.dropdown .dropdown-inner,
-.selecter .dropdown,
-.filters-inner .filtered-list {
-	scrollbar-width: thin; /* для Firefox */
-	scrollbar-color: transparent transparent;
-}
-
-/* Firefox */
-.dropdown .dropdown-inner:hover,
-.selecter .dropdown:hover,
-.filters-inner .filtered-list:hover {
-	scrollbar-color: #576F80 transparent;
-}
-
-.dropdown .dropdown-inner::-webkit-scrollbar,
-.selecter .dropdown::-webkit-scrollbar,
-.filters-inner .filtered-list::-webkit-scrollbar {
-	width: 8px;
-	height: 8px;
-}
-
-.dropdown .dropdown-inner::-webkit-scrollbar-thumb,
-.selecter .dropdown::-webkit-scrollbar-thumb,
-.filters-inner .filtered-list::-webkit-scrollbar-thumb {
-	background-color: transparent;
-	border-radius: 6px;
-}
-
-.dropdown .dropdown-inner::-webkit-scrollbar-track,
-.selecter .dropdown::-webkit-scrollbar-track,
-.filters-inner .filtered-list::-webkit-scrollbar-track {
-	background: transparent;
-}
-
-.dropdown .dropdown-inner:hover::-webkit-scrollbar-thumb,
-.selecter .dropdown:hover::-webkit-scrollbar-thumb,
-.filters-inner .filtered-list:hover::-webkit-scrollbar-thumb {
-	background-color: #576F80;
+	&.progress {
+		background-color: $color-primary;
+		color: $color-white;
+	}
 }
 
 
@@ -269,6 +243,21 @@
 
 		.title {
 			width: 50%;
+		}
+	}
+
+	.badge {
+		padding-left: 8px;
+		padding-right: 8px;
+		font-size: 12px;
+
+		&.success {
+			padding-left: 26px;
+
+			&:before {
+				font-size: 20px;
+				left: 4px; top: -1px;
+			}
 		}
 	}
 }
@@ -289,6 +278,7 @@
 	.step-cover {
 		max-width: 450px;
 	}
+
 }
 
 @media (max-width: 993px) {
@@ -320,11 +310,6 @@
 	}
 
 	.title-filters {
-		flex-direction: column;
 
-		.filters-form {
-			display: block;
-			width: 100%;
-		}
 	}
 }

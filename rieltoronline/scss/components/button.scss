@@ -344,6 +344,7 @@ $button-icon-size: 40px;
 			top: 0; left: 0;
 			right: 0; bottom: 0;
 			margin: auto;
+			color: $color-primary;
 
 			&:before {
 				top: 50%;
@@ -360,6 +361,10 @@ $button-icon-size: 40px;
 					opacity: 1;
 				}
 			}
+		}
+
+		&.is-fav {
+			
 		}
 	}
 }
