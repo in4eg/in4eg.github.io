@@ -177,6 +177,7 @@
 	}
 	.button {
 		min-width: auto;
+		color: $color-dark;
 	}
 }
 
@@ -246,10 +247,10 @@
 		.filters-inner {
 			position: fixed;
 			top: 0; left: 0;
-			bottom: 0; right: 0;
+			bottom: -70px; right: 0;
 			background: $color-lotion;
 			z-index: 20;
-			padding: 96px 24px 24px;
+			padding: 96px 24px 96px;
 			overflow: auto;
 
 			[data-toggle] {
@@ -282,6 +283,10 @@
 			font-size: var(--font-size-small);
 
 			&:before { font-size: 16px; }
+		}
+
+		.tag-cover {
+			align-items: end;
 		}
 	}
 }
@@ -335,6 +340,13 @@
 				.label {
 					display: none;
 				}
+			}
+		}
+
+		.filters-inner {
+
+			.tag-cover {
+				flex-direction: column;
 			}
 		}
 	}

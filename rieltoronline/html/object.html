@@ -53,7 +53,8 @@
 				<!-- / title -->
 
 				<!-- main info -->
-				<div class="object-info">
+				<!-- data-fslightbox - searches for all img and triggers a click on them -->
+				<div class="object-info" data-fslightbox>
 					<div class="row">
 						<div class="col-xs-12 col-md-12 col-lg-7">
 							<div class="preview-image">
@@ -72,6 +73,7 @@
 						<div class="col-xs-12 col-md-12 col-lg-5">
 							<div class="object-caption">
 								<div class="date">від 13 березня 2025р.</div>
+								<div class="price-primary">7 202 210 грн</div>
 								<div class="detail-table">
 									<dl>
 										<dt>Місто:</dt>
@@ -98,9 +100,8 @@
 										<dd>2 поверх з 10</dd>
 									</dl>
 								</div>
-								<div class="price-primary">7 202 210 грн</div>
 								<!-- state 1 unpaid -->
-	<!-- 							<div class="owner-detail">
+						<!-- <div class="owner-detail">
 									<div class="title">Контакти власника</div>
 									<div class="locked detail"></div>
 									<a href="tarif.html" class="button button-secondary-invert button-arrow button-block">
@@ -124,7 +125,7 @@
 								</div>
 
 								<!-- state 3 opened after confirmation-->
-						<!-- 		<div class="owner-detail">
+						<!-- <div class="owner-detail">
 									<div class="title">Контакти власника</div>
 									<div class="opened detail">
 										<div class="name">Владислав Олександрович</div>
@@ -137,12 +138,13 @@
 										</span>
 									</a>
 								</div> -->
+
 							</div>
 						</div>
 					</div>
 
 					<!-- thumbnails photo -->
-					<div class="additional-thumbnails" data-scroll-slider data-image="#mainImage">
+					<div class="additional-thumbnails" data-scroll-slider>
 						<figure class="thumb-item image-cover"><img draggable="false" src="img/temp/obj2.jpg" draggable="false" alt="image"></figure>
 						<figure class="thumb-item image-cover"><img draggable="false" src="img/temp/obj3.jpg" draggable="false" alt="image"></figure>
 						<figure class="thumb-item image-cover"><img draggable="false" src="img/temp/obj4.jpg" draggable="false" alt="image"></figure>

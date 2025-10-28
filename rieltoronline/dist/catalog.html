@@ -128,7 +128,8 @@
 				<!-- / header -->
 
 				<!-- filters -->
-				<div class="filters-cover"> <!-- catalog-filters.js -->
+				<!-- ///// FILTERS //// -->
+<div class="filters-cover"> <!-- catalog-filters.js -->
 	<!-- header always visible -->
 	<div class="filter-header">
 		<div class="row bottom-xs">
@@ -145,6 +146,12 @@
 			</div>
 			<!-- / hidden on mobile -->
 			<div class="col-xs-12 col-sm-4 col-sm-offset-4 col-lg-3 col-lg-offset-6 mobile-cover">
+				<!-- visible only on mobile filter open -->
+				<button type="button" class="button round-link" aria-label="open filter" data-toggle="#filtersInner">
+					<i class="icon icon-filter"></i>
+					<span class="counter">0</span>
+				</button>
+				<!-- / visible only on mobile filter open -->
 				<!-- sorting select -->
 				<div class="form-group select-group labeled-group">
 					<label for="sorting" class="label">Сортувати за</label>
@@ -156,12 +163,6 @@
 					</select>
 				</div>
 				<!-- / sorting select -->
-				<!-- visible only on mobile filter open -->
-				<button type="button" class="button round-link" aria-label="open filter" data-toggle="#filtersInner">
-					<i class="icon icon-filter"></i>
-					<span class="counter">0</span>
-				</button>
-				<!-- / visible only on mobile filter open -->
 			</div>
 		</div>
 	</div>
@@ -179,7 +180,7 @@
 			<div class="tag-list">
 				<div class="tag" data-tag>Квартира</div>
 			</div>
-			<button class="button-link button">Очистити все</button>
+			<button class="button-link button" type="button">Очистити все</button>
 		</div>
 		<!-- if we have some selected filters need to show tag -->
 		<form action="#" class="filters-form form" id="filterForm">
@@ -551,6 +552,7 @@
 	</div>
 	<!-- / inner contents with filters and form -->
 </div>
+<!-- ///// FILTERS //// -->
 				<!-- / filters -->
 
 				<!-- objects list-->

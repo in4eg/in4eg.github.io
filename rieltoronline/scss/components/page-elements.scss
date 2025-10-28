@@ -310,6 +310,10 @@
 	}
 
 	.title-filters {
+		flex-direction: column;
 
+		.filters-form {
+			width: 100%;
+		}
 	}
 }

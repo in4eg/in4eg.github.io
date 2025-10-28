@@ -10,7 +10,7 @@
 			font-size: 0;
 			height: 100%;
 			min-height: 500px;
-			cursor: crosshair;
+			cursor: zoom-in;
 			overflow: hidden;
 
 			&:hover {
@@ -54,7 +54,7 @@
 	}
 
 	.date {
-		margin-bottom: 32px;
+		margin-bottom: 24px;
 		padding-bottom: 16px;
 		font-size: var(--font-size-small);
 		color: $color-primary;
@@ -62,6 +62,9 @@
 	}
 
 	.detail-table {
+		border-bottom: 1px solid $color-light-silver;
+		padding-bottom: 8px;
+		margin-bottom: 16px;
 
 		dl {
 			display: flex;
@@ -76,8 +79,7 @@
 	}
 
 	.price-primary {
-		padding-bottom: 32px;
-		border-bottom: 1px solid $color-light-silver;
+		padding-bottom: 24px;
 	}
 
 	.owner-detail {
@@ -131,7 +133,6 @@
 		font-size: 0;
 		overflow: auto;
 		padding-bottom: 24px;
-		cursor: pointer;
 
 		.image-cover {
 			font-size: 0;
@@ -140,6 +141,7 @@
 			display: inline-block;
 			margin-right: 24px;
 			overflow: hidden;
+			cursor: zoom-in;
 
 			&:before {
 				content: '';
@@ -163,15 +165,6 @@
 	}
 }
 
-[data-scroll-slider] {
-	cursor: grab;
-	overflow-x: auto;
-	white-space: nowrap;
-}
-
-[data-scroll-slider].grabbing {
-	cursor: grabbing;
-}
 
 @media (max-width: 1199px) {
 
@@ -199,6 +192,21 @@
 
 			.object-image {
 				min-height: 350px;
+			}
+		}
+	}
+}
+
+
+@media (max-width: 993px) {
+
+	.object-info {
+
+		.preview-image {
+
+			.badge {
+				top: auto;
+				left: 0; bottom: 0;
 			}
 		}
 	}

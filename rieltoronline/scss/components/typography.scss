@@ -212,10 +212,14 @@ article {
 
 		> li {
 			position: relative;
-			padding-bottom: 32px;
-			margin-bottom: 32px;
+			padding-bottom: 24px;
+			margin-bottom: 24px;
 			border-bottom: 1px solid $color-light-silver;
 			padding-left: 76px;
+			min-height: 52px;
+			display: flex;
+			align-items: baseline;
+			flex-direction: column;
 
 			&:last-child {
 				margin-bottom: 0;
@@ -238,7 +242,6 @@ article {
 				border-radius: 50%;
 				position: absolute;
 				left: 0; top: 0px;
-				transform: translateY(-10px);
 				transition: .2s;
 			}
 
@@ -287,6 +290,7 @@ article {
 				padding-bottom: 0;
 				margin-bottom: 16px;
 				min-height: 40px;
+				justify-content: center;
 
 				&:before {
 					content: counters(count, "-", decimal-leading-zero);
@@ -297,7 +301,8 @@ article {
 					color: $color-primary;
 					font-size: 12px;
 					line-height: 40px;
-					top: 6px;
+					transform: none;
+					top: 0;
 				}
 			}
 		}
