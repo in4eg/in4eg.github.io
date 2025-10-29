@@ -8517,10 +8517,12 @@ ul .paragraph {
   background-repeat: no-repeat;
   background-position: center;
   background-size: 50%;
-  background-color: rgba(253,253,253,.7);
   opacity: 0;
   -webkit-transition: opacity .2s;
-  transition: opacity .2s
+  transition: opacity .2s;
+  background-color: rgba(253,253,253,.5);
+  -webkit-backdrop-filter: blur(22px);
+  backdrop-filter: blur(22px)
 }
 .user-title .userpic .form-group input {
   opacity: 0;

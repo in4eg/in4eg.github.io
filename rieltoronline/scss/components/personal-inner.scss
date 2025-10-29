@@ -39,9 +39,10 @@
 			background-repeat: no-repeat;
 			background-position: center;
 			background-size: 50%;
-			background-color: rgba($color-white, 0.7);
 			opacity: 0;
 			transition: opacity .2s;
+
+			@include background-blur();
 
 			input {
 				opacity: 0;
