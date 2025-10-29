@@ -35,7 +35,7 @@
 	}
 
 	.button,
-	.form-group,
+	.form-group:not(.file-group),
 	h1, h2, h3,
 	.paragraph,
 	.article-subtitle,
@@ -119,7 +119,7 @@
 	h1, h2, h3,
 	.section-subtitle,
 	.button,
-	.form-group,
+	.form-group:not(.file-group),
 	.paragraph,
 	.article-subtitle,
 	article,

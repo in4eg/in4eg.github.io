@@ -1,0 +1,57 @@
+@import '../variables.scss';
+
+.table {
+	width: 100%;
+	border-collapse: collapse;
+	table-layout: fixed;
+
+	th {
+		text-align: left;
+		padding: 16px 8px;
+		color: $color-primary;
+	}
+
+	td {
+		font-weight: 400;
+		padding: 16px 8px;
+	}
+
+	tr {
+		transition: background-color .3s;
+		border-bottom: 1px solid $color-light-silver;
+
+		&:hover {
+			background-color: $color-cultured;
+		}
+	}
+
+	tfoot {
+
+		td {
+			font-weight: 700;
+		}
+	}
+}
+
+@media (max-width: 768px) {
+
+	.table-wrapper {
+		width: 100%;
+		overflow-x: auto;
+		-webkit-overflow-scrolling: touch;
+	}
+
+	.fixed-table {
+		width: 880px;
+		border-collapse: collapse;
+	}
+
+	.fixed-table th,
+	.fixed-table td {
+		border: 1px solid #ddd;
+		padding: 8px 12px;
+		text-align: left;
+		white-space: nowrap;
+	}
+
+}

@@ -37,6 +37,10 @@
 				color: $color-gray;
 			}
 		}
+
+		&.with-helper {
+			margin-bottom: 48px;
+		}
 	}
 
 	.select-group {
@@ -220,7 +224,6 @@
 	}
 
 	.textarea-group {
-		margin-bottom: 48px;
 		padding-top: 16px;
 	}
 

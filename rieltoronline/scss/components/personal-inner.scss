@@ -1,0 +1,158 @@
+@import '../variables.scss';
+
+.user-title {
+	display: flex;
+	align-items: anchor-center;
+	gap: 24px;
+
+	.userpic {
+		height: 120px; width: 120px;
+		border-radius: 50%;
+		overflow: hidden;
+		position: relative;
+		background-color: $color-cultured;
+
+		[data-upload] {
+			z-index: 2;
+			position: absolute;
+			top: 0; left: 0;
+			bottom: 0; right: 0;
+			height: 120px; width: 120px;
+		}
+
+		img {
+			position: absolute;
+			top: 0; left: 0;
+			width: 100%; height: 100%;
+			box-sizing: border-box;
+			object-fit: cover;
+			object-position: center;
+			transition: .2s;
+		}
+
+		.form-group {
+			position: absolute;
+			z-index: 4;
+			height: 100%; width: 100%;
+			top: 0; left: 0;
+			background-image: url('../img/icons/upload.png');
+			background-repeat: no-repeat;
+			background-position: center;
+			background-size: 50%;
+			background-color: rgba($color-white, 0.7);
+			opacity: 0;
+			transition: opacity .2s;
+
+			input {
+				opacity: 0;
+				position: absolute;
+			}
+
+			label {
+				position: absolute;
+				display: block;
+				height: 100%; width: 100%;
+				top: 0; left: 0;
+				cursor: pointer;
+			}
+		}
+
+		.icon {
+			position: absolute;
+			color: $color-primary;
+			font-size: 80px;
+			height: 80px; width: 80px;
+			left: 0; right: 0;
+			bottom: 0; top: 0;
+			margin: auto;
+
+			&:before {
+				position: relative;
+				top: -2px
+
+				;
+			}
+		}
+
+		&:hover {
+
+			.icon {
+				color: $color-primary-hover;
+			}
+
+			.form-group {
+				opacity: 1;
+			}
+		}
+	}
+}
+
+.personal-content.tab-content {
+	min-height: 35vh;
+
+	.contact-form {
+		padding-top: 24px;
+	}
+}
+
+@media (max-width: 1199px) {
+
+	.user-title {
+
+		.userpic {
+			width: 100px; height: 100px;
+
+			[data-upload] {
+				width: 100px; height: 100px;
+
+			}
+		}
+	}
+}
+
+@media (max-width: 993px) {
+
+	.user-title {
+
+		.userpic {
+			width: 80px; height: 80px;
+
+			[data-upload] {
+				width: 80px; height: 80px;
+
+			}
+		}
+	}
+}
+
+
+@media (max-width: 993px) {
+
+	.user-title {
+		margin-top: 32px;
+
+		.userpic {
+			width: 64px; height: 64px;
+
+			[data-upload] {
+				width: 64px; height: 64px;
+
+			}
+		}
+	}
+}
+
+@media (max-width: 375px) {
+
+	.user-title {
+
+		.userpic {
+			width: 48px; height: 48px;
+
+			[data-upload] {
+				width: 48px; height: 48px;
+
+			}
+		}
+	}
+}

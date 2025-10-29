@@ -93,9 +93,21 @@
 	.tabs {
 
 		.tab-button {
-			padding-left: 24px;
-			padding-right: 24px;
+			padding-left: 16px;
+			padding-right: 16px;
 			font-size: 12px;
+		}
+	}
+}
+
+@media (max-width: 425px) {
+
+	.tabs {
+
+		.tab-button {
+			padding-left: 0;
+			padding-right: 0;
+			font-size: 10px;
 		}
 	}
 }

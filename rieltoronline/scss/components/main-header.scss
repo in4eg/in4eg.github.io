@@ -84,9 +84,12 @@ $header-borders-color-dark: rgba($color-dark-header, 0.3);
 
 		.userpic {
 			position: absolute;
-			height: 100%;
-			top: 0; left: 50%;
-			transform: translateX(-50%);
+			top: 0; left: 0;
+			width: 100%; height: 100%;
+			box-sizing: border-box;
+			object-fit: cover;
+			object-position: center;
+			transition: .2s;
 		}
 
 		&:hover {

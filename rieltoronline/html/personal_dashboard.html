@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+	<meta charset="UTF-8">
+	<title>RieltorOnline :: Personal Account Page</title>
+
+	<link rel="icon" type="image/png" href="/favicon/favicon-96x96.png" sizes="96x96">
+	<link rel="icon" type="image/svg+xml" href="/favicon/favicon.svg">
+	<link rel="shortcut icon" href="/favicon/favicon.ico">
+	<link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
+	<meta name="apple-mobile-web-app-title" content="RieltorOnline">
+	<link rel="manifest" href="/favicon/site.webmanifest">
+
+	<meta name="msapplication-TileColor" content="#576F80">
+	<meta name="theme-color" content="#576F80">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+	<meta name="format-detection" content="telephone=no">
+	<meta name="description" content="description">
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+
+	<link rel="stylesheet" href="css/bundle.min.css">
+</head>
+<body id="innerBody">
+	<!-- header -->
+	@@include('./includes/header-main.html')
+	<!-- / header -->
+	<!-- class inner-page -->
+	<!-- class auto-height -->
+	<main class="page-main inner-page auto-height" id="pageMain">
+		<!-- breadcrumbs -->
+		<div class="breadcrumbs">
+			<div class="container">
+				<ul class="breadcrumbs-list clear">
+					<li><a href="index.html" class="text" aria-label="main page">Головна</a></li>
+					<li><span class="text">Мій кабінет</span></li>
+				</ul>
+			</div>
+		</div>
+		<!-- / breadcrumbs -->
+
+		<!-- tabs section-->
+		<section class="section">
+			<div class="container">
+				<!-- title with link -->
+				<div class="title-with-link">
+					<div class="title-group">
+						<div class="section-subtitle">Особистий кабінет</div>
+						<div class="user-title">
+							<div class="userpic">
+								<!-- if user has photo -->
+								<div data-upload><img src="../img/temp/user.png" alt="user" class="image"></div>
+								<i class="icon icon-user"></i>
+								<!-- image change -->
+								<div class="form-group file-group">
+									<label id="photoLoaderLabel" class="file-label" for="editPhoto" data-label>
+									</label>
+									<input type="file" id="editPhoto" data-file>
+								</div>
+							</div>
+							<h2 class="section-title-large">Вітаємо, Владислав!</h2>
+						</div>
+					</div>
+					<div class="link-cover">
+						<!-- tabs nav -->
+						<div class="tabs" data-tabs-container="#personalTabs">
+							<div class="tab-button active">Мій тариф</div>
+							<div class="tab-button">Мій профіль</div>
+							<div class="tab-button">Оплати/Чеки</div>
+							<div class="tab-fader"></div>
+						</div>
+						<!-- / tabs nav -->
+					</div>
+				</div>
+				<!-- / title with link -->
+
+				<!-- tabs-container -->
+				<div class="tabs-container" id="personalTabs">
+					<!-- tab1  -->
+					<div class="personal-content tab-content active">
+						<div class="contact-inner">
+							<div class="tarif">
+								<div class="tariff-item animated-item horizontal">
+									<div class="top">
+										<!-- svg image -->
+										<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<circle cx="45" cy="20" r="13" fill="#576F80" class="animated-rotate"/>
+											<circle cx="29.5" cy="33.5" r="22.5" fill="#576F80" stroke="#FDFDFD" stroke-width="2"/>
+										</svg>
+										<!-- svg image -->
+										<h4 class="title">«Старт»</h4>
+										<div class="theme-text">Ви зараз користуєтесь цим тарифом</div>
+										<button class="button button-primary button-arrow" aria-label="Details" data-call="#tariffPopup">
+											<span class="text">Керування тарифом</span>
+											<span class="button-icon">
+												<i class="icon icon-arrow-right"></i>
+											</span>
+										</button>
+									</div>
+									<div class="middle">
+										<div class="subtitle">Включено у ваш план</div>
+										<ul class="tariff-list checked-list clear">
+											<li>1 контакт</li>
+											<li>30 днів</li>
+											<li class="through">Перевірка документів онлайн</li>
+										</ul>
+									</div>
+									<div class="middle">
+										<div class="subtitle">Залишок по тарифу</div>
+										<ul class="tariff-list clear">
+											<li><b>0</b> з 1 контакту</li>
+											<li><b>10</b> з 30 днів</li>
+										</ul>
+									</div>
+									<div class="bottom">
+										<div class="payment item">
+											<div class="subtitle">Рахунки й оплати</div>
+											<div class="caption">Visa закінчується на ****3646</div>
+										</div>
+										<div class="time item">
+											<div class="subtitle">500 грн/міс.</div>
+											<div class="caption">Річний план, оплата щомісяця</div>
+										</div>
+										<div class="item">
+											<a href="#" class="button-link button underlined">Скасувати підписку</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- tab2  -->
+					<div class="personal-content tab-content">
+						<div class="contact-inner">
+							<form action="javascript:void(0)" class="form contact-form validate-form">
+								<div class="form-group input-group">
+									<div class="alert">Мінімум 2 символа</div>
+									<input type="text" class="input" id="firstName" name="firstName" data-minlength="2" value="Владислав">
+									<label for="firstName" class="label">Ваше ім'я:</label>
+								</div>
+								<div class="form-group input-group">
+									<div class="alert">Мінімум 2 символа</div>
+									<input type="text" class="input" id="userSecondName" name="userSecondName" data-minlength="2" value="Павленко">
+									<label for="userSecondName" class="label">Ваше прізвище:</label>
+								</div>
+								<div class="form-group input-group">
+									<div class="alert">Не коректний телефон</div>
+									<input type="tel" class="input phone" id="phone" name="phone" placeholder="+38 (0__) ___ __ __" value="+380939992277">
+									<label for="phone" class="label">Ваш телефон:</label>
+								</div>
+								<div class="form-group input-group">
+									<div class="alert">Не коректний Email</div>
+									<input type="tel" class="input email" id="email" name="email" placeholder="Email">
+									<label for="email" class="label">Ваш Email:</label>
+								</div>
+								<h5 class="h5-title">Змінити пароль</h5>
+								<div class="form-group input-group">
+									<div class="alert">Не коректний пароль</div>
+									<input type="password" class="input pass" id="passOld" name="passOld" placeholder="Пароль">
+									<label for="passOld" class="label">Старий пароль:</label>
+								</div>
+								<div class="form-group input-group with-helper">
+									<div class="alert">Паролі не співпадають</div>
+									<input type="password" class="input pass" id="passNew" name="passNew" placeholder="Пароль">
+									<label for="passNew" class="label">Новий пароль:</label>
+									<div class="input-helper">мін 8 символів та 1 велика літера</div>
+								</div>
+								<button type="submit" class="button button-primary button-arrow button-block full-sm">
+									<span class="text">Змінити данні</span>
+									<span class="button-icon">
+										<i class="icon icon-arrow-right"></i>
+									</span>
+								</button>
+							</form>
+						</div>
+					</div>
+					<!-- tab3  -->
+					<div class="personal-content tab-content">
+						<div class="table-wrapper">
+							<table class="table fixed-table">
+								<thead>
+									<tr><th>Дата</th><th>Операція</th><th>Перегляди</th><th>Залишок переглядів</th></tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>10.07.2025</td>
+										<td>Купівля тарифу «Старт» </td><td>+10</td><td>10</td>
+									</tr>
+									<tr>
+										<td>10.07.2025</td>
+										<td>Списання перегляду</td><td>-1</td><td>9</td>
+									</tr>
+									<tr>
+										<td>11.07.2025</td>
+										<td>Списання перегляду</td><td>-1</td><td>8</td>
+									</tr>
+									<tr>
+										<td>12.07.2025</td>
+										<td>Списання перегляду</td><td>-1</td><td>7</td>
+									</tr>
+								</tbody>
+								<tfoot>
+									<tr>
+										<td colspan="3">Всього на 15.07.2025</td>
+										<td>7</td>
+									</tr>
+								</tfoot>
+							</table>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- / tabs section-->
+	</main>
+
+	<!-- popups -->
+	<div id="tariffPopup" class="popup middle-popup">
+		<div class="inner">
+			<button type="button" class="close-popup button"><i class="icon icon-cross"></i></button>
+			<div class="header">
+				<div class="popup-title">Керування тарифом</div>
+			</div>
+			<div class="main">
+				<div class="tariffs-cards">
+					<!-- 1 -->
+					<div class="tariff-item animated-item primary">
+						<div class="badge">Ваш тариф</div>
+						<div class="top">
+							<!-- svg image -->
+								<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<circle cx="45" cy="20" r="13" fill="#576F80" class="animated-rotate"/>
+									<circle cx="29.5" cy="33.5" r="22.5" fill="#576F80" stroke="#FDFDFD" stroke-width="2"/>
+								</svg>
+							<!-- svg image -->
+							<h4 class="title">«Старт»</h4>
+							<div class="theme-text">Ідеально для тих, хто хоче протестувати доступ до власників перед покупкою більшого пакета</div>
+						</div>
+						<div class="bottom">
+							<div class="price">500 грн</div>
+							<a href="#" class="button button-secondary button-arrow" aria-label="Details">
+								<span class="text">Продовжити Тариф</span>
+								<span class="button-icon">
+									<i class="icon icon-arrow-right"></i>
+								</span>
+							</a>
+							<ul class="tariff-list checked-list clear">
+								<li>1 контакт</li>
+								<li>30 днів</li>
+								<li class="through">Перевірка документів онлайн</li>
+							</ul>
+						</div>
+					</div>
+					<!-- 2 -->
+					<div class="tariff-item animated-item">
+						<div class="top">
+							<!-- svg image -->
+							<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<rect width="43" height="43" rx="3" transform="matrix(0.709361 -0.704846 0.709361 0.704846 1 32)" fill="#576F80"/>
+								<circle cx="50" cy="30.1953" r="12" fill="#576F80" class="animated-rotate" stroke="#FDFDFD" stroke-width="2"/>
+							</svg>
+							<!-- svg image -->
+							<h4 class="title">«Базовий»</h4>
+							<div class="theme-text">Більше контактів та безкоштовна онлайн-перевірка документів, що економить час і знижує ризики</div>
+						</div>
+						<div class="bottom">
+							<div class="price">4 000 грн</div>
+							<a href="#" class="button button-primary button-arrow" aria-label="Details">
+								<span class="text">Придбати Тариф</span>
+								<span class="button-icon">
+									<i class="icon icon-arrow-right"></i>
+								</span>
+							</a>
+							<ul class="tariff-list checked-list clear">
+								<li>1 контакт</li>
+								<li>30 днів</li>
+								<li class="primary">Перевірка документів онлайн</li>
+							</ul>
+						</div>
+					</div>
+					<!-- 3 -->
+					<div class="tariff-item animated-item">
+						<div class="top">
+							<!-- svg image -->
+							<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" class="square">
+								<g clip-path="url(#clip0_236_3019)">
+									<rect x="4" y="32.1416" width="20" height="20" rx="2" transform="rotate(-45 4 32.1416)" fill="#576F80"/>
+									<rect x="36" y="32.1416" width="20" height="20" rx="2" transform="rotate(-45 36 32.1416)" fill="#576F80"/>
+									<rect x="20" y="16.1416" width="20" height="20" rx="2" transform="rotate(-45 20 16.1416)" fill="#576F80"/>
+									<rect x="20" y="48.1416" width="20" height="20" rx="2" transform="rotate(-45 20 48.1416)" fill="#576F80"/>
+								</g>
+								<defs>
+									<clipPath id="clip0_236_3019">
+										<rect width="64" height="64" fill="white"/>
+									</clipPath>
+								</defs>
+							</svg>
+							<!-- svg image -->
+							<h4 class="title">«Преміум»</h4>
+							<div class="theme-text">Максимум контактів, повний доступ і перевірка документів онлайн - усе для впевненої угоди</div>
+						</div>
+						<div class="bottom">
+							<div class="price">8 000 грн</div>
+							<a href="#" class="button button-primary button-arrow" aria-label="Details">
+								<span class="text">Придбати Тариф</span>
+								<span class="button-icon">
+									<i class="icon icon-arrow-right"></i>
+								</span>
+							</a>
+							<ul class="tariff-list checked-list clear">
+								<li>30 контактів</li>
+								<li>30 днів</li>
+								<li class="primary">Перевірка документів онлайн</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- popups -->
+
+
+	<!-- footer -->
+	@@include('./includes/footer-main.html')
+	<!-- /footer -->
+	<script src="js/main.js"></script>
+	<script>
+		window.onFormSubmit = function() {
+			console.log('send success');
+		};
+	</script>
+</body>
+</html>

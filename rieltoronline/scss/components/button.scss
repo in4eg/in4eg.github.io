@@ -140,6 +140,25 @@ $button-icon-size: 40px;
 			opacity: 1;
 		}
 	}
+
+	&.underlined {
+		font-size: var(--font-size);
+		line-height: 26px;
+		padding: 0;
+		display: inline-block;
+		padding-bottom: 4px;
+
+		&:after {
+			opacity: 1;
+			transform: scaleX(1);
+			bottom: 4px;
+		}
+
+		&:hover:after {
+			transform: scaleX(.6);
+			opacity: 0;
+		}
+	}
 }
 
 .button.button-small {
