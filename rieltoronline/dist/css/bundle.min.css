@@ -8568,6 +8568,11 @@ ul .paragraph {
     width: 100px;
     height: 100px
   }
+  .user-title .userpic .icon {
+    height: 60px;
+    width: 60px;
+    font-size: 60px
+  }
   .user-title .userpic [data-upload] {
     width: 100px;
     height: 100px
@@ -8582,6 +8587,11 @@ ul .paragraph {
     width: 80px;
     height: 80px
   }
+  .user-title .userpic .icon {
+    height: 40px;
+    width: 40px;
+    font-size: 40px
+  }
 }
 @media (max-width:993px) {
   .user-title {
@@ -8594,6 +8604,11 @@ ul .paragraph {
   .user-title .userpic [data-upload] {
     width: 64px;
     height: 64px
+  }
+  .user-title .userpic .icon {
+    height: 24px;
+    width: 24px;
+    font-size: 24px
   }
 }
 @media (max-width:375px) {
