@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+	<meta charset="UTF-8">
+	<title>RieltorOnline :: Order Checkout</title>
+
+	<link rel="icon" type="image/png" href="/favicon/favicon-96x96.png" sizes="96x96">
+	<link rel="icon" type="image/svg+xml" href="/favicon/favicon.svg">
+	<link rel="shortcut icon" href="/favicon/favicon.ico">
+	<link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
+	<meta name="apple-mobile-web-app-title" content="RieltorOnline">
+	<link rel="manifest" href="/favicon/site.webmanifest">
+
+	<meta name="msapplication-TileColor" content="#576F80">
+	<meta name="theme-color" content="#576F80">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+	<meta name="format-detection" content="telephone=no">
+	<meta name="description" content="description">
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+
+	<link rel="stylesheet" href="css/bundle.min.css">
+</head>
+<body id="innerBody">
+	<!-- header -->
+	@@include('./includes/header-main.html')
+	<!-- / header -->
+	<!-- class inner-page -->
+	<!-- class auto-height -->
+	<main class="page-main inner-page auto-height" id="pageMain">
+		<!-- breadcrumbs -->
+		<div class="breadcrumbs">
+			<div class="container">
+				<ul class="breadcrumbs-list clear">
+					<li><a href="index.html" class="text" aria-label="main page">Головна</a></li>
+					<li><span class="text">Оформлення замовлення</span></li>
+				</ul>
+			</div>
+		</div>
+		<!-- / breadcrumbs -->
+
+		<!-- section-->
+		<section class="section">
+			<div class="container">
+				<!-- title -->
+				<div class="title-group full-width">
+					<div class="section-subtitle">Покупка тарифу</div>
+					<div class="step-cover large">
+						<h2 class="section-title-large">Оформлення замовлення</h2>
+						<div class="step-title">Крок 1/2</div>
+					</div>
+				</div>
+				<!-- / title -->
+				<form action="javascript:void(0)" class="form contact-form validate-form">
+					<div class="row">
+						<div class="col-xs-12 col-sm-12 col-md-offset-1 col-md-5 col-lg-offset-2 col-lg-4 spaced-bottom-sm">
+							<div class="tariffs-cards single-item">
+								<div class="tariff-item animated-item active">
+									<div class="top">
+										<!-- svg image -->
+											<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<circle cx="45" cy="20" r="13" fill="#576F80" class="animated-rotate"/>
+												<circle cx="29.5" cy="33.5" r="22.5" fill="#576F80" stroke="#FDFDFD" stroke-width="2"/>
+											</svg>
+										<!-- svg image -->
+										<h4 class="title">«Старт»</h4>
+										<div class="theme-text">Ідеально для тих, хто хоче протестувати доступ до власників перед покупкою більшого пакета</div>
+									</div>
+									<div class="bottom">
+										<div class="price">500 грн</div>
+										<ul class="tariff-list checked-list clear">
+											<li>1 контакт</li>
+											<li>30 днів</li>
+											<li class="through">Перевірка документів онлайн</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-xs-12 col-md-6 first-md">
+							<!-- alert message -->
+							<div class="search-alert small">
+								<div class="theme-text">Вказуйте коректі email та номер телефону. Вони необхідні для ідентифікації користувача, отримання тафифу, можливості авторизації в особистому кабінеті</div>
+							</div>
+							<!-- alert message -->
+							<div class="form-body">
+								<div class="form-group input-group">
+									<div class="alert">Мінімум 2 символа</div>
+									<input type="text" class="input" id="firstName" name="firstName" data-minlength="2" placeholder="Ім’я">
+									<label for="firstName" class="label">Ваше ім’я:</label>
+								</div>
+								<div class="form-group input-group">
+									<div class="alert">Мінімум 2 символа</div>
+									<input type="text" class="input" id="secondName" name="secondName" data-minlength="2" placeholder="Ім’я">
+									<label for="secondName" class="label">Ваше прізвище:</label>
+								</div>
+								<div class="form-group input-group">
+									<div class="alert">Не коректний телефон</div>
+									<input type="tel" class="input phone" id="phone" name="phone" placeholder="+38 (0__) ___ __ __">
+									<label for="phone" class="label">Ваш телефон:</label>
+								</div>
+								<div class="form-group input-group">
+									<div class="alert">Не коректний Email</div>
+									<input type="tel" class="input email" id="email" name="email" placeholder="Email">
+									<label for="email" class="label">Ваш Email:</label>
+								</div>
+								<div class="checkbox-group form-group input-group">
+									<input type="checkbox" class="checkbox" id="acceptPolicy" checked>
+									<label for="acceptPolicy" class="checkbox-label">Автоматично зареєструвати мене</label>
+								</div>
+								<div class="checkbox-group form-group input-group">
+									<input type="checkbox" class="checkbox" id="acceptTermin">
+									<label for="acceptTermin" class="checkbox-label">Я даю свою згоду на обробку та використання моїх персональних даних для бронювання і покупки квитків на цьому сайті.</label>
+								</div>
+								<div class="checkbox-group form-group input-group">
+									<input type="checkbox" class="checkbox" id="acceptTerms">
+									<label for="acceptTerms" class="checkbox-label">Я приймаю умови публічної оферти та  політики конфіденційності</label>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- bottom -->
+					<div class="bordered-link-title bordered-top">
+						<div class="flex-inner">
+							<div class="title-group">
+								<div class="theme-text">До оплати:</div>
+								<div class="price">500 грн</div>
+							</div>
+							<ul class="clear payment-list">
+								<li class="image-item"><img src="img/liqpay.png" alt="liqpay" class="payment-logo"></li>
+							</ul>
+						</div>
+						<div class="link-cover">
+							<button type="submit" class="button button-secondary button-arrow full-sm">
+								<span class="text">Перейти до оплати</span>
+								<span class="button-icon">
+									<i class="icon icon-arrow-right"></i>
+								</span>
+							</button>
+						</div>
+					</div>
+				</form>
+			</div>
+		</section>
+		<!-- / section-->
+	</main>
+
+
+	<!-- footer -->
+	@@include('./includes/footer-main.html')
+	<!-- /footer -->
+	<script src="js/main.js"></script>
+	<script>
+		window.onFormSubmit = function() {
+			console.log('send success');
+		};
+	</script>
+</body>
+</html>

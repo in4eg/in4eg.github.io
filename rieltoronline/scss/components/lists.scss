@@ -112,6 +112,7 @@ ul, ol {
 			}
 		}
 
+
 		&:hover {
 
 			&:before {
@@ -119,6 +120,12 @@ ul, ol {
 				color: $color-white;
 			}
 		}
+	}
+
+	&.vertical-align {
+		flex-direction: column;
+		gap: 32px;
+		margin-top: 12px;
 	}
 }
 
@@ -324,10 +331,6 @@ ul, ol {
 		> li {
 			flex-basis: calc(50% - 12px);
 			min-height: 56px;
-
-			&:before {
-				
-			}
 		}
 	}
 
@@ -338,6 +341,11 @@ ul, ol {
 			br { display: none; }
 		}
 	}
+
+	.unordered-list.vertical-align {
+		gap: 12px;
+	}
+
 }
 
 @media (max-width: 993px) {

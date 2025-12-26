@@ -1464,6 +1464,14 @@ html::-webkit-scrollbar-thumb:hover {
 .button.button-secondary:hover .button-icon {
   background-color: #d7957d
 }
+.button.button-secondary.disabled {
+  background-color: #7c7c7c;
+  color: #f6f7f8
+}
+.button.button-secondary.disabled .button-icon {
+  color: #fdfdfd;
+  background-color: #999
+}
 .button.button-secondary-invert {
   background-color: #d5b3a6;
   color: #131516
@@ -4589,7 +4597,7 @@ html.with-fancybox body.hide-scrollbar {
   border: 1px solid #d3d8d8;
   -webkit-transition: .2s;
   transition: .2s;
-  top: 0;
+  top: 2px;
   left: 0;
   z-index: 2
 }
@@ -4599,7 +4607,7 @@ html.with-fancybox body.hide-scrollbar {
   position: absolute;
   z-index: 3;
   left: 0;
-  top: -4px;
+  top: -2px;
   font-size: 24px;
   opacity: 0
 }
@@ -4609,6 +4617,12 @@ html.with-fancybox body.hide-scrollbar {
 }
 .form-group.checkbox-group:hover .label:before {
   border-color: #576f80
+}
+.form-group.checkbox-group:before {
+  display: none
+}
+.form-group.checkbox-group.error .checkbox-label:before {
+  border-color: #b13f3f
 }
 .form-group.radio-group {
   position: relative
@@ -5858,6 +5872,9 @@ html.with-fancybox body.hide-scrollbar {
     padding-top: 12px;
     padding-bottom: 12px
   }
+  .spaced-bottom-sm {
+    margin-bottom: 32px
+  }
 }
 @media (max-width:768px) {
   [class*=col-lg-],
@@ -6179,6 +6196,14 @@ ul .paragraph {
   background-color: #d3d8d8;
   color: #fdfdfd
 }
+.unordered-list.vertical-align {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 32px;
+  margin-top: 12px
+}
 .icons-list li {
   position: relative;
   padding: 0 0 0 80px
@@ -6353,6 +6378,9 @@ ul .paragraph {
   ol .paragraph br,
   ul .paragraph br {
     display: none
+  }
+  .unordered-list.vertical-align {
+    gap: 12px
   }
 }
 @media (max-width:993px) {
@@ -8079,6 +8107,22 @@ ul .paragraph {
 .step-cover .step.active {
   display: block
 }
+.step-cover.large {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  max-width: 100%;
+  -webkit-box-align: baseline;
+  -ms-flex-align: baseline;
+  align-items: baseline;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between
+}
+.step-cover.large .step-title {
+  margin-bottom: 0
+}
 .column-side {
   font-size: 0;
   margin: 64px 0;
@@ -8143,6 +8187,15 @@ ul .paragraph {
   top: 11px;
   -webkit-transition: .2s;
   transition: .2s
+}
+.search-alert.small {
+  margin-bottom: 32px
+}
+.search-alert.small:before {
+  top: 0
+}
+.search-alert.small .theme-text {
+  font-size: var(--font-size-small)
 }
 .title-filters {
   display: -webkit-box;
@@ -8212,6 +8265,9 @@ ul .paragraph {
   background-color: #576f80;
   color: #fdfdfd
 }
+.liqpay-iframe img {
+  max-width: 100%
+}
 @media (max-width:1440px) {
   .stage .title {
     width: 50%
@@ -8267,6 +8323,13 @@ ul .paragraph {
   }
   .title-filters .filters-form {
     width: 100%
+  }
+  .step-cover.large {
+    display: block
+  }
+  .step-cover.large .step-title {
+    text-align: left;
+    margin-top: 12px
   }
 }
 :root {
@@ -9206,6 +9269,9 @@ ul .paragraph {
 .title-group .paragraph {
   margin-top: 24px
 }
+.title-group.full-width {
+  max-width: 100%
+}
 .image-section {
   font-size: 0;
   overflow: hidden
@@ -9255,9 +9321,9 @@ ul .paragraph {
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  -webkit-box-align: end;
-  -ms-flex-align: end;
-  align-items: end;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   padding: 32px 0;
   border-bottom: 1px solid #d3d8d8;
   gap: 24px;
@@ -9272,10 +9338,43 @@ ul .paragraph {
 .section .bordered-link-title .title {
   max-width: 58%
 }
+.section .bordered-link-title .price {
+  font-size: var(--h2-font-size);
+  font-weight: 700;
+  display: inline-block
+}
 .section .bordered-inner {
   border-bottom: 1px solid #d3d8d8;
   border-top: 1px solid #d3d8d8;
   padding: 32px 0
+}
+.section .payment-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 12px;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center
+}
+.section .payment-list .image-item {
+  font-size: 0
+}
+.section .payment-list img {
+  max-width: 100px
+}
+.section .flex-inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 32px;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  width: 90%
 }
 .faq-section {
   padding-top: 0
@@ -9358,6 +9457,9 @@ ul .paragraph {
   }
   .bordered-link-title .link-cover {
     display: block;
+    width: 100%
+  }
+  .bordered-link-title .flex-inner {
     width: 100%
   }
   .section .title-with-link {
@@ -9768,10 +9870,11 @@ ul .paragraph {
 .tariff-item .price {
   text-align: center;
   font-size: 56px;
-  font-weight: 700
+  font-weight: 700;
+  margin-bottom: 32px
 }
 .tariff-item .button:not(.button-link) {
-  margin: 32px 0
+  margin: 0 0 32px
 }
 .tariff-item .tariff-list {
   text-align: left;
@@ -9819,6 +9922,7 @@ ul .paragraph {
 .tariff-item.horizontal .bottom .item:last-child {
   margin-bottom: 0
 }
+.tariff-item.active .animated-rotate,
 .tariff-item:hover .animated-rotate {
   -webkit-transform-origin: center;
   -ms-transform-origin: center;
@@ -9827,28 +9931,33 @@ ul .paragraph {
   animation: spin 4s linear infinite;
   fill: #d7957d
 }
+.tariff-item.active .square rect,
 .tariff-item:hover .square rect {
   -webkit-transition: fill .5s ease;
   transition: fill .5s ease
 }
+.tariff-item.active .square rect:nth-of-type(1),
 .tariff-item:hover .square rect:nth-of-type(1) {
   -webkit-animation: color-cycle 4s infinite;
   animation: color-cycle 4s infinite;
   -webkit-animation-delay: 0s;
   animation-delay: 0s
 }
+.tariff-item.active .square rect:nth-of-type(2),
 .tariff-item:hover .square rect:nth-of-type(2) {
   -webkit-animation: color-cycle 4s infinite;
   animation: color-cycle 4s infinite;
   -webkit-animation-delay: 1s;
   animation-delay: 1s
 }
+.tariff-item.active .square rect:nth-of-type(3),
 .tariff-item:hover .square rect:nth-of-type(3) {
   -webkit-animation: color-cycle 4s infinite;
   animation: color-cycle 4s infinite;
   -webkit-animation-delay: 2s;
   animation-delay: 2s
 }
+.tariff-item.active .square rect:nth-of-type(4),
 .tariff-item:hover .square rect:nth-of-type(4) {
   -webkit-animation: color-cycle 4s infinite;
   animation: color-cycle 4s infinite;
@@ -9978,7 +10087,8 @@ ul .paragraph {
     font-size: var(--h1-font-size)
   }
   .tariffs-cards .tariff-item .price {
-    text-align: left
+    text-align: left;
+    margin-bottom: 0
   }
   .tariffs-cards .tariff-item .bottom {
     display: -webkit-box;
@@ -10013,6 +10123,12 @@ ul .paragraph {
   }
   .tariff-item.horizontal .subtitle {
     margin-bottom: 8px
+  }
+  .tariffs-cards.single-item .tariff-item .bottom {
+    padding-bottom: 0;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center
   }
 }
 @media (max-width:768px) {

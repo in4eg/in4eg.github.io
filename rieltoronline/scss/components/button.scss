@@ -259,6 +259,16 @@ $button-icon-size: 40px;
 			background-color: $color-secondary;
 		}
 	}
+
+	&.disabled {
+		background-color: $color-gray;
+		color: $color-cultured;
+
+		.button-icon {
+			color: $color-lotion;
+			background-color: $color-spanish-gray;
+		}
+	}
 }
 
 .button.button-secondary-invert {

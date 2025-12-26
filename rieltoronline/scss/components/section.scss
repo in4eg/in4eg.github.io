@@ -57,6 +57,10 @@
 	.paragraph {
 		margin-top: 24px;
 	}
+
+	&.full-width {
+		max-width: 100%;
+	}
 }
 
 .image-section {
@@ -112,7 +116,7 @@
 	.bordered-link-title {
 		display: flex;
 		justify-content: space-between;
-		align-items: end;
+		align-items: center;
 		padding: 32px 0;
 		border-bottom: 1px solid $color-light-silver;
 		gap: 24px;
@@ -129,12 +133,40 @@
 		.title {
 			max-width: 58%;
 		}
+
+		.price {
+			font-size: var(--h2-font-size);
+			font-weight: bold;
+			display: inline-block;
+		}
 	}
 
 	.bordered-inner {
 		border-bottom: 1px solid $color-light-silver;
 		border-top: 1px solid $color-light-silver;
 		padding: 32px 0;
+	}
+
+	.payment-list {
+		display: flex;
+		gap: 12px;
+		align-items: center;
+
+		.image-item {
+			font-size: 0;
+		}
+
+		img {
+			max-width: 100px;
+		}
+	}
+
+	.flex-inner {
+		display: flex;
+		gap: 32px;
+		align-items: center;
+		justify-content: space-between;
+		width: 90%;
 	}
 }
 
@@ -240,6 +272,10 @@
 
 		.link-cover {
 			display: block;
+			width: 100%;
+		}
+
+		.flex-inner {
 			width: 100%;
 		}
 	}

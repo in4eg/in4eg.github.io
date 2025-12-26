@@ -571,7 +571,7 @@ $range-thumb-offset: 20px;
 			height: 24px; width: 24px;
 			border: 1px solid $color-light-silver;
 			transition: 0.2s;
-			top: 0; left: 0;
+			top: 2px; left: 0;
 			z-index: 2;
 		}
 
@@ -580,7 +580,7 @@ $range-thumb-offset: 20px;
 			font-family: 'icomoon';
 			position: absolute;
 			z-index: 3;
-			left: 0px; top: -4px;
+			left: 0px; top: -2px;
 			font-size: 24px;
 			opacity: 0;
 		}
@@ -596,6 +596,15 @@ $range-thumb-offset: 20px;
 
 		.label:before {
 			border-color: $color-primary;
+		}
+	}
+
+	&:before { display:none; }
+
+	&.error {
+
+		.checkbox-label:before {
+			border-color: $color-error;
 		}
 	}
 }

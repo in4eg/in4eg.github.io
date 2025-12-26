@@ -288,7 +288,12 @@ $container-small-width: 1262px;
 			}
 		}
 	}
+
+	.spaced-bottom-sm {
+		margin-bottom: 32px;
+	}
 }
+
 @media (max-width: 768px) {
 	$gutter: 12px;
 

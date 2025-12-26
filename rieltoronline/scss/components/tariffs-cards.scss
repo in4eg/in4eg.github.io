@@ -50,10 +50,11 @@
 		text-align: center;
 		font-size: $h1-font-size;
 		font-weight: bold;
+		margin-bottom: 32px;
 	}
 
 	.button:not(.button-link) {
-		margin: 32px 0;
+		margin: 0 0 32px;
 	}
 
 	.tariff-list {
@@ -105,7 +106,8 @@
 	}
 }
 
-.tariff-item:hover {
+.tariff-item:hover,
+.tariff-item.active {
 
 	.animated-rotate {
 		transform-origin: center;
@@ -256,6 +258,7 @@
 
 			.price {
 				text-align: left;
+				margin-bottom: 0;
 			}
 
 			.bottom {
@@ -287,6 +290,14 @@
 
 		.subtitle {
 			margin-bottom: 8px;
+		}
+	}
+
+	.tariffs-cards.single-item {
+
+		.tariff-item .bottom {
+			padding-bottom: 0;
+			justify-content: center;
 		}
 	}
 }

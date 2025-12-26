@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+	<meta charset="UTF-8">
+	<title>RieltorOnline :: Order Checkout</title>
+
+	<link rel="icon" type="image/png" href="/favicon/favicon-96x96.png" sizes="96x96">
+	<link rel="icon" type="image/svg+xml" href="/favicon/favicon.svg">
+	<link rel="shortcut icon" href="/favicon/favicon.ico">
+	<link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
+	<meta name="apple-mobile-web-app-title" content="RieltorOnline">
+	<link rel="manifest" href="/favicon/site.webmanifest">
+
+	<meta name="msapplication-TileColor" content="#576F80">
+	<meta name="theme-color" content="#576F80">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+	<meta name="format-detection" content="telephone=no">
+	<meta name="description" content="description">
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+
+	<link rel="stylesheet" href="css/bundle.min.css">
+</head>
+<body id="innerBody">
+	<!-- header -->
+	@@include('./includes/header-main.html')
+	<!-- / header -->
+	<!-- class inner-page -->
+	<!-- class auto-height -->
+	<main class="page-main inner-page auto-height" id="pageMain">
+		<!-- breadcrumbs -->
+		<div class="breadcrumbs">
+			<div class="container">
+				<ul class="breadcrumbs-list clear">
+					<li><a href="index.html" class="text" aria-label="main page">Головна</a></li>
+					<li><span class="text">Оплата замовлення</span></li>
+				</ul>
+			</div>
+		</div>
+		<!-- / breadcrumbs -->
+
+		<!-- section-->
+		<section class="section">
+			<div class="container">
+				<!-- title -->
+				<div class="title-group full-width">
+					<div class="section-subtitle">Покупка тарифу «Старт»</div>
+					<div class="step-cover large">
+						<h2 class="section-title-large">Оплата замовлення</h2>
+						<div class="step-title">Крок 2/2</div>
+					</div>
+				</div>
+				<!-- / title -->
+
+				<!-- user data -->
+				<div class="row">
+					<div class="col-xs-12 col-md-3">
+						<ul class="clear vertical-align collapsed-xs unordered-list">
+							<li><div class="paragraph">Федорченко Павло</div></li>
+							<li><div class="paragraph">+380939996622</div></li>
+							<li><div class="paragraph">mail@mail.mail</div></li>
+							<li><div class="paragraph bold">тариф «Старт»</div></li>
+						</ul>
+					</div>
+					<div class="col-xs-12 col-md-7">
+						<div class="liqpay-iframe">
+							<img src="img/temp/paymentpage_iframe.png" alt="paymentpage">
+						</div>
+					</div>
+				</div>
+				<!-- / user data -->
+			</div>
+		</section>
+		<!-- / section-->
+	</main>
+
+
+	<!-- footer -->
+	@@include('./includes/footer-main.html')
+	<!-- /footer -->
+	<script src="js/main.js"></script>
+	<script>
+		window.onFormSubmit = function() {
+			console.log('send success');
+		};
+	</script>
+</body>
+</html>
