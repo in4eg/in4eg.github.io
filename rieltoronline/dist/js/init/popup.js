@@ -3,6 +3,7 @@ class PopupWindow {
 		popupSelector = '.popup',
 		closeSelector = '.close-popup',
 		callSelector = '[data-call]',
+		dissmissSelector = '[data-dissmiss]',
 		overlayClass = 'overlayed',
 		activeClass = 'active',
 		showedClass = 'showed',
@@ -11,6 +12,7 @@ class PopupWindow {
 		this.popupSelector = popupSelector;
 		this.closeSelector = closeSelector;
 		this.callSelector = callSelector;
+		this.dissmissSelector = dissmissSelector;
 		this.overlayClass = overlayClass;
 		this.activeClass = activeClass;
 		this.showedClass = showedClass;
@@ -19,6 +21,7 @@ class PopupWindow {
 		this._onCloseClick = this._onCloseClick.bind(this);
 		this._onPopupClick = this._onPopupClick.bind(this);
 		this._onCallClick = this._onCallClick.bind(this);
+		this._onDissmissClick = this._onDissmissClick.bind(this);
 
 		this.init();
 	}
@@ -34,6 +37,10 @@ class PopupWindow {
 
 		document.querySelectorAll(this.callSelector).forEach(btn => {
 			btn.addEventListener('click', this._onCallClick);
+		});
+
+		document.querySelectorAll(this.dissmissSelector).forEach(btn => {
+			btn.addEventListener('click', this._onDissmissClick);
 		});
 	}
 
@@ -52,9 +59,17 @@ class PopupWindow {
 
 	_onCallClick(e) {
 		e.preventDefault();
-		const btn = e.currentTarget;
-		const target = btn.dataset.call;
+		const target = e.currentTarget.dataset.call;
 		if (target) this.show(target);
+	}
+
+	_onDissmissClick(e) {
+		e.preventDefault();
+		const target = e.currentTarget.dataset.dissmiss;
+		if (!target) return;
+
+		const popup = document.querySelector(target);
+		if (popup) this.hide(popup);
 	}
 
 	show(popupId) {
@@ -64,14 +79,14 @@ class PopupWindow {
 		popup.classList.add(this.showedClass);
 
 		document.body.style.width = window.getComputedStyle(document.body).width;
-		document.getElementById('mainHeader').style.width = window.getComputedStyle(document.getElementById('mainHeader')).width;
+		const header = document.getElementById('mainHeader');
+		if (header) header.style.width = window.getComputedStyle(header).width;
 
 		document.body.classList.add(this.overlayClass);
 		document.documentElement.classList.add(this.overlayClass);
 
 		setTimeout(() => {
 			popup.classList.add(this.activeClass);
-			console.log('onopen', popupId);
 
 			if (popup.dataset.onopen && typeof window[popup.dataset.onopen] === 'function') {
 				window[popup.dataset.onopen](popup);
@@ -83,13 +98,14 @@ class PopupWindow {
 		document.body.classList.remove(this.overlayClass);
 		document.documentElement.classList.remove(this.overlayClass);
 		document.body.style.width = '';
-		document.getElementById('mainHeader').style.width = '';
+
+		const header = document.getElementById('mainHeader');
+		if (header) header.style.width = '';
 
 		popup.classList.remove(this.activeClass);
 
 		setTimeout(() => {
 			popup.classList.remove(this.showedClass);
-			console.log('onclose', `#${popup.id}`);
 
 			if (popup.dataset.onclose && typeof window[popup.dataset.onclose] === 'function') {
 				window[popup.dataset.onclose](popup);
@@ -99,5 +115,5 @@ class PopupWindow {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-	new PopupWindow();
+	window.popupWindow = new PopupWindow();
 });

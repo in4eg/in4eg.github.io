@@ -561,8 +561,14 @@ class FiltersUI {
 	txt = el => el?.textContent.trim() || '';
 
 	bind() {
-		this.qsa('input[type="radio"], input[type="checkbox"], input[type="date"], select')
-			.forEach(el => el.addEventListener('change', () => this.rebuild()));
+		this.root.addEventListener('change', e => {
+			const el = e.target;
+			if (
+				el.matches('input[type="radio"], input[type="checkbox"], input[type="date"], select')
+			) {
+				this.rebuild();
+			}
+		});
 
 		this.qsa('[data-range]').forEach(block => {
 			block.addEventListener('dualrangechange', () => this.rebuild());
@@ -575,6 +581,7 @@ class FiltersUI {
 			});
 		}
 	}
+
 
 	rebuild() {
 		this.tagList.innerHTML = '';
@@ -1488,6 +1495,95 @@ document.addEventListener('DOMContentLoaded', function(){
 		}
 	}
 });
+
+
+document.addEventListener('DOMContentLoaded', () => {
+
+	document.querySelectorAll('.filters-cover').forEach(cover => {
+		const tagList = cover.querySelector('.tag-list');
+		const tagCover = cover.querySelector('.tag-cover');
+
+		if (!tagList) return;
+
+		tagList.addEventListener('click', e => {
+			const tag = e.target.closest('.tag');
+			if (!tag) return;
+
+			const key = tag.dataset.key;
+			if (!key) return;
+
+			// ---------- RADIO / CHECKBOX
+			const input = document.getElementById(key);
+			if (input) {
+				if (input.type === 'radio' || input.type === 'checkbox') {
+					input.checked = false;
+					input.dispatchEvent(new Event('change', { bubbles: true }));
+				}
+			}
+
+			// ---------- RANGE (через label → data-range)
+			const labelEl = [...cover.querySelectorAll('[data-range] .label')]
+				.find(el => el.textContent.trim() === key);
+
+			if (labelEl) {
+				const rangeBlock = labelEl.closest('[data-range]');
+				const rangeEl = rangeBlock?.querySelector('.range');
+				const group = rangeBlock?.querySelector('.range-group');
+				const dr = group?._dualRange;
+
+				if (rangeEl && dr) {
+					const min = Number(rangeEl.dataset.min);
+					const max = Number(rangeEl.dataset.max);
+
+					const inputMin = rangeBlock.querySelector('.input-min');
+					const inputMax = rangeBlock.querySelector('.input-max');
+
+					if (inputMin) inputMin.value = min;
+					if (inputMax) inputMax.value = max;
+
+					// 🔥 головне — ОНОВЛЕННЯ DualRange
+					dr.set(min, max, true);
+				}
+			}
+
+			// ---------- DATE
+			if (key === 'date') {
+				const start = document.querySelector('[name="startDatetime"]');
+				const end = document.querySelector('[name="endDatetime"]');
+
+				if (start) start.value = '';
+				if (end) end.value = '';
+
+				start?.dispatchEvent(new Event('change', { bubbles: true }));
+				end?.dispatchEvent(new Event('change', { bubbles: true }));
+			}
+
+			// ---------- REMOVE TAG
+			tag.remove();
+
+			// ---------- UPDATE COUNTER + VISIBILITY
+			updateTagsState(cover);
+		});
+	});
+
+	function updateTagsState(cover) {
+		const tagList = cover.querySelector('.tag-list');
+		const tagsCount = tagList ? tagList.children.length : 0;
+
+		// counter
+		cover.querySelectorAll('.counter').forEach(c => {
+			c.textContent = tagsCount;
+		});
+
+		// hidden
+		if (tagsCount === 0) {
+			cover.querySelector('.tag-cover').classList.add('hidden');
+		} else {
+			cover.querySelector('.tag-cover').classList.remove('hidden');
+		}
+	}
+});
+
 // show video modal
 document.addEventListener('DOMContentLoaded', function(){
 	let videoTriggerElemens = document.querySelectorAll("[data-video-src]");
@@ -1693,6 +1789,157 @@ document.addEventListener('DOMContentLoaded', function(){
 		}
 	}
 })();
+
+class GetCities {
+	constructor({
+		jsonSelector = '#city-rayon',
+		cityContainerSelector = '[name="city"]',
+		districtContainerSelector = '[name="district[]"]'
+	} = {}) {
+		this.jsonEl = document.querySelector(jsonSelector);
+		if (!this.jsonEl) return;
+
+		this.data = JSON.parse(this.jsonEl.textContent);
+		this.cityContainer = document.querySelector(cityContainerSelector)?.closest('[data-options]');
+		this.districtContainer = document.querySelector(districtContainerSelector)?.closest('[data-options]');
+
+		this.params = new URLSearchParams(location.search);
+
+		this.init();
+	}
+
+	init() {
+		this.renderCities();
+		this.restoreCityFromGet();
+		this.bindCityChange();
+	}
+
+	/* ---------- RENDER ---------- */
+	renderCities() {
+		if (!this.cityContainer) return;
+		this.cityContainer.innerHTML = '';
+
+		this.data.cities.forEach(city => {
+			this.cityContainer.appendChild(
+				this._createCityItem(city)
+			);
+		});
+	}
+
+	renderDistricts(cityId) {
+		if (!this.districtContainer) return;
+		this.districtContainer.innerHTML = '';
+
+		Object.values(this.data.rayons)
+			.filter(r => String(r.city_id) === String(cityId))
+			.forEach(rayon => {
+				this.districtContainer.appendChild(
+					this._createDistrictItem(rayon)
+				);
+			});
+
+		this.restoreDistrictsFromGet();
+	}
+
+	/* ---------- CREATE ITEMS ---------- */
+	_createCityItem(city) {
+		const item = document.createElement('div');
+		item.className = 'item';
+
+		item.innerHTML = `
+			<div class="radio-group form-group">
+				<input
+					type="radio"
+					name="city"
+					class="radio"
+					id="city-${city.id}"
+					value="${city.id}"
+				>
+				<label for="city-${city.id}" class="radio-label" data-label>
+					${city.name}
+				</label>
+			</div>
+		`;
+
+		return item;
+	}
+
+	_createDistrictItem(rayon) {
+		const item = document.createElement('div');
+		item.className = 'item';
+
+		item.innerHTML = `
+			<div class="checkbox-group form-group">
+				<input
+					type="checkbox"
+					name="district[]"
+					class="checkbox"
+					id="district-${rayon.url}"
+					value="${rayon.url}"
+				>
+				<label for="district-${rayon.url}" class="checkbox-label" data-label>
+					${rayon.name}
+				</label>
+			</div>
+		`;
+
+		return item;
+	}
+
+	/* ---------- EVENTS ---------- */
+	bindCityChange() {
+		document.addEventListener('change', (e) => {
+			if (e.target.name !== 'city') return;
+
+			const cityId = e.target.value;
+			this.renderDistricts(cityId);
+
+			this.reinitSelecter();
+			this.rebuildFiltersUI();
+		});
+	}
+
+	/* ---------- RESTORE FROM GET ---------- */
+	restoreCityFromGet() {
+		const cityId = this.params.get('city');
+		if (!cityId) return;
+
+		const radio = document.querySelector(`[name="city"][value="${cityId}"]`);
+		if (radio) {
+			radio.checked = true;
+			this.renderDistricts(cityId);
+		}
+	}
+
+	restoreDistrictsFromGet() {
+		const values = this.params.getAll('district[]');
+		if (!values.length) return;
+
+		values.forEach(val => {
+			const cb = document.querySelector(`[name="district[]"][value="${val}"]`);
+			if (cb) cb.checked = true;
+		});
+	}
+
+	/* ---------- HELPERS ---------- */
+	reinitSelecter() {
+		if (window.filterSelecterInstances) {
+			window.filterSelecterInstances.forEach(i => i.destroy());
+		}
+
+		window.filterSelecterInstances = initSelecter('.select-filter');
+	}
+
+	rebuildFiltersUI() {
+		document.querySelectorAll('.filters-cover').forEach(el => {
+			el._filtersUI?.rebuild?.();
+		});
+	}
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+	new GetCities();
+});
 
 // header scroll
 document.addEventListener('DOMContentLoaded', function(){
@@ -2962,6 +3209,7 @@ class PopupWindow {
 		popupSelector = '.popup',
 		closeSelector = '.close-popup',
 		callSelector = '[data-call]',
+		dissmissSelector = '[data-dissmiss]',
 		overlayClass = 'overlayed',
 		activeClass = 'active',
 		showedClass = 'showed',
@@ -2970,6 +3218,7 @@ class PopupWindow {
 		this.popupSelector = popupSelector;
 		this.closeSelector = closeSelector;
 		this.callSelector = callSelector;
+		this.dissmissSelector = dissmissSelector;
 		this.overlayClass = overlayClass;
 		this.activeClass = activeClass;
 		this.showedClass = showedClass;
@@ -2978,6 +3227,7 @@ class PopupWindow {
 		this._onCloseClick = this._onCloseClick.bind(this);
 		this._onPopupClick = this._onPopupClick.bind(this);
 		this._onCallClick = this._onCallClick.bind(this);
+		this._onDissmissClick = this._onDissmissClick.bind(this);
 
 		this.init();
 	}
@@ -2993,6 +3243,10 @@ class PopupWindow {
 
 		document.querySelectorAll(this.callSelector).forEach(btn => {
 			btn.addEventListener('click', this._onCallClick);
+		});
+
+		document.querySelectorAll(this.dissmissSelector).forEach(btn => {
+			btn.addEventListener('click', this._onDissmissClick);
 		});
 	}
 
@@ -3011,9 +3265,17 @@ class PopupWindow {
 
 	_onCallClick(e) {
 		e.preventDefault();
-		const btn = e.currentTarget;
-		const target = btn.dataset.call;
+		const target = e.currentTarget.dataset.call;
 		if (target) this.show(target);
+	}
+
+	_onDissmissClick(e) {
+		e.preventDefault();
+		const target = e.currentTarget.dataset.dissmiss;
+		if (!target) return;
+
+		const popup = document.querySelector(target);
+		if (popup) this.hide(popup);
 	}
 
 	show(popupId) {
@@ -3023,14 +3285,14 @@ class PopupWindow {
 		popup.classList.add(this.showedClass);
 
 		document.body.style.width = window.getComputedStyle(document.body).width;
-		document.getElementById('mainHeader').style.width = window.getComputedStyle(document.getElementById('mainHeader')).width;
+		const header = document.getElementById('mainHeader');
+		if (header) header.style.width = window.getComputedStyle(header).width;
 
 		document.body.classList.add(this.overlayClass);
 		document.documentElement.classList.add(this.overlayClass);
 
 		setTimeout(() => {
 			popup.classList.add(this.activeClass);
-			console.log('onopen', popupId);
 
 			if (popup.dataset.onopen && typeof window[popup.dataset.onopen] === 'function') {
 				window[popup.dataset.onopen](popup);
@@ -3042,13 +3304,14 @@ class PopupWindow {
 		document.body.classList.remove(this.overlayClass);
 		document.documentElement.classList.remove(this.overlayClass);
 		document.body.style.width = '';
-		document.getElementById('mainHeader').style.width = '';
+
+		const header = document.getElementById('mainHeader');
+		if (header) header.style.width = '';
 
 		popup.classList.remove(this.activeClass);
 
 		setTimeout(() => {
 			popup.classList.remove(this.showedClass);
-			console.log('onclose', `#${popup.id}`);
 
 			if (popup.dataset.onclose && typeof window[popup.dataset.onclose] === 'function') {
 				window[popup.dataset.onclose](popup);
@@ -3058,7 +3321,7 @@ class PopupWindow {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-	new PopupWindow();
+	window.popupWindow = new PopupWindow();
 });
 
 class DualRange {
@@ -3094,6 +3357,7 @@ class DualRange {
 
 		this.rMin.addEventListener('input', handler);
 		this.rMax.addEventListener('input', handler);
+
 		if (this.iMin) this.iMin.addEventListener('input', handler);
 		if (this.iMax) this.iMax.addEventListener('input', handler);
 	}
@@ -3103,12 +3367,17 @@ class DualRange {
 		max = Math.max(this.min, Math.min(max, this.max));
 		if (min > max) [min, max] = [max, min];
 
+		// ВАЖЛИВО: повний reset value
 		this.rMin.value = min;
 		this.rMax.value = max;
+
 		if (this.iMin) this.iMin.value = min;
 		if (this.iMax) this.iMax.value = max;
 
-		this.pathFill();
+		// ПРИМУСОВИЙ repaint
+		requestAnimationFrame(() => {
+			this.paintFill();
+		});
 
 		if (emit) {
 			this.root.dispatchEvent(new CustomEvent('dualrangechange', {
@@ -3118,7 +3387,7 @@ class DualRange {
 		}
 	}
 
-	pathFill() {
+	paintFill() {
 		if (!this.fill) return;
 
 		const min = Number(this.rMin.value);
@@ -3137,6 +3406,7 @@ document.addEventListener('DOMContentLoaded', () => {
 	document.querySelectorAll('[data-range]').forEach(block => {
 		const group = block.querySelector('.range-group');
 		if (!group) return;
+
 		group._dualRange = new DualRange(group);
 	});
 });
@@ -3622,7 +3892,14 @@ class Selecter {
 				anchorEl.textContent = '';
 			}
 		} else {
-			let text = this.select.value;
+			const opt = this.select.selectedOptions[0];
+			let text = '';
+			if (opt) {
+				text =
+					opt.dataset.value ||
+					(opt.textContent || opt.label || '').trim();
+			}
+
 			if (lastValue === true) text = 'yes';
 			else if (lastValue === false) text = 'no';
 			anchorEl.textContent = text || '';
@@ -3653,6 +3930,30 @@ const instances = initSelecter('.select', {
 		console.log('changed:', lastValue, 'selected:', 
 			Array.from(selectEl.selectedOptions).map(o => o.value));
 	}
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+	document.addEventListener('click', e => {
+		const item = e.target.closest('.filtered-list .item');
+		if (!item) return;
+
+		const input = item.querySelector('input[type="radio"], input[type="checkbox"]');
+		if (!input) return;
+
+		// radio
+		if (input.type === 'radio') {
+			if (!input.checked) {
+				input.checked = true;
+				input.dispatchEvent(new Event('change', { bubbles: true }));
+			}
+		}
+
+		// checkbox
+		if (input.type === 'checkbox') {
+			input.checked = !input.checked;
+			input.dispatchEvent(new Event('change', { bubbles: true }));
+		}
+	});
 });
 
 // window.Selecter = Selecter;

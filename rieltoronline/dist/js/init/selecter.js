@@ -294,7 +294,14 @@ class Selecter {
 				anchorEl.textContent = '';
 			}
 		} else {
-			let text = this.select.value;
+			const opt = this.select.selectedOptions[0];
+			let text = '';
+			if (opt) {
+				text =
+					opt.dataset.value ||
+					(opt.textContent || opt.label || '').trim();
+			}
+
 			if (lastValue === true) text = 'yes';
 			else if (lastValue === false) text = 'no';
 			anchorEl.textContent = text || '';
@@ -325,6 +332,30 @@ const instances = initSelecter('.select', {
 		console.log('changed:', lastValue, 'selected:', 
 			Array.from(selectEl.selectedOptions).map(o => o.value));
 	}
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+	document.addEventListener('click', e => {
+		const item = e.target.closest('.filtered-list .item');
+		if (!item) return;
+
+		const input = item.querySelector('input[type="radio"], input[type="checkbox"]');
+		if (!input) return;
+
+		// radio
+		if (input.type === 'radio') {
+			if (!input.checked) {
+				input.checked = true;
+				input.dispatchEvent(new Event('change', { bubbles: true }));
+			}
+		}
+
+		// checkbox
+		if (input.type === 'checkbox') {
+			input.checked = !input.checked;
+			input.dispatchEvent(new Event('change', { bubbles: true }));
+		}
+	});
 });
 
 // window.Selecter = Selecter;

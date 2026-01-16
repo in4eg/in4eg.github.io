@@ -13,8 +13,14 @@ class FiltersUI {
 	txt = el => el?.textContent.trim() || '';
 
 	bind() {
-		this.qsa('input[type="radio"], input[type="checkbox"], input[type="date"], select')
-			.forEach(el => el.addEventListener('change', () => this.rebuild()));
+		this.root.addEventListener('change', e => {
+			const el = e.target;
+			if (
+				el.matches('input[type="radio"], input[type="checkbox"], input[type="date"], select')
+			) {
+				this.rebuild();
+			}
+		});
 
 		this.qsa('[data-range]').forEach(block => {
 			block.addEventListener('dualrangechange', () => this.rebuild());
@@ -27,6 +33,7 @@ class FiltersUI {
 			});
 		}
 	}
+
 
 	rebuild() {
 		this.tagList.innerHTML = '';
