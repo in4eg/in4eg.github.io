@@ -160,6 +160,10 @@
 		margin-bottom: 16px;
 	}
 
+	.spaced-top {
+		margin-top: 32px;
+	}
+
 	&:before {
 		counter-increment: count;
 		content: '!';
@@ -185,6 +189,26 @@
 
 		.theme-text {
 			font-size: var(--font-size-small);
+		}
+	}
+
+	&.success {
+		margin-bottom: 32px;
+
+		&:before {
+			content: '\e90d';
+			font-family: 'icomoon';
+			color: $color-success;
+			border-color: $color-success;
+		}
+	}
+
+	&.error {
+		margin-bottom: 32px;
+
+		&:before {
+			color: $color-error;
+			border-color: $color-error;
 		}
 	}
 }

@@ -6006,6 +6006,9 @@ html.with-fancybox body.hide-scrollbar {
 .icon-filter:before {
   content: "\e91a"
 }
+.icon-logout:before {
+  content: "\e91b"
+}
 :root {
   --font-size: 20px;
   --font-size-small: 16px;
@@ -6800,6 +6803,8 @@ ul .paragraph {
   text-align: center;
   line-height: 48px;
   z-index: 15;
+  border: 0;
+  cursor: pointer;
   background-color: #f6f7f8;
   -webkit-transition: background-color .2s;
   transition: background-color .2s;
@@ -6845,6 +6850,9 @@ ul .paragraph {
 }
 .main-header .round-link:hover {
   background-color: #e3e7ed
+}
+.main-header .round-link[data-toggle-element] {
+  display: none
 }
 .main-header .header-navigation {
   font-size: 0
@@ -7107,6 +7115,9 @@ ul .paragraph {
     text-align: center;
     line-height: 48px;
     z-index: 15
+  }
+  .main-header .menu-button[data-toggle-element] {
+    display: block
   }
   .main-header .menu-button .lines {
     width: 18px;
@@ -8170,6 +8181,9 @@ ul .paragraph {
   font-weight: 700;
   margin-bottom: 16px
 }
+.search-alert .spaced-top {
+  margin-top: 32px
+}
 .search-alert:before {
   counter-increment: count;
   content: "!";
@@ -8196,6 +8210,22 @@ ul .paragraph {
 }
 .search-alert.small .theme-text {
   font-size: var(--font-size-small)
+}
+.search-alert.success {
+  margin-bottom: 32px
+}
+.search-alert.success:before {
+  content: "\e90d";
+  font-family: icomoon;
+  color: #1c744b;
+  border-color: #1c744b
+}
+.search-alert.error {
+  margin-bottom: 32px
+}
+.search-alert.error:before {
+  color: #b13f3f;
+  border-color: #b13f3f
 }
 .title-filters {
   display: -webkit-box;

@@ -54,6 +54,8 @@ $header-borders-color-dark: rgba($color-dark-header, 0.3);
 		text-align: center;
 		line-height: 48px;
 		z-index: 15;
+		border: 0;
+		cursor: pointer;
 		background-color: $color-cultured;
 		transition: background-color .2s;
 		color: $color-dark;
@@ -94,6 +96,10 @@ $header-borders-color-dark: rgba($color-dark-header, 0.3);
 
 		&:hover {
 			background-color: $color-bright-gray;
+		}
+
+		&[data-toggle-element] {
+			display: none;
 		}
 	}
 
@@ -465,6 +471,10 @@ $header-borders-color-dark: rgba($color-dark-header, 0.3);
 			text-align: center;
 			line-height: 48px;
 			z-index: 15;
+
+			&[data-toggle-element] {
+				display: block;
+			}
 
 			.lines {
 				width: 18px; height: 1px;

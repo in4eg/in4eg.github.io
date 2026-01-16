@@ -90,6 +90,11 @@
 						<!-- user photo if user is authorized -->
 						<!-- <img src="../img/temp/user.png" alt="user" class="userpic"> -->
 					</a>
+					<!-- logout button -->
+					<button class="logout-link round-link" type="button">
+						<i class="icon icon-logout"></i>
+					</button>
+					<!-- logout button -->
 				</div>
 				<!-- / user header menu -->
 				<!-- mobile menu toggle button -->
@@ -145,6 +150,40 @@
 						<div class="liqpay-iframe">
 							<img src="img/temp/paymentpage_iframe.png" alt="paymentpage">
 						</div>
+						<!-- PAYMENT STATUSES -->
+						<!-- remove class .hidden  -->
+						<!-- success -->
+						<div id="paymentSuccessStatus" class="search-alert success hidden">
+							<div class="title">Замовлення успішно оплачено</div>
+							<div class="theme-text">
+								Дякуємо за оплату тарифу «Старт»! <br>
+								Вам доступно <b>1</b> перегляд на <b>30</b> днів
+							</div>
+							<div class="spaced-top">
+								<a aria-label="catalog page" class="button button-secondary button-arrow full-sm" href="catalog.html">
+									<span class="text">Перейти до каталогу</span>
+									<span class="button-icon">
+										<i class="icon icon-arrow-right"></i>
+									</span>
+								</a>
+							</div>
+						</div>
+						<!-- error -->
+						<div id="paymentErrorStatus" class="search-alert error hidden">
+							<div class="title">Замовлення не оплачене</div>
+							<div class="theme-text">
+								При оплаті замовлення виникла помилка.
+							</div>
+							<div class="spaced-top">
+								<a aria-label="payment" class="button button-primary button-arrow full-sm" href="#">
+									<span class="text">Спобувати ще раз</span>
+									<span class="button-icon">
+										<i class="icon icon-arrow-right"></i>
+									</span>
+								</a>
+							</div>
+						</div>
+						<!-- PAYMENT STATUSES -->
 					</div>
 				</div>
 				<!-- / user data -->
