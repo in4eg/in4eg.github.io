@@ -68,9 +68,9 @@
 					<div class="link-cover">
 						<!-- tabs nav -->
 						<div class="tabs" data-tabs-container="#personalTabs">
-							<div class="tab-button active">Мій тариф</div>
+							<div class="tab-button ">Мій тариф</div>
 							<div class="tab-button">Мій профіль</div>
-							<div class="tab-button">Оплати/Чеки</div>
+							<div class="tab-button active">Оплати/Чеки</div>
 							<div class="tab-fader"></div>
 						</div>
 						<!-- / tabs nav -->
@@ -81,7 +81,7 @@
 				<!-- tabs-container -->
 				<div class="tabs-container" id="personalTabs">
 					<!-- tab1  -->
-					<div class="personal-content tab-content active">
+					<div class="personal-content tab-content ">
 						<div class="contact-inner">
 							<div class="tarif">
 								<div class="tariff-item animated-item horizontal">
@@ -179,33 +179,130 @@
 						</div>
 					</div>
 					<!-- tab3  -->
-					<div class="personal-content tab-content">
+					<div class="personal-content tab-content active">
 						<div class="table-wrapper">
-							<table class="table fixed-table">
+							<table class="table payment-table">
 								<thead>
-									<tr><th>Дата</th><th>Операція</th><th>Перегляди</th><th>Залишок переглядів</th></tr>
+									<tr>
+										<th>Дата</th>
+										<th>Операція</th>
+										<th>Перегляди</th>
+										<th>Залишок переглядів</th>
+										<th>Об'єкти</th>
+									</tr>
 								</thead>
 								<tbody>
 									<tr>
-										<td>10.07.2025</td>
-										<td>Купівля тарифу «Старт» </td><td>+10</td><td>10</td>
+										<td data-caption="Дата">10.07.2025</td>
+										<td data-caption="Операція">Купівля тарифу «Старт»</td>
+										<td data-caption="Перегляди">+10</td>
+										<td data-caption="Залишок переглядів">10</td>
+										<td data-caption="Об'єкти">-</td>
 									</tr>
 									<tr>
-										<td>10.07.2025</td>
-										<td>Списання перегляду</td><td>-1</td><td>9</td>
+										<td data-caption="Дата">10.07.2025</td>
+										<td data-caption="Операція">Списання перегляду</td>
+										<td data-caption="Перегляди">-1</td>
+										<td data-caption="Залишок переглядів">9</td>
+										<td data-caption="Об'єкти">
+											<a href="object.html" aria-label="Read more" class="object-preview horizontal smaller">
+												<div class="spaced-inner">
+													<figure class="object-image">
+														<img src="img/temp/obj2.jpg" draggable="false" alt="image">
+													</figure>
+												</div>
+												<div class="caption">
+													<div class="spaced-inner stretch-inner">
+														<h2 class="object-title">вул. Всеволода Змієнка, 34/ 21</h2>
+														<div class="description">
+															<div class="line">Київ, ЖК Республіка</div>
+															<div class="line">2 кімнати, 7 поверх з 10, 218м<sup>2</sup></div>
+															<div class="price-primary">3 202 210 грн</div>
+														</div>
+													</div>
+												</div>
+											</a>
+										</td>
 									</tr>
 									<tr>
-										<td>11.07.2025</td>
-										<td>Списання перегляду</td><td>-1</td><td>8</td>
+										<td data-caption="Дата">11.07.2025</td>
+										<td data-caption="Операція">Списання перегляду</td>
+										<td data-caption="Перегляди">-1</td>
+										<td data-caption="Залишок переглядів">8</td>
+										<td data-caption="Об'єкти">
+											<a href="object.html" aria-label="Read more" class="object-preview horizontal smaller">
+												<div class="spaced-inner">
+													<figure class="object-image">
+														<img src="img/temp/obj2.jpg" draggable="false" alt="image">
+													</figure>
+												</div>
+												<div class="caption">
+													<div class="spaced-inner stretch-inner">
+														<h2 class="object-title">вул. Всеволода Змієнка, 34/ 21</h2>
+														<div class="description">
+															<div class="line">Київ, ЖК Республіка</div>
+															<div class="line">2 кімнати, 7 поверх з 10, 218м<sup>2</sup></div>
+															<div class="price-primary">3 202 210 грн</div>
+														</div>
+													</div>
+												</div>
+											</a>
+										</td>
 									</tr>
 									<tr>
-										<td>12.07.2025</td>
-										<td>Списання перегляду</td><td>-1</td><td>7</td>
+										<td data-caption="Дата">12.07.2025</td>
+										<td data-caption="Операція">Списання перегляду</td>
+										<td data-caption="Перегляди">-1</td>
+										<td data-caption="Залишок переглядів">7</td>
+										<td data-caption="Об'єкти">
+											<a href="object.html" aria-label="Read more" class="object-preview horizontal smaller">
+												<div class="spaced-inner">
+													<figure class="object-image">
+														<img src="img/temp/obj1.jpg" draggable="false" alt="image">
+													</figure>
+												</div>
+												<div class="caption">
+													<div class="spaced-inner stretch-inner">
+														<h2 class="object-title">вул. Всеволода Змієнка, 34/ 21</h2>
+														<div class="description">
+															<div class="line">Київ, ЖК Республіка</div>
+															<div class="line">2 кімнати, 7 поверх з 10, 218м<sup>2</sup></div>
+															<div class="price-primary">3 202 210 грн</div>
+														</div>
+													</div>
+												</div>
+											</a>
+										</td>
+									</tr>
+									<tr>
+										<td data-caption="Дата">12.07.2025</td>
+										<td data-caption="Операція">Списання перегляду</td>
+										<td data-caption="Перегляди">-1</td>
+										<td data-caption="Залишок переглядів">7</td>
+										<td data-caption="Об'єкти">
+											<a href="object.html" aria-label="Read more" class="object-preview horizontal smaller">
+												<div class="spaced-inner">
+													<figure class="object-image">
+														<img src="img/temp/obj2.jpg" draggable="false" alt="image">
+													</figure>
+												</div>
+												<div class="caption">
+													<div class="spaced-inner stretch-inner">
+														<h2 class="object-title">вул. Всеволода Змієнка, 34/ 21</h2>
+														<div class="description">
+															<div class="line">Київ, ЖК Республіка</div>
+															<div class="line">2 кімнати, 7 поверх з 10, 218м<sup>2</sup></div>
+															<div class="price-primary">3 202 210 грн</div>
+														</div>
+													</div>
+												</div>
+											</a>
+										</td>
 									</tr>
 								</tbody>
 								<tfoot>
 									<tr>
-										<td colspan="3">Всього на 15.07.2025</td>
+										<td colspan="3">Залишилось переглядів:</td>
 										<td>7</td>
 									</tr>
 								</tfoot>
