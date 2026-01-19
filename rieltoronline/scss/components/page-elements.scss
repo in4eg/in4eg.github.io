@@ -153,11 +153,15 @@
 .search-alert {
 	position: relative;
 	padding-left: 80px;
+	min-height: 74px;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
 
 	.title {
 		font-size: var(--h4-font-size);
 		font-weight: bold;
-		margin-bottom: 16px;
+		margin-bottom: 8px;
 	}
 
 	.spaced-top {
@@ -199,7 +203,7 @@
 			content: '\e90d';
 			font-family: 'icomoon';
 			color: $color-success;
-			border-color: $color-success;
+			border-color: lighten($color-success, 50%);
 		}
 	}
 
@@ -374,6 +378,21 @@
 		.step-title {
 			text-align: left;
 			margin-top: 12px;
+		}
+	}
+
+	.search-alert {
+		padding-left: 0;
+		padding-top: 56px;
+
+		&:before {
+			height: 32px; width: 32px;
+			line-height: 32px;
+			font-size: 16px;
+		}
+
+		.spaced-top {
+			margin-top: 24px;
 		}
 	}
 }

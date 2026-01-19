@@ -49,6 +49,11 @@
 			font-size: 19px;
 			transform: translateY(4px);
 		}
+
+		&.disabled {
+			pointer-events: none;
+			color: $color-spanish-gray;
+		}
 	}
 
 	.tab-fader {

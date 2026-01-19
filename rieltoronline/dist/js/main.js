@@ -635,6 +635,58 @@ document.addEventListener('DOMContentLoaded', () => {
 	document.querySelectorAll('.filters-cover').forEach(el => new FiltersUI(el));
 });
 
+class CopyToClipboard {
+
+	constructor(button) {
+		this.button = button;
+		this.copied = false;
+		this.copiedId = '';
+
+		this.button.addEventListener('click', () => {
+			const value = this.button.dataset.clipboardCopy;
+			if (!value) return;
+
+			this.copyValue(value);
+		});
+	}
+
+	copyValue(val) {
+		const textarea = document.createElement('textarea');
+
+		textarea.value = val;
+		textarea.setAttribute('readonly', '');
+		textarea.style.position = 'fixed';
+		textarea.style.top = '-9999px';
+		textarea.style.left = '-9999px';
+
+		document.body.appendChild(textarea);
+		textarea.select();
+
+		try {
+			document.execCommand('copy');
+			this.copied = true;
+			this.copiedId = val;
+			this.button.classList.add('tooltip-show');
+		} catch (e) {
+			console.error('Copy failed', e);
+		}
+
+		document.body.removeChild(textarea);
+
+		setTimeout(() => {
+			this.copied = false;
+			this.button.classList.remove('tooltip-show');
+			this.copiedId = '';
+		}, 350);
+	}
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+	document.querySelectorAll('[data-clipboard-copy]').forEach(button => {
+		new CopyToClipboard(button);
+	});
+});
+
 	// ================= Helpers =================
 	function strHash(s) {
 		let h = 5381;
@@ -1247,6 +1299,39 @@ document.addEventListener('DOMContentLoaded', function () {
 	new HeaderToggler();
 });
 
+class ScrollFixedFooterAware {
+	constructor(selector) {
+		this.fixedEl = document.querySelector(selector);
+		this.footer = document.querySelector('footer');
+
+		if (!this.fixedEl || !this.footer) return;
+
+		this.defaultBottom = 50;
+		this.offset = 35;
+
+		this.onScroll = this.onScroll.bind(this);
+		window.addEventListener('scroll', this.onScroll);
+		window.addEventListener('resize', this.onScroll);
+
+		this.onScroll();
+	}
+
+	onScroll() {
+		const footerRect = this.footer.getBoundingClientRect();
+		const windowHeight = window.innerHeight;
+
+		const overlap = windowHeight - footerRect.top;
+
+		if (overlap > 0) {
+			const newBottom = overlap + this.offset;
+			this.fixedEl.style.bottom = `${newBottom}px`;
+		} else {
+			this.fixedEl.style.bottom = `${this.defaultBottom}px`;
+		}
+	}
+}
+
+new ScrollFixedFooterAware('[data-scroll-fixed]');
 // scroll-drag-compat.js
 class ScrollDragCompat {
 	constructor({

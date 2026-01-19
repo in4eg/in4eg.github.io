@@ -27,7 +27,87 @@
 </head>
 <body id="innerBody">
 	<!-- header -->
-	@@include('./includes/header-main.html')
+	<header class="main-header light fixed" id="mainHeader" data-scroll-check=".section-dark">
+	<div class="container">
+		<div class="header-container" id="headerContainer">
+			<div class="left-side">
+				<div class="logo-cover">
+					<a href="index.html" class="logo light-theme" aria-label="main page"><img src="img/logo.svg" alt="logo" draggable="false" aria-label="main page"></a>
+					<a href="index.html" class="logo dark-theme" aria-label="main page"><img src="img/logo.svg" alt="logo" draggable="false" aria-label="main page"></a>
+				</div>
+				<div class="language">
+					<div class="dropdown-select">
+						<div class="title item">Укр</div>
+						<div class="inner">
+							<a href="#" class="item" aria-label="eng">Eng</a>
+							<a href="#" class="item" aria-label="ru">Рус</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<nav class="header-navigation" id="mainNavigation">
+				<div class="inner">
+					<ul class="clear" data-hover-show="#menuResult" data-escape-container="#mainHeader">
+						<!-- class .active for active link -->
+						<li><a href="about.html" aria-label="detail link" class="active"><span class="text">Про нас</span></a></li>
+						<li><a href="catalog.html" aria-label="detail link"><span class="text">Каталог</span></a></li>
+						<li><a href="works.html" aria-label="detail link"><span class="text">Як це працює</span></a></li>
+						<li><a href="telegram.html" aria-label="detail link"><span class="text">Telegram-автоматизація</span></a></li>
+						<li><a href="tarif.html" aria-label="detail link"><span class="text">Тарифи</span></a></li>
+						<li><a href="blog.html" aria-label="detail link"><span class="text">Блог</span></a></li>Блог
+						<li><a href="faq.html" aria-label="detail link"><span class="text">FAQ</span></a></li>
+						<li><a href="contacts.html" aria-label="detail link"><span class="text">Контакти</span></a></li>
+					</ul>
+					<!-- BOTTOM -->
+					<!-- VISIBLE ONLY <= 768 -->
+					<!-- language for mobile -->
+					<div class="mobile-bottom">
+						<div class="bordered-top">
+							<div class="language-mobile">
+								<div class="dropdown" data-dropdown>
+									<div class="dropdown-header"><div class="item">Українська</div></div>
+									<div class="dropdown-inner origin-top">
+										<a href="#" class="item" aria-label="eng">English</a>
+										<a href="#" class="item" aria-label="ru">Русский</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- / language for mobile -->
+			</nav>
+			<div class="right-side">
+				<!-- user header menu -->
+				<div class="user-cover">
+					<a href="favourites.html" class="favourites-link round-link" id="favButton">
+						<i class="icon icon-heart-empty"></i>
+						<!-- if there are some items in fav need to show counter -->
+						<!-- <span class="counter">7</span> -->
+					</a>
+					<a href="personal_dashboard.html" class="user-link round-link" id="userLink">
+						<i class="icon icon-user"></i>
+						<!-- user photo if user is authorized -->
+						<!-- <img src="../img/temp/user.png" alt="user" class="userpic"> -->
+					</a>
+					<!-- logout button -->
+					<a href="personal_registration.html" class="logout-link round-link" type="button">
+						<i class="icon icon-logout"></i>
+					</a>
+					<!-- logout button -->
+				</div>
+				<!-- / user header menu -->
+				<!-- mobile menu toggle button -->
+				<a href="personal_registration.html" class="button menu-button round-link" data-toggle-element="#mainNavigation">
+					<div class="lines">
+						<span></span>
+					</div>
+				</a>
+				<!-- /mobile menu toggle button -->
+			</div>
+		</div>
+	</div>
+</header>
 	<!-- / header -->
 	<!-- class inner-page -->
 	<!-- class auto-height -->
@@ -53,7 +133,7 @@
 						<div class="user-title">
 							<div class="userpic">
 								<!-- if user has photo -->
-								<div data-upload><img src="../img/temp/user.png" class="image"></div>
+								<!-- <div data-upload><img src="../img/temp/user.png" class="image"></div> -->
 								<i class="icon icon-user"></i>
 								<!-- image change -->
 								<div class="form-group file-group">
@@ -68,9 +148,9 @@
 					<div class="link-cover">
 						<!-- tabs nav -->
 						<div class="tabs" data-tabs-container="#personalTabs">
-							<div class="tab-button ">Мій тариф</div>
-							<div class="tab-button">Мій профіль</div>
-							<div class="tab-button active">Оплати/Чеки</div>
+							<div class="tab-button active">Мій тариф</div>
+							<div class="tab-button disabled">Мій профіль</div>
+							<div class="tab-button disabled">Оплати/Чеки</div>
 							<div class="tab-fader"></div>
 						</div>
 						<!-- / tabs nav -->
@@ -81,60 +161,39 @@
 				<!-- tabs-container -->
 				<div class="tabs-container" id="personalTabs">
 					<!-- tab1  -->
-					<div class="personal-content tab-content ">
+					<div class="personal-content tab-content active">
 						<div class="contact-inner">
-							<div class="tarif">
-								<div class="tariff-item animated-item horizontal">
-									<div class="top">
-										<!-- svg image -->
-										<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-											<circle cx="45" cy="20" r="13" fill="#576F80" class="animated-rotate"/>
-											<circle cx="29.5" cy="33.5" r="22.5" fill="#576F80" stroke="#FDFDFD" stroke-width="2"/>
-										</svg>
-										<!-- svg image -->
-										<h4 class="title">«Старт»</h4>
-										<div class="theme-text">Ви зараз користуєтесь цим тарифом</div>
-										<button class="button button-primary button-arrow" aria-label="Details" data-call="#tariffPopup" type="button">
-											<span class="text">Керування тарифом</span>
-											<span class="button-icon">
-												<i class="icon icon-arrow-right"></i>
-											</span>
-										</button>
-									</div>
-									<div class="middle">
-										<div class="subtitle">Включено у ваш план</div>
-										<ul class="tariff-list checked-list clear">
-											<li>1 контакт</li>
-											<li>30 днів</li>
-											<li class="through">Перевірка документів онлайн</li>
-										</ul>
-									</div>
-									<div class="middle">
-										<div class="subtitle">Залишок по тарифу</div>
-										<ul class="tariff-list clear">
-											<li><b>0</b> з 1 контакту</li>
-											<li><b>10</b> з 30 днів</li>
-										</ul>
-									</div>
-									<div class="bottom">
-										<div class="payment item">
-											<div class="subtitle">Рахунки й оплати</div>
-											<div class="caption">Visa закінчується на ****3646</div>
-										</div>
-										<div class="time item">
-											<div class="subtitle">500 грн/міс.</div>
-											<div class="caption">Річний план, оплата щомісяця</div>
-										</div>
-										<div class="item">
-											<a href="#" class="button-link button underlined">Скасувати підписку</a>
-										</div>
+							<div id="paymentSuccessStatus" class="search-alert success">
+								<div class="title">Замовлення <span class="color-primary">4ratgeu6gjq7</span> успішно оплачено</div>
+								<div class="theme-text">
+									Дякуємо за оплату тарифу «Старт»! <br>
+									Вам доступно <b>1</b> перегляд на <b>30</b> днів
+								</div>
+								<div class="info spaced-top">
+									<h5>Важливо!</h5>
+									<div class="theme-text">
+										Скопіюйте та збережіть посилання, за яким потрібно перейти, для отримання доступу та можливості користуватись сервісом
 									</div>
 								</div>
+								<div class="spaced-top">
+									<button type="button" aria-label="buton" class="button button-secondary button-arrow full-sm" href="catalog.html" data-clipboard-copy="4ratgeu6gjq7">
+										<span class="text">Скопіювати</span>
+										<span class="button-icon">
+											<i class="icon icon-copy"></i>
+										</span>
+										<span class="button-tooltip">Скопійовано у буфер обміну</span>
+									</button>
+								</div>
 							</div>
+							<!-- alert message if user is not registered -->
+							<div id="unregisteredEmptyMessage" class="search-alert">
+								<div class="theme-text"><a href="catalog.html" class="button-link button underlined">Зареєструйтесь</a>, щоб мати доступ до профілю та статистики</div>
+							</div>
+							<!-- / alert message if user is not registered -->
 						</div>
 					</div>
 					<!-- tab2  -->
-					<div class="personal-content tab-content">
+					<div class="personal-content tab-content disabled">
 						<div class="contact-inner">
 							<form action="javascript:void(0)" class="form contact-form validate-form">
 								<div class="form-group input-group">
@@ -179,7 +238,7 @@
 						</div>
 					</div>
 					<!-- tab3  -->
-					<div class="personal-content tab-content active">
+					<div class="personal-content tab-content disabled">
 						<div class="table-wrapper">
 							<table class="table payment-table">
 								<thead>
@@ -423,7 +482,50 @@
 
 
 	<!-- footer -->
-	@@include('./includes/footer-main.html')
+	<footer class="main-footer section-dark">
+	<div class="container">
+		<!-- sroll to top -->
+		<a class="button button-default button-round" href="#pageMain" data-scrollto="#pageMain">
+			<span class="button-icon"><i class="icon icon-arrow-up"></i></span>
+		</a>
+		<!-- sroll to top -->
+		<div class="footer-inner">
+			<div class="top">
+				<div class="logo-cover">
+					<a href="index.html" class="logo" aria-label="main page"><img src="img/logo-light.svg" alt="logo" draggable="false"></a>
+				</div>
+			</div>
+			<div class="middle">
+				<ul class="clear footer-links">
+					<li><a href="about.html" aria-label="detail link"><span class="text">Про нас</span></a></li>
+					<li><a href="catalog.html" aria-label="detail link"><span class="text">Каталог</span></a></li>
+					<li><a href="works.html" aria-label="detail link"><span class="text">Як це працює</span></a></li>
+					<li><a href="telegram.html" aria-label="detail link"><span class="text">Telegram-автоматизація</span></a></li>
+					<li><a href="tarif.html" aria-label="detail link"><span class="text">Тарифи</span></a></li>
+					<li><a href="blog.html" aria-label="detail link"><span class="text">Блог</span></a></li>
+					<li><a href="faq.html" aria-label="detail link"><span class="text">FAQ</span></a></li>
+					<li><a href="contacts.html" aria-label="detail link"><span class="text">Контакти</span></a></li>
+				</ul>
+					<ul class="clear social-list">
+					<li><a href="tel:+380" aria-label="phone link" target="_blank" rel="noopener noreferrer"><i class="icon icon-phone"></i></a></li>
+					<li><a href="mailto:" aria-label="email link" target="_blank" rel="noopener noreferrer"><i class="icon icon-mail"></i></a></li>
+					<li><a href="tg://resolve?domain=@" target="_blank" rel="noopener noreferrer" aria-label="telegram link"><i class="icon icon-telegram"></i></a></li>
+				</ul>
+			</div>
+			<div class="bottom">
+				<div class="copy">
+					© 2025 RieltorOnline. Всі права захищені
+				</div>
+				<div class="links">
+				<ul class="clear footer-links">
+					<li><a href="#" aria-label="link"><span class="text">Політика конфіденційності</span></a></li>
+					<li><a href="#" aria-label="link"><span class="text">Публічна оферта / Умови</span></a></li>
+				</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</footer>
 	<!-- /footer -->
 	<script src="js/main.js"></script>
 	<script>

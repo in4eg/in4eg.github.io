@@ -168,12 +168,14 @@ $text-color: $color-dark;
 	$h1-font-size: 28px;
 	$h2-font-size: 20px;
 	$h3-font-size: 18px;
+	$h5-font-size: 16px;
 	$buttons-font-size: 14px;
 
 	:root {
 		--h1-font-size: #{$h1-font-size};
 		--h2-font-size: #{$h2-font-size};
 		--h3-font-size: #{$h3-font-size};
+		--h5-font-size: #{$h5-font-size};
 		--buttons-font-size: #{$buttons-font-size};
 	}
 }
