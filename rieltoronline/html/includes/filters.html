@@ -1,8 +1,6 @@
 <!-- ///// FILTERS //// -->
 <div class="filters-cover"> <!-- catalog-filters.js -->
-<!-- Отримання і підстановка данних з json get-cities.js -->
-<script type="application/json" id="city-rayon">{"cities":[{"id":49,"region_id":13,"name":"\u041a\u0438\u0457\u0432","name_ru":"\u041a\u0438\u0457\u0432","active":1,"active_rl":1},{"id":62,"region_id":14,"name":"\u0414\u043d\u0456\u043f\u0440\u043e","name_ru":"\u0414\u043d\u0456\u043f\u0440\u043e","active":1,"active_rl":1},{"id":341,"region_id":30,"name":"\u041b\u044c\u0432\u0456\u0432","name_ru":"\u041b\u044c\u0432\u0456\u0432","active":1,"active_rl":1},{"id":1009,"region_id":0,"name":"\u041e\u0434\u0435\u0441\u0430","name_ru":"\u041e\u0434\u0435\u0441\u0441\u0430","active":1,"active_rl":1}],"rayons":{"16":{"id":16,"city_id":62,"name":"\u0406\u043d\u0434\u0443\u0441\u0442\u0440\u0456\u0430\u043b\u044c\u043d\u0438\u0439","url":"industrialniy","city_name":"\u0414\u043d\u0456\u043f\u0440\u043e"},"13":{"id":13,"city_id":62,"name":"\u0410\u043c\u0443\u0440-\u041d\u0438\u0436\u043d\u044c\u043e\u0434\u043d\u0456\u043f\u0440\u043e\u0432\u0441\u044c\u043a\u0438\u0439 ","url":"amur-nizhnodniprovskiy","city_name":"\u0414\u043d\u0456\u043f\u0440\u043e"},"99993":{"id":99993,"city_id":62,"name":"\u041d\u0435 \u0414\u043d\u0456\u043f\u0440\u043e\u0432\u0441\u044c\u043a\u0438\u0439 \u0440\u0430\u0439\u043e\u043d","url":"ne-dnepr-rayon","city_name":"\u0414\u043d\u0456\u043f\u0440\u043e"},"15":{"id":15,"city_id":62,"name":"\u041d\u043e\u0432\u043e\u043a\u043e\u0434\u0430\u0446\u044c\u043a\u0438\u0439","url":"novokodackiy","city_name":"\u0414\u043d\u0456\u043f\u0440\u043e"},"17":{"id":17,"city_id":62,"name":"\u0421\u0430\u043c\u0430\u0440\u0441\u044c\u043a\u0438\u0439","url":"samarskiy","city_name":"\u0414\u043d\u0456\u043f\u0440\u043e"},"12":{"id":12,"city_id":62,"name":"\u0421\u043e\u0431\u043e\u0440\u043d\u0438\u0439","url":"soborniy","city_name":"\u0414\u043d\u0456\u043f\u0440\u043e"},"14":{"id":14,"city_id":62,"name":"\u0426\u0435\u043d\u0442\u0440\u0430\u043b\u044c\u043d\u0438\u0439","url":"centralniy","city_name":"\u0414\u043d\u0456\u043f\u0440\u043e"},"36":{"id":36,"city_id":62,"name":"\u0427\u0435\u0447\u0435\u043b\u0456\u0432\u0441\u044c\u043a\u0438\u0439","url":"chechelivskiy","city_name":"\u0414\u043d\u0456\u043f\u0440\u043e"},"18":{"id":18,"city_id":62,"name":"\u0428\u0435\u0432\u0447\u0435\u043d\u043a\u0456\u0432\u0441\u044c\u043a\u0438\u0439","url":"shevchenkivskiy","city_name":"\u0414\u043d\u0456\u043f\u0440\u043e"},"3":{"id":3,"city_id":49,"name":"\u0413\u043e\u043b\u043e\u0441\u0456\u0457\u0432\u0441\u044c\u043a\u0438\u0439","url":"golosiivskyj","city_name":"\u041a\u0438\u0457\u0432"},"5":{"id":5,"city_id":49,"name":"\u0414\u0430\u0440\u043d\u0438\u0446\u044c\u043a\u0438\u0439","url":"darnyckyj","city_name":"\u041a\u0438\u0457\u0432"},"4":{"id":4,"city_id":49,"name":"\u0414\u0435\u0441\u043d\u044f\u043d\u0441\u044c\u043a\u0438\u0439","url":"desnyanskyj","city_name":"\u041a\u0438\u0457\u0432"},"9":{"id":9,"city_id":49,"name":"\u0414\u043d\u0456\u043f\u0440\u043e\u0432\u0441\u044c\u043a\u0438\u0439","url":"dniprovskyj","city_name":"\u041a\u0438\u0457\u0432"},"99991":{"id":99991,"city_id":49,"name":"\u041d\u0435.\u041a\u0438\u0457\u0432\u0441\u044c\u043a\u0438\u0439.\u0420\u0430\u0439\u043e\u043d","url":"ne-kyivskyj-rayon","city_name":"\u041a\u0438\u0457\u0432"},"7":{"id":7,"city_id":49,"name":"\u041e\u0431\u043e\u043b\u043e\u043d\u0441\u044c\u043a\u0438\u0439","url":"obolonskyj","city_name":"\u041a\u0438\u0457\u0432"},"10":{"id":10,"city_id":49,"name":"\u041f\u0435\u0447\u0435\u0440\u0441\u044c\u043a\u0438\u0439","url":"pecherskyj","city_name":"\u041a\u0438\u0457\u0432"},"8":{"id":8,"city_id":49,"name":"\u041f\u043e\u0434\u0456\u043b\u044c\u0441\u044c\u043a\u0438\u0439","url":"podilskyj","city_name":"\u041a\u0438\u0457\u0432"},"2":{"id":2,"city_id":49,"name":"\u0421\u0432\u044f\u0442\u043e\u0448\u0438\u043d\u0441\u044c\u043a\u0438\u0439","url":"svyatoshynskyj","city_name":"\u041a\u0438\u0457\u0432"},"6":{"id":6,"city_id":49,"name":"\u0421\u043e\u043b\u043e\u043c`\u044f\u043d\u0441\u044c\u043a\u0438\u0439","url":"solomianskyj","city_name":"\u041a\u0438\u0457\u0432"},"11":{"id":11,"city_id":49,"name":"\u0428\u0435\u0432\u0447\u0435\u043d\u043a\u0456\u0432\u0441\u044c\u043a\u0438\u0439","url":"shevchenkivskyj","city_name":"\u041a\u0438\u0457\u0432"},"99994":{"id":99994,"city_id":341,"name":"\u0412\u0438\u043d\u043d\u0438\u043a\u0438 ","url":"vinnyky","city_name":"\u041b\u044c\u0432\u0456\u0432"},"31":{"id":31,"city_id":341,"name":"\u0413\u0430\u043b\u0438\u0446\u044c\u043a\u0438\u0439","url":"centr","city_name":"\u041b\u044c\u0432\u0456\u0432"},"100000":{"id":100000,"city_id":341,"name":"\u0417\u0430 \u043c\u0456\u0441\u0442\u043e\u043c","url":"za_mistom","city_name":"\u041b\u044c\u0432\u0456\u0432"},"23":{"id":23,"city_id":341,"name":"\u0417\u0430\u043b\u0456\u0437\u043d\u0438\u0447\u043d\u0438\u0439","url":"zaliznichniy","city_name":"\u041b\u044c\u0432\u0456\u0432"},"30":{"id":30,"city_id":341,"name":"\u041b\u0438\u0447\u0430\u043a\u0456\u0432\u0441\u044c\u043a\u0438\u0439","url":"sihiv","city_name":"\u041b\u044c\u0432\u0456\u0432"},"27":{"id":27,"city_id":341,"name":"\u0421\u0438\u0445\u0456\u0432\u0441\u044c\u043a\u0438\u0439","url":"sihivskiy","city_name":"\u041b\u044c\u0432\u0456\u0432"},"24":{"id":24,"city_id":341,"name":"\u0424\u0440\u0430\u043d\u043a\u0456\u0432\u0441\u044c\u043a\u0438\u0439","url":"frankivskiy","city_name":"\u041b\u044c\u0432\u0456\u0432"},"26":{"id":26,"city_id":341,"name":"\u0428\u0435\u0432\u0447\u0435\u043d\u043a\u0456\u0432\u0441\u044c\u043a\u0438\u0439","url":"shevchenkivskiy","city_name":"\u041b\u044c\u0432\u0456\u0432"},"99995":{"id":99995,"city_id":1009,"name":"\u041a\u0438\u0457\u0432\u0441\u044c\u043a\u0438\u0439","url":"kyivskyj","city_name":"\u041e\u0434\u0435\u0441\u0430"},"99999":{"id":99999,"city_id":1009,"name":"\u041f\u0435\u0440\u0435\u0434\u043c\u0456\u0441\u0442\u044f","url":"predmisty","city_name":"\u041e\u0434\u0435\u0441\u0430"},"99996":{"id":99996,"city_id":1009,"name":"\u041f\u0435\u0440\u0435\u0441\u0438\u043f\u0441\u044c\u043a\u0438\u0439","url":"perspijskii","city_name":"\u041e\u0434\u0435\u0441\u0430"},"99997":{"id":99997,"city_id":1009,"name":"\u041f\u0440\u0438\u043c\u043e\u0440\u0441\u044c\u043a\u0438\u0439","url":"primorskij","city_name":"\u041e\u0434\u0435\u0441\u0430"},"99998":{"id":99998,"city_id":1009,"name":"\u0425\u0430\u0434\u0436\u0438\u0431\u0435\u0439\u0441\u044c\u043a\u0438\u0439","url":"hadgybejskij","city_name":"\u041e\u0434\u0435\u0441\u0430"}}}</script>
-
+	@@include('./cities-json.html')
 	<!-- header always visible -->
 	<div class="filter-header">
 		<div class="row bottom-xs">
@@ -28,7 +26,7 @@
 				<!-- sorting select -->
 				<div class="form-group select-group labeled-group">
 					<label for="sorting" class="label">Сортувати за</label>
-					<select name="sorting" id="sorting" class="select">
+					<select name="filter[sorting]" id="sorting" class="select" data-selecter="skip">
 						<option value="newest" data-value="Найновіші оголошення" selected>Найновіші оголошення</option>
 						<option value="oldest" data-value="Найстаріші оголошення">Найстаріші оголошення</option>
 						<option value="price_asc" data-value="Дешевші спочатку">Дешевші спочатку</option>
@@ -69,91 +67,91 @@
 								<!-- 1 -->
 								<div class="item">
 									<div class="radio-group form-group">
-										<input value="kyiv" type="radio" name="city" class="radio" id="city-kyiv">
+										<input value="kyiv" type="radio" name="filter[city]" class="radio" id="city-kyiv">
 										<label for="city-kyiv" class="radio-label" data-label>Київ</label>
 									</div>
 								</div>
 								<!-- 2 -->
 								<div class="item">
 									<div class="radio-group form-group">
-										<input value="kharkiv" type="radio" name="city" class="radio" id="city-kharkiv">
+										<input value="kharkiv" type="radio" name="filter[city]" class="radio" id="city-kharkiv">
 										<label for="city-kharkiv" class="radio-label" data-label>Харків</label>
 									</div>
 								</div>
 								<!-- 3 -->
 								<div class="item">
 									<div class="radio-group form-group">
-										<input value="dnipro" type="radio" name="city" class="radio" id="city-dnipro">
+										<input value="dnipro" type="radio" name="filter[city]" class="radio" id="city-dnipro">
 										<label for="city-dnipro" class="radio-label" data-label>Дніпро</label>
 									</div>
 								</div>
 								<!-- 4 -->
 								<div class="item">
 									<div class="radio-group form-group">
-										<input value="uzhgorod" type="radio" name="city" class="radio" id="city-uzhgorod">
+										<input value="uzhgorod" type="radio" name="filter[city]" class="radio" id="city-uzhgorod">
 										<label for="city-uzhgorod" class="radio-label" data-label>Ужгород</label>
 									</div>
 								</div>
 								<!-- 5 -->
 								<div class="item">
 									<div class="radio-group form-group">
-										<input value="mykolaiv" type="radio" name="city" class="radio" id="city-mykolaiv">
+										<input value="mykolaiv" type="radio" name="filter[city]" class="radio" id="city-mykolaiv">
 										<label for="city-mykolaiv" class="radio-label" data-label>Миколаїв</label>
 									</div>
 								</div>
 								<!-- 6 -->
 								<div class="item">
 									<div class="radio-group form-group">
-										<input value="kropyvnytskyi" type="radio" name="city" class="radio" id="city-kropyvnytskyi">
+										<input value="kropyvnytskyi" type="radio" name="filter[city]" class="radio" id="city-kropyvnytskyi">
 										<label for="city-kropyvnytskyi" class="radio-label" data-label>Кропивницький</label>
 									</div>
 								</div>
 								<!-- 6 -->
 								<div class="item">
 									<div class="radio-group form-group">
-										<input value="vinnytsia" type="radio" name="city" class="radio" id="city-vinnytsia">
+										<input value="vinnytsia" type="radio" name="filter[city]" class="radio" id="city-vinnytsia">
 										<label for="city-vinnytsia" class="radio-label">Вінниця</label>
 									</div>
 								</div>
 								<!-- 7 -->
 								<div class="item">
 									<div class="radio-group form-group">
-										<input value="poltava" type="radio" name="city" class="radio" id="city-poltava">
+										<input value="poltava" type="radio" name="filter[city]" class="radio" id="city-poltava">
 										<label for="city-poltava" class="radio-label">Полтава</label>
 									</div>
 								</div>
 								<!-- 8 -->
 								<div class="item">
 									<div class="radio-group form-group">
-										<input value="khmelnytskyi" type="radio" name="city" class="radio" id="city-khmelnytskyi">
+										<input value="khmelnytskyi" type="radio" name="filter[city]" class="radio" id="city-khmelnytskyi">
 										<label for="city-khmelnytskyi" class="radio-label">Хмельницький</label>
 									</div>
 								</div>
 								<!-- 9 -->
 								<div class="item">
 									<div class="radio-group form-group">
-										<input value="odesa" type="radio" name="city" class="radio" id="city-odesa">
+										<input value="odesa" type="radio" name="filter[city]" class="radio" id="city-odesa">
 										<label for="city-odesa" class="radio-label">Одеса</label>
 									</div>
 								</div>
 								<!-- 10 -->
 								<div class="item">
 									<div class="radio-group form-group">
-										<input value="ivano-frankivsk" type="radio" name="city" class="radio" id="city-ivano-frankivsk">
+										<input value="ivano-frankivsk" type="radio" name="filter[city]" class="radio" id="city-ivano-frankivsk">
 										<label for="city-ivano-frankivsk" class="radio-label">Івано-Франківськ</label>
 									</div>
 								</div>
 								<!-- 11 -->
 								<div class="item">
 									<div class="radio-group form-group">
-										<input value="chernihiv" type="radio" name="city" class="radio" id="city-chernihiv">
+										<input value="chernihiv" type="radio" name="filter[city]" class="radio" id="city-chernihiv">
 										<label for="city-chernihiv" class="radio-label">Чернігів</label>
 									</div>
 								</div>
 								<!-- 12 -->
 								<div class="item">
 									<div class="radio-group form-group">
-										<input value="lutsk" type="radio" name="city" class="radio" id="city-lutsk">
+										<input value="lutsk" type="radio" name="filter[city]" class="radio" id="city-lutsk">
 										<label for="city-lutsk" class="radio-label">Луцьк</label>
 									</div>
 								</div>
@@ -163,7 +161,7 @@
 				</div>
 				<!-- 2 -->
 				<div class="col-xs-12 col-sm-4 col-md-4 col-lg-3">
-					<div class="labeled-group filter-group form-group" data-filter="[data-options]" data-filter-fields="[data-label]">
+					<div class="labeled-group filter-group form-group disabled" data-filter="[data-options]" data-filter-fields="[data-label]">
 						<span class="label">Район</span>
 						<div class="inner">
 							<input type="text" class="input" id="district" data-minlength="2" placeholder="Введіть назву">
@@ -173,77 +171,77 @@
 								<!-- 1 -->
 								<div class="item">
 									<div class="checkbox-group form-group">
-										<input name="district[]" type="checkbox" class="checkbox" id="district-holosiivskyi" value="holosiivskyi">
+										<input name="filter[district][]" type="checkbox" class="checkbox" id="district-holosiivskyi" value="holosiivskyi">
 										<label data-label for="district-holosiivskyi" class="checkbox-label">Голосіївський</label>
 									</div>
 								</div>
 								<!-- 2 -->
 								<div class="item">
 									<div class="checkbox-group form-group">
-										<input name="district[]" type="checkbox" class="checkbox" id="district-darnytskyi" value="darnytskyi">
+										<input name="filter[district][]" type="checkbox" class="checkbox" id="district-darnytskyi" value="darnytskyi">
 										<label data-label for="district-darnytskyi" class="checkbox-label">Дарницький</label>
 									</div>
 								</div>
 								<!-- 3 -->
 								<div class="item">
 									<div class="checkbox-group form-group">
-										<input name="district[]" type="checkbox" class="checkbox" id="district-desnyanskyi" value="desnyanskyi">
+										<input name="filter[district][]" type="checkbox" class="checkbox" id="district-desnyanskyi" value="desnyanskyi">
 										<label data-label for="district-desnyanskyi" class="checkbox-label">Деснянський</label>
 									</div>
 								</div>
 								<!-- 4 -->
 								<div class="item">
 									<div class="checkbox-group form-group">
-										<input name="district[]" type="checkbox" class="checkbox" id="district-dniprovskiy" value="dniprovskiy">
+										<input name="filter[district][]" type="checkbox" class="checkbox" id="district-dniprovskiy" value="dniprovskiy">
 										<label data-label for="district-dniprovskiy" class="checkbox-label">Дніпровський</label>
 									</div>
 								</div>
 								<!-- 5 -->
 								<div class="item">
 									<div class="checkbox-group form-group">
-										<input name="district[]" type="checkbox" class="checkbox" id="district-obolonskyi" value="obolonskyi">
+										<input name="filter[district][]" type="checkbox" class="checkbox" id="district-obolonskyi" value="obolonskyi">
 										<label data-label for="district-obolonskyi" class="checkbox-label">Оболонський</label>
 									</div>
 								</div>
 								<!-- 6 -->
 								<div class="item">
 									<div class="checkbox-group form-group">
-										<input name="district[]" type="checkbox" class="checkbox" id="district-kropyvnytskyi" value="kropyvnytskyi">
+										<input name="filter[district][]" type="checkbox" class="checkbox" id="district-kropyvnytskyi" value="kropyvnytskyi">
 										<label data-label for="district-kropyvnytskyi" class="checkbox-label">Кропивницький</label>
 									</div>
 								</div>
 								<!-- 7 -->
 								<div class="item">
 									<div class="checkbox-group form-group">
-										<input name="district[]" type="checkbox" class="checkbox" id="district-pecherskyi" value="pecherskyi">
+										<input name="filter[district][]" type="checkbox" class="checkbox" id="district-pecherskyi" value="pecherskyi">
 										<label data-label for="district-pecherskyi" class="checkbox-label">Печерський</label>
 									</div>
 								</div>
 								<!-- 8 -->
 								<div class="item">
 									<div class="checkbox-group form-group">
-										<input name="district[]" type="checkbox" class="checkbox" id="district-podilskyi" value="podilskyi">
+										<input name="filter[district][]" type="checkbox" class="checkbox" id="district-podilskyi" value="podilskyi">
 										<label data-label for="district-podilskyi" class="checkbox-label">Подільський</label>
 									</div>
 								</div>
 								<!-- 9 -->
 								<div class="item">
 									<div class="checkbox-group form-group">
-										<input name="district[]" type="checkbox" class="checkbox" id="district-sviatoshynskyi" value="sviatoshynskyi">
+										<input name="filter[district][]" type="checkbox" class="checkbox" id="district-sviatoshynskyi" value="sviatoshynskyi">
 										<label data-label for="district-sviatoshynskyi" class="checkbox-label">Святошинський</label>
 									</div>
 								</div>
 								<!-- 10 -->
 								<div class="item">
 									<div class="checkbox-group form-group">
-										<input name="district[]" type="checkbox" class="checkbox" id="district-solomyanskyi" value="solomyanskyi">
+										<input name="filter[district][]" type="checkbox" class="checkbox" id="district-solomyanskyi" value="solomyanskyi">
 										<label data-label for="district-solomyanskyi" class="checkbox-label">Солом’янський</label>
 									</div>
 								</div>
 								<!-- 11 -->
 								<div class="item">
 									<div class="checkbox-group form-group">
-										<input name="district[]" type="checkbox" class="checkbox" id="district-shevchenkivskyi" value="shevchenkivskyi">
+										<input name="filter[district][]" type="checkbox" class="checkbox" id="district-shevchenkivskyi" value="shevchenkivskyi">
 										<label data-label for="district-shevchenkivskyi" class="checkbox-label">Шевченківський</label>
 									</div>
 								</div>
@@ -260,11 +258,11 @@
 							<div class="date-group">
 								<div class="date-select">
 									<label for="startDatetime" class="label">Початок</label>
-									<input type="date" id="startDatetime" name="startDatetime" data-start class="input">
+									<input type="date" id="startDatetime" name="filter[startDatetime]" data-start class="input">
 								</div>
 								<div class="date-select">
 									<label for="endDatetime" class="label">Кінець</label>
-									<input type="date" id="endDatetime" name="endDatetime" data-end class="input">
+									<input type="date" id="endDatetime" name="filter[endDatetime]" data-end class="input">
 								</div>
 							</div>
 						</div>
@@ -282,11 +280,11 @@
 								<div class="range-inputs">
 									<div class="form-group input-group">
 										<label class="label">Від м<sup>2</sup></label>
-										<input type="number" class="input input-min" name="area_min">
+										<input type="number" class="input input-min" name="filter[area_min]">
 									</div>
 									<div class="form-group input-group">
 										<label class="label">До м<sup>2</sup></label>
-										<input type="number" class="input input-max" name="area_max">
+										<input type="number" class="input input-max" name="filter[area_max]">
 									</div>
 								</div>
 								<div class="range-group">
@@ -319,11 +317,11 @@
 								<div class="range-inputs">
 									<div class="form-group input-group">
 										<label class="label">Від (поверх)</label>
-										<input type="number" class="input input-min" name="floor_min">
+										<input type="number" class="input input-min" name="filter[floor_min]">
 									</div>
 									<div class="form-group input-group">
 										<label class="label">До (поверх)</label>
-										<input type="number" class="input input-max" name="floor_max">
+										<input type="number" class="input input-max" name="filter[floor_max]">
 									</div>
 								</div>
 								<div class="range-group">
@@ -356,17 +354,17 @@
 								<div class="range-inputs">
 									<div class="form-group input-group">
 										<label class="label">Від (грн)</label>
-										<input type="number" class="input input-min" name="price_min">
+										<input type="number" class="input input-min" name="filter[price_min]">
 									</div>
 									<div class="form-group input-group">
 										<label class="label">До (грн)</label>
-										<input type="number" class="input input-max" name="price_max">
+										<input type="number" class="input input-max" name="filter[price_max]">
 									</div>
 								</div>
 								<div class="range-group">
 									<div class="range"
 										data-min="1000"
-										data-max="20000"
+										data-max="50000"
 										data-step="100"
 										data-ticks="5"
 										data-value-min=""
@@ -406,36 +404,45 @@
 <script>
 	document.addEventListener('DOMContentLoaded', () => {
 		const form = document.getElementById('filterForm');
+		if (!form) return;
+
 		const params = new URLSearchParams(location.search);
 
-		// 1. radios / inputs / selects (КРІМ sorting)
-		if (form) {
-			params.forEach((value, key) => {
-				if (key.endsWith('[]')) return;
-				if (key === 'sorting') return;
+		/* =====================================================
+		 * 1. RADIO / INPUT / DATE (filter[...])
+		 * ===================================================== */
+		params.forEach((value, key) => {
+			if (!key.startsWith('filter[')) return;
+			if (key.endsWith('[]')) return;
 
-				form.querySelectorAll(`[name="${CSS.escape(key)}"]`).forEach(el => {
-					if (el.type === 'radio') {
-						if (el.value === value) el.checked = true;
-					} else {
-						el.value = value;
-					}
-				});
+			form.querySelectorAll(`[name="${CSS.escape(key)}"]`).forEach(el => {
+				if (el.type === 'radio') {
+					el.checked = el.value === value;
+				} else {
+					el.value = value;
+				}
 			});
+		});
 
-			// 2. checkbox arrays
-			params.forEach((_, key) => {
-				if (!key.endsWith('[]')) return;
+		/* =====================================================
+		 * 2. CHECKBOX ARRAYS
+		 * ===================================================== */
+		params.forEach((_, key) => {
+			if (!key.startsWith('filter[')) return;
+			if (!key.endsWith('[]')) return;
 
-				const values = params.getAll(key);
-				form.querySelectorAll(`[name="${CSS.escape(key)}"]`).forEach(cb => {
-					cb.checked = values.includes(cb.value);
-				});
+			const values = params.getAll(key);
+			form.querySelectorAll(`[name="${CSS.escape(key)}"]`).forEach(cb => {
+				cb.checked = values.includes(cb.value);
 			});
-		}
+		});
 
-		// 3. RANGE RESTORE
+		/* =====================================================
+		 * 3. RANGE + SORTING (ПІСЛЯ ІНІЦІАЛІЗАЦІЙ)
+		 * ===================================================== */
 		requestAnimationFrame(() => {
+
+			/* ---------- RANGE ---------- */
 			document.querySelectorAll('[data-range]').forEach(block => {
 				const group = block.querySelector('.range-group');
 				const dr = group?._dualRange;
@@ -444,7 +451,6 @@
 				const nameMin = group.querySelector('.input-min')?.name;
 				const nameMax = group.querySelector('.input-max')?.name;
 
-				if (!nameMin || !nameMax) return;
 				if (!params.has(nameMin) || !params.has(nameMax)) return;
 
 				dr.set(
@@ -454,57 +460,52 @@
 				);
 			});
 
-			// 4. rebuild FiltersUI
+			/* ---------- SORTING ---------- */
+			const sortingValue =
+				params.get('filter[sorting]') ||
+				params.get('sorting');
+
+			if (sortingValue) {
+				const select = document.getElementById('sorting');
+				if (!select) return;
+
+				// 1. sync native select
+				select.value = sortingValue;
+
+				// 2. sync Selecter UI (НЕ ЗАЛЕЖИТЬ ВІД skip)
+				const selecter =
+					select.nextElementSibling?.classList.contains('selecter')
+						? select.nextElementSibling
+						: null;
+
+				if (selecter) {
+					selecter.querySelectorAll('li').forEach(li => {
+						li.classList.toggle(
+							'active',
+							li.dataset.value === sortingValue
+						);
+					});
+
+					const opt = select.querySelector(
+						`option[value="${CSS.escape(sortingValue)}"]`
+					);
+					const anchor = selecter.querySelector('.anchor');
+
+					if (opt && anchor) {
+						anchor.textContent =
+							opt.dataset.value ||
+							opt.textContent.trim();
+					}
+				}
+			}
+
+			/* ---------- TAGS ---------- */
 			document.querySelectorAll('.filters-cover').forEach(el => {
 				el._filtersUI?.rebuild?.();
 			});
 		});
-
-		// 5. SORTING RESTORE (select поза формою)
-		if (params.has('sorting')) {
-			const sortValue = params.get('sorting');
-
-			const select = document.querySelector('select[name="sorting"]');
-			const selecter = select?.nextElementSibling?.classList.contains('selecter')
-				? select.nextElementSibling
-				: null;
-
-			if (select) {
-				// 5.1 sync <select>
-				Array.from(select.options).forEach(opt => {
-					if (opt.value === sortValue) {
-						opt.selected = true;
-						opt.setAttribute('selected', 'true');
-					} else {
-						opt.selected = false;
-						opt.removeAttribute('selected');
-					}
-				});
-			}
-
-			if (selecter) {
-				// 5.2 sync <li>
-				selecter.querySelectorAll('li').forEach(li => {
-					li.classList.toggle('active', li.dataset.value === sortValue);
-				});
-
-				// 5.3 sync anchor (беремо data-value з option)
-				const option = select?.querySelector(`option[value="${CSS.escape(sortValue)}"]`);
-				const anchor = selecter.querySelector('.anchor');
-
-				if (option && anchor) {
-					const text =
-						option.dataset.value ||
-						option.textContent.trim() ||
-						sortValue;
-
-					anchor.textContent = text;
-				}
-			}
-		}
 	});
 </script>
-
 
 <!-- Відправляємо GET -->
 <script>
@@ -512,60 +513,53 @@
 		const form = document.getElementById('filterForm');
 		if (!form) return;
 
-		form.addEventListener('submit', (e) => {
-			e.preventDefault(); // ⬅️ КРИТИЧНО
+		form.addEventListener('submit', e => {
+			e.preventDefault();
 
-			// 1. беремо ПОТОЧНИЙ URL бо може бути там sorting
 			const params = new URLSearchParams(window.location.search);
 
-			// * 2. видаляємо ВСІ фільтри (sorting НЕ чіпаємо)
-			[
-				'city',
-				'district[]',
-				'startDatetime',
-				'endDatetime',
-				'area_min',
-				'area_max',
-				'floor_min',
-				'floor_max',
-				'price_min',
-				'price_max'
-			].forEach(key => params.delete(key));
-
-			// 3. додаємо актуальні значення з форми
-			new FormData(form).forEach((value, key) => {
-				if (value === '' || value == null) return;
-				params.append(key, value);
+			// 1. очищаємо ВСІ filter[…]
+			[...params.keys()].forEach(key => {
+				if (key.startsWith('filter[')) {
+					params.delete(key);
+				}
 			});
 
-			// 4. редірект вручну (щоб зберегти сортування)
-			const finalUrl =
-				window.location.pathname +
+			// 2. додаємо значення з форми
+			new FormData(form).forEach((value, key) => {
+				if (value !== '') params.append(key, value);
+			});
+
+			// 3. ⬅️ ДОДАЄМО sorting (він поза form)
+			const sorting = document.querySelector('[name="filter[sorting]"]');
+			if (sorting && sorting.value) {
+				params.set('filter[sorting]', sorting.value);
+			}
+
+			window.location.href =
+				location.pathname +
 				(params.toString() ? '?' + params.toString() : '');
-			// console.log('FINAL URL:', finalUrl);
-			window.location.href = finalUrl;
 		});
 	});
 </script>
 
 <!-- Сортування -->
+<!-- SORTING: li click → preserve GET + set filter[sorting] -->
 <script>
 	document.addEventListener('click', (e) => {
 		const li = e.target.closest('.selecter li[data-value]');
 		if (!li) return;
 
-		const sortValue = li.dataset.value;
-		if (!sortValue) return;
+		const value = li.dataset.value;
+		if (!value) return;
 
+		// беремо ПОТОЧНИЙ URL з усіма параметрами
 		const url = new URL(window.location.href);
 
-		// оновлюємо sorting
-		url.searchParams.set('sorting', sortValue);
+		// перезаписуємо / додаємо ТІЛЬКИ filter[sorting]
+		url.searchParams.set('filter[sorting]', value);
 
-		// прибираємо hash (#)
 		url.hash = '';
-
-		// редірект
 		window.location.href = url.toString();
 	});
 </script>

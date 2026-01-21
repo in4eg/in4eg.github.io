@@ -14,9 +14,10 @@ class FiltersUI {
 
 	bind() {
 		this.root.addEventListener('change', e => {
-			const el = e.target;
 			if (
-				el.matches('input[type="radio"], input[type="checkbox"], input[type="date"], select')
+				e.target.matches(
+					'input[type="radio"], input[type="checkbox"], input[type="date"], select'
+				)
 			) {
 				this.rebuild();
 			}
@@ -26,30 +27,29 @@ class FiltersUI {
 			block.addEventListener('dualrangechange', () => this.rebuild());
 		});
 
-		if (this.clearBtn) {
-			this.clearBtn.addEventListener('click', e => {
-				e.preventDefault();
-				location.href = location.origin + location.pathname;
-			});
-		}
+		this.clearBtn?.addEventListener('click', e => {
+			e.preventDefault();
+			location.href = location.origin + location.pathname;
+		});
 	}
-
 
 	rebuild() {
 		this.tagList.innerHTML = '';
 
-		// radios + checkboxes
+		// radio + checkbox
 		this.qsa('input[type="radio"]:checked, input[type="checkbox"]:checked')
 			.forEach(inp => {
 				const label = this.root.querySelector(`label[for="${inp.id}"]`);
-				if (label) this.addTag(inp.id, this.txt(label));
+				if (label) {
+					this.addTag(inp.name, this.txt(label), inp.value);
+				}
 			});
 
-		// dates
-		const s = this.root.querySelector('[name="startDatetime"]')?.value;
-		const e = this.root.querySelector('[name="endDatetime"]')?.value;
+		// date
+		const s = this.root.querySelector('[name="filter[startDatetime]"]')?.value;
+		const e = this.root.querySelector('[name="filter[endDatetime]"]')?.value;
 		if (s || e) {
-			this.addTag('date', `Дата: ${s || '…'} – ${e || '…'}`);
+			this.addTag('filter[date]', `Дата: ${s || '…'} – ${e || '…'}`);
 		}
 
 		// ranges
@@ -58,31 +58,40 @@ class FiltersUI {
 			const dr = group?._dualRange;
 			if (!dr) return;
 
-			if (dr.rMin.value == dr.min && dr.rMax.value == dr.max) return;
+			if (Number(dr.rMin.value) === dr.min &&
+				Number(dr.rMax.value) === dr.max) return;
 
 			const label = this.txt(block.querySelector('.label'));
-			this.addTag(label, `${label}: ${dr.rMin.value} – ${dr.rMax.value}`);
+			const key = group.querySelector('.input-min')?.name;
+			if (!key) return;
+
+			this.addTag(
+				key,
+				`${label}: ${dr.rMin.value} – ${dr.rMax.value}`
+			);
 		});
 
 		this.updateCounter();
 	}
 
-	addTag(key, text) {
-		const t = document.createElement('div');
-		t.className = 'tag';
-		t.dataset.tag = '';
-		t.dataset.key = key;
-		t.textContent = text;
-		this.tagList.appendChild(t);
+	addTag(key, text, value = null) {
+		const tag = document.createElement('div');
+		tag.className = 'tag';
+		tag.dataset.key = key;
+		if (value !== null) tag.dataset.value = value;
+		tag.textContent = text;
+		this.tagList.appendChild(tag);
 	}
 
 	updateCounter() {
 		const c = this.tagList.children.length;
 		this.qsa('.counter').forEach(el => el.textContent = c);
-		this.tagCover.classList.toggle('hidden', c === 0);
+		this.tagCover?.classList.toggle('hidden', c === 0);
 	}
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-	document.querySelectorAll('.filters-cover').forEach(el => new FiltersUI(el));
+	document.querySelectorAll('.filters-cover').forEach(el => {
+		el._filtersUI = new FiltersUI(el);
+	});
 });

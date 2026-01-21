@@ -562,9 +562,10 @@ class FiltersUI {
 
 	bind() {
 		this.root.addEventListener('change', e => {
-			const el = e.target;
 			if (
-				el.matches('input[type="radio"], input[type="checkbox"], input[type="date"], select')
+				e.target.matches(
+					'input[type="radio"], input[type="checkbox"], input[type="date"], select'
+				)
 			) {
 				this.rebuild();
 			}
@@ -574,30 +575,29 @@ class FiltersUI {
 			block.addEventListener('dualrangechange', () => this.rebuild());
 		});
 
-		if (this.clearBtn) {
-			this.clearBtn.addEventListener('click', e => {
-				e.preventDefault();
-				location.href = location.origin + location.pathname;
-			});
-		}
+		this.clearBtn?.addEventListener('click', e => {
+			e.preventDefault();
+			location.href = location.origin + location.pathname;
+		});
 	}
-
 
 	rebuild() {
 		this.tagList.innerHTML = '';
 
-		// radios + checkboxes
+		// radio + checkbox
 		this.qsa('input[type="radio"]:checked, input[type="checkbox"]:checked')
 			.forEach(inp => {
 				const label = this.root.querySelector(`label[for="${inp.id}"]`);
-				if (label) this.addTag(inp.id, this.txt(label));
+				if (label) {
+					this.addTag(inp.name, this.txt(label), inp.value);
+				}
 			});
 
-		// dates
-		const s = this.root.querySelector('[name="startDatetime"]')?.value;
-		const e = this.root.querySelector('[name="endDatetime"]')?.value;
+		// date
+		const s = this.root.querySelector('[name="filter[startDatetime]"]')?.value;
+		const e = this.root.querySelector('[name="filter[endDatetime]"]')?.value;
 		if (s || e) {
-			this.addTag('date', `Дата: ${s || '…'} – ${e || '…'}`);
+			this.addTag('filter[date]', `Дата: ${s || '…'} – ${e || '…'}`);
 		}
 
 		// ranges
@@ -606,33 +606,42 @@ class FiltersUI {
 			const dr = group?._dualRange;
 			if (!dr) return;
 
-			if (dr.rMin.value == dr.min && dr.rMax.value == dr.max) return;
+			if (Number(dr.rMin.value) === dr.min &&
+				Number(dr.rMax.value) === dr.max) return;
 
 			const label = this.txt(block.querySelector('.label'));
-			this.addTag(label, `${label}: ${dr.rMin.value} – ${dr.rMax.value}`);
+			const key = group.querySelector('.input-min')?.name;
+			if (!key) return;
+
+			this.addTag(
+				key,
+				`${label}: ${dr.rMin.value} – ${dr.rMax.value}`
+			);
 		});
 
 		this.updateCounter();
 	}
 
-	addTag(key, text) {
-		const t = document.createElement('div');
-		t.className = 'tag';
-		t.dataset.tag = '';
-		t.dataset.key = key;
-		t.textContent = text;
-		this.tagList.appendChild(t);
+	addTag(key, text, value = null) {
+		const tag = document.createElement('div');
+		tag.className = 'tag';
+		tag.dataset.key = key;
+		if (value !== null) tag.dataset.value = value;
+		tag.textContent = text;
+		this.tagList.appendChild(tag);
 	}
 
 	updateCounter() {
 		const c = this.tagList.children.length;
 		this.qsa('.counter').forEach(el => el.textContent = c);
-		this.tagCover.classList.toggle('hidden', c === 0);
+		this.tagCover?.classList.toggle('hidden', c === 0);
 	}
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-	document.querySelectorAll('.filters-cover').forEach(el => new FiltersUI(el));
+	document.querySelectorAll('.filters-cover').forEach(el => {
+		el._filtersUI = new FiltersUI(el);
+	});
 });
 
 class CopyToClipboard {
@@ -1581,94 +1590,6 @@ document.addEventListener('DOMContentLoaded', function(){
 	}
 });
 
-
-document.addEventListener('DOMContentLoaded', () => {
-
-	document.querySelectorAll('.filters-cover').forEach(cover => {
-		const tagList = cover.querySelector('.tag-list');
-		const tagCover = cover.querySelector('.tag-cover');
-
-		if (!tagList) return;
-
-		tagList.addEventListener('click', e => {
-			const tag = e.target.closest('.tag');
-			if (!tag) return;
-
-			const key = tag.dataset.key;
-			if (!key) return;
-
-			// ---------- RADIO / CHECKBOX
-			const input = document.getElementById(key);
-			if (input) {
-				if (input.type === 'radio' || input.type === 'checkbox') {
-					input.checked = false;
-					input.dispatchEvent(new Event('change', { bubbles: true }));
-				}
-			}
-
-			// ---------- RANGE (через label → data-range)
-			const labelEl = [...cover.querySelectorAll('[data-range] .label')]
-				.find(el => el.textContent.trim() === key);
-
-			if (labelEl) {
-				const rangeBlock = labelEl.closest('[data-range]');
-				const rangeEl = rangeBlock?.querySelector('.range');
-				const group = rangeBlock?.querySelector('.range-group');
-				const dr = group?._dualRange;
-
-				if (rangeEl && dr) {
-					const min = Number(rangeEl.dataset.min);
-					const max = Number(rangeEl.dataset.max);
-
-					const inputMin = rangeBlock.querySelector('.input-min');
-					const inputMax = rangeBlock.querySelector('.input-max');
-
-					if (inputMin) inputMin.value = min;
-					if (inputMax) inputMax.value = max;
-
-					// 🔥 головне — ОНОВЛЕННЯ DualRange
-					dr.set(min, max, true);
-				}
-			}
-
-			// ---------- DATE
-			if (key === 'date') {
-				const start = document.querySelector('[name="startDatetime"]');
-				const end = document.querySelector('[name="endDatetime"]');
-
-				if (start) start.value = '';
-				if (end) end.value = '';
-
-				start?.dispatchEvent(new Event('change', { bubbles: true }));
-				end?.dispatchEvent(new Event('change', { bubbles: true }));
-			}
-
-			// ---------- REMOVE TAG
-			tag.remove();
-
-			// ---------- UPDATE COUNTER + VISIBILITY
-			updateTagsState(cover);
-		});
-	});
-
-	function updateTagsState(cover) {
-		const tagList = cover.querySelector('.tag-list');
-		const tagsCount = tagList ? tagList.children.length : 0;
-
-		// counter
-		cover.querySelectorAll('.counter').forEach(c => {
-			c.textContent = tagsCount;
-		});
-
-		// hidden
-		if (tagsCount === 0) {
-			cover.querySelector('.tag-cover').classList.add('hidden');
-		} else {
-			cover.querySelector('.tag-cover').classList.remove('hidden');
-		}
-	}
-});
-
 // show video modal
 document.addEventListener('DOMContentLoaded', function(){
 	let videoTriggerElemens = document.querySelectorAll("[data-video-src]");
@@ -1875,28 +1796,41 @@ document.addEventListener('DOMContentLoaded', function(){
 	}
 })();
 
+// Get Cities for radio / checkbox (filter[…])
 class GetCities {
 	constructor({
 		jsonSelector = '#city-rayon',
-		cityContainerSelector = '[name="city"]',
-		districtContainerSelector = '[name="district[]"]'
+		cityName = 'filter[city]',
+		districtName = 'filter[district][]',
+		cityInputSelector = '#city',
+		districtGroupSelector = '#district'
 	} = {}) {
 		this.jsonEl = document.querySelector(jsonSelector);
 		if (!this.jsonEl) return;
 
 		this.data = JSON.parse(this.jsonEl.textContent);
-		this.cityContainer = document.querySelector(cityContainerSelector)?.closest('[data-options]');
-		this.districtContainer = document.querySelector(districtContainerSelector)?.closest('[data-options]');
+
+		this.cityContainer = document.querySelector(`[name="${cityName}"]`)?.closest('[data-options]');
+		this.districtContainer = document.querySelector(`[name="${districtName}"]`)?.closest('[data-options]');
+
+		this.cityInput = document.querySelector(cityInputSelector);
+		this.districtGroup = document
+			.querySelector(districtGroupSelector)
+			?.closest('.labeled-group.filter-group.form-group');
 
 		this.params = new URLSearchParams(location.search);
+
+		this.cityName = cityName;
+		this.districtName = districtName;
 
 		this.init();
 	}
 
 	init() {
 		this.renderCities();
-		this.restoreCityFromGet();
-		this.bindCityChange();
+		this.restoreFromGet();
+		this.toggleDistrictState();
+		this.bindEvents();
 	}
 
 	/* ---------- RENDER ---------- */
@@ -1905,9 +1839,7 @@ class GetCities {
 		this.cityContainer.innerHTML = '';
 
 		this.data.cities.forEach(city => {
-			this.cityContainer.appendChild(
-				this._createCityItem(city)
-			);
+			this.cityContainer.appendChild(this._createCityItem(city));
 		});
 	}
 
@@ -1918,101 +1850,95 @@ class GetCities {
 		Object.values(this.data.rayons)
 			.filter(r => String(r.city_id) === String(cityId))
 			.forEach(rayon => {
-				this.districtContainer.appendChild(
-					this._createDistrictItem(rayon)
-				);
+				this.districtContainer.appendChild(this._createDistrictItem(rayon));
 			});
-
-		this.restoreDistrictsFromGet();
 	}
 
-	/* ---------- CREATE ITEMS ---------- */
+	/* ---------- CREATE ---------- */
 	_createCityItem(city) {
 		const item = document.createElement('div');
 		item.className = 'item';
-
 		item.innerHTML = `
 			<div class="radio-group form-group">
 				<input
 					type="radio"
-					name="city"
+					name="${this.cityName}"
 					class="radio"
 					id="city-${city.id}"
-					value="${city.id}"
-				>
+					value="${city.id}">
 				<label for="city-${city.id}" class="radio-label" data-label>
 					${city.name}
 				</label>
-			</div>
-		`;
-
+			</div>`;
 		return item;
 	}
 
 	_createDistrictItem(rayon) {
 		const item = document.createElement('div');
 		item.className = 'item';
-
 		item.innerHTML = `
 			<div class="checkbox-group form-group">
 				<input
 					type="checkbox"
-					name="district[]"
+					name="${this.districtName}"
 					class="checkbox"
 					id="district-${rayon.url}"
-					value="${rayon.url}"
-				>
+					value="${rayon.url}">
 				<label for="district-${rayon.url}" class="checkbox-label" data-label>
 					${rayon.name}
 				</label>
-			</div>
-		`;
-
+			</div>`;
 		return item;
 	}
 
 	/* ---------- EVENTS ---------- */
-	bindCityChange() {
-		document.addEventListener('change', (e) => {
-			if (e.target.name !== 'city') return;
+	bindEvents() {
+		document.addEventListener('change', e => {
+			if (e.target.name !== this.cityName) return;
 
-			const cityId = e.target.value;
-			this.renderDistricts(cityId);
-
-			this.reinitSelecter();
+			this.renderDistricts(e.target.value);
+			this.toggleDistrictState(true);
 			this.rebuildFiltersUI();
+		});
+
+		this.cityInput?.addEventListener('input', () => {
+			this.toggleDistrictState();
 		});
 	}
 
-	/* ---------- RESTORE FROM GET ---------- */
-	restoreCityFromGet() {
-		const cityId = this.params.get('city');
+	/* ---------- RESTORE ---------- */
+	restoreFromGet() {
+		const cityId = this.params.get(this.cityName);
 		if (!cityId) return;
 
-		const radio = document.querySelector(`[name="city"][value="${cityId}"]`);
+		const radio = document.querySelector(
+			`[name="${this.cityName}"][value="${cityId}"]`
+		);
+
 		if (radio) {
 			radio.checked = true;
 			this.renderDistricts(cityId);
 		}
-	}
 
-	restoreDistrictsFromGet() {
-		const values = this.params.getAll('district[]');
-		if (!values.length) return;
-
-		values.forEach(val => {
-			const cb = document.querySelector(`[name="district[]"][value="${val}"]`);
+		const districts = this.params.getAll(this.districtName);
+		districts.forEach(val => {
+			const cb = document.querySelector(
+				`[name="${this.districtName}"][value="${val}"]`
+			);
 			if (cb) cb.checked = true;
 		});
 	}
 
-	/* ---------- HELPERS ---------- */
-	reinitSelecter() {
-		if (window.filterSelecterInstances) {
-			window.filterSelecterInstances.forEach(i => i.destroy());
-		}
+	/* ---------- STATE ---------- */
+	toggleDistrictState(enable = false) {
+		if (!this.districtGroup) return;
 
-		window.filterSelecterInstances = initSelecter('.select-filter');
+		if (enable || document.querySelector(`[name="${this.cityName}"]:checked`)) {
+			this.districtGroup.classList.remove('disabled');
+		} else {
+			this.districtGroup.classList.add('disabled');
+			this.districtContainer && (this.districtContainer.innerHTML = '');
+		}
 	}
 
 	rebuildFiltersUI() {
@@ -2024,6 +1950,122 @@ class GetCities {
 
 document.addEventListener('DOMContentLoaded', () => {
 	new GetCities();
+});
+
+
+
+
+// Home page/ Telegram Page
+class GetCitiesForSelect {
+	constructor({
+		jsonSelector = '#city-rayon',
+		citySelect = '#city-select',
+		districtSelect = '#district-select'
+	} = {}) {
+		this.jsonEl = document.querySelector(jsonSelector);
+		if (!this.jsonEl) return;
+
+		this.data = JSON.parse(this.jsonEl.textContent);
+
+		this.citySelect = document.querySelector(citySelect);
+		this.districtSelect = document.querySelector(districtSelect);
+
+		if (!this.citySelect || !this.districtSelect) return;
+
+		this.init();
+	}
+
+	init() {
+		this.renderCities();
+		this.disableDistricts();
+		this.bindSelecterEvents();
+	}
+
+	/* ---------- CITIES ---------- */
+	renderCities() {
+		this.citySelect.innerHTML = '';
+		this.citySelect.appendChild(new Option('Усі', ''));
+
+		this.data.cities.forEach(city => {
+			this.citySelect.appendChild(
+				new Option(city.name, city.id)
+			);
+		});
+
+		this.refreshSelecter(this.citySelect);
+	}
+
+	/* ---------- DISTRICTS ---------- */
+	renderDistricts(cityId) {
+		this.districtSelect.innerHTML = '';
+		this.districtSelect.appendChild(new Option('Усі', ''));
+
+		Object.values(this.data.rayons)
+			.filter(r => String(r.city_id) === String(cityId))
+			.forEach(rayon => {
+				this.districtSelect.appendChild(
+					new Option(rayon.name, rayon.url)
+				);
+			});
+
+		this.districtSelect.disabled = false;
+		this.districtSelect.classList.remove('disabled');
+
+		this.refreshSelecter(this.districtSelect);
+	}
+
+	clearDistricts() {
+		this.districtSelect.innerHTML = '';
+		this.districtSelect.appendChild(new Option('Усі', ''));
+		this.disableDistricts();
+		this.refreshSelecter(this.districtSelect);
+	}
+
+	disableDistricts() {
+		this.districtSelect.disabled = true;
+		this.districtSelect.classList.add('disabled');
+	}
+
+	/* ---------- SELECTER INTEGRATION ---------- */
+	bindSelecterEvents() {
+		if (!window.__selecterInstances) return;
+
+		const cityInstance = window.__selecterInstances.find(
+			i => i.select === this.citySelect
+		);
+
+		if (!cityInstance) return;
+
+		const originalOnChange = cityInstance.settings.onChange;
+
+		cityInstance.settings.onChange = (selectEl, settings, value) => {
+			if (!value) {
+				this.clearDistricts();
+			} else {
+				this.renderDistricts(value);
+			}
+
+			if (typeof originalOnChange === 'function') {
+				originalOnChange(selectEl, settings, value);
+			}
+		};
+	}
+
+	refreshSelecter(selectEl) {
+		if (!window.__selecterInstances) return;
+
+		const instance = window.__selecterInstances.find(
+			i => i.select === selectEl
+		);
+
+		instance?.refresh();
+	}
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+	window.__selecterInstances = initSelecter('.select');
+
+	new GetCitiesForSelect();
 });
 
 // header scroll
@@ -3410,14 +3452,17 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 class DualRange {
-	constructor(root) {
-		this.root = root;
-		this.range = root.querySelector('.range');
-		this.rMin = root.querySelector('.range-min');
-		this.rMax = root.querySelector('.range-max');
-		this.iMin = root.querySelector('.input-min');
-		this.iMax = root.querySelector('.input-max');
-		this.fill = root.querySelector('.range-fill');
+	constructor(group) {
+		this.group = group;
+
+		this.range = group.querySelector('.range');
+		this.rMin = group.querySelector('.range-min');
+		this.rMax = group.querySelector('.range-max');
+		this.iMin = group.querySelector('.input-min');
+		this.iMax = group.querySelector('.input-max');
+		this.fill = group.querySelector('.range-fill');
+
+		if (!this.range || !this.rMin || !this.rMax) return;
 
 		const ds = this.range.dataset;
 		this.min = Number(ds.min);
@@ -3437,14 +3482,18 @@ class DualRange {
 
 	bind() {
 		const handler = () => {
-			this.set(+this.rMin.value, +this.rMax.value, true);
+			this.set(
+				Number(this.rMin.value),
+				Number(this.rMax.value),
+				true
+			);
 		};
 
 		this.rMin.addEventListener('input', handler);
 		this.rMax.addEventListener('input', handler);
 
-		if (this.iMin) this.iMin.addEventListener('input', handler);
-		if (this.iMax) this.iMax.addEventListener('input', handler);
+		this.iMin && this.iMin.addEventListener('input', handler);
+		this.iMax && this.iMax.addEventListener('input', handler);
 	}
 
 	set(min, max, emit = true) {
@@ -3452,27 +3501,29 @@ class DualRange {
 		max = Math.max(this.min, Math.min(max, this.max));
 		if (min > max) [min, max] = [max, min];
 
-		// ВАЖЛИВО: повний reset value
 		this.rMin.value = min;
 		this.rMax.value = max;
-
 		if (this.iMin) this.iMin.value = min;
 		if (this.iMax) this.iMax.value = max;
 
-		// ПРИМУСОВИЙ repaint
-		requestAnimationFrame(() => {
-			this.paintFill();
-		});
+		requestAnimationFrame(() => this.paint());
 
 		if (emit) {
-			this.root.dispatchEvent(new CustomEvent('dualrangechange', {
-				bubbles: true,
-				detail: { min, max }
-			}));
+			this.group.dispatchEvent(
+				new CustomEvent('dualrangechange', {
+					bubbles: true,
+					detail: {
+						min,
+						max,
+						nameMin: this.iMin?.name || null,
+						nameMax: this.iMax?.name || null
+					}
+				})
+			);
 		}
 	}
 
-	paintFill() {
+	paint() {
 		if (!this.fill) return;
 
 		const min = Number(this.rMin.value);
@@ -3484,14 +3535,16 @@ class DualRange {
 		this.fill.style.left = left + '%';
 		this.fill.style.right = right + '%';
 	}
+
+	reset() {
+		this.set(this.min, this.max, true);
+	}
 }
 
-// INIT
 document.addEventListener('DOMContentLoaded', () => {
 	document.querySelectorAll('[data-range]').forEach(block => {
 		const group = block.querySelector('.range-group');
 		if (!group) return;
-
 		group._dualRange = new DualRange(group);
 	});
 });
@@ -3745,6 +3798,7 @@ class Selecter {
 	_build() {
 		const optionsList = [];
 		const selectedInfo = this._collectOptions(optionsList);
+
 		this.root = document.createElement('div');
 		this.root.className = 'selecter';
 
@@ -3784,7 +3838,9 @@ class Selecter {
 			document.removeEventListener('click', this._outsideClickHandler);
 			this.form && this.form.removeEventListener('reset', this._onFormReset);
 		} catch (e) {}
-		if (this.root && this.root.parentNode) this.root.parentNode.removeChild(this.root);
+		if (this.root && this.root.parentNode) {
+			this.root.parentNode.removeChild(this.root);
+		}
 		this.root = null;
 		this.anchor = null;
 		this.dropdown = null;
@@ -3814,10 +3870,14 @@ class Selecter {
 
 	_buildOptionsTree(optionsList, multiple, id) {
 		const ul = document.createElement('ul');
+
 		optionsList.forEach((option, i) => {
 			const li = document.createElement('li');
 			li.dataset.value = option.value;
-			li.className = (option.disabled ? 'disabled ' : '') + (option.selected ? 'active' : '');
+			li.className =
+				(option.disabled ? 'disabled ' : '') +
+				(option.selected ? 'active' : '');
+
 			li.appendChild(document.createTextNode(option.label));
 
 			if (multiple && !option.disabled) {
@@ -3837,8 +3897,10 @@ class Selecter {
 			} else {
 				li.appendChild(document.createTextNode(' '));
 			}
+
 			ul.appendChild(li);
 		});
+
 		return ul;
 	}
 
@@ -3851,7 +3913,7 @@ class Selecter {
 
 	_onAnchorClick(e) {
 		e.preventDefault();
-		this._setFocused(true); // клік по селектору => focused
+		this._setFocused(true);
 		if (this.root.classList.contains('opened')) this.close();
 		else this.open();
 	}
@@ -3872,27 +3934,10 @@ class Selecter {
 
 		if (multiple) {
 			const checkbox = li.querySelector('input[type="checkbox"]');
-			if (li.classList.contains('active')) {
-				li.classList.remove('active');
-				if (checkbox) {
-					checkbox.checked = false;
-					checkbox.removeAttribute('checked');
-				}
-			} else {
-				li.classList.add('active');
-				if (checkbox) {
-					checkbox.checked = true;
-					checkbox.setAttribute('checked', 'true');
-				}
+			li.classList.toggle('active');
+			if (checkbox) {
+				checkbox.checked = li.classList.contains('active');
 			}
-			const sibs = Array.from(li.parentElement.children);
-			const anyActive = sibs.some((el) => el.classList.contains('active') && !el.classList.contains('disabled'));
-			sibs.forEach((el) => {
-				if (el.classList.contains('disabled')) {
-					if (anyActive) el.classList.remove('active');
-					else el.classList.add('active');
-				}
-			});
 		} else {
 			li.classList.add('active');
 			Array.from(li.parentElement.children).forEach((s) => {
@@ -3911,32 +3956,13 @@ class Selecter {
 	_syncSelectWithValue(value) {
 		const isMultiple = this.settings.multiple;
 		const opts = Array.from(this.select.querySelectorAll('option'));
+
 		opts.forEach((opt) => {
 			const same = opt.value.toString() === value.toString();
 			if (!isMultiple) {
 				opt.selected = same;
-				if (same) opt.setAttribute('selected', 'true');
-				else opt.removeAttribute('selected');
 			} else {
-				if (same && !opt.hasAttribute('selected')) {
-					opt.selected = true;
-					opt.setAttribute('selected', 'true');
-				} else if (same && opt.hasAttribute('selected')) {
-					opt.selected = false;
-					opt.removeAttribute('selected');
-				}
-			}
-		});
-
-		const anySelected = this.select.querySelectorAll('option[selected]').length > 0;
-		const disabledOpts = this.select.querySelectorAll('option[disabled]');
-		disabledOpts.forEach((opt) => {
-			if (anySelected) {
-				opt.selected = false;
-				opt.removeAttribute('selected');
-			} else {
-				opt.selected = true;
-				opt.setAttribute('selected', 'true');
+				opt.selected = same ? !opt.selected : opt.selected;
 			}
 		});
 
@@ -3945,104 +3971,51 @@ class Selecter {
 		}
 	}
 
-	_updateAnchorText(lastValue) {
-		const anchorEl = this.anchor;
-		const adaptiveWidth = 300;
-
-		if (this.settings.multiple) {
-			anchorEl.innerHTML = '';
-			const selected = Array.from(this.select.querySelectorAll('option[selected]'));
-			const labels = selected.map((o) => (o.textContent || o.label || '').trim());
-
-			if (labels.length === 1) {
-				anchorEl.textContent = labels[0] || '';
-			} else if (labels.length > 1) {
-				anchorEl.textContent = labels[0] || '';
-				if (anchorEl.offsetWidth <= adaptiveWidth) {
-					const count = document.createElement('span');
-					count.className = 'count';
-					count.textContent = `+${labels.length - 1}`;
-					anchorEl.appendChild(count);
-				} else {
-					const sliced = labels.slice(0, 3).join(',');
-					anchorEl.textContent = sliced;
-					if (labels.length > 3) {
-						const count = document.createElement('span');
-						count.className = 'count';
-						count.textContent = `+${labels.length - 3}`;
-						anchorEl.appendChild(count);
-					}
-				}
-			} else {
-				anchorEl.textContent = '';
-			}
-		} else {
-			const opt = this.select.selectedOptions[0];
-			let text = '';
-			if (opt) {
-				text =
-					opt.dataset.value ||
-					(opt.textContent || opt.label || '').trim();
-			}
-
-			if (lastValue === true) text = 'yes';
-			else if (lastValue === false) text = 'no';
-			anchorEl.textContent = text || '';
-			this.close();
-		}
+	_updateAnchorText() {
+		const opt = this.select.selectedOptions[0];
+		this.anchor.textContent = opt ? opt.textContent.trim() : '';
+		this.close();
 	}
 
 	_setFocused(state) {
 		const group = this.select.closest('.form-group');
 		if (!group) return;
-		if (state) group.classList.add('focused');
-		else group.classList.remove('focused');
+		group.classList.toggle('focused', state);
 	}
 }
 
 function initSelecter(target, options) {
 	let nodes = [];
-	if (typeof target === 'string') nodes = Array.from(document.querySelectorAll(target));
-	else if (target instanceof HTMLSelectElement) nodes = [target];
-	else if (NodeList.prototype.isPrototypeOf(target) || Array.isArray(target)) nodes = Array.from(target);
+
+	if (typeof target === 'string') {
+		nodes = Array.from(document.querySelectorAll(target));
+	} else if (target instanceof HTMLSelectElement) {
+		nodes = [target];
+	} else if (NodeList.prototype.isPrototypeOf(target) || Array.isArray(target)) {
+		nodes = Array.from(target);
+	}
 
 	const instances = nodes.map((el) => new Selecter(el, options));
 	return instances;
 }
 
-const instances = initSelecter('.select', {
-	onChange: (selectEl, settings, lastValue) => {
-		console.log('changed:', lastValue, 'selected:', 
-			Array.from(selectEl.selectedOptions).map(o => o.value));
+// ВИКЛЮЧАЄМО city / district/ sorting, щоб не було дублювання по data-атрибуту skip
+const instances = initSelecter(
+	Array.from(document.querySelectorAll('.select')).filter(el => {
+		return el.dataset.selecter !== 'skip';
+	}),
+	{
+		onChange: (selectEl, settings, lastValue) => {
+			console.log(
+				'changed:',
+				lastValue,
+				'selected:',
+				Array.from(selectEl.selectedOptions).map(o => o.value)
+			);
+		}
 	}
-});
+);
 
-document.addEventListener('DOMContentLoaded', () => {
-	document.addEventListener('click', e => {
-		const item = e.target.closest('.filtered-list .item');
-		if (!item) return;
-
-		const input = item.querySelector('input[type="radio"], input[type="checkbox"]');
-		if (!input) return;
-
-		// radio
-		if (input.type === 'radio') {
-			if (!input.checked) {
-				input.checked = true;
-				input.dispatchEvent(new Event('change', { bubbles: true }));
-			}
-		}
-
-		// checkbox
-		if (input.type === 'checkbox') {
-			input.checked = !input.checked;
-			input.dispatchEvent(new Event('change', { bubbles: true }));
-		}
-	});
-});
-
-// window.Selecter = Selecter;
-// window.initSelecter = initSelecter;
 
 // sticky block
 document.addEventListener('DOMContentLoaded', function(){
@@ -4205,6 +4178,70 @@ class Tabs {
 
 document.addEventListener('DOMContentLoaded', () => {
 	window.TabsInstances = Tabs.initAll();
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+	document.querySelectorAll('.filters-cover').forEach(cover => {
+		const tagList = cover.querySelector('.tag-list');
+		if (!tagList) return;
+
+		tagList.addEventListener('click', e => {
+			const tag = e.target.closest('.tag');
+			if (!tag) return;
+
+			const name = tag.dataset.key;
+			const value = tag.dataset.value;
+
+			// radio / checkbox
+			cover.querySelectorAll(`[name="${CSS.escape(name)}"]`).forEach(inp => {
+				if (inp.type === 'radio') {
+					inp.checked = false;
+					inp.dispatchEvent(new Event('change', { bubbles: true }));
+				}
+				if (inp.type === 'checkbox' && inp.value === value) {
+					inp.checked = false;
+					inp.dispatchEvent(new Event('change', { bubbles: true }));
+				}
+			});
+
+			// range
+			cover.querySelectorAll('[data-range]').forEach(block => {
+				const group = block.querySelector('.range-group');
+				const dr = group?._dualRange;
+				const inputMin = group?.querySelector('.input-min');
+				if (dr && inputMin?.name === name) {
+					dr.reset();
+				}
+			});
+
+			// date
+			if (name === 'filter[date]') {
+				cover.querySelector('[name="filter[startDatetime]"]')?.dispatchEvent(
+					new Event('change', { bubbles: true })
+				);
+				cover.querySelector('[name="filter[endDatetime]"]')?.dispatchEvent(
+					new Event('change', { bubbles: true })
+				);
+				cover.querySelector('[name="filter[startDatetime]"]').value = '';
+				cover.querySelector('[name="filter[endDatetime]"]').value = '';
+			}
+
+			// city → clear districts
+			if (name === 'filter[city]') {
+				cover.querySelectorAll('[name="filter[district][]"]').forEach(cb => {
+					cb.checked = false;
+					cb.dispatchEvent(new Event('change', { bubbles: true }));
+				});
+				cover.querySelectorAll('.tag[data-key="filter[district][]"]').forEach(t => t.remove());
+				cover.querySelector('#district')
+					?.closest('.filter-group')
+					?.classList.add('disabled');
+			}
+
+			tag.remove();
+			cover._filtersUI?.rebuild?.();
+		});
+	});
 });
 
 // validation

@@ -162,30 +162,30 @@
 				<div class="container">
 					<form action="#" class="form search-form disabled">
 						<div class="badge">Функціонал з’явиться найближчим часом</div>
-						<!-- 1 -->
-						<div class="form-group select-group">
-							<select name="city" id="city" class="select disabled">
-								<option value="Усі" selected>Усі</option>
-								<option value="Київ">Київ</option>
-								<option value="Харків">Харків</option>
-								<option value="Донецьк">Донецьк</option>
-								<option value="Лівьв">Лівьв</option>
-								<option value="Дніпро">Дніпро</option>
-							</select>
-							<label for="city" class="label">Місто</label>
-						</div>
-						<!-- 2 -->
-						<div class="form-group select-group">
-							<select name="disctrict" id="disctrict" class="select disabled">
-								<option value="Усі" selected>Усі</option>
-								<option value="Дарницький">Дарницький</option>
-								<option value="Голосіївський">Голосіївський</option>
-								<option value="Деснянський">Деснянський</option>
-								<option value="Дніпровський">Дніпровський</option>
-								<option value="Оболонський">Оболонський</option>
-							</select>
-							<label for="disctrict" class="label">Район</label>
-						</div>
+							<!-- 1 -->
+							<div class="form-group select-group">
+								<select name="city" id="city-select" class="select disabled" data-selecter="skip" disabled>
+									<option value="Усі" selected>Усі</option>
+									<option value="Київ">Київ</option>
+									<option value="Харків">Харків</option>
+									<option value="Донецьк">Донецьк</option>
+									<option value="Лівьв">Лівьв</option>
+									<option value="Дніпро">Дніпро</option>
+								</select>
+								<label for="city" class="label">Місто</label>
+							</div>
+							<!-- 2 -->
+							<div class="form-group select-group">
+								<select name="district" id="district-select" disabled class="select disabled" data-selecter="skip">
+									<option value="Усі" selected>Усі</option>
+									<option value="Дарницький">Дарницький</option>
+									<option value="Голосіївський">Голосіївський</option>
+									<option value="Деснянський">Деснянський</option>
+									<option value="Дніпровський">Дніпровський</option>
+									<option value="Оболонський">Оболонський</option>
+								</select>
+								<label for="disctrict" class="label">Район</label>
+							</div>
 						<!-- 3 -->
 						<div class="form-group range-group">
 							<div class="dropdown disabled" data-dropdown data-range>
@@ -205,11 +205,11 @@
 										<div class="range-group">
 											<div class="range"
 												data-min="1000"
-												data-max="20000"
+												data-max="0000"
 												data-step="100"
 												data-ticks="5"
 												data-value-min="1000"
-												data-value-max="20000">
+												data-value-max="0000">
 												<input type="range" class="range-min" aria-label="Minimum">
 												<input type="range" class="range-max" aria-label="Maximum">
 												<div class="range-progress">

@@ -62,6 +62,7 @@ class Selecter {
 	_build() {
 		const optionsList = [];
 		const selectedInfo = this._collectOptions(optionsList);
+
 		this.root = document.createElement('div');
 		this.root.className = 'selecter';
 
@@ -101,7 +102,9 @@ class Selecter {
 			document.removeEventListener('click', this._outsideClickHandler);
 			this.form && this.form.removeEventListener('reset', this._onFormReset);
 		} catch (e) {}
-		if (this.root && this.root.parentNode) this.root.parentNode.removeChild(this.root);
+		if (this.root && this.root.parentNode) {
+			this.root.parentNode.removeChild(this.root);
+		}
 		this.root = null;
 		this.anchor = null;
 		this.dropdown = null;
@@ -131,10 +134,14 @@ class Selecter {
 
 	_buildOptionsTree(optionsList, multiple, id) {
 		const ul = document.createElement('ul');
+
 		optionsList.forEach((option, i) => {
 			const li = document.createElement('li');
 			li.dataset.value = option.value;
-			li.className = (option.disabled ? 'disabled ' : '') + (option.selected ? 'active' : '');
+			li.className =
+				(option.disabled ? 'disabled ' : '') +
+				(option.selected ? 'active' : '');
+
 			li.appendChild(document.createTextNode(option.label));
 
 			if (multiple && !option.disabled) {
@@ -154,8 +161,10 @@ class Selecter {
 			} else {
 				li.appendChild(document.createTextNode(' '));
 			}
+
 			ul.appendChild(li);
 		});
+
 		return ul;
 	}
 
@@ -168,7 +177,7 @@ class Selecter {
 
 	_onAnchorClick(e) {
 		e.preventDefault();
-		this._setFocused(true); // клік по селектору => focused
+		this._setFocused(true);
 		if (this.root.classList.contains('opened')) this.close();
 		else this.open();
 	}
@@ -189,27 +198,10 @@ class Selecter {
 
 		if (multiple) {
 			const checkbox = li.querySelector('input[type="checkbox"]');
-			if (li.classList.contains('active')) {
-				li.classList.remove('active');
-				if (checkbox) {
-					checkbox.checked = false;
-					checkbox.removeAttribute('checked');
-				}
-			} else {
-				li.classList.add('active');
-				if (checkbox) {
-					checkbox.checked = true;
-					checkbox.setAttribute('checked', 'true');
-				}
+			li.classList.toggle('active');
+			if (checkbox) {
+				checkbox.checked = li.classList.contains('active');
 			}
-			const sibs = Array.from(li.parentElement.children);
-			const anyActive = sibs.some((el) => el.classList.contains('active') && !el.classList.contains('disabled'));
-			sibs.forEach((el) => {
-				if (el.classList.contains('disabled')) {
-					if (anyActive) el.classList.remove('active');
-					else el.classList.add('active');
-				}
-			});
 		} else {
 			li.classList.add('active');
 			Array.from(li.parentElement.children).forEach((s) => {
@@ -228,32 +220,13 @@ class Selecter {
 	_syncSelectWithValue(value) {
 		const isMultiple = this.settings.multiple;
 		const opts = Array.from(this.select.querySelectorAll('option'));
+
 		opts.forEach((opt) => {
 			const same = opt.value.toString() === value.toString();
 			if (!isMultiple) {
 				opt.selected = same;
-				if (same) opt.setAttribute('selected', 'true');
-				else opt.removeAttribute('selected');
 			} else {
-				if (same && !opt.hasAttribute('selected')) {
-					opt.selected = true;
-					opt.setAttribute('selected', 'true');
-				} else if (same && opt.hasAttribute('selected')) {
-					opt.selected = false;
-					opt.removeAttribute('selected');
-				}
-			}
-		});
-
-		const anySelected = this.select.querySelectorAll('option[selected]').length > 0;
-		const disabledOpts = this.select.querySelectorAll('option[disabled]');
-		disabledOpts.forEach((opt) => {
-			if (anySelected) {
-				opt.selected = false;
-				opt.removeAttribute('selected');
-			} else {
-				opt.selected = true;
-				opt.setAttribute('selected', 'true');
+				opt.selected = same ? !opt.selected : opt.selected;
 			}
 		});
 
@@ -262,101 +235,48 @@ class Selecter {
 		}
 	}
 
-	_updateAnchorText(lastValue) {
-		const anchorEl = this.anchor;
-		const adaptiveWidth = 300;
-
-		if (this.settings.multiple) {
-			anchorEl.innerHTML = '';
-			const selected = Array.from(this.select.querySelectorAll('option[selected]'));
-			const labels = selected.map((o) => (o.textContent || o.label || '').trim());
-
-			if (labels.length === 1) {
-				anchorEl.textContent = labels[0] || '';
-			} else if (labels.length > 1) {
-				anchorEl.textContent = labels[0] || '';
-				if (anchorEl.offsetWidth <= adaptiveWidth) {
-					const count = document.createElement('span');
-					count.className = 'count';
-					count.textContent = `+${labels.length - 1}`;
-					anchorEl.appendChild(count);
-				} else {
-					const sliced = labels.slice(0, 3).join(',');
-					anchorEl.textContent = sliced;
-					if (labels.length > 3) {
-						const count = document.createElement('span');
-						count.className = 'count';
-						count.textContent = `+${labels.length - 3}`;
-						anchorEl.appendChild(count);
-					}
-				}
-			} else {
-				anchorEl.textContent = '';
-			}
-		} else {
-			const opt = this.select.selectedOptions[0];
-			let text = '';
-			if (opt) {
-				text =
-					opt.dataset.value ||
-					(opt.textContent || opt.label || '').trim();
-			}
-
-			if (lastValue === true) text = 'yes';
-			else if (lastValue === false) text = 'no';
-			anchorEl.textContent = text || '';
-			this.close();
-		}
+	_updateAnchorText() {
+		const opt = this.select.selectedOptions[0];
+		this.anchor.textContent = opt ? opt.textContent.trim() : '';
+		this.close();
 	}
 
 	_setFocused(state) {
 		const group = this.select.closest('.form-group');
 		if (!group) return;
-		if (state) group.classList.add('focused');
-		else group.classList.remove('focused');
+		group.classList.toggle('focused', state);
 	}
 }
 
 function initSelecter(target, options) {
 	let nodes = [];
-	if (typeof target === 'string') nodes = Array.from(document.querySelectorAll(target));
-	else if (target instanceof HTMLSelectElement) nodes = [target];
-	else if (NodeList.prototype.isPrototypeOf(target) || Array.isArray(target)) nodes = Array.from(target);
+
+	if (typeof target === 'string') {
+		nodes = Array.from(document.querySelectorAll(target));
+	} else if (target instanceof HTMLSelectElement) {
+		nodes = [target];
+	} else if (NodeList.prototype.isPrototypeOf(target) || Array.isArray(target)) {
+		nodes = Array.from(target);
+	}
 
 	const instances = nodes.map((el) => new Selecter(el, options));
 	return instances;
 }
 
-const instances = initSelecter('.select', {
-	onChange: (selectEl, settings, lastValue) => {
-		console.log('changed:', lastValue, 'selected:', 
-			Array.from(selectEl.selectedOptions).map(o => o.value));
+// ВИКЛЮЧАЄМО city / district/ sorting, щоб не було дублювання по data-атрибуту skip
+const instances = initSelecter(
+	Array.from(document.querySelectorAll('.select')).filter(el => {
+		return el.dataset.selecter !== 'skip';
+	}),
+	{
+		onChange: (selectEl, settings, lastValue) => {
+			console.log(
+				'changed:',
+				lastValue,
+				'selected:',
+				Array.from(selectEl.selectedOptions).map(o => o.value)
+			);
+		}
 	}
-});
+);
 
-document.addEventListener('DOMContentLoaded', () => {
-	document.addEventListener('click', e => {
-		const item = e.target.closest('.filtered-list .item');
-		if (!item) return;
-
-		const input = item.querySelector('input[type="radio"], input[type="checkbox"]');
-		if (!input) return;
-
-		// radio
-		if (input.type === 'radio') {
-			if (!input.checked) {
-				input.checked = true;
-				input.dispatchEvent(new Event('change', { bubbles: true }));
-			}
-		}
-
-		// checkbox
-		if (input.type === 'checkbox') {
-			input.checked = !input.checked;
-			input.dispatchEvent(new Event('change', { bubbles: true }));
-		}
-	});
-});
-
-// window.Selecter = Selecter;
-// window.initSelecter = initSelecter;
