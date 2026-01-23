@@ -7,7 +7,7 @@ class Accordion {
 			activeClass: options.activeClass || 'active',
 			titleSelector: options.titleSelector || '.accordeon-title',
 			itemSelector: options.itemSelector || '[data-accordeon]',
-			closeOthers: options.closeOthers !== false, // за замовчуванням true
+			closeOthers: options.closeOthers !== false,
 		};
 
 		this._onClick = this._onClick.bind(this);
@@ -17,22 +17,23 @@ class Accordion {
 
 	_cache() {
 		this.items = Array.from(this.root.querySelectorAll(this.opts.itemSelector));
-		this.buttons = Array.from(this.root.querySelectorAll(this.opts.titleSelector));
 	}
 
 	_bind() {
-		this.buttons.forEach((btn) => btn.addEventListener('click', this._onClick, false));
+		this.root.addEventListener('click', this._onClick, false);
 	}
 
 	destroy() {
-		this.buttons.forEach((btn) => btn.removeEventListener('click', this._onClick));
+		this.root.removeEventListener('click', this._onClick);
 	}
 
 	_onClick(e) {
+		const title = e.target.closest(this.opts.titleSelector);
+		if (!title || !this.root.contains(title)) return;
+
 		e.preventDefault();
 
-		// Шукаємо найближчий елемент акордеону, а не лише прямого батька
-		const item = e.currentTarget.closest(this.opts.itemSelector);
+		const item = title.closest(this.opts.itemSelector);
 		if (!item || !this.root.contains(item)) return;
 
 		const isActive = item.classList.contains(this.opts.activeClass);
@@ -54,29 +55,19 @@ class Accordion {
 	}
 
 	closeAll() {
-		this.items.forEach((el) => el.classList.remove(this.opts.activeClass));
+		this.root
+			.querySelectorAll(this.opts.itemSelector)
+			.forEach(el => el.classList.remove(this.opts.activeClass));
 	}
 
-	/**
-	 * Ініціалізуємо інстанси за “групами”.
-	 * Групою вважаємо спільний контейнер (parentElement) для кількох [data-accordeon].
-	 */
 	static initAll(options) {
-		const allItems = Array.from(document.querySelectorAll('[data-accordeon]'));
-		const groups = new Set();
-
-		allItems.forEach((item) => {
-			if (item.parentElement) groups.add(item.parentElement);
-		});
-
-		return Array.from(groups).map((groupEl) => new Accordion(groupEl, options));
+		return Array.from(document.querySelectorAll('.accordeon-list'))
+			.map(group => new Accordion(group, options));
 	}
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-	document.querySelectorAll('.accordeon-list').forEach((group) => {
-		new Accordion(group);
-	});
+	Accordion.initAll();
 });
 
 class ArticlesPagerLoader {
@@ -3481,7 +3472,7 @@ class DualRange {
 	}
 
 	bind() {
-		const handler = () => {
+		const fromRange = () => {
 			this.set(
 				Number(this.rMin.value),
 				Number(this.rMax.value),
@@ -3489,20 +3480,50 @@ class DualRange {
 			);
 		};
 
-		this.rMin.addEventListener('input', handler);
-		this.rMax.addEventListener('input', handler);
+		const fromInput = () => {
+			this.set(
+				Number(this.iMin?.value),
+				Number(this.iMax?.value),
+				true
+			);
+		};
 
-		this.iMin && this.iMin.addEventListener('input', handler);
-		this.iMax && this.iMax.addEventListener('input', handler);
+		this.rMin.addEventListener('input', fromRange);
+		this.rMax.addEventListener('input', fromRange);
+
+		if (this.iMin) {
+			this.iMin.addEventListener('input', fromInput);
+			this.iMin.addEventListener('blur', fromInput);
+			this.iMin.addEventListener('change', fromInput);
+		}
+
+		if (this.iMax) {
+			this.iMax.addEventListener('input', fromInput);
+			this.iMax.addEventListener('blur', fromInput);
+			this.iMax.addEventListener('change', fromInput);
+		}
+	}
+
+	normalize(value) {
+		if (Number.isNaN(value)) return null;
+		value = Math.round(value / this.step) * this.step;
+		return Math.max(this.min, Math.min(value, this.max));
 	}
 
 	set(min, max, emit = true) {
-		min = Math.max(this.min, Math.min(min, this.max));
-		max = Math.max(this.min, Math.min(max, this.max));
+		min = this.normalize(min);
+		max = this.normalize(max);
+
+		if (min === null && max === null) return;
+
+		if (min === null) min = Number(this.rMin.value);
+		if (max === null) max = Number(this.rMax.value);
+
 		if (min > max) [min, max] = [max, min];
 
 		this.rMin.value = min;
 		this.rMax.value = max;
+
 		if (this.iMin) this.iMin.value = min;
 		if (this.iMax) this.iMax.value = max;
 

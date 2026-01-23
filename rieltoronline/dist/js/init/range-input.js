@@ -28,7 +28,7 @@ class DualRange {
 	}
 
 	bind() {
-		const handler = () => {
+		const fromRange = () => {
 			this.set(
 				Number(this.rMin.value),
 				Number(this.rMax.value),
@@ -36,20 +36,50 @@ class DualRange {
 			);
 		};
 
-		this.rMin.addEventListener('input', handler);
-		this.rMax.addEventListener('input', handler);
+		const fromInput = () => {
+			this.set(
+				Number(this.iMin?.value),
+				Number(this.iMax?.value),
+				true
+			);
+		};
 
-		this.iMin && this.iMin.addEventListener('input', handler);
-		this.iMax && this.iMax.addEventListener('input', handler);
+		this.rMin.addEventListener('input', fromRange);
+		this.rMax.addEventListener('input', fromRange);
+
+		if (this.iMin) {
+			this.iMin.addEventListener('input', fromInput);
+			this.iMin.addEventListener('blur', fromInput);
+			this.iMin.addEventListener('change', fromInput);
+		}
+
+		if (this.iMax) {
+			this.iMax.addEventListener('input', fromInput);
+			this.iMax.addEventListener('blur', fromInput);
+			this.iMax.addEventListener('change', fromInput);
+		}
+	}
+
+	normalize(value) {
+		if (Number.isNaN(value)) return null;
+		value = Math.round(value / this.step) * this.step;
+		return Math.max(this.min, Math.min(value, this.max));
 	}
 
 	set(min, max, emit = true) {
-		min = Math.max(this.min, Math.min(min, this.max));
-		max = Math.max(this.min, Math.min(max, this.max));
+		min = this.normalize(min);
+		max = this.normalize(max);
+
+		if (min === null && max === null) return;
+
+		if (min === null) min = Number(this.rMin.value);
+		if (max === null) max = Number(this.rMax.value);
+
 		if (min > max) [min, max] = [max, min];
 
 		this.rMin.value = min;
 		this.rMax.value = max;
+
 		if (this.iMin) this.iMin.value = min;
 		if (this.iMax) this.iMax.value = max;
 
