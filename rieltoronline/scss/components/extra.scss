@@ -1,0 +1,8 @@
+._wPag_holder._wPag_blue {
+	display: flex;
+	gap: 8px;
+
+	_wPag_link {
+		line-height: calc(var(--pagination-size) - 2px);
+	}
+}

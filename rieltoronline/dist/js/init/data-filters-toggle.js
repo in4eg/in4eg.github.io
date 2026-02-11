@@ -14,7 +14,6 @@ class ToggleHandler {
 		this.overlayClass = overlayClass;
 		this.delay = delay;
 
-		this.buttons = Array.from(document.querySelectorAll(this.btnSelector));
 		this._onClick = this._onClick.bind(this);
 		this._onResize = this._onResize.bind(this);
 
@@ -22,17 +21,16 @@ class ToggleHandler {
 	}
 
 	init() {
-		this.buttons.forEach(btn => {
-			btn.addEventListener('click', this._onClick, false);
-		});
+		document.addEventListener('click', this._onClick);
 		window.addEventListener('resize', this._onResize, { passive: true });
 	}
 
 	_onClick(e) {
-		const button = e.currentTarget;
+		const button = e.target.closest(this.btnSelector);
+		if (!button) return;
+
 		const targetSelector = button.getAttribute('data-toggle');
 		const target = document.querySelector(targetSelector);
-
 		if (!target) return;
 
 		const isActive = target.classList.contains(this.activeClass);
@@ -42,8 +40,8 @@ class ToggleHandler {
 			button.classList.add(this.openedClass);
 
 			if (window.innerWidth <= 768) {
-				document.documentElement.classList.add(this.overlayClass); // html
-				document.body.classList.add(this.overlayClass);           // body
+				document.documentElement.classList.add(this.overlayClass);
+				document.body.classList.add(this.overlayClass);
 			}
 
 			setTimeout(() => {

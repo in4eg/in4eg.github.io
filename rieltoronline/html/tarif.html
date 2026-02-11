@@ -51,6 +51,26 @@
 					<div class="section-subtitle">Прості та зрозумілі тарифи</div>
 					<h1 class="h1-title">Оберіть найкращий тариф</h1>
 				</div>
+				<div class="tariff-header">
+					<div class="row bottom-xs">
+						<div class="col-xs-12 col-md-8">
+							<b>Тарифи відрізняються залежно від міста</b>
+						</div>
+						<div class="col-xs-12 col-md-4 mobile-cover">
+							<!-- city select -->
+							<div class="form-group select-group labeled-group">
+								<label for="sorting" class="label">Оберіть місто</label>
+								<select name="filter[sorting]" id="sorting" class="select" data-selecter="skip">
+									<option value="kyiv" data-value="Київ" selected>Київ</option>
+									<option value="lviv" data-value="Львів">Львів</option>
+									<option value="dnipro" data-value="Дніпро">Дніпро</option>
+									<option value="kharkiv" data-value="Харків">Харків</option>
+								</select>
+							</div>
+							<!-- / city select -->
+						</div>
+					</div>
+				</div>
 				<!-- tariffs -->
 				@@include('./includes/tariffs.html')
 				<!-- / tariffs -->

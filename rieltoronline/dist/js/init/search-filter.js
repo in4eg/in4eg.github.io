@@ -63,8 +63,8 @@ document.addEventListener('DOMContentLoaded', function(){
 			setCounter(item, item.querySelectorAll('mark').length)
 		};
 
-		let allListItems = item.closest('ul').querySelectorAll('li');
-		let hiddenListItems = item.closest('ul').querySelectorAll('.hidden');
+		let allListItems = item.closest('.filter-parent').querySelectorAll('.filter-item');
+		let hiddenListItems = item.closest('.filter-parent').querySelectorAll('.hidden');
 
 		if (hiddenListItems.length >= allListItems.length) {
 			alertMessageToggle(true);

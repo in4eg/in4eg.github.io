@@ -66,6 +66,7 @@
 .image-section {
 	font-size: 0;
 	overflow: hidden;
+	max-height: 400px;
 
 	img {
 		width: 100%;
@@ -105,7 +106,7 @@
 	.title-with-link {
 		display: flex;
 		justify-content: space-between;
-		align-items: end;
+		align-items: anchor-center;
 		margin-bottom: 56px;
 
 		.title-group {

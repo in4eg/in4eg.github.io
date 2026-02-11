@@ -2,7 +2,8 @@
 
 .popup {
 	$popup-background-color: rgba($color-dark, .5);
-	$popup-inner-background-color: $color-white;
+	$popup-inner-background-color: $color-cultured;
+	$popup-inner-border-color: $color-platinum;
 	$popup-inner-color: $color-dark;
 	$close-popup-color: $color-dark;
 	$close-popup-hover: $close-button-hover;
@@ -55,6 +56,7 @@
 		background: transparent;
 		text-align: left;
 		background-color: $popup-inner-background-color;
+		border: 1px solid $popup-inner-border-color;
 		color: $popup-inner-color;
 		font-size: 13px;
 		white-space: normal;
@@ -130,7 +132,7 @@
 			color: $color-primary;
 			padding-left: 24px;
 			position: relative;
-			margin-bottom: 40px;
+			padding-right: 40px;
 
 			&:before {
 				content: '';
@@ -152,5 +154,16 @@
 
 	.inner {
 		max-width: 1400px;
+	}
+}
+
+
+@media (max-width: 640px) {
+
+	.popup {
+
+		.header {
+			margin-bottom: 24px;
+		}
 	}
 }

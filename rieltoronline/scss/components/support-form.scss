@@ -1,0 +1,26 @@
+@import '../variables.scss';
+
+.form.support-form {
+
+	.paragraph {
+		margin: 24px 0;
+	}
+
+	.form-group {
+		margin-bottom: 8px;
+	}
+
+	.buttons-group {
+		margin-top: 24px;
+	}
+}
+
+@media (max-width: 640px) {
+
+	.form.support-form {
+
+		.buttons-group {
+			flex-direction: column;
+		}
+	}
+}

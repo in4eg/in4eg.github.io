@@ -1,5 +1,9 @@
 @import '../variables.scss';
 
+.tariff-header {
+	margin-bottom: 48px;
+}
+
 .tariffs-cards {
 	display: flex;
 	gap: $column-gap;
@@ -236,6 +240,14 @@
 }
 
 @media (max-width: 993px) {
+
+	.tariff-header {
+		margin-bottom: 32px;
+
+		.mobile-cover {
+			margin-top: 32px;
+		}
+	}
 
 	.tariffs-cards {
 		flex-direction: column;

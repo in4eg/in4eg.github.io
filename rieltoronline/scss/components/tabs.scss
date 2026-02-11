@@ -10,6 +10,7 @@
 	border-radius: 100px;
 	padding: $tabs-padding;
 	font-size: 0;
+	display: inline-block;
 
 	.tab-button {
 		display: inline-block;
@@ -64,6 +65,8 @@
 		height: $tab-height;
 		border-radius: 100px;
 		transition: .2s;
+		left: 3px; top: auto;
+		min-width: 100px;
 
 		&.hovered {
 			background-color: $color-primary;
@@ -102,6 +105,11 @@
 			padding-right: 16px;
 			font-size: 12px;
 		}
+
+		.tab-fader {
+			min-width: 85px;
+		}
+
 	}
 }
 

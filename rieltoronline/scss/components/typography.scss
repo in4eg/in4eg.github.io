@@ -84,6 +84,14 @@ mark {
 	&.bold {
 		font-weight: 700;
 	}
+
+	&.spaced-bottom {
+		margin-bottom: 24px;
+	}
+
+	&.spaced-top {
+		margin-top: 24px;
+	}
 }
 
 .block-link {

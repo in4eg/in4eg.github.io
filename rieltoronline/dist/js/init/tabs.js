@@ -1,4 +1,3 @@
-// tabs
 class Tabs {
 	constructor(navEl, options = {}) {
 		this.nav = navEl;
@@ -9,7 +8,7 @@ class Tabs {
 			activeClassContent: options.activeClassContent || 'active',
 		};
 
-		this.containerSelector = this.nav.dataset.tabsContainer || null;
+		this.containerSelector = this.nav.getAttribute('data-filter-items') || this.nav.getAttribute('data-tabs-container');
 		this.buttons = Array.from(this.nav.querySelectorAll(this.opts.tabBtnSelector));
 		this.fader = this.nav.querySelector(this.opts.faderSelector);
 
@@ -20,14 +19,13 @@ class Tabs {
 	}
 
 	init() {
-		if (!this.containerSelector) return;
+		if (this.buttons.length === 0) return;
 
 		this.buttons.forEach((btn, index) => {
 			const handler = (e) => {
-				e.preventDefault();
 				this.toggleTo(index, btn);
 			};
-			btn.addEventListener('click', handler, false);
+			btn.addEventListener('click', handler);
 			this._handlers.push({ btn, handler });
 		});
 
@@ -35,15 +33,12 @@ class Tabs {
 			0,
 			this.buttons.findIndex((b) => b.classList.contains(this.opts.activeClassBtn))
 		);
-		this.toggleTo(initialIndex, this.buttons[initialIndex]);
+		
+		setTimeout(() => {
+			this.toggleTo(initialIndex, this.buttons[initialIndex]);
+		}, 60);
 
 		window.addEventListener('resize', this._onResize, { passive: true });
-	}
-
-	destroy() {
-		this._handlers.forEach(({ btn, handler }) => btn.removeEventListener('click', handler));
-		this._handlers = [];
-		window.removeEventListener('resize', this._onResize);
 	}
 
 	toggleTo(index, button) {
@@ -57,26 +52,27 @@ class Tabs {
 	}
 
 	_setFaderSize(button) {
-		if (!this.fader || !button || !button.parentElement) return;
-		const rect = button.getBoundingClientRect();
-		const parentRect = button.parentElement.getBoundingClientRect();
+		if (!this.fader || !button) return;
 
-		this.fader.style.width = rect.width + 'px';
-		this.fader.style.height = rect.height + 'px';
-		this.fader.style.left = rect.left - parentRect.left + 'px';
-		this.fader.style.top = rect.top - parentRect.top - 1 + 'px';
+		const width = button.offsetWidth;
+		const left = button.offsetLeft - 3;
+
+		this.fader.style.width = `${width}px`;
+		this.fader.style.transform = `translateX(${left}px)`;
 	}
 
 	_setActiveTab(index) {
 		if (!this.containerSelector) return;
-		const container = document.querySelector(this.containerSelector);
+		const container = document.getElementById(this.containerSelector) || document.querySelector(this.containerSelector);
 		if (!container) return;
 
 		const allTabContent = Array.from(container.querySelectorAll('.tab-content'));
-		allTabContent.forEach((el) => el.classList.remove(this.opts.activeClassContent));
+		if (allTabContent.length === 0) return;
 
-		const current = allTabContent[index];
-		if (current) current.classList.add(this.opts.activeClassContent);
+		allTabContent.forEach((el) => el.classList.remove(this.opts.activeClassContent));
+		if (allTabContent[index]) {
+			allTabContent[index].classList.add(this.opts.activeClassContent);
+		}
 	}
 
 	_onResize() {
@@ -85,11 +81,8 @@ class Tabs {
 	}
 
 	static initAll(options) {
-		const instances = [];
-		document.querySelectorAll('[data-tabs-container]').forEach((nav) => {
-			instances.push(new Tabs(nav, options));
-		});
-		return instances;
+		const selectors = '.simple-tags, [data-tabs-container], .tabs';
+		return Array.from(document.querySelectorAll(selectors)).map(nav => new Tabs(nav, options));
 	}
 }
 

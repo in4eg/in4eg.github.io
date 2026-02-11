@@ -27,9 +27,17 @@ document.addEventListener('DOMContentLoaded', function(){
 		allDropdownButtons[i].addEventListener('click', dropdownToggle, false);
 	};
 
-	document.addEventListener("click", function (e) {
-		if (!e.target.closest('[data-dropdown]')) {
-			closeAllDropdowns();
-		};
+	document.addEventListener("DOMContentLoaded", function(){
+
+		let dropdownInners = document.querySelectorAll('.dropdown-inner');
+
+		dropdownInners.forEach(inner => {
+			inner.addEventListener('click', function(e){
+				e.stopPropagation();
+			});
+		});
+
 	});
+
+
 });

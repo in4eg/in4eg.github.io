@@ -7,6 +7,7 @@
 
 	.userpic {
 		height: 120px; width: 120px;
+		min-width: 120px;
 		border-radius: 50%;
 		overflow: hidden;
 		position: relative;
@@ -18,6 +19,7 @@
 			top: 0; left: 0;
 			bottom: 0; right: 0;
 			height: 120px; width: 120px;
+			overflow: hidden;
 		}
 
 		img {
@@ -102,6 +104,7 @@
 
 		.userpic {
 			width: 100px; height: 100px;
+			min-width: 100px;
 
 			.icon {
 				height: 60px; width: 60px;
@@ -121,6 +124,7 @@
 
 		.userpic {
 			width: 80px; height: 80px;
+			min-width: 80px;
 
 			[data-upload] {
 				width: 80px; height: 80px;
@@ -142,6 +146,7 @@
 
 		.userpic {
 			width: 64px; height: 64px;
+			min-width: 64px;
 
 			[data-upload] {
 				width: 64px; height: 64px;
@@ -161,6 +166,7 @@
 
 		.userpic {
 			width: 48px; height: 48px;
+			min-width: 48px;
 
 			[data-upload] {
 				width: 48px; height: 48px;

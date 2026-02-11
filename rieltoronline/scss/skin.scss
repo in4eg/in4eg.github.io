@@ -126,7 +126,7 @@ img.adaptive {
 
 .hr {
 	border: none;
-	background: rgba(255,255,255,.1);
+	background: $color-light-silver;
 	height: 1px;
 	margin: 24px 0;
 }
@@ -232,22 +232,29 @@ html::-webkit-scrollbar-thumb:hover { background-color: rgba(87,111,128,1); }
 }
 
 
+@media (max-width: 993px) {
+
+	.spaced-top-sm {
+		margin-top: 32px;
+	}
+}
+
 @media (max-width: 768px) {
 
 	.visible-sm {
-		display: block;
+		display: block!important;
 	}
 	.hidden-sm {
-		display: none;
+		display: none!important;
 	}
 }
 
 @media (min-width: 769px) {
 
 	.hidden-sm {
-		display: block;
+		display: block!important;
 	}
 	.visible-sm {
-		display: none;
+		display: none!important;
 	}
 }

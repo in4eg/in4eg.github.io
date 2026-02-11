@@ -870,30 +870,33 @@ document.addEventListener('DOMContentLoaded', () => {
 
 	// ================= Header (іконка у шапці) =================
 	class FavHeaderNav {
-		constructor(store, { headerSelector = '#favButton' } = {}) {
+		constructor(store, { headerSelector = '[data-fav-button]' } = {}) {
 			this.store = store;
-			this.el = document.querySelector(headerSelector);
+			this.els = document.querySelectorAll(headerSelector);
 			this.badge = null;
 			this.unsubscribe = this.store.onChange(({ count }) => this.render(count));
 			this.render(this.store.count());
 		}
 		render(count) {
-			if (!this.el) return;
-			if (!this.badge) {
-				this.badge = this.el.querySelector('.counter');
-				if (!this.badge) {
-					this.badge = document.createElement('span');
-					this.badge.className = 'counter';
-					this.el.appendChild(this.badge);
+			if (!this.els.length) return;
+
+			this.els.forEach(el => {
+				let badge = el.querySelector('.counter');
+
+				if (!badge) {
+					badge = document.createElement('span');
+					badge.className = 'counter';
+					el.appendChild(badge);
 				}
-			}
-			if (count > 0) {
-				this.badge.textContent = String(count);
-				this.badge.style.display = '';
-			} else {
-				this.badge.textContent = '';
-				this.badge.style.display = 'none';
-			}
+
+				if (count > 0) {
+					badge.textContent = String(count);
+					badge.style.display = '';
+				} else {
+					badge.textContent = '';
+					badge.style.display = 'none';
+				}
+			});
 		}
 	}
 
@@ -1009,7 +1012,7 @@ document.addEventListener('DOMContentLoaded', () => {
 	document.addEventListener('DOMContentLoaded', () => {
 		const store = new FavStore('favourites');
 		new FavCards(store, { rootSelector: 'body', itemSelector: '.item' });
-		new FavHeaderNav(store, { headerSelector: '#favButton' });
+		new FavHeaderNav(store, { headerSelector: '[data-fav-button]' });
 		new FavSectionHeader(store, {
 			containerSelector : '#favHeader',
 			counterSelector   : '.h2-title .counter',
@@ -1088,7 +1091,6 @@ class ToggleHandler {
 		this.overlayClass = overlayClass;
 		this.delay = delay;
 
-		this.buttons = Array.from(document.querySelectorAll(this.btnSelector));
 		this._onClick = this._onClick.bind(this);
 		this._onResize = this._onResize.bind(this);
 
@@ -1096,17 +1098,16 @@ class ToggleHandler {
 	}
 
 	init() {
-		this.buttons.forEach(btn => {
-			btn.addEventListener('click', this._onClick, false);
-		});
+		document.addEventListener('click', this._onClick);
 		window.addEventListener('resize', this._onResize, { passive: true });
 	}
 
 	_onClick(e) {
-		const button = e.currentTarget;
+		const button = e.target.closest(this.btnSelector);
+		if (!button) return;
+
 		const targetSelector = button.getAttribute('data-toggle');
 		const target = document.querySelector(targetSelector);
-
 		if (!target) return;
 
 		const isActive = target.classList.contains(this.activeClass);
@@ -1116,8 +1117,8 @@ class ToggleHandler {
 			button.classList.add(this.openedClass);
 
 			if (window.innerWidth <= 768) {
-				document.documentElement.classList.add(this.overlayClass); // html
-				document.body.classList.add(this.overlayClass);           // body
+				document.documentElement.classList.add(this.overlayClass);
+				document.body.classList.add(this.overlayClass);
 			}
 
 			setTimeout(() => {
@@ -1639,11 +1640,19 @@ document.addEventListener('DOMContentLoaded', function(){
 		allDropdownButtons[i].addEventListener('click', dropdownToggle, false);
 	};
 
-	document.addEventListener("click", function (e) {
-		if (!e.target.closest('[data-dropdown]')) {
-			closeAllDropdowns();
-		};
+	document.addEventListener("DOMContentLoaded", function(){
+
+		let dropdownInners = document.querySelectorAll('.dropdown-inner');
+
+		dropdownInners.forEach(inner => {
+			inner.addEventListener('click', function(e){
+				e.stopPropagation();
+			});
+		});
+
 	});
+
+
 });
 (function(){
 	function isImage(file) {
@@ -3322,6 +3331,245 @@ document.addEventListener('DOMContentLoaded', function(){
 		};
 	});
 });
+document.addEventListener("DOMContentLoaded", function () {
+
+	let notificationJson = JSON.stringify([
+		{
+			"title": "Повідомлення на розгляді",
+			"message": "Дякуємо! Ваше повідомлення прийнято та буде розглянуто найближчим часом",
+			"status": "progress",
+			"readed": false,
+			"object": {
+				"id": 1213,
+				"title": "ЖК Рідний дім",
+				"address": "Вулиця Всеволода Змієнка, будинок 34/21"
+			}
+		},
+		{
+			"title": "Повідомлення розглянуто",
+			"message": "Вам буде повернуто 1 перегляд протягом 24 годин",
+			"status": "success",
+			"readed": false,
+			"object": {
+				"id": 1222,
+				"title": "ЖК Республіка",
+				"address": "Вулиця Всеволода Змієнка, будинок 34/21"
+			}
+		},
+		{
+			"title": "Повідомлення розглянуто",
+			"message": "Перегляд повернуто не буде. Об'єкт доступний",
+			"status": "declined",
+			"readed": false,
+			"object": {
+				"id": 1233,
+				"title": "ЖК Рівер Таун",
+				"address": "Вулиця Всеволода Змієнка, будинок 34/21"
+			}
+		},
+		{
+			"title": "Замовлення успішно оплачено",
+			"message": "Доступно 1 перегляд на 30 днів. Тариф \"Старт\"",
+			"status": "success",
+			"readed": true,
+			"object": null
+		}
+	]);
+
+	class Notification {
+		constructor(data) {
+			this.title = data.title;
+			this.message = data.message;
+			this.status = data.status;
+			this.readed = data.readed;
+			this.object = data.object;
+		}
+		markAsRead() {
+			this.readed = true;
+		}
+	}
+
+	class NotificationManager {
+		constructor(jsonString) {
+			const parsed = JSON.parse(jsonString);
+			this.notifications = parsed.map(item => new Notification(item));
+		}
+		getAll() {
+			return this.notifications;
+		}
+		getUnread() {
+			return this.notifications.filter(n => !n.readed);
+		}
+		markAsRead(notification) {
+			notification.markAsRead();
+		}
+		markAllAsRead() {
+			this.notifications.forEach(n => n.markAsRead());
+		}
+	}
+
+	const manager = new NotificationManager(notificationJson);
+
+	const listEl = document.querySelector(".notifications .inner");
+	const counterEl = document.querySelector(".notifications .counter");
+	const bellBtn = document.querySelector(".favourites-link.round-link");
+	const markAllBtn = document.getElementById("markAllReadBtn");
+
+	let readQueue = [];
+	let readTimeout = null;
+
+	function queueNotificationRead(notification) {
+
+		const id = notification.object?.id || notification.title;
+
+		if (!readQueue.includes(id)) {
+			readQueue.push(id);
+		}
+
+		if (readTimeout) clearTimeout(readTimeout);
+
+		readTimeout = setTimeout(() => {
+			flushReadQueue();
+		}, 800);
+	}
+
+	function flushReadQueue() {
+
+		if (readQueue.length === 0) return;
+
+		const ids = [...readQueue];
+		readQueue = [];
+
+		console.log("SEND BATCH TO BACKEND:", ids);
+
+		fetch("/api/notifications/read", {
+			method: "POST",
+			headers: { "Content-Type": "application/json" },
+			body: JSON.stringify({ ids: ids })
+		}).catch(err => console.error(err));
+	}
+
+	function renderNotifications() {
+
+		if (!listEl) return;
+
+		listEl.innerHTML = "";
+
+		const all = manager.getAll();
+
+		if (all.length === 0) {
+			listEl.innerHTML = `<div class="empty-message">Сповіщень немає</div>`;
+		} else {
+
+			all.forEach(n => {
+
+				const item = document.createElement("div");
+				item.className = `notification-item ${n.status}`;
+				if (n.readed) item.classList.add("readed");
+
+				item.innerHTML = `
+					<div class="title-cover">
+						<div class="title">${n.title}</div>
+						<span class="button-icon">
+							<i class="icon ${getIcon(n.status)}"></i>
+						</span>
+					</div>
+					${n.object ? renderObject(n.object) : ""}
+					<div class="text">${n.message}</div>
+				`;
+
+				item.addEventListener("click", function (e) {
+
+					e.stopPropagation();
+
+					if (!n.readed) {
+						manager.markAsRead(n);
+						queueNotificationRead(n);
+						renderNotifications();
+					}
+
+				});
+
+				listEl.appendChild(item);
+			});
+		}
+
+		updateCounter();
+	}
+
+	function updateCounter() {
+
+		if (!counterEl || !bellBtn || !markAllBtn) return;
+
+		const unread = manager.getUnread().length;
+
+		if (unread > 0) {
+			counterEl.style.display = "inline-block";
+			counterEl.textContent = unread;
+			bellBtn.classList.add("active");
+			markAllBtn.classList.remove("disabled");
+		} else {
+			counterEl.style.display = "none";
+			bellBtn.classList.remove("active");
+			markAllBtn.classList.add("disabled");
+		}
+	}
+
+
+	function renderObject(object) {
+		return `
+			<div class="object-preview horizontal smaller filter-item">
+				<figure class="object-image">
+					<img src="img/temp/obj1.jpg" draggable="false" alt="">
+				</figure>
+				<div class="caption">
+					<h3 class="item-title object-title">${object.title} (id:${object.id})</h3>
+					<div class="description">
+						<div class="line item-description">${object.address}</div>
+					</div>
+				</div>
+			</div>
+		`;
+	}
+
+	function getIcon(status) {
+		switch (status) {
+			case "success": return "icon-check";
+			case "progress": return "icon-refresh";
+			case "declined": return "icon-cross";
+			default: return "icon-bell";
+		}
+	}
+
+	if (markAllBtn) {
+
+		markAllBtn.addEventListener("click", function (e) {
+			e.stopPropagation();
+			const unreadNotifications = manager.getUnread();
+
+			if (unreadNotifications.length === 0) return;
+
+			manager.markAllAsRead();
+
+			const ids = unreadNotifications.map(n => n.object?.id || n.title);
+
+			console.log("SEND READ ALL:", ids);
+
+			fetch("/api/notifications/read-all", {
+				method: "POST",
+				headers: { "Content-Type": "application/json" },
+				body: JSON.stringify({ ids: ids })
+			}).catch(err => console.error(err));
+
+			renderNotifications();
+
+		});
+	}
+
+	renderNotifications();
+
+});
+
 class PopupWindow {
 	constructor({
 		popupSelector = '.popup',
@@ -3342,58 +3590,44 @@ class PopupWindow {
 		this.showedClass = showedClass;
 		this.delay = delay;
 
-		this._onCloseClick = this._onCloseClick.bind(this);
-		this._onPopupClick = this._onPopupClick.bind(this);
-		this._onCallClick = this._onCallClick.bind(this);
-		this._onDissmissClick = this._onDissmissClick.bind(this);
-
 		this.init();
 	}
 
 	init() {
-		document.querySelectorAll(this.closeSelector).forEach(btn => {
-			btn.addEventListener('click', this._onCloseClick);
+		// Використовуємо делегування подій на рівні документа
+		document.addEventListener('click', (e) => {
+			// 1. Клік по кнопці виклику (навіть якщо вона була display: none)
+			const callBtn = e.target.closest(this.callSelector);
+			if (callBtn) {
+				e.preventDefault();
+				this.show(callBtn.dataset.call);
+				return;
+			}
+
+			// 2. Клік по кнопці закриття всередині попапу
+			const closeBtn = e.target.closest(this.closeSelector);
+			if (closeBtn) {
+				e.preventDefault();
+				const popup = closeBtn.closest(this.popupSelector);
+				if (popup) this.hide(popup);
+				return;
+			}
+
+			// 3. Клік по кнопці "dissmiss"
+			const dissmissBtn = e.target.closest(this.dissmissSelector);
+			if (dissmissBtn) {
+				e.preventDefault();
+				const target = document.querySelector(dissmissBtn.dataset.dissmiss);
+				if (target) this.hide(target);
+				return;
+			}
+
+			// 4. Клік по фону попапу (overlay)
+			const popup = e.target.closest(this.popupSelector);
+			if (popup && !e.target.closest('.inner')) {
+				this.hide(popup);
+			}
 		});
-
-		document.querySelectorAll(this.popupSelector).forEach(popup => {
-			popup.addEventListener('click', (e) => this._onPopupClick(e, popup));
-		});
-
-		document.querySelectorAll(this.callSelector).forEach(btn => {
-			btn.addEventListener('click', this._onCallClick);
-		});
-
-		document.querySelectorAll(this.dissmissSelector).forEach(btn => {
-			btn.addEventListener('click', this._onDissmissClick);
-		});
-	}
-
-	_onCloseClick(e) {
-		e.preventDefault();
-		const popup = e.currentTarget.closest(this.popupSelector);
-		if (popup) this.hide(popup);
-	}
-
-	_onPopupClick(e, popup) {
-		if (!e.target.closest('.inner')) {
-			e.preventDefault();
-			this.hide(popup);
-		}
-	}
-
-	_onCallClick(e) {
-		e.preventDefault();
-		const target = e.currentTarget.dataset.call;
-		if (target) this.show(target);
-	}
-
-	_onDissmissClick(e) {
-		e.preventDefault();
-		const target = e.currentTarget.dataset.dissmiss;
-		if (!target) return;
-
-		const popup = document.querySelector(target);
-		if (popup) this.hide(popup);
 	}
 
 	show(popupId) {
@@ -3402,16 +3636,18 @@ class PopupWindow {
 
 		popup.classList.add(this.showedClass);
 
-		document.body.style.width = window.getComputedStyle(document.body).width;
+		// Фіксація ширини, щоб сторінка не "стрибала" при приховуванні скролу
+		const scrollBarWidth = window.innerWidth - document.documentElement.clientWidth;
+		document.body.style.paddingRight = scrollBarWidth + 'px';
+		
 		const header = document.getElementById('mainHeader');
-		if (header) header.style.width = window.getComputedStyle(header).width;
+		if (header) header.style.paddingRight = scrollBarWidth + 'px';
 
 		document.body.classList.add(this.overlayClass);
 		document.documentElement.classList.add(this.overlayClass);
 
 		setTimeout(() => {
 			popup.classList.add(this.activeClass);
-
 			if (popup.dataset.onopen && typeof window[popup.dataset.onopen] === 'function') {
 				window[popup.dataset.onopen](popup);
 			}
@@ -3419,17 +3655,19 @@ class PopupWindow {
 	}
 
 	hide(popup) {
-		document.body.classList.remove(this.overlayClass);
-		document.documentElement.classList.remove(this.overlayClass);
-		document.body.style.width = '';
-
-		const header = document.getElementById('mainHeader');
-		if (header) header.style.width = '';
-
 		popup.classList.remove(this.activeClass);
 
 		setTimeout(() => {
 			popup.classList.remove(this.showedClass);
+			// Прибираємо overlay тільки якщо немає інших відкритих попапів
+			const activePopups = document.querySelectorAll(`${this.popupSelector}.${this.activeClass}`);
+			if (activePopups.length === 0) {
+				document.body.classList.remove(this.overlayClass);
+				document.documentElement.classList.remove(this.overlayClass);
+				document.body.style.paddingRight = '';
+				const header = document.getElementById('mainHeader');
+				if (header) header.style.paddingRight = '';
+			}
 
 			if (popup.dataset.onclose && typeof window[popup.dataset.onclose] === 'function') {
 				window[popup.dataset.onclose](popup);
@@ -3440,8 +3678,8 @@ class PopupWindow {
 
 document.addEventListener('DOMContentLoaded', () => {
 	window.popupWindow = new PopupWindow();
+	// window.popupWindow.show('#supportPopup');
 });
-
 class DualRange {
 	constructor(group) {
 		this.group = group;
@@ -3635,8 +3873,8 @@ document.addEventListener('DOMContentLoaded', function(){
 			setCounter(item, item.querySelectorAll('mark').length)
 		};
 
-		let allListItems = item.closest('ul').querySelectorAll('li');
-		let hiddenListItems = item.closest('ul').querySelectorAll('.hidden');
+		let allListItems = item.closest('.filter-parent').querySelectorAll('.filter-item');
+		let hiddenListItems = item.closest('.filter-parent').querySelectorAll('.hidden');
 
 		if (hiddenListItems.length >= allListItems.length) {
 			alertMessageToggle(true);
@@ -4102,7 +4340,6 @@ document.addEventListener('DOMContentLoaded', function(){
 
 
 
-// tabs
 class Tabs {
 	constructor(navEl, options = {}) {
 		this.nav = navEl;
@@ -4113,7 +4350,7 @@ class Tabs {
 			activeClassContent: options.activeClassContent || 'active',
 		};
 
-		this.containerSelector = this.nav.dataset.tabsContainer || null;
+		this.containerSelector = this.nav.getAttribute('data-filter-items') || this.nav.getAttribute('data-tabs-container');
 		this.buttons = Array.from(this.nav.querySelectorAll(this.opts.tabBtnSelector));
 		this.fader = this.nav.querySelector(this.opts.faderSelector);
 
@@ -4124,14 +4361,13 @@ class Tabs {
 	}
 
 	init() {
-		if (!this.containerSelector) return;
+		if (this.buttons.length === 0) return;
 
 		this.buttons.forEach((btn, index) => {
 			const handler = (e) => {
-				e.preventDefault();
 				this.toggleTo(index, btn);
 			};
-			btn.addEventListener('click', handler, false);
+			btn.addEventListener('click', handler);
 			this._handlers.push({ btn, handler });
 		});
 
@@ -4139,15 +4375,12 @@ class Tabs {
 			0,
 			this.buttons.findIndex((b) => b.classList.contains(this.opts.activeClassBtn))
 		);
-		this.toggleTo(initialIndex, this.buttons[initialIndex]);
+		
+		setTimeout(() => {
+			this.toggleTo(initialIndex, this.buttons[initialIndex]);
+		}, 60);
 
 		window.addEventListener('resize', this._onResize, { passive: true });
-	}
-
-	destroy() {
-		this._handlers.forEach(({ btn, handler }) => btn.removeEventListener('click', handler));
-		this._handlers = [];
-		window.removeEventListener('resize', this._onResize);
 	}
 
 	toggleTo(index, button) {
@@ -4161,26 +4394,27 @@ class Tabs {
 	}
 
 	_setFaderSize(button) {
-		if (!this.fader || !button || !button.parentElement) return;
-		const rect = button.getBoundingClientRect();
-		const parentRect = button.parentElement.getBoundingClientRect();
+		if (!this.fader || !button) return;
 
-		this.fader.style.width = rect.width + 'px';
-		this.fader.style.height = rect.height + 'px';
-		this.fader.style.left = rect.left - parentRect.left + 'px';
-		this.fader.style.top = rect.top - parentRect.top - 1 + 'px';
+		const width = button.offsetWidth;
+		const left = button.offsetLeft - 3;
+
+		this.fader.style.width = `${width}px`;
+		this.fader.style.transform = `translateX(${left}px)`;
 	}
 
 	_setActiveTab(index) {
 		if (!this.containerSelector) return;
-		const container = document.querySelector(this.containerSelector);
+		const container = document.getElementById(this.containerSelector) || document.querySelector(this.containerSelector);
 		if (!container) return;
 
 		const allTabContent = Array.from(container.querySelectorAll('.tab-content'));
-		allTabContent.forEach((el) => el.classList.remove(this.opts.activeClassContent));
+		if (allTabContent.length === 0) return;
 
-		const current = allTabContent[index];
-		if (current) current.classList.add(this.opts.activeClassContent);
+		allTabContent.forEach((el) => el.classList.remove(this.opts.activeClassContent));
+		if (allTabContent[index]) {
+			allTabContent[index].classList.add(this.opts.activeClassContent);
+		}
 	}
 
 	_onResize() {
@@ -4189,18 +4423,57 @@ class Tabs {
 	}
 
 	static initAll(options) {
-		const instances = [];
-		document.querySelectorAll('[data-tabs-container]').forEach((nav) => {
-			instances.push(new Tabs(nav, options));
-		});
-		return instances;
+		const selectors = '.simple-tags, [data-tabs-container], .tabs';
+		return Array.from(document.querySelectorAll(selectors)).map(nav => new Tabs(nav, options));
 	}
 }
 
 document.addEventListener('DOMContentLoaded', () => {
 	window.TabsInstances = Tabs.initAll();
 });
+class TagFilter {
+	filterAttribute = 'data-tag-link'; 
+	filteredItemAttribute = 'data-tag';
 
+	constructor(filterGroup) {
+		const targetId = filterGroup.dataset.filterItems;
+		this.tagsParent = document.getElementById(targetId);
+		if (!this.tagsParent) return;
+
+		this.filterButtons = Array.from(filterGroup.querySelectorAll(`[${this.filterAttribute}]`));
+		this.filterButtons.forEach((btn) => {
+			btn.addEventListener('click', () => this.applyFilter(btn));
+		});
+	}
+
+	applyFilter(clickedButton) {
+		const filterValue = clickedButton.getAttribute(this.filterAttribute);
+		const items = this.tagsParent.querySelectorAll('.tag-item-cover');
+
+		items.forEach((item) => {
+			const itemTag = item.getAttribute(this.filteredItemAttribute);
+
+			if (filterValue === 'all' || itemTag === filterValue) {
+				item.style.display = '';
+				item.classList.add('visible');
+			} else {
+				item.style.display = 'none';
+				item.classList.remove('visible');
+			}
+		});
+
+		this.toggleButtonClass(clickedButton);
+	}
+
+	toggleButtonClass(activeButton) {
+		this.filterButtons.forEach((btn) => btn.classList.remove('active'));
+		activeButton.classList.add('active');
+	}
+}
+
+document.querySelectorAll("[data-filter-items]").forEach(group => {
+	new TagFilter(group);
+});
 document.addEventListener('DOMContentLoaded', () => {
 	document.querySelectorAll('.filters-cover').forEach(cover => {
 		const tagList = cover.querySelector('.tag-list');
@@ -4350,7 +4623,7 @@ window.addEventListener("DOMContentLoaded", function() {
 			
 			if (!hasErrors && !isDisabled) {
 				console.log('no errors')
-				this.submitFormData(); // Викликаємо новий метод для відправки
+				this.submitFormData();
 			} else {
 				const firstError = this.form.querySelector(`.${this.classes.error}`);
 				if (firstError) {
@@ -4396,51 +4669,11 @@ window.addEventListener("DOMContentLoaded", function() {
 
 		submitFormData() {
 			const formData = new FormData(this.form);
-			const recipientEmail = this.form.dataset.mail;
-
 			console.log(formData)
-
-			if (!recipientEmail) {
-				console.error('Recipient email not specified in data-mail attribute.');
-				return;
+			// Викликаємо глобальну функцію, якщо вона існує
+			if (typeof window.onFormSubmit === 'function') {
+				window.onFormSubmit();
 			}
-
-			formData.append('action', 'submit_form_data'); 
-			formData.append('recipient_email', recipientEmail); 
-
-			formData.append('_ajax_nonce', ajax_object.nonce);
-
-			this.form.classList.add('loading'); 
-
-			// *** ЗМІНЕНО: Використовуємо глобальну змінну, створену через wp_localize_script ***
-			fetch(ajax_object.ajax_url, { 
-				method: 'POST',
-				body: formData,
-			})
-			.then(response => response.json())
-			.then(data => {
-				this.form.classList.remove('loading');
-				const feedbackEl = this.form.parentElement.querySelector('.form-feedback');
-				console.log(data)
-				if (data.success) {
-					this.form.reset();
-					if (feedbackEl) {
-						feedbackEl.innerHTML = 'Дякуємо! Ваше повідомлення надіслано.';
-					}
-				} else {
-					if (feedbackEl) {
-						feedbackEl.innerHTML = `Помилка: ${data.data || 'Не вдалося надіслати повідомлення.'}`;
-					}
-				}
-			})
-			.catch(error => {
-				this.form.classList.remove('loading');
-				console.error('Error:', error);
-				const feedbackEl = this.form.parentElement.querySelector('.form-feedback');
-				if (feedbackEl) {
-						 feedbackEl.innerHTML = `Виникла помилка з'єднання. Спробуйте пізніше.`;
-				}
-			});
 		}
 
 		// FIX: нормальний обробник введення для input/textarea/select
@@ -4600,6 +4833,28 @@ window.addEventListener("DOMContentLoaded", function() {
 					formCheckbox.addEventListener('change', this.onCheckboxChange.bind({_this: this, checkbox: formCheckbox}), {passive: true});
 				}
 			}
+
+			const inputs = document.querySelectorAll('.number-single-input');
+
+			inputs.forEach((input, index) => {
+				input.addEventListener('input', (e) => {
+					if (input.value.length > 1) {
+						input.value = input.value.slice(0, 1);
+					}
+
+					if (input.value.length === 1 && index < inputs.length - 1) {
+						inputs[index + 1].focus();
+					}
+				});
+
+				input.addEventListener('keydown', (e) => {
+					if (e.key === 'Backspace' && input.value === '' && index > 0) {
+						inputs[index - 1].focus();
+					}
+				});
+			});
+
+
 		};
 	};
 
@@ -4621,3 +4876,29 @@ window.addEventListener("DOMContentLoaded", function() {
 		}
 	}
 });
+
+// для radio-area
+document.addEventListener('change', function (e) {
+	if (!e.target.matches('input[type="radio"][name="option"]')) return;
+
+	const textareaGroup = document.querySelector('.radio-area .textarea-group');
+	const textarea = document.querySelector('.radio-area textarea');
+
+	if (!textareaGroup || !textarea) return;
+
+	const checkedRadio = document.querySelector('input[name="option"]:checked');
+
+	if (checkedRadio && checkedRadio.value === 'option9') {
+		textareaGroup.classList.remove('disabled');
+		textarea.removeAttribute('disabled');
+
+		setTimeout(() => {
+			textarea.focus();
+		}, 0);
+	} else {
+		textareaGroup.classList.add('disabled');
+		textarea.setAttribute('disabled', 'disabled');
+		textarea.blur();
+	}
+});
+

@@ -12,10 +12,18 @@
 		position: relative;
 		align-self: stretch;
 
+		.tariff-active {
+			left: 24px;
+		}
+
 		&:nth-child(4n + 1) {
 
 			.spaced-inner {
 				padding-left: 0;
+			}
+
+			.tariff-active {
+				left: 16px;
 			}
 		}
 
@@ -95,6 +103,16 @@
 		top: 24px; left: 16px;
 	}
 
+	.tariff-active {
+		background-color: $color-secondary;
+		padding: 4px 16px;
+		font-size: var(--font-size-small);
+		display: inline-block;
+		position: absolute;
+		top: -14px;
+		z-index: 2;
+	}
+
 	.spaced-inner {
 		padding: 0 12px;
 
@@ -133,7 +151,6 @@
 	}
 }
 
-
 .object-preview.horizontal.smaller {
 	display: flex;
 	gap: 16px;
@@ -147,6 +164,12 @@
 	.object-image {
 		padding-top: 0;
 		height: 100px; width: 150px;
+		min-width: 150px;
+	}
+
+	.object-image:before {
+		bottom: 8px; right: 8px;
+		height: 40px; width: 40px;
 	}
 
 	.object-title,
@@ -155,10 +178,31 @@
 		line-height: 1.42;
 	}
 
+	.badge {
+		font-size: 0;
+		height: 32px; width: 32px;
+		padding: 0;
+		top: 8px; left: 8px;
+
+		&:before {
+			left: 3px; top: 0;
+		}
+	}
+
 	&:hover {
 
 		.object-title {
 			color: $color-primary;
+		}
+	}
+}
+
+@media (max-width: 1440px) {
+
+	.object-preview.horizontal.smaller {
+
+		.badge {
+			height: 26px; width: 25px;
 		}
 	}
 }
@@ -172,6 +216,10 @@
 		.item {
 			flex-basis: calc(100%/3);
 
+			.tariff-active {
+				left: 24px;
+			}
+
 			&:nth-child(4n) {
 
 				.spaced-inner {
@@ -181,12 +229,20 @@
 				.button.round-link {
 					right: 24px;
 				}
+
+				.tariff-active {
+					left: 24px;
+				}
 			}
 
 			&:nth-child(4n + 1) {
 
 				.spaced-inner {
 					padding-left: 12px;
+				}
+
+				.tariff-active {
+					left: 24px;
 				}
 			}
 
@@ -195,6 +251,10 @@
 				.spaced-inner {
 					padding-left: 0;
 					padding-right: 12px;
+				}
+
+				.tariff-active {
+					left: 12px;
 				}
 			}
 
@@ -207,6 +267,10 @@
 				.button.round-link {
 					right: 12px;
 				}
+
+				.tariff-active {
+					left: 24px;
+				}
 			}
 		}
 	}
@@ -218,6 +282,10 @@
 			.object-title {
 				line-height: 30px;
 			}
+		}
+
+		.badge {
+			left: 12px;
 		}
 	}
 
@@ -300,9 +368,12 @@
 					padding-left: 0;
 				}
 
-
 				.button.round-link {
 					right: 24px;
+				}
+
+				.tariff-active {
+					left: 0;
 				}
 			}
 
@@ -315,7 +386,18 @@
 				.button.round-link {
 					right: 12px;
 				}
+
+				.tariff-active {
+					left: 12px;
+				}
 			}
+		}
+	}
+
+	.object-preview {
+
+		.tariff-active {
+			padding: 2px 12px;
 		}
 	}
 }
@@ -338,6 +420,10 @@
 
 				.button.round-link {
 					right: 12px;
+				}
+
+				.tariff-active {
+					left: 0;
 				}
 			}
 		}

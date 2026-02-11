@@ -80,29 +80,172 @@
 			<div class="right-side">
 				<!-- user header menu -->
 				<div class="user-cover">
-					<a href="favourites.html" class="favourites-link round-link" id="favButton">
+					<a href="favourites.html" class="favourites-link round-link hidden-sm" data-fav-button>
 						<i class="icon icon-heart-empty"></i>
 						<!-- if there are some items in fav need to show counter -->
-						<!-- <span class="counter">7</span> -->
+						<span class="counter">8</span>
 					</a>
-					<a href="personal_dashboard.html" class="user-link round-link" id="userLink">
-						<i class="icon icon-user"></i>
-						<!-- user photo if user is authorized -->
-						<!-- <img src="../img/temp/user.png" alt="user" class="userpic"> -->
-					</a>
+					<!-- notifications -->
+					<div class="notifications header-dropdown" id="notifications" data-dropdown>
+						<!-- NotificationManager -->
+						<!-- class active if there are new notifications -->
+						<div class="dropdown-header">
+							<button class="favourites-link round-link" type="button">
+								<i class="icon icon-bell"></i>
+								<!-- if there are new notifications-->
+								<span class="counter"></span>
+							</button>
+						</div>
+						<div class="notifications-cover header-dropdown-cover dropdown-inner">
+							<div class="inner-title">Сповіщення</div>
+							<!-- якщо ще немає сповіщень -->
+			<!-- 				<div class="inner">
+								<div class="empty-message">Сповіщень немає</div>
+							</div> -->
+							<!-- якщо уже щось прийшло .inner + кнопка-->
+							<!-- це просто для прикладу, цей html заміняє json -->
+							<div class="inner">
+								<!-- 1 -->
+								<div class="notification-item progress">
+									<div class="title-cover">
+										<div class="title">Повідомлення на розгляді</div>
+										<span class="button-icon">
+											<i class="icon icon-refresh"></i>
+										</span>
+									</div>
+									<div class="object-preview horizontal smaller filter-item">
+										<figure class="object-image">
+											<div class="badge success">Перевірено 10.07.2025</div>
+											<img src="img/temp/obj1.jpg" draggable="false" alt="image">
+										</figure>
+										<div class="caption">
+											<h3 class="item-title object-title">ЖК Республіка</h3>
+											<div class="description">
+												<div class="line item-description">Вулиця Всеволода Змієнка, будинок 34/21</div>
+											</div>
+										</div>
+									</div>
+									<div class="text">
+										Дякуємо! Ваше повідомлення про проблему з об'єктом із статусом «Квартира здана / не актуальна» прийнята та буде розглянута найближчим часом
+									</div>
+								</div>
+								<!-- 2 -->
+								<div class="notification-item success">
+									<div class="title-cover">
+										<div class="title">Повідомлення розглянуто</div>
+										<span class="button-icon">
+											<i class="icon icon-check"></i>
+										</span>
+									</div>
+									<div class="object-preview horizontal smaller filter-item">
+										<figure class="object-image">
+											<div class="badge success">Перевірено 10.07.2025</div>
+											<img src="img/temp/obj1.jpg" draggable="false" alt="image">
+										</figure>
+										<div class="caption">
+											<h3 class="item-title object-title">ЖК Республіка</h3>
+											<div class="description">
+												<div class="line item-description">Вулиця Всеволода Змієнка, будинок 34/21</div>
+											</div>
+										</div>
+									</div>
+									<div class="text">
+										Дякуємо! Ваше повідомлення про проблему з об'єктом із статусом «Квартира здана / не актуальна» розглянуто. На основі рішення вам буде <b>повернуто 1 перегляд</b> протягом 24 годин
+									</div>
+								</div>
+								<!-- 3 -->
+								<!-- if is readed -->
+								<div class="notification-item declined readed">
+									<div class="title-cover">
+										<div class="title">Повідомлення розглянуто</div>
+										<span class="button-icon">
+											<i class="icon icon-cross"></i>
+										</span>
+									</div>
+									<div class="object-preview horizontal smaller filter-item">
+										<figure class="object-image">
+											<img src="img/temp/obj1.jpg" draggable="false" alt="image">
+										</figure>
+										<div class="caption">
+											<h3 class="item-title object-title">ЖК Республіка</h3>
+											<div class="description">
+												<div class="line item-description">Вулиця Всеволода Змієнка, будинок 34/21</div>
+											</div>
+										</div>
+									</div>
+									<div class="text">
+										Дякуємо! Ваше повідомлення про проблему з об'єктом із статусом «Квартира здана / не актуальна» розглянуто. Квартира знову доступна до перегляду, <b>перегляди не повернуто</b>
+									</div>
+								</div>
+								<!-- 4 -->
+								<!-- if is readed -->
+								<div class="notification-item success readed">
+									<div class="title-cover">
+										<div class="title">Замовлення <b>4ratgeu6gjq7</b> успішно оплачено</div>
+										<span class="button-icon">
+											<i class="icon icon-check"></i>
+										</span>
+									</div>
+									<div class="text">
+										Дякуємо за оплату тарифу <b>«Старт»</b>! <br> Вам доступно <b>1 перегляд на 30 днів</b>
+									</div>
+								</div>
+							</div>
+							<div class="button-cover">
+								<button class="button button-link color-primary" aria-label="mark as readed" type="button" id="markAllReadBtn">
+									<span class="text">Прочитати все</span>
+									<i class="icon icon-arrow-right"></i>
+								</button>
+							</div>
+							<!-- / якщо уже щось прийшло -->
+						</div>
+					</div>
+					<!-- / notification -->
+					<div class="user-personal header-dropdown" id="userPersonal" data-dropdown>
+						<a href="personal_dashboard.html" class="user-link round-link hidden-sm" id="userLink">
+							<i class="icon icon-user"></i>
+							<!-- user photo if user is authorized -->
+							<!-- <img src="../img/temp/user.png" alt="user" class="userpic"> -->
+						</a>
+						<!-- ONLY FOR MOBILE -->
+						<div class="dropdown-header">
+							<button class="user-link round-link visible-sm" type="button">
+								<i class="icon icon-user"></i>
+								<!-- user photo if user is authorized -->
+								<!-- <img src="../img/temp/user.png" alt="user" class="userpic"> -->
+							</button>
+						</div>
+						<div class="header-dropdown-cover dropdown-inner">
+							<a href="favourites.html" class="dropdown-link" type="button" data-fav-button>
+								<i class="icon icon-heart-empty"></i>
+								Обрані
+								<!-- if there are some items in fav need to show counter -->
+								<span class="counter">8</span>
+							</a>
+							<a href="personal_dashboard.html" class="dropdown-link" type="button">
+								<i class="icon icon-user"></i>
+								Мій кабінет
+							</a>
+							<a href="personal_registration.html" class="dropdown-link" type="button">
+								<i class="icon icon-logout"></i>
+								Вихід
+							</a>
+						</div>
+						<!-- / ONLY FOR MOBILE -->
+					</div>
 					<!-- logout button -->
-					<a href="personal_registration.html" class="logout-link round-link" type="button">
+					<a href="personal_registration.html" class="logout-link round-link hidden-sm" type="button">
 						<i class="icon icon-logout"></i>
 					</a>
 					<!-- logout button -->
 				</div>
 				<!-- / user header menu -->
 				<!-- mobile menu toggle button -->
-				<a href="personal_registration.html" class="button menu-button round-link" data-toggle-element="#mainNavigation">
+				<button type="button" class="button menu-button round-link" data-toggle-element="#mainNavigation">
 					<div class="lines">
 						<span></span>
 					</div>
-				</a>
+				</button>
 				<!-- /mobile menu toggle button -->
 			</div>
 		</div>
@@ -127,9 +270,9 @@
 		<section class="section">
 			<div class="container">
 				<!-- title with link -->
+				<div class="section-subtitle">Особистий кабінет</div>
 				<div class="title-with-link">
 					<div class="title-group">
-						<div class="section-subtitle">Особистий кабінет</div>
 						<div class="user-title">
 							<div class="userpic">
 								<!-- if user has photo -->
@@ -260,134 +403,440 @@
 					</div>
 					<!-- tab3  -->
 					<div class="personal-content tab-content active">
-						<div class="table-wrapper">
-							<table class="table payment-table">
-								<thead>
-									<tr>
-										<th>Дата</th>
-										<th>Операція</th>
-										<th>Перегляди</th>
-										<th>Залишок переглядів</th>
-										<th>Об'єкти</th>
-									</tr>
-								</thead>
-								<tbody>
-									<tr>
-										<td data-caption="Дата">10.07.2025</td>
-										<td data-caption="Операція">Купівля тарифу «Старт»</td>
-										<td data-caption="Перегляди">+10</td>
-										<td data-caption="Залишок переглядів">10</td>
-										<td data-caption="Об'єкти">-</td>
-									</tr>
-									<tr>
-										<td data-caption="Дата">10.07.2025</td>
-										<td data-caption="Операція">Списання перегляду</td>
-										<td data-caption="Перегляди">-1</td>
-										<td data-caption="Залишок переглядів">9</td>
-										<td data-caption="Об'єкти">
-											<a href="object.html" aria-label="Read more" class="object-preview horizontal smaller">
-												<div class="spaced-inner">
-													<figure class="object-image">
-														<img src="img/temp/obj2.jpg" draggable="false" alt="image">
-													</figure>
-												</div>
-												<div class="caption">
-													<div class="spaced-inner stretch-inner">
-														<h2 class="object-title">вул. Всеволода Змієнка, 34/ 21</h2>
-														<div class="description">
-															<div class="line">Київ, ЖК Республіка</div>
-															<div class="line">2 кімнати, 7 поверх з 10, 218м<sup>2</sup></div>
-															<div class="price-primary">3 202 210 грн</div>
-														</div>
-													</div>
-												</div>
-											</a>
-										</td>
-									</tr>
-									<tr>
-										<td data-caption="Дата">11.07.2025</td>
-										<td data-caption="Операція">Списання перегляду</td>
-										<td data-caption="Перегляди">-1</td>
-										<td data-caption="Залишок переглядів">8</td>
-										<td data-caption="Об'єкти">
-											<a href="object.html" aria-label="Read more" class="object-preview horizontal smaller">
-												<div class="spaced-inner">
-													<figure class="object-image">
-														<img src="img/temp/obj2.jpg" draggable="false" alt="image">
-													</figure>
-												</div>
-												<div class="caption">
-													<div class="spaced-inner stretch-inner">
-														<h2 class="object-title">вул. Всеволода Змієнка, 34/ 21</h2>
-														<div class="description">
-															<div class="line">Київ, ЖК Республіка</div>
-															<div class="line">2 кімнати, 7 поверх з 10, 218м<sup>2</sup></div>
-															<div class="price-primary">3 202 210 грн</div>
-														</div>
-													</div>
-												</div>
-											</a>
-										</td>
-									</tr>
-									<tr>
-										<td data-caption="Дата">12.07.2025</td>
-										<td data-caption="Операція">Списання перегляду</td>
-										<td data-caption="Перегляди">-1</td>
-										<td data-caption="Залишок переглядів">7</td>
-										<td data-caption="Об'єкти">
-											<a href="object.html" aria-label="Read more" class="object-preview horizontal smaller">
-												<div class="spaced-inner">
-													<figure class="object-image">
-														<img src="img/temp/obj1.jpg" draggable="false" alt="image">
-													</figure>
-												</div>
-												<div class="caption">
-													<div class="spaced-inner stretch-inner">
-														<h2 class="object-title">вул. Всеволода Змієнка, 34/ 21</h2>
-														<div class="description">
-															<div class="line">Київ, ЖК Республіка</div>
-															<div class="line">2 кімнати, 7 поверх з 10, 218м<sup>2</sup></div>
-															<div class="price-primary">3 202 210 грн</div>
-														</div>
-													</div>
-												</div>
-											</a>
-										</td>
-									</tr>
-									<tr>
-										<td data-caption="Дата">12.07.2025</td>
-										<td data-caption="Операція">Списання перегляду</td>
-										<td data-caption="Перегляди">-1</td>
-										<td data-caption="Залишок переглядів">7</td>
-										<td data-caption="Об'єкти">
-											<a href="object.html" aria-label="Read more" class="object-preview horizontal smaller">
-												<div class="spaced-inner">
-													<figure class="object-image">
-														<img src="img/temp/obj2.jpg" draggable="false" alt="image">
-													</figure>
-												</div>
-												<div class="caption">
-													<div class="spaced-inner stretch-inner">
-														<h2 class="object-title">вул. Всеволода Змієнка, 34/ 21</h2>
-														<div class="description">
-															<div class="line">Київ, ЖК Республіка</div>
-															<div class="line">2 кімнати, 7 поверх з 10, 218м<sup>2</sup></div>
-															<div class="price-primary">3 202 210 грн</div>
-														</div>
-													</div>
-												</div>
-											</a>
-										</td>
-									</tr>
-								</tbody>
-								<tfoot>
-									<tr>
-										<td colspan="3">Залишилось переглядів:</td>
-										<td>7</td>
-									</tr>
-								</tfoot>
-							</table>
+						<div class="table-wrapper filter-section">
+	<div class="row">
+		<div class="col-xs-12 col-md-4 col-lg-4">
+			<div class="tabs tags simple-tags" data-filter-items="paymentTable">
+				<div class="tab-button tag active" data-tag-link="all">Всі</div>
+				<div class="tab-button tag" data-tag-link="income">Нарахування</div>
+				<div class="tab-button tag" data-tag-link="outcome">Списання</div>
+				<div class="tab-fader"></div>
+			</div>
+		</div>
+		<div class="col-xs-12 col-md-4 col-md-offset-4 col-lg-3 col-lg-offset-5 spaced-top-sm">
+			<form action="javascript:void(0)" class="form filters-form" id="objectFilters">
+				<div class="form-group input-group">
+					<input type="text" class="input ignored" id="filterInput"
+					data-filter=".object" 
+					data-filter-fields=".item-title,.item-description"  data-minlength="1">
+					<label for="filterInput" class="label">Пошук за об'єктом</label>
+				</div>
+				<i class="icon icon-search"></i>
+			</form>
+		</div>
+	</div>
+	<!-- alert message if list is empty -->
+	<div id="searchEmptyMessage" class="hidden search-alert">
+		<div class="title">Об'єктів за таким запитом не знайдено</div>
+		<div class="theme-text">Спробуйте змінити пошуковий запит</div>
+	</div>
+	<!-- alert message if list is empty -->
+	<!-- table -->
+	<div class="filter-parent payment-table" id="paymentTable">
+		<!-- header -->
+		<div class="item-wrapper header">
+			<div class="date" data-caption="Дата:">Дата</div>
+			<div class="operation" data-caption="Операція:">Операція</div>
+			<div class="views" data-caption="Залишок:">Залишок</div>
+			<div class="object" data-caption="Об'єкт:">Об'єкт</div>
+		</div>
+		<!-- header -->
+		<!-- 1 -->
+		<div class="item-wrapper tag-item-cover" data-tag="income">
+			<div class="date" data-caption="Дата:">10.07.2025</div>
+			<div class="operation" data-caption="Операція:">Купівля тарифу «Базовий»</div>
+			<div class="views" data-caption="Залишок:">+10</div>
+			<div class="object" data-caption="Об'єкт:">-</div>
+		</div>
+		<!-- 2 -->
+		<div class="item-wrapper tag-item-cover" data-tag="outcome">
+			<div class="date" data-caption="Дата:">10.07.2025</div>
+			<div class="operation" data-caption="Операція:">Списання перегляду</div>
+			<div class="views" data-caption="Залишок:">9</div>
+			<div class="object" data-caption="Об'єкт:">
+				<a href="object.html" aria-label="Read more" class="object-preview horizontal smaller filter-item" target="_blank" rel="noopener">
+					<figure class="object-image">
+						<div class="badge success">Перевірено 10.07.2025</div>
+						<img src="img/temp/obj2.jpg" draggable="false" alt="image">
+					</figure>
+					<div class="caption">
+						<div class="search-tooltip">Знайдено збігів: <span class="count">0</span></div>
+						<h3 class="item-title object-title">ЖК Рідний Дім</h3>
+						<div class="description">
+							<div class="line item-description">Вулиця Всеволода Змієнка, будинок 34/21</div>
+							<div class="line">2 кімнати, 7 поверх з 10, 218м<sup>2</sup></div>
+							<div class="price-primary">3 202 210 грн</div>
 						</div>
+					</div>
+				</a>
+				<div class="buttons">
+					<a href="tel:+3800939998877" class="button button-stroked button-arrow button-block">
+						<span class="text">(093) 999 88 77</span>
+						<span class="button-icon">
+							<i class="icon icon-phone"></i>
+						</span>
+					</a>
+					<!-- support -->
+					<button data-call="#supportPopup" class="button support-button">
+						<span class="tooltip">Зв'язатися з техпідтримкою</span>
+						<span class="button-icon">
+							<i class="icon icon-alert"></i>
+						</span>
+					</button>
+				</div>
+			</div>
+		</div>
+		<!-- 3 -->
+		<div class="item-wrapper tag-item-cover" data-tag="outcome">
+			<div class="date" data-caption="Дата:">10.07.2025</div>
+			<div class="operation" data-caption="Операція:">Списання перегляду</div>
+			<div class="views" data-caption="Залишок:">8</div>
+			<div class="object" data-caption="Об'єкт:">
+				<a href="object.html" aria-label="Read more" class="object-preview horizontal smaller filter-item" target="_blank" rel="noopener">
+					<figure class="object-image">
+						<div class="badge success">Перевірено 10.07.2025</div>
+						<img src="img/temp/obj4.jpg" draggable="false" alt="image">
+					</figure>
+					<div class="caption">
+						<div class="search-tooltip">Знайдено збігів: <span class="count">0</span></div>
+						<h3 class="item-title object-title">ЖК Файна Таун</h3>
+						<div class="description">
+							<div class="line item-description">Вулиця Салютна, 2Вулиця Салютна, 2Вулиця Салютна, 2</div>
+							<div class="line">2 кімнати, 7 поверх з 10, 218м<sup>2</sup></div>
+							<div class="price-primary">3 202 210 грн</div>
+						</div>
+					</div>
+				</a>
+				<div class="buttons">
+					<!-- phone -->
+					<a href="tel:+3800939998877" class="button button-stroked button-arrow button-block">
+						<span class="text">(093) 999 88 77</span>
+						<span class="button-icon">
+							<i class="icon icon-phone"></i>
+						</span>
+					</a>
+					<!-- support -->
+					<button data-call="#supportPopupProgress" class="button support-button progress">
+						<span class="tooltip">Заявка на розгляді</span>
+						<span class="button-icon">
+							<i class="icon icon-refresh"></i>
+						</span>
+					</button>
+				</div>
+			</div>
+		</div>
+		<!-- 4 -->
+		<div class="item-wrapper tag-item-cover" data-tag="outcome">
+			<div class="date" data-caption="Дата:">10.07.2025</div>
+			<div class="operation" data-caption="Операція:">Списання перегляду</div>
+			<div class="views" data-caption="Залишок:">8</div>
+			<div class="object" data-caption="Об'єкт:">
+				<a href="object.html" aria-label="Read more" class="object-preview horizontal smaller filter-item" target="_blank" rel="noopener">
+					<figure class="object-image">
+						<div class="badge success">Перевірено 10.07.2025</div>
+						<img src="img/temp/obj1.jpg" draggable="false" alt="image">
+					</figure>
+					<div class="caption">
+						<div class="search-tooltip">Знайдено збігів: <span class="count">0</span></div>
+						<h3 class="item-title object-title">ЖК Республіка</h3>
+						<div class="description">
+							<div class="line item-description">Вулиця Всеволода Змієнка, будинок 34/21</div>
+							<div class="line">2 кімнати, 7 поверх з 10, 218м<sup>2</sup></div>
+							<div class="price-primary">3 202 210 грн</div>
+						</div>
+					</div>
+				</a>
+				<div class="buttons">
+					<a href="tel:+3800939998877" class="button button-stroked button-arrow button-block">
+						<span class="text">(093) 999 88 77</span>
+						<span class="button-icon">
+							<i class="icon icon-phone"></i>
+						</span>
+					</a>
+					<!-- support -->
+					<button data-call="#supportPopupSuccess" class="button support-button success">
+						<span class="tooltip">Повідомлення розглянуто</span>
+						<span class="button-icon">
+							<i class="icon icon-check"></i>
+						</span>
+					</button>
+				</div>
+			</div>
+		</div>
+		<!-- 5 -->
+		<div class="item-wrapper tag-item-cover" data-tag="outcome">
+			<div class="date" data-caption="Дата:">10.07.2025</div>
+			<div class="operation" data-caption="Операція:">Списання перегляду</div>
+			<div class="views" data-caption="Залишок:">7</div>
+			<div class="object" data-caption="Об'єкт:">
+				<a href="object.html" aria-label="Read more" class="object-preview horizontal smaller filter-item" target="_blank" rel="noopener">
+					<figure class="object-image">
+						<div class="badge success">Перевірено 10.07.2025</div>
+						<img src="img/temp/obj1.jpg" draggable="false" alt="image">
+					</figure>
+					<div class="caption">
+						<div class="search-tooltip">Знайдено збігів: <span class="count">0</span></div>
+						<h3 class="item-title object-title">ЖК Республіка</h3>
+						<div class="description">
+							<div class="line item-description">Вулиця Всеволода Змієнка, будинок 34/21</div>
+							<div class="line">2 кімнати, 7 поверх з 10, 218м<sup>2</sup></div>
+							<div class="price-primary">3 202 210 грн</div>
+						</div>
+					</div>
+				</a>
+				<div class="buttons">
+					<a href="tel:+3800939998877" class="button button-stroked button-arrow button-block">
+						<span class="text">(093) 999 88 77</span>
+						<span class="button-icon">
+							<i class="icon icon-phone"></i>
+						</span>
+					</a>
+					<!-- support -->
+					<button data-call="#supportPopupDeclined" class="button support-button declined">
+						<span class="tooltip">Повідомлення розглянуто</span>
+						<span class="button-icon">
+							<i class="icon icon-cross"></i>
+						</span>
+					</button>
+				</div>
+			</div>
+		</div>
+		<!-- 6 -->
+		<div class="item-wrapper tag-item-cover" data-tag="income">
+			<div class="date" data-caption="Дата:">10.07.2025</div>
+			<div class="operation" data-caption="Операція:">Повернення перегляду</div>
+			<div class="views" data-caption="Залишок:">8</div>
+			<div class="object" data-caption="Об'єкт:">
+				-
+			</div>
+		</div>
+		<!-- bottom -->
+		<div class="table-bottom">
+			Залишок на 10.02.2026
+			<div class="views" data-caption="Залишок:">
+				<span class="count">8</span>
+				переглядів
+			</div>
+		</div>
+	</div>
+	<!-- / table -->
+</div>
+
+<!-- popups -->
+<!-- supportPopup -->
+<div id="supportPopup" class="popup">
+	<div class="inner">
+		<button type="button" class="close-popup button"><i class="icon icon-cross"></i></button>
+		<div class="header">
+			<div class="popup-title">Повідомити про проблему з об’єктом</div>
+		</div>
+		<div class="main">
+			<!-- object -->
+			<a href="object.html" target="_blank" rel="noopener" aria-label="Read more" class="object-preview horizontal smaller">
+				<div class="spaced-inner">
+					<figure class="object-image">
+						<img src="img/temp/obj2.jpg" draggable="false" alt="image">
+					</figure>
+				</div>
+				<div class="caption">
+					<div class="spaced-inner stretch-inner">
+						<h2 class="object-title">вул. Всеволода Змієнка, 34/ 21</h2>
+						<div class="description">
+							<div class="line">Київ, ЖК Республіка</div>
+							<div class="line">2 кімнати, 7 поверх з 10, 218м<sup>2</sup></div>
+							<div class="price-primary">3 202 210 грн</div>
+						</div>
+					</div>
+				</div>
+			</a>
+			<!-- options -->
+			<form action="#" class="form support-form">
+				<div class="paragraph">
+					Допоможіть нам покращити якість оголошень. Оберіть причину звернення.
+				</div>
+				<div class="radio-group form-group">
+					<input value="option1" type="radio" name="option" class="radio" id="option1">
+					<label for="option1" class="radio-label" data-label>Квартира здана / не актуальна</label>
+				</div>
+				<div class="radio-group form-group">
+					<input value="option2" type="radio" name="option" class="radio" id="option2">
+					<label for="option2" class="radio-label" data-label>Номер невірний (не відноситься до квартири)</label>
+				</div>
+				<div class="radio-group form-group">
+					<input value="option3" type="radio" name="option" class="radio" id="option3">
+					<label for="option3" class="radio-label" data-label>Власник сказав, що не здає / оголошення не його</label>
+				</div>
+				<div class="radio-group form-group">
+					<input value="option5" type="radio" name="option" class="radio" id="option5">
+					<label for="option5" class="radio-label" data-label>Умови/ціна суттєво відрізняються</label>
+				</div>
+				<div class="radio-group form-group">
+					<input value="option6" type="radio" name="option" class="radio" id="option6">
+					<label for="option6" class="radio-label" data-label>Не додзвонився (перевірка, повернення не гарантоване)</label>
+				</div>
+				<div class="radio-group form-group">
+					<input value="option7" type="radio" name="option" class="radio" id="option7">
+					<label for="option7" class="radio-label" data-label>Дублікат / вже відкривав цей контакт</label>
+				</div>
+				<div class="radio-group form-group">
+					<input value="option8" type="radio" name="option" class="radio" id="option8">
+					<label for="option8" class="radio-label" data-label>Шахрайство / фейкове оголошення</label>
+				</div>
+				<div class="radio-area" id="radioArea">
+					<div class="radio-group form-group">
+						<input value="option9" type="radio" name="option" class="radio" id="option9">
+						<label for="option9" class="radio-label" data-label>Інше (опишіть)</label>
+					</div>
+					<div class="form-group input-group textarea-group focused disabled">
+						<textarea class="textarea ignored" name="message" id="message" maxlength="100"></textarea>
+						<label for="message" class="label">Короткий опис проблеми:</label>
+					</div>
+				</div>
+				<div class="buttons-group">
+					<button type="button" class="button button-stroked button-arrow button-block" data-dissmiss="#supportPopup">
+						<span class="text">Відміна</span>
+						<span class="button-icon">
+							<i class="icon icon-cross"></i>
+						</span>
+					</button>
+					<button type="submit" class="button button-block button-primary-invert button-arrow full-sm" aria-label="open filter">
+						<span class="text">Відправити</span>
+						<span class="button-icon">
+							<i class="icon icon-arrow-right"></i>
+						</span>
+					</button>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
+<!-- supportPopupProgress -->
+<div id="supportPopupProgress" class="popup">
+	<div class="inner">
+		<button type="button" class="close-popup button"><i class="icon icon-cross"></i></button>
+		<div class="header">
+			<div class="popup-title">Повідомлення на розгляді</div>
+		</div>
+		<div class="main">
+			<!-- object -->
+			<a href="object.html" target="_blank" rel="noopener" aria-label="Read more" class="object-preview horizontal smaller">
+				<div class="spaced-inner">
+					<figure class="object-image">
+						<img src="img/temp/obj2.jpg" draggable="false" alt="image">
+					</figure>
+				</div>
+				<div class="caption">
+					<div class="spaced-inner stretch-inner">
+						<h2 class="object-title">вул. Всеволода Змієнка, 34/ 21</h2>
+						<div class="description">
+							<div class="line">Київ, ЖК Республіка</div>
+							<div class="line">2 кімнати, 7 поверх з 10, 218м<sup>2</sup></div>
+							<div class="price-primary">3 202 210 грн</div>
+						</div>
+					</div>
+				</div>
+			</a>
+			<!-- object -->
+			<div class="paragraph spaced-bottom spaced-top">
+				Дякуємо! Ваше повідомлення про проблему з об'єктом із статусом «Квартира здана / не актуальна» прийнята та буде розглянута найближчим часом
+			</div>
+			<!-- options -->
+			<button type="button" class="button button-primary button-arrow button-block" data-dissmiss="#supportPopupProgress">
+				<span class="text">Зрозуміло</span>
+				<span class="button-icon">
+					<i class="icon icon-check"></i>
+				</span>
+			</button>
+		</div>
+	</div>
+</div>
+<!-- supportPopupSuccess -->
+<div id="supportPopupSuccess" class="popup">
+	<div class="inner">
+		<button type="button" class="close-popup button"><i class="icon icon-cross"></i></button>
+		<div class="header">
+			<div class="popup-title">Повідомлення розглянуто</div>
+		</div>
+		<div class="main">
+			<!-- object -->
+			<a href="object.html" target="_blank" rel="noopener" aria-label="Read more" class="object-preview horizontal smaller">
+				<div class="spaced-inner">
+					<figure class="object-image">
+						<img src="img/temp/obj2.jpg" draggable="false" alt="image">
+					</figure>
+				</div>
+				<div class="caption">
+					<div class="spaced-inner stretch-inner">
+						<h2 class="object-title">вул. Всеволода Змієнка, 34/ 21</h2>
+						<div class="description">
+							<div class="line">Київ, ЖК Республіка</div>
+							<div class="line">2 кімнати, 7 поверх з 10, 218м<sup>2</sup></div>
+							<div class="price-primary">3 202 210 грн</div>
+						</div>
+					</div>
+				</div>
+			</a>
+			<!-- / object -->
+			<div class="paragraph spaced-bottom spaced-top">
+				Дякуємо! Ваше повідомлення про проблему з об'єктом із статусом «Квартира здана / не актуальна» розглянуто.
+			</div>
+			<div class="paragraph spaced-bottom">
+				На основі рішення вам буде повернуто <span class="bold">1 перегляд</span> протягом 24 годин
+			</div>
+			<!-- options -->
+			<button type="button" class="button button-primary button-arrow button-block" data-dissmiss="#supportPopupSuccess">
+				<span class="text">Зрозуміло</span>
+				<span class="button-icon">
+					<i class="icon icon-check"></i>
+				</span>
+			</button>
+		</div>
+	</div>
+</div>
+<!-- supportPopupDeclined -->
+<div id="supportPopupDeclined" class="popup">
+	<div class="inner">
+		<button type="button" class="close-popup button"><i class="icon icon-cross"></i></button>
+		<div class="header">
+			<div class="popup-title">Повідомлення розглянуто</div>
+		</div>
+		<div class="main">
+			<!-- object -->
+			<a href="object.html" target="_blank" rel="noopener" aria-label="Read more" class="object-preview horizontal smaller">
+				<div class="spaced-inner">
+					<figure class="object-image">
+						<img src="img/temp/obj2.jpg" draggable="false" alt="image">
+					</figure>
+				</div>
+				<div class="caption">
+					<div class="spaced-inner stretch-inner">
+						<h2 class="object-title">вул. Всеволода Змієнка, 34/ 21</h2>
+						<div class="description">
+							<div class="line">Київ, ЖК Республіка</div>
+							<div class="line">2 кімнати, 7 поверх з 10, 218м<sup>2</sup></div>
+							<div class="price-primary">3 202 210 грн</div>
+						</div>
+					</div>
+				</div>
+			</a>
+			<!-- / object -->
+			<div class="paragraph spaced-bottom spaced-top">
+				Дякуємо! Ваше повідомлення про проблему з об'єктом із статусом «Квартира здана / не актуальна» розглянуто.
+			</div>
+			<div class="paragraph spaced-bottom">
+				Квартира знову доступна до перегляду, перегляди не повернуто
+			</div>
+			<!-- options -->
+			<button type="button" class="button button-primary button-arrow button-block" data-dissmiss="#supportPopupDeclined">
+				<span class="text">Зрозуміло</span>
+				<span class="button-icon">
+					<i class="icon icon-check"></i>
+				</span>
+			</button>
+		</div>
+	</div>
+</div>
+<!-- / popups -->
 					</div>
 				</div>
 			</div>
@@ -396,6 +845,7 @@
 	</main>
 
 	<!-- popups -->
+	<!-- tariffPopup -->
 	<div id="tariffPopup" class="popup middle-popup">
 		<div class="inner">
 			<button type="button" class="close-popup button"><i class="icon icon-cross"></i></button>

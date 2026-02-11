@@ -181,30 +181,33 @@
 
 	// ================= Header (іконка у шапці) =================
 	class FavHeaderNav {
-		constructor(store, { headerSelector = '#favButton' } = {}) {
+		constructor(store, { headerSelector = '[data-fav-button]' } = {}) {
 			this.store = store;
-			this.el = document.querySelector(headerSelector);
+			this.els = document.querySelectorAll(headerSelector);
 			this.badge = null;
 			this.unsubscribe = this.store.onChange(({ count }) => this.render(count));
 			this.render(this.store.count());
 		}
 		render(count) {
-			if (!this.el) return;
-			if (!this.badge) {
-				this.badge = this.el.querySelector('.counter');
-				if (!this.badge) {
-					this.badge = document.createElement('span');
-					this.badge.className = 'counter';
-					this.el.appendChild(this.badge);
+			if (!this.els.length) return;
+
+			this.els.forEach(el => {
+				let badge = el.querySelector('.counter');
+
+				if (!badge) {
+					badge = document.createElement('span');
+					badge.className = 'counter';
+					el.appendChild(badge);
 				}
-			}
-			if (count > 0) {
-				this.badge.textContent = String(count);
-				this.badge.style.display = '';
-			} else {
-				this.badge.textContent = '';
-				this.badge.style.display = 'none';
-			}
+
+				if (count > 0) {
+					badge.textContent = String(count);
+					badge.style.display = '';
+				} else {
+					badge.textContent = '';
+					badge.style.display = 'none';
+				}
+			});
 		}
 	}
 
@@ -320,7 +323,7 @@
 	document.addEventListener('DOMContentLoaded', () => {
 		const store = new FavStore('favourites');
 		new FavCards(store, { rootSelector: 'body', itemSelector: '.item' });
-		new FavHeaderNav(store, { headerSelector: '#favButton' });
+		new FavHeaderNav(store, { headerSelector: '[data-fav-button]' });
 		new FavSectionHeader(store, {
 			containerSelector : '#favHeader',
 			counterSelector   : '.h2-title .counter',

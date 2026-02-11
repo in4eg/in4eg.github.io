@@ -80,29 +80,172 @@
 			<div class="right-side">
 				<!-- user header menu -->
 				<div class="user-cover">
-					<a href="favourites.html" class="favourites-link round-link" id="favButton">
+					<a href="favourites.html" class="favourites-link round-link hidden-sm" data-fav-button>
 						<i class="icon icon-heart-empty"></i>
 						<!-- if there are some items in fav need to show counter -->
-						<!-- <span class="counter">7</span> -->
+						<span class="counter">8</span>
 					</a>
-					<a href="personal_dashboard.html" class="user-link round-link" id="userLink">
-						<i class="icon icon-user"></i>
-						<!-- user photo if user is authorized -->
-						<!-- <img src="../img/temp/user.png" alt="user" class="userpic"> -->
-					</a>
+					<!-- notifications -->
+					<div class="notifications header-dropdown" id="notifications" data-dropdown>
+						<!-- NotificationManager -->
+						<!-- class active if there are new notifications -->
+						<div class="dropdown-header">
+							<button class="favourites-link round-link" type="button">
+								<i class="icon icon-bell"></i>
+								<!-- if there are new notifications-->
+								<span class="counter"></span>
+							</button>
+						</div>
+						<div class="notifications-cover header-dropdown-cover dropdown-inner">
+							<div class="inner-title">Сповіщення</div>
+							<!-- якщо ще немає сповіщень -->
+			<!-- 				<div class="inner">
+								<div class="empty-message">Сповіщень немає</div>
+							</div> -->
+							<!-- якщо уже щось прийшло .inner + кнопка-->
+							<!-- це просто для прикладу, цей html заміняє json -->
+							<div class="inner">
+								<!-- 1 -->
+								<div class="notification-item progress">
+									<div class="title-cover">
+										<div class="title">Повідомлення на розгляді</div>
+										<span class="button-icon">
+											<i class="icon icon-refresh"></i>
+										</span>
+									</div>
+									<div class="object-preview horizontal smaller filter-item">
+										<figure class="object-image">
+											<div class="badge success">Перевірено 10.07.2025</div>
+											<img src="img/temp/obj1.jpg" draggable="false" alt="image">
+										</figure>
+										<div class="caption">
+											<h3 class="item-title object-title">ЖК Республіка</h3>
+											<div class="description">
+												<div class="line item-description">Вулиця Всеволода Змієнка, будинок 34/21</div>
+											</div>
+										</div>
+									</div>
+									<div class="text">
+										Дякуємо! Ваше повідомлення про проблему з об'єктом із статусом «Квартира здана / не актуальна» прийнята та буде розглянута найближчим часом
+									</div>
+								</div>
+								<!-- 2 -->
+								<div class="notification-item success">
+									<div class="title-cover">
+										<div class="title">Повідомлення розглянуто</div>
+										<span class="button-icon">
+											<i class="icon icon-check"></i>
+										</span>
+									</div>
+									<div class="object-preview horizontal smaller filter-item">
+										<figure class="object-image">
+											<div class="badge success">Перевірено 10.07.2025</div>
+											<img src="img/temp/obj1.jpg" draggable="false" alt="image">
+										</figure>
+										<div class="caption">
+											<h3 class="item-title object-title">ЖК Республіка</h3>
+											<div class="description">
+												<div class="line item-description">Вулиця Всеволода Змієнка, будинок 34/21</div>
+											</div>
+										</div>
+									</div>
+									<div class="text">
+										Дякуємо! Ваше повідомлення про проблему з об'єктом із статусом «Квартира здана / не актуальна» розглянуто. На основі рішення вам буде <b>повернуто 1 перегляд</b> протягом 24 годин
+									</div>
+								</div>
+								<!-- 3 -->
+								<!-- if is readed -->
+								<div class="notification-item declined readed">
+									<div class="title-cover">
+										<div class="title">Повідомлення розглянуто</div>
+										<span class="button-icon">
+											<i class="icon icon-cross"></i>
+										</span>
+									</div>
+									<div class="object-preview horizontal smaller filter-item">
+										<figure class="object-image">
+											<img src="img/temp/obj1.jpg" draggable="false" alt="image">
+										</figure>
+										<div class="caption">
+											<h3 class="item-title object-title">ЖК Республіка</h3>
+											<div class="description">
+												<div class="line item-description">Вулиця Всеволода Змієнка, будинок 34/21</div>
+											</div>
+										</div>
+									</div>
+									<div class="text">
+										Дякуємо! Ваше повідомлення про проблему з об'єктом із статусом «Квартира здана / не актуальна» розглянуто. Квартира знову доступна до перегляду, <b>перегляди не повернуто</b>
+									</div>
+								</div>
+								<!-- 4 -->
+								<!-- if is readed -->
+								<div class="notification-item success readed">
+									<div class="title-cover">
+										<div class="title">Замовлення <b>4ratgeu6gjq7</b> успішно оплачено</div>
+										<span class="button-icon">
+											<i class="icon icon-check"></i>
+										</span>
+									</div>
+									<div class="text">
+										Дякуємо за оплату тарифу <b>«Старт»</b>! <br> Вам доступно <b>1 перегляд на 30 днів</b>
+									</div>
+								</div>
+							</div>
+							<div class="button-cover">
+								<button class="button button-link color-primary" aria-label="mark as readed" type="button" id="markAllReadBtn">
+									<span class="text">Прочитати все</span>
+									<i class="icon icon-arrow-right"></i>
+								</button>
+							</div>
+							<!-- / якщо уже щось прийшло -->
+						</div>
+					</div>
+					<!-- / notification -->
+					<div class="user-personal header-dropdown" id="userPersonal" data-dropdown>
+						<a href="personal_dashboard.html" class="user-link round-link hidden-sm" id="userLink">
+							<i class="icon icon-user"></i>
+							<!-- user photo if user is authorized -->
+							<!-- <img src="../img/temp/user.png" alt="user" class="userpic"> -->
+						</a>
+						<!-- ONLY FOR MOBILE -->
+						<div class="dropdown-header">
+							<button class="user-link round-link visible-sm" type="button">
+								<i class="icon icon-user"></i>
+								<!-- user photo if user is authorized -->
+								<!-- <img src="../img/temp/user.png" alt="user" class="userpic"> -->
+							</button>
+						</div>
+						<div class="header-dropdown-cover dropdown-inner">
+							<a href="favourites.html" class="dropdown-link" type="button" data-fav-button>
+								<i class="icon icon-heart-empty"></i>
+								Обрані
+								<!-- if there are some items in fav need to show counter -->
+								<span class="counter">8</span>
+							</a>
+							<a href="personal_dashboard.html" class="dropdown-link" type="button">
+								<i class="icon icon-user"></i>
+								Мій кабінет
+							</a>
+							<a href="personal_registration.html" class="dropdown-link" type="button">
+								<i class="icon icon-logout"></i>
+								Вихід
+							</a>
+						</div>
+						<!-- / ONLY FOR MOBILE -->
+					</div>
 					<!-- logout button -->
-					<a href="personal_registration.html" class="logout-link round-link" type="button">
+					<a href="personal_registration.html" class="logout-link round-link hidden-sm" type="button">
 						<i class="icon icon-logout"></i>
 					</a>
 					<!-- logout button -->
 				</div>
 				<!-- / user header menu -->
 				<!-- mobile menu toggle button -->
-				<a href="personal_registration.html" class="button menu-button round-link" data-toggle-element="#mainNavigation">
+				<button type="button" class="button menu-button round-link" data-toggle-element="#mainNavigation">
 					<div class="lines">
 						<span></span>
 					</div>
-				</a>
+				</button>
 				<!-- /mobile menu toggle button -->
 			</div>
 		</div>
@@ -179,13 +322,6 @@
 
 	<!-- inner content with filters and form -->
 	<div class="filters-inner" id="filtersInner">
-		<!-- if we have some selected filters need to show tag and remove class hidden-->
-		<!-- TAGS -->
-		<div class="tag-cover hidden">
-			<div class="tag-list">
-			</div>
-			<button class="button-link button" type="button">Очистити все</button>
-		</div>
 		<!-- visible only on mobile filter close -->
 		<button type="button" class="button round-link" aria-label="open filter" data-toggle="#filtersInner">
 			<i class="icon icon-cross"></i>
@@ -535,6 +671,13 @@
 		</form>
 	</div>
 	<!-- / inner contents with filters and form -->
+	<!-- if we have some selected filters need to show tag and remove class hidden-->
+	<!-- TAGS -->
+	<div class="tag-cover hidden">
+		<div class="tag-list">
+		</div>
+		<button class="button-link button" type="button">Очистити все</button>
+	</div>
 </div>
 <!-- ///// FILTERS //// -->
 
@@ -746,6 +889,7 @@
 							<i class="icon icon-heart-filled"></i>
 						</button>
 						<a href="object.html" aria-label="Read more" class="object-preview">
+							<div class="tariff-active danger">Діє замовлення</div>
 							<div class="spaced-inner">
 								<figure class="object-image">
 									<div class="badge success">Перевірено 10.07.2025</div>
@@ -835,6 +979,7 @@
 							<i class="icon icon-heart-filled"></i>
 						</button>
 						<a href="object.html" aria-label="Read more" class="object-preview">
+							<div class="tariff-active danger">Діє замовлення</div>
 							<div class="spaced-inner">
 								<figure class="object-image">
 									<div class="badge progress">У процесі перевірки</div>
@@ -895,6 +1040,7 @@
 							<i class="icon icon-heart-filled"></i>
 						</button>
 						<a href="object.html" aria-label="Read more" class="object-preview">
+							<div class="tariff-active danger">Діє замовлення</div>
 							<div class="spaced-inner">
 								<figure class="object-image">
 									<div class="badge progress">У процесі перевірки</div>
@@ -1041,6 +1187,7 @@
 							<i class="icon icon-heart-filled"></i>
 						</button>
 						<a href="object.html" aria-label="Read more" class="object-preview">
+							<div class="tariff-active danger">Діє замовлення</div>
 							<div class="spaced-inner">
 								<figure class="object-image">
 									<img src="img/temp/obj5.jpg" draggable="false" alt="image">
@@ -1138,7 +1285,7 @@
 			<div class="container">
 					<div class="inner">
 					<!-- toggle details button -->
-					<button type="button" class="button button-primary button-block button-arrow full-sm" aria-label="open filter" data-toggle="#orderWindow">
+					<button type="button" class="button button-secondary button-block button-arrow full-sm button-smaller" aria-label="open filter" data-toggle="#orderWindow">
 						<span class="text">Діє замовлення</span>
 						<span class="button-icon">
 							<i class="icon icon-arrow-right"></i>
@@ -1148,6 +1295,7 @@
 					<div class="details-inner">
 						<div class="theme-text">
 							<div class="theme-text">Номер: <b class="number">78608aa2208cd786c9e958540f756b66</b><br> від 18:08 13.01.2026 <br> Maksim Rodin</div>
+							<b>м. Київ</b>
 							<div class="spaced-top">
 								<div class="subtitle">Залишок по тарифу</div>
 								<ul class="tariff-list clear">

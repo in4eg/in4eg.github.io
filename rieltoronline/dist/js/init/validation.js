@@ -83,7 +83,7 @@ window.addEventListener("DOMContentLoaded", function() {
 			
 			if (!hasErrors && !isDisabled) {
 				console.log('no errors')
-				this.submitFormData(); // Викликаємо новий метод для відправки
+				this.submitFormData();
 			} else {
 				const firstError = this.form.querySelector(`.${this.classes.error}`);
 				if (firstError) {
@@ -129,51 +129,11 @@ window.addEventListener("DOMContentLoaded", function() {
 
 		submitFormData() {
 			const formData = new FormData(this.form);
-			const recipientEmail = this.form.dataset.mail;
-
 			console.log(formData)
-
-			if (!recipientEmail) {
-				console.error('Recipient email not specified in data-mail attribute.');
-				return;
+			// Викликаємо глобальну функцію, якщо вона існує
+			if (typeof window.onFormSubmit === 'function') {
+				window.onFormSubmit();
 			}
-
-			formData.append('action', 'submit_form_data'); 
-			formData.append('recipient_email', recipientEmail); 
-
-			formData.append('_ajax_nonce', ajax_object.nonce);
-
-			this.form.classList.add('loading'); 
-
-			// *** ЗМІНЕНО: Використовуємо глобальну змінну, створену через wp_localize_script ***
-			fetch(ajax_object.ajax_url, { 
-				method: 'POST',
-				body: formData,
-			})
-			.then(response => response.json())
-			.then(data => {
-				this.form.classList.remove('loading');
-				const feedbackEl = this.form.parentElement.querySelector('.form-feedback');
-				console.log(data)
-				if (data.success) {
-					this.form.reset();
-					if (feedbackEl) {
-						feedbackEl.innerHTML = 'Дякуємо! Ваше повідомлення надіслано.';
-					}
-				} else {
-					if (feedbackEl) {
-						feedbackEl.innerHTML = `Помилка: ${data.data || 'Не вдалося надіслати повідомлення.'}`;
-					}
-				}
-			})
-			.catch(error => {
-				this.form.classList.remove('loading');
-				console.error('Error:', error);
-				const feedbackEl = this.form.parentElement.querySelector('.form-feedback');
-				if (feedbackEl) {
-						 feedbackEl.innerHTML = `Виникла помилка з'єднання. Спробуйте пізніше.`;
-				}
-			});
 		}
 
 		// FIX: нормальний обробник введення для input/textarea/select
@@ -333,6 +293,28 @@ window.addEventListener("DOMContentLoaded", function() {
 					formCheckbox.addEventListener('change', this.onCheckboxChange.bind({_this: this, checkbox: formCheckbox}), {passive: true});
 				}
 			}
+
+			const inputs = document.querySelectorAll('.number-single-input');
+
+			inputs.forEach((input, index) => {
+				input.addEventListener('input', (e) => {
+					if (input.value.length > 1) {
+						input.value = input.value.slice(0, 1);
+					}
+
+					if (input.value.length === 1 && index < inputs.length - 1) {
+						inputs[index + 1].focus();
+					}
+				});
+
+				input.addEventListener('keydown', (e) => {
+					if (e.key === 'Backspace' && input.value === '' && index > 0) {
+						inputs[index - 1].focus();
+					}
+				});
+			});
+
+
 		};
 	};
 
@@ -354,3 +336,29 @@ window.addEventListener("DOMContentLoaded", function() {
 		}
 	}
 });
+
+// для radio-area
+document.addEventListener('change', function (e) {
+	if (!e.target.matches('input[type="radio"][name="option"]')) return;
+
+	const textareaGroup = document.querySelector('.radio-area .textarea-group');
+	const textarea = document.querySelector('.radio-area textarea');
+
+	if (!textareaGroup || !textarea) return;
+
+	const checkedRadio = document.querySelector('input[name="option"]:checked');
+
+	if (checkedRadio && checkedRadio.value === 'option9') {
+		textareaGroup.classList.remove('disabled');
+		textarea.removeAttribute('disabled');
+
+		setTimeout(() => {
+			textarea.focus();
+		}, 0);
+	} else {
+		textareaGroup.classList.add('disabled');
+		textarea.setAttribute('disabled', 'disabled');
+		textarea.blur();
+	}
+});
+

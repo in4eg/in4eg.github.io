@@ -13,12 +13,12 @@
 
 	.inner {
 		background-color: $color-cultured;
+		border: 1px solid $color-platinum;
 		padding: 8px 10px 8px 10px;
 		border-radius: 100px;
 		display: inline-block;
 		pointer-events: visible;
 		text-align: left;
-		box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
 	}
 
 	.details-inner {

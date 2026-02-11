@@ -44,7 +44,6 @@
 	}
 
 	.select-group {
-		position: relative;
 
 		.dropdown-header,
 		.selecter .anchor {
@@ -243,6 +242,19 @@
 			margin: 0;
 		}
 	}
+
+	.radio-area {
+		padding-bottom: 24px;
+
+		.textarea-group {
+			margin-top: 24px;
+		}
+	}
+}
+
+.select-group {
+	position: relative;
+	z-index: 3;
 }
 
 .selecter {
