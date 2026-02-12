@@ -62,6 +62,7 @@
 					uploadBox.appendChild(img);
 				}
 				img.src = dataUrl;
+				img.style.opacity = "1";
 				addRemoveButton();
 				updateHeaderUserPhoto(dataUrl);
 			} catch (err) {

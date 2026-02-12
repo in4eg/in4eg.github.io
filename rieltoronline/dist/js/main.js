@@ -1718,6 +1718,7 @@ document.addEventListener('DOMContentLoaded', function(){
 					uploadBox.appendChild(img);
 				}
 				img.src = dataUrl;
+				img.style.opacity = "1";
 				addRemoveButton();
 				updateHeaderUserPhoto(dataUrl);
 			} catch (err) {
@@ -4902,3 +4903,9 @@ document.addEventListener('change', function (e) {
 	}
 });
 
+// if no src we need to hide images
+document.addEventListener("error", function(e) {
+	if (e.target.tagName === "IMG") {
+		e.target.style.opacity = "0";
+	}
+}, true);

@@ -362,3 +362,9 @@ document.addEventListener('change', function (e) {
 	}
 });
 
+// if no src we need to hide images
+document.addEventListener("error", function(e) {
+	if (e.target.tagName === "IMG") {
+		e.target.style.opacity = "0";
+	}
+}, true);
