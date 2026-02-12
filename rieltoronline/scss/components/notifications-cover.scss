@@ -35,7 +35,7 @@
 			.title {
 				text-transform: uppercase;
 				font-weight: bold;
-				font-size: 16px;
+				font-size: var(--font-size-small);
 				color: $color-primary;
 			}
 		}
@@ -133,9 +133,9 @@
 }
 
 
-@media (max-width: 420px) {
+@media (max-width: 520px) {
 
 	.notifications-cover {
-		width: 280px;
+		width: 300px;
 	}
 }

@@ -7901,7 +7901,7 @@ ul .paragraph {
 .notifications-cover .notification-item .title-cover .title {
   text-transform: uppercase;
   font-weight: 700;
-  font-size: 16px;
+  font-size: var(--font-size-small);
   color: #576f80
 }
 .notifications-cover .notification-item .text {
@@ -7971,9 +7971,9 @@ ul .paragraph {
     height: 90px
   }
 }
-@media (max-width:420px) {
+@media (max-width:520px) {
   .notifications-cover {
-    width: 280px
+    width: 300px
   }
 }
 :root {
