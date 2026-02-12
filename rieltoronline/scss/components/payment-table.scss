@@ -181,6 +181,22 @@
 				}
 			}
 		}
+
+		.table-bottom {
+			flex-direction: column;
+			display: flex;
+			border-radius: 0;
+			border: none;
+			padding: 0;
+			text-align: center;
+			align-items: center;
+
+			.views {
+				display: block;
+				width: 100%;
+				text-align: center;
+			}
+		}
 	}
 }
 
