@@ -100,3 +100,10 @@ $pagination-size: 44px;
 		}
 	}
 }
+
+@media (max-width: 768px) {
+
+	.pagination {
+		margin-top: 24px;
+	}
+}

@@ -86,6 +86,14 @@ $header-borders-color-dark: rgba($color-dark-header, 0.3);
 			overflow: hidden;
 		}
 
+		.userphoto {
+			border-radius: 50%;
+			overflow: hidden;
+			height: 100%;
+			position: relative;
+			display: block;
+		}
+
 		.userpic {
 			position: absolute;
 			top: 0; left: 0;
@@ -961,7 +969,7 @@ $header-borders-color-dark: rgba($color-dark-header, 0.3);
 			.header-dropdown-cover {
 
 				.inner {
-					height: 300px;
+					height: 350px;
 				}
 			}
 		}

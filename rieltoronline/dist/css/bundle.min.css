@@ -6993,6 +6993,13 @@ ul .paragraph {
   right: -1px;
   overflow: hidden
 }
+.main-header .round-link .userphoto {
+  border-radius: 50%;
+  overflow: hidden;
+  height: 100%;
+  position: relative;
+  display: block
+}
 .main-header .round-link .userpic {
   position: absolute;
   top: 0;
@@ -7789,7 +7796,7 @@ ul .paragraph {
     gap: 8px
   }
   .main-header .header-dropdown .header-dropdown-cover .inner {
-    height: 300px
+    height: 350px
   }
 }
 @media (min-width:769px) {
@@ -9356,6 +9363,11 @@ ul .paragraph {
   }
   .pagination .pagination-nav a .icon {
     font-size: 24px
+  }
+}
+@media (max-width:768px) {
+  .pagination {
+    margin-top: 24px
   }
 }
 :root {
