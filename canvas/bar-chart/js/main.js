@@ -34,7 +34,7 @@ class CanvasChart {
 
 		this.options = {
 			legend: true,
-			chartTitle: 'Дані по закупівлі продуктів на зиму',
+			chartTitle: 'Дані по закупівлі продуктів',
 			colors: {
 				available: '#000000',
 				expected: '#39ad3f',
@@ -624,14 +624,14 @@ class CanvasChart {
 }
 
 async function loadData() {
-	const response = await fetch('./data.json');
+	const response = await fetch('../data.json');
 	const productsData = await response.json();
 
 	const canvas = document.querySelector('#canvasChart');
 
 	new CanvasChart(canvas, productsData, {
 		legend: true,
-		chartTitle: 'Дані по закупівлі літальних апаратів',
+		chartTitle: 'Дані по закупівлі продуктів',
 		colors: {
 			available: '#000000',
 			expected: '#3caf3f',

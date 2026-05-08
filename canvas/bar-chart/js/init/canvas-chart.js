@@ -34,7 +34,7 @@ class CanvasChart {
 
 		this.options = {
 			legend: true,
-			chartTitle: 'Дані по закупівлі продуктів на зиму',
+			chartTitle: 'Дані по закупівлі продуктів',
 			colors: {
 				available: '#000000',
 				expected: '#39ad3f',
@@ -631,7 +631,7 @@ async function loadData() {
 
 	new CanvasChart(canvas, productsData, {
 		legend: true,
-		chartTitle: 'Дані по закупівлі літальних апаратів',
+		chartTitle: 'Дані по закупівлі продуктів',
 		colors: {
 			available: '#000000',
 			expected: '#3caf3f',

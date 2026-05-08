@@ -17,10 +17,22 @@ async function loadData() {
 	};
 
 	const option = {
+		title: {
+			text: 'Дані по закупівлі продуктів',
+			left: 20,
+			top: 20,
+
+			textStyle: {
+				fontSize: 28,
+				fontWeight: 700,
+				color: '#111111'
+			}
+		},
+
 		grid: {
 			left: 160,
 			right: 40,
-			top: 40,
+			top: 100,
 			bottom: 40
 		},
 
