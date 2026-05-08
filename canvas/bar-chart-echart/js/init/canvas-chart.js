@@ -16,6 +16,46 @@ async function loadData() {
 		border: '#222222'
 	};
 
+	function makeLegendItem(y, color, text, bordered = false) {
+		return {
+			type: 'group',
+
+			top: y,
+
+			children: [
+				{
+					type: 'rect',
+
+					shape: {
+						x: 0,
+						y: 0,
+						width: 14,
+						height: 14
+					},
+
+					style: {
+						fill: color,
+						stroke: bordered ? '#222222' : null,
+						lineWidth: bordered ? 1 : 0
+					}
+				},
+
+				{
+					type: 'text',
+
+					style: {
+						x: 24,
+						y: 7,
+						text,
+						fill: '#111111',
+						font: '14px Arial',
+						verticalAlign: 'middle'
+					}
+				}
+			]
+		};
+	}
+
 	const option = {
 		title: {
 			text: 'Дані по закупівлі продуктів',
@@ -33,7 +73,7 @@ async function loadData() {
 			left: 160,
 			right: 40,
 			top: 100,
-			bottom: 40
+			bottom: 230
 		},
 
 		tooltip: {
@@ -377,7 +417,24 @@ async function loadData() {
 					value: [0, item.name]
 				}))
 			}
-		]
+		],
+
+		graphic: [
+			{
+				type: 'group',
+				left: 40,
+				bottom: 40,
+
+				children: [
+					makeLegendItem(0, '#000000', 'Наявно'),
+					makeLegendItem(30, '#3caf3f', 'Очікується'),
+					makeLegendItem(60, '#aaaaaa', 'Необхідно'),
+					makeLegendItem(90, '#ffffff', 'Ціль', true),
+					makeLegendItem(120, '#ff8a2a', 'Більше плану'),
+					makeLegendItem(150, '#ffcc22', 'Разом')
+				]
+			}
+		],
 	};
 
 	chart.setOption(option);
