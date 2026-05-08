@@ -1,0 +1,172 @@
+[
+	{
+		"id": "product1",
+		"name": "Назва продукту 1",
+		"available": 100,
+		"expected": 900,
+		"needed": 0,
+		"target": 1000,
+		"overPlan": 200,
+		"total": 1200,
+		"costs": {
+			"available": 0.1,
+			"expected": 0.9,
+			"needed": null,
+			"overPlan": 0.2,
+			"total": 1.0
+		}
+	},
+	{
+		"id": "product2",
+		"name": "Назва продукту 2",
+		"available": 100,
+		"expected": 900,
+		"needed": 0,
+		"target": 1000,
+		"overPlan": 0,
+		"total": 1000,
+		"costs": {
+			"available": 0.1,
+			"expected": 0.9,
+			"needed": null,
+			"overPlan": null,
+			"total": 1.2
+		}
+	},
+	{
+		"id": "product3",
+		"name": "Назва продукту 3",
+		"available": 100,
+		"expected": 200,
+		"needed": 700,
+		"target": 1000,
+		"overPlan": 0,
+		"total": 300,
+		"costs": {
+			"available": 0.1,
+			"expected": 0.2,
+			"needed": 0.7,
+			"overPlan": null,
+			"total": 1.0
+		}
+	},
+	{
+		"id": "product4",
+		"name": "Назва продукту 4",
+		"available": 100,
+		"expected": 0,
+		"needed": 900,
+		"target": 1000,
+		"overPlan": 0,
+		"total": 100,
+		"costs": {
+			"available": 0.1,
+			"expected": null,
+			"needed": 0.9,
+			"overPlan": null,
+			"total": 0.1
+		}
+	},
+	{
+		"id": "product5",
+		"name": "Назва продукту 5",
+		"available": 500,
+		"expected": 500,
+		"needed": 0,
+		"target": 1000,
+		"overPlan": 200,
+		"total": 1200,
+		"costs": {
+			"available": 0.5,
+			"expected": 0.5,
+			"needed": null,
+			"overPlan": null,
+			"total": 1.2
+		}
+	},
+	{
+		"id": "product6",
+		"name": "Назва продукту 6",
+		"available": 400,
+		"expected": 200,
+		"needed": 400,
+		"target": 1000,
+		"overPlan": 0,
+		"total": 600,
+		"costs": {
+			"available": 0.4,
+			"expected": 0.2,
+			"needed": 0.4,
+			"overPlan": null,
+			"total": 0.6
+		}
+	},
+	{
+		"id": "product7",
+		"name": "Назва продукту 7",
+		"available": 100,
+		"expected": 900,
+		"needed": 0,
+		"target": 1000,
+		"overPlan": 200,
+		"total": 1200,
+		"costs": {
+			"available": 0.1,
+			"expected": 0.9,
+			"needed": null,
+			"overPlan": 0.2,
+			"total": 1.0
+		}
+	},
+	{
+		"id": "product8",
+		"name": "Назва продукту 8",
+		"available": 100,
+		"expected": 200,
+		"needed": 700,
+		"target": 1000,
+		"overPlan": 0,
+		"total": 300,
+		"costs": {
+			"available": 0.1,
+			"expected": 0.2,
+			"needed": 0.7,
+			"overPlan": null,
+			"total": 0.3
+		}
+	},
+	{
+		"id": "product9",
+		"name": "Назва продукту 9",
+		"available": 100,
+		"expected": 900,
+		"needed": 0,
+		"target": 1000,
+		"overPlan": 200,
+		"total": 1200,
+		"costs": {
+			"available": 0.1,
+			"expected": 0.9,
+			"needed": null,
+			"overPlan": 0.2,
+			"total": 1.0
+		}
+	},
+	{
+		"id": "product10",
+		"name": "Назва продукту 10",
+		"available": 100,
+		"expected": 0,
+		"needed": 900,
+		"target": 1000,
+		"overPlan": 0,
+		"total": 100,
+		"costs": {
+			"available": 0.1,
+			"expected": null,
+			"needed": 0.9,
+			"overPlan": null,
+			"total": 0.1
+		}
+	}
+]
