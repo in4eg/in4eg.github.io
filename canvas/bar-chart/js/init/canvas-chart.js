@@ -624,7 +624,7 @@ class CanvasChart {
 }
 
 async function loadData() {
-	const response = await fetch('../data.json');
+	const response = await fetch('./data.json');
 	const productsData = await response.json();
 
 	const canvas = document.querySelector('#canvasChart');
