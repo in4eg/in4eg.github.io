@@ -6,7 +6,7 @@
 		"expected": 900,
 		"needed": 0,
 		"target": 1000,
-		"overPlan": 200,
+		"overPlan": 500,
 		"total": 1200,
 		"costs": {
 			"available": 0.1,
@@ -74,7 +74,7 @@
 		"expected": 500,
 		"needed": 0,
 		"target": 1000,
-		"overPlan": 200,
+		"overPlan": 20,
 		"total": 1200,
 		"costs": {
 			"available": 0.5,
@@ -108,7 +108,7 @@
 		"expected": 900,
 		"needed": 0,
 		"target": 1000,
-		"overPlan": 200,
+		"overPlan": 1200,
 		"total": 1200,
 		"costs": {
 			"available": 0.1,
