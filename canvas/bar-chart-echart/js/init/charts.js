@@ -91,7 +91,19 @@ function initChart1(productsData) {
 		tooltip: {
 			trigger: 'item',
 			formatter(params) {
-				return params.data.tooltip || '';
+				const item = params.data.item;
+
+				if (!item) return '';
+
+				return `
+					<strong>${item.name}</strong><br/>
+					Запаси: ${item.available}<br/>
+					У графіку постачання: ${item.expected}<br/>
+					Дефіцит: ${item.needed}<br/>
+					Поверх цілі: ${item.overPlan}<br/>
+					Ціль: ${item.target}<br/>
+					Разом наявно: ${item.total}
+				`;
 			}
 		},
 
@@ -122,11 +134,13 @@ function initChart1(productsData) {
 
 					const y = api.coord([0, item.name])[1];
 					const x0 = api.coord([0, item.name])[0];
-					const xTarget = api.coord([item.target, item.name])[0];
+					const targetLineX = api.coord([1000, item.name])[0];
 
 					const barHeight = 28;
 					const targetLineWidth = 12;
 					const overPlanWidth = 100;
+
+					const targetWidth = targetLineX - x0;
 
 					const children = [];
 					let currentX = x0;
@@ -134,7 +148,10 @@ function initChart1(productsData) {
 					function addRect(value, color, textColor) {
 						if (!value) return;
 
-						const width = api.size([value, 0])[0];
+						const width = Math.max(
+							value / item.target * targetWidth,
+							10
+						);
 
 						children.push({
 							type: 'rect',
@@ -173,7 +190,7 @@ function initChart1(productsData) {
 						children.push({
 							type: 'rect',
 							shape: {
-								x: xTarget + targetLineWidth,
+								x: targetLineX + targetLineWidth,
 								y: y - barHeight / 2,
 								width: overPlanWidth,
 								height: barHeight
@@ -186,7 +203,7 @@ function initChart1(productsData) {
 						children.push({
 							type: 'text',
 							style: {
-								x: xTarget + targetLineWidth + overPlanWidth / 2,
+								x: targetLineX + targetLineWidth + overPlanWidth / 2,
 								y,
 								text: String(item.overPlan),
 								fill: colors.text,
@@ -204,7 +221,7 @@ function initChart1(productsData) {
 				},
 				data: productsData.map(item => ({
 					value: [item.total, item.name],
-					tooltip: `${item.name}: ${Math.round(item.total / item.target * 100)}%`
+					item
 				}))
 			},
 
@@ -250,7 +267,7 @@ function initChart1(productsData) {
 					const item = productsData[params.dataIndex];
 
 					const y = api.coord([0, item.name])[1];
-					const xTarget = api.coord([item.target, item.name])[0];
+					const targetLineX = api.coord([1000, item.name])[0];
 
 					const labelWidth = 42;
 					const labelHeight = 20;
@@ -263,7 +280,7 @@ function initChart1(productsData) {
 								type: 'rect',
 
 								shape: {
-									x: xTarget - labelWidth / 2,
+									x: targetLineX - labelWidth / 2,
 									y: y - labelHeight / 2,
 									width: labelWidth,
 									height: labelHeight
@@ -282,7 +299,7 @@ function initChart1(productsData) {
 								type: 'text',
 
 								style: {
-									x: xTarget,
+									x: targetLineX,
 									y,
 									text: String(item.target),
 									fill: colors.text,
@@ -528,7 +545,22 @@ function initChart2(productsData) {
 		},
 
 		tooltip: {
-			trigger: 'item'
+			trigger: 'item',
+			formatter(params) {
+				const item = params.data.item;
+
+				if (!item) return '';
+
+				return `
+					<strong>${item.name}</strong><br/>
+					Запаси: ${item.available}<br/>
+					У графіку постачання: ${item.expected}<br/>
+					Дефіцит: ${item.needed}<br/>
+					Поверх цілі: ${item.overPlan}<br/>
+					Ціль: ${item.target}<br/>
+					Разом наявно: ${item.total}
+				`;
+			}
 		},
 
 		xAxis: {
@@ -561,10 +593,13 @@ function initChart2(productsData) {
 
 					const y = api.coord([0, item.name])[1];
 					const x0 = api.coord([0, item.name])[0];
-					const xTarget = api.coord([item.target, item.name])[0];
+					const targetLineX = api.coord([1000, item.name])[0];
 
 					const barHeight = 28;
 					const targetLineWidth = 6;
+
+					const targetWidth = targetLineX - x0;
+
 					const children = [];
 
 					let currentX = x0;
@@ -572,7 +607,10 @@ function initChart2(productsData) {
 					function addRect(value, color, textColor) {
 						if (!value) return;
 
-						const width = api.size([value, 0])[0];
+						const width = Math.max(
+							value / item.target * targetWidth,
+							10
+						);
 
 						children.push({
 							type: 'rect',
@@ -616,7 +654,7 @@ function initChart2(productsData) {
 							40
 						);
 
-						const overPlanX = xTarget + targetLineWidth / 2;
+						const overPlanX = targetLineX + targetLineWidth / 2;
 
 						children.push({
 							type: 'rect',
@@ -652,7 +690,8 @@ function initChart2(productsData) {
 				},
 
 				data: productsData.map(item => ({
-					value: [item.total, item.name]
+					value: [item.total, item.name],
+					item
 				}))
 			},
 
@@ -694,7 +733,7 @@ function initChart2(productsData) {
 					const item = productsData[params.dataIndex];
 
 					const y = api.coord([0, item.name])[1];
-					const xTarget = api.coord([item.target, item.name])[0];
+					const targetLineX = api.coord([1000, item.name])[0];
 
 					return {
 						type: 'group',
@@ -702,7 +741,7 @@ function initChart2(productsData) {
 							{
 								type: 'rect',
 								shape: {
-									x: xTarget - 18,
+									x: targetLineX - 18,
 									y: y - 10,
 									width: 36,
 									height: 20
@@ -717,7 +756,7 @@ function initChart2(productsData) {
 							{
 								type: 'text',
 								style: {
-									x: xTarget,
+									x: targetLineX,
 									y,
 									text: String(item.target),
 									fill: '#111111',
