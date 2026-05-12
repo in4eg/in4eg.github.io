@@ -473,22 +473,60 @@ function initChart1(productsData) {
 	});
 }
 
+let chart2Instance = null;
+let chart2Option = null;
+let chart2Colors = null;
+
+function applyChart2Theme(mode) {
+	if (!chart2Instance || !chart2Option || !chart2Colors) return;
+
+	const isDark = mode === 'dark';
+
+	chart2Colors.target = isDark ? '#A5D3EA' : '#111111';
+	chart2Colors.text = isDark ? '#D6DDE5' : '#111111';
+
+	chart2Option.yAxis.axisLabel.color = chart2Colors.text;
+
+	chart2Option.graphic.forEach(item => {
+		if (item.type === 'text') {
+			item.style.fill = chart2Colors.text;
+		}
+
+		if (item.type === 'group') {
+			item.children.forEach(child => {
+				if (child.type === 'text') {
+					child.style.fill = chart2Colors.text;
+				}
+
+				if (child.type === 'rect' && child.style.stroke !== 'transparent') {
+					child.style.stroke = chart2Colors.text;
+				}
+			});
+		}
+	});
+
+	chart2Instance.setOption(chart2Option, true);
+}
+
 function initChart2(productsData) {
 	const chartElement = document.querySelector('#chart2');
 
 	if (!chartElement) return;
 
 	const chart = echarts.init(chartElement);
+	chart2Instance = chart;
 
 	const colors = {
-		available: '#434A52',
-		expected: '#475B47',
-		overPlan: '#D5997F',
-		total: '#F4DFB2',
-		needed: '#A1A0BF',
+		available: '#000000',
+		expected: '#4EA52E',
+		overPlan: '#F07C32',
+		total: '#EBC166',
+		needed: '#D2D2D2',
 		target: '#111111',
 		text: '#111111'
 	};
+
+	chart2Colors = colors;
 
 	const maxBarValue = Math.max(
 		...productsData.map(item =>
@@ -515,7 +553,7 @@ function initChart2(productsData) {
 					},
 					style: {
 						fill: color,
-						stroke: bordered ? '#111111' : 'transparent',
+						stroke: bordered ? colors.text : 'transparent',
 						lineWidth: bordered ? 2 : 0
 					}
 				},
@@ -525,7 +563,7 @@ function initChart2(productsData) {
 						x: 24,
 						y: 7,
 						text,
-						fill: '#111111',
+						fill: colors.text,
 						font: '14px Arial',
 						verticalAlign: 'middle'
 					}
@@ -534,6 +572,16 @@ function initChart2(productsData) {
 		};
 	}
 
+	const costSummary = ['available', 'expected', 'needed', 'overPlan', 'total'].reduce((acc, key) => {
+		acc[key] = productsData.reduce((sum, item) => {
+			const value = item.costs[key];
+
+			return sum + (Number(value) || 0);
+		}, 0);
+
+		return acc;
+	}, {});
+
 	const option = {
 		backgroundColor: 'transparent',
 
@@ -541,7 +589,7 @@ function initChart2(productsData) {
 			left: 170,
 			right: 430,
 			top: 170,
-			bottom: 50
+			bottom: 100
 		},
 
 		tooltip: {
@@ -930,7 +978,7 @@ function initChart2(productsData) {
 							x: startX + totalCostsWidth / 1.2,
 							y: 160,
 							text: 'млрд дол. США',
-							fill: '#111111',
+							fill: colors.text,
 							align: 'center',
 							verticalAlign: 'middle',
 							font: 'bold 12px Arial'
@@ -954,11 +1002,94 @@ function initChart2(productsData) {
 							x,
 							y: 160,
 							text: 'Ціль',
-							fill: '#111111',
+							fill: colors.text,
 							align: 'center',
 							verticalAlign: 'middle',
 							font: '12px Arial'
 						}
+					};
+				},
+
+				data: [1]
+			},
+
+			{
+				type: 'custom',
+				silent: true,
+
+				renderItem(params, api) {
+					const cellWidth = 52;
+					const gap = 16;
+					const columnsCount = 5;
+					const rightOffset = 0;
+
+					const totalCostsWidth = columnsCount * cellWidth + (columnsCount - 1) * gap;
+					const startX = api.getWidth() - rightOffset - totalCostsWidth;
+
+					const lastItem = productsData[productsData.length - 1];
+					const lastY = api.coord([0, lastItem.name])[1];
+
+					const lineY = lastY + 30;
+					const summaryY = lineY + 34;
+
+					const keys = [
+						['available', colors.available, '#ffffff'],
+						['expected', colors.expected, '#ffffff'],
+						['needed', colors.needed, '#111111'],
+						['overPlan', colors.overPlan, '#111111'],
+						['total', colors.total, '#111111']
+					];
+
+					const children = [
+						{
+							type: 'line',
+							shape: {
+								x1: startX,
+								y1: lineY,
+								x2: startX + totalCostsWidth,
+								y2: lineY
+							},
+							style: {
+								stroke: colors.text,
+								lineWidth: 2
+							}
+						}
+					];
+
+					keys.forEach(([key, bg, textColor], index) => {
+						const x = startX + index * (cellWidth + gap);
+						const value = costSummary[key];
+
+						children.push({
+							type: 'rect',
+							shape: {
+								x,
+								y: summaryY - 14,
+								width: cellWidth,
+								height: 28
+							},
+							style: {
+								fill: bg
+							}
+						});
+
+						children.push({
+							type: 'text',
+							style: {
+								x: x + cellWidth / 2,
+								y: summaryY,
+								text: `$${value.toFixed(1)}`,
+								fill: textColor,
+								align: 'center',
+								verticalAlign: 'middle',
+								font: '12px Arial'
+							}
+						});
+					});
+
+					return {
+						type: 'group',
+						children
 					};
 				},
 
@@ -973,7 +1104,7 @@ function initChart2(productsData) {
 				top: 112,
 				style: {
 					text: 'Кількість продуктів, запланованих на закупівлю\nу 2026 році, тис. од',
-					fill: '#111111',
+					fill: colors.text,
 					font: '12px Arial',
 					lineHeight: 17
 				}
@@ -989,6 +1120,7 @@ function initChart2(productsData) {
 		]
 	};
 
+	chart2Option = option;
 	chart.setOption(option);
 
 	window.addEventListener('resize', () => {
@@ -997,3 +1129,18 @@ function initChart2(productsData) {
 }
 
 initCharts();
+
+document.querySelectorAll('.tab[data-mode]').forEach(tab => {
+	tab.addEventListener('click', () => {
+		const mode = tab.dataset.mode;
+
+		document.body.classList.remove('light', 'dark');
+		document.body.classList.add(mode);
+
+		document.querySelectorAll('.tab[data-mode]').forEach(item => {
+			item.classList.toggle('active', item === tab);
+		});
+
+		applyChart2Theme(mode);
+	});
+});

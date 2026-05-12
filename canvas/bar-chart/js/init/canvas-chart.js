@@ -1,12 +1,3 @@
-// async function loadData() {
-// 	const response = await fetch('../data.json');
-// 	const productsData = await response.json();
-
-// 	console.log(productsData);
-// }
-
-// loadData();
-
 class CanvasChart {
 	canvas = null;
 	ctx = null;
@@ -24,6 +15,12 @@ class CanvasChart {
 	_tooltipOpacity = 0;
 	_tooltipAnimationFrame = null;
 
+	_animationProgress = 0;
+	_animationFrame = null;
+
+	_dogImage = new Image();
+	_dogReady = false;
+
 	constructor(host, data = [], options = {}) {
 		this._destroyed = false;
 
@@ -31,6 +28,13 @@ class CanvasChart {
 		this.ctx = this.canvas.getContext('2d');
 
 		this.data = data;
+
+		this._dogImage.src = './img/dog.webp';
+
+		this._dogImage.onload = () => {
+			this._dogReady = true;
+			this.draw();
+		};
 
 		this.options = {
 			legend: true,
@@ -70,10 +74,12 @@ class CanvasChart {
 		this.updateRects = this.updateRects.bind(this);
 		this.handleMouseMove = this.handleMouseMove.bind(this);
 		this.handleMouseLeave = this.handleMouseLeave.bind(this);
+		this.animateBars = this.animateBars.bind(this);
 
 		setTimeout(() => {
 			this.init();
 			this.updateRects();
+			this.animateBars();
 		}, 100);
 
 		window.addEventListener('resize', this.updateRects);
@@ -83,6 +89,29 @@ class CanvasChart {
 
 	init() {
 		this.updateRects();
+	}
+
+	animateBars() {
+		cancelAnimationFrame(this._animationFrame);
+
+		const startTime = performance.now();
+		const duration = 900;
+
+		const animate = currentTime => {
+			if (this._destroyed) return;
+
+			const progress = Math.min((currentTime - startTime) / duration, 1);
+
+			this._animationProgress = 1 - Math.pow(1 - progress, 3);
+
+			this.draw();
+
+			if (progress < 1) {
+				this._animationFrame = requestAnimationFrame(animate);
+			}
+		};
+
+		this._animationFrame = requestAnimationFrame(animate);
 	}
 
 	updateRects() {
@@ -188,7 +217,7 @@ class CanvasChart {
 			);
 
 			if (item.overPlan > 0) {
-				const width = overPlanWidth;
+				const width = overPlanWidth * this._animationProgress;
 
 				this.drawBlock({
 					x: startX + mainBarWidth + targetLineWidth,
@@ -230,7 +259,6 @@ class CanvasChart {
 		const { ctx } = this;
 
 		ctx.save();
-
 		ctx.fillStyle = this.options.colors.border;
 
 		ctx.fillRect(
@@ -272,7 +300,7 @@ class CanvasChart {
 		values.forEach(part => {
 			if (!part.value) return;
 
-			const partWidth = width * (part.value / item.target);
+			const partWidth = width * (part.value / item.target) * this._animationProgress;
 
 			this.drawBlock({
 				x: currentX,
@@ -377,17 +405,36 @@ class CanvasChart {
 	drawBlock({ x, y, width, height, color, text, textColor, type, item }) {
 		const { ctx } = this;
 
+		const isAnimatedBlock = ['available', 'expected', 'needed', 'overPlan'].includes(type);
+		const canShowText = !isAnimatedBlock || this._animationProgress > 0.85;
+
 		ctx.save();
 
 		ctx.fillStyle = color;
 		ctx.fillRect(x, y, width, height);
+
+		if (isAnimatedBlock && this._dogReady && this._animationProgress < 1) {
+			const dogSize = height * 1.2;
+			const dogX = x + width - dogSize;
+			const dogY = y + height / 2 - dogSize / 2;
+
+			if (width > dogSize) {
+				ctx.drawImage(
+					this._dogImage,
+					dogX,
+					dogY,
+					dogSize,
+					dogSize
+				);
+			}
+		}
 
 		ctx.fillStyle = textColor;
 		ctx.font = '13px Arial';
 		ctx.textAlign = 'center';
 		ctx.textBaseline = 'middle';
 
-		if (width > 28) {
+		if (width > 28 && canShowText) {
 			ctx.fillText(text, x + width / 2, y + height / 2);
 		}
 
@@ -609,7 +656,6 @@ class CanvasChart {
 		};
 	}
 
-
 	destroy() {
 		this._destroyed = true;
 
@@ -617,6 +663,7 @@ class CanvasChart {
 		this.canvas.removeEventListener('mousemove', this.handleMouseMove);
 		this.canvas.removeEventListener('mouseleave', this.handleMouseLeave);
 
+		cancelAnimationFrame(this._animationFrame);
 		cancelAnimationFrame(this._tooltipAnimationFrame);
 
 		this.clear();

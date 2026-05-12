@@ -678,11 +678,20 @@ img.adaptive {
   }
 }
 .page-main {
-  height: 100vh
+  min-height: 100vh;
+  background-image: url(../img/patron.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  padding: 50px
 }
-.page-main .wave {
+.canvas-cover {
   height: 100%;
-  overflow: hidden
+  overflow: hidden;
+  border-radius: 16px;
+  background-color: rgba(255,255,255,.2);
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px)
 }
 .canvas {
   display: block;
