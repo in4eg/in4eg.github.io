@@ -1,0 +1,1002 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Завод Фрунзе — UX/UI Case Study</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Inter', -apple-system, sans-serif; background: #f5f5f3; color: #1a1a1a; }
+
+  /* Colors */
+  :root {
+    --green-dark: #1a4a28;
+    --green-main: #2d6a3f;
+    --green-mid: #3d8a52;
+    --green-light: #e8f5ec;
+    --green-pale: #f0faf3;
+    --red-main: #a31e1e;
+    --red-light: #faeaea;
+    --gray-dark: #2c2c2a;
+    --gray-mid: #888780;
+    --gray-light: #e8e8e6;
+    --white: #ffffff;
+    --black: #111111;
+  }
+
+  .page { max-width: 1100px; margin: 0 auto; }
+
+  /* ── COVER ── */
+  .cover {
+    background: var(--green-dark);
+    padding: 80px 60px 70px;
+    position: relative;
+    overflow: hidden;
+  }
+  .cover::before {
+    content: '';
+    position: absolute; inset: 0;
+    background: repeating-linear-gradient(
+      45deg,
+      transparent,
+      transparent 30px,
+      rgba(255,255,255,0.015) 30px,
+      rgba(255,255,255,0.015) 31px
+    );
+  }
+  .cover-tag {
+    display: inline-block;
+    background: rgba(255,255,255,0.12);
+    color: rgba(255,255,255,0.7);
+    font-size: 12px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 6px 14px;
+    border-radius: 4px;
+    margin-bottom: 32px;
+  }
+  .cover h1 {
+    font-size: 52px;
+    font-weight: 700;
+    color: #ffffff;
+    line-height: 1.1;
+    margin-bottom: 20px;
+    position: relative;
+  }
+  .cover h1 span { color: #6fcf87; }
+  .cover-sub {
+    font-size: 18px;
+    color: rgba(255,255,255,0.65);
+    max-width: 600px;
+    line-height: 1.6;
+    margin-bottom: 48px;
+  }
+  .cover-meta {
+    display: flex; gap: 40px; flex-wrap: wrap;
+    position: relative;
+  }
+  .cover-meta-item { }
+  .cover-meta-label { font-size: 11px; color: rgba(255,255,255,0.4); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 4px; }
+  .cover-meta-value { font-size: 15px; color: rgba(255,255,255,0.85); font-weight: 500; }
+
+  /* ── SECTION ── */
+  .section { padding: 64px 60px; background: var(--white); border-bottom: 1px solid #e8e8e6; }
+  .section.gray { background: #f8f8f6; }
+  .section.dark { background: var(--green-dark); }
+
+  .section-tag {
+    font-size: 11px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--green-mid);
+    font-weight: 600;
+    margin-bottom: 12px;
+  }
+  .section.dark .section-tag { color: #6fcf87; }
+
+  .section-title {
+    font-size: 34px;
+    font-weight: 700;
+    color: var(--green-dark);
+    margin-bottom: 16px;
+    line-height: 1.2;
+  }
+  .section.dark .section-title { color: #ffffff; }
+
+  .section-lead {
+    font-size: 17px;
+    color: #555;
+    max-width: 680px;
+    line-height: 1.7;
+    margin-bottom: 40px;
+  }
+  .section.dark .section-lead { color: rgba(255,255,255,0.65); }
+
+  /* ── PROJECT META ── */
+  .meta-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1px;
+    background: var(--gray-light);
+    border: 1px solid var(--gray-light);
+    border-radius: 12px;
+    overflow: hidden;
+  }
+  .meta-cell {
+    background: var(--white);
+    padding: 24px;
+  }
+  .meta-cell-label { font-size: 12px; color: var(--gray-mid); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 8px; }
+  .meta-cell-value { font-size: 15px; font-weight: 600; color: var(--green-dark); }
+
+  /* ── PROBLEM NUMBERS ── */
+  .problem-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+    margin-top: 8px;
+  }
+  .problem-card {
+    background: var(--green-pale);
+    border: 1px solid #c8e6d0;
+    border-radius: 12px;
+    padding: 28px;
+  }
+  .problem-card.red {
+    background: var(--red-light);
+    border-color: #f5c0c0;
+  }
+  .problem-number {
+    font-size: 48px;
+    font-weight: 700;
+    color: var(--green-main);
+    line-height: 1;
+    margin-bottom: 8px;
+  }
+  .problem-card.red .problem-number { color: var(--red-main); }
+  .problem-label { font-size: 14px; color: #555; line-height: 1.5; }
+  .problem-insight {
+    margin-top: 14px;
+    padding-top: 14px;
+    border-top: 1px solid rgba(0,0,0,0.08);
+    font-size: 13px;
+    color: var(--green-dark);
+    font-weight: 500;
+    line-height: 1.5;
+  }
+
+  /* ── FUNNEL ── */
+  .funnel { max-width: 560px; margin: 0 auto; }
+  .funnel-row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 6px;
+  }
+  .funnel-bar-wrap { flex: 1; height: 52px; background: #eee; border-radius: 6px; overflow: hidden; position: relative; }
+  .funnel-bar { height: 100%; background: var(--green-main); border-radius: 6px; display: flex; align-items: center; padding: 0 14px; transition: width 0.3s; }
+  .funnel-bar.red { background: var(--red-main); }
+  .funnel-bar-label { font-size: 13px; color: white; font-weight: 600; white-space: nowrap; }
+  .funnel-info { width: 200px; padding-left: 16px; }
+  .funnel-info-num { font-size: 20px; font-weight: 700; color: var(--green-dark); }
+  .funnel-info-pct { font-size: 12px; color: var(--gray-mid); }
+  .funnel-info-pct.red { color: var(--red-main); font-weight: 600; }
+  .funnel-arrow { text-align: center; color: var(--gray-mid); font-size: 18px; margin: 2px 0 2px 110px; }
+  .funnel-insight {
+    margin-top: 24px;
+    background: #fff3cd;
+    border-left: 4px solid #f0a500;
+    border-radius: 0 8px 8px 0;
+    padding: 16px 20px;
+    font-size: 14px;
+    color: #7a5500;
+    line-height: 1.6;
+  }
+
+  /* ── 4 PROBLEMS ── */
+  .problems-list { display: flex; flex-direction: column; gap: 20px; }
+  .prob-item {
+    display: grid;
+    grid-template-columns: 64px 1fr;
+    gap: 20px;
+    align-items: start;
+    padding: 24px;
+    background: var(--white);
+    border: 1px solid var(--gray-light);
+    border-radius: 12px;
+  }
+  .prob-num {
+    width: 48px; height: 48px;
+    background: var(--green-light);
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 20px; font-weight: 700; color: var(--green-main);
+  }
+  .prob-num.red { background: var(--red-light); color: var(--red-main); }
+  .prob-title { font-size: 17px; font-weight: 700; color: var(--green-dark); margin-bottom: 6px; }
+  .prob-stat { font-size: 24px; font-weight: 700; color: var(--red-main); margin-bottom: 8px; }
+  .prob-desc { font-size: 14px; color: #555; line-height: 1.6; margin-bottom: 10px; }
+  .prob-solution {
+    display: inline-flex; align-items: center; gap: 6px;
+    background: var(--green-light);
+    color: var(--green-dark);
+    font-size: 13px; font-weight: 600;
+    padding: 6px 12px;
+    border-radius: 20px;
+  }
+
+  /* ── USER FLOWS ── */
+  .flows-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+  .flow-card {
+    background: var(--white);
+    border: 1px solid var(--gray-light);
+    border-radius: 12px;
+    padding: 24px;
+  }
+  .flow-card.highlight { border-color: #c8e6d0; background: var(--green-pale); }
+  .flow-title { font-size: 14px; font-weight: 700; color: var(--green-dark); margin-bottom: 16px; }
+  .flow-steps { display: flex; flex-direction: column; gap: 0; }
+  .flow-step {
+    display: flex; align-items: center; gap: 10px;
+    font-size: 13px; color: #444;
+    padding: 7px 0;
+    border-bottom: 1px solid #f0f0ee;
+  }
+  .flow-step:last-child { border-bottom: none; }
+  .flow-dot {
+    width: 8px; height: 8px; border-radius: 50%;
+    background: var(--green-main); flex-shrink: 0;
+  }
+  .flow-dot.red { background: var(--red-main); }
+  .flow-badge {
+    margin-top: 14px;
+    font-size: 12px; font-weight: 700;
+    padding: 5px 12px;
+    border-radius: 20px;
+    display: inline-block;
+  }
+  .flow-badge.ok { background: var(--green-light); color: var(--green-dark); }
+  .flow-badge.bad { background: var(--red-light); color: var(--red-main); }
+
+  /* ── SITEMAP ── */
+  .sitemap-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+  .sitemap-block {
+    border: 1px solid var(--gray-light);
+    border-radius: 12px;
+    overflow: hidden;
+  }
+  .sitemap-header {
+    background: var(--green-main);
+    color: white;
+    font-size: 13px; font-weight: 700;
+    padding: 12px 16px;
+    text-transform: uppercase; letter-spacing: 1px;
+  }
+  .sitemap-header.light { background: var(--green-light); color: var(--green-dark); }
+  .sitemap-body { padding: 14px 16px; background: var(--white); }
+  .sitemap-item {
+    font-size: 13px; color: #444;
+    padding: 5px 0;
+    border-bottom: 1px solid #f0f0ee;
+    display: flex; align-items: center; gap: 8px;
+  }
+  .sitemap-item:last-child { border-bottom: none; }
+  .sitemap-dot { width: 4px; height: 4px; border-radius: 50%; background: var(--green-mid); flex-shrink: 0; }
+  .sitemap-note {
+    font-size: 11px; color: var(--green-mid); font-weight: 600;
+    margin-top: 8px;
+  }
+
+  /* ── BEFORE/AFTER ── */
+  .ba-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2px; border-radius: 12px; overflow: hidden; border: 1px solid var(--gray-light); }
+  .ba-col { padding: 24px; }
+  .ba-col.before { background: #fdf8f8; }
+  .ba-col.after { background: #f0faf3; }
+  .ba-label {
+    font-size: 11px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase;
+    margin-bottom: 16px;
+    display: flex; align-items: center; gap: 8px;
+  }
+  .ba-label.before { color: var(--red-main); }
+  .ba-label.after { color: var(--green-main); }
+  .ba-items { display: flex; flex-direction: column; gap: 8px; }
+  .ba-item { font-size: 14px; color: #444; display: flex; gap: 10px; align-items: flex-start; line-height: 1.5; }
+  .ba-icon { flex-shrink: 0; font-size: 16px; margin-top: 1px; }
+
+  /* ── WIREFRAME ANNOTATION ── */
+  .wireframe-note {
+    background: var(--green-pale);
+    border: 1px solid #c8e6d0;
+    border-radius: 8px;
+    padding: 10px 14px;
+    font-size: 13px;
+    color: var(--green-dark);
+    display: flex; align-items: flex-start; gap: 8px;
+    margin-bottom: 10px;
+  }
+  .wireframe-note-icon { font-size: 16px; flex-shrink: 0; color: var(--green-main); margin-top: 1px; }
+
+  /* ── UI SHOWCASE ── */
+  .ui-palette { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 32px; }
+  .ui-swatch { border-radius: 8px; height: 52px; flex: 1; min-width: 52px; }
+  .ui-label { font-size: 11px; color: var(--gray-mid); text-align: center; margin-top: 4px; }
+
+  .ui-component-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 24px; }
+  .ui-comp-card {
+    background: var(--white);
+    border: 1px solid var(--gray-light);
+    border-radius: 12px;
+    padding: 20px;
+  }
+  .ui-comp-title { font-size: 12px; color: var(--gray-mid); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 14px; }
+
+  /* Мімік картки товару */
+  .mock-product-card {
+    border: 1px solid var(--gray-light);
+    border-radius: 10px;
+    overflow: hidden;
+    font-size: 13px;
+  }
+  .mock-img { background: #e8ece8; height: 90px; display: flex; align-items: center; justify-content: center; color: #aaa; font-size: 11px; }
+  .mock-body { padding: 12px; }
+  .mock-status { font-size: 11px; color: var(--green-main); font-weight: 600; margin-bottom: 6px; }
+  .mock-name { font-weight: 700; color: var(--green-dark); margin-bottom: 6px; font-size: 13px; }
+  .mock-price { font-size: 16px; font-weight: 700; color: var(--green-dark); margin-bottom: 10px; }
+  .mock-btn {
+    display: block; width: 100%;
+    background: var(--green-main); color: white;
+    border: none; border-radius: 6px; padding: 8px;
+    font-size: 13px; font-weight: 600; cursor: pointer;
+    text-align: center;
+  }
+  .mock-btn.outline {
+    background: white; color: var(--green-main);
+    border: 1px solid var(--green-main);
+    margin-top: 6px;
+  }
+  .mock-chars { margin-top: 10px; }
+  .mock-char { font-size: 11px; color: #666; display: flex; gap: 4px; align-items: center; padding: 2px 0; }
+  .mock-char::before { content: '✓'; color: var(--green-main); }
+
+  /* Мімік хедера */
+  .mock-header {
+    background: var(--green-dark);
+    border-radius: 8px;
+    padding: 10px 14px;
+    display: flex; align-items: center; gap: 10px;
+  }
+  .mock-logo { color: white; font-weight: 700; font-size: 13px; }
+  .mock-search {
+    flex: 1; background: rgba(255,255,255,0.12);
+    border-radius: 6px; padding: 7px 10px;
+    color: rgba(255,255,255,0.5); font-size: 12px;
+    display: flex; align-items: center; gap: 6px;
+  }
+  .mock-cta { background: var(--green-mid); color: white; font-size: 11px; font-weight: 700; padding: 7px 10px; border-radius: 6px; white-space: nowrap; }
+
+  /* ── RESULTS ── */
+  .results-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
+  .result-card {
+    border-radius: 12px;
+    padding: 28px;
+    background: var(--white);
+    border: 1px solid var(--gray-light);
+  }
+  .result-icon { font-size: 28px; margin-bottom: 12px; }
+  .result-metric { font-size: 13px; color: var(--gray-mid); margin-bottom: 4px; }
+  .result-before { font-size: 32px; font-weight: 700; color: var(--red-main); margin-bottom: 4px; }
+  .result-after { font-size: 14px; color: var(--green-main); font-weight: 600; margin-bottom: 8px; }
+  .result-desc { font-size: 13px; color: #666; line-height: 1.5; }
+
+  /* ── QUOTE ── */
+  .pullquote {
+    border-left: 4px solid var(--green-main);
+    padding: 16px 24px;
+    margin: 32px 0;
+    background: var(--green-pale);
+    border-radius: 0 8px 8px 0;
+  }
+  .pullquote p { font-size: 18px; font-style: italic; color: var(--green-dark); line-height: 1.6; }
+  .pullquote cite { display: block; margin-top: 8px; font-size: 13px; color: var(--gray-mid); }
+
+  /* ── REFLECTION ── */
+  .reflection-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+  .ref-card {
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,255,255,0.15);
+    border-radius: 12px;
+    padding: 24px;
+  }
+  .ref-num { font-size: 36px; font-weight: 700; color: #6fcf87; margin-bottom: 12px; }
+  .ref-text { font-size: 14px; color: rgba(255,255,255,0.75); line-height: 1.6; }
+
+  /* ── FOOTER ── */
+  .footer {
+    background: var(--gray-dark);
+    padding: 40px 60px;
+    display: flex; justify-content: space-between; align-items: center;
+    flex-wrap: wrap; gap: 16px;
+  }
+  .footer-name { color: white; font-size: 18px; font-weight: 700; }
+  .footer-tags { display: flex; gap: 8px; flex-wrap: wrap; }
+  .footer-tag {
+    background: rgba(255,255,255,0.1);
+    color: rgba(255,255,255,0.6);
+    font-size: 12px;
+    padding: 5px 12px;
+    border-radius: 20px;
+  }
+
+  /* Divider */
+  .divider { height: 1px; background: var(--gray-light); margin: 40px 0; }
+  .divider.green { background: rgba(61,138,82,0.2); }
+
+  h2.inner { font-size: 22px; font-weight: 700; color: var(--green-dark); margin-bottom: 20px; }
+  h3.inner { font-size: 16px; font-weight: 700; color: var(--green-dark); margin-bottom: 12px; }
+</style>
+</head>
+<body>
+<div class="page">
+
+<!-- ══════════════════════════════ COVER ══════════════════════════════ -->
+<div class="cover">
+  <div class="cover-tag">UX / UI Case Study</div>
+  <h1>Завод <span>Фрунзе</span><br>— редизайн B2B e-commerce</h1>
+  <p class="cover-sub">Як аналітика допомогла знайти точки втрат і перетворити промисловий каталог у інструмент продажів</p>
+  <div class="cover-meta">
+    <div class="cover-meta-item">
+      <div class="cover-meta-label">Роль</div>
+      <div class="cover-meta-value">UX + UI дизайнер</div>
+    </div>
+    <div class="cover-meta-item">
+      <div class="cover-meta-label">Тривалість</div>
+      <div class="cover-meta-value">24 робочих дні</div>
+    </div>
+    <div class="cover-meta-item">
+      <div class="cover-meta-label">Платформа</div>
+      <div class="cover-meta-value">Desktop-first</div>
+    </div>
+    <div class="cover-meta-item">
+      <div class="cover-meta-label">Сайт</div>
+      <div class="cover-meta-value">frunze.ua</div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════ CONTEXT ══════════════════════════════ -->
+<div class="section">
+  <div class="section-tag">01 — Контекст</div>
+  <div class="section-title">Про клієнта</div>
+  <p class="section-lead">Завод Фрунзе — промислове підприємство з 1868 року. Виробляє перфолисти, решета, металеві сітки, настили та огорожі. Один з небагатьох у ніші, хто має власний e-commerce — кошик і онлайн-оформлення замовлення.</p>
+
+  <div class="meta-grid">
+    <div class="meta-cell">
+      <div class="meta-cell-label">Аудиторія</div>
+      <div class="meta-cell-value">B2B + B2C</div>
+    </div>
+    <div class="meta-cell">
+      <div class="meta-cell-label">Сегменти</div>
+      <div class="meta-cell-value">Агро, будівництво, промисловість</div>
+    </div>
+    <div class="meta-cell">
+      <div class="meta-cell-label">Географія</div>
+      <div class="meta-cell-value">Україна + Європа</div>
+    </div>
+    <div class="meta-cell">
+      <div class="meta-cell-label">Платформа</div>
+      <div class="meta-cell-value">OpenCart, Desktop 96%</div>
+    </div>
+  </div>
+
+  <div class="pullquote" style="margin-top:32px">
+    <p>"Результат — сайт який продає та генерує заявки клієнтів"</p>
+    <cite>— з брифу клієнта</cite>
+  </div>
+</div>
+
+<!-- ══════════════════════════════ RESEARCH ══════════════════════════════ -->
+<div class="section gray">
+  <div class="section-tag">02 — UX Дослідження</div>
+  <div class="section-title">Що показала аналітика</div>
+  <p class="section-lead">Ми отримали доступ до Google Analytics і знайшли три рівні проблем: технічний, продуктовий та UX. Проблема не в трафіку — проблема в тому, що з ним відбувається.</p>
+
+  <div class="problems-list">
+
+    <div class="prob-item">
+      <div class="prob-num red">1</div>
+      <div>
+        <div class="prob-title">404 сторінка з'їдає третину трафіку</div>
+        <div class="prob-stat">35–40% трафіку</div>
+        <p class="prob-desc">/ua/not-found — понад 11 600 переглядів. Третина користувачів потрапляє у нікуди ще до того, як UX починає працювати. Биті SEO-посилання, стара структура URL.</p>
+        <span class="prob-solution">→ Розумна 404 з пошуком і CTA + редиректи 301</span>
+      </div>
+    </div>
+
+    <div class="prob-item">
+      <div class="prob-num red">2</div>
+      <div>
+        <div class="prob-title">Воронка продажів з конверсією 1,1%</div>
+        <div class="prob-stat">29 991 → лише 25 покупок</div>
+        <p class="prob-desc">Найбільший обрив — між переглядом товару і додаванням у кошик. Проблема не в checkout. Проблема в моменті прийняття рішення: незрозумілі характеристики, слабкий CTA, немає довіри.</p>
+        <span class="prob-solution">→ Редизайн картки товару з домінуючим CTA</span>
+      </div>
+    </div>
+
+    <div class="prob-item">
+      <div class="prob-num red">3</div>
+      <div>
+        <div class="prob-title">Залученість майже нульова</div>
+        <div class="prob-stat">17 сек — середній час на сайті</div>
+        <p class="prob-desc">Interaction rate: 15%. Сторінок на сесію: 1,6. Hero-секція не відповідала на базові питання за 3–5 секунд: Хто ви? Що продаєте? Чому мені вигідно?</p>
+        <span class="prob-solution">→ Hero з чітким УТП та двома CTA</span>
+      </div>
+    </div>
+
+    <div class="prob-item">
+      <div class="prob-num">4</div>
+      <div>
+        <div class="prob-title">Пошук майже не використовується</div>
+        <div class="prob-stat" style="color:var(--green-dark)">0,3% від усіх подій</div>
+        <p class="prob-desc">view_search_results — лише 401 із 182 716 подій. Пошуковий рядок або не помітний, або не дає якісних результатів — попри те, що користувачі активно шукають конкретні моделі.</p>
+        <span class="prob-solution">→ Збільшений пошук з placeholder і популярними запитами</span>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- ══════════════════════════════ FUNNEL ══════════════════════════════ -->
+<div class="section">
+  <div class="section-tag">03 — Воронка</div>
+  <div class="section-title">Де бізнес втрачає гроші</div>
+  <p class="section-lead">Реальний шлях користувача від входу до покупки. Найбільший "обрив" виявлено між кроком 2 і 3.</p>
+
+  <div class="funnel">
+    <div class="funnel-row">
+      <div class="funnel-bar-wrap">
+        <div class="funnel-bar" style="width:100%"><span class="funnel-bar-label">Початок сесії</span></div>
+      </div>
+      <div class="funnel-info">
+        <div class="funnel-info-num">29 991</div>
+        <div class="funnel-info-pct">100%</div>
+      </div>
+    </div>
+    <div class="funnel-arrow">↓</div>
+    <div class="funnel-row">
+      <div class="funnel-bar-wrap">
+        <div class="funnel-bar" style="width:75%"><span class="funnel-bar-label">Перегляд товару</span></div>
+      </div>
+      <div class="funnel-info">
+        <div class="funnel-info-num">7 589</div>
+        <div class="funnel-info-pct">25,3%</div>
+      </div>
+    </div>
+    <div class="funnel-arrow" style="color:#a31e1e; font-weight:700">⚠ критична втрата ↓</div>
+    <div class="funnel-row">
+      <div class="funnel-bar-wrap">
+        <div class="funnel-bar red" style="width:8%"><span class="funnel-bar-label" style="font-size:11px">У кошик</span></div>
+      </div>
+      <div class="funnel-info">
+        <div class="funnel-info-num">84</div>
+        <div class="funnel-info-pct red">лише 1,1% !</div>
+      </div>
+    </div>
+    <div class="funnel-arrow">↓</div>
+    <div class="funnel-row">
+      <div class="funnel-bar-wrap">
+        <div class="funnel-bar red" style="width:5%"><span class="funnel-bar-label" style="font-size:11px">Checkout</span></div>
+      </div>
+      <div class="funnel-info">
+        <div class="funnel-info-num">51</div>
+        <div class="funnel-info-pct">60,7% від кошика</div>
+      </div>
+    </div>
+    <div class="funnel-arrow">↓</div>
+    <div class="funnel-row">
+      <div class="funnel-bar-wrap">
+        <div class="funnel-bar" style="width:3%; background: var(--green-main)"><span class="funnel-bar-label" style="font-size:11px">Покупка</span></div>
+      </div>
+      <div class="funnel-info">
+        <div class="funnel-info-num">25</div>
+        <div class="funnel-info-pct">49% від checkout</div>
+      </div>
+    </div>
+    <div class="funnel-insight">
+      <strong>Ключовий інсайт:</strong> якщо підняти конверсію товар→кошик хоча б до 5% — кількість покупок зросте у 4–5 разів без зміни трафіку.
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════ USER FLOWS ══════════════════════════════ -->
+<div class="section gray">
+  <div class="section-tag">04 — Сценарії користувачів</div>
+  <div class="section-title">Як насправді поводяться відвідувачі</div>
+  <p class="section-lead">Виявлено 4 ключових сценарії. Найцінніший — коли продукт зрозумілий, конверсія кратно вища.</p>
+
+  <div class="flows-grid">
+    <div class="flow-card">
+      <div class="flow-title">⚠ Сценарій 1 — Цільовий, але зламаний</div>
+      <div class="flow-steps">
+        <div class="flow-step"><div class="flow-dot red"></div>Перегляд товару</div>
+        <div class="flow-step"><div class="flow-dot red"></div>Спроба додати у кошик</div>
+        <div class="flow-step"><div class="flow-dot red"></div>Вихід без покупки</div>
+      </div>
+      <span class="flow-badge bad">Конверсія: 1,1%</span>
+    </div>
+
+    <div class="flow-card">
+      <div class="flow-title">📞 Сценарій 2 — Реальний B2B</div>
+      <div class="flow-steps">
+        <div class="flow-step"><div class="flow-dot"></div>Відкриває сторінку товару</div>
+        <div class="flow-step"><div class="flow-dot"></div>Шукає контакти</div>
+        <div class="flow-step"><div class="flow-dot"></div>Телефонує менеджеру</div>
+      </div>
+      <span class="flow-badge bad">Кошик не використовується</span>
+    </div>
+
+    <div class="flow-card">
+      <div class="flow-title">🚪 Сценарій 3 — Масовий відтік</div>
+      <div class="flow-steps">
+        <div class="flow-step"><div class="flow-dot red"></div>Відкриває каталог</div>
+        <div class="flow-step"><div class="flow-dot red"></div>Переглядає список</div>
+        <div class="flow-step"><div class="flow-dot red"></div>Залишає сайт</div>
+      </div>
+      <span class="flow-badge bad">24k переглядів → 84 у кошик</span>
+    </div>
+
+    <div class="flow-card highlight">
+      <div class="flow-title">✅ Сценарій 4 — Найефективніший</div>
+      <div class="flow-steps">
+        <div class="flow-step"><div class="flow-dot"></div>Пошук конкретного товару</div>
+        <div class="flow-step"><div class="flow-dot"></div>Відкриває сторінку товару</div>
+        <div class="flow-step"><div class="flow-dot"></div>Додає у кошик → покупка</div>
+      </div>
+      <span class="flow-badge ok">37 переглядів → 28 у кошик → 21 покупка</span>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════ SITEMAP ══════════════════════════════ -->
+<div class="section">
+  <div class="section-tag">05 — Архітектура</div>
+  <div class="section-title">Нова структура сайту</div>
+  <p class="section-lead">Стара структура змішувала продукти, фільтри, інструкції та новини в одному меню. Каталог був відокремлений окремою кнопкою. Нова побудована на 3 різних сценаріях мислення користувача.</p>
+
+  <div class="sitemap-grid">
+    <div class="sitemap-block">
+      <div class="sitemap-header">Каталог продукції</div>
+      <div class="sitemap-body">
+        <p style="font-size:12px;color:var(--gray-mid);margin-bottom:10px">Логіка: "Що маю купити?"</p>
+        <div class="sitemap-item"><div class="sitemap-dot"></div>Перфорований метал</div>
+        <div class="sitemap-item"><div class="sitemap-dot"></div>Металеві сітки</div>
+        <div class="sitemap-item"><div class="sitemap-dot"></div>Настили</div>
+        <div class="sitemap-item"><div class="sitemap-dot"></div>Системи огорож</div>
+        <div class="sitemap-item"><div class="sitemap-dot"></div>Габіонні конструкції</div>
+        <div class="sitemap-item"><div class="sitemap-dot"></div>Вуличні меблі</div>
+        <div class="sitemap-note">6 категорій / 5000+ товарів</div>
+      </div>
+    </div>
+
+    <div class="sitemap-block">
+      <div class="sitemap-header">Рішення для галузей</div>
+      <div class="sitemap-body">
+        <p style="font-size:12px;color:var(--gray-mid);margin-bottom:10px">Логіка: "Яку задачу вирішую?"</p>
+        <div class="sitemap-item"><div class="sitemap-dot"></div>Будівництво</div>
+        <div class="sitemap-item"><div class="sitemap-dot"></div>Сільське господарство</div>
+        <div class="sitemap-item"><div class="sitemap-dot"></div>Дорожня інфраструктура</div>
+        <div class="sitemap-item"><div class="sitemap-dot"></div>Архітектура</div>
+        <div class="sitemap-item"><div class="sitemap-dot"></div>Промисловість</div>
+        <div class="sitemap-note">Маркетингові лендінги галузей</div>
+      </div>
+    </div>
+
+    <div class="sitemap-block">
+      <div class="sitemap-header">Агросектор</div>
+      <div class="sitemap-body">
+        <p style="font-size:12px;color:var(--gray-mid);margin-bottom:10px">Логіка: "Яка у мене машина?"</p>
+        <div class="sitemap-item"><div class="sitemap-dot"></div>Решета для БЦС</div>
+        <div class="sitemap-item"><div class="sitemap-dot"></div>Решета для БІС / ОВС</div>
+        <div class="sitemap-item"><div class="sitemap-dot"></div>Решета Петкус</div>
+        <div class="sitemap-item"><div class="sitemap-dot"></div>Решета для дробарок</div>
+        <div class="sitemap-note">SEO-розділ: тисячі запитів</div>
+      </div>
+    </div>
+
+    <div class="sitemap-block">
+      <div class="sitemap-header light">Послуги</div>
+      <div class="sitemap-body">
+        <div class="sitemap-item"><div class="sitemap-dot"></div>Гаряче цинкування</div>
+        <div class="sitemap-item"><div class="sitemap-dot"></div>Фарбування ППЛ / ТПК</div>
+        <div class="sitemap-item"><div class="sitemap-dot"></div>Виробництво штампів</div>
+      </div>
+    </div>
+
+    <div class="sitemap-block">
+      <div class="sitemap-header light">Проєкти</div>
+      <div class="sitemap-body">
+        <div class="sitemap-item"><div class="sitemap-dot"></div>Будівництво</div>
+        <div class="sitemap-item"><div class="sitemap-dot"></div>Агросектор</div>
+        <div class="sitemap-item"><div class="sitemap-dot"></div>Інфраструктура</div>
+        <div class="sitemap-item"><div class="sitemap-dot"></div>Архітектура</div>
+        <div class="sitemap-note">Воронка: Проект → Продукт → Замовлення</div>
+      </div>
+    </div>
+
+    <div class="sitemap-block">
+      <div class="sitemap-header light">Технічна база</div>
+      <div class="sitemap-body">
+        <div class="sitemap-item"><div class="sitemap-dot"></div>Типи перфорації</div>
+        <div class="sitemap-item"><div class="sitemap-dot"></div>Інструкції монтажу</div>
+        <div class="sitemap-item"><div class="sitemap-dot"></div>Калькулятор ваги</div>
+        <div class="sitemap-note">Довідники окремо від каталогу</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════ KEY UX DECISIONS ══════════════════════════════ -->
+<div class="section gray">
+  <div class="section-tag">06 — Ключові UX-рішення</div>
+  <div class="section-title">Що і чому змінили</div>
+  <p class="section-lead">Кожне рішення продиктоване конкретними даними аналітики — не суб'єктивними перевагами.</p>
+
+  <h2 class="inner">Хедер та пошук</h2>
+  <div class="ba-grid" style="margin-bottom:24px">
+    <div class="ba-col before">
+      <div class="ba-label before">✕ До</div>
+      <div class="ba-items">
+        <div class="ba-item"><span class="ba-icon">—</span>Малий пошук без підказок</div>
+        <div class="ba-item"><span class="ba-icon">—</span>Каталог — окрема кнопка, не в меню</div>
+        <div class="ba-item"><span class="ba-icon">—</span>Два рядки меню з хаотичним змістом</div>
+        <div class="ba-item"><span class="ba-icon">—</span>Переключення мов UA/RU відволікає</div>
+      </div>
+    </div>
+    <div class="ba-col after">
+      <div class="ba-label after">✓ Після</div>
+      <div class="ba-items">
+        <div class="ba-item"><span class="ba-icon">+</span>Великий пошук з placeholder "решето БЦС, перфолист..."</div>
+        <div class="ba-item"><span class="ba-icon">+</span>Популярні запити під пошуком</div>
+        <div class="ba-item"><span class="ba-icon">+</span>Каталог — перший пункт головного меню</div>
+        <div class="ba-item"><span class="ba-icon">+</span>CTA "Отримати консультацію" завжди видима</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="mock-header" style="margin-bottom:32px">
+    <div class="mock-logo">●● ФРУНЗЕ</div>
+    <div class="mock-search">🔍 Пошук: решето БЦС, ОВС-25, перфолист</div>
+    <div style="color:rgba(255,255,255,0.5);font-size:11px">🛒 Кошик</div>
+    <div class="mock-cta">Отримати консультацію</div>
+  </div>
+
+  <h2 class="inner">Головна сторінка — Hero</h2>
+  <div class="ba-grid" style="margin-bottom:24px">
+    <div class="ba-col before">
+      <div class="ba-label before">✕ До</div>
+      <div class="ba-items">
+        <div class="ba-item"><span class="ba-icon">—</span>Слайдер без чіткого оффера</div>
+        <div class="ba-item"><span class="ba-icon">—</span>Акція "8% на решета" — не УТП</div>
+        <div class="ba-item"><span class="ba-icon">—</span>Дрібні блоки переваг внизу</div>
+        <div class="ba-item"><span class="ba-icon">—</span>Немає відповіді: хто ви і що продаєте</div>
+      </div>
+    </div>
+    <div class="ba-col after">
+      <div class="ba-label after">✓ Після</div>
+      <div class="ba-items">
+        <div class="ba-item"><span class="ba-icon">+</span>"Металеві вироби від виробника" — чіткий заголовок</div>
+        <div class="ba-item"><span class="ba-icon">+</span>3 переваги у чеклісті: цикл виробництва, інфраструктура, 24год відвантаження</div>
+        <div class="ba-item"><span class="ba-icon">+</span>Два CTA: "Перейти в каталог" + "Отримати консультацію"</div>
+        <div class="ba-item"><span class="ba-icon">+</span>Цифри довіри: 8 складів, 2000+ товарів, 1-2 дні доставка</div>
+      </div>
+    </div>
+  </div>
+
+  <h2 class="inner">Картка товару — найкритичніша зміна</h2>
+  <div class="wireframe-note">
+    <span class="wireframe-note-icon">📊</span>
+    Саме тут відбувається 98,9% втрат. Перегляд товару → кошик = 1,1%. Рішення для цього єдиного кроку визначає все.
+  </div>
+  <div class="ba-grid" style="margin-bottom:24px">
+    <div class="ba-col before">
+      <div class="ba-label before">✕ До</div>
+      <div class="ba-items">
+        <div class="ba-item"><span class="ba-icon">—</span>Технічна назва без пояснення</div>
+        <div class="ba-item"><span class="ba-icon">—</span>CTA кнопка мала, не домінує</div>
+        <div class="ba-item"><span class="ba-icon">—</span>Перевантаження характеристиками</div>
+        <div class="ba-item"><span class="ba-icon">—</span>Немає пояснення параметрів</div>
+        <div class="ba-item"><span class="ba-icon">—</span>Немає альтернативи для B2B</div>
+      </div>
+    </div>
+    <div class="ba-col after">
+      <div class="ba-label after">✓ Після</div>
+      <div class="ba-items">
+        <div class="ba-item"><span class="ba-icon">+</span>Статус наявності одразу видний</div>
+        <div class="ba-item"><span class="ba-icon">+</span>Велика зелена кнопка "Додати в кошик" домінує</div>
+        <div class="ba-item"><span class="ba-icon">+</span>3 сценарії: "В кошик" / "Додати до запиту" / "Замовити виготовлення"</div>
+        <div class="ba-item"><span class="ba-icon">+</span>Ключові характеристики стисло і зрозуміло</div>
+        <div class="ba-item"><span class="ba-icon">+</span>Поруч консультація для B2B</div>
+      </div>
+    </div>
+  </div>
+
+  <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:32px">
+    <div class="mock-product-card">
+      <div class="mock-img">фото товару</div>
+      <div class="mock-body">
+        <div class="mock-status">✓ Готово до відправки</div>
+        <div class="mock-name">Решето для КДУ-2 (388×663)</div>
+        <div class="mock-price">750 грн/штук</div>
+        <div class="mock-btn">Додати в кошик</div>
+        <div class="mock-chars">
+          <div class="mock-char">Отвір: 2–3,5 мм</div>
+          <div class="mock-char">Товщина: 1,5 мм</div>
+          <div class="mock-char">Матеріал: сталь 08кп</div>
+        </div>
+      </div>
+    </div>
+    <div class="mock-product-card">
+      <div class="mock-img">фото товару</div>
+      <div class="mock-body">
+        <div class="mock-status" style="color:#b07000">ℹ Ціна залежить від параметрів</div>
+        <div class="mock-name">Панель огорожі Торнадо Original</div>
+        <div class="mock-price" style="color:#555">за запитом</div>
+        <div class="mock-btn outline">Додати до запиту</div>
+        <div class="mock-chars">
+          <div class="mock-char">Розмір: 550×3000 мм</div>
+          <div class="mock-char">Покриття: RAL 6005</div>
+        </div>
+      </div>
+    </div>
+    <div class="mock-product-card">
+      <div class="mock-img">фото товару</div>
+      <div class="mock-body">
+        <div class="mock-status" style="color:#888">🕐 Під замовлення (3–5 днів)</div>
+        <div class="mock-name">Скоба СК-1 (початкова / кінцева)</div>
+        <div class="mock-price">від 350 грн/лист</div>
+        <div class="mock-btn outline" style="border-color:#555;color:#555">Замовити виготовлення</div>
+        <div class="mock-chars">
+          <div class="mock-char">Розмір: 196×80×150 мм</div>
+          <div class="mock-char">Матеріал: Ст3</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <h2 class="inner">Checkout — спрощений процес</h2>
+  <div class="ba-grid">
+    <div class="ba-col before">
+      <div class="ba-label before">✕ До</div>
+      <div class="ba-items">
+        <div class="ba-item"><span class="ba-icon">—</span>"По запиту" ламало логіку — підсумок "По запиту"</div>
+        <div class="ba-item"><span class="ba-icon">—</span>Товари з ціною і без перемішані</div>
+        <div class="ba-item"><span class="ba-icon">—</span>Кнопка "Оформити" не була активна</div>
+        <div class="ba-item"><span class="ba-icon">—</span>Нечітко: коли і як відбудеться оплата</div>
+      </div>
+    </div>
+    <div class="ba-col after">
+      <div class="ba-label after">✓ Після</div>
+      <div class="ba-items">
+        <div class="ba-item"><span class="ba-icon">+</span>Два блоки: "Товари до оплати" / "Товари на узгодження"</div>
+        <div class="ba-item"><span class="ba-icon">+</span>Пояснення: "Менеджер уточнить вартість"</div>
+        <div class="ba-item"><span class="ba-icon">+</span>Мінімум полів, без обов'язкової реєстрації</div>
+        <div class="ba-item"><span class="ba-icon">+</span>CTA: "Оформити замовлення" замість "Продовжити"</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════ UI ══════════════════════════════ -->
+<div class="section">
+  <div class="section-tag">07 — UI Система</div>
+  <div class="section-title">Візуальна мова</div>
+  <p class="section-lead">UI побудований на фірмових кольорах клієнта. Промисловий, але сучасний. Кожен елемент підпорядкований конверсії.</p>
+
+  <h2 class="inner" style="margin-bottom:8px">Кольорова палітра</h2>
+  <div class="ui-palette">
+    <div>
+      <div class="ui-swatch" style="background:#1a4a28"></div>
+      <div class="ui-label">Dark<br>#1a4a28</div>
+    </div>
+    <div>
+      <div class="ui-swatch" style="background:#2d6a3f"></div>
+      <div class="ui-label">Main<br>#2d6a3f</div>
+    </div>
+    <div>
+      <div class="ui-swatch" style="background:#3d8a52"></div>
+      <div class="ui-label">Mid<br>#3d8a52</div>
+    </div>
+    <div>
+      <div class="ui-swatch" style="background:#e8f5ec"></div>
+      <div class="ui-label">Light<br>#e8f5ec</div>
+    </div>
+    <div>
+      <div class="ui-swatch" style="background:#888780"></div>
+      <div class="ui-label">Gray<br>#888780</div>
+    </div>
+    <div>
+      <div class="ui-swatch" style="background:#e8e8e6"></div>
+      <div class="ui-label">Border<br>#e8e8e6</div>
+    </div>
+    <div>
+      <div class="ui-swatch" style="background:#111111"></div>
+      <div class="ui-label">Black<br>#111111</div>
+    </div>
+    <div>
+      <div class="ui-swatch" style="background:#a31e1e"></div>
+      <div class="ui-label">Error<br>#a31e1e</div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════ RESULTS ══════════════════════════════ -->
+<div class="section gray">
+  <div class="section-tag">08 — Результати</div>
+  <div class="section-title">Що змінилося</div>
+  <p class="section-lead">Кожна UX-проблема, виявлена в аналітиці, отримала конкретне рішення в дизайні.</p>
+
+  <div class="results-grid">
+    <div class="result-card">
+      <div class="result-metric">Трафік на 404 сторінку</div>
+      <div class="result-before">35–40%</div>
+      <div class="result-after">→ Вирішено</div>
+      <div class="result-desc">Розумна 404 з пошуком і CTA "До каталогу". Рекомендовано 301-редиректи. Третина трафіку більше не потрапляє у нікуди.</div>
+    </div>
+    <div class="result-card">
+      <div class="result-metric">Конверсія товар → кошик</div>
+      <div class="result-before">1,1%</div>
+      <div class="result-after">→ Редизайн картки товару</div>
+      <div class="result-desc">Домінуючий CTA, 3 сценарії залежно від наявності, пояснення характеристик, консультація поруч.</div>
+    </div>
+    <div class="result-card">
+      <div class="result-metric">Середній час на сайті</div>
+      <div class="result-before">17 сек</div>
+      <div class="result-after">→ Hero з чітким УТП</div>
+      <div class="result-desc">Відповідь на 3 питання за 5 секунд: Хто? Що? Чому мені? Чіткий оффер і два CTA на першому екрані.</div>
+    </div>
+    <div class="result-card">
+      <div class="result-metric">Використання пошуку</div>
+      <div class="result-before">0,3%</div>
+      <div class="result-after">→ Новий хедер</div>
+      <div class="result-desc">Пошук на всю ширину з placeholder і популярними запитами — тепер це перше, що бачить користувач.</div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════ REFLECTION ══════════════════════════════ -->
+<div class="section dark">
+  <div class="section-tag">09 — Рефлексія</div>
+  <div class="section-title">Що цей проєкт навчив</div>
+  <p class="section-lead">Три головних висновки після роботи з промисловим B2B e-commerce.</p>
+
+  <div class="reflection-grid">
+    <div class="ref-card">
+      <div class="ref-num">01</div>
+      <div class="ref-text">Аналітика виявила проблему, яку клієнт не бачив — 35% трафіку губилося ще до того, як UX починав працювати. Це неможливо вгадати без даних.</div>
+    </div>
+    <div class="ref-card">
+      <div class="ref-num">02</div>
+      <div class="ref-text">У B2B e-commerce головна проблема — не checkout, а момент прийняття рішення на картці товару. Саме там сайт або продає, або втрачає.</div>
+    </div>
+    <div class="ref-card">
+      <div class="ref-num">03</div>
+      <div class="ref-text">Один і той самий продукт потребує трьох різних CTA — залежно від наявності. "В кошик" / "Додати до запиту" / "Замовити виготовлення" — це не UX-деталь, а бізнес-логіка.</div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════ FOOTER ══════════════════════════════ -->
+<div class="footer">
+  <div class="footer-name">Завод Фрунзе — UX/UI Case Study</div>
+  <div class="footer-tags">
+    <span class="footer-tag">UX Research</span>
+    <span class="footer-tag">UI Design</span>
+    <span class="footer-tag">B2B</span>
+    <span class="footer-tag">E-commerce</span>
+    <span class="footer-tag">Industrial</span>
+    <span class="footer-tag">Google Analytics</span>
+    <span class="footer-tag">Figma</span>
+  </div>
+</div>
+
+</div>
+</body>
+</html>
